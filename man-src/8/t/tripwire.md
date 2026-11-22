@@ -7,7 +7,7 @@ url: "/docs/linux/man/8-tripwire/"
 description: "tripwire – a file integrity checker for UNIX systems"
 ---
 
-<p>tripwire &#8211; a file integrity checker for <font SIZE="-1">UNIX</font> systems</p>
+<p>tripwire &#8211; a file integrity checker for UNIX systems</p>
 <h2>Synopsis</h2>
 <p><code>tripwire</code> { <code>-m i</code> | <code>&#8211;init</code> } [ <i>options&#8230;</i> ]<br />
  <code>tripwire</code> { <code>-m c</code> | <code>&#8211;check</code> } [ <i>options&#8230;</i> ] </p>
@@ -31,12 +31,12 @@ description: "tripwire – a file integrity checker for UNIX systems"
 <p> Because the policy and database files are binary-encoded and cryptographically signed, the user will be prompted for the site and local passphrases to change the policy settings. After the database is successfully updated, the database and policy files are re-encoded and signed.</p>
 <h3>Test Mode</h3>
 <p>Test mode is used to check the operation of the <i>Tripwire</i> email notification system. When run in this mode, <i>Tripwire</i> will use the email notification settings specified in the configuration file to send a test email message. If MAILMETHOD is set to SMTP, the SMTPHOST and SMTPPORT values will be used to send email. If MAILMETHOD is set to SENDMAIL, the MAILPROGRAM value will be used. If email notification is working correctly, the address specified on the command line will receive the following message: </p>
-<pre><FONT SIZE="-1">To: user [at] domain.com 
+<pre>To: user [at] domain.com 
 From: user &lt;user [at] domain.com&gt; 
 Subject: Test email message from Tripwire 
 If you receive this message, email notification
 from Tripwire is working correctly.
-</FONT></pre>
+</pre>
 <p>Test mode only tests email notification for the address specified on the command-line, and does not check for errors in the syntax used with the <tt>emailto</tt> attribute in the policy file.</p>
 <h2>Options</h2>
 <h3>Database Initialization mode:</h3>
@@ -503,4 +503,4 @@ from Tripwire is working correctly.
 <p> Permission is granted to copy and distribute translations of this man page into another language, under the above conditions for modified versions, except that this permission notice may be stated in a translation approved by Tripwire, Inc. </p>
 <p> Copyright 2000-2017 Tripwire, Inc. Tripwire is a registered trademark of Tripwire, Inc. in the United States and other countries. All rights reserved.</p>
 <h2>See Also</h2>
-<p><code><a href="/docs/linux/man/8-twintro/">twintro</a></code>(8), <code><a href="/docs/linux/man/8-twadmin/">twadmin</a></code>(8), <code><a href="/docs/linux/man/8-twprint/">twprint</a></code>(8), <code><a href="/docs/linux/man/8-siggen/">siggen</a></code>(8), <code><a href="/docs/linux/man/4-twconfig/">twconfig</a></code>(4), <code><a href="/docs/linux/man/4-twpolicy/">twpolicy</a></code>(4), <code><a href="/docs/linux/man/5-twfiles/">twfiles</a></code>(5) <i>The Design and Implementation of Tripwire: A </i><font SIZE="-1"><i>UNIX</i></font><i> File Integrity Checker</i> by Gene Kim and Eugene Spafford. Purdue Technical Report CSD-TR-93-071. </p>
+<p><code><a href="/docs/linux/man/8-twintro/">twintro</a></code>(8), <code><a href="/docs/linux/man/8-twadmin/">twadmin</a></code>(8), <code><a href="/docs/linux/man/8-twprint/">twprint</a></code>(8), <code><a href="/docs/linux/man/8-siggen/">siggen</a></code>(8), <code><a href="/docs/linux/man/4-twconfig/">twconfig</a></code>(4), <code><a href="/docs/linux/man/4-twpolicy/">twpolicy</a></code>(4), <code><a href="/docs/linux/man/5-twfiles/">twfiles</a></code>(5) <i>The Design and Implementation of Tripwire: A </i><i>UNIX</i><i> File Integrity Checker</i> by Gene Kim and Eugene Spafford. Purdue Technical Report CSD-TR-93-071. </p>

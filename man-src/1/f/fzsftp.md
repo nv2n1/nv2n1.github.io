@@ -15,7 +15,7 @@ description: "fzsftp – SFTP connection handler of FileZilla"
 <h2>SUPPORT</h2>
 <p> Please visit <a rel="nofollow" href="https://filezilla-project.org/">https://filezilla-project.org/</a> for further information. Report bugs only if you are using the latest version available from the FileZilla website.</p>
 <h2>COPYRIGHT</h2>
-<p> Copyright (C) 2004-2014 Tim Kosse<br />
+<p> Copyright (C) 2004-2014 Tim Kosse<br/>
  Copyright (C) 1997-2014 Simon Tatham and the PuTTY team </p>
 <p> FileZilla is distributed under the terms of the GNU General Public License version 2 or later.</p>
 <h2>SEE ALSO</h2>

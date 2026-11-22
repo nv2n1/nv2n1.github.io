@@ -38,19 +38,19 @@ description: "ftwhich – fault tolerant search for a command name"
 <dd> Set the fault tolerance level to #. The fault tolerance level is an integer in the range 0-255. It specifies the maximum number of errors permitted in finding the approximate match. The default tolerance is (strlen(searchpattern) &#8211; number of wildcards)/6 + 1</dd></dl>
 <dl>
 <dt><i>program_name</i></dt>
-<dd> The program file to search for. &#8216;*&#8217; and &#8216;?&#8217; can be used as wildcards.<br />
- &#8216;?&#8217; denotes one single character.<br />
+<dd> The program file to search for. &#8216;*&#8217; and &#8216;?&#8217; can be used as wildcards.<br/>
+ &#8216;?&#8217; denotes one single character.<br/>
  &#8216;*&#8217; denotes an arbitrary number of characters.</dd></dl>
 <p> The last argument to ftwhich is not parsed for options as the program needs at least one program_name argument. This means that <i>ftwhich -x</i> will not complain about a wrong option but search for the program named -x.</p>
 <h2>EXAMPLE</h2>
-<p> Search for all programs like gcc in your PATH:<br />
- <i>ftwhich gcc</i><br />
+<p> Search for all programs like gcc in your PATH:<br/>
+ <i>ftwhich gcc</i><br/>
  This will e.g. find gcc or cc or CC &#8230; </p>
-<p> To find all files that start with any prefix and end in <i>config </i> and differ in 2 letters from the word <i>config:</i><br />
+<p> To find all files that start with any prefix and end in <i>config </i> and differ in 2 letters from the word <i>config:</i><br/>
  <i>ftwhich -2</i> &#8216;*config&#8217; </p>
-<p> To find all files that exactly start with the prefix <i>if:</i><br />
+<p> To find all files that exactly start with the prefix <i>if:</i><br/>
  <i>ftwhich -0 </i> &#8216;if*&#8217; </p>
-<p> To find all clock programs:<br />
+<p> To find all clock programs:<br/>
  <i>ftwhich -0 &#8216;*clock*&#8217;</i> </p>
 <h2>BUGS</h2>
 <p> The wildcards <code>&#8216;?&#8217;</code> and <code>&#8216;*&#8217;</code> can not be escaped. These characters function always as wildcards. This is however not a big problem since there is normally hardly any command that has these characters in its name.</p>
