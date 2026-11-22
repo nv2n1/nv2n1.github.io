@@ -10,7 +10,7 @@ description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 
 <p> gsi &#8211; Gambit-C Scheme Interpreter and Compiler </p>
 <h2>SYNOPSIS</h2>
-<p> <code>gsi </code> [ &#8211;<code>:</code><i>arg</i>,&#8230; ] [ <code>-f</code> ] [ <code>-v</code> ] [[-] [ <code>-e</code> ] [ <i>file</i> ]]&#8230;<br />
+<p> <code>gsi </code> [ &#8211;<code>:</code><i>arg</i>,&#8230; ] [ <code>-f</code> ] [ <code>-v</code> ] [[-] [ <code>-e</code> ] [ <i>file</i> ]]&#8230;<br/>
  <code>gsc </code> [<i>options</i>] [<i>files</i>] </p>
 <p> <code>gsc-script, gsi-script, scheme-ieee-1178-1990, scheme-r4rs, scheme-srfi-0, six</code>, and <code>six-script</code>: currently synonyms for <code>gsi</code>. </p>
 <p> <code>scheme-r5rs</code> is registered in the Debian alternatives system and can be configured to point at <code>gsi</code>. </p>
@@ -41,10 +41,10 @@ description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 <p> <code>dhelp(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), update-alternatives(8)</code></p>
 <h2>COPYRIGHT</h2>
 <p> Gambit-C is Copyright (c) 1994-2009 by Marc Feeley, all rights reserved. </p>
-<p> Gambit-C is released under a dual LGPL and Apache 2 license.<br />
+<p> Gambit-C is released under a dual LGPL and Apache 2 license.<br/>
  For further information refer to /usr/share/doc/gambc/copyright. </p>
-<p> This manual page is<br />
- Copyright (c) 2006-2009 Marc Feeley and Kurt B. Kaiser &lt;kbk [at] shore.net&gt;<br />
+<p> This manual page is<br/>
+ Copyright (c) 2006-2009 Marc Feeley and Kurt B. Kaiser &lt;kbk [at] shore.net&gt;<br/>
  Released under the same license as Gambit-C. </p>
 <h2>AUTHOR</h2>
 <p> Gambit-C was written by Marc Feeley &lt;gambit [at] iro.umontreal.ca&gt;. </p>

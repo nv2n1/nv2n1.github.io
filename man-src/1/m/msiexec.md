@@ -118,5 +118,5 @@ description: "msiexec – Wine MSI Installer"
 <h2>AVAILABILITY</h2>
 <p> <code>msiexec</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br />
+<p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br/>
  <code>Wine documentation and support</code> </p>

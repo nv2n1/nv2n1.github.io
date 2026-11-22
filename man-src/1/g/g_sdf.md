@@ -22,36 +22,36 @@ description: "g_sdf – calculates the spatial distribution function (faster tha
 <p> The output will be a binary 3D-grid file (gom_plt.dat) in the .plt format that can be be read directly by gOpenMol. The option -r will generate a .gro file with the reference molecule(s) transfered to the SDF coordinate system. Load this file into gOpenMol and display the SDF as a contour plot (see <a rel="nofollow" href="http://www.csc.fi/gopenmol/index.phtml">http://www.csc.fi/gopenmol/index.phtml</a> for further documentation). </p>
 <p> For further information about SDF&#8217;s have a look at: A. Vishnyakov, JPC A, 105, 2001, 1702 and the references cited within.</p>
 <h2>FILES</h2>
-<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />
+<p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br/>
 &nbsp;<wbr>Trajectory: xtc trr trj gro g96 pdb cpt&nbsp;<wbr> </p>
-<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br />
+<p> <code>-n</code><i> index.ndx</i> <code>Input</code><br/>
 &nbsp;<wbr>Index file&nbsp;<wbr> </p>
-<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br />
+<p> <code>-s</code><i> topol.tpr</i> <code>Input, Opt.</code><br/>
 &nbsp;<wbr>Structure+mass(db): tpr tpb tpa gro g96 pdb&nbsp;<wbr> </p>
-<p> <code>-o</code><i> gom_plt.dat</i> <code>Output</code><br />
+<p> <code>-o</code><i> gom_plt.dat</i> <code>Output</code><br/>
 &nbsp;<wbr>Generic data file&nbsp;<wbr> </p>
-<p> <code>-r</code><i> refmol.gro</i> <code>Output, Opt.</code><br />
+<p> <code>-r</code><i> refmol.gro</i> <code>Output, Opt.</code><br/>
 &nbsp;<wbr>Structure file: gro g96 pdb&nbsp;<wbr> </p>
 <h2>OTHER OPTIONS</h2>
-<p> <code>-[no]h</code><i>no </i><br />
+<p> <code>-[no]h</code><i>no </i><br/>
 &nbsp;<wbr>Print help info and quit </p>
-<p> <code>-nice</code><i> int</i><code> 19</code><br />
+<p> <code>-nice</code><i> int</i><code> 19</code><br/>
 &nbsp;<wbr>Set the nicelevel </p>
-<p> <code>-b</code><i> time</i><code> 0 </code><br />
+<p> <code>-b</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>First frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-e</code><i> time</i><code> 0 </code><br />
+<p> <code>-e</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Last frame&nbsp;<wbr>(ps)&nbsp;<wbr>to read from trajectory </p>
-<p> <code>-dt</code><i> time</i><code> 0 </code><br />
+<p> <code>-dt</code><i> time</i><code> 0 </code><br/>
 &nbsp;<wbr>Only use frame when t MOD dt&nbsp;<wbr>=&nbsp;<wbr>first time&nbsp;<wbr>(ps) </p>
-<p> <code>-mode</code><i> int</i><code> 1</code><br />
+<p> <code>-mode</code><i> int</i><code> 1</code><br/>
 &nbsp;<wbr>SDF in&nbsp;<wbr>[1,2,3]&nbsp;<wbr>particle mode </p>
-<p> <code>-triangle</code><i> vector</i><code> 0 0 0</code><br />
+<p> <code>-triangle</code><i> vector</i><code> 0 0 0</code><br/>
 &nbsp;<wbr>r(1,3), r(2,3), r(1,2) </p>
-<p> <code>-dtri</code><i> vector</i><code> 0.03 0.03 0.03</code><br />
+<p> <code>-dtri</code><i> vector</i><code> 0.03 0.03 0.03</code><br/>
 &nbsp;<wbr>dr(1,3), dr(2,3), dr(1,2) </p>
-<p> <code>-bin</code><i> real</i><code> 0.05 </code><br />
+<p> <code>-bin</code><i> real</i><code> 0.05 </code><br/>
 &nbsp;<wbr>Binwidth for the 3D-grid&nbsp;<wbr>(nm) </p>
-<p> <code>-grid</code><i> vector</i><code> 1 1 1</code><br />
+<p> <code>-grid</code><i> vector</i><code> 1 1 1</code><br/>
 &nbsp;<wbr>Size of the 3D-grid&nbsp;<wbr>(nm,nm,nm) </p>
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>
