@@ -46,14 +46,14 @@ description: "festival – a text-to-speech system."
 <dd> Display version number and exit</dd></dl>
 <h2>BUGS</h2>
 <p> More than you can imagine. </p>
-<p> A manual with much detail (though not complete) is available in distributed as part of the system and is also accessible at<br />
+<p> A manual with much detail (though not complete) is available in distributed as part of the system and is also accessible at<br/>
  <a rel="nofollow" href="http://www.cstr.ed.ac.uk/projects/festival/manual/">http://www.cstr.ed.ac.uk/projects/festival/manual/</a> </p>
-<p> Although we cannot guarantee the time required to fix bugs, we would appreciated it if they were reported to<br />
+<p> Although we cannot guarantee the time required to fix bugs, we would appreciated it if they were reported to<br/>
  festival-bug [at] cstr.ed.ac.uk </p>
 <h2>AUTHOR</h2>
-<p> Alan W Black, Richard Caley and Paul Taylor<br />
- (C) Centre for Speech Technology Research, 1996-1998<br />
- University of Edinburgh<br />
- 80 South Bridge<br />
- Edinburgh EH1 1HN<br />
+<p> Alan W Black, Richard Caley and Paul Taylor<br/>
+ (C) Centre for Speech Technology Research, 1996-1998<br/>
+ University of Edinburgh<br/>
+ 80 South Bridge<br/>
+ Edinburgh EH1 1HN<br/>
  <a rel="nofollow" href="http://www.cstr.ed.ac.uk/projects/festival.html">http://www.cstr.ed.ac.uk/projects/festival.html</a> </p>

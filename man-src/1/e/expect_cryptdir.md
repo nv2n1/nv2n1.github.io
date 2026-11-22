@@ -10,7 +10,7 @@ description: "cryptdir – encrypt/decrypt all files in a directory"
 
 <p> cryptdir &#8211; encrypt/decrypt all files in a directory </p>
 <h2>SYNOPSIS</h2>
-<p> <code>cryptdir</code> [ <i>dir</i> ]<br />
+<p> <code>cryptdir</code> [ <i>dir</i> ]<br/>
  <code>decryptdir</code> [ <i>dir</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>cryptdir</code> encrypts all files in the current directory (or the given directory if one is provided as an argument). When called as decryptdir (i.e., same program, different name), all files are decrypted. </p>

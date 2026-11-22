@@ -18,11 +18,11 @@ description: "gtklpq – manage print queues via CUPS"
 <p> <code>disable</code> [-h <i>server</i>] [-c] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-r <i>reason</i>] [destination(s)] </p>
 <p> <code>enable</code> [-h <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-r <i>reason</i>] [destination(s)]</p>
 <h2>DESCRIPTION</h2>
-<p> <code>GtkLPQ</code> is an graphical frontend for <i>CUPS</i>, the Common UNIX Printing System.<br />
+<p> <code>GtkLPQ</code> is an graphical frontend for <i>CUPS</i>, the Common UNIX Printing System.<br/>
  It is used to manage CUPS-Printqueues. </p>
 <dl>
 <dt>
-</dt><dd> GtkLPQ<br />
+</dt><dd> GtkLPQ<br/>
  Graphical Frontend</dd>
 <dt>lpq</dt>
 <dd>
@@ -102,11 +102,11 @@ description: "gtklpq – manage print queues via CUPS"
 <dt>-r reason</dt>
 <dd> Give an reason, why you do so</dd></dl>
 <h2>PATHS</h2>
-<p> To hide Printers from users, use the following pathes:<br />
- <i>/etc/gtklp/accept/</i><br />
- <i>/etc/gtklp/deny/</i><br />
+<p> To hide Printers from users, use the following pathes:<br/>
+ <i>/etc/gtklp/accept/</i><br/>
+ <i>/etc/gtklp/deny/</i><br/>
  <i>$HOME/.gtklp/</i> </p>
-<p> Just put an empty file with the name of the printer the user should see by default to <i>accept</i>, put an empty file with the name of the printer the user should never see to <i>deny</i>.<br />
+<p> Just put an empty file with the name of the printer the user should see by default to <i>accept</i>, put an empty file with the name of the printer the user should never see to <i>deny</i>.<br/>
  The <i>accept</i> values can be overwritten by the user, the <i>deny</i> values can&#8217;t.</p>
 <h2>SPECIAL</h2>
 <p> If you can`t connect to an X-Server, GtkLPQ acts as console-lpq. </p>
@@ -138,15 +138,15 @@ description: "gtklpq – manage print queues via CUPS"
 <dt>3</dt>
 <dd> BAD error. Fields declared too short, too many printers, etc.</dd></dl>
 <h2>SEE ALSO</h2>
-<p> <a href="/docs/linux/man/1-gtklp/">gtklp</a>(1), <a href="/docs/linux/man/1-lprm/">lprm</a>(1), <a href="/docs/linux/man/1-lp/">lp</a>(1), CUPS Software Users Manual<br />
+<p> <a href="/docs/linux/man/1-gtklp/">gtklp</a>(1), <a href="/docs/linux/man/1-lprm/">lprm</a>(1), <a href="/docs/linux/man/1-lp/">lp</a>(1), CUPS Software Users Manual<br/>
  <a rel="nofollow" href="http://localhost:631/documentation.html">http://localhost:631/documentation.html</a></p>
 <h2>COPYRIGHT</h2>
-<p> This program was written by T. Mueller, 2000, 2001, 2002.<br />
- It is licensed under the Terms of the GNU GENERAL PUBLIC LICENSE,<br />
+<p> This program was written by T. Mueller, 2000, 2001, 2002.<br/>
+ It is licensed under the Terms of the GNU GENERAL PUBLIC LICENSE,<br/>
  see also <a rel="nofollow" href="http://www.gnu.org.">http://www.gnu.org.</a> </p>
 <h2>CONTACT</h2>
-<p> The latest version of <code>GtkLPQ</code> is always available under<br />
- <a rel="nofollow" href="http://gtklp.sourceforge.net/">http://gtklp.sourceforge.net/</a><br />
- It is part of the <code>GtkLP</code>-package.<br />
- Feel also free to contact me.<br />
+<p> The latest version of <code>GtkLPQ</code> is always available under<br/>
+ <a rel="nofollow" href="http://gtklp.sourceforge.net/">http://gtklp.sourceforge.net/</a><br/>
+ It is part of the <code>GtkLP</code>-package.<br/>
+ Feel also free to contact me.<br/>
  Please mail also, if you like the software !!! ;-) </p>

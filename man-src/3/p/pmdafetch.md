@@ -18,8 +18,8 @@ description: "pmdaFetch, pmdaSetFetchCallBack – fill a pmResult structure with
 <h2>Description</h2>
 <p><code>pmdaFetch</code> is a generic callback used by a <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) to process a fetch request from <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). The request from <code>pmcd</code> is initiated by a client calling <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3). </p>
 <p> This is the only generic callback in <i>libpcp_pmda</i> (see <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3)) that is incomplete, requiring a further <code>pmdaFetchCallBack</code> method of its own. The additional callback should be registered using <code>pmdaSetFetchCallBack</code> and the <code>pmdaFetchCallBack</code> method has the following prototype: </p>
-<pre><FONT SIZE="-1">int func(pmdaMetric *mdesc, unsigned int inst, pmAtomValue *avp)
-</FONT></pre>
+<pre><code>int func(pmdaMetric *mdesc, unsigned int inst, pmAtomValue *avp)
+</code></pre>
 <p><code>pmdaFetch</code> will allocate and resize the <i>resp</i> result structure, to store values for the <i>numpmid </i> metrics listed in <i>pmidlist</i>. </p>
 <p> For each instance listed in the profile (see <code><a href="/docs/linux/man/3-pmdaprofile/">pmdaProfile</a></code>(3)) of each metric listed in <i>pmidlist</i>, the <code>pmdaFetchCallBack</code> method is called to fill the <code>pmAtomValue</code> structure identified by <i>avp</i> with a value for a specific metric-instance pair identified by the metric descriptor <i>mdesc</i> and the instance <i>inst</i>. This value is then copied into the <code>pmResult</code> structure. </p>
 <p> The <code>pmdaFetchCallBack</code> method should return a value less than zero for an error, and the most likely cases would be <code>PM_ERR_PMID</code> if the metric identified by <i>mdesc</i> is not known to the method, or <code>PM_ERR_INST</code> if the method believes the instance <i>inst</i> is not known for the metric identified by <i>mdesc</i>. </p>
