@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>pdlpp-inline(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-pdlpp-inline/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="pdlpp-inline(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-pdlpp-inline/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>pdlpp-inline(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><pre> Inline::Pdlpp - Write PDL Subroutines inline with PDL::PP</pre><h2>Description</h2><tt>"Inline::Pdlpp"</tt> is a module that allows you to write <font size=-1>PDL</font> subroutines in the <font size=-1>PDL::PP</font> style. The big benefit compared to plain <tt>"PDL::PP"</tt> is that you can write these definitions inline in any old perl script (without the normal hassle of creating Makefiles, building, etc). Since version 0.30 the Inline module supports multiple programming languages and each language has its own support module. This document describes how to use Inline with <font size=-1>PDL::PP </font>(or rather, it will once these docs are complete <tt>";)"</tt>.<p>For more information on Inline in general, see Inline.</p><p>Some example scripts demonstrating <tt>"Inline::Pdlpp"</tt> usage can be found in the <i>Example/InlinePdlpp</i> directory.</p><p><tt>"Inline::Pdlpp"</tt> is mostly a shameless rip-off of <tt>"Inline::C"</tt>. Most Kudos goes to Brian I.</p><h2>Usage</h2>You never actually use <tt>"Inline::Pdlpp"</tt> directly. It is just a support module for using <tt>"Inline.pm"</tt> with <tt>"PDL::PP"</tt>. So the usage is always:<pre> use Inline Pdlpp =&gt; ...;</pre>or<pre> bind Inline Pdlpp =&gt; ...;</pre><h2>Examples</h2>Pending availability of full docs a few quick examples that illustrate typical usage.<h3>A simple example</h3><pre> # example script inlpp.pl
+ use PDL; # must be called before (!) 'use Inline Pdlpp' calls
+ use Inline Pdlpp; # the actual code is in the __Pdlpp__ block below
+ $a = sequence 10;
+ print $a-&gt;inc,&quot;\n&quot;;
+ print $a-&gt;inc-&gt;dummy(1,10)-&gt;tcumul,&quot;\n&quot;;
+ __DATA__
+ __Pdlpp__
+ pp_def('inc',
+ Pars =&gt; 'i();[o] o()',
+ Code =&gt; '$o() = $i() + 1;',
+ );
+ pp_def('tcumul',
+ Pars =&gt; 'in(n);[o] mul()',
+ Code =&gt; '$mul() = 1;
+ loop(n) %{
+ $mul() *= $in();
+ %}',
+ );
+ # end example script</pre>If you call this script it should generate output similar to this:<pre> prompt&gt; perl inlpp.pl
+ Inline running PDL::PP version 2.2...
+ [1 2 3 4 5 6 7 8 9 10]
+ [3628800 3628800 3628800 3628800 3628800 3628800 3628800 3628800 3628800 3628800]</pre>Usage of <tt>"Inline::Pdlpp"</tt> in general is similar to <tt>"Inline::C"</tt>. In the absence of full docs for <tt>"Inline::Pdlpp"</tt> you might want to compare Inline::C.<h3>Code that uses external libraries, etc</h3>The script below is somewhat more complicated in that it uses code from an external library (here from Numerical Recipes). All the relevant information regarding include files, libraries and boot code is specified in a config call to <tt>"Inline"</tt>. For more experienced Perl hackers it might be helpful to know that the format is similar to that used with ExtUtils::MakeMaker. The keywords are largely equivalent to those used with <tt>"Inline::C"</tt>. Please see below for further details on the usage of <tt>"INC"</tt>, <tt>"LIBS"</tt>, <tt>"AUTO_INCLUDE"</tt> and <tt>"BOOT"</tt>.<pre> use PDL; # this must be called before (!) 'use Inline Pdlpp' calls
+ use Inline Pdlpp =&gt; Config =&gt;
+ INC =&gt; &quot;-I$ENV{HOME}/include&quot;,
+ LIBS =&gt; &quot;-L$ENV{HOME}/lib -lnr -lm&quot;,
+ # code to be included in the generated XS
+ AUTO_INCLUDE =&gt; &lt;&lt;'EOINC',
+ #include &lt;math.h&gt;
+ #include &quot;nr.h&quot; /* for poidev */
+ #include &quot;nrutil.h&quot; /* for err_handler */
+ static void nr_barf(char *err_txt)
+ {
+ fprintf(stderr,&quot;Now calling croak...\n&quot;);
+ croak(&quot;NR runtime error: %s&quot;,err_txt);
+ }
+ EOINC
+ # install our error handler when loading the Inline::Pdlpp code
+ BOOT =&gt; 'set_nr_err_handler(nr_barf);';
+ use Inline Pdlpp; # the actual code is in the __Pdlpp__ block below
+ $a = zeroes(10) + 30;;
+ print $a-&gt;poidev(5),&quot;\n&quot;;
+ __DATA__
+ __Pdlpp__
+ pp_def('poidev',
+ Pars =&gt; 'xm(); [o] pd()',
+ GenericTypes =&gt; [L,F,D],
+ OtherPars =&gt; 'long idum',
+ Code =&gt; '$pd() = poidev((float) $xm(), &amp;$COMP(idum));',
+ );</pre><h2>Pdlpp Configuration Options</h2>For information on how to specify Inline configuration options, see Inline. This section describes each of the configuration options available for Pdlpp. Most of the options correspond either to MakeMaker or <font size=-1>XS</font> options of the same name. See ExtUtils::MakeMaker and perlxs.<h3><font size=-1>AUTO_INCLUDE</font></h3>Specifies extra statements to automatically included. They will be added onto the defaults. A newline char will be automatically added. Does essentially the same as a call to <tt>"pp_addhdr"</tt>. For short bits of code <tt>"AUTO_INCLUDE"</tt> is probably syntactically nicer.<pre> use Inline Pdlpp =&gt; Config =&gt; AUTO_INCLUDE =&gt; '#include &quot;yourheader.h&quot;';</pre><h3><font size=-1>BLESS</font></h3>Same as <tt>"pp_bless"</tt> command. Specifies the package (i.e. class) to which your new <i>pp_def</i>ed methods will be added. Defaults to <tt>"PDL"</tt> if omitted.<pre> use Inline Pdlpp =&gt; Config =&gt; BLESS =&gt; 'PDL::Complex';</pre><h3><font size=-1>BOOT</font></h3>Specifies C code to be executed in the <font size=-1>XS BOOT</font> section. Corresponds to the <font size=-1>XS</font> parameter. Does the same as the <tt>"pp_add_boot"</tt> command. Often used to execute code only once at load time of the module, e.g. a library initialization call.<h3><font size=-1>CC</font></h3>Specify which compiler to use.<h3><font size=-1>CCFLAGS</font></h3>Specify extra compiler flags.<h3><font size=-1>INC</font></h3>Specifies an include path to use. Corresponds to the MakeMaker parameter.<pre> use Inline Pdlpp =&gt; Config =&gt; INC =&gt; '-I/inc/path';</pre><h3><font size=-1>LD</font></h3>Specify which linker to use.<h3><font size=-1>LDDLFLAGS</font></h3>Specify which linker flags to use.<p><font size=-1>NOTE:</font> These flags will completely override the existing flags, instead of just adding to them. So if you need to use those too, you must respecify them here.</p><h3><font size=-1>LIBS</font></h3>Specifies external libraries that should be linked into your code. Corresponds to the MakeMaker parameter.<pre> use Inline Pdlpp =&gt; Config =&gt; LIBS =&gt; '-lyourlib';</pre>or<pre> use Inline Pdlpp =&gt; Config =&gt; LIBS =&gt; '-L/your/path -lyourlib';</pre><h3><font size=-1>MAKE</font></h3>Specify the name of the 'make' utility to use.<h3><font size=-1>MYEXTLIB</font></h3>Specifies a user compiled object that should be linked in. Corresponds to the MakeMaker parameter.<pre> use Inline Pdlpp =&gt; Config =&gt; MYEXTLIB =&gt; '/your/path/yourmodule.so';</pre><h3><font size=-1>OPTIMIZE</font></h3>This controls the MakeMaker <font size=-1>OPTIMIZE</font> setting. By setting this value to '-g', you can turn on debugging support for your Inline extensions. This will allow you to be able to set breakpoints in your C code using a debugger like gdb.<h3><font size=-1>TYPEMAPS</font></h3>Specifies extra typemap files to use. Corresponds to the MakeMaker parameter.<pre> use Inline Pdlpp =&gt; Config =&gt; TYPEMAPS =&gt; '/your/path/typemap';</pre><h3><font size=-1>NOISY</font></h3>Show the output of any compilations going on behind the scenes. Uses <tt>"tee"</tt> which must be available on your computer. Default is off.<h2>Bugs</h2><h3>doing inline scripts</h3>Beware that there is a problem when you use the __DATA__ keyword style of Inline definition and want to <tt>"do"</tt> your script containing inlined code. For example<pre> # myscript.pl contains inlined code
+ # in the __DATA__ section
+ perl -e 'do &quot;myscript.pl&quot;;'
+ One or more DATA sections were not processed by Inline.</pre>According to Brian Ingerson (of Inline fame) the workaround is to include an <tt>"Inline->init"</tt> call in your script, e.g.<pre> use PDL;
+ use Inline Pdlpp;
+ Inline-&gt;init;
+ # perl code
+ __DATA__
+ __Pdlpp__
+ # pp code</pre><h3>PDL::NiceSlice and Inline::Pdlpp</h3>There is currently an undesired interaction between PDL::NiceSlice and <tt>"Inline::Pdlpp"</tt>. Since <font size=-1>PP</font> code generally contains expressions of the type <tt>"$var()"</tt> (to access piddles, etc) PDL::NiceSlice recognizes those incorrectly as slice expressions and does its substitutions. For the moment (until hopefully the parser can deal with that) it is best to explicitly switch PDL::NiceSlice off before the section of inlined Pdlpp code. For example:<pre> use PDL::NiceSlice;
+ use Inline::Pdlpp;
+ $a = sequence 10;
+ $a(0:3)++;
+ $a-&gt;inc;
+ no PDL::NiceSlice;
+ __DATA__
+ __C__
+ ppdef (...); # your full pp definition here</pre><h2>Acknowledgements</h2>Brian Ingerson for creating the Inline infrastructure.<h2>Author</h2>Christian Soeller &lt;soellermail [at] excite.com><h2>See Also</h2><font size=-1>PDL</font><p><font size=-1>PDL::PP</font></p><p>Inline</p><p>Inline::C</p><h2>Copyright</h2>Copyright (c) 2001. Christian Soeller. All rights reserved.<p>This program is free software; you can redistribute it and/or modify it under the same terms as <font size=-1>PDL</font> itself.</p><p>See <a rel=nofollow href=http://pdl.perl.org><a href=http://pdl.perl.org>http://pdl.perl.org</a></a></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

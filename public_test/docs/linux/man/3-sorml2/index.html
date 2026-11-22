@@ -1,0 +1,67 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sorml2(3) · Linux Manual Pages</title><meta name=description content="sorml2.f –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-sorml2/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sorml2(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-sorml2/"><meta property="og:description" content="sorml2.f –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>sorml2(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>sorml2.f &#8211;</p><h2>SYNOPSIS</h2><h3>Functions/Subroutines</h3><p>subroutine <code>sorml2</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br><i></i><code>SORML2</code> multiplies a general matrix by the orthogonal matrix from a LQ factorization determined by sgelqf (unblocked algorithm).</p><h2>Function/Subroutine Documentation</h2><h3>subroutine sorml2 (characterSIDE, characterTRANS, integerM, integerN, integerK, real, dimension( lda, * )A, integerLDA, real, dimension( * )TAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerINFO)</h3><p><code>SORML2</code> multiplies a general matrix by the orthogonal matrix from a LQ factorization determined by sgelqf (unblocked algorithm).</p><p><code>Purpose:</code></p><dl><dt></dt><dd><pre><code>
+SORML2 overwrites the general real m by n matrix C with
+    Q *C if SIDE = 'L' and TRANS = 'N',
+            or
+                Q **T *C if SIDE = 'L' and TRANS = 'T',
+            or
+                C *Q if SIDE = 'R' and TRANS = 'N',
+            or
+                C *Q **T if SIDE = 'R' and TRANS = 'T',
+            where Q is a real orthogonal matrix defined as the product of k
+                elementary reflectors
+                    Q = H(k)...H(2) H(1)
+                            as returned by SGELQF.Q is of order m if SIDE = 'L' and of order n if SIDE = 'R'.
+</code></pre><p>&nbsp;<wbr></dd></dl><p><code>Parameters:</code></p><dl><dt></dt><dd><i>SIDE</i></dd><pre>
+          SIDE is CHARACTER*1
+          = 'L': apply Q or Q**T from the Left
+          = 'R': apply Q or Q**T from the Right
+</pre><p><i>TRANS</i></p><pre>
+          TRANS is CHARACTER*1
+          = 'N': apply Q  (No transpose)
+          = 'T': apply Q**T (Transpose)
+</pre><p><i>M</i></p><pre>
+          M is INTEGER
+          The number of rows of the matrix C. M &gt;= 0.
+</pre><p><i>N</i></p><pre>
+          N is INTEGER
+          The number of columns of the matrix C. N &gt;= 0.
+</pre><p><i>K</i></p><pre><code>
+K is INTEGER
+    The number of elementary reflectors whose product defines
+        the matrix Q.If SIDE = 'L',
+                        M &gt;= K &gt;= 0;
+if SIDE
+= 'R', N &gt;= K &gt;= 0.
+</code></pre><p><i>A</i></p><pre>
+          A is REAL array, dimension
+                               (LDA,M) if SIDE = 'L',
+                               (LDA,N) if SIDE = 'R'
+          The i-th row must contain the vector which defines the
+          elementary reflector H(i), for i = 1,2,...,k, as returned by
+          SGELQF in the first k rows of its array argument A.
+          A is modified by the routine but restored on exit.
+</pre><p><i>LDA</i></p><pre>
+          LDA is INTEGER
+          The leading dimension of the array A. LDA &gt;= max(1,K).
+</pre><p><i>TAU</i></p><pre>
+          TAU is REAL array, dimension (K)
+          TAU(i) must contain the scalar factor of the elementary
+          reflector H(i), as returned by SGELQF.
+</pre><p><i>C</i></p><pre>
+          C is REAL array, dimension (LDC,N)
+          On entry, the m by n matrix C.
+          On exit, C is overwritten by Q*C or Q**T*C or C*Q**T or C*Q.
+</pre><p><i>LDC</i></p><pre>
+          LDC is INTEGER
+          The leading dimension of the array C. LDC &gt;= max(1,M).
+</pre><p><i>WORK</i></p><pre>
+          WORK is REAL array, dimension
+                                   (N) if SIDE = 'L',
+                                   (M) if SIDE = 'R'
+</pre><p><i>INFO</i></p><pre>
+          INFO is INTEGER
+          = 0: successful exit
+          &lt; 0: if INFO = -i, the i-th argument had an illegal value
+</pre><p>&nbsp;<wbr></dl><p><code>Author:</code></p><dl><dt></dt><dd>Univ. of Tennessee</dd><p>Univ. of California Berkeley</p><p>Univ. of Colorado Denver</p><p>NAG Ltd.</dl><p><code>Date:</code></p><dl><dt></dt><dd>September 2012</dd></dl><p>Definition at line 159 of file sorml2.f.</p><h2>Author</h2><p>Generated automatically by Doxygen for LAPACK from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

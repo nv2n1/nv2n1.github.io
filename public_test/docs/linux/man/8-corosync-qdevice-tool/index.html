@@ -1,0 +1,32 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>corosync-qdevice-tool(8) · Linux Manual Pages</title><meta name=description content="corosync-qdevice-tool – corosync-qdevice control interface."><link rel=canonical href=https://www.systutorials.com/docs/linux/man/8-corosync-qdevice-tool/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="corosync-qdevice-tool(8) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/8-corosync-qdevice-tool/"><meta property="og:description" content="corosync-qdevice-tool – corosync-qdevice control interface."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/8/>Section 8</a></p><article><header class=man-header><h1>corosync-qdevice-tool(8)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>corosync-qdevice-tool &#8211; corosync-qdevice control interface.</p><h2>Synopsis</h2><p><code>corosync-qdevice-tool [-Hhsv] [-p qdevice_ipc_socket_path]</code></p><h2>Description</h2><p><code>corosync-qdevice-tool</code> is a frontend to the internal corosync-qdevice IPC. Its main purpose is to show important information about the current internal state of <code>corosync-qdevice.</code></p><h2>Options</h2><dl><dt><code>-H</code></dt><dd>Properly shutdown the <code>corosync-qdevice</code> process</dd><dt><code>-h</code></dt><dd>Display a short usage text</dd><dt><code>-s</code></dt><dd>Display the status of the <code>corosync-qdevice</code> process. The output is described in its own section below.</dd><dt><code>-v</code></dt><dd>Display more verbose output for the <code>-s</code> option.</dd><dt><code>-p</code></dt><dd>Path to the <code>corosync-qdevice</code> communication socket.</dd></dl><h2>Status Command Output</h2><pre>Qdevice information
+-------------------
+Model: Net
+Node ID: 1
+HB interval: 10000ms
+Sync HB interval: 30000ms
+Configured node list:
+ 0 Node ID = 1
+Ring ID: 1.a00000000021b48
+Membership node list: 1
+Quorate: Yes
+Quorum node list:
+ 0 Node ID = 1, State = member
+Expected votes: 2
+Last poll call: 2016-06-24T17:05:20 (cast vote)
+Qdevice-net information
+----------------------
+Cluster name: Cluster
+QNetd host: localhost:5403
+Connect timeout: 8000ms
+HB interval: 8000ms
+VQ vote timer interval: 5000ms
+TLS: Supported
+Algorithm: Fifty-Fifty split
+Tie-breaker: Node with lowest node ID
+Poll timer running: Yes (cast vote)
+State: Connected
+TLS active: Yes (client certificate sent)
+Connected since: 2016-06-24T17:02:35
+Echo reply received: 2016-06-24T17:05:15</pre><p>The output is split into a generic qdevice section and a model specific section. Most of the items are just taken from corosync.conf file. It&#8217;s helpful to note that the <i>Membership node list</i> is the membership list of the current node and should match the quorum node list. <i>Last poll call</i> is the timestamp (in iso format) of the last call to the votequorum_qdevice_poll function.</p><p>For model net, it&#8217;s good to check the <i>Poll timer running</i> state. Internally, model net supports 3 states. Not voting (when <i>Poll timer running</i> is No it means that the <code>corosync-qnetd</code> algorithm decides that the current node shouldn&#8217;t get a vote), voting (without cast vote) and voting (with cast vote).</p><h2>See Also</h2><p><code><a href=/docs/linux/man/8-corosync-qnetd/>corosync-qnetd</a></code>(8) <code><a href=/docs/linux/man/8-corosync-qdevice/>corosync-qdevice</a></code>(8)</p><h2>Author</h2><p>Jan Friesse</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

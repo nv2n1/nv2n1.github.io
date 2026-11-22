@@ -1,0 +1,30 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ovirt-hosted-engine-setup(8) · Linux Manual Pages</title><meta name=description content="ovirt-hosted-engine-setup – Tool for deploying hosted engine VM"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/8-ovirt-hosted-engine-setup/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="ovirt-hosted-engine-setup(8) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/8-ovirt-hosted-engine-setup/"><meta property="og:description" content="ovirt-hosted-engine-setup – Tool for deploying hosted engine VM"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/8/>Section 8</a></p><article><header class=man-header><h1>ovirt-hosted-engine-setup(8)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>ovirt-hosted-engine-setup &#8211; Tool for deploying hosted engine VM</p><h2>Synopsis</h2><p><code>ovirt-hosted-engine-setup</code> [options]</p><h2>Description</h2><p>The <code>ovirt-hosted-engine-setup</code> command deploys a virtual machine that you can install oVirt Open Virtualization Manager on to. The Manager installation on your hosted-engine virtual machine can manage the host it is running on.</p><h2>Options</h2><p>The following are general options you can use with this command:</p><dl><dt><code>&#8211;help</code></dt><dd>Show the help message and exit.</dd><dt><code>&#8211;config-append=file</code></dt><dd>Load extra configuration files. The format of the files is the same used in generated answer files.</dd><dt><code>&#8211;generate-answer=file</code></dt><dd>Generate answer file to the specified path instead of using the default location: /etc/ovirt-hosted-engine/answers.conf</dd><dt><code>&#8211;upgrade-appliance</code></dt><dd>Upgrade the engine appliance.</dd><dt><code>&#8211;rollback-upgrade</code></dt><dd>Rollback using a backup saved in a previous upgrade attempt.</dd></dl><h2>Files</h2><dl><dt><i>/etc/ovirt-hosted-engine/answers.conf</i></dt><dd>Default location for generated answer file. The file must be used on additional hosts using the option &#8211;config-append</dd></dl><h2>Example</h2><p>This is an answers.conf example file:</p><pre>[environment:default]
+OVEHOSTED_NETWORK/bridgeIf=none:None
+OVEHOSTED_NETWORK/fqdn=str:ovirt.home
+OVEHOSTED_NETWORK/bridgeName=str:ovirtmgmt
+OVEHOSTED_NETWORK/firewallManager=str:firewalld
+OVEHOSTED_NETWORK/gateway=str:192.168.1.1
+OVEHOSTED_STORAGE/storageDatacenterName=str:hosted_datacenter
+OVEHOSTED_STORAGE/storageDomainName=str:hosted_storage
+OVEHOSTED_STORAGE/hostID=int:1
+OVEHOSTED_STORAGE/storageType=none:None
+OVEHOSTED_STORAGE/volUUID=str:272b4067-1ae4-4755-b2e3-96bb600006e7
+OVEHOSTED_STORAGE/domainType=str:nfs3
+OVEHOSTED_STORAGE/imgSizeGB=str:25
+OVEHOSTED_STORAGE/storageDomainConnection=str:server.home:/home/images
+OVEHOSTED_STORAGE/connectionUUID=str:ca50f16a-23ab-465c-914b-b132f07a7151
+OVEHOSTED_STORAGE/spUUID=str:8018650a-4c64-48fb-a98e-5602bba3086e
+OVEHOSTED_STORAGE/imgUUID=str:c7d69e7a-d934-423c-93d6-ca45c5882806
+OVEHOSTED_STORAGE/sdUUID=str:1d6f6bca-467e-4890-b220-dd2d9b204ab5
+OVEHOSTED_VM/vmVCpus=str:2
+OVEHOSTED_VDSM/consoleType=str:vnc
+OVEHOSTED_VM/vmBoot=str:pxe
+OVEHOSTED_VM/vmMemSizeMB=str:4096
+OVEHOSTED_VM/vmUUID=str:ab35151c-7661-475e-aeaf-adc6fb45e399
+OVEHOSTED_VM/vmMACAddr=str:00:16:3e:1b:d7:61
+OVEHOSTED_VM/vmCDRom=none:None
+OVEHOSTED_VM/ovfArchive=none:None
+OVEHOSTED_VDSM/spicePkiSubject=str:O=home, CN=server.home
+OVEHOSTED_VDSM/pkiSubject=str:/C=EN/L=Test/O=Test/CN=Test</pre><h2>See Also</h2><p><code><a href=/docs/linux/man/8-hosted-engine/>hosted-engine</a></code>(8)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,74 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdinner_product(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdinner_product/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdinner_product(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdinner_product/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdinner_product(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::inner_product - std::inner_product</p><h2>Synopsis</h2><pre><code>Defined in header &lt;numeric&gt;
+template&lt; class InputIt1, class InputIt2, class T &gt;
+T inner_product( InputIt1 first1, InputIt1 last1,   (1)
+InputIt2 first2, T init );
+template&lt;class InputIt1, class InputIt2, class T,
+class BinaryOperation1, class BinaryOperation2&gt;
+T inner_product( InputIt1 first1, InputIt1 last1,   (2)
+InputIt2 first2, T init,
+BinaryOperation1 op1,
+BinaryOperation2 op2 );</code></pre><p>Computes inner product (i.e. sum of products) or performs ordered map/reduce operation on the range [first1, last1) and the range beginning at first2.</p><ol><li>Initializes the accumulator acc with the initial value init and then modifies it with the expression acc = acc + *first1 * *first2, then modifies again with the expression acc = acc + *(first1+1) * *(first2+1), etc (until C++20)</li></ol><p>modifies it with the expression acc = std::move(acc) + *first1 * *first2, then modifies again with the expression acc = std::move(acc) + *(first1+1) * *(first2+1), etc (since C++20)
+until reaching last1. For built-in meaning of + and *, this computes inner product of the two ranges.
+2) Initializes the accumulator acc with the initial value init and then modifies it with the expression acc = op1(acc, op2(*first1, <em>first2)), then modifies again with the expression acc = op1(acc, op2(</em>(first1+1), *(first2+1))), etc (until C++20)</p><p>modifies it with the expression acc = op1(std::move(acc), op2(*first1, <em>first2)), then modifies again with the expression acc = op1(std::move(acc), op2(</em>(first1+1), *(first2+1))), etc (since C++20)
+until reaching last1.
+op1 or op2 must not have side effects. <i>(until C++11)</i>
+op1 or op2 must not invalidate any iterators, including the end iterators, or modify any elements of the range involved. <i>(since C++11)</i></p><h2>Parameters</h2><p>first1, last1 - the first range of elements
+first2 - the beginning of the second range of elements
+init - initial value of the sum of the products
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> binary operation function object that will be applied. This "sum" function takes a value returned by op2 and the current value of the accumulator and produces a new value to be stored in the accumulator.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the function should be equivalent to the following:
+op1 - Ret fun(const Type1 &amp;a, const Type2 &amp;b);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature does not need to have const &.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that objects of types T and Type3 can be implicitly converted to Type1 and Type2 respectively. The type Ret must be such that an object of type T can be assigned a value of type Ret.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> binary operation function object that will be applied. This "product" function takes one value from each range and produces a new value.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the function should be equivalent to the following:
+op2 - Ret fun(const Type1 &amp;a, const Type2 &amp;b);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature does not need to have const &.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that objects of types InputIt1 and InputIt2 can be dereferenced and then implicitly converted to Type1 and Type2 respectively. The type Ret must be such that an object of type Type3 can be assigned a value of type Ret.</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=inputit1-inputit2-must-meet-the-requirements-of-legacyinputiterator>InputIt1, InputIt2 must meet the requirements of LegacyInputIterator.</h2><h2 id=forwardit1-forwardit2-must-meet-the-requirements-of-legacyforwarditerator>ForwardIt1, ForwardIt2 must meet the requirements of LegacyForwardIterator.</h2><p>T must meet the requirements of CopyAssignable and CopyConstructible.</p><h2>Return value</h2><p>The final value of acc as described above.</p><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt;class InputIt1, class InputIt2, class T>
+ <wbr> T inner_product(InputIt1 first1, InputIt1 last1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> InputIt2 first2, T init)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first1 != last1) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> init = std::move(init) + *first1 * *first2; // std::move since C++20
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return init;
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class InputIt1, class InputIt2,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class T,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class BinaryOperation1, class BinaryOperation2>
+ <wbr> T inner_product(InputIt1 first1, InputIt1 last1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> InputIt2 first2, T init,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> BinaryOperation1 op1
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> BinaryOperation2 op2)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first1 != last1) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> init = op1(std::move(init), op2(*first1, *first2)); // std::move since C++20
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return init;
+ <wbr> }</p><h2>Notes</h2><p>The parallelizable version of this algorithm, std::transform_reduce, requires op1 and op2 to be commutative and associative, but std::inner_product makes no such requirement, and always performs the operations in the order given.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;numeric&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;functional&gt;
+int main()
+{
+std::vector&lt;int&gt; a{0, 1, 2, 3, 4};
+std::vector&lt;int&gt; b{5, 4, 2, 3, 1};
+int r1 = std::inner_product(a.begin(), a.end(), b.begin(), 0);
+std::cout &lt;&lt; &quot;Inner product of a and b: &quot; &lt;&lt; r1 &lt;&lt; &lsquo;\n&rsquo;;
+int r2 = std::inner_product(a.begin(), a.end(), b.begin(), 0,
+std::plus&lt;&gt;(), std::equal_to&lt;&gt;());
+std::cout &lt;&lt; &quot;Number of pairwise matches between a and b: &quot; &lt;&lt; r2 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> Inner product of a and b: 21
+ <wbr> Number of pairwise matches between a and b: 2</p><h2>See also</h2><p>transform_reduce applies a functor, then reduces out of order
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sums up a range of elements
+accumulate <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> computes the partial sum of a range of elements
+partial_sum <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

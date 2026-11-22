@@ -1,0 +1,27 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>xcb_input_focus_in_event_t(3) · Linux Manual Pages</title><meta name=description content="xcb_input_focus_in_event_t –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-xcb_input_focus_in_event_t/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="xcb_input_focus_in_event_t(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-xcb_input_focus_in_event_t/"><meta property="og:description" content="xcb_input_focus_in_event_t –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>xcb_input_focus_in_event_t(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>xcb_input_focus_in_event_t &#8211;</p><h2>Synopsis</h2><pre><code>#include &lt;xcb/xinput.h&gt;</code></pre><h3>Event datastructure</h3><pre>typedef struct xcb_input_focus_in_event_t {
+ uint8_t <i>response_type</i>;
+ uint8_t <i>extension</i>;
+ uint16_t <i>sequence</i>;
+ uint32_t <i>length</i>;
+ uint16_t <i>event_type</i>;
+ xcb_input_device_id_t <i>deviceid</i>;
+ xcb_timestamp_t <i>time</i>;
+ xcb_input_device_id_t <i>sourceid</i>;
+ uint8_t <i>mode</i>;
+ uint8_t <i>detail</i>;
+ xcb_window_t <i>root</i>;
+ xcb_window_t <i>event</i>;
+ xcb_window_t <i>child</i>;
+ uint32_t <i>full_sequence</i>;
+ xcb_input_fp1616_t <i>root_x</i>;
+ xcb_input_fp1616_t <i>root_y</i>;
+ xcb_input_fp1616_t <i>event_x</i>;
+ xcb_input_fp1616_t <i>event_y</i>;
+ uint8_t <i>same_screen</i>;
+ uint8_t <i>focus</i>;
+ uint16_t <i>buttons_len</i>;
+ xcb_input_modifier_info_t <i>mods</i>;
+ xcb_input_group_info_t <i>group</i>;
+} <code>xcb_input_focus_in_event_t</code>;</pre><h2>Event Fields</h2><dl><dt><i>response_type</i></dt><dd>The type of this event, in this case <i>XCB_INPUT_FOCUS_IN</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd><dt><i>sequence</i></dt><dd>The sequence number of the last request processed by the X11 server.</dd><dt><i>extension</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>length</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>event_type</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>deviceid</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>time</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>sourceid</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>mode</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>detail</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>root</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>event</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>child</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>full_sequence</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>root_x</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>root_y</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>event_x</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>event_y</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>same_screen</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>focus</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>buttons_len</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>mods</i></dt><dd>NOT YET DOCUMENTED.</dd><dt><i>group</i></dt><dd>NOT YET DOCUMENTED.</dd></dl><h2>Description</h2><h2>See Also</h2><h2>Author</h2><p>Generated from xinput.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

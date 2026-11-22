@@ -1,0 +1,32 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>papi_library_init(3) · Linux Manual Pages</title><meta name=description content="PAPI_library_init –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-papi_library_init/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="papi_library_init(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-papi_library_init/"><meta property="og:description" content="PAPI_library_init –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>papi_library_init(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>PAPI_library_init &#8211;</p><p>initialize the PAPI library.</p><h2>Synopsis</h2><h2>Detailed Description</h2><pre>@param version 
+ upon initialization, PAPI checks the argument against the internal 
+ value of PAPI_VER_CURRENT when the library was compiled. 
+ This guards against portability problems when updating the PAPI shared 
+ libraries on your system. 
+@retval PAPI_EINVAL 
+ papi.h is different from the version used to compile the PAPI library.
+@retval PAPI_ENOMEM 
+ Insufficient memory to complete the operation.
+@retval PAPI_ECMP 
+ This component does not support the underlying hardware.
+@retval PAPI_ESYS 
+ A system or C library call failed inside PAPI, see the errno variable. 
+PAPI_library_init() initializes the PAPI library. 
+PAPI_is_initialized() check for initialization.
+It must be called before any low level PAPI functions can be used. 
+If your application is making use of threads PAPI_thread_init must also be 
+called prior to making any calls to the library other than PAPI_library_init() . 
+@par Examples:</pre><p>&nbsp;<wbr></p><pre>* int retval;
+* retval = PAPI_library_init(PAPI_VER_CURRENT);
+* if (retval != PAPI_VER_CURRENT &amp;&amp; retval &gt; 0) {
+* fprintf(stderr,&quot;PAPI library version mismatch!
+&quot;);
+* <a href=//www.systutorials.com/docs/linux/man/1-exit/>exit</a>(1); }
+* if (retval &lt; 0)
+* handle_error(retval);
+* retval = PAPI_is_initialized();
+* if (retval != PAPI_LOW_LEVEL_INITED)
+* handle_error(retval) 
+* </pre><p>&nbsp;<wbr>&nbsp;<wbr></p><p><code>See Also:</code></p><dl compact><dd><code>PAPI_thread_init</code> PAPI</dd></dl><h2>Author</h2><p>Generated automatically by Doxygen for PAPI from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

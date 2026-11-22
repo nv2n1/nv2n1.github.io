@@ -1,0 +1,36 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdfilesystemread_symlink(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdfilesystemread_symlink/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdfilesystemread_symlink(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdfilesystemread_symlink/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdfilesystemread_symlink(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::filesystem::read_symlink - std::filesystem::read_symlink</p><h2>Synopsis</h2><pre><code>Defined in header&lt;filesystem&gt;
+    std::filesystem::path read_symlink(const std::filesystem::path &amp;p);
+std::filesystem::path read_symlink(const std::filesystem::path &amp;p, (since C++ 17)
+                                                                       std::error_code &amp;ec);</code></pre><p>If the path p refers to a symbolic link, returns a new path object which refers to the target of that symbolic link.
+It is an error if p does not refer to a symbolic link.
+The non-throwing overload returns an empty path on errors.</p><h2>Parameters</h2><p>p - path to a symlink
+ec - out-parameter for error reporting in the non-throwing overload</p><h2>Return value</h2><p>The target of the symlink (which may not necessarily exist)</p><h2>Exceptions</h2><p>The overload that does not take a std::error_code& parameter throws filesystem_error on underlying OS API errors, constructed with p as the first path argument and the OS error code as the error code argument. The overload taking a std::error_code& parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. Any overload not marked noexcept may throw std::bad_alloc if memory allocation fails.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+namespace fs = std::filesystem;
+int main()
+{
+// on a typical Linux system, /lib/libc.so.6 is a symlink
+fs::path p = &quot;/lib/libc.so.6&quot;;
+if (fs::exists(p) &amp;&amp; fs::is_symlink(p))
+std::cout &lt;&lt; p &lt;&lt; &quot; -&gt; &quot; &lt;&lt; fs::read_symlink(p) &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; p &lt;&lt; &quot; does not exist or is not a symlink\n&quot;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> "/lib/libc.so.6" -> "libc-2.12.so"</p><h2>See also</h2><p>is_symlink checks whether the argument refers to a symbolic link
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+create_symlink
+create_directory_symlink creates a symbolic link
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+<i>(C++17)</i>
+copy_symlink copies a symbolic link
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+status determines file attributes
+symlink_status determines file attributes, checking the symlink target
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

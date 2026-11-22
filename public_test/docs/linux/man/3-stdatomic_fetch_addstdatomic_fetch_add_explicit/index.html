@@ -1,0 +1,95 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdatomic_fetch_addstdatomic_fetch_add_explicit(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdatomic_fetch_addstdatomic_fetch_add_explicit/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdatomic_fetch_addstdatomic_fetch_add_explicit(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdatomic_fetch_addstdatomic_fetch_add_explicit/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdatomic_fetch_addstdatomic_fetch_add_explicit(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::atomic_fetch_add,std::atomic_fetch_add_explicit - std::atomic_fetch_add,std::atomic_fetch_add_explicit</p><h2>Synopsis</h2><pre><code>Defined in header &lt;atomic&gt;
+template&lt; class T &gt;
+T atomic_fetch_add( std::atomic&lt;T&gt;* obj,
+typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
+template&lt; class T &gt;
+T atomic_fetch_add( volatile std::atomic&lt;T&gt;* obj,
+typename std::atomic&lt;T&gt;::difference_type arg ) noexcept;
+template&lt; class T &gt;                                        (1)
+T atomic_fetch_add_explicit( std::atomic&lt;T&gt;* obj,
+typename std::atomic&lt;T&gt;::difference_type arg,
+std::memory_order order ) noexcept;                            (2)
+template&lt; class T &gt;
+T atomic_fetch_add_explicit( volatile std::atomic&lt;T&gt;* obj,
+typename std::atomic&lt;T&gt;::difference_type arg,
+std::memory_order order ) noexcept;</code></pre><p>Performs atomic addition. Atomically adds arg to the value pointed to by obj and returns the value obj held previously. The operation is performed as if the following was executed:</p><ol><li>obj->fetch_add(arg)</li><li>obj->fetch_add(arg, order)</li></ol><h2>Parameters</h2><p>obj - pointer to the atomic object to modify
+arg - the value to add to the value stored in the atomic object
+order - the memory synchronization ordering for this operation: all values are permitted.</p><h2>Return value</h2><p>The value immediately preceding the effects of this function in the modification_order of *obj.</p><h2>Possible implementation</h2><p> <wbr> template&lt; class T >
+ <wbr> T atomic_fetch_add( std::atomic&lt;T>* obj, typename std::atomic&lt;T>::difference_type arg )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return obj->fetch_add(arg);
+ <wbr> }</p><h2>Example</h2><p>Single-writer/multiple-reader lock can be made with fetch_add. Note that this simplistic implementation is not lockout-free
+// Run this code<pre><code>#include &lt;string&gt;
+#include &lt;thread&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;atomic&gt;
+#include &lt;chrono&gt;
+// meaning of cnt:
+// 5: there are no active readers or writers.
+// 1&hellip;4: there are 4&hellip;1 readers active, The writer is blocked
+// 0: temporary value between fetch_sub and fetch_add in reader lock
+// -1: there is a writer active. The readers are blocked.
+const int N = 5; // four concurrent readers are allowed
+std::atomic&lt;int&gt; cnt(N);
+std::vector&lt;int&gt; data;
+void reader(int id)
+{
+for (;;) {
+// lock
+while (std::atomic_fetch_sub(&amp;cnt, 1) &lt;= 0)
+std::atomic_fetch_add(&amp;cnt, 1);
+// read
+if (!data.empty())
+std::cout &lt;&lt; (&quot;reader &quot; + std::to_string(id) + &quot; sees &quot; + std::to_string(*data.rbegin()) + &lsquo;\n&rsquo;);
+if (data.size() == 25)
+break;
+// unlock
+std::atomic_fetch_add(&amp;cnt, 1);
+// pause
+std::this_thread::sleep_for(std::chrono::milliseconds(1));
+}
+}
+void writer()
+{
+for (int n = 0; n &lt; 25; ++n) {
+// lock
+while (std::atomic_fetch_sub(&amp;cnt, N + 1) != N)
+std::atomic_fetch_add(&amp;cnt, N + 1);
+// write
+data.push_back(n);
+std::cout &lt;&lt; &quot;writer pushed back &quot; &lt;&lt; n &lt;&lt; &lsquo;\n&rsquo;;
+// unlock
+std::atomic_fetch_add(&amp;cnt, N + 1);
+// pause
+std::this_thread::sleep_for(std::chrono::milliseconds(1));
+}
+}
+int main()
+{
+std::vector&lt;std::thread&gt; v;
+for (int n = 0; n &lt; N; ++n) {
+v.emplace_back(reader, n);
+}
+v.emplace_back(writer);
+for (auto &amp;t : v) {
+t.join();
+}
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> writer pushed back 0
+ <wbr> reader 2 sees 0
+ <wbr> reader 3 sees 0
+ <wbr> reader 1 sees 0
+ <wbr> &lt;&mldr;>
+ <wbr> reader 2 sees 24
+ <wbr> reader 4 sees 24
+ <wbr> reader 1 sees 24</p><p>Defect reports</p><p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards.</p><p>DR Applied to Behavior as published Correct behavior
+P0558R1 C++11 exact type match required because T is deduced from multiple arguments T is deduced from the atomic argument only</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> atomically adds the argument to the value stored in the atomic object and obtains the value held previously
+fetch_add <i>(public member function of std::atomic&lt;T>)</i>
+atomic_fetch_sub
+atomic_fetch_sub_explicit subtracts a non-atomic value from an atomic object and obtains the previous value of the atomic
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

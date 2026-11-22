@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>cpan2dist(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-cpan2dist/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="cpan2dist(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-cpan2dist/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>cpan2dist(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>cpan2dist - The CPANPLUS distribution creator</p><h2>DESCRIPTION</h2><p>This script will create distributions of <tt>"CPAN"</tt> modules of the format you specify, including its prerequisites. These packages can then be installed using the corresponding package manager for the format.</p><p>Note, you can also do this interactively from the default shell, <tt>"CPANPLUS::Shell::Default"</tt>. See the <tt>"CPANPLUS::Dist"</tt> documentation, as well as the documentation of your format of choice for any format specific documentation.</p><h2>USAGE</h2><pre><code>
+Usage : cpan2dist[--format FMT][OPTS] Mod::Name[Mod::Name, ...] cpan2dist[--format FMT][OPTS]-- modulelist / tmp / mods.list cpan2dist[--format FMT][OPTS]-- archive / tmp / dist[/ tmp / dist2] Will create a distribution of type FMT of the modules specified on the command line, and all their prerequisites.Can also create a distribution of type FMT from a local
+                                                                                                                                                                                                                                                                                              archive and all of its prerequisites.
+</code></pre><p>Options:</p><h2 id=take-no-argument--help-show-this-help-message-install-install-this-packageand-any-prerequisites-you-built>#take no argument : &ndash;help Show this help message&ndash; install Install this package(and any prerequisites you built)</h2><pre><code>                       after building it.--skiptest Skip tests.Can be negated using --noskiptest
+                   -- force Force operation.Can be negated using --noforce
+                   -- verbose Be verbose.Can be negated using --noverbose
+                   -- keepsource Keep sources after building distribution.Can be
+                   negated by-- nokeepsource.May not be supported
+                   by all formats
+                   -- makefile Prefer Makefile.PL over Build.PL.Can be negated
+                   using --nomakefile.Defaults to your config setting
+                   -- buildprereq Build packages of any prerequisites,
+even if they are
+    already uptodate on the local system.Can be negated
+    using --nobuildprereq.Defaults to false.--archive Indicate that all modules listed are actually archives
+    -- flushcache Update CPANPLUS' cache before commencing any operation --defaults Instruct ExtUtils::MakeMaker and Module::Build to use
+    default answers during 'perl Makefile.PL' or 'perl Build.PL' calls where possible --edit - metafile Edit the distributions metafile(s) before the distribution
+                is built. Requires a configured editor.
+### take argument:
+--format      Installer format to use (defaults to config setting)
+--ban         Patterns of module names to skip during installation,
+              case-insensitive (affects prerequisites too)
+              May be given multiple times
+--banlist     File containing patterns that could be given to --ban
+              Are appended to the ban list built up by --ban
+              May be given multiple times.
+--ignore      Patterns of modules to exclude from prereq list. Useful
+              for when a prereq listed by a CPAN module is resolved
+              in another way than from its corresponding CPAN package
+              (Match is done on both module name, and package name of
+              the package the module is in, case-insensitive)
+--ignorelist  File containing patterns that may be given to --ignore.
+              Are appended to the ban list built up by --ignore.
+              May be given multiple times.
+--modulelist  File containing a list of modules that should be built.
+              Are appended to the list of command line modules.
+              May be given multiple times.
+--logfile     File to log all output to. By default, all output goes
+              to the console.
+--timeout     The allowed time for buliding a distribution before
+              aborting. This is useful to terminate any build that
+              hang or happen to be interactive despite being told not
+              to be. Defaults to 300 seconds. To turn off, you can
+              set it to 0.
+--set-config  Change any options as specified in your config for this
+              invocation only. See CPANPLUS::Config for a list of
+              supported options.
+--set-program Change any programs as specified in your config for this
+              invocation only. See CPANPLUS::Config for a list of
+              supported programs.
+--dist-opts   Arbitrary options passed along to the chosen installer
+              format's prepare()/create() routine. Please see the
+              documentation of the installer of your choice for
+              options it accepts.
+### builtin lists
+--default-banlist    Use our builtin banlist. Works just like --ban
+                     and --banlist, but with pre-set lists. See the
+                     &quot;Builtin Lists&quot; section for details.
+--default-ignorelist Use our builtin ignorelist. Works just like
+                     --ignore and --ignorelist but with pre-set lists.
+                     See the &quot;Builtin Lists&quot; section for details.
+</code></pre><p>Examples:</p><pre><code>
+## #build a debian package of DBI and its prerequisites,
+    ## #don't bother running tests cpan2dist-- format CPANPLUS::Dist::Deb-- buildprereq-- skiptest DBI## #build a debian package of DBI and its prerequisites and install them
+        cpan2dist-- format CPANPLUS::Dist::Deb-- buildprereq-- install DBI## #Build a package,
+    whose format is determined by your config, of## #the local tarball, reloading cpanplus' indices first and using ## #the tarballs Makefile.PL if it has one.cpan2dist-- makefile-- flushcache-- archive / path / to / Cwd - 1.0.tgz## #build a package from Net::FTP, but don't build any packages or ## #dependencies whose name match 'Foo', 'Bar' or any of the## #patterns mentioned in / tmp / ban cpan2dist-- ban Foo-- ban Bar-- banlist / tmp / ban Net::FTP## #build a package from Net::FTP, but ignore its listed dependency## #on IO::Socket, as it 's shipped per default with the OS we' re on cpan2dist-- ignore IO::Socket Net::FTP## #building all modules listed, plus their prerequisites cpan2dist-- ignorelist / tmp / modules.ignore-- banlist / tmp / modules.ban-- modulelist / tmp / modules.list-- buildprereq-- flushcache-- makefile-- defaults## #pass arbitrary options to the format's prepare()/create() routine cpan2dist-- dist - opts deb_version = 3 --dist - opts prefix = corp
+</code></pre><h2>Built-In Filter Lists</h2><p>Some modules you&rsquo;d rather not package. Some because they are part of core-perl and you don&rsquo;t want a new package. Some because they won&rsquo;t build on your system. Some because your package manager of choice already packages them for you.</p><p>There may be a myriad of reasons. You can use the <tt>"&ndash;ignore"</tt> and <tt>"&ndash;ban"</tt> options for this, but we provide some built-in lists that catch common cases. You can use these built-in lists if you like, or supply your own if need be.</p><h3>Built-In Ignore List</h3><p>You can use this list of regexes to ignore modules matching to be listed as prerequisites of a package. Particularly useful if they are bundled with core-perl anyway and they have known issues building.</p><p>Toggle it by supplying the <tt>"&ndash;default-ignorelist"</tt> option.</p><pre>
+    ^IO$                    # Provided with core anyway
+    ^Cwd$                   # Provided with core anyway
+    ^File::Spec             # Provided with core anyway
+    ^Config$                # Perl's own config, not shipped separately
+    ^ExtUtils::MakeMaker$   # Shipped with perl, recent versions
+                            # have bug 14721 (see rt.cpan.org)
+    ^ExtUtils::Install$     # Part of of EU::MM, same reason
+</pre><h3>Built-In Ban list</h3><p>You can use this list of regexes to disable building of these modules altogether.</p><p>Toggle it by supplying the <tt>"&ndash;default-banlist"</tt> option.</p><pre>
+    ^GD$                # Needs c libraries
+    ^Berk.*DB           # DB packages require specific options &amp; linking
+    ^DBD::              # DBD drivers require database files/headers
+    ^XML::              # XML modules usually require expat libraries
+    Apache              # These usually require apache libraries
+    SSL                 # These usually require SSL certificates &amp; libs
+    Image::Magick       # Needs ImageMagick C libraries
+    Mail::ClamAV        # Needs ClamAV C Libraries
+    ^Verilog            # Needs Verilog C Libraries
+    ^Authen::PAM$       # Needs PAM C libraries &amp; Headers
+</pre><h2>SEE ALSO</h2><p>CPANPLUS::Dist, CPANPLUS::Module, CPANPLUS::Shell::Default, <tt>"cpanp"</tt></p><h2>BUG REPORTS</h2><p>Please report bugs or other issues to &lt;bug-cpanplus [at] rt.cpan.org&lt;gt>.</p><h2>AUTHOR</h2><p>This module by Jos Boumans &lt;kane [at] cpan.org>.</p><h2>COPYRIGHT</h2><p>The <font size=-1>CPAN++</font> interface (of which this module is a part of) is copyright (c) 2001 - 2007, Jos Boumans &lt;kane [at] cpan.org>. All rights reserved.</p><p>This library is free software; you may redistribute and/or modify it under the same terms as Perl itself.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

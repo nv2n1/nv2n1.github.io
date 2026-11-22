@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdminmax(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdminmax/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdminmax(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdminmax/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdminmax(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::minmax - std::minmax</p><h2>Synopsis</h2><pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b);
+(until C++ 14)
+    template &lt;class T&gt;
+    (since C++ 14)
+        constexpr std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b);
+template &lt;class T, class Compare&gt;
+(since C++ 11)
+    std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b, (until C++ 14)
+                                                                       Compare comp);
+template &lt;class T, class Compare&gt;
+constexpr std::pair&lt;const T &amp;, const T &amp;&gt; minmax(const T &amp;a, const T &amp;b, (1)(since C++ 14)
+                                                                             Compare comp);
+template &lt;class T&gt;
+(2)(since C++ 11)
+    std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist);
+(until C++ 14)
+    template &lt;class T&gt;
+    (since C++ 14)
+        constexpr std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist);
+(3)
+    template &lt;class T, class Compare&gt;
+    (since C++ 11)
+        std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist, Compare comp);
+(4)(until C++ 14)
+    template &lt;class T, class Compare&gt;
+    (since C++ 14)
+        constexpr std::pair&lt;T, T&gt; minmax(std::initializer_list&lt;T&gt; ilist, Compare comp);</code></pre><p>Returns the lowest and the greatest of the given values.
+1-2) Returns references to the smaller and the greater of a and b.
+3-4) Returns the smallest and the greatest of the values in initializer list ilist.
+The (1,3) versions use operator&lt; to compare the values, whereas the (2,4) versions use the given comparison function comp.</p><h2>Parameters</h2><p>a, b - the values to compare
+ilist - initializer list with the values to compare
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function object (i.e. an object that satisfies the requirements of Compare) which returns true if the first argument is less than the second.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> bool cmp(const Type1 &amp;a, const Type2 &amp;b);
+comp - While the signature does not need to have const &, the function must not modify the objects passed to it and must be able to accept all values of type (possibly const) Type1 and Type2 regardless of value_category (thus, Type1 & is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is Type1 unless for Type1 a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that an object of type T can be implicitly converted to both of them.</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=t-must-meet-the-requirements-of-lessthancomparable-in-order-to-use-overloads-13>T must meet the requirements of LessThanComparable in order to use overloads (1,3).</h2><p>T must meet the requirements of CopyConstructible in order to use overloads (3,4).</p><h2>Return value</h2><p>1-2) Returns the result of std::pair&lt;const T&, const T&>(a, b) if a&lt;b or if a is equivalent to b. Returns the result of std::pair&lt;const T&, const T&>(b, a) if b&lt;a.
+3-4) A pair with the smallest value in ilist as the first element and the greatest as the second. If several elements are equivalent to the smallest, the leftmost such element is returned. If several elements are equivalent to the largest, the rightmost such element is returned.</p><h2>Complexity</h2><p>1-2) Exactly one comparison
+3-4) At most ilist.size() * 3 / 2 comparisons</p><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt;class T>
+ <wbr> std::pair&lt;const T&, const T&> minmax( const T& a, const T& b )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return (b &lt; a) ? std::pair&lt;const T&, const T&>(b, a)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> : std::pair&lt;const T&, const T&>(a, b);
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class T, class Compare>
+ <wbr> std::pair&lt;const T&, const T&> minmax( const T& a, const T& b, Compare comp )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return comp(b, a) ? std::pair&lt;const T&, const T&>(b, a)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> : std::pair&lt;const T&, const T&>(a, b);
+ <wbr> }</p><p>Third version</p><p> <wbr> template&lt; class T >
+ <wbr> std::pair&lt;T, T> minmax( std::initializer_list&lt;T> ilist )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> auto p = std::minmax_element(ilist.begin(), ilist.end());
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::make_pair(*p.first, *p.second);
+ <wbr> }</p><p>Fourth version</p><p> <wbr> template&lt; class T, class Compare >
+ <wbr> std::pair&lt;T, T> minmax( std::initializer_list&lt;T> ilist, Compare comp )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> auto p = std::minmax_element(ilist.begin(), ilist.end(), comp);
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::make_pair(*p.first, *p.second);
+ <wbr> }</p><h2>Notes</h2><p>For overloads (1,2), if one of the parameters is an rvalue, the reference returned becomes a dangling reference at the end of the full expression that contains the call to minmax: int n = 1;</p><p>auto p = std::minmax(n, n + 1);</p><p>int m = p.first; // ok</p><p>int x = p.second; // undefined behavior</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+int main()
+{
+std::vector&lt;int&gt; v{3, 1, 4, 1, 5, 9, 2, 6};
+std::srand(std::time(0));
+std::pair&lt;int, int&gt; bounds = std::minmax(std::rand() % v.size(),
+std::rand() % v.size());
+std::cout &lt;&lt; &quot;v[&quot; &lt;&lt; bounds.first &lt;&lt; &quot;,&quot; &lt;&lt; bounds.second &lt;&lt; &quot;]: &quot;;
+for (int i = bounds.first; i &lt; bounds.second; ++i) {
+std::cout &lt;&lt; v[i] &lt;&lt; &rsquo; &lsquo;;
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> v[2,7]: 4 1 5 9 2</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the smaller of the given values
+min <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the greater of the given values
+max <i>(function template)</i>
+minmax_element returns the smallest and the largest elements in a range
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

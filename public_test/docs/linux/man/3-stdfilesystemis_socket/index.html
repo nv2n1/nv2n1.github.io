@@ -1,0 +1,107 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdfilesystemis_socket(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdfilesystemis_socket/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdfilesystemis_socket(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdfilesystemis_socket/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdfilesystemis_socket(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::filesystem::is_socket - std::filesystem::is_socket</p><h2>Synopsis</h2><pre><code>Defined in header&lt;filesystem&gt;
+    bool is_socket(std::filesystem::file_status s) noexcept;
+(1)(since C++ 17)
+    bool is_socket(const std::filesystem::path &amp;p);
+(2)(since C++ 17)
+    bool is_socket(const std::filesystem::path &amp;p, std::error_code &amp;ec) noexcept;</code></pre><p>Checks if the given file status or path corresponds to a named IPC socket, as if determined by the POSIX S_IFSOCK.</p><ol><li>Equivalent to s.type() == file_type::socket.</li><li>Equivalent to is_socket(status(p)) or is_socket(status(p, ec)).</li></ol><h2>Parameters</h2><p>s - file status to check
+p - path to examine
+ec - out-parameter for error reporting in the non-throwing overload</p><h2>Return value</h2><p>true if the file indicated by p or if the type indicated s refers to a named socket. The non-throwing overload returns false if an error occurs.</p><h2>Exceptions</h2><ol start=2><li>The overload that does not take a std::error_code& parameter throws filesystem_error on underlying OS API errors, constructed with p as the first path argument and the OS error code as the error code argument. The overload taking a std::error_code& parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. Any overload not marked noexcept may throw std::bad_alloc if memory allocation fails.</li></ol><h2>Notes</h2><p>Named sockets are UNIX domain sockets constructed with socket and bind POSIX APIs, which may be used for advanced interprocess communication. In particular, they may be used to transport open file descriptors from one running process to another.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;filesystem&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/un.h&gt;
+#include &lt;sys/stat.h&gt;
+namespace fs = std::filesystem;
+void demo_status(const fs::path &amp;p, fs::file_status s)
+{
+std::cout &lt;&lt; p;
+// alternative: switch(s.type()) { case fs::file_type::regular: &hellip;}
+if (fs::is_regular_file(s))
+std::cout &lt;&lt; &quot; is a regular file\n&quot;;
+if (fs::is_directory(s))
+std::cout &lt;&lt; &quot; is a directory\n&quot;;
+if (fs::is_block_file(s))
+std::cout &lt;&lt; &quot; is a block device\n&quot;;
+if (fs::is_character_file(s))
+std::cout &lt;&lt; &quot; is a character device\n&quot;;
+if (fs::is_fifo(s))
+std::cout &lt;&lt; &quot; is a named IPC pipe\n&quot;;
+if (fs::is_socket(s))
+std::cout &lt;&lt; &quot; is a named IPC socket\n&quot;;
+if (fs::is_symlink(s))
+std::cout &lt;&lt; &quot; is a symlink\n&quot;;
+if (!fs::exists(s))
+std::cout &lt;&lt; &quot; does not exist\n&quot;;
+}
+int main()
+{
+// create files of different kinds
+fs::create_directory(&quot;sandbox&quot;);
+std::ofstream(&quot;sandbox/file&quot;); // create regular file
+fs::create_directory(&quot;sandbox/dir&quot;);
+mkfifo(&quot;sandbox/pipe&quot;, 0644);
+struct sockaddr_un addr;
+addr.sun_family = AF_UNIX;
+std::strcpy(addr.sun_path, &quot;sandbox/sock&quot;);
+int fd = socket(PF_UNIX, SOCK_STREAM, 0);
+bind(fd, (struct sockaddr *)&amp;addr, sizeof addr);
+fs::create_symlink(&quot;file&quot;, &quot;sandbox/symlink&quot;);
+// demo different status accessors
+for (auto it = fs::directory_iterator(&quot;sandbox&quot;); it != fs::directory_iterator(); ++it)
+demo_status(*it, it-&gt;symlink_status());       // use cached status from directory entry
+demo_status(&quot;dev/null&quot;, fs::status(&quot;/dev/null&quot;)); // direct calls to status
+demo_status(&quot;dev/sda&quot;, fs::status(&quot;/dev/sda&quot;));
+demo_status(&quot;sandbox/no&quot;, fs::status(&quot;/sandbox/no&quot;));
+// cleanup
+close(fd);
+fs::remove_all(&quot;sandbox&quot;);
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> "sandbox/file" is a regular file
+ <wbr> "sandbox/dir" is a directory
+ <wbr> "sandbox/pipe" is a named IPC pipe
+ <wbr> "sandbox/sock" is a named IPC socket
+ <wbr> "sandbox/symlink" is a symlink
+ <wbr> "dev/null" is a character device
+ <wbr> "dev/sda" is a block device
+ <wbr> "sandbox/no" does not exist</p><h2>See also</h2><p>status determines file attributes
+symlink_status determines file attributes, checking the symlink target
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+<i>(C++17)</i>
+file_status represents file type and permissions
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++17)</i>
+status_known checks whether file status is known
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_block_file checks whether the given path refers to block device
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_character_file checks whether the given path refers to a character device
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_directory checks whether the given path refers to a directory
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_fifo checks whether the given path refers to a named pipe
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_other checks whether the argument refers to an other file
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_regular_file checks whether the argument refers to a regular file
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+is_symlink checks whether the argument refers to a symbolic link
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+exists checks whether path refers to existing file system object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks whether the directory entry refers to a named IPC socket
+is_socket <i>(public member function of std::filesystem::directory_entry)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

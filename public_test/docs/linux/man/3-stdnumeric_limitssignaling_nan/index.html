@@ -1,0 +1,33 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdnumeric_limitssignaling_nan(3) · Linux Manual Pages</title><meta name=description content="std::numeric_limits<T>::signaling_NaN – std::numeric_limits<T>::signaling_NaN"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdnumeric_limitssignaling_nan/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdnumeric_limitssignaling_nan(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdnumeric_limitssignaling_nan/"><meta property="og:description" content="std::numeric_limits<T>::signaling_NaN – std::numeric_limits<T>::signaling_NaN"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdnumeric_limitssignaling_nan(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::numeric_limits&lt;T>::signaling_NaN &#8211; std::numeric_limits&lt;T>::signaling_NaN</p><h2>Synopsis</h2><pre><code>static T signaling_NaN() throw();             (until C++11)
+static constexpr T signaling_NaN() noexcept;  (since C++11)</code></pre><p>Returns the special value "signaling not-a-number", as represented by the floating-point type T. Only meaningful if std::numeric_limits&lt;T>::has_signaling_NaN == true. In IEEE 754, the most common binary representation of floating-point numbers, any value with all bits of the exponent set and at least one bit of the fraction set represents a NaN. It is implementation-defined which values of the fraction represent quiet or signaling NaNs, and whether the sign bit is meaningful.</p><h2>Return value</h2><p>T std::numeric_limits&lt;T>::signaling_NaN()<br>/* non-specialized */ T()<br>bool false<br>char 0<br>signed char 0<br>unsigned char 0<br>wchar_t 0<br>char8_t 0<br>char16_t 0<br>char32_t 0<br>short 0<br>unsigned short 0<br>int 0<br>unsigned int 0<br>long 0<br>unsigned long 0<br>long long 0<br>unsigned long long 0<br>float implementation-defined<br>double implementation-defined<br>long double implementation-defined</p><h2>Notes</h2><p>A NaN never compares equal to itself. Copying a NaN is not required, by IEEE-754, to preserve its bit representation (sign and payload), though most implementation do.<br>When a signaling NaN is used as an argument to an arithmetic expression, the appropriate floating-point exception may be raised and the NaN is "quieted", that is, the expression returns a quiet NaN.</p><h2>Example</h2><p>Demonstrates the use of a signaling NaN to raise a floating-point exception<br>// Run this code</p><pre><code>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+#include &lt;cfenv&gt;
+#pragma STDC_FENV_ACCESS on
+void show_fe_exceptions()
+{
+    int n = std::fetestexcept(FE_ALL_EXCEPT);
+    if (n &amp; FE_INVALID)
+        std::cout &lt;&lt; &quot;FE_INVALID is raised
+&quot;;
+    else if (n == 0)
+        std::cout &lt;&lt; &quot;no exceptions are raised
+&quot;;
+    std::feclearexcept(FE_ALL_EXCEPT);
+}
+int main()
+{
+    double snan = std::numeric_limits&lt;double&gt;::signaling_NaN();
+    std::cout &lt;&lt; &quot;After sNaN was obtained &quot;;
+    show_fe_exceptions();
+    double qnan = snan * 2.0;
+    std::cout &lt;&lt; &quot;After sNaN was multiplied by 2 &quot;;
+    show_fe_exceptions();
+    double qnan2 = qnan * 2.0;
+    std::cout &lt;&lt; &quot;After the quieted NaN was multiplied by 2 &quot;;
+    show_fe_exceptions();
+    std::cout &lt;&lt; &quot;The result is &quot; &lt;&lt; qnan2 &lt;&lt; '
+';
+}
+</code></pre><h2>Output:</h2><p>&nbsp;<wbr>&nbsp;After sNaN was obtained no exceptions are raised<br>&nbsp;<wbr>&nbsp;After sNaN was multiplied by 2 FE_INVALID is raised<br>&nbsp;<wbr>&nbsp;After the quieted NaN was multiplied by 2 no exceptions are raised<br>&nbsp;<wbr>&nbsp;The result is nan</p><h2>See also</h2><p>has_signaling_NaN identifies floating-point types that can represent the special value "signaling not-a-number" (NaN)<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br><code>[static]</code><br>quiet_NaN returns a quiet NaN value of the given floating-point type<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br><code>[static]</code><br>isnan checks if the given number is NaN<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function)</i><br><i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

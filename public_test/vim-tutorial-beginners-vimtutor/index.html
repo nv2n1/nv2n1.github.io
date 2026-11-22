@@ -1,0 +1,107 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Mastering Vim: A Practical Guide to vimtutor</title><link rel=canonical href=https://www.systutorials.com/vim-tutorial-beginners-vimtutor/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Mastering Vim: A Practical Guide to vimtutor"><meta property="og:url" content="https://www.systutorials.com/vim-tutorial-beginners-vimtutor/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/programming-academy/>Programming Academy</a>
+&#8250; <a href=/category/scripting-automation/>Scripting & Automation</a></nav><h1>Mastering Vim: A Practical Guide to vimtutor</h1><time class=post-date datetime=2016-12-31T02:49:42Z>December 31, 2016</time> <span class=post-author>&#183; <a href=/author/zma/>Eric Ma</a> and Community</span> <span class=post-updated>&#183; updated April 11, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>vimtutor is the most practical way to learn Vim. It’s an interactive lesson built directly into your editor that teaches through practice rather than passive reading. You launch it from the terminal with no setup required, and you get immediate feedback on every command you type.</p><h2 id=running-vimtutor>Running vimtutor</h2><p>From any terminal:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vimtutor
+</span></span></code></pre></div><p>This opens an interactive tutorial inside Vim itself. Budget 25–30 minutes to work through it, though actual time varies depending on how much you experiment with each lesson.</p><p>For a tutorial in a different language:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vimtutor de     <span class=c1># German</span>
+</span></span><span class=line><span class=cl>vimtutor fr     <span class=c1># French</span>
+</span></span><span class=line><span class=cl>vimtutor zh     <span class=c1># Chinese (simplified)</span>
+</span></span><span class=line><span class=cl>vimtutor ru     <span class=c1># Russian</span>
+</span></span></code></pre></div><p>Run <code>vimtutor --help</code> to see all available languages on your system. The language codes follow your system’s locale settings.</p><h2 id=what-youll-learn-seven-lessons>What You’ll Learn: Seven Lessons</h2><p>The tutorial builds sequentially—each lesson assumes you’ve completed the previous one. Critical point: you must actually execute the commands. Reading alone doesn’t build muscle memory.</p><h3 id=lesson-1-movement-and-basic-editing>Lesson 1: Movement and Basic Editing</h3><p>Master cursor movement using <code>hjkl</code> (left, down, up, right). These keys keep your hands on the home row, though Vim accepts arrow keys too.</p><p>Essential editing commands:</p><pre><code>x              delete character under cursor
+i              insert before cursor
+a              append after cursor
+A              append at end of line
+:wq            write and quit
+:q!            quit without saving
+</code></pre><h3 id=lesson-2-operators-and-motions>Lesson 2: Operators and Motions</h3><p>Vim’s power comes from combining operators with motions. The pattern is <code>[operator][count][motion]</code>.</p><p>Common combinations:</p><pre><code>dw             delete word
+d$             delete to end of line
+dd             delete entire line
+2w             move forward two words
+d2w            delete two words
+cw             change word (delete and insert)
+c$             change to end of line
+yw             yank (copy) word
+y$             yank to end of line
+</code></pre><p>Undo with <code>u</code>, redo with <code>Ctrl-R</code>. Vim maintains a full undo history—you can undo multiple times or navigate with <code>:undolist</code> for complex undo trees.</p><h3 id=lesson-3-putting-and-replacing>Lesson 3: Putting and Replacing</h3><p>After deleting or copying text, paste it back:</p><pre><code>p              paste after cursor
+P              paste before cursor
+r              replace single character
+R              replace mode (overwrite characters)
+</code></pre><p>When you delete something with <code>d</code>, Vim stores it in a register. Paste it with <code>p</code> or <code>P</code>. The same applies to yanked text—copy with <code>y</code>, paste with <code>p</code>. Each register is independent, so you can store multiple text blocks simultaneously.</p><h3 id=lesson-4-navigation-and-search>Lesson 4: Navigation and Search</h3><p>Jump around files efficiently:</p><pre><code>Ctrl-G         show file position and status
+G              jump to end of file
+gg             jump to start of file
+10G            jump to line 10
+:10            alternative: go to line 10
+/pattern       search forward
+?pattern       search backward
+n              next match
+N              previous match
+%              jump to matching bracket or parenthesis
+*              search for word under cursor (forward)
+#              search for word under cursor (backward)
+</code></pre><p>Search is case-sensitive by default. Make searches case-insensitive with <code>:set ignorecase</code> or use <code>/pattern\c</code> for a single case-insensitive search. The <code>:set smartcase</code> option makes searches case-sensitive only if your search pattern contains uppercase letters.</p><h3 id=lesson-5-external-commands-and-file-operations>Lesson 5: External Commands and File Operations</h3><p>Run shell commands without leaving Vim:</p><pre><code>:!ls                    execute shell command
+:!rm filename           delete file via shell
+:w newfile.txt          write to new file
+:w !cat &gt; output.txt    pipe buffer to command
+:r filename.txt         insert file contents
+:r !ls                  insert command output
+</code></pre><p>Visual mode lets you select and work with text ranges. Press <code>v</code> to enter Visual mode, select text using motions, then perform an action:</p><pre><code>v{motion}:w file.txt    write selection to file
+v{motion}d              delete selection
+v{motion}y              copy selection
+v{motion}c              change selection
+</code></pre><h3 id=lesson-6-text-manipulation>Lesson 6: Text Manipulation</h3><p>Insert new lines and switch modes:</p><pre><code>o              open line below, enter Insert mode
+O              open line above, enter Insert mode
+a              append after cursor
+R              Replace mode (overwrites as you type)
+v              Visual mode (character selection)
+V              Visual Line mode (full lines)
+Ctrl-V         Visual Block mode (rectangular regions)
+</code></pre><p>Copy text with <code>y</code> (yank). It works with motions just like <code>d</code>:</p><pre><code>yw             yank word
+y$             yank to end of line
+yy             yank entire line
+</code></pre><h3 id=lesson-7-help-and-configuration>Lesson 7: Help and Configuration</h3><p>Access Vim’s built-in help:</p><pre><code>:help                  open help index
+:help subject          search help for topic
+:help motion           learn about motions
+:help operator         learn about operators
+Ctrl-W Ctrl-W          switch between help and buffer
+:q                     close help window
+</code></pre><p>Create a <code>.vimrc</code> configuration file in your home directory to customize Vim:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Linux/macOS</span>
+</span></span><span class=line><span class=cl>~/.vimrc
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Windows</span>
+</span></span><span class=line><span class=cl>~/_vimrc
+</span></span></code></pre></div><p>A minimal practical <code>.vimrc</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=k>set</span> <span class=nx>nocompatible</span>       <span class=c>&#34; disable legacy compatibility</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>number</span>             <span class=c>&#34; show line numbers</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>relativenumber</span>     <span class=c>&#34; show relative line numbers</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>expandtab</span>          <span class=c>&#34; use spaces instead of tabs</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>shiftwidth</span><span class=p>=</span><span class=m>4</span>       <span class=c>&#34; indent with 4 spaces</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>tabstop</span><span class=p>=</span><span class=m>4</span>          <span class=c>&#34; display tabs as 4 spaces</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>autoindent</span>         <span class=c>&#34; copy indent to new lines</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>ignorecase</span>         <span class=c>&#34; ignore case in searches</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>smartcase</span>          <span class=c>&#34; unless search contains uppercase</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>hlsearch</span>           <span class=c>&#34; highlight search matches</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>incsearch</span>          <span class=c>&#34; show matches while typing</span>
+</span></span><span class=line><span class=cl><span class=k>syntax</span> <span class=nx>on</span>              <span class=c>&#34; enable syntax highlighting</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>ruler</span>              <span class=c>&#34; show cursor position</span>
+</span></span><span class=line><span class=cl><span class=k>set</span> <span class=nx>showcmd</span>            <span class=c>&#34; show incomplete commands</span>
+</span></span></code></pre></div><p>Use <code>:set option</code> to enable a setting, <code>:set nooption</code> to disable it. Changes made with <code>:set</code> apply only to the current session; add them to <code>.vimrc</code> to persist them across sessions.</p><h2 id=after-completing-vimtutor>After Completing vimtutor</h2><p>Explore deeper topics with these help commands:</p><pre><code>:help user-manual      comprehensive user guide
+:help motion           all movement commands
+:help operator         all operators
+:help cmdline          command-line features
+:help registers        understanding Vim's registers
+:help visual-mode      advanced visual mode usage
+:help macros           recording and playing macros
+</code></pre><p>View example configurations:</p><pre><code>:echo $VIMRUNTIME      show Vim runtime directory
+</code></pre><p>Then examine <code>$VIMRUNTIME/defaults.vim</code> for additional configuration ideas.</p><h2 id=essential-commands-for-productivity>Essential Commands for Productivity</h2><p>Once comfortable with basics, these commands significantly boost your efficiency:</p><pre><code>.              repeat last command
+qa             start recording macro in register a
+q              stop recording
+@a             play macro from register a
+@@             repeat last macro
+Ctrl-A         increment number under cursor
+Ctrl-X         decrement number under cursor
+&gt;              indent lines
+&lt;              unindent lines
+J              join line below to current line
+~              toggle case of character
+:set list      show invisible characters (tabs, line endings)
+:set wrap      enable word wrapping
+</code></pre><p>Macros are particularly powerful. Record a sequence with <code>qa</code>, type your commands, then press <code>q</code> to stop. Play it back with <code>@a</code> or repeat with <code>@@</code>. This is how you automate repetitive editing tasks.</p><h2 id=building-muscle-memory>Building Muscle Memory</h2><p>The tutorial intentionally focuses on essentials. Vim has enormous depth—<code>man vim</code> and <code>:help</code> will keep you learning for years. The approach that actually works: learn one new command daily, use it in real work, and let repetition build automaticity. Vim rewards consistent daily use far more than cramming knowledge.</p><p>Start with vimtutor today. Spend 30 minutes on it. Then use Vim for actual work, consulting the help system as needed. Consistency matters more than comprehensiveness.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,63 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Enable RPM Fusion Repository on RHEL 9 and Rocky Linux</title><link rel=canonical href=https://www.systutorials.com/how-to-enable-rpm-fusion-for-centos-6-6/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Enable RPM Fusion Repository on RHEL 9 and Rocky Linux"><meta property="og:url" content="https://www.systutorials.com/how-to-enable-rpm-fusion-for-centos-6-6/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/linux-systems-administration-academy/>Linux & Systems Administration Academy</a>
+&#8250; <a href=/linux-essentials-path/>Linux Essentials Path</a>
+&#8250; <a href=/category/packages-desktop-applications/>Packages, Desktop & Applications</a></nav><h1>Enable RPM Fusion Repository on RHEL 9 and Rocky Linux</h1><time class=post-date datetime=2018-03-24T11:45:21Z>March 24, 2018</time> <span class=post-author>&#183; <a href=/author/zma/>Eric Ma</a> and Community</span> <span class=post-updated>&#183; updated April 12, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>RPM Fusion provides packages that Fedora and RHEL can’t ship by default due to patent, licensing, or trademark restrictions. This includes multimedia codecs, proprietary drivers, and other software. Here’s how to enable it on RHEL 9 and Rocky Linux.</p><h2 id=enable-rpm-fusion-free-and-non-free>Enable RPM Fusion Free and Non-Free</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Enable EPEL first (required dependency)
+sudo dnf install epel-release
+
+# Enable RPM Fusion Free
+sudo dnf install \
+  https://download1.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
+
+# Enable RPM Fusion Non-Free
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+</code></pre><p>On Rocky Linux, EPEL is already available in the BaseOS repository, so <code>dnf install epel-release</code> should work directly.</p><h2 id=verify-installation>Verify Installation</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>dnf repolist | grep rpmfusion
+</code></pre><p>You should see both <code>rpmfusion-free</code> and <code>rpmfusion-nonfree</code> repositories listed.</p><h2 id=install-multimedia-codecs>Install Multimedia Codecs</h2><p>One of the most common reasons to enable RPM Fusion is to install media playback codecs:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Install multimedia playback
+sudo dnf groupinstall multimedia
+
+# Install sound and video codecs
+sudo dnf groupinstall sound-and-video
+
+# Install individual codecs
+sudo dnf install gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld
+sudo dnf install gstreamer1-plugins-ugly-free gstreamer1-plugins-ugly-freeworld
+sudo dnf install ffmpeg
+</code></pre><h2 id=install-proprietary-drivers>Install Proprietary Drivers</h2><p>RPM Fusion Non-Free provides proprietary GPU drivers:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Nvidia proprietary driver
+sudo dnf install akmod-nvidia
+sudo akmods --force
+sudo dracut --force
+</code></pre><p>Reboot after installing Nvidia drivers. Verify with:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>nvidia-smi
+</code></pre><h2 id=enable-appstream-data>Enable AppStream Data</h2><p>For software centers (GNOME Software, KDE Discover) to show RPM Fusion packages:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Install AppStream metadata
+sudo dnf install rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
+</code></pre><h2 id=configure-package-priorities>Configure Package Priorities</h2><p>To prevent RPM Fusion packages from overriding base system packages, install <code>dnf-plugins-core</code> and set priorities:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>sudo dnf install dnf-plugins-core
+
+# Prefer base repos over RPM Fusion for overlapping packages
+sudo dnf config-manager --setopt=&#34;rpmfusion-free.priority=10&#34; --save
+sudo dnf config-manager --setopt=&#34;rpmfusion-nonfree.priority=10&#34; --save
+</code></pre><h2 id=troubleshooting>Troubleshooting</h2><p><strong>Repository not found:</strong></p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Clear DNF cache and retry
+sudo dnf clean all
+sudo dnf makecache
+</code></pre><p><strong>GPG key import fails:</strong></p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Manually import RPM Fusion keys
+sudo rpm --import https://rpmfusion.org/keys/RPM-GPG-KEY-rpmfusion-free-el-9
+sudo rpm --import https://rpmfusion.org/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-9
+</code></pre><p><strong>Packages not showing in GNOME Software:</strong></p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Restart the software center after enabling repos
+sudo dnf install rpmfusion-free-appstream-data
+killall gnome-software
+</code></pre><h2 id=whats-available-in-rpm-fusion>What’s Available in RPM Fusion</h2><p><strong>Free repository:</strong> Open-source software that can’t be in Fedora due to patent concerns (multimedia codecs like x264, x265, AAC).</p><p><strong>Non-Free repository:</strong> Proprietary software and drivers (Nvidia drivers, Steam, certain firmware).</p><p>Common packages people install from RPM Fusion:</p><ul><li><code>ffmpeg</code> — Video/audio processing</li><li><code>VLC</code> — Media player</li><li><code>akmod-nvidia</code> — Nvidia proprietary driver</li><li><code>steam</code> — Gaming platform</li><li><code>chromium-ffmpeg</code> — Additional codecs for Chromium</li></ul><h2 id=rpm-fusion-on-rocky-linux-vs-rhel>RPM Fusion on Rocky Linux vs RHEL</h2><p>Rocky Linux is a downstream rebuild of RHEL, so RPM Fusion works identically on both. The key difference is that Rocky includes EPEL in its default repositories, while on RHEL you may need to enable it manually.</p><p>On RHEL 9 specifically, you may also need to enable the CRB (CodeReady Builder) repository:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># RHEL 9 only
+sudo subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms
+
+# Rocky Linux 9
+sudo dnf config-manager --enable crb
+</code></pre><p>Some RPM Fusion packages have build dependencies in CRB, so enabling it prevents dependency resolution failures.</p><h2 id=disabling-rpm-fusion-temporarily>Disabling RPM Fusion Temporarily</h2><p>If you need to install a package from base repos without RPM Fusion interference:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Disable RPM Fusion for a single transaction
+sudo dnf install --disablerepo=&#39;*rpmfusion*&#39; package-name
+
+# Disable permanently (can re-enable later)
+sudo dnf config-manager --set-disabled rpmfusion-free
+sudo dnf config-manager --set-disabled rpmfusion-nonfree
+
+# Re-enable
+sudo dnf config-manager --set-enabled rpmfusion-free
+sudo dnf config-manager --set-enabled rpmfusion-nonfree
+</code></pre><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,51 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdstrtofstdstrtodstdstrtold(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdstrtofstdstrtodstdstrtold/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdstrtofstdstrtodstdstrtold(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdstrtofstdstrtodstdstrtold/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdstrtofstdstrtodstdstrtold(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::strtof,std::strtod,std::strtold - std::strtof,std::strtod,std::strtold</p><h2>Synopsis</h2><p>Defined in header &lt;cstdlib>
+float strtof( const char* str, char** str_end ); <i>(since C++11)</i>
+double strtod( const char* str, char** str_end );
+long double strtold( const char* str, char** str_end ); <i>(since C++11)</i>
+Interprets a floating point value in a byte string pointed to by str.
+Function discards any whitespace characters (as determined by std::isspace()) until first non-whitespace character is found. Then it takes as many characters as possible to form a valid floating-point representation and converts them to a floating-point value. The valid floating-point value can be one of the following:</p><ul><li>decimal floating-point expression. It consists of the following parts:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) plus or minus sign
+ <wbr> <wbr> <wbr> <wbr> <wbr> * nonempty sequence of decimal digits optionally containing decimal-point character (as determined by the current C locale) (defines significand)
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) e or E followed with optional minus or plus sign and nonempty sequence of decimal digits (defines exponent)</li><li>binary floating-point expression. It consists of the following parts:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) plus or minus sign
+ <wbr> <wbr> <wbr> <wbr> <wbr> * 0x or 0X
+ <wbr> <wbr> <wbr> <wbr> <wbr> * nonempty sequence of hexadecimal digits optionally containing a decimal-point character (as determined by the current C locale) (defines significand)
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) p or P followed with optional minus or plus sign and nonempty sequence of decimal digits (defines exponent)</li><li>infinity expression. It consists of the following parts:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) plus or minus sign
+ <wbr> <wbr> <wbr> <wbr> <wbr> * INF or INFINITY ignoring case</li><li>not-a-number expression. It consists of the following parts:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * (optional) plus or minus sign
+ <wbr> <wbr> <wbr> <wbr> <wbr> * NAN or NAN(char_sequence) ignoring case of the NAN part. char_sequence can only contain digits, Latin letters, and underscores. The result is a quiet NaN floating-point value.</li><li>any other expression that may be accepted by the currently installed C locale
+The functions sets the pointer pointed to by str_end to point to the character past the last character interpreted. If str_end is NULL, it is ignored.</li></ul><h2>Parameters</h2><p>str - pointer to the null-terminated byte string to be interpreted
+str_end - pointer to a pointer to character.</p><h2>Return value</h2><p>Floating point value corresponding to the contents of str on success. If the converted value falls out of range of corresponding return type, range error occurs and HUGE_VAL, HUGE_VALF or HUGE_VALL is returned. If no conversion can be performed, 0 is returned and *str_end is set to str.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;cerrno&gt;
+#include &lt;cstdlib&gt;
+int main()
+{
+const char *p = &quot;111.11 -2.22 0X1.BC70A3D70A3D7P+6  1.18973e+4932zzz&quot;;
+char *end;
+std::cout &lt;&lt; &quot;Parsing &amp;quot;&quot; &lt;&lt; p &lt;&lt; &quot;&amp;quot;:\n&quot;;
+for (double f = std::strtod(p, &amp;end); p != end; f = std::strtod(p, &amp;end)) {
+std::cout &lt;&lt; &quot;&rsquo;&quot; &lt;&lt; std::string(p, end - p) &lt;&lt; &quot;&rsquo; -&gt; &quot;;
+p = end;
+if (errno == ERANGE) {
+std::cout &lt;&lt; &quot;range error, got &quot;;
+errno = 0;
+}
+std::cout &lt;&lt; f &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> Parsing "111.11 -2.22 0X1.BC70A3D70A3D7P+6 1.18973e+4932zzz":
+ <wbr> &lsquo;111.11&rsquo; -> 111.11
+ <wbr> &rsquo; -2.22&rsquo; -> -2.22
+ <wbr> &rsquo; 0X1.BC70A3D70A3D7P+6&rsquo; -> 111.11
+ <wbr> &rsquo; 1.18973e+4932&rsquo; -> range error, got inf</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a byte string to a floating point value
+atof <i>(function)</i>
+wcstof converts a wide string to a floating point value
+wcstod <i>(function)</i>
+wcstold
+from_chars converts a character sequence to an integer or floating-point value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

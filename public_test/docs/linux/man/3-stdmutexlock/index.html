@@ -1,0 +1,38 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdmutexlock(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdmutexlock/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdmutexlock(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdmutexlock/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdmutexlock(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::mutex::lock - std::mutex::lock</p><h2>Synopsis</h2><pre><code>void lock();
+(since C++ 11)</code></pre><p>Locks the mutex. If another thread has already locked the mutex, a call to lock will block execution until the lock is acquired.
+If lock is called by a thread that already owns the mutex, the behavior is undefined: for example, the program may deadlock. An implementation that can detect the invalid usage is encouraged to throw a std::system_error with error condition resource_deadlock_would_occur instead of deadlocking.
+Prior unlock() operations on the same mutex synchronize-with (as defined in std::memory_order) this operation.</p><h2>Parameters</h2><p><i>(none)</i></p><h2>Return value</h2><p><i>(none)</i></p><h2>Exceptions</h2><p>Throws std::system_error when errors occur, including errors from the underlying operating system that would prevent lock from meeting its specifications. The mutex is not locked in the case of any exception being thrown.</p><h2>Notes</h2><p>lock() is usually not called directly: std::unique_lock and std::lock_guard are used to manage exclusive locking.</p><h2>Example</h2><p>This example shows how lock and unlock can be used to protect shared data.
+// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+int g_num = 0; // protected by g_num_mutex
+std::mutex g_num_mutex;
+void slow_increment(int id)
+{
+for (int i = 0; i &lt; 3; ++i) {
+g_num_mutex.lock();
+++g_num;
+std::cout &lt;&lt; id &lt;&lt; &quot; =&gt; &quot; &lt;&lt; g_num &lt;&lt; &lsquo;\n&rsquo;;
+g_num_mutex.unlock();
+std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+}
+int main()
+{
+std::thread t1(slow_increment, 0);
+std::thread t2(slow_increment, 1);
+t1.join();
+t2.join();
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> 0 => 1
+ <wbr> 1 => 2
+ <wbr> 0 => 3
+ <wbr> 1 => 4
+ <wbr> 0 => 5
+ <wbr> 1 => 6</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> tries to lock the mutex, returns if the mutex is not available
+try_lock <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unlocks the mutex
+unlock <i>(public member function)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

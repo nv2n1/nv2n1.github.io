@@ -1,0 +1,49 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>slapd-shell(5) · Linux Manual Pages</title><meta name=description content="slapd-shell – Shell backend to slapd"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/5-slapd-shell/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="slapd-shell(5) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/5-slapd-shell/"><meta property="og:description" content="slapd-shell – Shell backend to slapd"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/5/>Section 5</a></p><article><header class=man-header><h1>slapd-shell(5)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>slapd-shell &#8211; Shell backend to slapd</p><h2>Synopsis</h2><p>/etc/openldap/slapd.conf</p><h2>Description</h2><p>The Shell backend to <code><a href=/docs/linux/man/8-slapd/>slapd</a></code>(8) executes external programs to implement operations, and is designed to make it easy to tie an existing database to the <code>slapd</code> front-end.</p><p>This backend is primarily intended to be used in prototypes.</p><h2>Warning</h2><p>The <code>abandon</code> shell command has been removed since OpenLDAP 2.1.</p><h2>Configuration</h2><p>These <code>slapd.conf</code> options apply to the SHELL backend database. That is, they must follow a "database shell" line and come before any subsequent "backend" or "database" lines. Other database options are described in the <code><a href=/docs/linux/man/5-slapd-conf/>slapd.conf</a></code>(5) manual page.</p><p>These options specify the pathname and arguments of the program to execute in response to the given LDAP operation. Each option is followed by the input lines that the program receives:</p><dl><dt><code>add &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>ADD
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+&lt;entry in LDIF format&gt;</pre></dd><dt><code>bind &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>BIND
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;DN&gt;
+method: &lt;method number&gt;
+credlen: &lt;length of &lt;credentials&gt;&gt;
+cred: &lt;credentials&gt;</pre></dd><dt><code>compare &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>COMPARE
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;DN&gt;
+&lt;attribute&gt;: &lt;value&gt;</pre></dd><dt><code>delete &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>DELETE
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;DN&gt;</pre></dd><dt><code>modify &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>MODIFY
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;DN&gt;
+&lt;repeat {
+ &lt;&quot;add&quot;/&quot;delete&quot;/&quot;replace&quot;&gt;: &lt;attribute&gt;
+ &lt;repeat { &lt;attribute&gt;: &lt;value&gt; }&gt;
+ -
+}&gt;</pre></dd><dt><code>modrdn &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>MODRDN
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;DN&gt;
+newrdn: &lt;new RDN&gt;
+deleteoldrdn: &lt;0 or 1&gt;
+&lt;if new superior is specified: &quot;newSuperior: &lt;DN&gt;&quot;&gt;</pre></dd><dt><code>search &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>SEARCH
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+base: &lt;base DN&gt;
+scope: &lt;0-2, see ldap.h&gt;
+deref: &lt;0-3, see ldap.h&gt;
+sizelimit: &lt;size limit&gt;
+timelimit: &lt;time limit&gt;
+filter: &lt;filter&gt;
+attrsonly: &lt;0 or 1&gt;
+attrs: &lt;&quot;all&quot; or space-separated attribute list&gt;</pre></dd><dt><code>unbind &lt;pathname> &lt;argument>&#8230;</code></dt><dd><pre>UNBIND
+msgid: &lt;message id&gt;
+&lt;repeat { &quot;suffix:&quot; &lt;database suffix DN&gt; }&gt;
+dn: &lt;bound DN&gt;</pre></dd></dl><p>Note that you need only supply configuration lines for those commands you want the backend to handle. Operations for which a command is not supplied will be refused with an "unwilling to perform" error.</p><p>The <code>search</code> command should output the entries in LDIF format, each entry followed by a blank line, and after these the RESULT below.</p><p>All commands except <code>unbind</code> should then output:</p><dl><dd><pre>RESULT
+code: &lt;integer&gt;
+matched: &lt;matched DN&gt;
+info: &lt;text&gt;</pre></dd></dl><p>where only the RESULT line is mandatory. Lines starting with `#&#8217; or `DEBUG:&#8217; are ignored.</p><h2>Access Control</h2><p>The <code>shell</code> backend does not honor all ACL semantics as described in <code><a href=/docs/linux/man/5-slapd-access/>slapd.access</a></code>(5). In general, access to objects is checked by using a dummy object that contains only the DN, so access rules that rely on the contents of the object are not honored. In detail:</p><p>The <code>add</code> operation does not require <code>write (=w)</code> access to the <code>children</code> pseudo-attribute of the parent entry.</p><p>The <code>bind</code> operation requires <code>auth (=x)</code> access to the <code>entry</code> pseudo-attribute of the entry whose identity is being assessed; <code>auth (=x)</code> access to the credentials is not checked, but rather delegated to the underlying shell script.</p><p>The <code>compare</code> operation requires <code>read (=r)</code> access (FIXME: wouldn&#8217;t <code>compare (=c)</code> be a more appropriate choice?) to the <code>entry</code> pseudo-attribute of the object whose value is being asserted; <code>compare (=c)</code> access to the attribute whose value is being asserted is not checked.</p><p>The <code>delete</code> operation does not require <code>write (=w)</code> access to the <code>children</code> pseudo-attribute of the parent entry.</p><p>The <code>modify</code> operation requires <code>write (=w)</code> access to the <code>entry </code>pseudo-attribute; <code>write (=w)</code> access to the specific attributes that are modified is not checked.</p><p>The <code>modrdn</code> operation does not require <code>write (=w)</code> access to the <code>children</code> pseudo-attribute of the parent entry, nor to that of the new parent, if different; <code>write (=w)</code> access to the distinguished values of the naming attributes is not checked.</p><p>The <code>search </code>operation does not require <code>search (=s)</code> access to the <code>entry</code> pseudo_attribute of the searchBase; <code>search (=s)</code> access to the attributes and values used in the filter is not checked.</p><h2>Example</h2><p>There is an example search script in the slapd/back-shell/ directory in the OpenLDAP source tree.</p><h2>Limitations</h2><p>The shell backend does not support threaded environments. When using the shell backend, <code><a href=/docs/linux/man/8-slapd/>slapd</a></code>(8) should be built <i>&#8211;without-threads</i>.</p><h2>Files</h2><dl><dt>/etc/openldap/slapd.conf</dt><dd>default slapd configuration file</dd></dl><h2>See Also</h2><p><code><a href=/docs/linux/man/5-slapd-conf/>slapd.conf</a></code>(5), <code><a href=/docs/linux/man/8-slapd/>slapd</a></code>(8), <code><a href=/docs/linux/man/1-sh/>sh</a></code>(1).</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

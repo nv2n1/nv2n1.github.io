@@ -1,0 +1,50 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdshared_ptrowner_before(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdshared_ptrowner_before/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdshared_ptrowner_before(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdshared_ptrowner_before/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdshared_ptrowner_before(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::shared_ptr&lt;T>::owner_before - std::shared_ptr&lt;T>::owner_before</p><h2>Synopsis</h2><pre><code>template &lt;class Y&gt;
+(until C++ 17)
+    bool owner_before(const shared_ptr&lt;Y&gt; &amp;other) const;
+template &lt;class Y&gt;
+(since C++ 17)
+    bool owner_before(const shared_ptr&lt;Y&gt; &amp;other) const noexcept;
+template &lt;class Y&gt;
+(until C++ 17)
+    bool owner_before(const std::weak_ptr&lt;Y&gt; &amp;other) const;
+template &lt;class Y&gt;
+(since C++ 17)
+    bool owner_before(const std::weak_ptr&lt;Y&gt; &amp;other) const noexcept;</code></pre><p>Checks whether this shared_ptr precedes other in implementation defined owner-based (as opposed to value-based) order. The order is such that two smart pointers compare equivalent only if they are both empty or if they both own the same object, even if the values of the pointers obtained by get() are different (e.g. because they point at different subobjects within the same object)
+This ordering is used to make shared and weak pointers usable as keys in associative containers, typically through std::owner_less.</p><h2>Parameters</h2><p>other - the std::shared_ptr or std::weak_ptr to be compared</p><h2>Return value</h2><p>true if *this precedes other, false otherwise. Common implementations compare the addresses of the control blocks.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+struct Foo {
+int n1;
+int n2;
+Foo(int a, int b)
+: n1(a), n2(b)
+{
+}
+};
+int main()
+{
+auto p1 = std::make_shared&lt;Foo&gt;(1, 2);
+std::shared_ptr&lt;int&gt; p2(p1, &amp;p1-&gt;n1);
+std::shared_ptr&lt;int&gt; p3(p1, &amp;p1-&gt;n2);
+std::cout &lt;&lt; std::boolalpha
+&lt;&lt; &quot;p2 &lt; p3 &quot; &lt;&lt; (p2 &lt; p3) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;p3 &lt; p2 &quot; &lt;&lt; (p3 &lt; p2) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;p2.owner_before(p3) &quot; &lt;&lt; p2.owner_before(p3) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;p3.owner_before(p2) &quot; &lt;&lt; p3.owner_before(p2) &lt;&lt; &lsquo;\n&rsquo;;
+std::weak_ptr&lt;int&gt; w2(p2);
+std::weak_ptr&lt;int&gt; w3(p3);
+std::cout
+//              &lt;&lt; &quot;w2 &lt; w3 &quot; &lt;&lt; (w2 &lt; w3) &lt;&lt; &lsquo;\n&rsquo;  // won&rsquo;t compile
+//              &lt;&lt; &quot;w3 &lt; w2 &quot; &lt;&lt; (w3 &lt; w2) &lt;&lt; &lsquo;\n&rsquo;  // won&rsquo;t compile
+&lt;&lt; &quot;w2.owner_before(w3) &quot; &lt;&lt; w2.owner_before(w3) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;w3.owner_before(w2) &quot; &lt;&lt; w3.owner_before(w2) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> p2 &lt; p3 true
+ <wbr> p3 &lt; p2 false
+ <wbr> p2.owner_before(p3) false
+ <wbr> p3.owner_before(p2) false
+ <wbr> w2.owner_before(w3) false
+ <wbr> w3.owner_before(w2) false</p><h2>See also</h2><p>owner_less provides mixed-type owner-based ordering of shared and weak pointers
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

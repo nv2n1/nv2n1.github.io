@@ -1,0 +1,33 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdexperimentalmake_array(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdexperimentalmake_array/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdexperimentalmake_array(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdexperimentalmake_array/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdexperimentalmake_array(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::experimental::make_array - std::experimental::make_array</p><h2>Synopsis</h2><pre><code>Defined in header&lt;experimental / array&gt;
+    template &lt;class D = void, class... Types&gt;
+    (library fundamentals TS v2)
+        constexpr std::array&lt;VT /* see below */, sizeof...(Types)&gt; make_array(Types &amp;&amp;...t);</code></pre><p>Creates a std::array whose size is equal to the number of arguments and whose elements are initialized from the corresponding arguments. Returns std::array&lt;VT, sizeof&mldr;(Types)>{std::forward&lt;Types>(t)&mldr;}
+If D is void, then the deduced type VT is std::common_type_t&lt;Types&mldr;>. Otherwise, it is D.
+If D is void and any of std::decay_t&lt;Types>&mldr; is a specialization of std::reference_wrapper, the program is ill-formed.</p><h2>Possible implementation</h2><p> <wbr> namespace details {
+ <wbr> <wbr> <wbr> template&lt;class> struct is_ref_wrapper : std::false_type {};
+ <wbr> <wbr> <wbr> template&lt;class T> struct is_ref_wrapper&lt;std::reference_wrapper&lt;T>> : std::true_type {};</p><p> <wbr> <wbr> <wbr> template&lt;class T>
+ <wbr> <wbr> <wbr> using not_ref_wrapper = std::negation&lt;is_ref_wrapper&lt;std::decay_t&lt;T>>>;</p><p> <wbr> <wbr> <wbr> template &lt;class D, class&mldr;> struct return_type_helper { using type = D; };
+ <wbr> <wbr> <wbr> template &lt;class&mldr; Types>
+ <wbr> <wbr> <wbr> struct return_type_helper&lt;void, Types&mldr;> : std::common_type&lt;Types&mldr;> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> static_assert(std::conjunction_v&lt;not_ref_wrapper&lt;Types>&mldr;>,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> "Types cannot contain reference_wrappers when D is void");
+ <wbr> <wbr> <wbr> };</p><p> <wbr> <wbr> <wbr> template &lt;class D, class&mldr; Types>
+ <wbr> <wbr> <wbr> using return_type = std::array&lt;typename return_type_helper&lt;D, Types&mldr;>::type,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sizeof&mldr;(Types)>;
+ <wbr> }</p><p> <wbr> template &lt; class D = void, class&mldr; Types>
+ <wbr> constexpr details::return_type&lt;D, Types&mldr;> make_array(Types&&&mldr; t) {
+ <wbr> <wbr> <wbr> return {std::forward&lt;Types>(t)&mldr; };
+ <wbr> }</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;experimental/array&gt;
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+decltype(auto) arr = std::experimental::make_array(1, 2, 3, 4, 5);
+bool is_array_of_5_ints = std::is_same&lt;decltype(arr), std::array&lt;int, 5&gt;&gt;::value;
+std::cout &lt;&lt; &quot;Returns an array of five ints? &quot;;
+std::cout &lt;&lt; std::boolalpha &lt;&lt; is_array_of_5_ints &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> Returns an array of five ints? true</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Creates a std::array object from a built-in array
+to_array <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

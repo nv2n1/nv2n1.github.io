@@ -1,0 +1,74 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdminmax_element(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdminmax_element/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdminmax_element(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdminmax_element/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdminmax_element(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::minmax_element - std::minmax_element</p><h2>Synopsis</h2><pre><code>Defined in header &lt;algorithm&gt;
+template&lt; class ForwardIt &gt;                                                                        (since C++11)
+std::pair&lt;ForwardIt,ForwardIt&gt;                                                                     (until C++17)
+minmax_element( ForwardIt first, ForwardIt last );
+template&lt; class ForwardIt &gt;
+constexpr std::pair&lt;ForwardIt,ForwardIt&gt;                                                           (since C++17)
+minmax_element( ForwardIt first, ForwardIt last );
+template&lt; class ExecutionPolicy, class ForwardIt &gt;
+std::pair&lt;ForwardIt,ForwardIt&gt;                                                                 (2) (since C++17)
+minmax_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last );               (1)
+template&lt; class ForwardIt, class Compare &gt;                                                                        (since C++11)
+std::pair&lt;ForwardIt,ForwardIt&gt;                                                                                    (until C++17)
+minmax_element( ForwardIt first, ForwardIt last, Compare comp );
+template&lt; class ForwardIt, class Compare &gt;
+constexpr std::pair&lt;ForwardIt,ForwardIt&gt;                                                       (3)                (since C++17)
+minmax_element( ForwardIt first, ForwardIt last, Compare comp );
+template&lt; class ExecutionPolicy, class ForwardIt, class Compare &gt;
+std::pair&lt;ForwardIt,ForwardIt&gt;                                                                     (4)            (since C++17)
+minmax_element( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, Compare comp );</code></pre><p>Finds the smallest and greatest element in the range [first, last).</p><ol><li>Elements are compared using operator&lt;.</li><li>Elements are compared using the given binary comparison function comp.
+2,4) Same as (1,3), but executed according to policy. These overloads do not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy>> is true</li></ol><h2>Parameters</h2><p>first, last - forward iterators defining the range to examine
+policy - the execution policy to use. See execution_policy for details.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function object (i.e. an object that satisfies the requirements of Compare) which returns true if if *a is less than *b.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> bool cmp(const Type1 &amp;a, const Type2 &amp;b);
+cmp - While the signature does not need to have const &, the function must not modify the objects passed to it and must be able to accept all values of type (possibly const) Type1 and Type2 regardless of value_category (thus, Type1 & is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is Type1 unless for Type1 a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that an object of type ForwardIt can be dereferenced and then implicitly converted to both of them.</p><h2>Type requirements</h2><ul><li></li></ul><p>ForwardIt must meet the requirements of LegacyForwardIterator.</p><h2>Return value</h2><p>a pair consisting of an iterator to the smallest element as the first element and an iterator to the greatest element as the second. Returns std::make_pair(first, first) if the range is empty. If several elements are equivalent to the smallest element, the iterator to the first such element is returned. If several elements are equivalent to the largest element, the iterator to the last such element is returned.</p><h2>Complexity</h2><p>At most max(floor((3/2)*(N−1)), 0) applications of the predicate, where N = std::distance(first, last).</p><h2>Exceptions</h2><p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p><ul><li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li><li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li></ul><h2>Notes</h2><p>This algorithm is different from std::make_pair(std::min_element(), std::max_element()), not only in efficiency, but also in that this algorithm finds the last biggest element while std::max_element finds the first biggest element.</p><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt;class ForwardIt>
+ <wbr> std::pair&lt;ForwardIt, ForwardIt>
+ <wbr> <wbr> <wbr> <wbr> <wbr> minmax_element(ForwardIt first, ForwardIt last)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> using value_type = typename std::iterator_traits&lt;ForwardIt>::value_type;
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::minmax_element(first, last, std::less&lt;value_type>());
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class ForwardIt, class Compare>
+ <wbr> std::pair&lt;ForwardIt, ForwardIt>
+ <wbr> <wbr> <wbr> <wbr> <wbr> minmax_element(ForwardIt first, ForwardIt last, Compare comp)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> auto min = first, max = first;</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> if (first == last || ++first == last)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return {min, max};</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*first, *min)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> min = first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> max = first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> while (++first != last) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> auto i = first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (++first == last) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*i, *min)) min = i;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> else if (!(comp(*i, *max))) max = i;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> break;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*first, *i)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*first, *min)) min = first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (!(comp(*i, *max))) max = i;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*i, *min)) min = i;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (!(comp(*first, *max))) max = first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return {min, max};
+ <wbr> }</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+int main()
+{
+const auto v = {3, 9, 1, 4, 2, 5, 9};
+const auto [min, max] = std::minmax_element(begin(v), end(v));
+std::cout &lt;&lt; &quot;min = &quot; &lt;&lt; *min &lt;&lt; &quot;, max = &quot; &lt;&lt; *max &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> min = 1, max = 9</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the smallest element in a range
+min_element <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the largest element in a range
+max_element <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

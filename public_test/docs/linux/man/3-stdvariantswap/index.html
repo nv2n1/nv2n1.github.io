@@ -1,0 +1,22 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdvariantswap(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdvariantswap/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdvariantswap(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdvariantswap/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdvariantswap(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::variant&lt;Types&mldr;>::swap - std::variant&lt;Types&mldr;>::swap</p><h2>Synopsis</h2><pre><code>void swap(variant &amp;rhs) noexcept(/* see below */);
+(1)(since C++ 17)</code></pre><p>Swaps two variant objects.</p><ul><li>if both *this and rhs are valueless by exception, does nothing</li><li>otherwise, if both *this and rhs hold the same alternative, calls swap(std::get&lt;i>(*this), std:get&lt;i>(rhs)) where i is index(). If an exception is thrown, the state of the values depends on the exception safety of the swap function called.</li><li>otherwise, exchanges values of rhs and *this. If an exception is thrown, the state of *this and rhs depends on exception safety of variant&rsquo;s move constructor.
+The behavior is undefined unless lvalues of type T_i are Swappable and std::is_move_constructible_v&lt;T_i> is true for all T_i in Types&mldr;.</li></ul><h2>Parameters</h2><p>rhs - a variant object to swap with</p><h2>Return value</h2><p><i>(none)</i></p><h2>Exceptions</h2><p>If this->index() == rhs.index(), may throw any exception thrown by swap(std::get&lt;i>(*this), std::get&lt;i>(rhs)) with i being index().
+Otherwise, may throw any exception thrown by the move constructors of the alternatives currently held by *this and rhs.
+noexcept specification:
+noexcept(((std::is_nothrow_move_constructible_v&lt;Types> &&
+std::is_nothrow_swappable_v&lt;Types>) && &mldr;))</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;variant&gt;
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::variant&lt;int, std::string&gt; v1{2}, v2{&quot;abc&quot;};
+std::visit([](auto &amp;&amp;x) { std::cout &lt;&lt; x &lt;&lt; &rsquo; &lsquo;; }, v1);
+std::visit([](auto &amp;&amp;x) { std::cout &lt;&lt; x &lt;&lt; &lsquo;\n&rsquo;; }, v2);
+v1.swap(v2);
+std::visit([](auto &amp;&amp;x) { std::cout &lt;&lt; x &lt;&lt; &rsquo; &lsquo;; }, v1);
+std::visit([](auto &amp;&amp;x) { std::cout &lt;&lt; x &lt;&lt; &lsquo;\n&rsquo;; }, v2);
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> 2 abc
+ <wbr> abc 2</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

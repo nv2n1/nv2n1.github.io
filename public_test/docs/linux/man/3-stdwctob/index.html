@@ -1,0 +1,38 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdwctob(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdwctob/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdwctob(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdwctob/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdwctob(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::wctob - std::wctob</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cwchar&gt;
+    int wctob(std::wint_t c);</code></pre><p>Narrows a wide character c if its multibyte character equivalent in the initial shift state is a single byte.
+This is typically possible for the characters from the ASCII character set, since most multibyte encodings (such as UTF-8) use single bytes to encode those characters.</p><h2>Parameters</h2><p>c - wide character to narrow</p><h2>Return value</h2><p>EOF if c does not represent a multibyte character with length 1 in initial shift state.
+Otherwise, the single-byte representation of c as unsigned char converted to int</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;clocale&gt;
+#include &lt;cwchar&gt;
+#include &lt;iostream&gt;
+void try_narrowing(wchar_t c)
+{
+int cn = std::wctob(c);
+if (cn != EOF)
+std::cout &lt;&lt; &lsquo;'&rsquo; &lt;&lt; c &lt;&lt; &quot;&rsquo; narrowed to &quot; &lt;&lt; +cn &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &lsquo;'&rsquo; &lt;&lt; c &lt;&lt; &quot;&rsquo; could not be narrowed\n&quot;;
+}
+int main()
+{
+std::setlocale(LC_ALL, &quot;th_TH.utf8&quot;);
+std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; &quot;In Thai UTF-8 locale:\n&quot;;
+try_narrowing(L&rsquo;a&rsquo;);
+try_narrowing(L&rsquo;๛&rsquo;);
+std::setlocale(LC_ALL, &quot;th_TH.tis620&quot;);
+std::cout &lt;&lt; &quot;In Thai TIS-620 locale:\n&quot;;
+try_narrowing(L&rsquo;a&rsquo;);
+try_narrowing(L&rsquo;๛&rsquo;);
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> In Thai UTF-8 locale:
+ <wbr> &lsquo;0x61&rsquo; narrowed to 0x61
+ <wbr> &lsquo;0xe5b&rsquo; could not be narrowed
+ <wbr> In Thai TIS-620 locale:
+ <wbr> &lsquo;0x61&rsquo; narrowed to 0x61
+ <wbr> &lsquo;0xe5b&rsquo; narrowed to 0xfb</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> widens a single-byte narrow character to wide character, if possible
+btowc <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> narrows characters
+narrow <i>(public member function of std::basic_ios&lt;CharT,Traits>)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> invokes do_narrow
+narrow <i>(public member function of std::ctype&lt;CharT>)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

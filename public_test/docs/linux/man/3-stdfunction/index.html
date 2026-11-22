@@ -1,0 +1,102 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdfunction(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdfunction/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdfunction(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdfunction/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdfunction(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::function - std::function</p><h2>Synopsis</h2><pre><code>Defined in header &lt;functional&gt;
+template&lt; class &gt;                   (since C++11)
+class function; /* undefined */
+template&lt; class R, class... Args &gt;  (since C++11)
+class function&lt;R(Args...)&gt;;</code></pre><p>Class template std::function is a general-purpose polymorphic function wrapper. Instances of std::function can store, copy, and invoke any Callable target &ndash; functions, lambda_expressions, bind_expressions, or other function objects, as well as pointers to member functions and pointers to data members.
+The stored callable object is called the target of std::function. If a std::function contains no target, it is called empty. Invoking the target of an empty std::function results in std::bad_function_call exception being thrown.
+std::function satisfies the requirements of CopyConstructible and CopyAssignable.</p><h2>Member types</h2><p>Type Definition
+result_type R
+argument_type(deprecated in C++17)(removed in C++20) T if sizeof&mldr;(Args)==1 and T is the first and only type in Args&mldr;
+first_argument_type(deprecated in C++17)(removed in C++20) T1 if sizeof&mldr;(Args)==2 and T1 is the first of the two types in Args&mldr;
+second_argument_type(deprecated in C++17)(removed in C++20) T2 if sizeof&mldr;(Args)==2 and T2 is the second of the two types in Args&mldr;</p><h2>Member functions</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a new std::function instance
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destroys a std::function instance
+destructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> assigns a new target
+operator= <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swaps the contents
+swap <i>(public member function)</i></p><p>assign assigns a new target
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+<i>(until C++17)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a valid target is contained
+operator_bool <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> invokes the target
+operator() <i>(public member function)</i></p><h2>Target access</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains the typeid of the stored target
+target_type <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains a pointer to the stored target
+target <i>(public member function)</i></p><h2>Non-member functions</h2><p>std::swap(std::function) specializes the std::swap algorithm
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares a std::function with nullptr
+operator== <i>(function template)</i>
+operator!=</p><h2>Helper classes</h2><p>std::uses_allocator&lt;std::function> specializes the std::uses_allocator type trait
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template specialization)</i>
+<i>(C++11)</i> <i>(until C++17)</i></p><p>Deduction_guides<i>(since C++17)</i></p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+struct Foo {
+Foo(int num)
+: num_(num)
+{
+}
+void print_add(int i) const
+{
+std::cout &lt;&lt; num_ + i &lt;&lt; &lsquo;\n&rsquo;;
+}
+int num_;
+};
+void print_num(int i)
+{
+std::cout &lt;&lt; i &lt;&lt; &lsquo;\n&rsquo;;
+}
+struct PrintNum {
+void operator()(int i) const
+{
+std::cout &lt;&lt; i &lt;&lt; &lsquo;\n&rsquo;;
+}
+};
+int main()
+{
+// store a free function
+std::function&lt;void(int)&gt; f_display = print_num;
+f_display(-9);
+// store a lambda
+std::function&lt;void()&gt; f_display_42 = <a href></a> { print_num(42); };
+f_display_42();
+// store the result of a call to std::bind
+std::function&lt;void()&gt; f_display_31337 = std::bind(print_num, 31337);
+f_display_31337();
+// store a call to a member function
+std::function&lt;void(const Foo &amp;, int)&gt; f_add_display = &amp;Foo::print_add;
+const Foo foo(314159);
+f_add_display(foo, 1);
+f_add_display(314159, 1);
+// store a call to a data member accessor
+std::function&lt;int(Foo const &amp;)&gt; f_num = &amp;Foo::num_;
+std::cout &lt;&lt; &quot;num_: &quot; &lt;&lt; f_num(foo) &lt;&lt; &lsquo;\n&rsquo;;
+// store a call to a member function and object
+using std::placeholders::_1;
+std::function&lt;void(int)&gt; f_add_display2 = std::bind(&amp;Foo::print_add, foo, _1);
+f_add_display2(2);
+// store a call to a member function and object ptr
+std::function&lt;void(int)&gt; f_add_display3 = std::bind(&amp;Foo::print_add, &amp;foo, _1);
+f_add_display3(3);
+// store a call to a function object
+std::function&lt;void(int)&gt; f_display_obj = PrintNum();
+f_display_obj(18);
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> -9
+ <wbr> 42
+ <wbr> 31337
+ <wbr> 314160
+ <wbr> 314160
+ <wbr> num_: 314159
+ <wbr> 314161
+ <wbr> 314162
+ <wbr> 18</p><h2>See also</h2><p>bad_function_call the exception thrown when invoking an empty std::function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++11)</i>
+mem_fn creates a function object out of a pointer to a member
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

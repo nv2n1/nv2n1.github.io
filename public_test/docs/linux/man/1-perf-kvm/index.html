@@ -1,0 +1,47 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>perf-kvm(1) · Linux Manual Pages</title><meta name=description content="perf-kvm – Tool to trace/measure kvm guest os"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-perf-kvm/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="perf-kvm(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-perf-kvm/"><meta property="og:description" content="perf-kvm – Tool to trace/measure kvm guest os"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>perf-kvm(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>perf-kvm &#8211; Tool to trace/measure kvm guest os</p><h2>SYNOPSIS</h2><pre><code>
+perf kvm[--host][--guest][--guestmount = &lt;path&gt;[--guestkallsyms = &lt;path&gt; --guestmodules = &lt;path&gt; | --guestvmlinux = &lt;path&gt;]]{top | record | report | diff | buildid - list}[&lt;options&gt;] perf kvm[--host][--guest][--guestkallsyms = &lt;path&gt; --guestmodules = &lt;path&gt; | --guestvmlinux = &lt;path&gt;]{top | record | report | diff | buildid - list | stat}[&lt;options&gt;]
+'perf kvm stat [record|report|live] [&lt;options&gt;]
+</code></pre><h2>DESCRIPTION</h2><p>There are a couple of variants of perf kvm:</p><dl><dt></dt><dd><pre>
+'perf kvm [options] top &lt;command&gt;' to generates and displays
+a performance counter profile of guest os in realtime
+of an arbitrary workload.
+</pre></dd></dl><dl><dt></dt><dd><pre><code>
+'perf kvm record &lt;command&gt;' to record the performance counter profile
+    of an arbitrary workload and save it into a perf data file.We set the default behavior of perf kvm as-- guest,
+    so if neither-- host nor-- guest
+        is input,
+    the perf data file name is perf.data.guest.If-- host is input,
+    the perf data file name is perf.data.kvm.If you want to record data into
+        perf.data.host,
+    please input-- host-- no - guest.The behaviors are shown as following : Default('')-&gt;perf.data.guest-- host-&gt;perf.data.kvm-- guest-&gt;perf.data.guest-- host-- guest-&gt;perf.data.kvm-- host-- no - guest-&gt;perf.data.host
+</code></pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm report' to display the performance counter profile information
+recorded via perf kvm record.
+</pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm diff' to displays the performance difference amongst two perf.data
+files captured via perf record.
+</pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm buildid-list' to  display the buildids found in a perf data file,
+so that other tools can be used to fetch packages with matching symbol tables
+for use by perf report. As buildid is read from /sys/kernel/notes in os, then
+if you want to list the buildid for guest, please make sure your perf data file
+was captured with --guestmount in perf kvm record.
+</pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm stat &lt;command&gt;' to run a command and gather performance counter
+statistics.
+Especially, perf 'kvm stat record/report' generates a statistical analysis
+of KVM events. Currently, vmexit, mmio (x86 only) and ioport (x86 only)
+events are supported. 'perf kvm stat record &lt;command&gt;' records kvm events
+and the events between start and end &lt;command&gt;.
+And this command produces a file which contains tracing results of kvm
+events.
+</pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm stat report' reports statistical data which includes events
+handled time, samples, and so on.
+</pre></dd></dl><dl><dt></dt><dd><pre>
+'perf kvm stat live' reports statistical data in a live mode (similar to
+record + report but with statistical data updated live at a given display
+rate).
+</pre></dd></dl><h2>OPTIONS</h2><p>-i, &#8211;input=&lt;path></p><dl><dt></dt><dd>Input file name.</dd></dl><p>-o, &#8211;output=&lt;path></p><dl><dt></dt><dd>Output file name.</dd></dl><p>&#8211;host</p><dl><dt></dt><dd>Collect host side performance profile.</dd></dl><p>&#8211;guest</p><dl><dt></dt><dd>Collect guest side performance profile.</dd></dl><p>&#8211;guestmount=&lt;path></p><dl><dt></dt><dd>Guest os root file system mount directory. Users mounts guest os root directories under &lt;path> by a specific filesystem access method, typically, sshfs. For example, start 2 guest os. The one&#8217;s pid is 8888 and the other&#8217;s is 9999. #mkdir /guestmount; cd/guestmount #sshfs -o allow_other,direct_io -p 5551 localhost:/ 8888/ #sshfs -o allow_other,direct_io -p 5552 localhost:/ 9999/ #perf kvm &#8211;host &#8211;guest &#8211;guestmount=~/guestmount top</dd></dl><p>&#8211;guestkallsyms=&lt;path></p><dl><dt></dt><dd>Guest os /proc/kallsyms file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel symbols. Users copy it out from guest os.</dd></dl><p>&#8211;guestmodules=&lt;path></p><dl><dt></dt><dd>Guest os /proc/modules file copy. <i>perf</i> kvm&#8217; reads it to get guest kernel module information. Users copy it out from guest os.</dd></dl><p>&#8211;guestvmlinux=&lt;path></p><dl><dt></dt><dd>Guest os kernel vmlinux.</dd></dl><p>-v, &#8211;verbose</p><dl><dt></dt><dd>Be more verbose (show counter open errors, etc).</dd></dl><h2>STAT REPORT OPTIONS</h2><p>&#8211;vcpu=&lt;value></p><dl><dt></dt><dd>analyze events which occur on this vcpu. (default: all vcpus)</dd></dl><p>&#8211;event=&lt;value></p><dl><dt></dt><dd>event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dd></dl><p>-k, &#8211;key=&lt;value></p><dl><dt></dt><dd>Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dd></dl><p>-p, &#8211;pid=</p><dl><dt></dt><dd>Analyze events only for given process ID(s) (comma separated list).</dd></dl><h2>STAT LIVE OPTIONS</h2><p>-d, &#8211;display</p><dl><dt></dt><dd>Time in seconds between display updates</dd></dl><p>-m, &#8211;mmap-pages=</p><dl><dt></dt><dd>Number of mmap data pages (must be a power of two) or size specification with appended unit character &#8211; B/K/M/G. The size is rounded up to have nearest pages power of two value.</dd></dl><p>-a, &#8211;all-cpus</p><dl><dt></dt><dd>System-wide collection from all CPUs.</dd></dl><p>-p, &#8211;pid=</p><dl><dt></dt><dd>Analyze events only for given process ID(s) (comma separated list).</dd></dl><p>&#8211;vcpu=&lt;value></p><dl><dt></dt><dd>analyze events which occur on this vcpu. (default: all vcpus)</dd></dl><p>&#8211;event=&lt;value></p><dl><dt></dt><dd>event to be analyzed. Possible values: vmexit, mmio (x86 only), ioport (x86 only). (default: vmexit)</dd></dl><p>-k, &#8211;key=&lt;value></p><dl><dt></dt><dd>Sorting key. Possible values: sample (default, sort by samples number), time (sort by average time).</dd></dl><p>&#8211;duration=&lt;value></p><dl><dt></dt><dd>Show events other than HLT (x86 only) or Wait state (s390 only) that take longer than duration usecs.</dd></dl><h2>SEE ALSO</h2><p><code><a href=/docs/linux/man/1-perf-top/>perf-top</a></code>(1), <code><a href=/docs/linux/man/1-perf-record/>perf-record</a></code>(1), <code><a href=/docs/linux/man/1-perf-report/>perf-report</a></code>(1), <code><a href=/docs/linux/man/1-perf-diff/>perf-diff</a></code>(1), <code><a href=/docs/linux/man/1-perf-buildid-list/>perf-buildid-list</a></code>(1), <code><a href=/docs/linux/man/1-perf-stat/>perf-stat</a></code>(1)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

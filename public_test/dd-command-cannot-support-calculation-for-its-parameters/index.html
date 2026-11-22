@@ -1,0 +1,65 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Why `dd` Doesn’t Support Arithmetic in Parameters</title><link rel=canonical href=https://www.systutorials.com/dd-command-cannot-support-calculation-for-its-parameters/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Why `dd` Doesn’t Support Arithmetic in Parameters"><meta property="og:url" content="https://www.systutorials.com/dd-command-cannot-support-calculation-for-its-parameters/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/linux-systems-administration-academy/>Linux & Systems Administration Academy</a>
+&#8250; <a href=/linux-sysadmin-path/>Linux System Administration Path</a>
+&#8250; <a href=/category/performance/>Performance</a></nav><h1>Why `dd` Doesn’t Support Arithmetic in Parameters</h1><time class=post-date datetime=2018-03-24T11:49:34Z>March 24, 2018</time> <span class=post-author>&#183; <a href=/author/harryxiyou/>Weiwei Jia</a> and Community</span> <span class=post-updated>&#183; updated April 12, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>[md]
+The <code>dd</code> command doesn’t evaluate arithmetic expressions in its parameters. If you try this:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>$ dd if=/dev/zero of=./4Ktest100M bs=4KB count=25000*9
+dd: invalid number &#39;25000*9&#39;
+</code></pre><p>You’ll get an error because <code>dd</code> expects literal numeric values, not expressions. The shell doesn’t expand <code>25000*9</code> as arithmetic — it’s passed to <code>dd</code> as a literal string.</p><p>## Using Shell Arithmetic Expansion</p><p>The fix is to use shell arithmetic expansion <code>$(( ))</code> so the shell evaluates the expression before passing it to <code>dd</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>dd if=/dev/zero of=./4Ktest100M bs=4KB count=$((25000*9))
+</code></pre><p>The shell computes <code>25000*9 = 225000</code> and passes <code>count=225000</code> to <code>dd</code>.</p><p>## Supported Arithmetic Operations</p><p>Shell arithmetic supports standard mathematical operations:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Multiplication
+dd if=/dev/zero of=file bs=1K count=$((100*10))    # 1000KB = 1MB
+
+# Addition
+dd if=/dev/zero of=file bs=1M count=$((512+256))    # 768MB
+
+# Division
+dd if=/dev/zero of=file bs=1M count=$((2048/2))     # 1024MB = 1GB
+
+# Modulo
+dd if=/dev/zero of=file bs=1M count=$((1000%7))     # 142
+
+# Exponentiation
+dd if=/dev/zero of=file bs=1K count=$((2**10))      # 1024KB = 1MB
+</code></pre><p>## Using Variables in Calculations</p><p>Combine variables with arithmetic for flexible scripts:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>BLOCK_SIZE=4096
+TOTAL_SIZE=$((100 * 1024 * 1024))  # 100MB in bytes
+COUNT=$((TOTAL_SIZE / BLOCK_SIZE))
+
+dd if=/dev/zero of=./testfile bs=$BLOCK_SIZE count=$COUNT
+</code></pre><p>## Common dd Patterns with Calculations</p><p>**Create a file of exact size:**</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># 100MB file
+dd if=/dev/zero of=test.img bs=1M count=100
+
+# 1GB file using larger blocks (faster)
+dd if=/dev/zero of=test.img bs=1M count=$((1024))
+
+# 50GB file
+dd if=/dev/zero of=big.img bs=1G count=50
+</code></pre><p>**Copy with progress:**</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>dd if=/dev/sda of=disk.img bs=4M status=progress
+</code></pre><p>**Benchmark disk write speed:**</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Write 1GB and measure time
+time dd if=/dev/zero of=./testfile bs=1M count=1024 conv=fdatasync
+</code></pre><p>**Create a swap file:**</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>SWAP_SIZE=$((4 * 1024))  # 4GB in MB
+dd if=/dev/zero of=/swapfile bs=1M count=$SWAP_SIZE
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+</code></pre><p>## Using bc for Floating-Point Math</p><p>Shell arithmetic only handles integers. For floating-point calculations, pipe through <code>bc</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Calculate 1.5GB in KB (shell can&#39;t do decimals)
+COUNT=$(echo &#34;1.5 * 1024 * 1024&#34; | bc | cut -d. -f1)
+dd if=/dev/zero of=file bs=1K count=$COUNT
+</code></pre><p>## Why dd Doesn’t Do Math</p><p><code>dd</code> is designed as a low-level byte-copy tool. It intentionally accepts only numeric literals for its operands (<code>bs</code>, <code>count</code>, <code>skip</code>, <code>seek</code>). This keeps the tool simple and predictable. All expression evaluation should happen in the shell before the value reaches <code>dd</code>.</p><p>## dd Number Suffixes</p><p><code>dd</code> does understand size suffixes:</p><p>– <code>c</code> or <code>w</code> — bytes (1 or 2)
+– <code>b</code> — 512 bytes
+– <code>K</code> — 1024 bytes (KiB)
+– <code>M</code> — 1048576 bytes (MiB)
+– <code>G</code> — 1073741824 bytes (GiB)
+– <code>T</code> — 1099511627776 bytes (TiB)</p><p>Note: Use uppercase <code>K</code>, <code>M</code>, <code>G</code> for binary multipliers. Lowercase <code>k</code> means 1000 (decimal) in some dd implementations, which can cause subtle size mismatches.</p><p>## Performance Tips</p><p><code>dd</code> performance depends heavily on block size. Larger blocks mean fewer system calls:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Slow - 1 byte at a time, 1 million syscalls
+time dd if=/dev/zero of=test bs=1 count=1000000
+
+# Fast - 1MB blocks, just 1 syscall
+time dd if=/dev/zero of=test bs=1M count=1
+</code></pre><p>For disk-to-disk copies, match the block size to your hardware:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Modern SSDs work well with 1MB blocks
+dd if=/dev/sda of=disk.img bs=1M status=progress
+
+# For NVMe, even larger blocks help
+dd if=/dev/nvme0n1 of=disk.img bs=4M status=progress
+</code></pre><p>## dd Variants and Alternatives</p><p><code>dd</code> is available on virtually every Unix system, but some alternatives offer better features:</p><p>**dc3dd** — Enhanced dd with hashing and progress:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>dc3dd if=/dev/sda of=disk.img hash=sha256 log=copy.log
+</code></pre><p>**ddrescue** — For recovering data from failing drives:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>ddrescue /dev/sda disk.img rescue.log
+</code></pre><p>Unlike <code>dd conv=noerror,sync</code>, ddrescue intelligently retries failed reads and skips damaged areas, making multiple passes to recover as much data as possible.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,31 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>gdcmviewer(1) · Linux Manual Pages</title><meta name=description content='gdcmviewer – .TH "gdcmviewer" 1 "Fri Oct 29 2010" "Version 2.0.16" "GDCM"'><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-gdcmviewer/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="gdcmviewer(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-gdcmviewer/"><meta property="og:description" content='gdcmviewer – .TH "gdcmviewer" 1 "Fri Oct 29 2010" "Version 2.0.16" "GDCM"'><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>gdcmviewer(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>gdcmviewer &#8211; .TH "gdcmviewer" 1 "Fri Oct 29 2010" "Version 2.0.16" "GDCM"</p><h2 class=name>NAME</h2><p>gdcmviewer &#8211; .SH "SYNOPSIS"</p><pre>
+gdcmviewer [options] file-in
+</pre><h2>DESCRIPTION</h2><p>The <code>gdcmviewer</code> is a simple tool that show how to use <code>vtkGDCMImageReader</code>. The class that use gdcm to make a layer to VTK. <code>gdcmviewer</code> is basically only just a wrapper around GDCM.</p><p>This tool is meant for testing integration of GDCM in VTK. You should see it as a demo tool. It does compile with VTK ranging from 4.2 to 5.6, but only with VTK 5.2 (or above) can only play with the widgets (as described below).</p><h2>PARAMETERS</h2><pre>
+file-in   DICOM input filename
+</pre><h2>OPTIONS</h2><h3>OPTIONS</h3><pre>
+     --force-rescale    force rescale (advanced users)
+     --force-spacing    force spacing (advanced users)
+  -r --recursive        Recusively descend directory
+</pre><h3>general options</h3><pre><code>
+- h-- help
+        print this help text and exit -
+    v-- version
+        print version information and exit -
+    V-- verbose
+        verbose
+        mode(warning + error)
+            .-
+    W-- warning
+    warning mode,
+    print warning information
+        - E-- error
+        error mode,
+    print error information
+        - D-- debug
+        debug mode,
+    print debug information
+</code></pre><h2>Typical usage</h2><h2>Simple usage</h2><p>For now gdcmviewer should be started from a command line prompt. The next argument should be the name of the DICOM file you wish to read. For instance:</p><pre>
+ $ gdcmviewer -V 012345.002.050.dcm
+</pre><p>gdcmviewer will try to read your file, and the print the vtk information associated with this file. Basically what kind of image you are looking at.</p><dl><dt>*</dt><dd>ScalarType is the DICOM Real World Value type</dd><dt>*</dt><dd>Dimensions is the dimension of the image</dd><dt>*</dt><dd>Spacing is the spacing of the image</dd><dt>*</dt><dd>NumberOfScalarComponents should be 1 for grayscale & PALETTE COLOR and 3 for RGB, YBR data.</dd></dl><h2>Wiki Link</h2><p>The wiki page, will color pictures can be found at: <a rel=nofollow href="http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer">http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Gdcmviewer</a></p><h2>SEE ALSO</h2><p><code><a href=/docs/linux/man/1-gdcmdump/>gdcmdump</a></code>(1), <code>gdcm2vtkraw</code>(1)</p><h2>COPYRIGHT</h2><p>Copyright (c) 2006-2010 Mathieu Malaterre</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

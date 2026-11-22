@@ -1,0 +1,92 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>wpa_supplicant(5) · Linux Manual Pages</title><meta name=description content="wpa_supplicant.conf – configuration file for wpa_supplicant"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/5-wpa_supplicant/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="wpa_supplicant(5) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/5-wpa_supplicant/"><meta property="og:description" content="wpa_supplicant.conf – configuration file for wpa_supplicant"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/5/>Section 5</a></p><article><header class=man-header><h1>wpa_supplicant(5)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>wpa_supplicant.conf &#8211; configuration file for wpa_supplicant</p><h2>Overview</h2><p><code>wpa_supplicant</code> is configured using a text file that lists all accepted networks and security policies, including pre-shared keys. See the example configuration file, probably in <code>/usr/share/doc/wpa_supplicant/</code>, for detailed information about the configuration format and supported fields.</p><p>All file paths in this configuration file should use full (absolute, not relative to working directory) path in order to allow working directory to be changed. This can happen if wpa_supplicant is run in the background.</p><p>Changes to configuration file can be reloaded be sending SIGHUP signal to <code>wpa_supplicant</code> (&#8216;killall -HUP wpa_supplicant&#8217;). Similarly, reloading can be triggered with the <code>wpa_cli reconfigure</code> command.</p><p>Configuration file can include one or more network blocks, e.g., one for each used SSID. wpa_supplicant will automatically select the best network based on the order of network blocks in the configuration file, network security level (WPA/WPA2 is preferred), and signal strength.</p><h2>Quick Examples</h2><dl><dt>1.</dt><dd>WPA-Personal (PSK) as home network and WPA-Enterprise with EAP-TLS as work network.</dd><dl><dd><pre># allow frontend (e.g., wpa_cli) to be used by all users in 'wheel' group
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+#
+# home network; allow all valid ciphers
+network={
+ ssid=&quot;home&quot;
+ scan_ssid=1
+ key_mgmt=WPA-PSK
+ psk=&quot;very secret passphrase&quot;
+}
+#
+# work network; use EAP-TLS with WPA; allow only CCMP and TKIP ciphers
+network={
+ ssid=&quot;work&quot;
+ scan_ssid=1
+ key_mgmt=WPA-EAP
+ pairwise=CCMP TKIP
+ group=CCMP TKIP
+ eap=TLS
+ identity=&quot;user [at] example.com&quot;
+ ca_cert=&quot;/etc/cert/ca.pem&quot;
+ client_cert=&quot;/etc/cert/user.pem&quot;
+ private_key=&quot;/etc/cert/user.prv&quot;
+ private_key_passwd=&quot;password&quot;
+}</pre></dd></dl><dt>2.</dt><dd>WPA-RADIUS/EAP-PEAP/MSCHAPv2 with RADIUS servers that use old peaplabel (e.g., Funk Odyssey and SBR, Meetinghouse Aegis, Interlink RAD-Series)</dd><dl><dd><pre>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+network={
+ ssid=&quot;example&quot;
+ scan_ssid=1
+ key_mgmt=WPA-EAP
+ eap=PEAP
+ identity=&quot;user [at] example.com&quot;
+ password=&quot;foobar&quot;
+ ca_cert=&quot;/etc/cert/ca.pem&quot;
+ phase1=&quot;peaplabel=0&quot;
+ phase2=&quot;auth=MSCHAPV2&quot;
+}</pre></dd></dl><dt>3.</dt><dd>EAP-TTLS/EAP-MD5-Challenge configuration with anonymous identity for the unencrypted use. Real identity is sent only within an encrypted TLS tunnel.</dd><dl><dd><pre>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+network={
+ ssid=&quot;example&quot;
+ scan_ssid=1
+ key_mgmt=WPA-EAP
+ eap=TTLS
+ identity=&quot;user [at] example.com&quot;
+ anonymous_identity=&quot;anonymous [at] example.com&quot;
+ password=&quot;foobar&quot;
+ ca_cert=&quot;/etc/cert/ca.pem&quot;
+ phase2=&quot;auth=MD5&quot;
+}</pre></dd></dl><dt>4.</dt><dd>IEEE 802.1X (i.e., no WPA) with dynamic WEP keys (require both unicast and broadcast); use EAP-TLS for authentication</dd><dl><dd><pre>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+network={
+ ssid=&quot;1x-test&quot;
+ scan_ssid=1
+ key_mgmt=IEEE8021X
+ eap=TLS
+ identity=&quot;user [at] example.com&quot;
+ ca_cert=&quot;/etc/cert/ca.pem&quot;
+ client_cert=&quot;/etc/cert/user.pem&quot;
+ private_key=&quot;/etc/cert/user.prv&quot;
+ private_key_passwd=&quot;password&quot;
+ eapol_flags=3
+}</pre></dd></dl><dt>5.</dt><dd>Catch all example that allows more or less all configuration modes. The configuration options are used based on what security policy is used in the selected SSID. This is mostly for testing and is not recommended for normal use.</dd><dl><dd><pre>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+network={
+ ssid=&quot;example&quot;
+ scan_ssid=1
+ key_mgmt=WPA-EAP WPA-PSK IEEE8021X NONE
+ pairwise=CCMP TKIP
+ group=CCMP TKIP WEP104 WEP40
+ psk=&quot;very secret passphrase&quot;
+ eap=TTLS PEAP TLS
+ identity=&quot;user [at] example.com&quot;
+ password=&quot;foobar&quot;
+ ca_cert=&quot;/etc/cert/ca.pem&quot;
+ client_cert=&quot;/etc/cert/user.pem&quot;
+ private_key=&quot;/etc/cert/user.prv&quot;
+ private_key_passwd=&quot;password&quot;
+ phase1=&quot;peaplabel=0&quot;
+ ca_cert2=&quot;/etc/cert/ca2.pem&quot;
+ client_cert2=&quot;/etc/cer/user.pem&quot;
+ private_key2=&quot;/etc/cer/user.prv&quot;
+ private_key2_passwd=&quot;password&quot;
+}</pre></dd></dl><dt>6.</dt><dd>Authentication for wired Ethernet. This can be used with <code>wired</code> or <code>roboswitch</code> interface (-Dwired or -Droboswitch on command line).</dd><dl><dd><pre>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
+ap_scan=0
+network={
+ key_mgmt=IEEE8021X
+ eap=MD5
+ identity=&quot;user&quot;
+ password=&quot;password&quot;
+ eapol_flags=0
+}</pre></dd></dl></dl><h2>Certificates</h2><p>Some EAP authentication methods require use of certificates. EAP-TLS uses both server side and client certificates whereas EAP-PEAP and EAP-TTLS only require the server side certificate. When client certificate is used, a matching private key file has to also be included in configuration. If the private key uses a passphrase, this has to be configured in wpa_supplicant.conf ("private_key_passwd").</p><p>wpa_supplicant supports X.509 certificates in PEM and DER formats. User certificate and private key can be included in the same file.</p><p>If the user certificate and private key is received in PKCS#12/PFX format, they need to be converted to suitable PEM/DER format for wpa_supplicant. This can be done, e.g., with following commands:</p><dl><dd><pre># convert client certificate and private key to PEM format
+openssl pkcs12 -in example.pfx -out user.pem -clcerts
+# convert CA certificate (if included in PFX file) to PEM format
+openssl pkcs12 -in example.pfx -out ca.pem -cacerts -nokeys</pre></dd></dl><h2>See Also</h2><p><code><a href=/docs/linux/man/8-wpa_supplicant/>wpa_supplicant</a></code>(8) <code>openssl</code>(1)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

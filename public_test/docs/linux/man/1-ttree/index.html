@@ -1,0 +1,92 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ttree(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-ttree/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="ttree(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-ttree/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>ttree(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Template::Tools::ttree - Process entire directory trees of templates</p><h2>SYNOPSIS</h2><pre><code>
+ttree[options][files]
+</code></pre><h2>DESCRIPTION</h2><p>The <i>ttree</i> script is used to process entire directory trees containing template files. The resulting output from processing each file is then written to a corresponding file in a destination directory. The script compares the modification times of source and destination files (where they already exist) and processes only those files that have been modified. In other words, it is the equivalent of &lsquo;make&rsquo; for the Template Toolkit.</p><p>It supports a number of options which can be used to configure behaviour, define locations and set Template Toolkit options. The script first reads the <i>.ttreerc</i> configuration file in the <font size=-1>HOME</font> directory, or an alternative file specified in the <font size=-1>TTREERC</font> environment variable. Then, it processes any command line arguments, including any additional configuration files specified via the <tt>"-f"</tt> (file) option.</p><h3>The <i>.ttreerc</i> Configuration File</h3><p>When you run <i>ttree</i> for the first time it will ask you if you want it to create a <i>.ttreerc</i> file for you. This will be created in your home directory.</p><pre>
+    $ ttree
+    Do you want me to create a sample '.ttreerc' file for you?
+    (file: /home/abw/.ttreerc)   [y/n]: y
+    /home/abw/.ttreerc created.  Please edit accordingly and re-run ttree
+</pre><p>The purpose of this file is to set any <i>global</i> configuration options that you want applied <i>every</i> time <i>ttree</i> is run. For example, you can use the <tt>"ignore"</tt> and <tt>"copy"</tt> option to provide regular expressions that specify which files should be ignored and which should be copied rather than being processed as templates. You may also want to set flags like <tt>"verbose"</tt> and <tt>"recurse"</tt> according to your preference.</p><p>A minimal <i>.ttreerc</i>:</p><pre>
+    # ignore these files
+    ignore = \b(CVS|RCS)\b
+    ignore = ^#
+    ignore = ~$
+    # copy these files
+    copy   = \.(gif|png|jpg|pdf)$ 
+    # recurse into directories
+    recurse
+    # provide info about what's going on
+    verbose
+</pre><p>In most cases, you&rsquo;ll want to create a different <i>ttree</i> configuration file for each project you&rsquo;re working on. The <tt>"cfg"</tt> option allows you to specify a directory where <i>ttree</i> can find further configuration files.</p><pre>
+    cfg = /home/abw/.ttree
+</pre><p>The <tt>"-f"</tt> command line option can be used to specify which configuration file should be used. You can specify a filename using an absolute or relative path:</p><pre>
+    $ ttree -f /home/abw/web/example/etc/ttree.cfg
+    $ ttree -f ./etc/ttree.cfg
+    $ ttree -f ../etc/ttree.cfg
+</pre><p>If the configuration file does not begin with <tt>"/"</tt> or <tt>"."</tt> or something that looks like a MS-DOS absolute path (e.g. <tt>"C:\etc\ttree.cfg"</tt>) then <i>ttree</i> will look for it in the directory specified by the <tt>"cfg"</tt> option.</p><pre>
+    $ ttree -f test1          # /home/abw/.ttree/test1
+</pre><p>The <tt>"cfg"</tt> option can only be used in the <i>.ttreerc</i> file. All the other options can be used in the <i>.ttreerc</i> or any other <i>ttree</i> configuration file. They can all also be specified as command line options.</p><p>Remember that <i>.ttreerc</i> is always processed <i>before</i> any configuration file specified with the <tt>"-f"</tt> option. Certain options like <tt>"lib"</tt> can be used any number of times and accumulate their values.</p><p>For example, consider the following configuration files:</p><p><i>/home/abw/.ttreerc</i>:</p><pre>
+    cfg = /home/abw/.ttree
+    lib = /usr/local/tt2/templates
+</pre><p><i>/home/abw/.ttree/myconfig</i>:</p><pre>
+    lib = /home/abw/web/example/templates/lib
+</pre><p>When <i>ttree</i> is invoked as follows:</p><pre>
+    $ ttree -f myconfig
+</pre><p>the <tt>"lib"</tt> option will be set to the following directories:</p><pre>
+    /usr/local/tt2/templates
+    /home/abw/web/example/templates/lib
+</pre><p>Any templates located under <i>/usr/local/tt2/templates</i> will be used in preference to those located under <i>/home/abw/web/example/templates/lib</i>. This may be what you want, but then again, it might not. For this reason, it is good practice to keep the <i>.ttreerc</i> as simple as possible and use different configuration files for each <i>ttree</i> project.</p><h3>Directory Options</h3><p>The <tt>"src"</tt> option is used to define the directory containing the source templates to be processed. It can be provided as a command line option or in a configuration file as shown here:</p><pre>
+    src = /home/abw/web/example/templates/src
+</pre><p>Each template in this directory typically corresponds to a single web page or other document.</p><p>The <tt>"dest"</tt> option is used to specify the destination directory for the generated output.</p><pre>
+    dest = /home/abw/web/example/html
+</pre><p>The <tt>"lib"</tt> option is used to define one or more directories containing additional library templates. These templates are not documents in their own right and typically comprise of smaller, modular components like headers, footers and menus that are incorporated into pages templates.</p><pre>
+    lib = /home/abw/web/example/templates/lib
+    lib = /usr/local/tt2/templates
+</pre><p>The <tt>"lib"</tt> option can be used repeatedly to add further directories to the search path.</p><p>A list of templates can be passed to <i>ttree</i> as command line arguments.</p><pre>
+    $ ttree foo.html bar.html
+</pre><p>It looks for these templates in the <tt>"src"</tt> directory and processes them through the Template Toolkit, using any additional template components from the <tt>"lib"</tt> directories. The generated output is then written to the corresponding file in the <tt>"dest"</tt> directory.</p><p>If <i>ttree</i> is invoked without explicitly specifying any templates to be processed then it will process every file in the <tt>"src"</tt> directory. If the <tt>"-r"</tt> (recurse) option is set then it will additionally iterate down through sub-directories and process and other template files it finds therein.</p><pre>
+    $ ttree -r
+</pre><p>If a template has been processed previously, <i>ttree</i> will compare the modification times of the source and destination files. If the source template (or one it is dependant on) has not been modified more recently than the generated output file then <i>ttree</i> will not process it. The <i>-a</i> (all) option can be used to force <i>ttree</i> to process all files regardless of modification time.</p><pre>
+    $ tree -a
+</pre><p>Any templates explicitly named as command line argument are always processed and the modification time checking is bypassed.</p><h3>File Options</h3><p>The <tt>"ignore"</tt>, <tt>"copy"</tt> and <tt>"accept"</tt> options are used to specify Perl regexen to filter file names. Files that match any of the <tt>"ignore"</tt> options will not be processed. Remaining files that match any of the <tt>"copy"</tt> regexen will be copied to the destination directory. Remaining files that then match any of the <tt>"accept"</tt> criteria are then processed via the Template Toolkit. If no <tt>"accept"</tt> parameter is specified then all files will be accepted for processing if not already copied or ignored.</p><pre>
+    # ignore these files
+    ignore = \b(CVS|RCS)\b
+    ignore = ^#
+    ignore = ~$
+    # copy these files
+    copy   = \.(gif|png|jpg|pdf)$ 
+    # accept only .tt2 templates
+    accept = \.tt2$
+</pre><p>The <tt>"suffix"</tt> option is used to define mappings between the file extensions for source templates and the generated output files. The following example specifies that source templates with a <tt>".tt2"</tt> suffix should be output as <tt>".html"</tt> files:</p><pre>
+    suffix tt2=html
+</pre><p>Or on the command line,</p><pre>
+    --suffix tt2=html
+</pre><p>You can provide any number of different suffix mappings by repeating this option.</p><p>The <tt>"binmode"</tt> option is used to set the encoding of the output file. For example use <tt>"&ndash;binmode=:utf8"</tt> to set the output format to unicode.</p><h3>Template Dependencies</h3><p>The <tt>"depend"</tt> and <tt>"depend_file"</tt> options allow you to specify how any given template file depends on another file or group of files. The <tt>"depend"</tt> option is used to express a single dependency.</p><pre>
+  $ ttree --depend foo=bar,baz
+</pre><p>This command line example shows the <tt>"&ndash;depend"</tt> option being used to specify that the <i>foo</i> file is dependant on the <i>bar</i> and <i>baz</i> templates. This option can be used many time on the command line:</p><pre>
+  $ ttree --depend foo=bar,baz --depend crash=bang,wallop
+</pre><p>or in a configuration file:</p><pre>
+  depend foo=bar,baz
+  depend crash=bang,wallop
+</pre><p>The file appearing on the left of the <tt>"="</tt> is specified relative to the <tt>"src"</tt> or <tt>"lib"</tt> directories. The file(s) appearing on the right can be specified relative to any of these directories or as absolute file paths.</p><p>For example:</p><pre>
+  $ ttree --depend foo=bar,/tmp/baz
+</pre><p>To define a dependency that applies to all files, use <tt>"*"</tt> on the left of the <tt>"="</tt>.</p><pre>
+  $ ttree --depend *=header,footer
+</pre><p>or in a configuration file:</p><pre>
+  depend *=header,footer
+</pre><p>Any templates that are defined in the <tt>"pre_process"</tt>, <tt>"post_process"</tt>, <tt>"process"</tt> or <tt>"wrapper"</tt> options will automatically be added to the list of global dependencies that apply to all templates.</p><p>The <tt>"depend_file"</tt> option can be used to specify a file that contains dependency information.</p><pre>
+    $ ttree --depend_file=/home/abw/web/example/etc/ttree.dep
+</pre><p>Here is an example of a dependency file:</p><pre>
+   # This is a comment. It is ignored.
+   index.html: header footer menubar 
+   header: titlebar hotlinks
+   menubar: menuitem
+   # spanning multiple lines with the backslash
+   another.html: header footer menubar \
+   sidebar searchform
+</pre><p>Lines beginning with the <tt>"#"</tt> character are comments and are ignored. Blank lines are also ignored. All other lines should provide a filename followed by a colon and then a list of dependant files separated by whitespace, commas or both. Whitespace around the colon is also optional. Lines ending in the <tt>"&amp;quot;</tt> character are continued onto the following line.</p><p>Files that contain spaces can be quoted. That is only necessary for files after the colon (&rsquo;:&rsquo;). The file before the colon may be quoted if it contains a colon.</p><p>As with the command line options, the <tt>"*"</tt> character can be used as a wildcard to specify a dependency for all templates.</p><pre>
+    * : config,header
+</pre><h3>Template Toolkit Options</h3><p><i>ttree</i> also provides access to the usual range of Template Toolkit options. For example, the <tt>"&ndash;pre_chomp"</tt> and <tt>"&ndash;post_chomp"</tt> <i>ttree</i> options correspond to the <tt>"PRE_CHOMP"</tt> and <tt>"POST_CHOMP"</tt> options.</p><p>Run <tt>"ttree -h"</tt> for a summary of the options available.</p><h2>AUTHORS</h2><p>Andy Wardley &lt;abw [at] andywardley.com></p><p>&lt;<a rel=nofollow href=http://www.andywardley.com/><a href=http://www.andywardley.com/>http://www.andywardley.com/</a></a>></p><p>With contributions from Dylan William Hardison (support for dependencies), Bryce Harrington (<tt>"absolute"</tt> and <tt>"relative"</tt> options), Mark Anderson (<tt>"suffix"</tt> and <tt>"debug"</tt> options), Harald Joerg and Leon Brocard who gets everywhere, it seems.</p><h2>VERSION</h2><p>2.68, distributed as part of the Template Toolkit version 2.19, released on 27 April 2007.</p><h2>COPYRIGHT</h2><pre>
+  Copyright (C) 1996-2007 Andy Wardley.  All Rights Reserved.
+</pre><p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p><h2>SEE ALSO</h2><p>tpage</p><dt><a href=#lbAJ>AUTHORS</a></dt><dd></dd><dt><a href=#lbAK>VERSION</a></dt><dd></dd><dt><a href=#lbAL>COPYRIGHT</a></dt><dd></dd><dt><a href=#lbAM>SEE ALSO</a></dt><dd></dd></dl><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

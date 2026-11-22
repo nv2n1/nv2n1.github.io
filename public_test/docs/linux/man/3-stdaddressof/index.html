@@ -1,0 +1,50 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdaddressof(3) · Linux Manual Pages</title><meta name=description content="std::addressof – std::addressof"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdaddressof/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdaddressof(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdaddressof/"><meta property="og:description" content="std::addressof – std::addressof"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdaddressof(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::addressof &#8211; std::addressof</p><h2>Synopsis</h2><pre><code>Defined in header&lt;memory&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        T *addressof(T &amp;arg) noexcept;
+(until C++ 17)
+    template &lt;class T&gt;
+    (1)(since C++ 17)
+        constexpr T *addressof(T &amp;arg) noexcept;
+template &lt;class T&gt;
+(2)(since C++ 17)
+    const T *addressof(const T &amp;&amp;) = delete;</code></pre><p>1) Obtains the actual address of the object or function arg, even in presence of overloaded operator&<br>2) Rvalue overload is deleted to prevent taking the address of const rvalues.<br>The expression std::addressof(E) is a constant_subexpression, if E is an lvalue constant subexpression. <i>(since C++17)</i></p><h2>Parameters</h2><p>arg &#8211; lvalue object or function</p><h2>Return value</h2><p>Pointer to arg.</p><h2>Possible implementation</h2><p>&nbsp;<wbr>&nbsp;template&lt; class T ><br>&nbsp;<wbr>&nbsp;T* addressof(T& arg)<br>&nbsp;<wbr>&nbsp;{<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return reinterpret_cast&lt;T*>(<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;const_cast&lt;char&>(<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;reinterpret_cast&lt;const volatile char&>(arg)));<br>&nbsp;<wbr>&nbsp;}</p><p>Note: the above implementation is_oversimplified and is not constexpr (which requires compiler support).</p><h2>Example</h2><p>operator& may be overloaded for a pointer wrapper class to obtain a pointer to pointer:<br>// Run this code</p><pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+template &lt;class T&gt;
+struct Ptr {
+    T *pad; // add pad to show difference between 'this' and 'data'
+    T *data;
+    Ptr(T *arg)
+        : pad(nullptr), data(arg)
+    {
+        std::cout &lt;&lt; &quot;Ctor this = &quot; &lt;&lt; this &lt;&lt; std::endl;
+    }
+    ~Ptr()
+    {
+        delete data;
+    }
+    T **operator&amp;()
+    {
+        return &amp;data;
+    }
+};
+template &lt;class T&gt;
+void f(Ptr&lt;T&gt; *p)
+{
+    std::cout &lt;&lt; &quot;Ptr   overload called with p = &quot; &lt;&lt; p &lt;&lt; '
+';
+}
+void f(int **p)
+{
+    std::cout &lt;&lt; &quot;int** overload called with p = &quot; &lt;&lt; p &lt;&lt; '
+';
+}
+int main()
+{
+    Ptr&lt;int&gt; p(new int(42));
+    f(&amp;p);                // calls int** overload
+    f(std::addressof(p)); // calls Ptr&lt;int&gt;* overload, (= this)
+}
+</code></pre><h2>Possible output:</h2><p>&nbsp;<wbr>&nbsp;Ctor this = 0x7fff59ae6e88<br>&nbsp;<wbr>&nbsp;int** overload called with p = 0x7fff59ae6e90<br>&nbsp;<wbr>&nbsp;Ptr overload called with p = 0x7fff59ae6e88</p><h2>See also</h2><p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the default allocator<br>allocator <i>(class template)</i><br>pointer_to obtains a dereferenceable pointer to its argument<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function of std::pointer_traits&lt;Ptr>)</i><br><code>[static]</code></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

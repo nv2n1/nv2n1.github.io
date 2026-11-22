@@ -1,0 +1,70 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>pthread_getcpuclockid(3) · Linux Manual Pages</title><meta name=description content="pthread_getcpuclockid – retrieve ID of a thread’s CPU time clock"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-pthread_getcpuclockid/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="pthread_getcpuclockid(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-pthread_getcpuclockid/"><meta property="og:description" content="pthread_getcpuclockid – retrieve ID of a thread’s CPU time clock"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>pthread_getcpuclockid(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>pthread_getcpuclockid &#8211; retrieve ID of a thread&#8217;s CPU time clock</p><h2>Synopsis</h2><pre><code>#include &lt;pthread.h&gt;
+#include &lt;time.h&gt;
+int pthread_getcpuclockid(pthread_t thread, clockid_t *clockid);
+Compile and link with - pthread.</code></pre><h2>Description</h2><p>The <code>pthread_getcpuclockid</code>() function obtains the ID of the CPU-time clock of the thread whose ID is given in <i>thread</i>, and returns it in the location pointed to by <i>clockid</i>.</p><h2>Return Value</h2><p>On success, this function returns 0; on error, it returns a nonzero error number.</p><h2>Errors</h2><dl><dt><code>ENOENT</code></dt><dd>Per-thread CPU time clocks are not supported by the system.</dd><dt><code>ESRCH</code></dt><dd>No thread with the ID <i>thread</i> could be found.</dd></dl><h2>Versions</h2><p>This function is available in glibc since version 2.2.</p><h2>Attributes</h2><p>For an explanation of the terms used in this section, see <code><a href=/docs/linux/man/7-attributes/>attributes</a></code>(7).</p><table border><tr valign=top><td><code>Interface</code></td><td><code>Attribute</code></td><td><code>Value</code></td></tr><tr valign=top><td><code>pthread_getcpuclockid</code>()</td><td>Thread safety</td><td>MT-Safe</td></tr></table><h2>Conforming To</h2><p>POSIX.1-2001, POSIX.1-2008.</p><h2>Notes</h2><p>When <i>thread</i> refers to the calling thread, this function returns an identifier that refers to the same clock manipulated by <code><a href=/docs/linux/man/2-clock_gettime/>clock_gettime</a></code>(2) and <code><a href=/docs/linux/man/2-clock_settime/>clock_settime</a></code>(2) when given the clock ID <code>CLOCK_THREAD_CPUTIME_ID</code>.</p><h2>Examples</h2><p>The program below creates a thread and then uses <code><a href=/docs/linux/man/2-clock_gettime/>clock_gettime</a></code>(2) to retrieve the total process CPU time, and the per-thread CPU time consumed by the two threads. The following shell session shows an example run: $ <code>./a.out</code> Main thread sleeping Subthread starting infinite loop Main thread consuming some CPU time&#8230; Process total CPU time: 1.368 Main thread CPU time: 0.376 Subthread CPU time: 0.992</p><h3>Program source</h3><p>/* Link with "-lrt" */</p><pre><code>#include &lt;errno.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+#define handle_error(msg)   \
+    do {                    \
+        perror(msg);        \
+        exit(EXIT_FAILURE); \
+    } while (0)
+#define handle_error_en(en, msg) \
+    do {                         \
+        errno = en;              \
+        perror(msg);             \
+        exit(EXIT_FAILURE);      \
+    } while (0)
+static void *
+thread_start(void *arg)
+{
+    printf(&quot;Subthread starting infinite loop
+&quot;);
+    for (;;)
+        continue;
+}
+static void
+pclock(char *msg, clockid_t cid)
+{
+    struct timespec ts;
+    printf(&quot;%s&quot;, msg);
+    if (clock_gettime(cid, &amp;ts) == -1)
+        handle_error(&quot;clock_gettime&quot;);
+    printf(&quot;%4jd.%03ld
+&quot;, (intmax_t)ts.tv_sec, ts.tv_nsec / 1000000);
+}
+int main(int argc, char *argv[])
+{
+    pthread_t thread;
+    clockid_t cid;
+    int s;
+    s = pthread_create(&amp;thread, NULL, thread_start, NULL);
+    if (s != 0)
+        handle_error_en(s, &quot;pthread_create&quot;);
+    printf(&quot;Main thread sleeping
+&quot;);
+    sleep(1);
+    printf(&quot;Main thread consuming some CPU time...
+&quot;);
+    for (int j = 0; j &lt; 2000000; j++)
+        getppid();
+    pclock(&quot;Process total CPU time: &quot;, CLOCK_PROCESS_CPUTIME_ID);
+    s = pthread_getcpuclockid(pthread_self(), &amp;cid);
+    if (s != 0)
+        handle_error_en(s, &quot;pthread_getcpuclockid&quot;);
+    pclock(&quot;Main thread CPU time:   &quot;, cid);
+    /* The preceding 4 lines of code could have been replaced by:
+           pclock(&quot;Main thread CPU time:   &quot;, CLOCK_THREAD_CPUTIME_ID); */
+    s = pthread_getcpuclockid(thread, &amp;cid);
+    if (s != 0)
+        handle_error_en(s, &quot;pthread_getcpuclockid&quot;);
+    pclock(&quot;Subthread CPU time: 1    &quot;, cid);
+    exit(EXIT_SUCCESS); /* Terminates both threads */
+}</code></pre><h2>See Also</h2><p><code><a href=/docs/linux/man/2-clock_gettime/>clock_gettime</a></code>(2), <code><a href=/docs/linux/man/2-clock_settime/>clock_settime</a></code>(2), <code><a href=/docs/linux/man/2-timer_create/>timer_create</a></code>(2), <code><a href=/docs/linux/man/3-clock_getcpuclockid/>clock_getcpuclockid</a></code>(3), <code><a href=/docs/linux/man/3-pthread_self/>pthread_self</a></code>(3), <code><a href=/docs/linux/man/7-pthreads/>pthreads</a></code>(7), <code><a href=/docs/linux/man/7-time/>time</a></code>(7)</p><h2>Colophon</h2><p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel=nofollow href=https://www.kernel.org/doc/man-pages/.>https://www.kernel.org/doc/man-pages/.</a></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

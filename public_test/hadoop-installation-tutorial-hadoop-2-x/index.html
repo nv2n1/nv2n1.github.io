@@ -1,0 +1,195 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems</title><link rel=canonical href=https://www.systutorials.com/hadoop-installation-tutorial-hadoop-2-x/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems"><meta property="og:url" content="https://www.systutorials.com/hadoop-installation-tutorial-hadoop-2-x/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/distributed-systems-academy/>Distributed Systems Academy</a>
+&#8250; <a href=/advanced-systems-path/>Advanced Systems & Architecture Path</a>
+&#8250; <a href=/category/big-data-systems/>Big Data Systems</a></nav><h1>Setting Up a Hadoop 2.x Cluster for Development and Legacy Systems</h1><time class=post-date datetime=2014-09-14T18:13:09Z>September 14, 2014</time> <span class=post-author>&#183; <a href=/author/zma/>Eric Ma</a> and Community</span> <span class=post-updated>&#183; updated April 11, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Hadoop 2.x reached end-of-life in 2016. This guide covers setup for learning purposes and legacy system maintenance only. For production deployments, use Hadoop 3.x or later, which includes performance improvements, better YARN scheduling, HDFS erasure coding, and improved security. Cloud-managed options like AWS EMR, Google Dataproc, and Azure HDInsight eliminate most operational overhead.</p><p>This guide walks through setting up a three-node cluster (hofstadter, snell, biot) with hofstadter as the NameNode/ResourceManager. Hadoop 2.x introduced YARN (Yet Another Resource Negotiator), decoupling resource management from MapReduce job scheduling — a significant architectural change from 1.x.</p><h2 id=prerequisites>Prerequisites</h2><ul><li>Linux user <code>hadoop</code> exists on all nodes with home directory <code>/home/hadoop/</code></li><li>Root or sudo access to configure system settings</li><li>Network connectivity between all nodes with consistent DNS or <code>/etc/hosts</code> configuration</li><li>JDK 8 or later (Hadoop 2.10.1 works through Java 21, though testing with Java 8-11 is more common)</li></ul><h2 id=hostname-and-network-configuration>Hostname and Network Configuration</h2><p>Hadoop uses hostnames for node discovery. Edit <code>/etc/hosts</code> on every node:</p><pre><code>10.0.3.29   hofstadter
+10.0.3.30   snell
+10.0.3.31   biot
+</code></pre><p>Verify connectivity:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ping -c <span class=m>1</span> hofstadter
+</span></span><span class=line><span class=cl>ping -c <span class=m>1</span> snell
+</span></span><span class=line><span class=cl>ping -c <span class=m>1</span> biot
+</span></span></code></pre></div><p>For clusters with 10+ nodes, use DNS instead of <code>/etc/hosts</code> to reduce maintenance burden.</p><h2 id=ssh-key-based-authentication>SSH Key-Based Authentication</h2><p>The Hadoop user on the NameNode must SSH to all DataNodes without password prompts. Generate Ed25519 keys as the hadoop user on the NameNode:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>su - hadoop
+</span></span><span class=line><span class=cl>ssh-keygen -t ed25519 -N <span class=s2>&#34;&#34;</span> -f ~/.ssh/id_ed25519
+</span></span></code></pre></div><p>Distribute the public key to all nodes:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=k>for</span> node in snell biot<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  ssh-copy-id -i ~/.ssh/id_ed25519.pub hadoop@<span class=nv>$node</span>
+</span></span><span class=line><span class=cl><span class=k>done</span>
+</span></span></code></pre></div><p>Test passwordless login:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ssh hadoop@snell hostname
+</span></span><span class=line><span class=cl>ssh hadoop@biot hostname
+</span></span></code></pre></div><p>Both commands should return the node’s hostname without prompting for a password.</p><h2 id=java-installation>Java Installation</h2><p>Hadoop requires a JDK, not just a JRE. Install via your package manager or manually:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Using package manager (recommended)</span>
+</span></span><span class=line><span class=cl>apt-get install openjdk-11-jdk  <span class=c1># Debian/Ubuntu</span>
+</span></span><span class=line><span class=cl><span class=c1># or</span>
+</span></span><span class=line><span class=cl>dnf install java-11-openjdk-devel  <span class=c1># RHEL/CentOS/Fedora</span>
+</span></span></code></pre></div><p>For manual installation, download from the OpenJDK repository and extract to <code>/usr/java/</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir -p /usr/java
+</span></span><span class=line><span class=cl><span class=nb>cd</span> /usr/java
+</span></span><span class=line><span class=cl><span class=c1># Download and extract JDK tarball</span>
+</span></span><span class=line><span class=cl>ln -s jdk-21.x.x default
+</span></span></code></pre></div><p>Add to <code>~/.bashrc</code> for the hadoop user on all nodes:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>export</span> <span class=nv>JAVA_HOME</span><span class=o>=</span>/usr/java/default
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>PATH</span><span class=o>=</span><span class=nv>$JAVA_HOME</span>/bin:<span class=nv>$PATH</span>
+</span></span></code></pre></div><p>Source and verify:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>source</span> ~/.bashrc
+</span></span><span class=line><span class=cl>java -version
+</span></span></code></pre></div><h2 id=hadoop-installation>Hadoop Installation</h2><p>Download Hadoop 2.10.1 (final 2.x release) from the Apache archive:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /home/hadoop
+</span></span><span class=line><span class=cl>wget https://archive.apache.org/dist/hadoop/common/hadoop-2.10.1/hadoop-2.10.1.tar.gz
+</span></span><span class=line><span class=cl>tar xzf hadoop-2.10.1.tar.gz
+</span></span><span class=line><span class=cl>ln -s hadoop-2.10.1 hadoop
+</span></span></code></pre></div><p>Add to <code>~/.bashrc</code> for the hadoop user on all nodes:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>export</span> <span class=nv>HADOOP_COMMON_HOME</span><span class=o>=</span><span class=nv>$HOME</span>/hadoop
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>HADOOP_MAPRED_HOME</span><span class=o>=</span><span class=nv>$HADOOP_COMMON_HOME</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>HADOOP_HDFS_HOME</span><span class=o>=</span><span class=nv>$HADOOP_COMMON_HOME</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>YARN_HOME</span><span class=o>=</span><span class=nv>$HADOOP_COMMON_HOME</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>PATH</span><span class=o>=</span><span class=nv>$PATH</span>:<span class=nv>$HADOOP_COMMON_HOME</span>/bin:<span class=nv>$HADOOP_COMMON_HOME</span>/sbin
+</span></span></code></pre></div><p>Reload and verify:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>source</span> ~/.bashrc
+</span></span><span class=line><span class=cl>hadoop version
+</span></span></code></pre></div><h2 id=configuration>Configuration</h2><p>All configuration files live in <code>$HADOOP_COMMON_HOME/etc/hadoop/</code>. Edit <code>.xml</code> files directly with a text editor — do not rely on shell scripts to modify them, as manual edits may be lost.</p><h3 id=core-sitexml>core-site.xml</h3><p>Set the NameNode address. Add this inside the <code>&lt;configuration></code> tags:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>fs.defaultFS<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>hdfs://hofstadter/<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>NameNode URI<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span></code></pre></div><h3 id=hdfs-sitexml>hdfs-site.xml</h3><p>Configure HDFS replication and storage directories:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>dfs.replication<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>3<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Number of block replicas<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>dfs.namenode.name.dir<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>file:///home/hadoop/hdfs/namenode<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>NameNode metadata storage<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>dfs.datanode.data.dir<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>file:///home/hadoop/hdfs/datanode<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>DataNode block storage<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span></code></pre></div><p>Create these directories on all nodes:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir -p /home/hadoop/hdfs/namenode /home/hadoop/hdfs/datanode
+</span></span><span class=line><span class=cl>chown hadoop:hadoop /home/hadoop/hdfs
+</span></span></code></pre></div><p>Set <code>dfs.replication</code> to match your number of DataNodes or fewer. A three-node cluster can use replication factor 3; smaller clusters should lower this value.</p><h3 id=yarn-sitexml>yarn-site.xml</h3><p>Configure YARN resource management:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>yarn.resourcemanager.hostname<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>hofstadter<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>ResourceManager host<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>yarn.nodemanager.aux-services<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>mapreduce_shuffle<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Shuffle service for MapReduce<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>yarn.nodemanager.resource.memory-mb<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>4096<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Memory available per NodeManager in MB<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>yarn.scheduler.minimum-allocation-mb<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>512<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Minimum memory per container in MB<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>yarn.scheduler.maximum-allocation-mb<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>4096<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Maximum memory per container in MB<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span></code></pre></div><p>Adjust memory values based on actual available RAM. A common formula: (total_ram – 2GB_system_overhead) = <code>yarn.nodemanager.resource.memory-mb</code>. If a node has 8GB RAM, set this to 6144 MB.</p><h3 id=mapred-sitexml>mapred-site.xml</h3><p>Copy the template and configure MapReduce to use YARN:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cp <span class=nv>$HADOOP_COMMON_HOME</span>/etc/hadoop/mapred-site.xml.template <span class=se>\
+</span></span></span><span class=line><span class=cl>   <span class=nv>$HADOOP_COMMON_HOME</span>/etc/hadoop/mapred-site.xml
+</span></span></code></pre></div><p>Add to <code>mapred-site.xml</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>mapreduce.framework.name<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>yarn<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Use YARN for MapReduce<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>mapreduce.jobhistory.address<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>hofstadter:10020<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Job history server address<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>mapreduce.jobhistory.webapp.address<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>hofstadter:19888<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Job history web UI<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>mapreduce.map.memory.mb<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>512<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Memory per map task<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;property&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;name&gt;</span>mapreduce.reduce.memory.mb<span class=nt>&lt;/name&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;value&gt;</span>512<span class=nt>&lt;/value&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&lt;description&gt;</span>Memory per reduce task<span class=nt>&lt;/description&gt;</span>
+</span></span><span class=line><span class=cl><span class=nt>&lt;/property&gt;</span>
+</span></span></code></pre></div><p>These map/reduce memory settings should not exceed <code>yarn.scheduler.maximum-allocation-mb</code>.</p><h3 id=workers-formerly-slaves>workers (formerly slaves)</h3><p>Edit <code>etc/hadoop/workers</code> and list all DataNode hostnames:</p><pre><code>hofstadter
+snell
+biot
+</code></pre><p>The NameNode/ResourceManager can also run DataNode/NodeManager services (as shown here), though production deployments often dedicate the NameNode to metadata management only.</p><h2 id=distribute-configuration-to-all-nodes>Distribute Configuration to All Nodes</h2><p>Use rsync to copy Hadoop configuration to all DataNodes:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> /home/hadoop
+</span></span><span class=line><span class=cl><span class=k>for</span> node in snell biot<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=nb>echo</span> <span class=s2>&#34;Syncing to </span><span class=nv>$node</span><span class=s2>...&#34;</span>
+</span></span><span class=line><span class=cl>  rsync -avxz --delete hadoop/ hadoop@<span class=nv>$node</span>:/home/hadoop/hadoop/
+</span></span><span class=line><span class=cl><span class=k>done</span>
+</span></span></code></pre></div><p>Verify on each node:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ssh hadoop@snell ls /home/hadoop/hadoop/etc/hadoop/core-site.xml
+</span></span><span class=line><span class=cl>ssh hadoop@biot ls /home/hadoop/hadoop/etc/hadoop/core-site.xml
+</span></span></code></pre></div><h2 id=format-the-namenode>Format the NameNode</h2><p>On the NameNode only, initialize HDFS metadata:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs namenode -format
+</span></span></code></pre></div><p>This creates the initial fsimage. Do this only once. Re-formatting destroys all HDFS data and cannot be undone.</p><h2 id=start-the-cluster>Start the Cluster</h2><h3 id=option-1-individual-service-control>Option 1: Individual Service Control</h3><p>On the NameNode:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs --daemon start namenode
+</span></span></code></pre></div><p>On each DataNode:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs --daemon start datanode
+</span></span></code></pre></div><p>On the ResourceManager (usually the NameNode):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>yarn --daemon start resourcemanager
+</span></span></code></pre></div><p>On each NodeManager:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>yarn --daemon start nodemanager
+</span></span></code></pre></div><p>The <code>--daemon</code> flag runs the service in the background. Older Hadoop versions used <code>start-dfs.sh</code> and <code>start-yarn.sh</code> scripts, which still work but are less flexible.</p><h3 id=option-2-use-cluster-start-scripts>Option 2: Use Cluster Start Scripts</h3><p>From the NameNode, start HDFS across all nodes listed in <code>workers</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>start-dfs.sh
+</span></span></code></pre></div><p>This command uses SSH to launch NameNode and DataNode services. Similarly, start YARN:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>start-yarn.sh
+</span></span></code></pre></div><p>Run these scripts from the NameNode to ensure proper SSH communication.</p><h2 id=verify-cluster-status>Verify Cluster Status</h2><p>Check HDFS health:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs dfsadmin -report
+</span></span></code></pre></div><p>Sample output:</p><pre><code>Configured Capacity: 335,854,977,024 (312.59 GB)
+Present Capacity: 335,854,977,024 (312.59 GB)
+DFS Remaining: 335,854,977,024 (312.59 GB)
+DFS Used: 0 (0 B)
+DFS Used%: 0.00%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+
+Live datanodes (3):
+Name: 10.0.3.30:50010 (snell)
+Hostname: snell
+...
+</code></pre><p>Check YARN node status:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>yarn node -list
+</span></span></code></pre></div><p>Sample output:</p><pre><code>Total Nodes:3
+         Node-Id            Node-State Node-Http-Address   Number-of-Running-Containers
+hofstadter:43469           RUNNING    hofstadter:8042                              0
+snell:57039                RUNNING    snell:8042                                    0
+biot:52834                 RUNNING    biot:8042                                     0
+</code></pre><p>All nodes should report RUNNING state.</p><h2 id=web-uis>Web UIs</h2><p>Access cluster dashboards via browser:</p><ul><li><strong>HDFS NameNode</strong>: <a href=http://hofstadter:9870/ rel=nofollow>http://hofstadter:9870/</a> (shows block inventory, replication status, dead nodes)</li><li><strong>YARN ResourceManager</strong>: <a href=http://hofstadter:8088/ rel=nofollow>http://hofstadter:8088/</a> (shows running and completed applications, node resources)</li><li><strong>Job History Server</strong>: <a href=http://hofstadter:19888/ rel=nofollow>http://hofstadter:19888/</a> (MapReduce job logs)</li></ul><h2 id=run-a-test-job>Run a Test Job</h2><p>Create HDFS home directory:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hadoop fs -mkdir -p /user/hadoop
+</span></span></code></pre></div><p>Upload test data:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hadoop fs -put <span class=nv>$HADOOP_COMMON_HOME</span>/etc/hadoop test-input
+</span></span></code></pre></div><p>Run the built-in grep example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hadoop jar <span class=nv>$HADOOP_COMMON_HOME</span>/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar <span class=se>\
+</span></span></span><span class=line><span class=cl>  grep test-input test-output <span class=s1>&#39;dfs[a-z.]*&#39;</span>
+</span></span></code></pre></div><p>Monitor the job at <a href=http://hofstadter:8088/ rel=nofollow>http://hofstadter:8088/</a>. Once complete, check results:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hadoop fs -ls test-output/
+</span></span><span class=line><span class=cl>hadoop fs -cat test-output/part-r-00000
+</span></span></code></pre></div><p>The output will list all lines from the input containing the regex pattern.</p><h2 id=stop-the-cluster>Stop the Cluster</h2><h3 id=option-1-individual-service-control-1>Option 1: Individual Service Control</h3><p>On each node, stop services in reverse order:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># On each DataNode</span>
+</span></span><span class=line><span class=cl>hdfs --daemon stop datanode
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># On NameNode</span>
+</span></span><span class=line><span class=cl>hdfs --daemon stop namenode
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># On each NodeManager</span>
+</span></span><span class=line><span class=cl>yarn --daemon stop nodemanager
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># On ResourceManager</span>
+</span></span><span class=line><span class=cl>yarn --daemon stop resourcemanager
+</span></span></code></pre></div><h3 id=option-2-use-cluster-stop-scripts>Option 2: Use Cluster Stop Scripts</h3><p>From the NameNode:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>stop-dfs.sh
+</span></span><span class=line><span class=cl>stop-yarn.sh
+</span></span></code></pre></div><p>These scripts use SSH to stop services across all nodes in <code>workers</code>.</p><h2 id=debugging-and-troubleshooting>Debugging and Troubleshooting</h2><p>Check logs on any node:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ls <span class=nv>$HADOOP_COMMON_HOME</span>/logs/
+</span></span><span class=line><span class=cl>tail -f <span class=nv>$HADOOP_COMMON_HOME</span>/logs/hadoop-hadoop-namenode-hofstadter.log
+</span></span><span class=line><span class=cl>tail -f <span class=nv>$HADOOP_COMMON_HOME</span>/logs/hadoop-hadoop-datanode-snell.log
+</span></span></code></pre></div><h3 id=connection-refused--ssh-failures>Connection Refused / SSH Failures</h3><ul><li>Verify SSH is running on all nodes: <code>systemctl status ssh</code> (or <code>sshd</code> on some systems)</li><li>Check that the hadoop user can SSH without a password: <code>ssh hadoop@snell echo test</code></li><li>Ensure firewall rules permit SSH (port 22) and Hadoop ports (9000, 9870, 8088, 50010)</li></ul><h3 id=port-conflicts>Port Conflicts</h3><ul><li>NameNode: 9000 (RPC), 9870 (web UI)</li><li>DataNode: 50010 (data transfer), 50020 (IPC)</li><li>ResourceManager: 8032 (RPC), 8088 (web UI)</li><li>NodeManager: 8042 (web UI), 8040 (RPC)</li></ul><p>Check if ports are in use:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>netstat -tlnp <span class=p>|</span> grep :9000
+</span></span><span class=line><span class=cl>lsof -i :8088
+</span></span></code></pre></div><h3 id=java-not-found>Java Not Found</h3><ul><li>Verify <code>JAVA_HOME</code> is set: <code>echo $JAVA_HOME</code></li><li>Confirm the path exists: <code>ls $JAVA_HOME/bin/java</code></li><li>Source <code>~/.bashrc</code> again if recently added: <code>source ~/.bashrc</code></li></ul><h3 id=blocks-under-replicated>Blocks Under-Replicated</h3><ul><li>Check that <code>dfs.replication</code> does not exceed the number of DataNodes</li><li>Verify all DataNodes are healthy: <code>hdfs dfsadmin -report</code></li><li>Wait for the rebalancer to complete; this can take minutes on large datasets</li></ul><h3 id=namenode-safemode>NameNode Safemode</h3><p>On startup, HDFS enters safemode while blocks are inventoried. Check status:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs dfsadmin -safemode get
+</span></span></code></pre></div><p>Force exit (only if blocks are verified):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hdfs dfsadmin -safemode leave
+</span></span></code></pre></div><h2 id=full-cluster-reset>Full Cluster Reset</h2><p>To reset from scratch:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Stop all services</span>
+</span></span><span class=line><span class=cl>stop-dfs.sh
+</span></span><span class=line><span class=cl>stop-yarn.sh
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Clean data on NameNode</span>
+</span></span><span class=line><span class=cl>rm -rf /home/hadoop/hdfs /home/hadoop/hadoop/logs
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Clean data on all DataNodes</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> node in snell biot<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  ssh hadoop@<span class=nv>$node</span> <span class=s1>&#39;rm -rf /home/hadoop/hdfs /home/hadoop/hadoop/logs&#39;</span>
+</span></span><span class=line><span class=cl><span class=k>done</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Re-format and restart</span>
+</span></span><span class=line><span class=cl>hdfs namenode -format
+</span></span><span class=line><span class=cl>start-dfs.sh
+</span></span><span class=line><span class=cl>start-yarn.sh
+</span></span></code></pre></div><h2 id=configuration-reference>Configuration Reference</h2><table><thead><tr><th>Parameter</th><th>File</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td><code>fs.defaultFS</code></td><td>core-site.xml</td><td>NameNode address</td><td><code>hdfs://hofstadter/</code></td></tr><tr><td><code>dfs.replication</code></td><td>hdfs-site.xml</td><td>Block replication factor</td><td><code>3</code></td></tr><tr><td>`d</td><td></td><td></td><td></td></tr></tbody></table><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

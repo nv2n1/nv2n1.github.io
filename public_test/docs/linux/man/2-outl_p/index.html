@@ -1,0 +1,29 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>outl_p(2) · Linux Manual Pages</title><meta name=description content="outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p – port I/O"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/2-outl_p/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="outl_p(2) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/2-outl_p/"><meta property="og:description" content="outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p – port I/O"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/2/>Section 2</a></p><article><header class=man-header><h1>outl_p(2)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p &#8211; port I/O</p><h2>SYNOPSIS</h2><pre><code>
+#include &lt;sys/io.h&gt;
+unsigned char inb(unsigned short port);
+unsigned char inb_p(unsigned short port);
+unsigned short inw(unsigned short port);
+unsigned short inw_p(unsigned short port);
+unsigned int inl(unsigned short port);
+unsigned int inl_p(unsigned short port);
+void outb(unsigned char value, unsigned short port);
+void outb_p(unsigned char value, unsigned short port);
+void outw(unsigned short value, unsigned short port);
+void outw_p(unsigned short value, unsigned short port);
+void outl(unsigned int value, unsigned short port);
+void outl_p(unsigned int value, unsigned short port);
+void insb(unsigned short port, void *addr,
+          unsigned long count);
+void insw(unsigned short port, void *addr,
+          unsigned long count);
+void insl(unsigned short port, void *addr,
+          unsigned long count);
+void outsb(unsigned short port, const void *addr,
+           unsigned long count);
+void outsw(unsigned short port, const void *addr,
+           unsigned long count);
+void outsl(unsigned short port, const void *addr,
+           unsigned long count);
+</code></pre><h2>DESCRIPTION</h2><p>This family of functions is used to do low-level port input and output. The out* functions do port output, the in* functions do port input; the b-suffix functions are byte-width and the w-suffix functions word-width; the _p-suffix functions pause until the I/O completes.</p><p>They are primarily designed for internal kernel use, but can be used from user space.</p><p>You must compile with <code>-O</code> or <code>-O2</code> or similar. The functions are defined as inline macros, and will not be substituted in without optimization enabled, causing unresolved references at link time.</p><p>You use <code><a href=/docs/linux/man/2-ioperm/>ioperm</a></code>(2) or alternatively <code><a href=/docs/linux/man/2-iopl/>iopl</a></code>(2) to tell the kernel to allow the user space application to access the I/O ports in question. Failure to do this will cause the application to receive a segmentation fault.</p><h2>CONFORMING TO</h2><p><code>outb</code>() and friends are hardware-specific. The <i>value</i> argument is passed first and the <i>port</i> argument is passed second, which is the opposite order from most DOS implementations.</p><h2>SEE ALSO</h2><p><code><a href=/docs/linux/man/2-ioperm/>ioperm</a></code>(2), <code><a href=/docs/linux/man/2-iopl/>iopl</a></code>(2)</p><h2>COLOPHON</h2><p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel=nofollow href=https://www.kernel.org/doc/man-pages/.>https://www.kernel.org/doc/man-pages/.</a></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

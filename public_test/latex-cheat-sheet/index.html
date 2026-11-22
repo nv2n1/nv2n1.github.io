@@ -1,0 +1,168 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>LaTeX Essentials: Key Commands and Document Setup</title><link rel=canonical href=https://www.systutorials.com/latex-cheat-sheet/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="LaTeX Essentials: Key Commands and Document Setup"><meta property="og:url" content="https://www.systutorials.com/latex-cheat-sheet/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/distributed-systems-academy/>Distributed Systems Academy</a>
+&#8250; <a href=/security-cryptography-path/>Security & Cryptography Path</a>
+&#8250; <a href=/category/cryptography-keys/>Cryptography & Keys</a></nav><h1>LaTeX Essentials: Key Commands and Document Setup</h1><time class=post-date datetime=2013-07-12T16:54:49Z>July 12, 2013</time> <span class=post-author>&#183; <a href=/author/zma/>Eric Ma</a> and Community</span> <span class=post-updated>&#183; updated May 17, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Every LaTeX document requires a basic framework. Here’s the minimum viable structure:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\documentclass</span><span class=nb>{</span>article<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=na>[utf-8]</span><span class=nb>{</span>inputenc<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\title</span><span class=nb>{</span>My Document<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\author</span><span class=nb>{</span>Author Name<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\date</span><span class=nb>{</span><span class=k>\today</span><span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>document<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\maketitle</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\section</span><span class=nb>{</span>Introduction<span class=nb>}</span>
+</span></span><span class=line><span class=cl>Your content here.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>document<span class=nb>}</span>
+</span></span></code></pre></div><p>Common document classes:</p><ul><li><code>article</code> — reports, papers, short documents</li><li><code>report</code> — longer documents with chapters</li><li><code>book</code> — book-length documents with front/back matter</li><li><code>beamer</code> — slide presentations</li><li><code>letter</code> — formal correspondence</li></ul><p>Add packages with <code>\usepackage{}</code> before <code>\begin{document}</code>. The <code>inputenc</code> package with UTF-8 encoding is standard for modern systems and ensures proper handling of non-ASCII characters.</p><h2 id=text-formatting>Text Formatting</h2><p>Basic formatting commands:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\textbf</span><span class=nb>{</span>bold text<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\textit</span><span class=nb>{</span>italic text<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\texttt</span><span class=nb>{</span>monospace/typewriter<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\textsc</span><span class=nb>{</span>small caps<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\underline</span><span class=nb>{</span>underlined text<span class=nb>}</span>
+</span></span></code></pre></div><p>Use <code>\emph{}</code> for semantic emphasis—it toggles italic (or returns to roman if already italic), making it preferred over raw formatting for emphasis. Combine multiple formats with nesting:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\textbf</span><span class=nb>{</span><span class=k>\textit</span><span class=nb>{</span>bold italic text<span class=nb>}}</span>
+</span></span></code></pre></div><h2 id=sections-and-headings>Sections and Headings</h2><p>Structure documents hierarchically:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\section</span><span class=nb>{</span>Main Section<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\subsection</span><span class=nb>{</span>Subsection<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\subsubsection</span><span class=nb>{</span>Sub-subsection<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\paragraph</span><span class=nb>{</span>Paragraph Heading<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\subparagraph</span><span class=nb>{</span>Subparagraph Heading<span class=nb>}</span>
+</span></span></code></pre></div><p>For unnumbered sections, append an asterisk:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\section*</span><span class=nb>{</span>Unnumbered Section<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\subsection*</span><span class=nb>{</span>Unnumbered Subsection<span class=nb>}</span>
+</span></span></code></pre></div><p>This applies to all heading levels. Unnumbered sections won’t appear in the table of contents by default.</p><h2 id=lists>Lists</h2><p><strong>Unordered lists</strong> with <code>itemize</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>itemize<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\item</span> First item
+</span></span><span class=line><span class=cl>    <span class=k>\item</span> Second item
+</span></span><span class=line><span class=cl>    <span class=k>\begin</span><span class=nb>{</span>itemize<span class=nb>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>\item</span> Nested item
+</span></span><span class=line><span class=cl>    <span class=k>\end</span><span class=nb>{</span>itemize<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>itemize<span class=nb>}</span>
+</span></span></code></pre></div><p><strong>Ordered lists</strong> with <code>enumerate</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>enumerate<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\item</span> First step
+</span></span><span class=line><span class=cl>    <span class=k>\item</span> Second step
+</span></span><span class=line><span class=cl>    <span class=k>\item</span> Third step
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>enumerate<span class=nb>}</span>
+</span></span></code></pre></div><p><strong>Definition/description lists</strong> with <code>description</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>description<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\item</span><span class=na>[Term]</span> Definition goes here
+</span></span><span class=line><span class=cl>    <span class=k>\item</span><span class=na>[Another Term]</span> Its definition
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>description<span class=nb>}</span>
+</span></span></code></pre></div><h2 id=math-mode>Math Mode</h2><p>Inline math uses single dollar signs: <code>$x = y + 2$</code> renders within text.</p><p>Display math (centered on its own line) uses double dollar signs or dedicated environments:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=sb>$$</span><span class=nb>E </span><span class=o>=</span><span class=nb> mc^</span><span class=m>2</span><span class=s>$$</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>equation<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    E = mc<span class=nb>^</span>2
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>equation<span class=nb>}</span>
+</span></span></code></pre></div><p>Use <code>equation*</code> (or <code>align*</code>) for unnumbered display math:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>align*<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    x <span class=nb>&amp;</span>= 1 <span class=k>\\</span>
+</span></span><span class=line><span class=cl>    y <span class=nb>&amp;</span>= 2 <span class=k>\\</span>
+</span></span><span class=line><span class=cl>    z <span class=nb>&amp;</span>= 3
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>align*<span class=nb>}</span>
+</span></span></code></pre></div><p>Use <code>align*</code> for aligned equations; the <code>&</code> marks alignment points.</p><p><strong>Common math symbols and operators:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=c>% Greek letters
+</span></span></span><span class=line><span class=cl><span class=k>\alpha</span>, <span class=k>\beta</span>, <span class=k>\gamma</span>, <span class=k>\Delta</span>, <span class=k>\Sigma</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% Operators
+</span></span></span><span class=line><span class=cl><span class=k>\pm</span>, <span class=k>\times</span>, <span class=k>\div</span>, <span class=k>\leq</span>, <span class=k>\geq</span>, <span class=k>\neq</span>, <span class=k>\approx</span>, <span class=k>\equiv</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% Sets
+</span></span></span><span class=line><span class=cl><span class=k>\in</span>, <span class=k>\subset</span>, <span class=k>\cup</span>, <span class=k>\cap</span>, <span class=k>\emptyset</span>, <span class=k>\mathbb</span><span class=nb>{</span>R<span class=nb>}</span>, <span class=k>\mathbb</span><span class=nb>{</span>Z<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% Logic and relations
+</span></span></span><span class=line><span class=cl><span class=k>\forall</span>, <span class=k>\exists</span>, <span class=k>\Rightarrow</span>, <span class=k>\Leftrightarrow</span>, <span class=k>\therefore</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% Calculus
+</span></span></span><span class=line><span class=cl><span class=k>\int</span>, <span class=k>\sum</span>, <span class=k>\prod</span>, <span class=k>\infty</span>, <span class=k>\partial</span>, <span class=k>\nabla</span>, <span class=k>\lim</span>
+</span></span></code></pre></div><p>For more complex math, use the <code>amsmath</code> and <code>amssymb</code> packages:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>amsmath<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>amssymb<span class=nb>}</span>
+</span></span></code></pre></div><h2 id=tables>Tables</h2><p>Create tables with the <code>tabular</code> environment:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>tabular<span class=nb>}{</span>l c r<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    Left <span class=nb>&amp;</span> Center <span class=nb>&amp;</span> Right <span class=k>\\</span>
+</span></span><span class=line><span class=cl>    <span class=k>\hline</span>
+</span></span><span class=line><span class=cl>    A <span class=nb>&amp;</span> B <span class=nb>&amp;</span> C <span class=k>\\</span>
+</span></span><span class=line><span class=cl>    D <span class=nb>&amp;</span> E <span class=nb>&amp;</span> F
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>tabular<span class=nb>}</span>
+</span></span></code></pre></div><p>Format specifiers:</p><ul><li><code>l</code> — left-aligned</li><li><code>c</code> — centered</li><li><code>r</code> — right-aligned</li><li><code>|</code> — vertical lines</li><li><code>p{width}</code> — fixed-width column</li></ul><p>Separate columns with <code>&</code> and rows with <code>\\</code>. Use <code>\hline</code> for horizontal lines.</p><p>For floating tables with captions and labels:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>table<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\centering</span>
+</span></span><span class=line><span class=cl>    <span class=k>\begin</span><span class=nb>{</span>tabular<span class=nb>}{</span>|l|c|r|<span class=nb>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>\hline</span>
+</span></span><span class=line><span class=cl>        Name <span class=nb>&amp;</span> Score <span class=nb>&amp;</span> Grade <span class=k>\\</span>
+</span></span><span class=line><span class=cl>        <span class=k>\hline</span>
+</span></span><span class=line><span class=cl>        Alice <span class=nb>&amp;</span> 95 <span class=nb>&amp;</span> A <span class=k>\\</span>
+</span></span><span class=line><span class=cl>        Bob <span class=nb>&amp;</span> 87 <span class=nb>&amp;</span> B <span class=k>\\</span>
+</span></span><span class=line><span class=cl>        Charlie <span class=nb>&amp;</span> 92 <span class=nb>&amp;</span> A <span class=k>\\</span>
+</span></span><span class=line><span class=cl>        <span class=k>\hline</span>
+</span></span><span class=line><span class=cl>    <span class=k>\end</span><span class=nb>{</span>tabular<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\caption</span><span class=nb>{</span>Student Scores<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\label</span><span class=nb>{</span>tab:scores<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>table<span class=nb>}</span>
+</span></span></code></pre></div><p>Reference with <code>\ref{tab:scores}</code> or <code>\autoref{tab:scores}</code> (requires <code>hyperref</code> package).</p><h2 id=figures-and-images>Figures and Images</h2><p>Insert images with the <code>graphicx</code> package:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>graphicx<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>figure<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\centering</span>
+</span></span><span class=line><span class=cl>    <span class=k>\includegraphics</span><span class=na>[width=0.8\textwidth]</span><span class=nb>{</span>image.png<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\caption</span><span class=nb>{</span>Image caption describing the figure<span class=nb>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>\label</span><span class=nb>{</span>fig:myfigure<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>figure<span class=nb>}</span>
+</span></span></code></pre></div><p>Width options:</p><ul><li><code>width=0.8\textwidth</code> — 80% of page width</li><li><code>height=5cm</code> — fixed height (maintains aspect ratio)</li><li><code>scale=0.7</code> — scale by factor</li></ul><p>Reference with <code>\ref{fig:myfigure}</code> or <code>\autoref{fig:myfigure}</code>.</p><h2 id=citations-and-bibliography>Citations and Bibliography</h2><p>Use modern <code>biblatex</code> with <code>biber</code> backend (superior to legacy BibTeX):</p><p>Create a <code>.bib</code> file (<code>references.bib</code>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bibtex data-lang=bibtex><span class=line><span class=cl><span class=nc>@article</span><span class=p>{</span><span class=nl>smith2023</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>author</span> <span class=p>=</span> <span class=s>{John Smith}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>title</span> <span class=p>=</span> <span class=s>{A Great Paper on Machine Learning}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>journal</span> <span class=p>=</span> <span class=s>{Nature}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>year</span> <span class=p>=</span> <span class=s>{2023}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>volume</span> <span class=p>=</span> <span class=s>{42}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>pages</span> <span class=p>=</span> <span class=s>{123--145}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>doi</span> <span class=p>=</span> <span class=s>{10.1234/example}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nc>@book</span><span class=p>{</span><span class=nl>knuth1984</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>author</span> <span class=p>=</span> <span class=s>{Donald E. Knuth}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>title</span> <span class=p>=</span> <span class=s>{The TeXbook}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>publisher</span> <span class=p>=</span> <span class=s>{Addison-Wesley}</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=na>year</span> <span class=p>=</span> <span class=s>{1984}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>In your LaTeX document:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\usepackage</span><span class=na>[style=authoryear]</span><span class=nb>{</span>biblatex<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\addbibresource</span><span class=nb>{</span>references.bib<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% Later, in your text:
+</span></span></span><span class=line><span class=cl><span class=k>\cite</span><span class=nb>{</span>smith2023<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\textcite</span><span class=nb>{</span>knuth1984<span class=nb>}</span>  <span class=c>% Author (year) format
+</span></span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>% At end of document:
+</span></span></span><span class=line><span class=cl><span class=k>\printbibliography</span>
+</span></span></code></pre></div><p>Compilation with <code>biber</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pdflatex document.tex
+</span></span><span class=line><span class=cl>biber document
+</span></span><span class=line><span class=cl>pdflatex document.tex
+</span></span><span class=line><span class=cl>pdflatex document.tex
+</span></span></code></pre></div><p>Or use <code>latexmk</code> to automate the process (see below).</p><h2 id=essential-packages>Essential Packages</h2><p>Common packages for technical and academic writing:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>amsmath<span class=nb>}</span>        <span class=c>% Advanced math environments
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>amssymb<span class=nb>}</span>        <span class=c>% Additional math symbols
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>geometry<span class=nb>}</span>       <span class=c>% Page margins: \usepackage[margin=1in]{geometry}
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>hyperref<span class=nb>}</span>       <span class=c>% Clickable links and PDF bookmarks
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>listings<span class=nb>}</span>       <span class=c>% Source code with syntax highlighting
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>xcolor<span class=nb>}</span>         <span class=c>% Colored text: \textcolor{red}{red text}
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>graphicx<span class=nb>}</span>       <span class=c>% Image inclusion
+</span></span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>biblatex<span class=nb>}</span>       <span class=c>% Bibliography management
+</span></span></span></code></pre></div><p><strong>For code listings with syntax highlighting:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-latex data-lang=latex><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>listings<span class=nb>}</span>
+</span></span><span class=line><span class=cl><span class=k>\usepackage</span><span class=nb>{</span>xcolor<span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\lstset</span><span class=nb>{</span>
+</span></span><span class=line><span class=cl>    language=Python,
+</span></span><span class=line><span class=cl>    basicstyle=<span class=k>\ttfamily\small</span>,
+</span></span><span class=line><span class=cl>    keywordstyle=<span class=k>\color</span><span class=nb>{</span>blue<span class=nb>}</span>,
+</span></span><span class=line><span class=cl>    commentstyle=<span class=k>\color</span><span class=nb>{</span>gray<span class=nb>}</span>,
+</span></span><span class=line><span class=cl>    breaklines=true
+</span></span><span class=line><span class=cl><span class=nb>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>\begin</span><span class=nb>{</span>lstlisting<span class=nb>}</span>
+</span></span><span class=line><span class=cl>def hello():
+</span></span><span class=line><span class=cl>    print(&#34;Hello, World!&#34;)
+</span></span><span class=line><span class=cl><span class=k>\end</span><span class=nb>{</span>lstlisting<span class=nb>}</span>
+</span></span></code></pre></div><h2 id=compilation>Compilation</h2><p>Modern workflows use <code>pdflatex</code> or <code>xelatex</code> for rendering and <code>latexmk</code> to manage dependencies:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Basic compilation</span>
+</span></span><span class=line><span class=cl>pdflatex document.tex
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Automatic multi-pass compilation (recommended)</span>
+</span></span><span class=line><span class=cl>latexmk -pdf document.tex
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Watch mode (recompile on file changes)</span>
+</span></span><span class=line><span class=cl>latexmk -pdf -pvc document.tex
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Clean auxiliary files</span>
+</span></span><span class=line><span class=cl>latexmk -c document.tex
+</span></span></code></pre></div><p>Use <code>latexmk</code> for documents with bibliography, cross-references, or indexes—it automatically runs multiple passes to resolve all references. Configure it with a <code>.latexmkrc</code> file in your project directory for consistent behavior across systems.</p><p><strong>For Unicode and system fonts</strong>, use <code>xelatex</code> instead:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>latexmk -xelatex -pdf document.tex
+</span></span></code></pre></div><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,49 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdnested_exception(3) · Linux Manual Pages</title><meta name=description content="std::nested_exception – std::nested_exception"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdnested_exception/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdnested_exception(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdnested_exception/"><meta property="og:description" content="std::nested_exception – std::nested_exception"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdnested_exception(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::nested_exception &#8211; std::nested_exception</p><h2>Synopsis</h2><p>Defined in header &lt;exception><br>class nested_exception; <i>(since C++11)</i><br>std::nested_exception is a polymorphic mixin class which can capture and store the current exception, making it possible to nest exceptions of arbitrary types within each other.</p><h2>Member functions</h2><p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a nested_exception<br>constructor <i>(public member function)</i></p><p>destructor destructs a nested exception<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function)</i><br><code>[virtual]</code><br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;replaces the contents of a nested_exception<br>operator= <i>(public member function)</i><br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;throws the stored exception<br>rethrow_nested <i>(public member function)</i><br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;obtains a pointer to the stored exception<br>nested_ptr <i>(public member function)</i></p><h2>Non-member functions</h2><p>throw_with_nested throws its argument with std::nested_exception mixed in<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br><i>(C++11)</i></p><p>rethrow_if_nested throws the exception from a std::nested_exception<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br><i>(C++11)</i></p><h2>Example</h2><p>Demonstrates construction and recursion through a nested exception object<br>// Run this code</p><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;exception&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt;
+// prints the explanatory string of an exception. If the exception is nested,
+// recurses to print the explanatory of the exception it holds
+void print_exception(const std::exception &amp;e, int level = 0)
+{
+    std::cerr &lt;&lt; std::string(level, ' ') &lt;&lt; &quot;exception: &quot; &lt;&lt; e.what() &lt;&lt; '
+';
+    try {
+        std::rethrow_if_nested(e);
+    } catch (const std::exception &amp;e) {
+        print_exception(e, level + 1);
+    } catch (...) {
+    }
+}
+// sample function that catches an exception and wraps it in a nested exception
+void open_file(const std::string &amp;s)
+{
+    try {
+        std::ifstream file(s);
+        file.exceptions(std::ios_base::failbit);
+    } catch (...) {
+        std::throw_with_nested(std::runtime_error(&quot;Couldn't open &quot; + s));
+    }
+}
+// sample function that catches an exception and wraps it in a nested exception
+void run()
+{
+    try {
+        open_file(&quot;nonexistent.file&quot;);
+    } catch (...) {
+        std::throw_with_nested(std::runtime_error(&quot;run() failed&quot;));
+    }
+}
+// runs the sample function above and prints the caught exception
+int main()
+{
+    try {
+        run();
+    } catch (const std::exception &amp;e) {
+        print_exception(e);
+    }
+}
+</code></pre><h2>Output:</h2><p>&nbsp;<wbr>&nbsp;exception: run() failed<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exception: Couldn&#8217;t open nonexistent.file<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exception: basic_ios::clear</p><h2>See also</h2><p>exception_ptr shared pointer type for handling exception objects<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(typedef)</i><br><i>(C++11)</i><br>throw_with_nested throws its argument with std::nested_exception mixed in<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br><i>(C++11)</i><br>rethrow_if_nested throws the exception from a std::nested_exception<br>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br><i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

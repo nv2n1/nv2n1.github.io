@@ -1,0 +1,113 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdexperimentalrangescopystdexperimentalrangescopy_if(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangescopystdexperimentalrangescopy_if/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdexperimentalrangescopystdexperimentalrangescopy_if(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangescopystdexperimentalrangescopy_if/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdexperimentalrangescopystdexperimentalrangescopy_if(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::experimental::ranges::copy,std::experimental::ranges::copy_if - std::experimental::ranges::copy,std::experimental::ranges::copy_if</p><h2>Synopsis</h2><pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
+    template &lt;InputIterator I, Sentinel&lt;I&gt; S, WeaklyIncrementable O&gt;
+requires IndirectlyCopyable&lt;I, O&gt;(1)
+(ranges TS)
+    ranges::tagged_pair&lt;tag::in(I), tag::out(O)&gt;
+    copy(I first, S last, O result);
+template &lt;InputRange R, WeaklyIncrementable O&gt;
+requires IndirectlyCopyable&lt;ranges::iterator_t&lt;R&gt;, O&gt;(2)
+(ranges TS)
+    ranges::tagged_pair&lt;tag::in(ranges::safe_iterator_t&lt;R&gt;), tag::out(O)&gt;
+    copy(R &amp;&amp;r, O result);
+template &lt;InputIterator I, Sentinel&lt;I&gt; S, WeaklyIncrementable O,
+          class Proj = ranges::identity,
+          IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred&gt;
+(3)(ranges TS)
+    requires IndirectlyCopyable&lt;I, O&gt;
+    ranges::tagged_pair&lt;tag::in(I), tag::out(O)&gt;
+    copy_if(I first, S last, O result, Pred pred, Proj proj = Proj{});
+template &lt;InputRange R, WeaklyIncrementable O,
+          class Proj = ranges::identity,
+          IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred&gt;
+(4)(ranges TS)
+    requires IndirectlyCopyable&lt;iterator_t&lt;R&gt;, O&gt;
+    ranges::tagged_pair&lt;tag::in(ranges::safe_iterator_t&lt;R&gt;), tag::out(O)&gt;
+    copy_if(R &amp;&amp;r, O result, Pred pred, Proj proj = Proj{});
+Copies elements in the source range ([first,last) or r) into the destination range beginning at result, starting from the first element in the source range and proceeding to the last one.
+1) Copies all elements in the range [first, last). For each non-negative integer n &lt; (last - first), performs *(result + n) = *(first + n). The behavior is undefined if result is within the range [first, last). In this case, ranges::copy_backward may be used instead.
+2) Same as (1), but uses r as the source range, as if by ranges::copy(ranges::begin(r), ranges::end(r), result); except that result may not be copied.
+3) Only copies the elements for which the predicate pred returns true when applied to the element's value as projected by the projection proj. The order of the elements that are copied is preserved. The behavior is undefined if the source and the destination ranges overlap.
+4) Same as (3), but uses r as the source range, as if by ranges::copy_if(ranges::begin(r), ranges::end(r), result, pred, proj); except that result, pred and proj may not be copied.
+Notwithstanding the declarations depicted above, the actual number and order of template parameters for algorithm declarations is unspecified. Thus, if explicit template arguments are used when calling an algorithm, the program is probably non-portable.
+</code></pre><h2>Parameters</h2><p>first, last - the range of elements to copy
+r - the range of elements to copy
+result - the beginning of the destination range
+pred - predicate to apply to the projected elements
+proj - projection to apply to the elements</p><h2>Return value</h2><p>A tagged_pair object containing the following two members:</p><ul><li>The first member, with the tag tag::in, is the past-the-end iterator of the source range (that is, an iterator of type I that compares equal to the sentinel last).</li><li>The second member, with the tag tag::out, is the past-the-end iterator of the result range.</li></ul><h2>Complexity</h2><ol><li>Exactly ranges::distance(first, last) assignments.</li><li>Exactly ranges::distance(r) assignments.</li><li>Exactly ranges::distance(first, last) applications of the corresponding projection and predicate.</li><li>Exactly ranges::distance(r) applications of the corresponding projection and predicate.</li></ol><h2>Possible implementations</h2><h2>First version</h2><p> <wbr> template &lt;InputIterator I, Sentinel&lt;I> S, WeaklyIncrementable O>
+ <wbr> <wbr> <wbr> requires IndirectlyCopyable&lt;I, O>()
+ <wbr> ranges::tagged_pair&lt;tag::in(I), tag::out(O)>
+ <wbr> <wbr> <wbr> copy(I first, S last, O result)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first, (void)++result)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *result = *first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> return {first, result};
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template &lt;InputRange R, WeaklyIncrementable O>
+ <wbr> <wbr> <wbr> requires IndirectlyCopyable&lt;ranges::iterator_t&lt;R>, O>()
+ <wbr> ranges::tagged_pair&lt;tag::in(ranges::safe_iterator_t&lt;R>), tag::out(O)>
+ <wbr> <wbr> <wbr> copy(R&& r, O result)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> return ranges::copy(ranges::begin(r), ranges::end(r), result);
+ <wbr> }</p><p>Third version</p><p> <wbr> template &lt;InputIterator I, Sentinel&lt;I> S, WeaklyIncrementable O,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class Proj = ranges::identity,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> IndirectUnaryPredicate&lt;projected&lt;I, Proj>> Pred>
+ <wbr> <wbr> <wbr> requires IndirectlyCopyable&lt;I, O>()
+ <wbr> ranges::tagged_pair&lt;tag::in(I), tag::out(O)>
+ <wbr> <wbr> <wbr> copy_if(I first, S last, O result, Pred pred, Proj proj = Proj{})
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (ranges::invoke(pred, ranges::invoke(proj, *first))){
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *result = *first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++result;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return {first, result};
+ <wbr> }</p><p>Fourth version</p><p> <wbr> template &lt;InputRange R, WeaklyIncrementable O,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class Proj = ranges::identity,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R>, Proj>> Pred>
+ <wbr> <wbr> <wbr> requires IndirectlyCopyable&lt;ranges::iterator_t&lt;R>, O>()
+ <wbr> ranges::tagged_pair&lt;tag::in(ranges::safe_iterator_t&lt;R>), tag::out(O)>
+ <wbr> <wbr> <wbr> copy_if(R&& r, O result, Pred pred, Proj proj = Proj{})
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> return ranges::copy_if(ranges::begin(r), ranges::end(r), result, pred, proj);
+ <wbr> }</p><h2>Example</h2><p>The following code uses copy to both copy the contents of one vector to another and to display the resulting vector:
+// Run this code<pre><code>#include &lt;experimental/ranges/algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;experimental/ranges/iterator&gt;
+#include &lt;numeric&gt;
+int main()
+{
+// see <a href=http://en.cppreference.com/w/cpp/language/namespace_alias>http://en.cppreference.com/w/cpp/language/namespace_alias</a>
+namespace ranges = std::experimental::ranges;
+std::vector&lt;int&gt; from_vector(10);
+std::iota(from_vector.begin(), from_vector.end(), 0);
+std::vector&lt;int&gt; to_vector;
+ranges::copy_if(from_vector.begin(), from_vector.end(),
+ranges::back_inserter(to_vector),
+[](const auto i) {
+return i % 3;
+});
+// or, alternatively,
+//  std::vector&lt;int&gt; to_vector(from_vector.size());
+//  std::copy(from_vector, to_vector.begin());
+std::cout &lt;&lt; &quot;to_vector contains: &quot;;
+ranges::copy(to_vector, ranges::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> to_vector contains: 1 2 4 5 7 8</p><h2>See also</h2><p>copy
+copy_if copies a range of elements to a new location
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a range of elements in backwards order
+copy_backward <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> creates a copy of a range that is reversed
+reverse_copy <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a number of elements to a new location
+copy_n <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> assigns a range of elements a certain value
+fill <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a range of elements omitting those that satisfy specific criteria
+remove_copy <i>(function template)</i>
+remove_copy_if</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

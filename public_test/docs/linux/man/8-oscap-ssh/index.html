@@ -1,0 +1,35 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>oscap-ssh(8) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/8-oscap-ssh/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="oscap-ssh(8) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/8-oscap-ssh/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/8/>Section 8</a></p><article><header class=man-header><h1>oscap-ssh(8)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>oscap-ssh - Tool for running oscap over SSH and collecting results.</p><h2>Description</h2><p>oscap-ssh runs oscap tool on a remote system through SSH connection. The input files are transfered to the target system and after the scan finishes result files are transfered back. No temporary data remains on the remote machine. The tool requires bash, ssh, scp and mktemp to perform OVAL and XCCDF evaluation of remote machines. The remote machine also has to have oscap installed and in $PATH. This can be accomplished by installing openscap-scanner. Usage of the tool mimics usage and options of <a href=/docs/linux/man/8-oscap/>oscap</a>(8) tool.</p><h2>Usage</h2><h3>Evaluation of XCCDF content</h3><p>$ oscap-ssh user [at] host 22 xccdf eval [options] INPUT_CONTENT</p><p>Only source datastreams are supported as INPUT_CONTENT!</p><p>Supported options are:
+ <wbr> <wbr>&ndash;profile
+ <wbr> <wbr>&ndash;tailoring-file
+ <wbr> <wbr>&ndash;tailoring-id
+ <wbr> <wbr>&ndash;cpe
+ <wbr> <wbr>&ndash;results
+ <wbr> <wbr>&ndash;results-arf
+ <wbr> <wbr>&ndash;report
+ <wbr> <wbr>&ndash;skip-valid
+ <wbr> <wbr>&ndash;fetch-remote-resources
+ <wbr> <wbr>&ndash;progress
+ <wbr> <wbr>&ndash;datastream-id
+ <wbr> <wbr>&ndash;xccdf-id
+ <wbr> <wbr>&ndash;benchmark-id
+ <wbr> <wbr>&ndash;remediate</p><h3>Evaluation of OVAL content</h3><p>$ oscap-ssh user [at] host 22 oval eval [options] INPUT_CONTENT</p><p>Supported options are:
+ <wbr> <wbr>&ndash;id
+ <wbr> <wbr>&ndash;variables
+ <wbr> <wbr>&ndash;directives
+ <wbr> <wbr>&ndash;results
+ <wbr> <wbr>&ndash;report
+ <wbr> <wbr>&ndash;skip-valid
+ <wbr> <wbr>&ndash;datastream-id
+ <wbr> <wbr>&ndash;oval-id
+ <wbr> <wbr>&ndash;probe-root <wbr>(has to be remote path)</p><h3>Collection of OVAL System Characteristic</h3><p>$ oscap-ssh user [at] host 22 oval collect [options] INPUT_CONTENT</p><p>Supported options are:
+ <wbr> <wbr>&ndash;id
+ <wbr> <wbr>&ndash;syschar
+ <wbr> <wbr>&ndash;variables
+ <wbr> <wbr>&ndash;skip-valid</p><p>Specific option for oscap-ssh (must be first argument):
+ <wbr> <wbr>&ndash;sudo</p><h2>Exemplary Usage</h2><h3>Simple XCCDF evaluation</h3><p>The following command evaluates a remote Fedora machine as root. HTML report is written out as report.html on the local machine. Can be executed from any machine that has ssh, scp and bash. The local machine does not need to have openscap installed.</p><p>$ oscap-ssh root [at] 192.168.1.13 22 xccdf eval &ndash;profile xccdf_org.ssgproject.content_profile_common &ndash;report report.html /usr/share/xml/scap/ssg/content/ssg-fedora-ds.xml</p><h3>XCCDF Evaluation with tailoring file</h3><p>The following command uses a tailoring file and also copies back ARF and XCCDF results. The tailoring file is automatically copied from local machine to remote.</p><p>$ oscap-ssh &ndash;sudo oscap-user [at] 192.168.1.13 22 xccdf eval &ndash;profile xccdf_org.ssgproject.content_profile_common &ndash;report report.html &ndash;results results.xml &ndash;results-arf arf.xml &ndash;tailoring-file ssg-fedora-ds-tailoring.xml /usr/share/xml/scap/ssg/content/ssg-fedora-ds.xml</p><h3>Running remotely as root</h3><p>Note that the openscap scanner is best run by the &lsquo;root&rsquo; user as in the first example above. To do this, the "PermitRootLogin" directive must be enabled in /etc/ssh/sshd_config, which is itself a security violation. A safer approach is to enable a non-privileged user (&lsquo;oscap-user&rsquo; in the second example above) to run only the oscap binary as root (with the &lsquo;&ndash;sudo&rsquo; flag) by updating the remote machine&rsquo;s &lsquo;sudoers&rsquo; file or adding a file like /etc/sudoers.d/99-oscap-user:
+ <wbr> <wbr># <wbr>allow oscap-user to run openscap scanner
+ <wbr> <wbr>Defaults!/usr/bin/oscap <wbr>!requiretty
+ <wbr> <wbr>oscap-user ALL=(root) <wbr>NOPASSWD: <wbr>/usr/bin/oscap</p><h2>Reporting Bugs</h2><pre>Please report bugs using <a rel=nofollow href=https://github.com/OpenSCAP/openscap/issues>https://github.com/OpenSCAP/openscap/issues</a></pre><h2>Authors</h2><pre>Martin Preisler &lt;mpreisle [at] redhat.com&gt;
+Šimon Lukašík &lt;slukasik [at] redhat.com&gt;</pre><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

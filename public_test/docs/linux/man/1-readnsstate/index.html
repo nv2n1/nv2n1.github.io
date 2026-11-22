@@ -1,0 +1,23 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>readnsstate(1) · Linux Manual Pages</title><meta name=description content="readnsstate – interpret the contents of cn=replica’s nsState value readnsstate /etc/dirsrv/slapd-INSTANCE/dse.ldif"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-readnsstate/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="readnsstate(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-readnsstate/"><meta property="og:description" content="readnsstate – interpret the contents of cn=replica’s nsState value readnsstate /etc/dirsrv/slapd-INSTANCE/dse.ldif"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>readnsstate(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>readnsstate &#8211; interpret the contents of cn=replica&#8217;s nsState value <code>readnsstate</code> /etc/dirsrv/slapd-INSTANCE/dse.ldif</p><h2>DESCRIPTION</h2><p>Decode and display the content of the nsState attribute from a directory servers cn=replicate object.</p><h2>EXAMPLES</h2><pre>
+<dl><dt></dt><dd>sudo /usr/bin/readnsstate /etc/dirsrv/slapd-localhost/dse.ldif
+</dd></dl>
+</pre><pre>
+<dl><dt></dt><dd>For replica cn=replica,cn=dc3Dexample2Cdc3Dcom,cn=mapping tree,cn=config
+  fmtstr=[H6x3QH6x]
+  size=40
+  len of nsstate is 40
+  CSN generator state:
+    Replica ID    : 5
+    Sampled Time  : 1463100468
+    Gen as csn    : 57352434000000050000
+    Time as str   : Fri May 13 10:47:48 2016
+    Local Offset  : 0
+    Remote Offset : 276
+    Seq. num      : 0
+    System time   : Fri May 13 14:01:25 2016
+    Diff in sec.  : 11617
+    Day:sec diff  : 0:11617
+</dd></dl>
+</pre><h2>AUTHOR</h2><p>readnsstate was written by the 389 Project by richm.</p><h2>REPORTING BUGS</h2><p>Report bugs to <a rel=nofollow href=https://fedorahosted.org/389/newticket.>https://fedorahosted.org/389/newticket.</a></p><h2>COPYRIGHT</h2><p>Copyright &#169; 2016 Red Hat, Inc.<br>This manual page was written by William Brown &lt;wibrown [at] redhat.com>, for the 389 Directory Server Project.<br>This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

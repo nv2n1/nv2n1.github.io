@@ -1,0 +1,63 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>javap-java-1(1) · Linux Manual Pages</title><meta name=description content="javap – The Java Class File Disassembler"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-javap-java-1/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="javap-java-1(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-javap-java-1/"><meta property="og:description" content="javap – The Java Class File Disassembler"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>javap-java-1(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>javap &#8211; The Java Class File Disassembler</p><p>Disassembles class files.</p><h2>SYNOPSIS</h2><pre>
+<code>javap [ </code><code>options</code><code> ] classes</code>
+</pre><h2>DESCRIPTION</h2><p>The <code>javap</code> command disassembles one or more class files. Its output depends on the options used. If no options are used, <code>javap</code> prints out the package, protected, and public fields and methods of the classes passed to it. <code>javap</code> prints its output to stdout.</p><dl><dl><dt>options</dt><dd>Command-line options.</dd><dt>classes</dt><dd>List of one or more classes (separated by spaces) to be processed for annotations (such as <i>DocFooter.class</i>). You may specify a class that can be found in the class path, by its file name (for example, <i>/home/user/myproject/src/DocFooter.class</i>), or with a URL (for example, <i>file:///home/user/myproject/src/DocFooter.class</i>).</dd></dl></dl><p>For example, compile the following class declaration:</p><pre><code>
+import java.awt.*;
+import java.applet.*;
+public
+class DocFooter extends Applet
+{
+    String date;
+    String email;
+  public
+    void init()
+    {
+        resize(500, 100);
+        date = getParameter("LAST_UPDATED");
+        email = getParameter("EMAIL");
+    }
+  public
+    void paint(Graphics g)
+    {
+        g.drawString(date + " by ", 100, 15);
+        g.drawString(email, 290, 15);
+    }
+}
+</code></pre><p>The output from <code>javap DocFooter.class</code> yields:</p><p>Compiled from &#8220;DocFooter.java&#8221; public class DocFooter extends java.applet.Applet<br>{<br>java.lang.String date;<br>java.lang.String email;<br>public<br>DocFooter();<br>public<br>void init();<br>public<br>void paint(java.awt.Graphics);<br>}</p><p>The output from <code>javap -c DocFooter.class</code> yields:</p><pre><code>
+Compiled from "DocFooter.java" public class DocFooter extends java.applet.Applet
+{
+    java.lang.String date;
+    java.lang.String email;
+  public
+    DocFooter();
+Code:
+    0 : aload_0 1 : invokespecial #1 // Method java/applet/Applet."&lt;init&gt;":()V
+                    4 : return public void
+                        init();
+Code:
+    0 : aload_0 1 : sipush 500 4 : bipush 100 6 : invokevirtual #2                                                                             // Method resize:(II)V
+                                                  9 : aload_0 10 : aload_0 11 : ldc #3                                                         // String LAST_UPDATED
+                                                                                13 : invokevirtual #4                                          // Method getParameter:(Ljava/lang/String;)Ljava/lang/String;
+                                                                                     16 : putfield #5                                          // Field date:Ljava/lang/String;
+                                                                                          19 : aload_0 20 : aload_0 21 : ldc #6                // String EMAIL
+                                                                                                                         23 : invokevirtual #4 // Method getParameter:(Ljava/lang/String;)Ljava/lang/String;
+                                                                                                                              26 : putfield #7 // Field email:Ljava/lang/String;
+                                                                                                                                   29 : return public void paint(java.awt.Graphics);
+Code:
+    0 : aload_1 1 : new #8                                                                                                                                                                   // class java/lang/StringBuilder
+                    4 : dup 5 : invokespecial #9                                                                                                                                             // Method java/lang/StringBuilder."&lt;init&gt;":()V
+                                8 : aload_0 9 : getfield #5                                                                                                                                  // Field date:Ljava/lang/String;
+                                                12 : invokevirtual #10                                                                                                                       // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+                                                     15 : ldc #11                                                                                                                            // String  by
+                                                          17 : invokevirtual #10                                                                                                             // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+                                                               20 : invokevirtual #12                                                                                                        // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+                                                                    23 : bipush 100 25 : bipush 15 27 : invokevirtual #13                                                                    // Method java/awt/Graphics.drawString:(Ljava/lang/String;II)V
+                                                                                                        30 : aload_1 31 : aload_0 32 : getfield #7                                           // Field email:Ljava/lang/String;
+                                                                                                                                       35 : sipush 290 38 : bipush 15 40 : invokevirtual #13 // Method java/awt/Graphics.drawString:(Ljava/lang/String;II)V
+                                                                                                                                                                           43 : return
+}
+</code></pre><h2>OPTIONS</h2><dl><dl><dt>-help &#8211;help -?</dt><dd>Prints out help message for <code>javap</code>.</dd><dt>-version</dt><dd>Prints out version information.</dd><dt>-l</dt><dd>Prints out line and local variable tables.</dd><dt>-public</dt><dd>Shows only public classes and members.</dd><dt>-protected</dt><dd>Shows only protected and public classes and members.</dd><dt>-package</dt><dd>Shows only package, protected, and public classes and members. This is the default.</dd><dt>-private -p</dt><dd>Shows all classes and members.</dd><dt>-Jflag</dt><dd>Pass <i>flag</i> directly to the runtime system. Some examples:</dd><pre>
+<code>javap -J-version
+javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName</code>
+</pre><dt>-s</dt><dd>Prints internal type signatures.</dd><dt>-sysinfo</dt><dd>Shows system information (path, size, date, MD5 hash) of the class being processed.</dd><dt>-constants</dt><dd>Shows static final constants.</dd><dt>-c</dt><dd>Prints out disassembled code, i.e., the instructions that comprise the Java bytecodes, for each of the methods in the class. These are documented in the <i>Java Virtual Machine Specification</i> @ <a rel=nofollow href=http://java.sun.com/docs/books/vmspec/.>http://java.sun.com/docs/books/vmspec/.</a></dd><dt>-verbose</dt><dd>Prints stack size, number of <i>locals</i> and <i>args</i> for methods.</dd><dt>-classpath path</dt><dd>Specifies the path <code>javap</code> uses to look up classes. Overrides the default or the CLASSPATH environment variable if it is set.</dd><dt>-bootclasspath path</dt><dd>Specifies path from which to load bootstrap classes. By default, the bootstrap classes are the classes implementing the core Java platform located in <i>jre/lib/rt.jar</i> and several other jar files.</dd><dt>-extdirs dirs</dt><dd>Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dd></dl></dl><h2>SEE ALSO</h2><p><a href=/docs/linux/man/1-javac/>javac</a>(1), <a href=/docs/linux/man/1-java/>java</a>(1), <a href=/docs/linux/man/1-jdb/>jdb</a>(1), javah(1), <a href=/docs/linux/man/1-javadoc/>javadoc</a>(1)</p><p>&nbsp;<wbr></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

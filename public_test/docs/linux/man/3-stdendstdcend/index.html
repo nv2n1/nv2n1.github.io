@@ -1,0 +1,80 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdendstdcend(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdendstdcend/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdendstdcend(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdendstdcend/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdendstdcend(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::end,std::cend - std::end,std::cend</p><h2>Synopsis</h2><pre><code>Defined in header&lt;iterator&gt;
+    template &lt;class C&gt;
+    (since C++ 11)
+        auto end(C &amp;c) -&gt; decltype(c.end());
+(until C++ 17)
+    template &lt;class C&gt;
+    (since C++ 17)
+        constexpr auto end(C &amp;c) -&gt; decltype(c.end());
+template &lt;class C&gt;
+(since C++ 11)
+    auto end(const C &amp;c) -&gt; decltype(c.end());
+(until C++ 17)
+    template &lt;class C&gt;
+    (since C++ 17)
+        constexpr auto end(const C &amp;c) -&gt; decltype(c.end());
+(1)
+    template &lt;class T, std::size_t N&gt;
+    (since C++ 11)
+        T *end(T (&amp;array)[N]);
+(1)(until C++ 14)
+    template &lt;class T, std::size_t N&gt;
+    (since C++ 14)
+        constexpr T *end(T (&amp;array)[N]) noexcept;
+(2)
+    template &lt;class C&gt;
+    constexpr auto cend(const C &amp;c) noexcept(/* see below */)(3)(since C++ 14)
+        -&gt; decltype(std::end(c));</code></pre><p>Returns an iterator to the end (i.e. the element after the last element) of the given container c or array array. These templates rely on C::end() having a reasonable implementation.</p><ol><li>Returns exactly c.end(), which is typically an iterator one past the end of the sequence represented by c. If C is a standard Container, this returns a C::iterator when c is not const-qualified, and a C::const_iterator otherwise.</li><li>Returns a pointer to the end of the array array.</li><li>Returns exactly std::end(c), with c always treated as const-qualified. If C is a standard Container, this always returns a C::const_iterator.
+ range-begin-end.svg</li></ol><h2>Parameters</h2><p>c - a container with an end method
+array - an array of arbitrary type</p><h2>Return value</h2><p>An iterator to the end of c or array. Note that the end of a container or array is defined as the element following the last valid element.</p><h2>Exceptions</h2><ol start=3><li></li></ol><p>noexcept specification:
+noexcept(noexcept(std::end(c)))</p><h2>Notes</h2><p>In addition to being included in &lt;iterator>, std::end and std::cend are guaranteed to become available if any of the following headers are included: &lt;array>, &lt;deque>, &lt;forward_list>, &lt;list>, &lt;map>, &lt;regex>, &lt;set>
+, &lt;span>
+<i>(since C++20)</i>, &lt;string>
+, &lt;string_view>
+<i>(since C++17)</i>, &lt;unordered_map>, &lt;unordered_set>, and &lt;vector>.
+User-defined overloads
+Custom overloads of end may be provided for classes that do not expose a suitable end() member function, yet can be iterated. The following overloads are already provided by the standard library:
+std::end(std::initializer_list) specializes std::end
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+std::end(std::valarray) specializes std::end
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> range-based for loop support
+begin(std::filesystem::directory_iterator) <i>(function)</i>
+end(std::filesystem::directory_iterator)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> range-based for loop support
+begin(std::filesystem::recursive_directory_iterator) <i>(function)</i>
+end(std::filesystem::recursive_directory_iterator)
+Similar to the use of swap (described in Swappable), typical use of the end function in generic context is an equivalent of using std::end; end(arg);, which lets both the ADL-selected overloads for user-defined types and the standard library function templates to appear in the same overload set. template &lt;typename Container, typename Function></p><p>void for_each(Container &&amp;cont, Function f)
+{
+using std::begin;
+auto it = begin(cont);
+using std::end;
+auto end_it = end(cont);
+while (it != end_it) {
+f(*it);
+++it;
+}
+}</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+int main()
+{
+std::vector&lt;int&gt; v = {3, 1, 4};
+if (std::find(std::begin(v), std::end(v), 5) != std::end(v)) {
+std::cout &lt;&lt; &quot;found a 5 in vector v!\n&quot;;
+}
+int a[] = {5, 10, 15};
+if (std::find(std::begin(a), std::end(a), 5) != std::end(a)) {
+std::cout &lt;&lt; &quot;found a 5 in array a!\n&quot;;
+}
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> found a 5 in array a!</p><h2>See also</h2><p>begin
+cbegin returns an iterator to the beginning of a container or array
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+<i>(C++14)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

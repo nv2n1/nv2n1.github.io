@@ -1,0 +1,60 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>auparse_feed(3) · Linux Manual Pages</title><meta name=description content="auparse_feed – feed data into parser"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-auparse_feed/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="auparse_feed(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-auparse_feed/"><meta property="og:description" content="auparse_feed – feed data into parser"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>auparse_feed(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>auparse_feed &#8211; feed data into parser</p><h2>SYNOPSIS</h2><p><code>#include &lt;auparse.h></code></p><pre><code>
+int auparse_feed(auparse_state_t *au, const char *data, size_t data_len);
+</code></pre><dl><dt><i>au</i></dt><dd>The audit parse state</dd><dt><i>data</i></dt><dd>a buffer of data to feed into the parser, it is <i>data_len</i> bytes long. The data is copied in the parser, upon return the caller may free or reuse the data buffer.</dd><dt><i>data_len</i></dt><dd>number of bytes in <i>data</i></dd></dl><h2>DESCRIPTION</h2><p><i>auparse_feed</i> supplies new data for the parser to consume. <i>auparse_init()</i> must have been called with a source type of AUSOURCE_FEED and a NULL pointer.</p><p>The parser consumes as much data as it can invoking a user supplied callback specified with <i>auparse_add_callback</i> with a cb_event_type of <i>AUPARSE_CB_EVENT_READY</i> each time the parser recognizes a complete event in the data stream. Data not fully parsed will persist and be prepended to the next feed data. After all data has been feed to the parser <i>auparse_flush_feed</i> should be called to signal the end of input data and flush any pending parse data through the parsing system.</p><h2>EXAMPLE</h2><pre><code>
+void auparse_callback(auparse_state_t *au, auparse_cb_event_t cb_event_type,
+                      void *user_data)
+{
+    int *event_cnt = (int *)user_data;
+    if (cb_event_type == AUPARSE_CB_EVENT_READY) {
+        if (auparse_first_record(au) &lt;= 0)
+            return;
+        printf("event: %d
+", *event_cnt);
+        printf("records:%d
+", auparse_get_num_records(au));
+        do {
+            printf("fields:%d
+", auparse_get_num_fields(au));
+            printf("type=%d ", auparse_get_type(au));
+            const au_event_t *e = auparse_get_timestamp(au);
+            if (e == NULL)
+                return;
+            printf("event time: %u.%u:%lu
+",
+                   (unsigned)e-&gt;sec, e-&gt;milli, e-&gt;serial);
+            auparse_first_field(au);
+            do {
+                printf("%s=%s (%s)
+", auparse_get_field_name(au),
+                       auparse_get_field_str(au),
+                       auparse_interpret_field(au));
+            } while (auparse_next_field(au) &gt; 0);
+            printf("
+");
+        } while (auparse_next_record(au) &gt; 0);
+        (*event_cnt)++;
+    }
+}
+main(int argc, char **argv)
+{
+    char *filename = argv[1];
+    FILE *fp;
+    char buf[256];
+    size_t len;
+    int *event_cnt = malloc(sizeof(int));
+    au = auparse_init(AUSOURCE_FEED, 0);
+    *event_cnt = 1;
+    auparse_add_callback(au, auparse_callback, event_cnt, free);
+    if ((fp = fopen(filename, "r")) == NULL) {
+        fprintf(stderr, "could not open '%s', %s
+", filename, strerror(errno));
+        return 1;
+    }
+    while ((len = fread(buf, 1, sizeof(buf), fp))) {
+        auparse_feed(au, buf, len);
+    }
+    auparse_flush_feed(au);
+}
+</code></pre><h2>RETURN VALUE</h2><p>Returns -1 if an error occurs; otherwise, 0 for success.</p><h2>SEE ALSO</h2><p><code><a href=/docs/linux/man/3-auparse_add_callback/>auparse_add_callback</a></code>(3), <code><a href=/docs/linux/man/3-auparse_flush_feed/>auparse_flush_feed</a></code>(3), <code><a href=/docs/linux/man/3-auparse_feed_age_events/>auparse_feed_age_events</a></code>(3), <code><a href=/docs/linux/man/3-auparse_feed_has_data/>auparse_feed_has_data</a></code>(3)</p><h2>AUTHOR</h2><p>John Dennis</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

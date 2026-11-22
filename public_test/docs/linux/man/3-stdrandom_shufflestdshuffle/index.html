@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdrandom_shufflestdshuffle(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdrandom_shufflestdshuffle/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdrandom_shufflestdshuffle(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdrandom_shufflestdshuffle/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdrandom_shufflestdshuffle(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::random_shuffle,std::shuffle - std::random_shuffle,std::shuffle</p><h2>Synopsis</h2><pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class RandomIt&gt;
+    (1)(deprecated in C++ 14)
+        void random_shuffle(RandomIt first, RandomIt last);
+(removed in C++ 17)
+    template &lt;class RandomIt, class RandomFunc&gt;
+    (until C++ 11)
+        void random_shuffle(RandomIt first, RandomIt last, RandomFunc &amp;r);
+template &lt;class RandomIt, class RandomFunc&gt;
+(since C++ 11)
+    void random_shuffle(RandomIt first, RandomIt last, RandomFunc &amp;&amp;r);
+(2)(deprecated in C++ 14)(removed in C++ 17)
+    template &lt;class RandomIt, class URBG&gt;
+    (3)(since C++ 11)
+        void shuffle(RandomIt first, RandomIt last, URBG &amp;&amp;g);</code></pre><p>Reorders the elements in the given range [first, last) such that each possible permutation of those elements has equal probability of appearance.</p><ol><li>The random number generator is implementation-defined, but the function std::rand is often used.</li><li>The random number generator is the function object r.</li><li>The random number generator is the function object g.</li></ol><h2>Parameters</h2><p>first, last - the range of elements to shuffle randomly
+r - function object returning a randomly chosen value of type convertible to std::iterator_traits&lt;RandomIt>::difference_type in the interval [0,n) if invoked as r(n)
+g - a UniformRandomBitGenerator whose result type is convertible to std::iterator_traits&lt;RandomIt>::difference_type</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=randomit-must-meet-the-requirements-of-valueswappable-and-legacyrandomaccessiterator>RandomIt must meet the requirements of ValueSwappable and LegacyRandomAccessIterator.</h2><p>std::remove_reference_t&lt;URBG> must meet the requirements of UniformRandomBitGenerator.</p><h2>Return value</h2><p><i>(none)</i></p><h2>Complexity</h2><p>Linear in the distance between first and last</p><h2>Notes</h2><p>Note that the implementation is not dictated by the standard, so even if you use exactly the same RandomFunc or URBG you may get different results with different standard library implementations.</p><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt; class RandomIt >
+ <wbr> void random_shuffle( RandomIt first, RandomIt last )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typename std::iterator_traits&lt;RandomIt>::difference_type i, n;
+ <wbr> <wbr> <wbr> <wbr> <wbr> n = last - first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (i = n-1; i > 0; &ndash;i) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> using std::swap;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swap(first[i], first[std::rand() % (i+1)]);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> // rand() % (i+1) isn&rsquo;t actually correct, because the generated number
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> // is not uniformly distributed for most values of i. A correct implementation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> // will need to essentially reimplement C++11 std::uniform_int_distribution,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> // which is beyond the scope of this example.
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class RandomIt, class RandomFunc>
+ <wbr> void random_shuffle(RandomIt first, RandomIt last, RandomFunc&& r)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typename std::iterator_traits&lt;RandomIt>::difference_type i, n;
+ <wbr> <wbr> <wbr> <wbr> <wbr> n = last - first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (i = n-1; i > 0; &ndash;i) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> using std::swap;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swap(first[i], first[r(i+1)]);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> }</p><p>Third version</p><p> <wbr> template&lt;class RandomIt, class URBG>
+ <wbr> void shuffle(RandomIt first, RandomIt last, URBG&& g)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typedef typename std::iterator_traits&lt;RandomIt>::difference_type diff_t;
+ <wbr> <wbr> <wbr> <wbr> <wbr> typedef std::uniform_int_distribution&lt;diff_t> distr_t;
+ <wbr> <wbr> <wbr> <wbr> <wbr> typedef typename distr_t::param_type param_t;</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> distr_t D;
+ <wbr> <wbr> <wbr> <wbr> <wbr> diff_t n = last - first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (diff_t i = n-1; i > 0; &ndash;i) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> using std::swap;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swap(first[i], first[D(g, param_t(0, i))]);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> }</p><h2>Example</h2><p>The following code randomly shuffles the integers 1..10:
+// Run this code<pre><code>#include &lt;random&gt;
+#include &lt;algorithm&gt;
+#include &lt;iterator&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::vector&lt;int&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+std::random_device rd;
+std::mt19937 g(rd());
+std::shuffle(v.begin(), v.end(), g);
+std::copy(v.begin(), v.end(), std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
+std::cout &lt;&lt; &quot;\n&quot;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> 8 6 10 4 2 3 7 1 9 5</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> generates the next greater lexicographic permutation of a range of elements
+next_permutation <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> generates the next smaller lexicographic permutation of a range of elements
+prev_permutation <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,74 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ncl_gks(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-ncl_gks/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="ncl_gks(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-ncl_gks/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>ncl_gks(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>GKS - GKS (the Graphical Kernel System) is a set of low-level graphics functions that are standardized by the American National Standards Institute (ANSI) and the International Standards Institute (ISO). The collection of man pages in 3NCARG reflects those GKS functions documented in the NCAR UserDoc "User&rsquo;s Guide for NCAR GKS-0A Graphics". This collection does not contain all of the functions in GKS-0A, but merely the most frequently used ones. NCAR GKS-0A does contain all of the functions required to be implemented by the GKS Standard.</p><h2>Synopsis</h2><pre>GACTM - Accumulate transformation matrix.
+GACWK - Activate workstation.
+GCA - Cell array.
+GCLKS - Close GSK.
+GCLRWK - Clear workstation.
+GCLSG - Close segment.
+GCLWK - Close workstation.
+GCRSG - Create segment.
+GCSGWK - Copy segment to workstation.
+GDAWK - Deactivate workstation.
+GDSG - Delete segment.
+GESC - Escape.
+GEVTM - Evaluate transformation matrix.
+GFA - Fill area.
+GOPKS - Open GKS.
+GOPWK - Open workstation.
+GPL - Polyline.
+GPM - Polymarker.
+GQASF - Inquire aspect source flags.
+GQCHH - Inquire character height.
+GQCHSP - Inquire character spacing.
+GQCHUP - Inquire character up vector.
+GQCHXP - Inquire character expansion factor.
+GQCLIP - Inquire clipping indicator.
+GQCNTN - Inquire current normalization transformation number.
+GQCR - Inquire color representation.
+GQFACI - Inquire fill area color index.
+GQFAIS - Inquire fill area interior style.
+GQFASI - Inquire fill area style index.
+GQLN - Inquire line type.
+GQLWSC - Inquire linewidth scale factor.
+GQMK - Inquire marker type.
+GQMKSC - Inquire marker size scale factor.
+GQMNTN - Inquire maximum normalization transformation number.
+GQNT - Inquire normalization transformation.
+GQOPS - Inquire operating state value.
+GQOPSG - Inquire name of open segment.
+GQPLCI - Inquire polyline color index.
+GQPMCI - Inquire polymarker color index.
+GQSGUS - Inquire set of segment names in use.
+GQTXAL - Inquire text alignment.
+GQTXCI - Inquire text color index.
+GQTXFP - Inquire text font and precision.
+GQTXP - Inquire text path.
+GSASF - Set aspect source flags.
+GSCHH - Set character height.
+GSCHSP - Set character spacing.
+GSCHUP - Set character up vector.
+GSCHXP - Set character expansion factor.
+GSCLIP - Set clipping indicator.
+GSCR - Set color representation.
+GSELNT - Select normalization transformation.
+GSFACI - Set fill area color index.
+GSFAIS - Set fill area interior style.
+GSFASI - Set fill are style index.
+GSLN - Set line type.
+GSLWSC - Set linewidth scale factor.
+GSMK - Set marker type.
+GSMKSC - Set marker size scale factor.
+GSPLCI - Polyline color index.
+GSPMCI - (Set polymarker color index.
+GSSGT - Set segment transformation.
+GSTXAL - Set text alignment.
+GSTXCI - Set text color index.
+GSTXFP - Set text font and precision.
+GSTXP - Set text path.
+GSVP - Set viewport.
+GSWN - Set window.
+GTX - Text.
+GUWK - Update workstation.</pre><h2>Access</h2>To use any of the functions in NCAR GKS, load the NCAR GKS library ncarg_gks.<h2>Messages</h2>See the UserDoc "User's Guide for NCAR GKS-0A Graphics" for a complete list of error numbers and messages.<h2>See Also</h2>Online: gactm, gacwk, gca, gclks, gclrwk, gclsg, gclwk, gcrsg, gcsgwk, gdawk, gdsg, gesc, gevtm, gfa, gopks, gopwk, gpl, gpm, gqasf, gqchh, gqchsp, gqchup, gqchxp, gqclip, gqcntn, gqcr, gqfaci, gqfais, gqfasi, gqln, gqlwsc, gqmk, gqmksc, gqmntn, gqnt, gqops, gqopsg, gqplci, gqpmci, gqsgus, gqtxal, gqtxci, gqtxfp, gqtxp, gsasf, gschh, gschsp, gschup, gschxp, gsclip, gscr, gselnt, gsfaci, gsfais, gsfasi, gsln, gslwsc, gsmk, gsmksc, gsplci, gspmci, gssgt, gstxal, gstxci, gstxfp, gstxp, gsvp, gswn, gtx, guwk<p>Hardcopy: "User&rsquo;s Guide for NCAR GKS-0A Graphics"; "Computer Graphics&ndash;Graphical Kernel System (GKS) Functional Description, ANSI X3.124-1985"</p><h2>Copyright</h2>Copyright (C) 1987-2009
+University Corporation for Atmospheric Research
+The use of this Software is governed by a License Agreement.<div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

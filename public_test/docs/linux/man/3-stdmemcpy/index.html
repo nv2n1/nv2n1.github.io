@@ -1,0 +1,47 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdmemcpy(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdmemcpy/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdmemcpy(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdmemcpy/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdmemcpy(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::memcpy - std::memcpy</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cstring&gt;
+    void *memcpy(void *dest, const void *src, std::size_t count);</code></pre><p>Copies count bytes from the object pointed to by src to the object pointed to by dest. Both objects are reinterpreted as arrays of unsigned char.
+If the objects overlap, the behavior is undefined.
+If either dest or src is a null pointer, the behavior is undefined, even if count is zero.
+If the objects are potentially-overlapping or not TriviallyCopyable, the behavior of memcpy is not specified and may_be_undefined.</p><h2>Parameters</h2><p>dest - pointer to the memory location to copy to
+src - pointer to the memory location to copy from
+count - number of bytes to copy</p><h2>Return value</h2><p>dest</p><h2>Notes</h2><p>std::memcpy is meant to be the fastest library routine for memory-to-memory copy. It is usually more efficient than std::strcpy, which must scan the data it copies or std::memmove, which must take precautions to handle overlapping inputs.
+Several C++ compilers transform suitable memory-copying loops to std::memcpy calls.
+Where strict_aliasing prohibits examining the same memory as values of two different types, std::memcpy may be used to convert the values.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cstdint&gt;
+#include &lt;cstring&gt;
+int main()
+{
+// simple usage
+char source[] = &quot;once upon a midnight dreary&hellip;&quot;, dest[4];
+std::memcpy(dest, source, sizeof dest);
+for (char c : dest)
+std::cout &lt;&lt; c &lt;&lt; &lsquo;\n&rsquo;;
+// reinterpreting
+double d = 0.1;
+//  std::int64_t n = <em>reinterpret_cast&lt;std::int64_t</em>&gt;(&amp;d); // aliasing violation
+std::int64_t n;
+std::memcpy(&amp;n, &amp;d, sizeof d); // OK
+std::cout &lt;&lt; std::hexfloat &lt;&lt; d &lt;&lt; &quot; is &quot; &lt;&lt; std::hex &lt;&lt; n
+&lt;&lt; &quot; as an std::int64_t\n&quot;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> o
+ <wbr> n
+ <wbr> c
+ <wbr> e
+ <wbr> 0x1.999999999999ap-4 is 3fb999999999999a as an std::int64_t</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> moves one buffer to another
+memmove <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> fills a buffer with a character
+memset <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a certain amount of wide characters between two non-overlapping arrays
+wmemcpy <i>(function)</i>
+copy
+copy_if copies a range of elements to a new location
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a range of elements in backwards order
+copy_backward <i>(function template)</i>
+is_trivially_copyable checks if a type is trivially copyable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdtolower(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdtolower/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdtolower(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdtolower/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdtolower(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::tolower - std::tolower</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cctype&gt;
+    int tolower(int ch);</code></pre><p>Converts the given character to lowercase according to the character conversion rules defined by the currently installed C locale.
+In the default "C" locale, the following uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ are replaced with respective lowercase letters abcdefghijklmnopqrstuvwxyz.</p><h2>Parameters</h2><p>ch - character to be converted. If the value of ch is not representable as unsigned char and does not equal EOF, the behavior is undefined</p><h2>Return value</h2><p>Lowercase version of ch or unmodified ch if no lowercase version is listed in the current C locale.</p><h2>Notes</h2><p>Like all other functions from &lt;cctype>, the behavior of std::tolower is undefined if the argument&rsquo;s value is neither representable as unsigned char nor equal to EOF. To use these functions safely with plain chars (or signed chars), the argument should first be converted to unsigned char: char my_tolower(char ch)</p><p>{
+return static_cast&lt;char>(std::tolower(static_cast&lt;unsigned char>(ch)));
+}
+Similarly, they should not be directly used with standard algorithms when the iterator&rsquo;s value type is char or signed char. Instead, convert the value to unsigned char first: std::string str_tolower(std::string s)
+{
+std::transform(s.begin(), s.end(), s.begin(),
+// static_cast&lt;int(*)(int)>(std::tolower) // wrong
+// [](int c){ return std::tolower(c); } // wrong
+// [](char c){ return std::tolower(c); } // wrong
+[](unsigned char c) { return std::tolower(c); } // correct
+);
+return s;
+}</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cctype&gt;
+#include &lt;clocale&gt;
+int main()
+{
+unsigned char c = &lsquo;\xb4&rsquo;; // the character Ž in ISO-8859-15
+// but ´ (acute accent) in ISO-8859-1
+std::setlocale(LC_ALL, &quot;en_US.iso88591&quot;);
+std::cout &lt;&lt; std::hex &lt;&lt; std::showbase;
+std::cout &lt;&lt; &quot;in iso8859-1, tolower(&lsquo;0xb4&rsquo;) gives &quot;
+&lt;&lt; std::tolower(c) &lt;&lt; &lsquo;\n&rsquo;;
+std::setlocale(LC_ALL, &quot;en_US.iso885915&quot;);
+std::cout &lt;&lt; &quot;in iso8859-15, tolower(&lsquo;0xb4&rsquo;) gives &quot;
+&lt;&lt; std::tolower(c) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> in iso8859-1, tolower(&lsquo;0xb4&rsquo;) gives 0xb4
+ <wbr> in iso8859-15, tolower(&lsquo;0xb4&rsquo;) gives 0xb8</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a character to uppercase
+toupper <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a character to lowercase using the ctype facet of a locale
+tolower(std::locale) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a wide character to lowercase
+towlower <i>(function)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,45 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdowner_less(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdowner_less/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdowner_less(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdowner_less/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdowner_less(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::owner_less - std::owner_less</p><h2>Synopsis</h2><pre><code>Defined in header&lt;memory&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        struct owner_less; /* undefined */
+(until C++ 17)
+    template &lt;class T = void&gt;
+    (since C++ 17)
+        struct owner_less; /* undefined */
+template &lt;class T&gt;
+(1)(2)(since C++ 11)
+    struct owner_less&lt;std::shared_ptr&lt;T&gt;&gt;;
+template &lt;class T&gt;
+(3)(since C++ 11)
+    struct owner_less&lt;std::weak_ptr&lt;T&gt;&gt;;
+template &lt;&gt;
+(4)(since C++ 17)
+    struct owner_less&lt;void&gt;;</code></pre><p>This function object provides owner-based (as opposed to value-based) mixed-type ordering of both std::weak_ptr and std::shared_ptr. The order is such that two smart pointers compare equivalent only if they are both empty or if they share ownership, even if the values of the raw pointers obtained by get() are different (e.g. because they point at different subobjects within the same object)
+This class template is the preferred comparison predicate when building associative containers with std::shared_ptr or std::weak_ptr as keys, that is,
+std::map&lt;std::shared_ptr&lt;T>, U, std::owner_less&lt;std::shared_ptr&lt;T>>>
+or
+std::map&lt;std::weak_ptr&lt;T>, U, std::owner_less&lt;std::weak_ptr&lt;T>>>.
+The default operator&lt; is not defined for weak pointers, and may wrongly consider two shared pointers for the same object non-equivalent (see shared_ptr::owner_before)</p><h2>Specializations</h2><p>The standard library provides a specialization of std::owner_less when T is not specified. In this case, the parameter types are deduced from the arguments (each of which must still be either a std::shared_ptr or a std::weak_ptr).</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> function object providing mixed-type owner-based ordering of shared and weak pointers, regardless of the type of the pointee <i>(since C++17)</i>
+owner_less&lt;void> <i>(class template specialization)</i></p><h2>Member types</h2><p>Member type Definition
+result_type(deprecated in c++17) 2-3) bool <i>(until C++20)</i>
+first_argument_type(deprecated in c++17) 2) std::shared_ptr&lt;T>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> 3) std::weak_ptr&lt;T>
+second_argument_type(deprecated in c++17) 2) std::shared_ptr&lt;T>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> 3) std::weak_ptr&lt;T></p><h2>Member functions</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares its arguments using owner-based semantics
+operator() <i>(function)</i></p><p> std::owner_less::operator()</p><p>bool operator()( const std::shared_ptr&lt;T>& lhs, <i>(since C++11)</i>
+const std::shared_ptr&lt;T>& rhs ) const; (member only of owner_less&lt;shared_ptr&lt;T>> template specialization)
+bool operator()( const std::shared_ptr&lt;T>& lhs, <i>(since C++11)</i>
+const std::weak_ptr&lt;T>& rhs ) const;
+bool operator()( const std::weak_ptr&lt;T>& lhs, <i>(since C++11)</i>
+const std::shared_ptr&lt;T>& rhs ) const;
+bool operator()( const std::weak_ptr&lt;T>& lhs, <i>(since C++11)</i>
+const std::weak_ptr&lt;T>& rhs ) const; (member only of owner_less&lt;weak_ptr&lt;T>> template specialization)</p><p>Compares lhs and rhs using owner-based semantics. Effectively calls lhs.owner_before(rhs).
+The ordering is strict weak ordering relation.
+lhs and rhs are equivalent only if they are both empty or share ownership.</p><h2>Parameters</h2><p>lhs, rhs - shared-ownership pointers to compare</p><h2>Return value</h2><p>true if lhs is less than rhs as determined by the owner-based ordering.</p><h2>Exceptions</h2><p><i>(none)</i> <i>(until C++17)</i>
+noexcept specification: <i>(since C++17)</i>
+noexcept</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> provides owner-based ordering of shared pointers
+owner_before <i>(public member function of std::shared_ptr&lt;T>)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> provides owner-based ordering of weak pointers
+owner_before <i>(public member function of std::weak_ptr&lt;T>)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

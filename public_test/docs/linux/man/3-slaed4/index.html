@@ -1,0 +1,52 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>slaed4(3) · Linux Manual Pages</title><meta name=description content="slaed4.f –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-slaed4/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="slaed4(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-slaed4/"><meta property="og:description" content="slaed4.f –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>slaed4(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>slaed4.f &#8211;</p><h2>SYNOPSIS</h2><h3>Functions/Subroutines</h3><p>subroutine <code>slaed4</code> (N, I, D, Z, DELTA, RHO, DLAM, INFO)<br><i></i><code>SLAED4</code> used by sstedc. Finds a single root of the secular equation.</p><h2>Function/Subroutine Documentation</h2><h3>subroutine slaed4 (integerN, integerI, real, dimension( * )D, real, dimension( * )Z, real, dimension( * )DELTA, realRHO, realDLAM, integerINFO)</h3><p><code>SLAED4</code> used by sstedc. Finds a single root of the secular equation.</p><p><code>Purpose:</code></p><dl><dt></dt><dd><pre>
+ This subroutine computes the I-th updated eigenvalue of a symmetric
+ rank-one modification to a diagonal matrix whose elements are
+ given in the array d, and that
+            D(i) &lt; D(j)  for  i &lt; j
+ and that RHO &gt; 0.  This is arranged by the calling routine, and is
+ no loss in generality.  The rank-one modified system is thus
+            diag( D )  +  RHO * Z * Z_transpose.
+ where we assume the Euclidean norm of Z is 1.
+ The method consists of approximating the rational functions in the
+ secular equation by simpler interpolating rational functions.
+</pre><p>&nbsp;<wbr></dd></dl><p><code>Parameters:</code></p><dl><dt></dt><dd><i>N</i></dd><pre>
+          N is INTEGER
+         The length of all arrays.
+</pre><p><i>I</i></p><pre>
+          I is INTEGER
+         The index of the eigenvalue to be computed.  1 &lt;= I &lt;= N.
+</pre><p><i>D</i></p><pre>
+          D is REAL array, dimension (N)
+         The original eigenvalues.  It is assumed that they are in
+         order, D(I) &lt; D(J)  for I &lt; J.
+</pre><p><i>Z</i></p><pre>
+          Z is REAL array, dimension (N)
+         The components of the updating vector.
+</pre><p><i>DELTA</i></p><pre>
+          DELTA is REAL array, dimension (N)
+         If N .GT. 2, DELTA contains (D(j) - lambda_I) in its  j-th
+         component.  If N = 1, then DELTA(1) = 1. If N = 2, see SLAED5
+         for detail. The vector DELTA contains the information necessary
+         to construct the eigenvectors by SLAED3 and SLAED9.
+</pre><p><i>RHO</i></p><pre>
+          RHO is REAL
+         The scalar in the symmetric updating formula.
+</pre><p><i>DLAM</i></p><pre>
+          DLAM is REAL
+         The computed lambda_I, the I-th updated eigenvalue.
+</pre><p><i>INFO</i></p><pre>
+          INFO is INTEGER
+         = 0:  successful exit
+         &gt; 0:  if INFO = 1, the updating process failed.
+</pre><p>&nbsp;<wbr></dl><p><code>Internal Parameters:</code></p><dl><dt></dt><dd><pre><code>
+  Logical variable ORGATI (origin-at-i?) is used for distinguishing
+  whether D(i) or D(i+1) is treated as the origin.
+            ORGATI = .true.    origin at i
+            ORGATI = .false.   origin at i+1
+   Logical variable SWTCH3 (switch-for-3-poles?) is for noting
+   if we are working with THREE poles!
+   MAXIT is the maximum number of iterations allowed for each
+   eigenvalue.
+</code></pre><p>&nbsp;<wbr></dd></dl><p><code>Author:</code></p><dl><dt></dt><dd>Univ. of Tennessee</dd><p>Univ. of California Berkeley</p><p>Univ. of Colorado Denver</p><p>NAG Ltd.</dl><p><code>Date:</code></p><dl><dt></dt><dd>September 2012</dd></dl><p><code>Contributors:</code></p><dl><dt></dt><dd>Ren-Cang Li, Computer Science Division, University of California at Berkeley, USA</dd></dl><p>Definition at line 146 of file slaed4.f.</p><h2>Author</h2><p>Generated automatically by Doxygen for LAPACK from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

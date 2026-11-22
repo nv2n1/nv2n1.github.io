@@ -1,0 +1,95 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdnot2(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdnot2/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdnot2(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdnot2/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdnot2(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::not2 - std::not2</p><h2>Synopsis</h2><p>Defined in header &lt;functional>
+template&lt; class Predicate > <i>(until C++14)</i>
+std::binary_negate&lt;Predicate> not2(const Predicate& pred);
+template&lt; class Predicate > <i>(since C++14)</i>
+constexpr std::binary_negate&lt;Predicate> not2(const Predicate& pred); (deprecated in C++17)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> (removed in C++20)
+not2 is a helper function to create a function object that returns the complement of the binary predicate function passed. The function object created is of type std::binary_negate&lt;Predicate>.
+The binary predicate type must define two member types, first_argument_type and second_argument_type, that are convertible to the predicate&rsquo;s parameter types. The function objects obtained from std::owner_less, std::ref, std::cref, std::plus, std::minus, std::multiplies, std::divides, std::modulus, std::equal_to, std::not_equal_to, std::greater, std::less, std::greater_equal, std::less_equal, std::logical_not, std::logical_or, std::bit_and, std::bit_or, std::bit_xor, std::mem_fn, std::map::value_comp, std::multimap::value_comp, std::function, or from another call to std::not2 have these types defined, as are function objects derived from the deprecated std::binary_function.</p><h2>Parameters</h2><p>pred - binary predicate</p><h2>Return value</h2><p>std::not2 returns an object of type std::binary_negate&lt;Predicate>, constructed with pred.</p><h2>Exceptions</h2><p>None.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+struct old_same : std::binary_function&lt;int, int, bool&gt;
+{
+bool operator()(int a, int b) const
+{
+return a == b;
+}
+};
+struct new_same
+{
+bool operator()(int a, int b) const
+{
+return a == b;
+}
+};
+bool same_fn(int a, int b)
+{
+return a == b;
+}
+int main()
+{
+std::vector&lt;int&gt; v1{0, 1, 2};
+std::vector&lt;int&gt; v2{2, 1, 0};
+std::vector&lt;bool&gt; v3(v1.size());
+std::cout &lt;&lt; &quot;negating a binary_function:\n&quot;;
+std::transform(v1.begin(), v1.end(), v2.begin(), v3.begin(),
+std::not2(old_same()));
+std::cout &lt;&lt; std::boolalpha;
+for (std::size_t i = 0; i &lt; v1.size(); ++i)
+std::cout &lt;&lt; v1[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v2[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v3[i] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;negating a standard functor:\n&quot;;
+std::transform(v1.begin(), v1.end(), v2.begin(), v3.begin(),
+std::not2(std::equal_to&lt;int&gt;()));
+for (std::size_t i = 0; i &lt; v1.size(); ++i)
+std::cout &lt;&lt; v1[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v2[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v3[i] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;negating a std::function:\n&quot;;
+std::transform(v1.begin(), v1.end(), v2.begin(), v3.begin(),
+std::not2(std::function&lt;bool(int, int)&gt;(new_same())));
+for (std::size_t i = 0; i &lt; v1.size(); ++i)
+std::cout &lt;&lt; v1[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v2[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v3[i] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;negating a std::reference_wrapper:\n&quot;;
+std::transform(v1.begin(), v1.end(), v2.begin(), v3.begin(),
+std::not2(std::ref(same_fn)));
+for (std::size_t i = 0; i &lt; v1.size(); ++i)
+std::cout &lt;&lt; v1[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v2[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v3[i] &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> negating a binary_function:
+ <wbr> 0 2 true
+ <wbr> 1 1 false
+ <wbr> 2 0 true
+ <wbr> negating a standard functor:
+ <wbr> 0 2 true
+ <wbr> 1 1 false
+ <wbr> 2 0 true
+ <wbr> negating a std::function:
+ <wbr> 0 2 true
+ <wbr> 1 1 false
+ <wbr> 2 0 true
+ <wbr> negating a std::reference_wrapper:
+ <wbr> 0 2 true
+ <wbr> 1 1 false
+ <wbr> 2 0 true</p><h2>See also</h2><p>not_fn Creates a function object that returns the complement of the result of the function object it holds
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i>
+binary_negate wrapper function object returning the complement of the binary predicate it holds
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++17)
+(removed in C++20)
+function wraps callable object of any type with specified function call signature
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+not1 constructs custom std::unary_negate object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++17)
+(removed in C++20)
+ptr_fun creates an adaptor-compatible function object wrapper from a pointer to function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++11)
+(removed in C++17)
+binary_function adaptor-compatible binary function base class
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

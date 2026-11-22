@@ -1,0 +1,60 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdtransform_reduce(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdtransform_reduce/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdtransform_reduce(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdtransform_reduce/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdtransform_reduce(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::transform_reduce - std::transform_reduce</p><h2>Synopsis</h2><pre><code>Defined in header &lt;numeric&gt;
+template&lt;class InputIt1, class InputIt2, class T&gt;                                    (1) (since C++17)
+T transform_reduce(InputIt1 first1, InputIt1 last1, InputIt2 first2, T init);
+template &lt;class InputIt1, class InputIt2, class T, class BinaryOp1, class BinaryOp2&gt;
+T transform_reduce(InputIt1 first1, InputIt1 last1, InputIt2 first2,                 (2) (since C++17)
+T init, BinaryOp1 binary_op1, BinaryOp2 binary_op2);
+template&lt;class InputIt, class T, class BinaryOp, class UnaryOp&gt;
+T transform_reduce(InputIt first, InputIt last,                                      (3) (since C++17)
+T init, BinaryOp binop, UnaryOp unary_op);
+template&lt;class ExecutionPolicy,
+class ForwardIt1, class ForwardIt2, class T&gt;                                         (4) (since C++17)
+T transform_reduce(ExecutionPolicy&amp;&amp; policy,
+ForwardIt1 first1, ForwardIt1 last1, ForwardIt2 first2, T init);
+template&lt;class ExecutionPolicy,
+class ForwardIt1, class ForwardIt2, class T, class BinaryOp1, class BinaryOp2&gt;
+T transform_reduce(ExecutionPolicy&amp;&amp; policy,                                         (5) (since C++17)
+ForwardIt1 first1, ForwardIt1 last1, ForwardIt2 first2,
+T init, BinaryOp1 binary_op1, BinaryOp2 binary_op2);
+template&lt;class ExecutionPolicy,
+class ForwardIt, class T, class BinaryOp, class UnaryOp&gt;
+T transform_reduce(ExecutionPolicy&amp;&amp; policy,                                         (6) (since C++17)
+ForwardIt first, ForwardIt last,
+T init, BinaryOp binary_op, UnaryOp unary_op);</code></pre><ol><li>Equivalent to transform_reduce(first1, last1, first2, init, std::plus&lt;>(), std::multiplies&lt;>());, effectively parallelized version of the default std::inner_product</li><li>Applies binary_op2 to each pair of elements from the ranges [first; last) and the range starting at first2 and reduces the results (possibly permuted and aggregated in unspecified manner) along with the initial value init over binary_op1</li><li>Applies unary_op to each element in the range [first; last) and reduces the results (possibly permuted and aggregated in unspecified manner) along with the initial value init over binary_op.
+4-6) Same as (1-3), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy>> is true
+The behavior is non-deterministic if binary_op/binary_op2 is not associative or not commutative.
+The behavior is undefined if unary_op, binary_op, binary_op1, or binary_op2 modifies any element or invalidates any iterator in the input ranges, including their end iterators.</li></ol><h2>Parameters</h2><p>first, last - the range of elements to apply the algorithm to
+init - the initial value of the generalized sum
+policy - the execution policy to use. See execution_policy for details.
+unary_op - unary FunctionObject that will be applied to each element of the input range. The return type must be acceptable as input to binary_op
+binary_op - binary FunctionObject that will be applied in unspecified order to the results of unary_op, the results of other binary_op and init.</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=t-must-meet-the-requirements-of-moveconstructible-in-order-to-use-overloads-36-and-the-result-of-the-expressions-binary_opinit-unary_opfirst-binary_opunary_opfirst-init-binary_opinit-init-and-binary_opunary_opfirst-unary_opfirst-must-be-convertible-to-t>T must meet the requirements of MoveConstructible in order to use overloads (3,6). and the result of the expressions binary_op(init, unary_op(*first)), binary_op(unary_op(*first), init), binary_op(init, init), and binary_op(unary_op(*first), unary_op(*first)) must be convertible to T</h2><h2 id=t-must-meet-the-requirements-of-moveconstructible-in-order-to-use-overloads-25-and-the-result-of-the-expressions-binary_op1init-binary_op2first1-first2-binary_op1binary_op2first1-first2-init-binary_op1init-init-and-binary_op1binary_op2first1-first2-binary_op2first1-first2-must-be-convertible-to-t>T must meet the requirements of MoveConstructible in order to use overloads (2,5). and the result of the expressions binary_op1(init, binary_op2(*first1, *first2)), binary_op1(binary_op2(*first1, *first2), init), binary_op1(init, init), and binary_op1(binary_op2(*first1, *first2), binary_op2(*first1, *first2)) must be convertible to T</h2><h2 id=inputit-must-meet-the-requirements-of-legacyinputiterator>InputIt must meet the requirements of LegacyInputIterator.</h2><p>ForwardIt must meet the requirements of LegacyForwardIterator.</p><h2>Return value</h2><ol start=2><li>Generalized sum of init and binary_op2(<em>first,<em>first2), binary_op2(</em>(first+1),</em>(first2+1)), &mldr;, over binary_op1</li><li>Generalized sum of init and unary_op(<em>first), unary_op(</em>(first+1)), &mldr; unary_op(*(last-1)) over binary_op,
+where generalized sum GSUM(op, a
+1, &mldr;, a
+N) is defined as follows: * if N=1, a</li></ol><p>1</p><ul><li>if N > 1, op(GSUM(op, b</li></ul><p>1, &mldr;, b</p><p>K), GSUM(op, b</p><p>M, &mldr;, b</p><p>N)) where</p><ul><li>b
+1, &mldr;, b
+N may be any permutation of a1, &mldr;, aN and</li><li>1 &lt; K+1 = M ≤ N</li></ul><p>in other words, the results of unary_op or of binary_op1 may be grouped and arranged in arbitrary order.</p><h2>Complexity</h2><p>1,2,4,5) O(last1 - first1) applications each of binary_op1 and binary_op2.
+3,6) O(last - first) applications each of unary_op and binary_op.</p><h2>Exceptions</h2><p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p><ul><li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li><li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li></ul><h2>Notes</h2><p>In the unary-binary overload (3,6), unary_op is not applied to init
+If first == last or first1 == last1, init is returned, unmodified</p><h2>Example</h2><p>transform_reduce can be used to parallelize std::inner_product:
+// Run this code<pre><code>#include &lt;vector&gt;
+#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;numeric&gt;
+#include &lt;execution&gt;
+int main()
+{
+std::vector&lt;double&gt; xvalues(10007, 1.0), yvalues(10007, 1.0);
+double result = std::transform_reduce(
+std::execution::par,
+xvalues.begin(), xvalues.end(),
+yvalues.begin(), 0.0);
+std::cout &lt;&lt; result &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> 10007</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sums up a range of elements
+accumulate <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies a function to a range of elements
+transform <i>(function template)</i>
+reduce similar to std::accumulate, except out of order
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

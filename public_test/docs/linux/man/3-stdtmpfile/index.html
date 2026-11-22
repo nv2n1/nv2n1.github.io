@@ -1,0 +1,32 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdtmpfile(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdtmpfile/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdtmpfile(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdtmpfile/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdtmpfile(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::tmpfile - std::tmpfile</p><h2>Synopsis</h2><pre><code>Defined in header &lt;cstdio&gt;
+std::FILE* tmpfile();</code></pre><p>Creates and opens a temporary file with a unique auto-generated filename.
+The file is opened as a binary file for update (as by std::fopen with access mode "wb+"). At least TMP_MAX files may be opened during the lifetime of a program (this limit may be shared with std::tmpnam and may be further limited by FOPEN_MAX).
+If the program closes the file, e.g. by executing std::fclose, the file is automatically deleted.
+If the program terminates normally (by calling std::exit, returning from main, etc), all files that were opened by calling std::tmpfile are also automatically deleted.
+If the program terminates abnormally, it is implementation-defined if these temporary files are deleted.</p><h2>Parameters</h2><p><i>(none)</i></p><h2>Return value</h2><p>The associated file stream or NULL if an error has occurred</p><h2>Notes</h2><p>On some implementations (e.g. Linux), this function actually creates, opens, and immediately deletes the file from the file system: as long as an open file descriptor to a deleted file is held by a program, the file exists, but since it was deleted, its name does not appear in any directory, so that no other process can open it. Once the file descriptor is closed, the space occupied by the file is reclaimed by the filesystem.
+On some implementations (e.g. Windows), elevated privileges are required as the function may create the temporary file in a system directory.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;filesystem&gt;
+namespace fs = std::filesystem;
+int main()
+{
+std::FILE *tmpf = std::tmpfile();
+std::fputs(&quot;Hello, world&quot;, tmpf);
+std::rewind(tmpf);
+char buf[6];
+std::fgets(buf, sizeof buf, tmpf);
+std::cout &lt;&lt; buf &lt;&lt; &lsquo;\n&rsquo;;
+// Linux-specific method to display the tmpfile name
+std::cout &lt;&lt; fs::read_symlink(
+fs::path(&quot;/proc/self/fd&quot;) / std::to_string(fileno(tmpf)))
+&lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> Hello
+ <wbr> "/tmp/tmpfBlY1lI (deleted)"</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns a unique filename
+tmpnam <i>(function)</i>
+temp_directory_path returns a directory suitable for temporary files
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

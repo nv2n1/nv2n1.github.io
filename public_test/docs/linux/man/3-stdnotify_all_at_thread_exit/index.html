@@ -1,0 +1,50 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdnotify_all_at_thread_exit(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdnotify_all_at_thread_exit/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdnotify_all_at_thread_exit(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdnotify_all_at_thread_exit/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdnotify_all_at_thread_exit(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::notify_all_at_thread_exit - std::notify_all_at_thread_exit</p><h2>Synopsis</h2><pre><code>Defined in header&lt;condition_variable&gt;
+    void notify_all_at_thread_exit(std::condition_variable &amp;cond, (since C++ 11)
+                                                                      std::unique_lock&lt;std::mutex&gt;
+                                                                          lk);</code></pre><p>notify_all_at_thread_exit provides a mechanism to notify other threads that a given thread has completely finished, including destroying all thread_local objects. It operates as follows:</p><ul><li>Ownership of the previously acquired lock lk is transferred to internal storage.</li><li>The execution environment is modified such that when the current thread exits, the condition variable cond is notified as if by:
+lk.unlock();
+cond.notify_all();
+The implied lk.unlock is sequenced after (as defined in std::memory_order) the destruction of all objects with thread_local_storage_duration associated with the current thread.
+An equivalent effect may be achieved with the facilities provided by std::promise or std::packaged_task.</li></ul><h2>Notes</h2><p>Calling this function if lock.mutex() is not locked by the current thread is undefined behavior.
+Calling this function if lock.mutex() is not the same mutex as the one used by all other threads that are currently waiting on the same condition variable is undefined behavior.
+The supplied lock lk is held until the thread exits. Once this function has been called, no more threads may acquire the same lock in order to wait on cond. If some thread is waiting on this condition variable, it should not attempt to release and reacquire the lock when it wakes up spuriously.
+In typical use cases, this function is the last thing called by a detached thread.</p><h2>Parameters</h2><p>cond - the condition variable to notify at thread exit
+lk - the lock associated with the condition variable cond</p><h2>Return value</h2><p><i>(none)</i></p><h2>Example</h2><p>This partial code fragment illustrates how notify_all_at_thread_exit can be used to avoid accessing data that depends on thread locals while those thread locals are in the process of being destructed:
+// Run this code<pre><code>#include &lt;mutex&gt;
+#include &lt;thread&gt;
+#include &lt;cassert&gt;
+#include &lt;condition_variable&gt;
+#include &lt;string&gt;
+std::mutex m;
+std::condition_variable cv;
+bool ready = false;
+std::string result; // some arbitrary type
+void thread_func()
+{
+thread_local std::string thread_local_data = &quot;42&quot;;
+std::unique_lock&lt;std::mutex&gt; lk(m);
+// assign a value to result using thread_local data
+result = thread_local_data;
+ready = true;
+std::notify_all_at_thread_exit(cv, std::move(lk));
+} // 1. destroy thread_locals;
+// 2. unlock mutex;
+// 3. notify cv.
+int main()
+{
+std::thread t(thread_func);
+t.detach();
+// do other work
+// &hellip;
+// wait for the detached thread
+std::unique_lock&lt;std::mutex&gt; lk(m);
+cv.wait(lk, [] { return ready; });
+// result is ready and thread_local destructors have finished, no UB
+assert(result == &quot;42&quot;);
+}
+</code></pre></p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the result to specific value while delivering the notification only at thread exit
+set_value_at_thread_exit <i>(public member function of std::promise&lt;R>)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> executes the function ensuring that the result is ready only once the current thread exits
+make_ready_at_thread_exit <i>(public member function of std::packaged_task&lt;R(Args&mldr;)>)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

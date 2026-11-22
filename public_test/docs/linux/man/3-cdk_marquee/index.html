@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>cdk_marquee(3) · Linux Manual Pages</title><meta name=description content="cdk_marquee – curses marquee widget"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-cdk_marquee/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="cdk_marquee(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-cdk_marquee/"><meta property="og:description" content="cdk_marquee – curses marquee widget"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>cdk_marquee(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>cdk_marquee &#8211; curses marquee widget</p><h2>SYNOPSIS</h2><p><code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ]</p><p>#include &lt;cdk.h></p><pre><code>
+int activateCDKMarquee(
+    CDKMARQUEE *marquee,
+    const char *message,
+    int delay,
+    int repeat,
+    boolean box);
+void deactivateCDKMarquee(
+    CDKMARQUEE *marquee);
+void destroyCDKMarquee(
+    CDKMARQUEE *marquee);
+void drawCDKMarquee(
+    CDKMARQUEE *marquee,
+    boolean box);
+void eraseCDKMarquee(
+    CDKMARQUEE *marquee);
+boolean getCDKMarqueeBox(
+    CDKMENTRY *mentry);
+void moveCDKMarquee(
+    CDKMARQUEE *marquee,
+    int xpos,
+    int ypos,
+    boolean relative,
+    boolean refresh);
+CDKMARQUEE *newCDKMarquee(
+    CDKSCREEN *cdkscreen,
+    int xpos,
+    int ypos,
+    int fieldWidth,
+    boolean box,
+    boolean shadow);
+void positionCDKMarquee(
+    CDKMARQUEE *marquee);
+void setCDKMarqueeBackgroundAttrib(
+    CDKMARQUEE *marquee,
+    chtype attribute);
+void setCDKMarqueeBackgroundColor(
+    CDKMARQUEE *marquee,
+    const char *color);
+void setCDKMarqueeBox(
+    CDKMENTRY *mentry,
+    boolean boxWidget);
+void setCDKMarqueeBoxAttribute(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeHorizontalChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeLLChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeLRChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeULChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeURChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+void setCDKMarqueeVerticalChar(
+    CDKMARQUEE *marquee,
+    chtype character);
+</code></pre></dl><h2>DESCRIPTION</h2><p>The Cdk marquee widget creates a pop-up marquee window. The following functions create or manipulate the Cdk marquee widget.</p><h2>AVAILABLE FUNCTIONS</h2><dl><dt><code>activateCDKMarquee</code></dt><dd>activates the marquee widget. The <code>marquee</code> parameter is a pointer to a defined marquee widget. The <code>delay</code> parameter states how long to wait between movements. This value is highly dependent on each machine the program runs on. The <code>repeat</code> value tells the marquee widget how many times to display the given message. The <code>box</code> option draws the widget with or without a box. This function returns -1 if the message passed is <i>NULL</i>, 0 otherwise.</dd><dt><code>deactivateCDKMarquee</code></dt><dd>deactivates the marquee widget.</dd><dt><code>destroyCDKMarquee</code></dt><dd>removes the widget from the screen and frees memory the object used.</dd><dt><code>drawCDKMarquee</code></dt><dd>draws the marquee widget on the screen. If the <code>box</code> parameter is true, the widget is drawn with a box.</dd><dt><code>eraseCDKMarquee</code></dt><dd>removes the widget from the screen. This does <i>NOT</i> destroy the widget.</dd><dt><code>getCDKMarqueeBox</code></dt><dd>returns true if the widget will be drawn with a box around it.</dd><dt><code>moveCDKMarquee</code></dt><dd>moves the given widget to the given position. The parameters <code>xpos</code> and <code>ypos</code> are the new position of the widget. The parameter <code>xpos</code> may be an integer or one of the pre-defined values <i>TOP</i>, <i>BOTTOM</i>, and <i>CENTER</i>. The parameter <code>ypos</code> may be an integer or one of the pre-defined values <i>LEFT</i>, <i>RIGHT</i>, and <i>CENTER</i>. The parameter <code>relative</code> states whether the <code>xpos</code>/<code>ypos</code> pair is a relative move or an absolute move. For example, if <code>xpos</code> = 1 and <code>ypos</code> = 2 and <code>relative</code> = <code>TRUE</code>, then the widget would move one row down and two columns right. If the value of <code>relative</code> was <code>FALSE</code> then the widget would move to the position (1,2). Do not use the values <i>TOP</i>, <i>BOTTOM</i>, <i>LEFT</i>, <i>RIGHT</i>, or <i>CENTER</i> when <code>relative</code> = <i>TRUE</i>. (weird things may happen). The final parameter <code>refresh</code> is a boolean value which states whether the widget will get refreshed after the move.</dd><dt><code>newCDKMarquee</code></dt><dd>creates a marquee widget and returns a pointer to it. Parameters:</dd><dl><dl><dt><code>screen</code></dt><dd>is the screen you wish this widget to be placed in.</dd><dt><code>xpos</code></dt><dd>controls the placement of the object along the horizontal axis. It may be an integer or one of the pre-defined values <i>LEFT</i>, <i>RIGHT</i>, and <i>CENTER</i>.</dd><dt><code>ypos</code></dt><dd>controls the placement of the object along the vertical axis. It may be an integer or one of the pre-defined values <i>TOP</i>, <i>BOTTOM</i>, and <i>CENTER</i>.</dd><dt><code>width</code></dt><dd>controls the width of the field. If you provide a value of zero for the width, the widget uses the width of the screen. If a negative value is provided, then the widget uses the width of the screen less the value provided.</dd><dt><code>shadow</code></dt><dd>turns the shadow on or off around this widget.</dd></dl></dl><dt></dt><dd>If the widget could not be created then a <i>NULL</i> pointer is returned.</dd><dt><code>positionCDKMarquee</code></dt><dd>allows the user to move the widget around the screen via the cursor/keypad keys. See <code>cdk_position (3)</code> for key bindings.</dd><dt><code>setCDKMarqueeBackgroundAttrib</code></dt><dd>sets the background attribute of the widget. The parameter <code>attribute</code> is a curses attribute, e.g., A_BOLD.</dd><dt><code>setCDKMarqueeBackgroundColor</code></dt><dd>sets the background color of the widget. The parameter <code>color</code> is in the format of the Cdk format strings. For more information see <i>cdk_display (3)</i>.</dd><dt><code>setCDKMarqueeBox</code></dt><dd>sets whether the widget will be drawn with a box around it.</dd><dt><code>setCDKMarqueeBoxAttribute</code></dt><dd>sets the attribute of the box.</dd><dt><code>setCDKMarqueeHorizontalChar</code></dt><dd>sets the horizontal drawing character for the box to the given character.</dd><dt><code>setCDKMarqueeLLChar</code></dt><dd>sets the lower left hand corner of the widget&#8217;s box to the given character.</dd><dt><code>setCDKMarqueeLRChar</code></dt><dd>sets the lower right hand corner of the widget&#8217;s box to the given character.</dd><dt><code>setCDKMarqueeULChar</code></dt><dd>sets the upper left hand corner of the widget&#8217;s box to the given character.</dd><dt><code>setCDKMarqueeURChar</code></dt><dd>sets the upper right hand corner of the widget&#8217;s box to the given character.</dd><dt><code>setCDKMarqueeVerticalChar</code></dt><dd>sets the vertical drawing character for the box to the given character.</dd></dl><h2>SEE ALSO</h2><p><code><a href=/docs/linux/man/3-cdk/>cdk</a></code>(3), <code><a href=/docs/linux/man/3-cdk_binding/>cdk_binding</a></code>(3), <code><a href=/docs/linux/man/3-cdk_display/>cdk_display</a></code>(3), <code><a href=/docs/linux/man/3-cdk_position/>cdk_position</a></code>(3), <code><a href=/docs/linux/man/3-cdk_screen/>cdk_screen</a></code>(3)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

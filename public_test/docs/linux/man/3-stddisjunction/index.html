@@ -1,0 +1,55 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stddisjunction(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stddisjunction/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stddisjunction(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stddisjunction/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stddisjunction(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::disjunction - std::disjunction</p><h2>Synopsis</h2><pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class... B&gt;
+    (1)(since C++ 17)
+        struct disjunction;</code></pre><p>Forms the logical_disjunction of the type traits B&mldr;, effectively performing a logical OR on the sequence of traits.
+The specialization std::disjunction&lt;B1, &mldr;, BN> has a public and unambiguous base that is</p><ul><li>if sizeof&mldr;(B) == 0, std::false_type; otherwise</li><li>the first type Bi in B1, &mldr;, BN for which bool(Bi::value) == true, or BN if there is no such type.
+The member names of the base class, other than disjunction and operator=, are not hidden and are unambiguously available in disjunction.
+Disjunction is short-circuiting: if there is a template type argument Bi with bool(Bi::value) != false, then instantiating disjunction&lt;B1, &mldr;, BN>::value does not require the instantiation of Bj::value for j > i</li></ul><h2>Template parameters</h2><p>B&mldr; - every template argument Bi for which Bi::value is instantiated must be usable as a base class and define member value that is convertible to bool</p><p>Helper variable template</p><p>template&lt;class&mldr; B> <i>(since C++17)</i>
+inline constexpr bool disjunction_v = disjunction&lt;B&mldr;>::value;</p><h2>Possible implementation</h2><p> <wbr> template&lt;class&mldr;> struct disjunction : std::false_type { };
+ <wbr> template&lt;class B1> struct disjunction&lt;B1> : B1 { };
+ <wbr> template&lt;class B1, class&mldr; Bn>
+ <wbr> struct disjunction&lt;B1, Bn&mldr;>
+ <wbr> <wbr> <wbr> <wbr> <wbr> : std::conditional_t&lt;bool(B1::value), B1, disjunction&lt;Bn&mldr;>> { };</p><h2>Notes</h2><p>A specialization of disjunction does not necessarily inherit from of either std::true_type or std::false_type: it simply inherits from the first B whose ::value, explicitly converted to bool, is true, or from the very last B when all of them convert to false. For example, std::disjunction&lt;std::integral_constant&lt;int, 2>, std::integral_constant&lt;int, 4>>::value is 2.
+The short-circuit instantiation differentiates disjunction from fold expressions: a fold expression like (&mldr; || Bs::value) instantiates every B in Bs, while std::disjunction_v&lt;Bs&mldr;> stops instantiation once the value can be determined. This is particularly useful if the later type is expensive to instantiate or can cause a hard error when instantiated with the wrong type.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;type_traits&gt;
+#include &lt;string&gt;
+// checking if Foo is constructible from double will cause a hard error
+struct Foo {
+template &lt;class T&gt;
+struct sfinae_unfriendly_check {
+static_assert(!std::is_same_v&lt;T, double&gt;);
+};
+template &lt;class T&gt;
+Foo(T, sfinae_unfriendly_check&lt;T&gt; = {});
+};
+template &lt;class&hellip; Ts&gt;
+struct first_constructible {
+template &lt;class T, class&hellip; Args&gt;
+struct is_constructible_x : std::is_constructible&lt;T, Args&hellip;&gt; {
+using type = T;
+};
+struct fallback {
+static constexpr bool value = true;
+using type = void; // type to return if nothing is found
+};
+template &lt;class&hellip; Args&gt;
+using with = typename std::disjunction&lt;is_constructible_x&lt;Ts, Args&hellip;&gt;&hellip;,
+fallback&gt;::type;
+};
+// OK, is_constructible&lt;Foo, double&gt; not instantiated
+static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int, Foo&gt;::with&lt;double&gt;,
+int&gt;);
+static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;&gt;, std::string&gt;);
+static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;const char *&gt;,
+std::string&gt;);
+static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;void *&gt;, void&gt;);
+int main()
+{
+}
+</code></pre></p><h2>See also</h2><p>negation logical NOT metafunction
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i>
+conjunction variadic logical AND metafunction
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

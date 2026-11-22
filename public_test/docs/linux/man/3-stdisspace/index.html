@@ -1,0 +1,39 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdisspace(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdisspace/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdisspace(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdisspace/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdisspace(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::isspace - std::isspace</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cctype&gt;
+    int isspace(int ch);</code></pre><p>Checks if the given character is whitespace character as classified by the currently installed C locale. In the default locale, the whitespace characters are the following: * space (0x20, &rsquo; &lsquo;)</p><ul><li><p>form feed (0x0c, &lsquo;\f&rsquo;)</p></li><li><p>line feed (0x0a, &lsquo;\n&rsquo;)</p></li><li><p>carriage return (0x0d, &lsquo;\r&rsquo;)</p></li><li><p>horizontal tab (0x09, &lsquo;\t&rsquo;)</p></li><li><p>vertical tab (0x0b, &lsquo;\v&rsquo;)
+The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.</p></li></ul><h2>Parameters</h2><p>ch - character to classify</p><h2>Return value</h2><p>Non-zero value if the character is a whitespace character, zero otherwise.</p><h2>Notes</h2><p>Like all other functions from &lt;cctype>, the behavior of std::isspace is undefined if the argument&rsquo;s value is neither representable as unsigned char nor equal to EOF. To use these functions safely with plain chars (or signed chars), the argument should first be converted to unsigned char: bool my_isspace(char ch)</p><p>{
+return std::isspace(static_cast&lt;unsigned char>(ch));
+}
+Similarly, they should not be directly used with standard algorithms when the iterator&rsquo;s value type is char or signed char. Instead, convert the value to unsigned char first:<pre><code>int count_spaces(const std::string &amp;s)
+{
+return std::count_if(s.begin(), s.end(),
+// static_cast&lt;int(*)(int)&gt;(std::isspace)         // wrong
+// [](int c){ return std::isspace(c); }           // wrong
+// [](char c){ return std::isspace(c); }          // wrong
+[](unsigned char c) { return std::isspace(c); } // correct
+);
+}
+</code></pre></p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is classified as whitespace by a locale
+isspace(std::locale) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a wide character is a space character
+iswspace <i>(function)</i>
+ASCII values iscntrl isprint isspace isblank isgraph ispunct isalnum isalpha isupper islower isdigit isxdigit
+decimal hexadecimal octal characters iswcntrl iswprint iswspace iswblank iswgraph iswpunct iswalnum iswalpha iswupper iswlower iswdigit iswxdigit
+0–8 \x0–\x8 \0–\10 control codes (NUL, etc.) ≠0 0 0 0 0 0 0 0 0 0 0 0
+9 \x9 \11 tab (\t) ≠0 0 ≠0 ≠0 0 0 0 0 0 0 0 0
+10–13 \xA–\xD \12–\15 whitespaces (\n, \v, \f, \r) ≠0 0 ≠0 0 0 0 0 0 0 0 0 0
+14–31 \xE–\x1F \16–\37 control codes ≠0 0 0 0 0 0 0 0 0 0 0 0
+32 \x20 \40 space 0 ≠0 ≠0 ≠0 0 0 0 0 0 0 0 0
+33–47 \x21–\x2F \41–\57 !"#$%&&rsquo;()*+,-./ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+48–57 \x30–\x39 \60–\71 0123456789 0 ≠0 0 0 ≠0 0 ≠0 0 0 0 ≠0 ≠0
+58–64 \x3A–\x40 \72–\100:;&lt;=>?@ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+65–70 \x41–\x46 \101–\10ABCDEF 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 ≠0
+71–90 \x47–\x5A \107–\13GHIJKLMNOP 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> QRSTUVWXYZ
+91–96 \x5B–\x60 \133–\14[]^_` 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+97–102\x61–\x66 \141–\14abcdef 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 ≠0
+103–12\x67–\x7A \147–\17ghijklmnop 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> qrstuvwxyz
+123–12\x7B–\x7E \172–\17{|}~ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+127 \x7F \177 backspace character (DEL) ≠0 0 0 0 0 0 0 0 0 0 0 0</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

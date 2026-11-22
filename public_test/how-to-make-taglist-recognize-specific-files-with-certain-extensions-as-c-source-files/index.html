@@ -1,0 +1,73 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Making Vim Recognize Custom File Extensions as C</title><link rel=canonical href=https://www.systutorials.com/how-to-make-taglist-recognize-specific-files-with-certain-extensions-as-c-source-files/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Making Vim Recognize Custom File Extensions as C"><meta property="og:url" content="https://www.systutorials.com/how-to-make-taglist-recognize-specific-files-with-certain-extensions-as-c-source-files/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/programming-academy/>Programming Academy</a>
+&#8250; <a href=/category/scripting-automation/>Scripting & Automation</a></nav><h1>Making Vim Recognize Custom File Extensions as C</h1><time class=post-date datetime=2018-03-24T11:44:15Z>March 24, 2018</time> <span class=post-author>&#183; <a href=/author/zma/>Eric Ma</a> and Community</span> <span class=post-updated>&#183; updated April 12, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Vim determines file types by extension to apply syntax highlighting and indentation. If you have custom file extensions that should be treated as C files, you need to configure Vim to recognize them.</p><h2 id=using-autocommand-in-vimrc>Using autocommand in .vimrc</h2><p>Add an autocommand to your <code>~/.vimrc</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; Treat .h and .c files in a custom directory as C
+autocmd BufRead,BufNewFile *.myc set filetype=c
+autocmd BufRead,BufNewFile *.h set filetype=c
+</code></pre><p>For multiple extensions:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; Multiple custom extensions as C
+autocmd BufRead,BufNewFile *.c.in,*.h.in,*.ec set filetype=c
+</code></pre><h2 id=using-filetypevim>Using filetype.vim</h2><p>For a cleaner setup, create a filetype detection rule:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; ~/.vim/ftdetect/my_c_files.vim
+au BufRead,BufNewFile *.myc,*.ec,*.c.in set filetype=c
+</code></pre><p>Vim automatically loads files from <code>~/.vim/ftdetect/</code> on startup. Each file can define detection rules for related file types.</p><h2 id=using-modelines>Using Modelines</h2><p>For per-file configuration, add a modeline comment inside the file itself:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>// vim: set filetype=c :
+</code></pre><p>Or for more settings:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>/* vim: set ft=c ts=4 sw=4 expandtab: */
+</code></pre><p>Modelines work regardless of the file extension, making them useful for files shared across different systems.</p><h2 id=checking-the-current-filetype>Checking the Current Filetype</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; Check what filetype Vim detected
+:set filetype?
+
+&#34; Force a filetype
+:set filetype=c
+</code></pre><h2 id=complete-c-development-setup>Complete C Development Setup</h2><p>For a good C editing experience in Vim, combine filetype detection with proper indentation and syntax:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; ~/.vimrc - C development setup
+filetype plugin indent on
+syntax on
+
+&#34; C-specific indentation
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType c setlocal cindent
+autocmd FileType c setlocal cinoptions=(0,l1,g0,t0,Ls,Ws
+
+&#34; Auto-format with clang-format
+autocmd FileType c nnoremap &lt;buffer&gt; &lt;F5&gt; :%!clang-format&lt;CR&gt;
+autocmd FileType c vnoremap &lt;buffer&gt; &lt;F5&gt; :!clang-format&lt;CR&gt;
+
+&#34; Compile and run
+autocmd FileType c nnoremap &lt;buffer&gt; &lt;F9&gt; :w&lt;CR&gt;:!gcc % -o %:r -Wall -Wextra &amp;&amp; ./%:r&lt;CR&gt;
+</code></pre><h2 id=neovim-configuration>Neovim Configuration</h2><p>In Neovim, use Lua for configuration:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>-- ~/.config/nvim/init.lua
+vim.filetype.add({
+    extension = {
+        myc = &#34;c&#34;,
+        ec = &#34;c&#34;,
+        [&#34;c.in&#34;] = &#34;c&#34;,
+    },
+    filename = {
+        [&#34;config.h.in&#34;] = &#34;c&#34;,
+    },
+})
+</code></pre><p>Neovim’s <code>vim.filetype.add()</code> is more structured than Vim’s autocommand approach and handles edge cases like double extensions (e.g., <code>.c.in</code>) better.</p><h2 id=indentation-and-formatting>Indentation and Formatting</h2><p>Once Vim recognizes your files as C, configure indentation style:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; K&amp;R style (default)
+set cindent
+set cinoptions=(0,l1,g0,t0,Ls,Ws
+
+&#34; Linux kernel style
+set tabstop=8
+set shiftwidth=8
+set noexpandtab
+
+&#34; GNU style
+set tabstop=2
+set shiftwidth=2
+set expandtab
+</code></pre><h2 id=quick-reference>Quick Reference</h2><ul><li><code>autocmd BufRead,BufNewFile *.ext set filetype=c</code> — .vimrc method</li><li><code>~/.vim/ftdetect/*.vim</code> — Clean detection rules</li><li><code>/* vim: set ft=c: */</code> — Per-file modeline</li><li><code>:set filetype?</code> — Check current filetype</li><li><code>vim.filetype.add()</code> — Neovim Lua method</li></ul><h2 id=debugging-filetype-detection>Debugging Filetype Detection</h2><p>If Vim isn’t detecting your file type correctly, debug the detection chain:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; Show what scripts ran for filetype detection
+:verbose set filetype?
+
+&#34; Show all loaded ftdetect scripts
+:scriptnames | grep ftdetect
+
+&#34; Test a pattern manually
+:echo matchstr(&#39;myfile.ec&#39;, &#39;\\.ec$&#39;)
+</code></pre><p>Common issues:</p><ul><li>Multiple rules conflict — last loaded rule wins. Check script load order with <code>:scriptnames</code></li><li>Modelines are disabled — ensure <code>set modeline</code> is in your config</li><li>The file extension matches a different filetype rule built into Vim</li></ul><p>To force detection order, load your ftdetect file after the default rules by naming it to sort last alphabetically (e.g., <code>zz_my_c.vim</code>).</p><h2 id=custom-syntax-for-extended-c>Custom Syntax for Extended C</h2><p>If your custom file extension adds keywords or syntax beyond standard C:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>&#34; ~/.vim/after/syntax/c.vim
+&#34; Add custom keywords
+syntax keyword cType uint8 uint16 uint32 uint64
+syntax keyword cType int8 int16 int32 int64
+syntax keyword cConstant TRUE FALSE NULL
+highlight def link cType Type
+highlight def link cConstant Constant
+</code></pre><p>Files in <code>~/.vim/after/syntax/</code> are loaded after the default syntax files, allowing you to extend without overriding.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,104 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Setting Environment Variables in Bash</title><link rel=canonical href=https://www.systutorials.com/how-to-set-an-environment-variable-in-bash/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Setting Environment Variables in Bash"><meta property="og:url" content="https://www.systutorials.com/how-to-set-an-environment-variable-in-bash/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/linux-systems-administration-academy/>Linux & Systems Administration Academy</a>
+&#8250; <a href=/linux-essentials-path/>Linux Essentials Path</a>
+&#8250; <a href=/category/shell-scripting/>Shell & Scripting</a></nav><h1>Setting Environment Variables in Bash</h1><time class=post-date datetime=2018-03-24T08:18:35Z>March 24, 2018</time> <span class=post-author>&#183; <a href=/author/qa/>Q A</a> and Community</span> <span class=post-updated>&#183; updated April 12, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Setting environment variables in Bash is one of the most fundamental skills for working with Linux command lines and shell scripts. Bash provides several ways to define and manage variables.</p><h2 id=setting-a-variable-for-the-current-shell>Setting a Variable for the Current Shell</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>MY_VAR=&#34;hello world&#34;
+</code></pre><p><strong>Important:</strong> No spaces around the <code>=</code> sign. <code>MY_VAR = "value"</code> will produce an error because Bash interprets it as a command <code>MY_VAR</code> with arguments.</p><p>Access the variable with <code>$</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>echo $MY_VAR
+# Output: hello world
+</code></pre><h2 id=exporting-to-child-processes>Exporting to Child Processes</h2><p>Variables set without <code>export</code> are only visible to the current shell. To make them available to child processes (scripts, applications launched from this shell):</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>export MY_VAR=&#34;hello world&#34;
+# Or export an existing variable
+MY_VAR=&#34;hello world&#34;
+export MY_VAR
+</code></pre><p>Without <code>export</code>, a script called from this shell won’t see the variable:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>TEST=&#34;only here&#34;
+bash -c &#39;echo $TEST&#39;    # Empty - child process doesn&#39;t see it
+
+export TEST=&#34;everywhere&#34;
+bash -c &#39;echo $TEST&#39;    # &#34;everywhere&#34; - child sees it
+</code></pre><h2 id=common-patterns>Common Patterns</h2><p><strong>Add to PATH:</strong></p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>export PATH=&#34;/usr/local/bin:$PATH&#34;
+export PATH=&#34;$PATH:$HOME/.local/bin&#34;  # Append instead of prepend
+</code></pre><p><strong>Set a development variable:</strong></p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export GOPATH=$HOME/go
+export EDITOR=vim
+</code></pre><h2 id=making-variables-persistent>Making Variables Persistent</h2><p>Variables set in a terminal only last for that session. To persist them:</p><p><strong>Per-user (most common):</strong> Add to <code>~/.bashrc</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>echo &#39;export PATH=&#34;$HOME/.local/bin:$PATH&#34;&#39; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre><p><strong>Login shells only:</strong> Use <code>~/.bash_profile</code> or <code>~/.profile</code> instead. These run once at login, while <code>~/.bashrc</code> runs for each new interactive shell.</p><p><strong>System-wide:</strong> Add to <code>/etc/profile.d/</code>:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>echo &#39;export JAVA_HOME=/usr/lib/jvm/java-17&#39; | sudo tee /etc/profile.d/java.sh
+source /etc/profile.d/java.sh
+</code></pre><h2 id=setting-variables-for-a-single-command>Setting Variables for a Single Command</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Variable only for this one command
+DEBUG=1 ./my-script.sh
+
+# Multiple variables
+NODE_ENV=production PORT=3000 node server.js
+</code></pre><p>This is the preferred pattern for passing configuration to scripts and daemons — the variable doesn’t pollute your shell environment.</p><h2 id=special-variable-syntax>Special Variable Syntax</h2><p>Bash provides several variable expansion features:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Default value if unset
+echo ${MY_VAR:-&#34;default&#34;}
+
+# Set default and assign
+echo ${MY_VAR:=&#34;default&#34;}
+
+# Error if unset
+echo ${MY_VAR:?&#34;MY_VAR is not set&#34;}
+
+# Alternative value if SET
+echo ${MY_VAR:+&#34;was set to $MY_VAR&#34;}
+
+# String length
+echo ${#MY_VAR}
+
+# Substring
+echo ${MY_VAR:0:5}      # First 5 characters
+echo ${MY_VAR: -3}      # Last 3 characters
+
+# Replace
+echo ${MY_VAR/hello/goodbye}   # Replace first match
+echo ${MY_VAR//o/0}            # Replace all matches
+</code></pre><h2 id=unsetting-variables>Unsetting Variables</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>unset MY_VAR
+</code></pre><p>This removes the variable entirely from the current shell and its export list.</p><h2 id=listing-environment-variables>Listing Environment Variables</h2><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># All exported variables
+env
+printenv
+
+# All variables (including non-exported)
+set
+
+# Search for a specific variable
+printenv PATH
+echo $PATH
+</code></pre><h2 id=variable-scope-and-subshells>Variable Scope and Subshells</h2><p>Child processes inherit exported variables, but changes in a child don’t affect the parent:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>export MY_VAR=&#34;parent&#34;
+bash -c &#39;MY_VAR=&#34;child&#34;; echo &#34;Child: $MY_VAR&#34;&#39;
+echo &#34;Parent: $MY_VAR&#34;
+# Output:
+# Child: child
+# Parent: parent
+</code></pre><p>This is a common gotcha when trying to set variables from inside a pipeline or subshell — the parent shell won’t see the change.</p><h2 id=quick-reference>Quick Reference</h2><ul><li><code>VAR=value</code> — Set for current shell</li><li><code>export VAR=value</code> — Set and export to children</li><li><code>VAR=value command</code> — Set for single command only</li><li><code>~/.bashrc</code> — Persist per-user</li><li><code>/etc/profile.d/</code> — Persist system-wide</li><li><code>unset VAR</code> — Remove variable</li></ul><h2 id=integer-and-array-variables>Integer and Array Variables</h2><p>Bash supports typed variables:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code># Integer variable (faster arithmetic)
+declare -i COUNT=0
+((COUNT++))
+echo $COUNT  # 1
+
+# Read-only variable
+declare -r CONFIG_PATH=&#34;/etc/myapp&#34;
+CONFIG_PATH=&#34;/new/path&#34;  # Error: readonly variable
+
+# Array
+FILES=(&#34;file1.txt&#34; &#34;file2.txt&#34; &#34;file3.txt&#34;)
+echo ${FILES[0]}     # file1.txt
+echo ${FILES[@]}     # All elements
+echo ${#FILES[@]}    # Array length
+
+# Associative array (Bash 4+)
+declare -A CONFIG
+CONFIG[host]=&#34;example.com&#34;
+CONFIG[port]=&#34;443&#34;
+echo ${CONFIG[host]}  # example.com
+</code></pre><h2 id=environment-variables-in-scripts>Environment Variables in Scripts</h2><p>When writing shell scripts, follow these best practices:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>#!/bin/bash
+# Check if a variable is set
+if [ -z &#34;$JAVA_HOME&#34; ]; then
+    echo &#34;Error: JAVA_HOME is not set&#34; &gt;&amp;2
+    exit 1
+fi
+
+# Use with default
+DB_HOST=${DB_HOST:-&#34;localhost&#34;}
+DB_PORT=${DB_PORT:-&#34;5432&#34;}
+
+# Quote variables to handle spaces and empty values
+echo &#34;Connecting to $DB_HOST:$DB_PORT&#34;
+</code></pre><p>Always quote variable expansions (<code>"$VAR"</code> not <code>$VAR</code>) to prevent word splitting and glob expansion issues with values containing spaces or special characters.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

@@ -1,0 +1,81 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdcondition_variable(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdcondition_variable/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdcondition_variable(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdcondition_variable/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdcondition_variable(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::condition_variable - std::condition_variable</p><h2>Synopsis</h2><p>Defined in header &lt;condition_variable>
+class condition_variable; <i>(since C++11)</i>
+The condition_variable class is a synchronization primitive that can be used to block a thread, or multiple threads at the same time, until another thread both modifies a shared variable (the condition), and notifies the condition_variable.
+The thread that intends to modify the variable has to
+ <wbr> 1. acquire a std::mutex (typically via std::lock_guard)
+ <wbr> 2. perform the modification while the lock is held
+ <wbr> 3. execute notify_one or notify_all on the std::condition_variable (the lock does not need to be held for notification)
+Even if the shared variable is atomic, it must be modified under the mutex in order to correctly publish the modification to the waiting thread.
+Any thread that intends to wait on std::condition_variable has to
+ <wbr> 1. acquire a std::unique_lock&lt;std::mutex>, on the same mutex as used to protect the shared variable
+ <wbr> 2. execute wait, wait_for, or wait_until. The wait operations atomically release the mutex and suspend the execution of the thread.
+ <wbr> 3. When the condition variable is notified, a timeout expires, or a spurious_wakeup occurs, the thread is awakened, and the mutex is atomically reacquired. The thread should then check the condition and resume waiting if the wake up was spurious.
+std::condition_variable works only with std::unique_lock&lt;std::mutex>; this restriction allows for maximal efficiency on some platforms. std::condition_variable_any provides a condition variable that works with any BasicLockable object, such as std::shared_lock.
+Condition variables permit concurrent invocation of the wait, wait_for, wait_until, notify_one and notify_all member functions.
+The class std::condition_variable is a StandardLayoutType. It is not CopyConstructible, MoveConstructible, CopyAssignable, or MoveAssignable.</p><h2>Member types</h2><p>Member type Definition
+native_handle_type implementation-defined</p><h2>Member functions</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the object
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destructs the object
+destructor <i>(public member function)</i></p><p>operator= not copy-assignable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+[deleted]</p><h2>Notification</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> notifies one waiting thread
+notify_one <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> notifies all waiting threads
+notify_all <i>(public member function)</i></p><h2>Waiting</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up
+wait <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up or after the specified timeout duration
+wait_for <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up or until specified time point has been reached
+wait_until <i>(public member function)</i></p><h2>Native handle</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the native handle
+native_handle <i>(public member function)</i></p><h2>Example</h2><p>condition_variable is used in combination with a std::mutex to facilitate inter-thread communication.
+// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+std::mutex m;
+std::condition_variable cv;
+std::string data;
+bool ready = false;
+bool processed = false;
+void worker_thread()
+{
+// Wait until main() sends data
+std::unique_lock&lt;std::mutex&gt; lk(m);
+cv.wait(lk, [] { return ready; });
+// after the wait, we own the lock.
+std::cout &lt;&lt; &quot;Worker thread is processing data\n&quot;;
+data += &quot; after processing&quot;;
+// Send data back to main()
+processed = true;
+std::cout &lt;&lt; &quot;Worker thread signals data processing completed\n&quot;;
+// Manual unlocking is done before notifying, to avoid waking up
+// the waiting thread only to block again (see notify_one for details)
+lk.unlock();
+cv.notify_one();
+}
+int main()
+{
+std::thread worker(worker_thread);
+data = &quot;Example data&quot;;
+// send data to the worker thread
+{
+std::lock_guard&lt;std::mutex&gt; lk(m);
+ready = true;
+std::cout &lt;&lt; &quot;main() signals data ready for processing\n&quot;;
+}
+cv.notify_one();
+// wait for the worker
+{
+std::unique_lock&lt;std::mutex&gt; lk(m);
+cv.wait(lk, [] { return processed; });
+}
+std::cout &lt;&lt; &quot;Back in main(), data = &quot; &lt;&lt; data &lt;&lt; &lsquo;\n&rsquo;;
+worker.join();
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> main() signals data ready for processing
+ <wbr> Worker thread is processing data
+ <wbr> Worker thread signals data processing completed
+ <wbr> Back in main(), data = Example data after processing</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

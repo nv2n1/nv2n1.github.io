@@ -1,0 +1,260 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>perlintro(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-perlintro/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="perlintro(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-perlintro/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>perlintro(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>perlintro &ndash; a brief introduction and overview of Perl</p><h2>DESCRIPTION</h2><p>This document is intended to give you a quick overview of the Perl programming language, along with pointers to further documentation. It is intended as a ``bootstrap&rsquo;&rsquo; guide for those who are new to the language, and provides just enough information for you to be able to read other peoples&rsquo; Perl and understand roughly what it&rsquo;s doing, or write your own simple scripts.</p><p>This introductory document does not aim to be complete. It does not even aim to be entirely accurate. In some cases perfection has been sacrificed in the goal of getting the general idea across. You are <i>strongly</i> advised to follow this introduction with more information from the full Perl manual, the table of contents to which can be found in perltoc.</p><p>Throughout this document you&rsquo;ll see references to other parts of the Perl documentation. You can read that documentation using the <tt>"perldoc"</tt> command or whatever method you&rsquo;re using to read this document.</p><p>Throughout Perl&rsquo;s documentation, you&rsquo;ll find numerous examples intended to help explain the discussed features. Please keep in mind that many of them are code fragments rather than complete programs.</p><p>These examples often reflect the style and preference of the author of that piece of the documentation, and may be briefer than a corresponding line of code in a real program. Except where otherwise noted, you should assume that <tt>"use strict"</tt> and <tt>"use warnings"</tt> statements appear earlier in the ``program&rsquo;&rsquo;, and that any variables used have already been declared, even if those declarations have been omitted to make the example easier to read.</p><p>Do note that the examples have been written by many different authors over a period of several decades. Styles and techniques will therefore differ, although some effort has been made to not vary styles too widely in the same sections. Do not consider one style to be better than others - ``There&rsquo;s More Than One Way To Do It&rsquo;&rsquo; is one of Perl&rsquo;s mottos. After all, in your journey as a programmer, you are likely to encounter different styles.</p><h3>What is Perl?</h3><p>Perl is a general-purpose programming language originally developed for text manipulation and now used for a wide range of tasks including system administration, web development, network programming, <font size=-1>GUI</font> development, and more.</p><p>The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). Its major features are that it&rsquo;s easy to use, supports both procedural and object-oriented (<font size=-1>OO</font>) programming, has powerful built-in support for text processing, and has one of the world&rsquo;s most impressive collections of third-party modules.</p><p>Different definitions of Perl are given in perl, perlfaq1 and no doubt other places. From this we can determine that Perl is different things to different people, but that lots of people think it&rsquo;s at least worth writing about.</p><h3>Running Perl programs</h3><p>To run a Perl program from the Unix command line:</p><pre>
+ perl progname.pl
+</pre><p>Alternatively, put this as the first line of your script:</p><pre>
+ #!/usr/bin/env perl
+</pre><p>&mldr; and run the script as <i>/path/to/script.pl</i>. Of course, it&rsquo;ll need to be executable first, so <tt>"chmod 755 script.pl"</tt> (under Unix).</p><p>(This start line assumes you have the <b>env</b> program. You can also put directly the path to your perl executable, like in <tt>"#!/usr/bin/perl"</tt>).</p><p>For more information, including instructions for other platforms such as Windows and Mac <font size=-1>OS,</font> read perlrun.</p><h3>Safety net</h3><p>Perl by default is very forgiving. In order to make it more robust it is recommended to start every program with the following lines:</p><pre>
+ #!/usr/bin/perl
+ use strict;
+ use warnings;
+</pre><p>The two additional lines request from perl to catch various common problems in your code. They check different things so you need both. A potential problem caught by <tt>"use strict;"</tt> will cause your code to stop immediately when it is encountered, while <tt>"use warnings;"</tt> will merely give a warning (like the command-line switch <b>-w</b>) and let your code run. To read more about them check their respective manual pages at strict and warnings.</p><h3>Basic syntax overview</h3><p>A Perl script or program consists of one or more statements. These statements are simply written in the script in a straightforward fashion. There is no need to have a <tt>"main()"</tt> function or anything of that kind.</p><p>Perl statements end in a semi-colon:</p><pre>
+ print &quot;Hello, world&quot;;
+</pre><p>Comments start with a hash symbol and run to the end of the line</p><pre>
+ # This is a comment
+</pre><p>Whitespace is irrelevant:</p><pre>
+ print
+     &quot;Hello, world&quot;
+     ;
+</pre><p>&mldr; except inside quoted strings:</p><pre>
+ # this would print with a linebreak in the middle
+ print &quot;Hello
+ world&quot;;
+</pre><p>Double quotes or single quotes may be used around literal strings:</p><pre>
+ print &quot;Hello, world&quot;;
+ print 'Hello, world';
+</pre><p>However, only double quotes ``interpolate&rsquo;&rsquo; variables and special characters such as newlines (<tt>"\n"</tt>):</p><pre>
+ print &quot;Hello, $name\n&quot;;     # works fine
+ print 'Hello, $name\n';     # prints $name\n literally
+</pre><p>Numbers don&rsquo;t need quotes around them:</p><pre>
+ print 42;
+</pre><p>You can use parentheses for functions&rsquo; arguments or omit them according to your personal taste. They are only required occasionally to clarify issues of precedence.</p><pre><code>
+print("Hello, world\n");
+print "Hello, world\n";
+</code></pre><p>More detailed information about Perl syntax can be found in perlsyn.</p><h3>Perl variable types</h3><p>Perl has three main variable types: scalars, arrays, and hashes.</p><dl><dt>Scalars</dt><dd>A scalar represents a single value:<pre>
+ my $animal = &quot;camel&quot;;
+ my $answer = 42;
+</pre>Scalar values can be strings, integers or floating point numbers, and Perl will automatically convert between them as required. There is no need to pre-declare your variable types, but you have to declare them using the <tt>"my"</tt> keyword the first time you use them. (This is one of the requirements of <tt>"use strict;"</tt>.)
+Scalar values can be used in various ways:<pre>
+ print $animal;
+ print &quot;The animal is $animal\n&quot;;
+ print &quot;The square of $answer is &quot;, $answer * $answer, &quot;\n&quot;;
+</pre>There are a number of ``magic'' scalars with names that look like punctuation or line noise. These special variables are used for all kinds of purposes, and are documented in perlvar. The only one you need to know about for now is <tt>$_</tt> which is the ``default variable''. It's used as the default argument to a number of functions in Perl, and it's set implicitly by certain looping constructs.<pre>
+ print;          # prints contents of $_ by default
+</pre></dd><dt>Arrays</dt><dd>An array represents a list of values:
+my @animals = ("camel", "llama", "owl");
+my @numbers = (23, 42, 69);
+my @mixed = ("camel", 42, 1.23);
+Arrays are zero-indexed. Here's how you get at elements in an array:
+print $animals[0];
+#prints "camel" print $animals[1];
+#prints "llama"
+The special variable <tt>$#array</tt> tells you the index of the last element of an array:<pre>
+ print $mixed[$#mixed];       # last element, prints 1.23
+</pre>You might be tempted to use <tt>"$#array + 1"</tt> to tell you how many items there are in an array. Don't bother. As it happens, using <tt>@array</tt> where Perl expects to find a scalar value (``in scalar context'') will give you the number of elements in the array:<pre>
+ if (@animals &lt; 5) { ... }
+</pre>The elements we're getting from the array start with a <tt>"$"</tt> because we're getting just a single value out of the array; you ask for a scalar, you get a scalar.
+To get multiple values from an array:
+@animals[0, 1];
+#gives("camel", "llama");
+@animals[0..2];
+#gives("camel", "llama", "owl");
+@animals[1.. $ #animals];
+#gives all except the first element
+This is called an ``array slice''.
+You can do various useful things to lists:<pre>
+ my @sorted    = sort @animals;
+ my @backwards = reverse @numbers;
+</pre>There are a couple of special arrays too, such as <tt>@ARGV</tt> (the command line arguments to your script) and <tt>@_</tt> (the arguments passed to a subroutine). These are documented in perlvar.</dd><dt>Hashes</dt><dd>A hash represents a set of key/value pairs:<pre>
+ my %fruit_color = (&quot;apple&quot;, &quot;red&quot;, &quot;banana&quot;, &quot;yellow&quot;);
+</pre>You can use whitespace and the <tt>"=>"</tt> operator to lay them out more nicely:<pre>
+ my %fruit_color = (
+     apple  =&gt; &quot;red&quot;,
+     banana =&gt; &quot;yellow&quot;,
+ );
+</pre>To get at hash elements:<pre>
+ $fruit_color{&quot;apple&quot;};           # gives &quot;red&quot;
+</pre>You can get at lists of keys and values with <tt>"keys()"</tt> and <tt>"values()"</tt>.<pre>
+ my @fruits = keys %fruit_colors;
+ my @colors = values %fruit_colors;
+</pre>Hashes have no particular internal order, though you can sort the keys and loop through them.
+Just like special scalars and arrays, there are also special hashes. The most well known of these is <tt>%ENV</tt> which contains environment variables. Read all about it (and other special variables) in perlvar.</dd></dl><p>Scalars, arrays and hashes are documented more fully in perldata.</p><p>More complex data types can be constructed using references, which allow you to build lists and hashes within lists and hashes.</p><p>A reference is a scalar value and can refer to any other Perl data type. So by storing a reference as the value of an array or hash element, you can easily create lists and hashes within lists and hashes. The following example shows a 2 level hash of hash structure using anonymous hash references.</p><p>my $variables = {
+scalar = > {
+description = > &ldquo;single item&rdquo;,
+sigil = > &lsquo;$&rsquo;,
+},
+array = > {
+description = > &ldquo;ordered list of items&rdquo;,
+sigil = > &lsquo;@&rsquo;,
+},
+hash = > {
+description = > &ldquo;key/value pairs&rdquo;,
+sigil = > &lsquo;%&rsquo;,
+},
+};
+print &ldquo;Scalars begin with a $variables->{&lsquo;scalar&rsquo;}->{&lsquo;sigil&rsquo;}\n&rdquo;;</p><p>Exhaustive information on the topic of references can be found in perlreftut, perllol, perlref and perldsc.</p><h3>Variable scoping</h3><p>Throughout the previous section all the examples have used the syntax:</p><pre>
+ my $var = &quot;value&quot;;
+</pre><p>The <tt>"my"</tt> is actually not required; you could just use:</p><pre>
+ $var = &quot;value&quot;;
+</pre><p>However, the above usage will create global variables throughout your program, which is bad programming practice. <tt>"my"</tt> creates lexically scoped variables instead. The variables are scoped to the block (i.e. a bunch of statements surrounded by curly-braces) in which they are defined.</p><p>my $x = &ldquo;foo&rdquo;;
+my $some_condition = 1;
+if ($some_condition) {
+my $y = &ldquo;bar&rdquo;;
+print $x;
+#prints &ldquo;foo&rdquo; print $y;
+#prints &ldquo;bar&rdquo;
+}
+print $x;
+#prints &ldquo;foo&rdquo; print $y;
+#prints nothing;
+$y has fallen out of scope</p><p>Using <tt>"my"</tt> in combination with a <tt>"use strict;"</tt> at the top of your Perl scripts means that the interpreter will pick up certain common programming errors. For instance, in the example above, the final <tt>"print $y"</tt> would cause a compile-time error and prevent you from running the program. Using <tt>"strict"</tt> is highly recommended.</p><h3>Conditional and looping constructs</h3><p>Perl has most of the usual conditional and looping constructs. As of Perl 5.10, it even has a case/switch statement (spelled <tt>"given"</tt>/<tt>"when"</tt>). See ``Switch Statements&rsquo;&rsquo; in perlsyn for more details.</p><p>The conditions can be any Perl expression. See the list of operators in the next section for information on comparison and boolean logic operators, which are commonly used in conditional statements.</p><dl><dt>if</dt><dd>if (condition) {
+...
+}
+elsif(other condition)
+{
+...
+}
+else
+{
+...
+}
+There's also a negated version of it:<pre>
+ unless ( condition ) {
+     ...
+ }
+</pre>This is provided as a more readable version of <tt>"if (!</tt>condition<tt>)"</tt>.
+Note that the braces are required in Perl, even if you've only got one line in the block. However, there is a clever way of making your one-line conditional blocks more English like:
+#the traditional way
+if ($zippy) {
+print "Yow!";
+}
+#the Perlish post - condition way
+print "Yow!" if $zippy;
+print "We have no bananas" unless $bananas;</dd><dt>while</dt><dd><pre>
+ while ( condition ) {
+     ...
+ }
+</pre>There's also a negated version, for the same reason we have <tt>"unless"</tt>:<pre>
+ until ( condition ) {
+     ...
+ }
+</pre>You can also use <tt>"while"</tt> in a post-condition:<pre>
+ print &quot;LA LA LA\n&quot; while 1;          # loops forever
+</pre></dd><dt>for</dt><dd>Exactly like C:
+for ($i = 0; $i &lt;= $max; $i++) {
+...
+}
+The C style for loop is rarely needed in Perl since Perl provides the more friendly list scanning <tt>"foreach"</tt> loop.</dd><dt>foreach</dt><dd>foreach (@array) {
+print "This element is $_\n";
+}
+print $list[$_] foreach 0..$max;
+#you don't have to use the default $_ either...
+foreach
+my $key(keys % hash)
+{
+print "The value of $key is $hash{$key}\n";
+}
+The <tt>"foreach"</tt> keyword is actually a synonym for the <tt>"for"</tt> keyword. See <tt>""Foreach Loops" in perlsyn"</tt>.</dd></dl><p>For more detail on looping constructs (and some that weren&rsquo;t mentioned in this overview) see perlsyn.</p><h3>Builtin operators and functions</h3><p>Perl comes with a wide selection of builtin functions. Some of the ones we&rsquo;ve already seen include <tt>"print"</tt>, <tt>"sort"</tt> and <tt>"reverse"</tt>. A list of them is given at the start of perlfunc and you can easily read about any given function by using <tt>"perldoc -f </tt>functionname<tt>"</tt>.</p><p>Perl operators are documented in full in perlop, but here are a few of the most common ones:</p><dl><dt>Arithmetic</dt><dd><pre>
+ +   addition
+ -   subtraction
+ *   multiplication
+ /   division
+</pre></dd><dt>Numeric comparison</dt><dd>== equality != inequality&lt;less than> greater than &lt;= less than or equal >= greater than or equal</dd><dt>String comparison</dt><dd><pre>
+ eq  equality
+ ne  inequality
+ lt  less than
+ gt  greater than
+ le  less than or equal
+ ge  greater than or equal
+</pre>(Why do we have separate numeric and string comparisons? Because we don't have special variable types, and Perl needs to know whether to sort numerically (where 99 is less than 100) or alphabetically (where 100 comes before 99).</dd><dt>Boolean logic</dt><dd><pre>
+ &amp;&amp;  and
+ ||  or
+ !   not
+</pre>(<tt>"and"</tt>, <tt>"or"</tt> and <tt>"not"</tt> aren't just in the above table as descriptions of the operators. They're also supported as operators in their own right. They're more readable than the C-style operators, but have different precedence to <tt>"&&"</tt> and friends. Check perlop for more detail.)</dd><dt>Miscellaneous</dt><dd><pre>
+ =   assignment
+ .   string concatenation
+ x   string multiplication
+ ..  range operator (creates a list of numbers or strings)
+</pre></dd></dl><p>Many operators can be combined with a <tt>"="</tt> as follows:</p><p>$a += 1;
+#same as $a = $a + 1 $a -= 1;
+#same as $a = $a - 1 $a.= &ldquo;\n&rdquo;;
+#same as $a = $a."\n";</p><h3>Files and I/O</h3><p>You can open a file for input or output using the <tt>"open()"</tt> function. It&rsquo;s documented in extravagant detail in perlfunc and perlopentut, but in short:</p><p>open(my $in, &ldquo;&lt;&rdquo;, &ldquo;input.txt&rdquo;) or die &ldquo;Can&rsquo;t open input.txt: $!&rdquo;;
+open(my $out, &ldquo;>&rdquo;, &ldquo;output.txt&rdquo;) or die &ldquo;Can&rsquo;t open output.txt: $!&rdquo;;
+open(my $log, &ldquo;>>&rdquo;, &ldquo;my.log&rdquo;) or die &ldquo;Can&rsquo;t open my.log: $!&rdquo;;</p><p>You can read from an open filehandle using the <tt>"&lt;>"</tt> operator. In scalar context it reads a single line from the filehandle, and in list context it reads the whole file in, assigning each line to an element of the list:</p><pre>
+ my $line  = &lt;$in&gt;;
+ my @lines = &lt;$in&gt;;
+</pre><p>Reading in the whole file at one time is called slurping. It can be useful but it may be a memory hog. Most text file processing can be done a line at a time with Perl&rsquo;s looping constructs.</p><p>The <tt>"&lt;>"</tt> operator is most often seen in a <tt>"while"</tt> loop:</p><p>while (&lt;$in>) {
+#assigns each line in turn to $_
+print &ldquo;Just read in this line: $_&rdquo;;
+}</p><p>We&rsquo;ve already seen how to print to standard output using <tt>"print()"</tt>. However, <tt>"print()"</tt> can also take an optional first argument specifying which filehandle to print to:</p><pre>
+ print STDERR &quot;This is your final warning.\n&quot;;
+ print $out $record;
+ print $log $logmessage;
+</pre><p>When you&rsquo;re done with your filehandles, you should <tt>"close()"</tt> them (though to be honest, Perl will clean up after you if you forget):</p><pre>
+ close $in or die &quot;$in: $!&quot;;
+</pre><h3>Regular expressions</h3><p>Perl&rsquo;s regular expression support is both broad and deep, and is the subject of lengthy documentation in perlrequick, perlretut, and elsewhere. However, in short:</p><dl><dt>Simple matching</dt><dd>if (/ foo /) {
+...
+}
+#true if $_ contains "foo" if ($a = ~ / foo /)
+{
+...
+}
+#true if $a contains "foo"
+The <tt>"//"</tt> matching operator is documented in perlop. It operates on <tt>$_</tt> by default, or can be bound to another variable using the <tt>"=~"</tt> binding operator (also documented in perlop).</dd><dt>Simple substitution</dt><dd><pre>
+ s/foo/bar/;               # replaces foo with bar in $_
+ $a =~ s/foo/bar/;         # replaces foo with bar in $a
+ $a =~ s/foo/bar/g;        # replaces ALL INSTANCES of foo with bar
+                           # in $a
+</pre>The <tt>"s///"</tt> substitution operator is documented in perlop.</dd><dt>More complex regular expressions</dt><dd>You don't just have to match on fixed strings. In fact, you can match on just about anything you could dream of by using more complex regular expressions. These are documented at great length in perlre, but for the meantime, here's a quick cheat sheet:
+.a single character
+\s a whitespace character(space, tab, newline,
+...)
+\S non -
+whitespace character
+\d a digit(0 - 9)
+\D a non - digit
+\w a word character(a - z, A - Z, 0 - 9, _)
+\W a non - word character[aeiou] matches a single character in the given set[^aeiou] matches a single character outside the given set(foo | bar | baz) matches any of the alternatives specified
+^ start of string
+$ end of string
+Quantifiers can be used to specify how many of the previous thing you want to match on, where ``thing'' means either a literal character, one of the metacharacters listed above, or a group of characters or metacharacters in parentheses.<pre>
+ *                   zero or more of the previous thing
+ +                   one or more of the previous thing
+ ?                   zero or one of the previous thing
+ {3}                 matches exactly 3 of the previous thing
+ {3,6}               matches between 3 and 6 of the previous thing
+ {3,}                matches 3 or more of the previous thing
+</pre>Some brief examples:
+/ ^\d + / string starts with one or more digits / ^$ / nothing in the string(start and end are adjacent) / (\d\s){
+3} /
+three digits,
+each followed by a whitespace character(eg "3 4 5 ") / (a.) + / matches a string in which every odd - numbered letter is a(eg "abacadaf")
+#This loop reads from STDIN, and prints non - blank lines:
+while (&lt;>)
+{
+next if / ^$ / ;
+print;
+}</dd><dt>Parentheses for capturing</dt><dd>As well as grouping, parentheses serve a second purpose. They can be used to capture the results of parts of the regexp match for later use. The results end up in <tt>$1</tt>, <tt>$2</tt> and so on.
+#a cheap and nasty way to break an email address up into parts
+if ($email = ~ / ([^@] +) @(.+) /) {
+print "Username is $1\n";
+print "Hostname is $2\n";
+}</dd><dt>Other regexp features</dt><dd>Perl regexps also support backreferences, lookaheads, and all kinds of other complex details. Read all about them in perlrequick, perlretut, and perlre.</dd></dl><h3>Writing subroutines</h3><p>Writing subroutines is easy:</p><p>sub logger
+{
+my $logmessage = shift;
+open my $logfile, &ldquo;>>&rdquo;, &ldquo;my.log&rdquo; or die &ldquo;Could not open my.log: $!&rdquo;;
+print $logfile $logmessage;
+}</p><p>Now we can use the subroutine just as any other built-in function:</p><pre>
+ logger(&quot;We have a logger subroutine!&quot;);
+</pre><p>What&rsquo;s that <tt>"shift"</tt>? Well, the arguments to a subroutine are available to us as a special array called <tt>@<em></tt> (see perlvar for more on that). The default argument to the <tt>"shift"</tt> function just happens to be <tt>@</em></tt>. So <tt>"my $logmessage = shift;"</tt> shifts the first item off the list of arguments and assigns it to <tt>$logmessage</tt>.</p><p>We can manipulate <tt>@_</tt> in other ways too:</p><p>my($logmessage, $priority) = @<em>;
+#common my $logmessage = $</em>[0];
+#uncommon, and ugly</p><p>Subroutines can also return values:</p><pre><code>
+sub square
+{
+    my $num = shift;
+    my $result = $num * $num;
+    return $result;
+}
+</code></pre><p>Then use it like:</p><pre>
+ $sq = square(8);
+</pre><p>For more information on writing subroutines, see perlsub.</p><h3><font size=-1>OO</font> Perl</h3><p><font size=-1>OO</font> Perl is relatively simple and is implemented using references which know what sort of object they are based on Perl&rsquo;s concept of packages. However, <font size=-1>OO</font> Perl is largely beyond the scope of this document. Read perlootut and perlobj.</p><p>As a beginning Perl programmer, your most common use of <font size=-1>OO</font> Perl will be in using third-party modules, which are documented below.</p><h3>Using Perl modules</h3><p>Perl modules provide a range of features to help you avoid reinventing the wheel, and can be downloaded from <font size=-1>CPAN</font> ( &lt;<a rel=nofollow href=http://www.cpan.org/><a href=http://www.cpan.org/>http://www.cpan.org/</a></a>> ). A number of popular modules are included with the Perl distribution itself.</p><p>Categories of modules range from text manipulation to network protocols to database integration to graphics. A categorized list of modules is also available from <font size=-1>CPAN.</font></p><p>To learn how to install modules you download from <font size=-1>CPAN,</font> read perlmodinstall.</p><p>To learn how to use a particular module, use <tt>"perldoc </tt>Module::Name<tt>"</tt>. Typically you will want to <tt>"use </tt>Module::Name<tt>"</tt>, which will then give you access to exported functions or an <font size=-1>OO</font> interface to the module.</p><p>perlfaq contains questions and answers related to many common tasks, and often provides suggestions for good <font size=-1>CPAN</font> modules to use.</p><p>perlmod describes Perl modules in general. perlmodlib lists the modules which came with your Perl installation.</p><p>If you feel the urge to write Perl modules, perlnewmod will give you good advice.</p><h2>AUTHOR</h2><p>Kirrily ``Skud&rsquo;&rsquo; Robert &lt;skud [at] cpan.org></p><dt><a href=#lbAQ>AUTHOR</a></dt><dd></dd></dl><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,61 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>struct_usb_device(9) · Linux Manual Pages</title><meta name=description content="struct_usb_device – kernel’s representation of a USB device"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/9-struct_usb_device/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="struct_usb_device(9) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/9-struct_usb_device/"><meta property="og:description" content="struct_usb_device – kernel’s representation of a USB device"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/9/>Section 9</a></p><article><header class=man-header><h1>struct_usb_device(9)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>struct_usb_device &#8211; kernel&#8217;s representation of a USB device</p><h2>Synopsis</h2><pre><code>struct usb_device {
+    int devnum;
+    char devpath[16];
+    u32 route;
+    enum usb_device_state state;
+    enum usb_device_speed speed;
+    struct usb_tt *tt;
+    int ttport;
+    unsigned int toggle[2];
+    struct usb_device *parent;
+    struct usb_bus *bus;
+    struct usb_host_endpoint ep0;
+    struct device dev;
+    struct usb_device_descriptor descriptor;
+    struct usb_host_bos *bos;
+    struct usb_host_config *config;
+    struct usb_host_config *actconfig;
+    struct usb_host_endpoint *ep_in[16];
+    struct usb_host_endpoint *ep_out[16];
+    char **rawdescriptors;
+    unsigned short bus_mA;
+    u8 portnum;
+    u8 level;
+    unsigned can_submit : 1;
+    unsigned persist_enabled : 1;
+    unsigned have_langid : 1;
+    unsigned authorized : 1;
+    unsigned authenticated : 1;
+    unsigned wusb : 1;
+    unsigned lpm_capable : 1;
+    unsigned usb2_hw_lpm_capable : 1;
+    unsigned usb2_hw_lpm_besl_capable : 1;
+    unsigned usb2_hw_lpm_enabled : 1;
+    unsigned usb2_hw_lpm_allowed : 1;
+    unsigned usb3_lpm_u1_enabled : 1;
+    unsigned usb3_lpm_u2_enabled : 1;
+    int string_langid;
+    char *product;
+    char *manufacturer;
+    char *serial;
+    struct list_head filelist;
+    int maxchild;
+    u32 quirks;
+    atomic_t urbnum;
+    unsigned long active_duration;
+#ifdef CONFIG_PM
+    unsigned long connect_time;
+    unsigned do_remote_wakeup : 1;
+    unsigned reset_resume : 1;
+    unsigned port_is_suspended : 1;
+#endif
+    struct wusb_dev *wusb_dev;
+    int slot_id;
+    enum usb_device_removable removable;
+    struct usb2_lpm_parameters l1_params;
+    struct usb3_lpm_parameters u1_params;
+    struct usb3_lpm_parameters u2_params;
+    unsigned lpm_disable_count;
+};</code></pre><h2>Members</h2><p>devnum</p><dl><dd>device number; address on a USB bus</dd></dl><p>devpath[16]</p><dl><dd>device ID string for use in messages (e.g., /port/&#8230;)</dd></dl><p>route</p><dl><dd>tree topology hex string for use with xHCI</dd></dl><p>state</p><dl><dd>device state: configured, not attached, etc.</dd></dl><p>speed</p><dl><dd>device speed: high/full/low (or error)</dd></dl><p>tt</p><dl><dd>Transaction Translator info; used with low/full speed dev, highspeed hub</dd></dl><p>ttport</p><dl><dd>device port on that tt hub</dd></dl><p>toggle[2]</p><dl><dd>one bit for each endpoint, with ([0] = IN, [1] = OUT) endpoints</dd></dl><p>parent</p><dl><dd>our hub, unless we&#8217;re the root</dd></dl><p>bus</p><dl><dd>bus we&#8217;re part of</dd></dl><p>ep0</p><dl><dd>endpoint 0 data (default control pipe)</dd></dl><p>dev</p><dl><dd>generic device interface</dd></dl><p>descriptor</p><dl><dd>USB device descriptor</dd></dl><p>bos</p><dl><dd>USB device BOS descriptor set</dd></dl><p>config</p><dl><dd>all of the device&#8217;s configs</dd></dl><p>actconfig</p><dl><dd>the active configuration</dd></dl><p>ep_in[16]</p><dl><dd>array of IN endpoints</dd></dl><p>ep_out[16]</p><dl><dd>array of OUT endpoints</dd></dl><p>rawdescriptors</p><dl><dd>raw descriptors for each config</dd></dl><p>bus_mA</p><dl><dd>Current available from the bus</dd></dl><p>portnum</p><dl><dd>parent port number (origin 1)</dd></dl><p>level</p><dl><dd>number of USB hub ancestors</dd></dl><p>can_submit</p><dl><dd>URBs may be submitted</dd></dl><p>persist_enabled</p><dl><dd>USB_PERSIST enabled for this device</dd></dl><p>have_langid</p><dl><dd>whether string_langid is valid</dd></dl><p>authorized</p><dl><dd>policy has said we can use it; (user space) policy determines if we authorize this device to be used or not. By default, wired USB devices are authorized. WUSB devices are not, until we authorize them from user space. FIXME &#8212; complete doc</dd></dl><p>authenticated</p><dl><dd>Crypto authentication passed</dd></dl><p>wusb</p><dl><dd>device is Wireless USB</dd></dl><p>lpm_capable</p><dl><dd>device supports LPM</dd></dl><p>usb2_hw_lpm_capable</p><dl><dd>device can perform USB2 hardware LPM</dd></dl><p>usb2_hw_lpm_besl_capable</p><dl><dd>device can perform USB2 hardware BESL LPM</dd></dl><p>usb2_hw_lpm_enabled</p><dl><dd>USB2 hardware LPM is enabled</dd></dl><p>usb2_hw_lpm_allowed</p><dl><dd>Userspace allows USB 2.0 LPM to be enabled</dd></dl><p>usb3_lpm_u1_enabled</p><dl><dd>USB3 hardware U1 LPM enabled</dd></dl><p>usb3_lpm_u2_enabled</p><dl><dd>USB3 hardware U2 LPM enabled</dd></dl><p>string_langid</p><dl><dd>language ID for strings</dd></dl><p>product</p><dl><dd>iProduct string, if present (static)</dd></dl><p>manufacturer</p><dl><dd>iManufacturer string, if present (static)</dd></dl><p>serial</p><dl><dd>iSerialNumber string, if present (static)</dd></dl><p>filelist</p><dl><dd>usbfs files that are open to this device</dd></dl><p>maxchild</p><dl><dd>number of ports if hub</dd></dl><p>quirks</p><dl><dd>quirks of the whole device</dd></dl><p>urbnum</p><dl><dd>number of URBs submitted for the whole device</dd></dl><p>active_duration</p><dl><dd>total time device is not suspended</dd></dl><p>connect_time</p><dl><dd>time device was first connected</dd></dl><p>do_remote_wakeup</p><dl><dd>remote wakeup should be enabled</dd></dl><p>reset_resume</p><dl><dd>needs reset instead of resume</dd></dl><p>port_is_suspended</p><dl><dd>the upstream port is suspended (L2 or U3)</dd></dl><p>wusb_dev</p><dl><dd>if this is a Wireless USB device, link to the WUSB specific data for the device.</dd></dl><p>slot_id</p><dl><dd>Slot ID assigned by xHCI</dd></dl><p>removable</p><dl><dd>Device can be physically removed from this port</dd></dl><p>l1_params</p><dl><dd>best effor service latency for USB2 L1 LPM state, and L1 timeout.</dd></dl><p>u1_params</p><dl><dd>exit latencies for USB3 U1 LPM state, and hub-initiated timeout.</dd></dl><p>u2_params</p><dl><dd>exit latencies for USB3 U2 LPM state, and hub-initiated timeout.</dd></dl><p>lpm_disable_count</p><dl><dd>Ref count used by <code>usb_disable_lpm</code> and <code>usb_enable_lpm</code> to keep track of the number of functions that require USB 3.0 Link Power Management to be disabled for this usb_device. This count should only be manipulated by those functions, with the bandwidth_mutex is held.</dd></dl><h2>Notes</h2><p>Usbcore drivers should not set usbdev->state directly. Instead use <code>usb_set_device_state</code>.</p><h2>Copyright</h2><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

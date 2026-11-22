@@ -1,0 +1,123 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdmerge(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdmerge/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdmerge(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdmerge/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdmerge(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::merge - std::merge</p><h2>Synopsis</h2><pre><code>Defined in header &lt;algorithm&gt;
+template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
+OutputIt merge( InputIt1 first1, InputIt1 last1,                                                              (until C++20)
+InputIt2 first2, InputIt2 last2,
+OutputIt d_first );
+template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
+constexpr OutputIt merge( InputIt1 first1, InputIt1 last1,                                                    (since C++20)
+InputIt2 first2, InputIt2 last2,
+OutputIt d_first );
+template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3 &gt;
+ForwardIt3 merge( ExecutionPolicy&amp;&amp; policy,
+ForwardIt1 first1, ForwardIt1 last1,                                                                      (2) (since C++17)
+ForwardIt2 first2, ForwardIt2 last2,
+ForwardIt3 d_first );                                                                                 (1)
+template&lt; class InputIt1, class InputIt2, class OutputIt, class Compare&gt;
+OutputIt merge( InputIt1 first1, InputIt1 last1,                                                                            (until C++20)
+InputIt2 first2, InputIt2 last2,
+OutputIt d_first, Compare comp );
+template&lt; class InputIt1, class InputIt2, class OutputIt, class Compare&gt;
+constexpr OutputIt merge( InputIt1 first1, InputIt1 last1,                                                                  (since C++20)
+InputIt2 first2, InputIt2 last2,                                                                          (3)
+OutputIt d_first, Compare comp );
+template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3, class Compare&gt;
+ForwardIt3 merge( ExecutionPolicy&amp;&amp; policy,
+ForwardIt1 first1, ForwardIt1 last1,                                                                          (4)           (since C++17)
+ForwardIt2 first2, ForwardIt2 last2,
+ForwardIt3 d_first, Compare comp );</code></pre><p>Merges two sorted ranges [first1, last1) and [first2, last2) into one sorted range beginning at d_first.</p><ol><li>Elements are compared using operator&lt;.</li><li>Elements are compared using the given binary comparison function comp.
+2,4) Same as (1,3), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy>> is true
+For equivalent elements in the original two ranges, the elements from the first range (preserving their original order) precede the elements from the second range (preserving their original order).
+The behavior is undefined if the destination range overlaps either of the input ranges (the input ranges may overlap each other).</li></ol><h2>Parameters</h2><p>first1, last1 - the first range of elements to merge
+first2, last2 - the second range of elements to merge
+d_first - the beginning of the destination range
+policy - the execution policy to use. See execution_policy for details.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function object (i.e. an object that satisfies the requirements of Compare) which returns true if the first argument is less than (i.e. is ordered before) the second.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> bool cmp(const Type1 &amp;a, const Type2 &amp;b);
+comp - While the signature does not need to have const &, the function must not modify the objects passed to it and must be able to accept all values of type (possibly const) Type1 and Type2 regardless of value_category (thus, Type1 & is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is Type1 unless for Type1 a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that objects of types InputIt1 and InputIt2 can be dereferenced and then implicitly converted to both Type1 and Type2.</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=inputit1-inputit2-must-meet-the-requirements-of-legacyinputiterator>InputIt1, InputIt2 must meet the requirements of LegacyInputIterator.</h2><h2 id=forwardit1-forwardit2-forwardit3-must-meet-the-requirements-of-legacyforwarditerator>ForwardIt1, ForwardIt2, ForwardIt3 must meet the requirements of LegacyForwardIterator.</h2><p>OutputIt must meet the requirements of LegacyOutputIterator.</p><h2>Return value</h2><p>An output iterator to element past the last element copied.</p><h2>Complexity</h2><p>1,3) At most std::distance(first1, last1) + std::distance(first2, last2) - 1 comparisons.
+2,4) O(std::distance(first1, last1) + std::distance(first2, last2))</p><h2>Exceptions</h2><p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p><ul><li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li><li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li></ul><h2>Notes</h2><p>This algorithm performs a similar task as std::set_union does. Both consume two sorted input ranges and produce a sorted output with elements from both inputs. The difference between these two algorithms is with handling values from both input ranges which compare equivalent (see notes on LessThanComparable). If any equivalent values appeared n times in the first range and m times in the second, std::merge would output all n+m occurrences whereas std::set_union would output std::max(n, m) ones only. So std::merge outputs exactly std::distance(first1, last1) + std::distance(first2, last2) values and std::set_union may produce fewer.</p><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt;class InputIt1, class InputIt2, class OutputIt>
+ <wbr> OutputIt merge(InputIt1 first1, InputIt1 last1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> InputIt2 first2, InputIt2 last2,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OutputIt d_first)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first1 != last1; ++d_first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (first2 == last2) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return std::copy(first1, last1, d_first);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (*first2 &lt; *first1) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first = *first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first = *first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::copy(first2, last2, d_first);
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class InputIt1, class InputIt2,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class OutputIt, class Compare>
+ <wbr> OutputIt merge(InputIt1 first1, InputIt1 last1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> InputIt2 first2, InputIt2 last2,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OutputIt d_first, Compare comp)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first1 != last1; ++d_first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (first2 == last2) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return std::copy(first1, last1, d_first);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (comp(*first2, *first1)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first = *first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first = *first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ++first1;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::copy(first2, last2, d_first);
+ <wbr> }</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;random&gt;
+#include &lt;functional&gt;
+int main()
+{
+// fill the vectors with random numbers
+std::random_device rd;
+std::mt19937 mt(rd());
+std::uniform_int_distribution&lt;&gt; dis(0, 9);
+std::vector&lt;int&gt; v1(10), v2(10);
+std::generate(v1.begin(), v1.end(), std::bind(dis, std::ref(mt)));
+std::generate(v2.begin(), v2.end(), std::bind(dis, std::ref(mt)));
+// sort
+std::sort(v1.begin(), v1.end());
+std::sort(v2.begin(), v2.end());
+// output v1
+std::cout &lt;&lt; &quot;v1 : &quot;;
+std::copy(v1.begin(), v1.end(), std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+// output v2
+std::cout &lt;&lt; &quot;v2 : &quot;;
+std::copy(v2.begin(), v2.end(), std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+// merge
+std::vector&lt;int&gt; dst;
+std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), std::back_inserter(dst));
+// output
+std::cout &lt;&lt; &quot;dst: &quot;;
+std::copy(dst.begin(), dst.end(), std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;));
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> v1 : 0 1 3 4 4 5 5 8 8 9
+ <wbr> v2 : 0 2 2 3 6 6 8 8 8 9
+ <wbr> dst: 0 0 1 2 2 3 3 4 4 5 5 6 6 8 8 8 8 8 9 9</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> merges two ordered ranges in-place
+inplace_merge <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> computes the union of two sets
+set_union <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sorts a range into ascending order
+sort <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sorts a range of elements while preserving order between equal elements
+stable_sort <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

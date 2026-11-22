@@ -1,0 +1,54 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdfuturewait_until(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdfuturewait_until/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdfuturewait_until(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdfuturewait_until/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdfuturewait_until(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::future&lt;T>::wait_until - std::future&lt;T>::wait_until</p><h2>Synopsis</h2><pre><code>template &lt;class Clock, class Duration&gt;
+(since C++ 11)
+    std::future_status wait_until(const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time) const;</code></pre><p>wait_until waits for a result to become available. It blocks until specified timeout_time has been reached or the result becomes available, whichever comes first. The return value indicates why wait_until returned.
+The behavior is undefined if valid()== false before the call to this function.</p><h2>Parameters</h2><p>timeout_time - maximum time point to block until</p><h2>Return value</h2><p>Constant Explanation
+future_status::deferred The function to calculate the result has not been started yet
+future_status::ready The result is ready
+future_status::timeout The timeout has expired</p><h2>Exceptions</h2><p>Any exception thrown by clock, time_point, or duration during the execution (clocks, time points, and durations provided by the standard library never throw)</p><h2>Notes</h2><p>The implementations are encouraged to detect the case when valid == false before the call and throw a future_error with an error condition of future_errc::no_state.
+The clock tied to timeout_time is used, which is not required to be a monotonic clock.There are no guarantees regarding the behavior of this function if the clock is adjusted discontinuously, but the existing implementations convert timeout_time from Clock to std::chrono::system_clock and delegate to POSIX pthread_cond_timedwait so that the wait honors ajustments to the system clock, but not to the the user-provided Clock. In any case, the function also may wait for longer than until after timeout_time has been reached due to scheduling or resource contention delays.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;future&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+int main()
+{
+std::chrono::system_clock::time_point two_seconds_passed = std::chrono::system_clock::now() + std::chrono::seconds(2);
+// Make a future that that takes 1 second to completed
+std::promise&lt;int&gt; p1;
+std::future&lt;int&gt; f_completes = p1.get_future();
+std::thread([](std::promise&lt;int&gt; p1) {
+std::this_thread::sleep_for(std::chrono::seconds(1));
+p1.set_value_at_thread_exit(9);
+},
+std::move(p1))
+.detach();
+// Make a future that that takes 5 seconds to completed
+std::promise&lt;int&gt; p2;
+std::future&lt;int&gt; f_times_out = p2.get_future();
+std::thread([](std::promise&lt;int&gt; p2) {
+std::this_thread::sleep_for(std::chrono::seconds(5));
+p2.set_value_at_thread_exit(8);
+},
+std::move(p2))
+.detach();
+std::cout &lt;&lt; &quot;Waiting for 2 seconds&hellip;&quot; &lt;&lt; std::endl;
+if (std::future_status::ready == f_completes.wait_until(two_seconds_passed)) {
+std::cout &lt;&lt; &quot;f_completes: &quot; &lt;&lt; f_completes.get() &lt;&lt; &quot;\n&quot;;
+} else {
+std::cout &lt;&lt; &quot;f_completes did not complete!\n&quot;;
+}
+if (std::future_status::ready == f_times_out.wait_until(two_seconds_passed)) {
+std::cout &lt;&lt; &quot;f_times_out: &quot; &lt;&lt; f_times_out.get() &lt;&lt; &quot;\n&quot;;
+} else {
+std::cout &lt;&lt; &quot;f_times_out did not complete!\n&quot;;
+}
+std::cout &lt;&lt; &quot;Done!\n&quot;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> Waiting for 2 seconds&mldr;
+ <wbr> f_completes: 9
+ <wbr> f_times_out did not complete!
+ <wbr> Done!</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> waits for the result to become available
+wait <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> waits for the result, returns if it is not available for the specified timeout duration
+wait_for <i>(public member function)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

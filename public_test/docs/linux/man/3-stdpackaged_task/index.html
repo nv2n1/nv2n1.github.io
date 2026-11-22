@@ -1,0 +1,70 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdpackaged_task(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdpackaged_task/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdpackaged_task(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdpackaged_task/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdpackaged_task(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::packaged_task - std::packaged_task</p><h2>Synopsis</h2><pre><code>Defined in header &lt;future&gt;
+template&lt; class &gt; class packaged_task; //not defined (1) (since C++11)
+template&lt; class R, class ...Args &gt;                   (2) (since C++11)
+class packaged_task&lt;R(Args...)&gt;;</code></pre><p>The class template std::packaged_task wraps any Callable target <i>(function, lambda expression, bind expression, or another function object) so that it can be invoked asynchronously. Its return value or ex</i>ception thrown is stored in a shared state which can be accessed through std::future objects.
+Just like std::function, std::packaged_task is a polymorphic, allocator-aware container: the stored callable target may be allocated on heap or with a provided allocator. <i>(until C++17)</i></p><h2>Member functions</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the task object
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destructs the task object
+destructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> moves the task object
+operator= <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if the task object has a valid function
+valid <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swaps two task objects
+swap <i>(public member function)</i></p><h2>Getting the result</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns a std::future associated with the promised result
+get_future <i>(public member function)</i></p><h2>Execution</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> executes the function
+operator() <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> executes the function ensuring that the result is ready only once the current thread exits
+make_ready_at_thread_exit <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> resets the state abandoning any stored results of previous executions
+reset <i>(public member function)</i></p><h2>Non-member functions</h2><p>std::swap(std::packaged_task) specializes the std::swap algorithm
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p><h2>Helper classes</h2><p>std::uses_allocator&lt;std::packaged_task> specializes the std::uses_allocator type trait
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template specialization)</i>
+<i>(C++11)</i><i>(until C++17)</i></p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;thread&gt;
+#include &lt;future&gt;
+#include &lt;functional&gt;
+// unique function to avoid disambiguating the std::pow overload set
+int f(int x, int y)
+{
+return std::pow(x, y);
+}
+void task_lambda()
+{
+std::packaged_task&lt;int(int, int)&gt; task([](int a, int b) {
+return std::pow(a, b);
+});
+std::future&lt;int&gt; result = task.get_future();
+task(2, 9);
+std::cout &lt;&lt; &quot;task_lambda:\t&quot; &lt;&lt; result.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+void task_bind()
+{
+std::packaged_task&lt;int()&gt; task(std::bind(f, 2, 11));
+std::future&lt;int&gt; result = task.get_future();
+task();
+std::cout &lt;&lt; &quot;task_bind:\t&quot; &lt;&lt; result.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+void task_thread()
+{
+std::packaged_task&lt;int(int, int)&gt; task(f);
+std::future&lt;int&gt; result = task.get_future();
+std::thread task_td(std::move(task), 2, 10);
+task_td.join();
+std::cout &lt;&lt; &quot;task_thread:\t&quot; &lt;&lt; result.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+task_lambda();
+task_bind();
+task_thread();
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> task_lambda: 512
+ <wbr> task_bind: 2048
+ <wbr> task_thread: 1024</p><h2>See also</h2><p>future waits for a value that is set asynchronously
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

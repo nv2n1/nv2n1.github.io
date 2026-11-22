@@ -1,0 +1,106 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdfindstdfind_ifstdfind_if_not(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdfindstdfind_ifstdfind_if_not/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdfindstdfind_ifstdfind_if_not(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdfindstdfind_ifstdfind_if_not/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdfindstdfind_ifstdfind_if_not(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::find,std::find_if,std::find_if_not - std::find,std::find_if,std::find_if_not</p><h2>Synopsis</h2><pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class InputIt, class T&gt;
+    (until C++ 20)
+        InputIt find(InputIt first, InputIt last, const T &amp;value);
+template &lt;class InputIt, class T&gt;
+(since C++ 20)
+    constexpr InputIt find(InputIt first, InputIt last, const T &amp;value);
+template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
+(2)(since C++ 17)
+    ForwardIt find(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);
+template &lt;class InputIt, class UnaryPredicate&gt;
+InputIt find_if(InputIt first, InputIt last, (until C++ 20)
+                                                 UnaryPredicate p);
+template &lt;class InputIt, class UnaryPredicate&gt;
+constexpr InputIt find_if(InputIt first, InputIt last, (since C++ 20)
+                                                           UnaryPredicate p);
+(1)
+    template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
+    ForwardIt find_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (4)(since C++ 17)
+                                                                                     UnaryPredicate p);
+(3)
+    template &lt;class InputIt, class UnaryPredicate&gt;
+    (since C++ 11)
+        InputIt find_if_not(InputIt first, InputIt last, (until C++ 20)
+                                                             UnaryPredicate q);
+template &lt;class InputIt, class UnaryPredicate&gt;
+constexpr InputIt find_if_not(InputIt first, InputIt last, (5)(since C++ 20)
+                                                               UnaryPredicate q);
+template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
+ForwardIt find_if_not(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (6)(since C++ 17)
+                                                                                     UnaryPredicate q);</code></pre><p>Returns the first element in the range [first, last) that satisfies specific criteria:</p><ol><li>find searches for an element equal to value</li><li>find_if searches for an element for which predicate p returns true</li><li>find_if_not searches for an element for which predicate q returns false
+2,4,6) Same as (1,3,5), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy>> is true</li></ol><h2>Parameters</h2><p>first, last - the range of elements to examine
+value - value to compare the elements to
+policy - the execution policy to use. See execution_policy for details.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unary predicate which returns true for the required element.
+p - The expression p(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value_category, and must not modify v. Thus, a parameter type of VT&amp;is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is VT unless for VT a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unary predicate which returns false for the required element.
+q - The expression q(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value_category, and must not modify v. Thus, a parameter type of VT&amp;is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is VT unless for VT a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>.</p><h2>Type requirements</h2><ul><li></li></ul><h2 id=inputit-must-meet-the-requirements-of-legacyinputiterator>InputIt must meet the requirements of LegacyInputIterator.</h2><h2 id=forwardit-must-meet-the-requirements-of-legacyforwarditerator>ForwardIt must meet the requirements of LegacyForwardIterator.</h2><p>UnaryPredicate must meet the requirements of Predicate.</p><h2>Return value</h2><p>Iterator to the first element satisfying the condition or last if no such element is found.</p><h2>Complexity</h2><p>At most last - first applications of the predicate</p><h2>Exceptions</h2><p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p><ul><li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li><li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li></ul><h2>Possible implementation</h2><h2>First version</h2><p> <wbr> template&lt;class InputIt, class T>
+ <wbr> constexpr InputIt find(InputIt first, InputIt last, const T& value)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (*first == value) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return last;
+ <wbr> }</p><h2>Second version</h2><p> <wbr> template&lt;class InputIt, class UnaryPredicate>
+ <wbr> constexpr InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (p(*first)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return last;
+ <wbr> }</p><p>Third version</p><p> <wbr> template&lt;class InputIt, class UnaryPredicate>
+ <wbr> constexpr InputIt find_if_not(InputIt first, InputIt last, UnaryPredicate q)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (!q(*first)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return last;
+ <wbr> }</p><h2>Notes</h2><p>If you do not have C++11, an equivalent to std::find_if_not is to use std::find_if with the negated predicate. template &lt;class InputIt, class UnaryPredicate></p><p>InputIt find_if_not(InputIt first, InputIt last, UnaryPredicate q)</p><p>{
+return std::find_if(first, last, std::not1(q));
+}</p><h2>Example</h2><p>The following example finds an integer in a vector of integers.
+// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iterator&gt;
+int main()
+{
+int n1 = 3;
+int n2 = 5;
+std::vector&lt;int&gt; v{0, 1, 2, 3, 4};
+auto result1 = std::find(std::begin(v), std::end(v), n1);
+auto result2 = std::find(std::begin(v), std::end(v), n2);
+if (result1 != std::end(v)) {
+std::cout &lt;&lt; &quot;v contains: &quot; &lt;&lt; n1 &lt;&lt; &lsquo;\n&rsquo;;
+} else {
+std::cout &lt;&lt; &quot;v does not contain: &quot; &lt;&lt; n1 &lt;&lt; &lsquo;\n&rsquo;;
+}
+if (result2 != std::end(v)) {
+std::cout &lt;&lt; &quot;v contains: &quot; &lt;&lt; n2 &lt;&lt; &lsquo;\n&rsquo;;
+} else {
+std::cout &lt;&lt; &quot;v does not contain: &quot; &lt;&lt; n2 &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> v contains: 3
+ <wbr> v does not contain: 5</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first two adjacent items that are equal (or satisfy a given predicate)
+adjacent_find <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the last sequence of elements in a certain range
+find_end <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for any one of a set of elements
+find_first_of <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first position where two ranges differ
+mismatch <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for a range of elements
+search <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

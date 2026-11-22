@@ -1,0 +1,80 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdchronoto_streamstdchronoday(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdchronoto_streamstdchronoday/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdchronoto_streamstdchronoday(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdchronoto_streamstdchronoday/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdchronoto_streamstdchronoday(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::chrono::to_stream(std::chrono::day) - std::chrono::to_stream(std::chrono::day)</p><h2>Synopsis</h2><pre><code>template &lt;class CharT, class Traits&gt;
+std::basic_ostream&lt;CharT, Traits&gt; &amp;(since C++ 20)
+    to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt, const std::chrono::day &amp;d);</code></pre><p>Outputs d to the stream os, formatted according to the null-terminated format string fmt.
+Format string
+The format string consists of zero or more conversion specifiers and ordinary characters. All ordinary characters, excluding the terminating null character, are written into the output stream without modification. Each unmodified conversion specifier begins with a % character followed by a character that determines the behavior of the specifier. Some conversion specifiers have a modified form in which an E or O modifier character is inserted after the % character. Each conversion specifier is replaced by appropriate characters in the output as described below.
+A character sequence in the format string that begins with a % but does not match one of the format specifiers below is interpreted as ordinary characters.
+The following format specifiers are available:
+Conversion Explanation
+specifier
+%% Writes a literal % character.
+%n Writes a newline character.
+%t Writes a horizontal tab character.
+Day
+%d Writes the day of month as a decimal number. If the result is a single decimal digit, it is prefixed with 0.
+%Od The modified command %Od writes the locale&rsquo;s alternative representation.
+%e Writes the day of month as a decimal number. If the result is a single decimal digit, it is prefixed with a space.
+%Oe The modified command %Oe writes the locale&rsquo;s alternative representation.
+The following specifiers are recognized, but will cause std::ios_base::failbit to be set in os:
+Conversion Explanation
+specifier
+Year
+%C Writes the year divided by 100 using floored division. If the result is a single decimal digit, it is prefixed with 0.
+%EC The modified command %EC writes the locale&rsquo;s alternative representation of the century.
+%y Writes the last two decimal digits of the year. If the result is a single digit it is prefixed by 0.
+%Y Writes the year as a decimal number. If the result is less than four digits it is left-padded with 0 to four digits.
+Month
+%b Writes the locale&rsquo;s abbreviated month name.
+%h
+%B Writes the locale&rsquo;s full month name.
+%m Writes the month as a decimal number (January is 01). If the result is a single digit, it is prefixed with 0.
+%Om The modified command %Om writes the locale&rsquo;s alternative representation.
+Day of the week
+%a Writes the locale&rsquo;s abbreviated weekday name.
+%A Writes the locale&rsquo;s full weekday name.
+%u Writes the ISO weekday as a decimal number (1-7), where Monday is 1.
+%Ou The modified command %Ou writes the locale&rsquo;s alternative representation.
+%w Writes the weekday as a decimal number (0-6), where Sunday is 0.
+%Ow The modified command %Ow writes the locale&rsquo;s alternative representation.
+ISO 8601 week-based year
+In ISO 8601 weeks begin with Monday and the first week of the year must satisfy the following requirements:</p><ul><li>Includes January 4</li><li>Includes first Thursday of the year
+%g Writes the last two decimal digits of the ISO 8601 week-based year. If the result is a single digit it is prefixed by 0.
+%G Writes the ISO 8601 week-based year as a decimal number. If the result is less than four digits it is left-padded with 0 to four digits.
+%V Writes the ISO 8601 week of the year as a decimal number. If the result is a single digit, it is prefixed with 0.
+%OV The modified command %OV writes the locale&rsquo;s alternative representation.
+Week/day of the year
+%j Writes the day of the year as a decimal number (January 1 is 001). If the result is less than three digits, it is left-padded with 0 to three digits.
+%U Writes the week number of the year as a decimal number. The first Sunday of the year is the first day of week 01. Days of the same year prior to that are in week 00. If the result is a single digit, it is prefixed with 0.
+%OU The modified command %OU writes the locale&rsquo;s alternative representation.
+%W Writes the week number of the year as a decimal number. The first Monday of the year is the first day of week 01. Days of the same year prior to that are in week 00. If the result is a single digit, it is prefixed with 0.
+%OW The modified command %OW writes the locale&rsquo;s alternative representation.
+Date
+%D Equivalent to "%m/%d/%y".
+%F Equivalent to "%Y-%m-%d".
+%x Writes the locale&rsquo;s date representation.
+%Ex The modified command %Ex produces the locale&rsquo;s alternate date representation.
+Time of day
+%H Writes the hour (24-hour clock) as a decimal number. If the result is a single digit, it is prefixed with 0.
+%OH The modified command %OH writes the locale&rsquo;s alternative representation.
+%I Writes the hour (12-hour clock) as a decimal number. If the result is a single digit, it is prefixed with 0.
+%OI The modified command %OI writes the locale&rsquo;s alternative representation.
+%M Writes the minute as a decimal number. If the result is a single digit, it is prefixed with 0.
+%OM The modified command %OM writes the locale&rsquo;s alternative representation.
+%S Writes the second as a decimal number. If the number of seconds is less than 10, the result is prefixed with 0.
+%OS If the precision of the input cannot be exactly represented with seconds, then the format is a decimal floating point number with a fixed format and a precision matching that of the precision of the input (or to a microseconds precision if the conversion to floating point decimal seconds cannot be made within 18 fractional digits). The character for the decimal point is localized according to the locale.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The modified command %OS writes the locale&rsquo;s alternative representation.
+%p Writes the locale&rsquo;s equivalent of the AM/PM designations associated with a 12-hour clock.
+%R Equivalent to "%H:%M".
+%T Equivalent to "%H:%M:%S".
+%r Writes the locale&rsquo;s 12-hour clock time.
+%X Writes the locale&rsquo;s time representation.
+%EX The modified command %EX writes the locale&rsquo;s alternate time representation.</li></ul><h2>Miscellaneous</h2><p>%c Writes the locale&rsquo;s date and time representation.
+%Ec The modified command %Ec writes the locale&rsquo;s alternative date and time representation.
+%z Writes the offset from UTC in the ISO 8601 format. For example -0430 refers to 4 hours 30 minutes behind UTC. If the offset is zero, +0000 is used.
+%Ez The modified commands %Ez and %Oz insert a : between the hours and minutes (e.g., -04:30).
+%Oz
+%Z Writes the time zone abbreviation.</p><h2>Return value</h2><p>os</p><h2>See also</h2><p>format formats a streamable chrono object for insertion
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(C++20)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

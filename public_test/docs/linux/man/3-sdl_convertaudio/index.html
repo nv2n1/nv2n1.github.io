@@ -1,0 +1,60 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sdl_convertaudio(3) · Linux Manual Pages</title><meta name=description content="SDL_ConvertAudio – Convert audio data to a desired audio format."><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-sdl_convertaudio/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sdl_convertaudio(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-sdl_convertaudio/"><meta property="og:description" content="SDL_ConvertAudio – Convert audio data to a desired audio format."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>sdl_convertaudio(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>SDL_ConvertAudio &#8211; Convert audio data to a desired audio format.</p><h2>Synopsis</h2><p><code>#include "SDL.h"</p><p>int SDL_ConvertAudio</code>(<code>SDL_AudioCVT *cvt</code>);</p><h2>Description</h2><p><code>SDL_ConvertAudio</code> takes one parameter, <code>cvt</code>, which was previously initilized. Initilizing a <i></i><code>SDL_AudioCVT</code> is a two step process. First of all, the structure must be passed to <i></i><code>SDL_BuildAudioCVT</code> along with source and destination format parameters. Secondly, the <code>cvt</code>-><code>buf</code> and <code>cvt</code>-><code>len</code> fields must be setup. <code>cvt</code>-><code>buf</code> should point to the audio data and <code>cvt</code>-><code>len</code> should be set to the length of the audio data in bytes. Remember, the length of the buffer pointed to by <code>buf</code> show be <code>len</code>*<code>len_mult</code> bytes in length.</p><p>Once the <code>SDL_AudioCVT</code>structure is initilized then we can pass it to <code>SDL_ConvertAudio</code>, which will convert the audio data pointer to by <code>cvt</code>-><code>buf</code>. If <code>SDL_ConvertAudio</code> returned <code>0</code> then the conversion was completed successfully, otherwise <code>-1</code> is returned.</p><p>If the conversion completed successfully then the converted audio data can be read from <code>cvt</code>-><code>buf</code>. The amount of valid, converted, audio data in the buffer is equal to <code>cvt</code>-><code>len</code>*<code>cvt</code>-><code>len_ratio</code>.</p><h2>Examples</h2><pre><tt>/* Converting some WAV data to hardware format */
+void my_audio_callback(void *userdata, Uint8 *stream, int len);
+SDL_AudioSpec *desired, *obtained;
+SDL_AudioSpec wav_spec;
+SDL_AudioCVT wav_cvt;
+Uint32 wav_len;
+Uint8 *wav_buf;
+int ret;
+/* Allocated audio specs */
+desired=(SDL_AudioSpec *)malloc(sizeof(SDL_AudioSpec));
+obtained=(SDL_AudioSpec *)malloc(sizeof(SDL_AudioSpec));
+/* Set desired format */
+desired-&gt;freq=22050;
+desired-&gt;format=AUDIO_S16LSB;
+desired-&gt;samples=8192;
+desired-&gt;callback=my_audio_callback;
+desired-&gt;userdata=NULL;
+/* Open the audio device */
+if ( SDL_OpenAudio(desired, obtained) &lt; 0 ){
+ fprintf(stderr, &quot;Couldn't open audio: %s
+&quot;, SDL_GetError());
+ exit(-1);
+}
+free(desired);
+/* Load the test.wav */
+if( SDL_LoadWAV(&quot;test.wav&quot;, &amp;wav_spec, &amp;wav_buf, &amp;wav_len) == NULL ){
+ fprintf(stderr, &quot;Could not open test.wav: %s
+&quot;, SDL_GetError());
+ SDL_CloseAudio();
+ free(obtained);
+ exit(-1);
+}
+/* Build AudioCVT */
+ret = SDL_BuildAudioCVT(&amp;wav_cvt,
+ wav_spec.format, wav_spec.channels, wav_spec.freq,
+ obtained-&gt;format, obtained-&gt;channels, obtained-&gt;freq);
+/* Check that the convert was built */
+if(ret==-1){
+ fprintf(stderr, &quot;Couldn't build converter!
+&quot;);
+ SDL_CloseAudio();
+ free(obtained);
+ SDL_FreeWAV(wav_buf);
+}
+/* Setup for conversion */
+wav_cvt.buf=(Uint8 *)malloc(wav_len*wav_cvt.len_mult);
+wav_cvt.len=wav_len;
+memcpy(wav_cvt.buf, wav_buf, wav_len);
+/* We can delete to original WAV data now */
+SDL_FreeWAV(wav_buf);
+/* And now we're ready to convert */
+SDL_ConvertAudio(&amp;wav_cvt);
+/* do whatever */
+.
+.
+.
+.
+</tt></pre><h2>See Also</h2><p><i></i><code>SDL_BuildAudioCVT</code>, <i></i><code>SDL_AudioCVT</code></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

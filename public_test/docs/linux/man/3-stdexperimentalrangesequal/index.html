@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdexperimentalrangesequal(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangesequal/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdexperimentalrangesequal(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangesequal/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdexperimentalrangesequal(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::experimental::ranges::equal - std::experimental::ranges::equal</p><h2>Synopsis</h2><pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
+    template &lt;InputIterator I1, Sentinel&lt;I1&gt; S1, InputIterator I2, Sentinel&lt;I2&gt; S2,
+              class Pred = ranges::equal_to&lt;&gt;,
+              class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
+    (1)(ranges TS)
+        requires IndirectlyComparable&lt;I1, I2, Pred, Proj1, Proj2&gt;
+bool equal(I1 first1, S1 last1, I2 first2, S2 last2, Pred pred = Pred{},
+           Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
+template &lt;InputRange R1, InputRange R2, class Pred = ranges::equal_to&lt;&gt;,
+          class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
+requires IndirectlyComparable &lt; ranges::iterator_t&lt;R1&gt;, ranges::iterator_t&lt;R2&gt;, (2)
+(ranges TS)
+    Pred,
+    Proj1, Proj2 &gt;
+               bool equal(R1 &amp;&amp;r1, R2 &amp;&amp;r2, Pred pred = Pred{},
+                          Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
+template &lt;InputIterator I1, Sentinel&lt;I1&gt; S1, class I2,
+          class Pred = ranges::equal_to&lt;&gt;,
+          class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
+    (ranges TS)
+        requires InputIterator&lt;std::decay_t&lt;I2&gt;&gt; &amp;&amp; !Range&lt;I2&gt; &amp;&amp;
+    (3)(deprecated)
+        IndirectlyComparable&lt;I1, std::decay_t&lt;I2&gt;, Pred, Proj1, Proj2&gt;
+    bool equal(I1 first1, S1 last1, I2 &amp;&amp;first2_, Pred pred = Pred{},
+               Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
+template &lt;InputRange R1, class I2, class Pred = ranges::equal_to&lt;&gt;,
+          class Proj1 = ranges::identity, class Proj2 = ranges::identity&gt;
+requires InputIterator&lt;std::decay_t&lt;I2&gt;&gt; &amp;&amp; !Range&lt;I2&gt; &amp;&amp; (4)(ranges TS)
+                                                              IndirectlyComparable&lt;ranges::iterator_t&lt;R1&gt;, std::decay_t&lt;I2&gt;, Pred, Proj1, Proj2&gt;(deprecated)
+                                                                  bool
+                                                                  equal(R1 &amp;&amp; r1, I2 &amp;&amp;first2_, Pred pred = Pred{},
+                                                                        Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
+1) Returns true if the range [first1, last1) is equal to the range [first2, last2), and false otherwise.
+2) Same as (1), but uses r1 as the first source range and r2 as the second source range, as if using ranges::begin(r1) as first1, ranges::end(r1) as last1, ranges::begin(r2) as first2, and ranges::end(r2) as last2.
+3) Same as (1), except that the second range is considered to end when either the first range is exhausted or the first mismatch is detected. Equivalent to return last1 == ranges::mismatch(first1, last1, std::forward&lt;I2&gt;(first2_), comp, proj1, proj2).in1();
+4) Same as (3), but uses r1 as the first source range, as if using ranges::begin(r1) as first1 and ranges::end(r1) as last1.
+Two ranges are considered equal if they have the same number of elements and, for every iterator i in the range [first1,last1), ranges::invoke(pred, ranges::invoke(proj1, *i), ranges::invoke(proj2, *(first2 + (i - first1)))) is true.
+Notwithstanding the declarations depicted above, the actual number and order of template parameters for algorithm declarations is unspecified. Thus, if explicit template arguments are used when calling an algorithm, the program is probably non-portable.
+</code></pre><h2>Parameters</h2><p>first1, last1 - the first range of the elements
+r1 - the first range of the elements
+first2, last2 - the second range of the elements
+r2 - the second range of the elements
+first2_ - the beginning of the second range of the elements
+pred - predicate to apply to the projected elements
+proj1 - projection to apply to the elements in the first range
+proj2 - projection to apply to the elements in the second range</p><h2>Return value</h2><p>true if the two ranges are equal, otherwise returns false.</p><h2>Notes</h2><p>ranges::equal should not be used to compare the ranges formed by the iterators from std::unordered_set, std::unordered_multiset, std::unordered_map, or std::unordered_multimap because the order in which the elements are stored in those containers may be different even if the two containers store the same elements.
+When comparing entire containers for equality, operator== for the corresponding container are usually preferred.</p><h2>Complexity</h2><p>1-2) If SizedSentinel&lt;S1, I1> && SizedSentinel&lt;S2, I2> is satisfied and last1 - first1 != last2 - first2, no applications of the predicate and projections. Otherwise, at most min(last1 - first1, last2 - first2) applications of the predicate and each projection.
+3-4) At most last1 - first1 applications of the predicate and each projection.</p><h2>Possible implementation</h2><p> <wbr> namespace detail
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> template&lt; InputIterator I1, SizedSentinel&lt;I1> S1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> InputIterator I2, SizedSentinel&lt;I1> S2 >
+ <wbr> <wbr> <wbr> <wbr> <wbr> bool check_size(I1& first1, S1& last1, I2& first2, S2& last2)
+ <wbr> <wbr> <wbr> <wbr> <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return last1 - first1 != last2 - first2;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> template&lt; InputIterator I1, Sentinel&lt;I1> S1, InputIterator I2, Sentinel&lt;I1> S2 >
+ <wbr> <wbr> <wbr> <wbr> <wbr> bool check_size(I1& first1, S1& last1, I2& first2, S2& last2)
+ <wbr> <wbr> <wbr> <wbr> <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return false;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> }</p><p> <wbr> template&lt; InputIterator I1, Sentinel&lt;I1> S1, InputIterator I2, Sentinel&lt;I2> S2,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class Pred = ranges::equal_to&lt;>,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class Proj1 = ranges::identity, class Proj2 = ranges::identity >
+ <wbr> <wbr> <wbr> requires IndirectlyComparable&lt;I1, I2, Pred, Proj1, Proj2>
+ <wbr> bool equal(I1 first1, S1 last1, I2 first2, S2 last2, Pred pred = Pred{},
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{})
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> if(detail::check_size(first1, last1, first2, last2)) return false;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for(; first1 != last1 && first2 != last2; (void) ++first1, (void)++first2) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if(!ranges::invoke(pred, ranges::invoke(proj1, *first1),
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ranges::invoke(proj2, *first2))) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return false;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return first1 == last1 && first2 == last2;
+ <wbr> }</p><h2>Example</h2><p> This section is incomplete
+ Reason: no example</p><h2>See Also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> determines if two sets of elements are the same
+equal <i>(function template)</i>
+find finds the first element satisfying specific criteria
+find_if <i>(function template)</i>
+find_if_not
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns true if one range is lexicographically less than another
+lexicographical_compare <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first position where two ranges differ
+mismatch <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for a range of elements
+search <i>(function template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

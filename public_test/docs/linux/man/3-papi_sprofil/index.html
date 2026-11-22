@@ -1,0 +1,37 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>papi_sprofil(3) · Linux Manual Pages</title><meta name=description content="PAPI_sprofil –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-papi_sprofil/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="papi_sprofil(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-papi_sprofil/"><meta property="og:description" content="PAPI_sprofil –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>papi_sprofil(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>PAPI_sprofil &#8211;</p><p>Generate PC histogram data from multiple code regions where hardware counter overflow occurs.</p><h2>Synopsis</h2><h2>Detailed Description</h2><p><code>C Interface:</code></p><dl compact><dd>#include &lt;<code>papi.h</code>></dd><p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_sprofil(&nbsp;<wbr>PAPI_sprofil_t&nbsp;<wbr>*&nbsp;<wbr>prof, int profcnt, int EventSet, int EventCode, int threshold, int flags&nbsp;<wbr>)</code>;</dl><p><code>Parameters:</code></p><dl compact><dd><i>*prof</i> pointer to an array of <code>PAPI_sprofil_t</code> structures. Each copy of the structure contains the following:</dd><dl compact><dt>&bull;</dt><dd>buf &#8212; pointer to a buffer of bufsiz bytes in which the histogram counts are stored in an array of unsigned short, unsigned int, or unsigned long long values, or &#8216;buckets&#8217;. The size of the buckets is determined by values in the flags argument.</dd><dt>&bull;</dt><dd>bufsiz &#8212; the size of the histogram buffer in bytes. It is computed from the length of the code region to be profiled, the size of the buckets, and the scale factor as discussed below.</dd><dt>&bull;</dt><dd>offset &#8212; the start address of the region to be profiled.</dd><dt>&bull;</dt><dd>scale &#8212; broadly and historically speaking, a contraction factor that indicates how much smaller the histogram buffer is than the region to be profiled. More precisely, scale is interpreted as an unsigned 16-bit fixed-point fraction with the decimal point implied on the left. Its value is the reciprocal of the number of addresses in a subdivision, per counter of histogram buffer.</dd></dl><p><i>profcnt</i> number of structures in the prof array for hardware profiling.<br><i>EventSet</i> The PAPI EventSet to profile. This EventSet is marked as profiling-ready, but profiling doesn&#8217;t actually start until a <code>PAPI_start()</code> call is issued.<br><i>EventCode</i> Code of the Event in the EventSet to profile. This event must already be a member of the EventSet.<br><i>threshold</i> minimum number of events that must occur before the PC is sampled. If hardware overflow is supported for your component, this threshold will trigger an interrupt when reached. Otherwise, the counters will be sampled periodically and the PC will be recorded for the first sample that exceeds the threshold. If the value of threshold is 0, profiling will be disabled for this event.<br><i>flags</i> bit pattern to control profiling behavior. Defined values are given in a table in the documentation for PAPI_pofil<br>&nbsp;<wbr><br>&nbsp;<wbr></dl><p><code>Return values:</code></p><dl compact><dd><i>Return</i> values for <code>PAPI_sprofil()</code> are identical to those for <code>PAPI_profil</code>. Please refer to that page for further details.<br>&nbsp;<wbr><br>&nbsp;<wbr></dd></dl><p><code>PAPI_sprofil()</code> is a structure driven profiler that profiles one or more disjoint regions of code in a single call. It accepts a pointer to a preinitialized array of sprofil structures, and initiates profiling based on the values contained in the array. Each structure in the array defines the profiling parameters that are normally passed to <code>PAPI_profil()</code>. For more information on profiling, <code>PAPI_profil</code><br>&nbsp;<wbr><br>&nbsp;<wbr></p><p><code>Example:</code></p><dl compact><dd><pre>* int retval;
+* unsigned long length;
+* PAPI_exe_info_t *prginfo;
+* unsigned short *profbuf1, *profbuf2, profbucket;
+* PAPI_sprofil_t sprof[3];
+*
+* prginfo = PAPI_get_executable_info();
+* if (prginfo == NULL) handle_error( NULL );
+* length = (unsigned long)(prginfo-&gt;text_end - prginfo-&gt;text_start);
+* // Allocate 2 buffers of equal length
+* profbuf1 = (unsigned short *)malloc(length);
+* profbuf2 = (unsigned short *)malloc(length);
+* if ((profbuf1 == NULL) || (profbuf2 == NULL))
+* handle_error( NULL );
+* memset(profbuf1,0x00,length);
+* memset(profbuf2,0x00,length);
+* // First buffer
+* sprof[0].pr_base = profbuf1;
+* sprof[0].pr_size = length;
+* sprof[0].pr_off = (caddr_t) DO_FLOPS;
+* sprof[0].pr_scale = 0x10000;
+* // Second buffer
+* sprof[1].pr_base = profbuf2;
+* sprof[1].pr_size = length;
+* sprof[1].pr_off = (caddr_t) DO_READS;
+* sprof[1].pr_scale = 0x10000;
+* // Overflow bucket
+* sprof[2].pr_base = profbucket;
+* sprof[2].pr_size = 1;
+* sprof[2].pr_off = 0;
+* sprof[2].pr_scale = 0x0002;
+* retval = PAPI_sprofil(sprof, EventSet, PAPI_FP_INS, 1000000,
+* PAPI_PROFIL_POSIX | PAPI_PROFIL_BUCKET_16)) != PAPI_OK)
+* if ( retval != PAPI_OK ) handle_error( retval );
+* </pre></dd></dl><p><code>See Also:</code></p><dl compact><dd><code>PAPI_overflow</code></dd><p><code>PAPI_get_executable_info</code></p><p><code>PAPI_profil</code></dl><h2>Author</h2><p>Generated automatically by Doxygen for PAPI from the source code.</p></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

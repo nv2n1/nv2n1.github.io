@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>spteqr-f(3) · Linux Manual Pages</title><meta name=description content="spteqr.f –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-spteqr-f/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="spteqr-f(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-spteqr-f/"><meta property="og:description" content="spteqr.f –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>spteqr-f(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>spteqr.f &#8211;</p><h2>Synopsis</h2><h3>Functions/Subroutines</h3><p>subroutine <code>spteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br><i></i><code>SPTEQR</code></p><h2>Function/Subroutine Documentation</h2><h3>subroutine spteqr (characterCOMPZ, integerN, real, dimension( * )D, real, dimension( * )E, real, dimension( ldz, * )Z, integerLDZ, real, dimension( * )WORK, integerINFO)</h3><p><code>SPTEQR</code></p><p><code>Purpose:</code></p><dl compact><dt></dt><dd><pre>
+ SPTEQR computes all eigenvalues and, optionally, eigenvectors of a
+ symmetric positive definite tridiagonal matrix by first factoring the
+ matrix using SPTTRF, and then calling SBDSQR to compute the singular
+ values of the bidiagonal factor.
+ This routine computes the eigenvalues of the positive definite
+ tridiagonal matrix to high relative accuracy.  This means that if the
+ eigenvalues range over many orders of magnitude in size, then the
+ small eigenvalues and corresponding eigenvectors will be computed
+ more accurately than, for example, with the standard QR method.
+ The eigenvectors of a full or band symmetric positive definite matrix
+ can also be found if SSYTRD, SSPTRD, or SSBTRD has been used to
+ reduce this matrix to tridiagonal form. (The reduction to tridiagonal
+ form, however, may preclude the possibility of obtaining high
+ relative accuracy in the small eigenvalues of the original matrix, if
+ these eigenvalues range over many orders of magnitude.)
+</pre><p>&nbsp;<wbr></dd></dl><p><code>Parameters:</code></p><dl compact><dt></dt><dd><i>COMPZ</i></dd><pre>
+          COMPZ is CHARACTER*1
+          = 'N':  Compute eigenvalues only.
+          = 'V':  Compute eigenvectors of original symmetric
+                  matrix also.  Array Z contains the orthogonal
+                  matrix used to reduce the original matrix to
+                  tridiagonal form.
+          = 'I':  Compute eigenvectors of tridiagonal matrix also.
+</pre><p><i>N</i></p><pre>
+          N is INTEGER
+          The order of the matrix.  N &gt;= 0.
+</pre><p><i>D</i></p><pre>
+          D is REAL array, dimension (N)
+          On entry, the n diagonal elements of the tridiagonal
+          matrix.
+          On normal exit, D contains the eigenvalues, in descending
+          order.
+</pre><p><i>E</i></p><pre>
+          E is REAL array, dimension (N-1)
+          On entry, the (n-1) subdiagonal elements of the tridiagonal
+          matrix.
+          On exit, E has been destroyed.
+</pre><p><i>Z</i></p><pre>
+          Z is REAL array, dimension (LDZ, N)
+          On entry, if COMPZ = 'V', the orthogonal matrix used in the
+          reduction to tridiagonal form.
+          On exit, if COMPZ = 'V', the orthonormal eigenvectors of the
+          original symmetric matrix;
+          if COMPZ = 'I', the orthonormal eigenvectors of the
+          tridiagonal matrix.
+          If INFO &gt; 0 on exit, Z contains the eigenvectors associated
+          with only the stored eigenvalues.
+          If  COMPZ = 'N', then Z is not referenced.
+</pre><p><i>LDZ</i></p><pre>
+          LDZ is INTEGER
+          The leading dimension of the array Z.  LDZ &gt;= 1, and if
+          COMPZ = 'V' or 'I', LDZ &gt;= max(1,N).
+</pre><p><i>WORK</i></p><pre>
+          WORK is REAL array, dimension (4*N)
+</pre><p><i>INFO</i></p><pre>
+          INFO is INTEGER
+          = 0:  successful exit.
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.
+          &gt; 0:  if INFO = i, and i is:
+                &lt;= N  the Cholesky factorization of the matrix could
+                      not be performed because the i-th principal minor
+                      was not positive definite.
+                &gt; N   the SVD algorithm failed to converge;
+                      if INFO = N+i, i off-diagonal elements of the
+                      bidiagonal factor did not converge to zero.
+</pre><p>&nbsp;<wbr></dl><p><code>Author:</code></p><dl compact><dt></dt><dd>Univ. of Tennessee</dd><p>Univ. of California Berkeley</p><p>Univ. of Colorado Denver</p><p>NAG Ltd.</dl><p><code>Date:</code></p><dl compact><dt></dt><dd>September 2012</dd></dl><p>Definition at line 146 of file spteqr.f.</p><h2>Author</h2><p>Generated automatically by Doxygen for LAPACK from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

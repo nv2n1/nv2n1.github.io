@@ -1,0 +1,71 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdexperimentalshared_ptrshared_ptr(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdexperimentalshared_ptrshared_ptr/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdexperimentalshared_ptrshared_ptr(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdexperimentalshared_ptrshared_ptr/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdexperimentalshared_ptrshared_ptr(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::experimental::shared_ptr&lt;T>::shared_ptr - std::experimental::shared_ptr&lt;T>::shared_ptr</p><h2>Synopsis</h2><pre><code>constexpr shared_ptr() noexcept;
+(1)
+    constexpr shared_ptr(std::nullptr_t) noexcept;
+(2)
+    template &lt;class Y&gt;
+    (3)
+        explicit shared_ptr(Y *ptr);
+template &lt;class Y, class Deleter&gt;
+(4)
+    shared_ptr(Y *ptr, Deleter d);
+template &lt;class Deleter&gt;
+(5)
+    shared_ptr(std::nullptr_t ptr, Deleter d);
+template &lt;class Y, class Deleter, class Alloc&gt;
+(6)
+    shared_ptr(Y *ptr, Deleter d, Alloc alloc);
+template &lt;class Deleter, class Alloc&gt;
+(7)
+    shared_ptr(std::nullptr_t ptr, Deleter d, Alloc alloc);
+template &lt;class Y&gt;
+(8)
+    shared_ptr(const shared_ptr&lt;Y&gt; &amp;r, element_type *ptr) noexcept;
+shared_ptr(const shared_ptr &amp;r) noexcept;
+(9)
+    template &lt;class Y&gt;
+    (9)
+        shared_ptr(const shared_ptr&lt;Y&gt; &amp;r) noexcept;
+shared_ptr(shared_ptr &amp;&amp;r) noexcept;
+(10)
+    template &lt;class Y&gt;
+    (10)
+        shared_ptr(shared_ptr&lt;Y&gt; &amp;&amp;r) noexcept;
+template &lt;class Y&gt;
+(11)
+    explicit shared_ptr(const std::weak_ptr&lt;Y&gt; &amp;r);
+template &lt;class Y&gt;
+(12)
+    shared_ptr(std::auto_ptr&lt;Y&gt; &amp;&amp;r);
+template &lt;class Y, class Deleter&gt;
+(13)
+    shared_ptr(std::unique_ptr&lt;Y, Deleter&gt; &amp;&amp;r);
+Constructs new shared_ptr from a variety of pointer types that refer to an object to manage.
+For the purposes of the description below, a pointer type Y* is said to be compatible with a pointer type T* if either Y* is convertible to T* or Y is the array type U[N] and T is U cv [] (where cv is some set of cv-qualifiers).
+1-2) Constructs a shared_ptr with no managed object, i.e. empty shared_ptr
+3-7) Constructs a shared_ptr with ptr as the pointer to the managed object. If T is an array type U[N], Y(*)[N] must be convertible to T*. If T is an array type U[], Y(*)[] must be convertible to T*. Otherwise, Y* must be convertible to T*. Additionally:
+3) Uses a delete-expression (delete ptr, if T is not an array type; delete[] ptr if T is an array type) as the deleter. Y must be a complete type. That delete expression must be well formed, have well-defined behavior and not throw any exceptions.
+4-5) Uses the specified deleter d as the deleter. The expression d(ptr) must be well formed, have well-defined behavior and not throw any exceptions. Deleter must be CopyConstructible, and its copy constructor and destructor must not throw exceptions.
+6-7) Same as (4-5), but additionally uses a copy of alloc for allocation of data for internal use. Alloc must be a Allocator, and its copy constructor and destructor must not throw exceptions.
+8) The aliasing constructor: constructs a shared_ptr which shares ownership information with r, but holds an unrelated and unmanaged pointer ptr. Even if this shared_ptr is the last of the group to go out of scope, it will call the destructor for the object originally managed by r. However, calling get() on this will always return a copy of ptr. It is the responsibility of the programmer to make sure that this ptr remains valid as long as this shared_ptr exists, such as in the typical use cases where ptr is a member of the object managed by r or is an alias (e.g., downcast) of r.get()
+9) Constructs a shared_ptr which shares ownership of the object managed by r. If r manages no object, *this manages no object too. The template overload doesn't participate in overload resolution if Y* is not compatible with T*.
+10) Move-constructs a shared_ptr from r. After the construction, *this contains a copy of the previous state of r, r is empty. The template overload doesn't participate in overload resolution if Y* is not compatible with T*.
+11) Constructs a shared_ptr which shares ownership of the object managed by r. Y* must be compatible with T*. Note that r.lock() may be used for the same purpose: the difference is that this constructor throws an exception if the argument is empty, while weak_ptr&lt;T&gt;::lock() constructs an empty shared_ptr in that case.
+12) Constructs a shared_ptr that stores and owns the object formerly owned by r. Y* must be convertible to T*. After construction, r is empty.
+13) Constructs a shared_ptr which manages the object currently managed by r. The deleter associated with r is stored for future deletion of the managed object. r manages no object after the call. This overload doesn't participate in overload resolution if Y* is not compatible with T*.
+If D is a reference type, equivalent to shared_ptr(r.release(), std::ref(r.get_deleter()). Otherwise, equivalent to shared_ptr(r.release(), r.get_deleter())
+</code></pre><h2>Notes</h2><p>When constructing a shared_ptr from a raw pointer to an object of a type derived from std::experimental::enable_shared_from_this, the constructors of shared_ptr update the private weak_ptr member of the std::experimental::enable_shared_from_this base so that future calls to shared_from_this() would share ownership with the shared_ptr created by this raw pointer constructor.
+The raw pointer overloads assume ownership of the pointed-to object, and so constructing a shared_ptr using the raw pointer overload for an object that is already managed by a shared_ptr may lead to undefined behavior, even if the object is of a type derived from std::experimental::enable_shared_from_this.</p><h2>Parameters</h2><p>ptr - a pointer to an object to manage
+d - a deleter to use to destroy the object
+alloc - an allocator to use for allocations of data for internal use
+r - another smart pointer to share the ownership to or acquire the ownership from</p><h2>Exceptions</h2><ol start=3><li><p>std::bad_alloc if required additional memory could not be obtained. May throw implementation-defined exception for other errors. The applicable delete-expression (delete ptr if T is not an array type, delete[] ptr otherwise) is called if an exception occurs.
+4-7) std::bad_alloc if required additional memory could not be obtained. May throw implementation-defined exception for other errors. d(ptr) is called if an exception occurs.</p></li><li><p>std::bad_weak_ptr if r.expired() == true. The constructor has no effect in this case.</p></li><li><p>std::bad_alloc if required additional memory could not be obtained. May throw implementation-defined exception for other errors. This constructor has no effect if an exception occurs.</p></li><li><p>If an exception is thrown, the constructor has no effects.</p></li></ol><h2>Example</h2><p> This section is incomplete
+ Reason: no example</p><h2>See also</h2><p>make_shared
+make_shared_default_init creates a shared pointer that manages a new object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(C++20)
+allocate_shared
+allocate_shared_default_init creates a shared pointer that manages a new object allocated using an allocator
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(C++20)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

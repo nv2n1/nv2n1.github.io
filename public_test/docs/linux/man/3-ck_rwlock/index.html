@@ -1,0 +1,34 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ck_rwlock(3) · Linux Manual Pages</title><meta name=description content="ck_rwlock_init ck_rwlock_write_lock ck_rwlock_write_unlock ck_rwlock_write_trylock ck_rwlock_write_downgrade ck_rwlock_locked_writer ck_rwlock_read_lock ck_rwlock_read_trylock ck_rwlock_read_unlock..."><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-ck_rwlock/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="ck_rwlock(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-ck_rwlock/"><meta property="og:description" content="ck_rwlock_init ck_rwlock_write_lock ck_rwlock_write_unlock ck_rwlock_write_trylock ck_rwlock_write_downgrade ck_rwlock_locked_writer ck_rwlock_read_lock ck_rwlock_read_trylock ck_rwlock_read_unlock..."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>ck_rwlock(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p><code>ck_rwlock_init</code> <code>ck_rwlock_write_lock</code> <code>ck_rwlock_write_unlock</code> <code>ck_rwlock_write_trylock</code> <code>ck_rwlock_write_downgrade</code> <code>ck_rwlock_locked_writer</code> <code>ck_rwlock_read_lock</code> <code>ck_rwlock_read_trylock</code> <code>ck_rwlock_read_unlock</code> <code>ck_rwlock_locked_reader</code> <code>ck_rwlock_recursive_write_lock</code> <code>ck_rwlock_recursive_write_trylock</code> <code>ck_rwlock_recurisve_write_unlock</code> <code>ck_rwlock_recursive_read_lock</code> <code>ck_rwlock_recursive_read_trylock</code> <code>ck_rwlock_recursive_read_unlock</code> &#8211; centralized write-biased reader-writer locks</p><h2>LIBRARY</h2><p>Concurrency Kit (libck, -lck)</p><h2>SYNOPSIS</h2><p>In ck_rwlock.h</p><p><code>ck_rwlock_t lock = CK_RWLOCK_INITIALIZER;</code></p><p>Ft void Fn ck_rwlock_init ck_rwlock_t *lock Ft void Fn ck_rwlock_write_lock ck_rwlock_t *lock Ft void Fn ck_rwlock_write_unlock ck_rwlock_t *lock Ft bool Fn ck_rwlock_write_trylock ck_rwlock_t *lock Ft bool Fn ck_rwlock_write_downgrade ck_rwlock_t *lock Ft bool Fn ck_rwlock_locked_writer ck_rwlock_t *lock Ft void Fn ck_rwlock_read_lock ck_rwlock_t *lock Ft bool Fn ck_rwlock_read_trylock ck_rwlock_t *lock Ft void Fn ck_rwlock_read_unlock ck_rwlock_t *lock Ft bool Fn ck_rwlock_locked_reader ck_rwlock_t *lock</p><p><code>ck_rwlock_recursive_t lock = CK_RWLOCK_RECURSIVE_INITIALIZER;</code></p><p>Ft void Fn ck_rwlock_recursive_write_lock ck_rwlock_recursive_t *lock unsigned int tid Ft bool Fn ck_rwlock_recursive_write_trylock ck_rwlock_recursive_t *lock unsigned int tid Ft void Fn ck_rwlock_recurisve_write_unlock ck_rwlock_recursive_t *lock Ft void Fn ck_rwlock_recursive_read_lock ck_rwlock_recursive_t *lock Ft bool Fn ck_rwlock_recursive_read_trylock ck_rwlock_recursive_t *lock Ft void Fn ck_rwlock_recursive_read_unlock ck_rwlock_recursive_t *lock</p><h2>DESCRIPTION</h2><p>This is a centralized write-biased reader-writer lock. It requires very little space overhead and has a low latency fast path. Write-side recursion requires usage of ck_rwlock_recursive. Read-side recursion is disallowed. The Fn ck_rwlock_write_downgrade function degrades the caller&#8217;s write-side acquisition to a read-side acquisition without forfeit of current critical section.</p><h2>EXAMPLE</h2><blockquote><pre><code>
+#include &lt;ck_rwlock.h&gt;
+static ck_rwlock_t lock = CK_RWLOCK_INITIALIZER;
+static void
+reader(void)
+{
+    for (;;) {
+        ck_rwlock_read_lock(&amp;lock);
+        /* Read-side critical section. */
+        ck_rwlock_read_unlock(&amp;lock);
+        if (ck_rwlock_read_trylock(&amp;lock) == true) {
+            /* Read-side critical section. */
+            ck_rwlock_read_unlock(&amp;lock);
+        }
+    }
+    return;
+}
+static void
+writer(void)
+{
+    for (;;) {
+        ck_rwlock_write_lock(&amp;lock);
+        /* Write-side critical section. */
+        ck_rwlock_write_unlock(&amp;lock);
+        if (ck_rwlock_write_trylock(&amp;lock, 1) == true) {
+            /* Write-side critical section. */
+            ck_rwlock_write_unlock(&amp;lock);
+        }
+    }
+    return;
+}
+</code></pre></blockquote><h2>SEE ALSO</h2><p>ck_brlock3, ck_elide3</p><p>Additional information available at <a rel=nofollow href=http://concurrencykit.org/>http://concurrencykit.org/</a></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

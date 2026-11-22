@@ -1,0 +1,33 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>les(8) · Linux Manual Pages</title><meta name=description content="les, bus – ATM LAN Emulation service demons"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/8-les/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="les(8) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/8-les/"><meta property="og:description" content="les, bus – ATM LAN Emulation service demons"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/8/>Section 8</a></p><article><header class=man-header><h1>les(8)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>les, bus &#8211; ATM LAN Emulation service demons</p><h2>Synopsis</h2><p><code>les</code> [<code>-d&nbsp;<wbr></code><i>module</i>] [<code>-m&nbsp;<wbr></code><i>module</i>] [<code>-f&nbsp;<wbr></code><i>configuration_file</i>]</p><p><code>bus</code> [<code>-d&nbsp;<wbr></code><i>module</i>] [<code>-m&nbsp;<wbr></code><i>module</i>] [<code>-f&nbsp;<wbr></code><i>configuration_file</i>]</p><h2>Description</h2><p>LE Service consists of three components: LAN Emulation Configuration Server (<code><a href=/docs/linux/man/8-lecs/>lecs</a>(8)</code>), LAN Emulation Server (<code>les</code>) and Broadcast and Unknown Server (<code>bus</code>).</p><p><code>Les</code> performs the control coordination function for the emulated LAN. LE clients register MAC addresses and/or route descriptors they represent to <code>les</code>, and later query it when they want to resolve MAC addresses/route descriptors into ATM addresses. Other LE control messages which are to be distributed to every client in ELAN are also sent to <code>les</code>. <code>Les</code> forwards these messages using Control Distribute VCC which it has set up to every client in ELAN.</p><p><code>Bus</code> handles data sent by clients to broadcast and multicast MAC addresses and some of the data directed to unicast addresses. LE Client has a possibility to send data directed to some unicast address to the <code>bus</code> before target&#8217;s ATM address has been resolved and the Data Direct VCC has been established.</p><p>Configuration file example for <code>les</code> and <code>bus</code>:</p><pre>[main]
+memdebug=True
+debug=True
+[load]
+#memdebug=True
+#debug=True
+[conn]
+debug=True
+#S1, LE Server's ATM address
+#S1=:47:00:23:00:00:00:03:00:00:01:00:02:01:00:20:ea:00:05:aa:00
+S1=:47:00:23:00:00:00:03:03:00:01:00:02:01:00:20:ea:00:0a:e9:01
+#S2, LAN Type
+S2=&quot;802.3&quot;
+#S3, Maximum Frame Size
+S3=1516
+#S4, Join Timeout, s
+S4=15
+#S5, Maximum Frame Age, s
+S5=6
+#S6, BUS Atm address
+S6=:47:00:23:00:00:00:03:03:00:01:00:02:01:00:20:ea:00:0a:e9:02 #viulu
+#S6=0,0,170
+#ELANNAME=&quot;asdf&quot;</pre><p>The configuration file contains each modules name in brackets followed by variable definitions for that module. The definitions are of form <i>variable=value, </i>where value can be either an integer, a truth value (True/False), a string enclosed in double quotes <i>(string) </i>or an ATM address in hexadecimal format. Variables that can be set are the debug/memdebug for each module and variables S1-S6 as defined in LE specification.</p><pre>S1=Address of the LES. This address is used in ATM 
+ signalling.
+S2=Type of the emulated LAN. Valid values is &quot;802.3&quot;.
+S3=Maximum frame size. Valid value is 1516.
+S4=Join Timeout. Time in seconds which LES waits for 
+ LE_JOIN_REQUEST before tearing down a connection.
+S5=Maximum frame Age. Currently not used.
+S6=Address of the BUS. This address is used in ATM signalling.
+ELANNAME= Name of the emulated LAN</pre><p><code>SIGHUP</code> causes restart of the server. All resources are released and server is started. <code>SIGUSR1</code> causes the server to dump its internal state. <code>SIGUSR2</code> shuts down the server (hopefully) gracefully.</p><h2>Options</h2><dl><dt></dt><dt><code>-d&nbsp;<wbr></code><i>module</i></dt><dd></dd><dd>Set debugging messages on for a module. "All" sets debugging on for all modules.</dd><dt><code>-m&nbsp;<wbr></code><i>module</i></dt><dd>Set memory debugging messages on for a module. "All" sets debugging on for all modules.</dd><dt><code>-f&nbsp;<wbr></code><i>configuration_file</i></dt><dd>Use the specified configuration file instead of <code>.lanevars</code>.</dd></dl><h2>Files</h2><dl><dt><code>.lanevars</code></dt><dd>configuration file</dd></dl><h2>Bugs</h2><p>Servers don&#8217;t establish point-to-multipoint connections to LE clients as the specification states, which means that some LE clients won&#8217;t work with these servers.</p><p>Supports only IEEE 802.3 / Ethernet type of ELANs.</p><p>This manual page is confusing.</p><h2>Author</h2><p>Marko Kiiskila, TUT &lt;carnil [at] cs.tut.fi></p><h2>See Also</h2><p><a href=/docs/linux/man/8-lecs/>lecs</a>(8), <a href=/docs/linux/man/8-atmsigd/>atmsigd</a>(8), <a href=/docs/linux/man/8-zeppelin/>zeppelin</a>(8)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

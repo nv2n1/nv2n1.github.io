@@ -1,0 +1,31 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdremove(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdremove/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdremove(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdremove/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdremove(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::remove - std::remove</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cstdio&gt;
+    int remove(const char *fname);</code></pre><p>Deletes the file identified by character string pointed to by fname.
+If the file is currently open by the current or another process, the behavior of this function is implementation-defined (in particular, POSIX systems unlink the file name, although the file system space is not reclaimed even if this was the last hardlink to the file until the last running process closes the file, Windows does not allow the file to be deleted)</p><h2>Parameters</h2><p>fname - pointer to a null-terminated string containing the path identifying the file to delete</p><h2>Return value</h2><p>0 upon success or non-zero value on error.</p><h2>Notes</h2><p>POSIX_specifies many additional details for the behavior of this function.
+The standard library also defines a function template std::remove taking a pair of iterators and a value, this overload is one of the standard algorithms.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;cstdio&gt;
+int main()
+{
+bool ok = static_cast&lt;bool&gt;(std::ofstream(&quot;file1.txt&quot;).put(&lsquo;a&rsquo;)); // create file
+if (!ok) {
+std::perror(&quot;Error creating file1.txt&quot;);
+return 1;
+}
+std::cout &lt;&lt; std::ifstream(&quot;file1.txt&quot;).rdbuf() &lt;&lt; &lsquo;\n&rsquo;; // print file
+std::remove(&quot;file1.txt&quot;);                                // delete file
+bool failed = !std::ifstream(&quot;file1.txt&quot;);
+if (failed) {
+std::perror(&quot;Error opening deleted file&quot;);
+return 1;
+}
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> a
+ <wbr> Error opening deleted file: No such file or directory</p><h2>See also</h2><p>remove removes a file or empty directory
+remove_all removes a file or directory and all its contents, recursively
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+<i>(C++17)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> renames a file
+rename <i>(function)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

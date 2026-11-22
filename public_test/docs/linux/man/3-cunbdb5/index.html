@@ -1,0 +1,57 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>cunbdb5(3) · Linux Manual Pages</title><meta name=description content="cunbdb5.f –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-cunbdb5/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="cunbdb5(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-cunbdb5/"><meta property="og:description" content="cunbdb5.f –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>cunbdb5(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>cunbdb5.f &#8211;</p><h2>SYNOPSIS</h2><h3>Functions/Subroutines</h3><p>subroutine <code>cunbdb5</code> (M1, M2, N, X1, INCX1, X2, INCX2, Q1, LDQ1, Q2, LDQ2, WORK, LWORK, INFO)<br><i></i><code>CUNBDB5</code></p><h2>Function/Subroutine Documentation</h2><h3>subroutine cunbdb5 (integerM1, integerM2, integerN, complex, dimension(*)X1, integerINCX1, complex, dimension(*)X2, integerINCX2, complex, dimension(ldq1,*)Q1, integerLDQ1, complex, dimension(ldq2,*)Q2, integerLDQ2, complex, dimension(*)WORK, integerLWORK, integerINFO)</h3><p><code>CUNBDB5</code> .SH "Purpose:"</p><pre><code>
+CUNBDB5 orthogonalizes the column vector
+    X = [X1]
+        [X2] with respect to the columns of
+            Q = [Q1].
+                    [Q2] The columns of Q must be orthonormal.If the projection is zero according to Kahan's "twice is enough" criterion,
+    then some other vector from the orthogonal complement
+            is returned.This vector is chosen in an arbitrary but deterministic
+                way..fi
+                    Parameters : M1
+                                     M1 is INTEGER
+                                         The dimension of X1 and the number of rows in Q1.0 &lt;= M1.
+</code></pre><p><i>M2</i></p><pre>
+          M2 is INTEGER
+           The dimension of X2 and the number of rows in Q2. 0 &lt;= M2.
+</pre><p><i>N</i></p><pre>
+          N is INTEGER
+           The number of columns in Q1 and Q2. 0 &lt;= N.
+</pre><p><i>X1</i></p><pre>
+          X1 is COMPLEX array, dimension (M1)
+           On entry, the top part of the vector to be orthogonalized.
+           On exit, the top part of the projected vector.
+</pre><p><i>INCX1</i></p><pre>
+          INCX1 is INTEGER
+           Increment for entries of X1.
+</pre><p><i>X2</i></p><pre>
+          X2 is COMPLEX array, dimension (M2)
+           On entry, the bottom part of the vector to be
+           orthogonalized. On exit, the bottom part of the projected
+           vector.
+</pre><p><i>INCX2</i></p><pre>
+          INCX2 is INTEGER
+           Increment for entries of X2.
+</pre><p><i>Q1</i></p><pre>
+          Q1 is COMPLEX array, dimension (LDQ1, N)
+           The top part of the orthonormal basis matrix.
+</pre><p><i>LDQ1</i></p><pre>
+          LDQ1 is INTEGER
+           The leading dimension of Q1. LDQ1 &gt;= M1.
+</pre><p><i>Q2</i></p><pre>
+          Q2 is COMPLEX array, dimension (LDQ2, N)
+           The bottom part of the orthonormal basis matrix.
+</pre><p><i>LDQ2</i></p><pre>
+          LDQ2 is INTEGER
+           The leading dimension of Q2. LDQ2 &gt;= M2.
+</pre><p><i>WORK</i></p><pre>
+          WORK is COMPLEX array, dimension (LWORK)
+</pre><p><i>LWORK</i></p><pre>
+          LWORK is INTEGER
+           The dimension of the array WORK. LWORK &gt;= N.
+</pre><p><i>INFO</i></p><pre>
+          INFO is INTEGER
+           = 0:  successful exit.
+           &lt; 0:  if INFO = -i, the i-th argument had an illegal value.
+</pre><p>&nbsp;<wbr></dl><p><code>Author:</code></p><dl><dt></dt><dd>Univ. of Tennessee</dd><p>Univ. of California Berkeley</p><p>Univ. of Colorado Denver</p><p>NAG Ltd.</dl><p><code>Date:</code></p><dl><dt></dt><dd>July 2012</dd></dl><p>Definition at line 156 of file cunbdb5.f.</p><h2>Author</h2><p>Generated automatically by Doxygen for LAPACK from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,96 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdtry_lock(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdtry_lock/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdtry_lock(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdtry_lock/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdtry_lock(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::try_lock - std::try_lock</p><h2>Synopsis</h2><pre><code>Defined in header&lt;mutex&gt;
+    template &lt;class Lockable1, class Lockable2, class... LockableN&gt;
+    (since C++ 11)
+        int try_lock(Lockable1 &amp;lock1, Lockable2 &amp;lock2, LockableN &amp;...lockn);</code></pre><p>Tries to lock each of the given Lockable objects lock1, lock2, &mldr;, lockn by calling try_lock in order beginning with the first.
+If a call to try_lock fails, no further call to try_lock is performed, unlock is called for any locked objects and a 0-based index of the object that failed to lock is returned.
+If a call to try_lock results in an exception, unlock is called for any locked objects before rethrowing.</p><h2>Parameters</h2><p>lock1, lock2, &mldr; , lockn - the Lockable objects to lock</p><h2>Return value</h2><p>-1 on success, or 0-based index value of the object that failed to lock.</p><h2>Example</h2><p>The following example uses std::try_lock to periodically tally and reset counters running in separate threads.
+// Run this code<pre><code>#include &lt;mutex&gt;
+#include &lt;vector&gt;
+#include &lt;thread&gt;
+#include &lt;iostream&gt;
+#include &lt;functional&gt;
+#include &lt;chrono&gt;
+int main()
+{
+int foo_count = 0;
+std::mutex foo_count_mutex;
+int bar_count = 0;
+std::mutex bar_count_mutex;
+int overall_count = 0;
+bool done = false;
+std::mutex done_mutex;
+auto increment = [](int &amp;counter, std::mutex &amp;m, const char *desc) {
+for (int i = 0; i &lt; 10; ++i) {
+std::unique_lock&lt;std::mutex&gt; lock(m);
+++counter;
+std::cout &lt;&lt; desc &lt;&lt; &quot;: &quot; &lt;&lt; counter &lt;&lt; &lsquo;\n&rsquo;;
+lock.unlock();
+std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+};
+std::thread increment_foo(increment, std::ref(foo_count),
+std::ref(foo_count_mutex), &quot;foo&quot;);
+std::thread increment_bar(increment, std::ref(bar_count),
+std::ref(bar_count_mutex), &quot;bar&quot;);
+std::thread update_overall(<a href>&amp;</a> {
+done_mutex.lock();
+while (!done) {
+done_mutex.unlock();
+int result = std::try_lock(foo_count_mutex, bar_count_mutex);
+if (result == -1) {
+overall_count += foo_count + bar_count;
+foo_count = 0;
+bar_count = 0;
+std::cout &lt;&lt; &quot;overall: &quot; &lt;&lt; overall_count &lt;&lt; &lsquo;\n&rsquo;;
+foo_count_mutex.unlock();
+bar_count_mutex.unlock();
+}
+std::this_thread::sleep_for(std::chrono::seconds(2));
+done_mutex.lock();
+}
+done_mutex.unlock();
+});
+increment_foo.join();
+increment_bar.join();
+done_mutex.lock();
+done = true;
+done_mutex.unlock();
+update_overall.join();
+std::cout &lt;&lt; &quot;Done processing\n&quot;
+&lt;&lt; &quot;foo: &quot; &lt;&lt; foo_count &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;bar: &quot; &lt;&lt; bar_count &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;overall: &quot; &lt;&lt; overall_count &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> bar: 1
+ <wbr> foo: 1
+ <wbr> foo: 2
+ <wbr> bar: 2
+ <wbr> foo: 3
+ <wbr> overall: 5
+ <wbr> bar: 1
+ <wbr> foo: 1
+ <wbr> bar: 2
+ <wbr> foo: 2
+ <wbr> bar: 3
+ <wbr> overall: 10
+ <wbr> bar: 1
+ <wbr> foo: 1
+ <wbr> bar: 2
+ <wbr> foo: 2
+ <wbr> overall: 14
+ <wbr> bar: 1
+ <wbr> foo: 1
+ <wbr> bar: 2
+ <wbr> overall: 17
+ <wbr> foo: 1
+ <wbr> bar: 1
+ <wbr> foo: 2
+ <wbr> overall: 20
+ <wbr> Done processing
+ <wbr> foo: 0
+ <wbr> bar: 0
+ <wbr> overall: 20</p><h2>See also</h2><p>lock locks specified mutexes, blocks if any are unavailable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

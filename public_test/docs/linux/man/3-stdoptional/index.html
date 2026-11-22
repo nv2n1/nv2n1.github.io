@@ -1,0 +1,100 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdoptional(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdoptional/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdoptional(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdoptional/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdoptional(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::optional - std::optional</p><h2>Synopsis</h2><pre><code>Defined in header &lt;optional&gt;
+template&lt; class T &gt;           (since C++17)
+class optional;</code></pre><p>The class template std::optional manages an optional contained value, i.e. a value that may or may not be present.
+A common use case for optional is the return value of a function that may fail. As opposed to other approaches, such as std::pair&lt;T,bool>, optional handles expensive-to-construct objects well and is more readable, as the intent is expressed explicitly.
+Any instance of optional&lt;T> at any given point in time either contains a value or does not contain a value.
+If an optional&lt;T> contains a value, the value is guaranteed to be allocated as part of the optional object footprint, i.e. no dynamic memory allocation ever takes place. Thus, an optional object models an object, not a pointer, even though operator*() and operator->() are defined.
+When an object of type optional&lt;T> is contextually_converted_to_bool, the conversion returns true if the object contains a value and false if it does not contain a value.
+The optional object contains a value in the following conditions:</p><ul><li>The object is initialized with/assigned from a value of type T or another optional that contains a value.
+The object does not contain a value in the following conditions:</li><li>The object is default-initialized.</li><li>The object is initialized with/assigned from a value of type std::nullopt_t or an optional object that does not contain a value.</li><li>The member function reset() is called.
+There are no optional references; a program is ill-formed if it instantiates an optional with a reference type. Alternatively, an optional of a std::reference_wrapper of type T may be used to hold a reference. In addition, a program is ill-formed if it instantiates an optional with the tag types std::nullopt_t or std::in_place_t.</li></ul><h2>Template parameters</h2><p>T - the type of the value to manage initialization state for. The type must meet the requirements of Destructible</p><h2>Member types</h2><p>Member type Definition
+value_type T</p><h2>Member functions</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the optional object
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destroys the contained value, if there is one
+destructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> assigns contents
+operator= <i>(public member function)</i></p><h2>Observers</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> accesses the contained value
+operator-> <i>(public member function)</i>
+operator*
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks whether the object contains a value
+operator_bool <i>(public member function)</i>
+has_value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the contained value
+value <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the contained value if available, another value otherwise
+value_or <i>(public member function)</i></p><h2>Modifiers</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> exchanges the contents
+swap <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destroys any contained value
+reset <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the contained value in-place
+emplace <i>(public member function)</i></p><h2>Non-member functions</h2><p>operator==
+operator!=
+operator&lt; compares optional objects
+operator&lt;= <i>(function template)</i>
+operator>
+operator>=</p><p><i>(C++17)</i></p><p>make_optional creates an optional object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i></p><p>std::swap(std::optional) specializes the std::swap algorithm
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i></p><h2>Helper classes</h2><p>std::hash&lt;std::optional> specializes the std::hash algorithm
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template specialization)</i>
+<i>(C++17)</i></p><p>nullopt_t indicator of optional type with uninitialized state
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++17)</i></p><p>bad_optional_access exception indicating checked access to an optional that doesn&rsquo;t contain a value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++17)</i></p><p>Helpers</p><p>nullopt an object of type nullopt_t
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> (constant)
+<i>(C++17)</i></p><p>in_place_
+in_place_type_
+in_place_index_ in-place construction tag
+in_place_t_ <i>(class template)</i>
+in_place_type_t_
+in_place_index_t</p><p><i>(C++17)</i></p><p>Deduction_guides</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;string&gt;
+#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;optional&gt;
+// optional can be used as the return type of a factory that may fail
+std::optional&lt;std::string&gt; create(bool b)
+{
+if (b)
+return &quot;Godzilla&quot;;
+return {};
+}
+// std::nullopt can be used to create any (empty) std::optional
+auto create2(bool b)
+{
+return b ? std::optional&lt;std::string&gt;{&quot;Godzilla&quot;} : std::nullopt;
+}
+// std::reference_wrapper may be used to return a reference
+auto create_ref(bool b)
+{
+static std::string value = &quot;Godzilla&quot;;
+return b ? std::optional&lt;std::reference_wrapper&lt;std::string&gt;&gt;{value}
+: std::nullopt;
+}
+int main()
+{
+std::cout &lt;&lt; &quot;create(false) returned &quot;
+&lt;&lt; create(false).value_or(&quot;empty&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+// optional-returning factory functions are usable as conditions of while and if
+if (auto str = create2(true)) {
+std::cout &lt;&lt; &quot;create2(true) returned &quot; &lt;&lt; *str &lt;&lt; &lsquo;\n&rsquo;;
+}
+if (auto str = create_ref(true)) {
+// using get() to access the reference_wrapper&rsquo;s value
+std::cout &lt;&lt; &quot;create_ref(true) returned &quot; &lt;&lt; str-&gt;get() &lt;&lt; &lsquo;\n&rsquo;;
+str-&gt;get() = &quot;Mothra&quot;;
+std::cout &lt;&lt; &quot;modifying it changed it to &quot; &lt;&lt; str-&gt;get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> create(false) returned empty
+ <wbr> create2(true) returned Godzilla
+ <wbr> create_ref(true) returned Godzilla
+ <wbr> modifying it changed it to Mothra</p><h2>See also</h2><p>variant a type-safe discriminated union
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i>
+any Objects that hold instances of any CopyConstructible type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++17)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

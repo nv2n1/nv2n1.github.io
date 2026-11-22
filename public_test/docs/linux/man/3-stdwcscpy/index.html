@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdwcscpy(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdwcscpy/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdwcscpy(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdwcscpy/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdwcscpy(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::wcscpy - std::wcscpy</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cwchar&gt;
+    wchar_t *wcscpy(wchar_t *dest, const wchar_t *src);</code></pre><p>Copies the wide string pointed to by src (including the terminating null wide character) to wide character array pointed to by dest.
+If the strings overlap, the behavior is undefined.</p><h2>Parameters</h2><p>dest - pointer to the wide character array to copy to
+src - pointer to the null-terminated wide string to copy from</p><h2>Return value</h2><p>dest</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cwchar&gt;
+#include &lt;memory&gt;
+#include &lt;clocale&gt;
+int main()
+{
+const wchar_t *src = L&quot;犬 means dog&quot;;
+//  src[0] = L&rsquo;狗&rsquo;; // can&rsquo;t modify string literal
+auto dst = std::make_unique&lt;wchar_t[]&gt;(std::wcslen(src) + 1); // +1 for the null
+std::wcscpy(dst.get(), src);
+dst[0] = L&rsquo;狗&rsquo;;
+std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
+std::wcout.imbue(std::locale(&quot;&quot;));
+std::wcout &lt;&lt; src &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; dst.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> 犬 means dog
+ <wbr> 狗 means dog</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a certain amount of wide characters from one string to another
+wcsncpy <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies a certain amount of wide characters between two non-overlapping arrays
+wmemcpy <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies one string to another
+strcpy <i>(function)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

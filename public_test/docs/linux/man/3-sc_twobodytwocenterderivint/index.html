@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sc_twobodytwocenterderivint(3) · Linux Manual Pages</title><meta name=description content="sc::TwoBodyTwoCenterDerivInt –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-sc_twobodytwocenterderivint/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sc_twobodytwocenterderivint(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-sc_twobodytwocenterderivint/"><meta property="og:description" content="sc::TwoBodyTwoCenterDerivInt –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>sc_twobodytwocenterderivint(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>sc::TwoBodyTwoCenterDerivInt &#8211;</p><p>This is an abstract base type for classes that compute two centers integrals involving two electrons.</p><h2>Synopsis</h2><pre><code>
+#include &lt;tbint.h&gt;</code></pre><p>Inherits <code>sc::RefCount</code>.</p><h3>Public Member Functions</h3><pre><code>int nbasis () const
+Return the number of basis functions on center one.
+int nbasis1 () const
+Return the number of basis functions on center one.
+int nbasis2 () const
+Return the number of basis functions on center two.
+int nshell () const
+Return the number of shells on center one.
+int nshell1 () const
+Return the number of shells on center one.
+int nshell2 () const
+Return the number of shells on center two.
+Ref&lt; GaussianBasisSet &gt; basis ()
+Return the basis set on center one.
+Ref&lt; GaussianBasisSet &gt; basis1 ()
+Return the basis set on center one.
+Ref&lt; GaussianBasisSet &gt; basis2 ()
+Return the basis set on center two.
+const double * buffer () const
+The computed shell integrals will be put in the buffer returned by this member.
+virtual void compute_shell (int, int, DerivCenters &amp;)=0
+Given for shell indices, this will cause the integral buffer to be filled in.
+virtual int log2_shell_bound (int=-1, int=-1)=0
+Return log base 2 of the maximum magnitude of any integral in a shell block.
+Protected Member Functions</code></pre><p><code>TwoBodyTwoCenterDerivInt</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> > &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> > &amp;b2)</p><h3>Protected Attributes</h3><p><code>Integral</code> * <code>integral_</code></p><p><code>Ref</code>&lt; <code>GaussianBasisSet</code> > <code>bs1_</code></p><p><code>Ref</code>&lt; <code>GaussianBasisSet</code> > <code>bs2_</code></p><p>double * <code>buffer_</code></p><h2>Detailed Description</h2><p>This is an abstract base type for classes that compute two centers integrals involving two electrons.</p><h2>Member Function Documentation</h2><h3>virtual void sc::TwoBodyTwoCenterDerivInt::compute_shell (int, int, <code>DerivCenters</code> &) [pure virtual]</h3><p>Given for shell indices, this will cause the integral buffer to be filled in.</p><h3>virtual int sc::TwoBodyTwoCenterDerivInt::log2_shell_bound (int = -1, int = -1) [pure virtual]</h3><p>Return log base 2 of the maximum magnitude of any integral in a shell block. An index of -1 for any argument indicates any shell.</p><h2>Author</h2><p>Generated automatically by Doxygen for MPQC from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

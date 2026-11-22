@@ -1,0 +1,33 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sybilsim(8) · Linux Manual Pages</title><meta name=description content="sybilsim — Cjdns packet switch"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/8-sybilsim/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sybilsim(8) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/8-sybilsim/"><meta property="og:description" content="sybilsim — Cjdns packet switch"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/8/>Section 8</a></p><article><header class=man-header><h1>sybilsim(8)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p><code>sybilsim</code> &#8212; Cjdns packet switch</p><h2>Synopsis</h2><p><code>/usr/libexec/cjdns/sybilsim &lt; config.json</code></p><h2>Description</h2><p>Sybilsim reads a list of nodes and peers from stdin and simulates the corresponding mesh without any actual networking using the same code as cjdroute. This is useful for testing and optimizing cjdroute. Every node must have a valid cjdns private key. The <a href=/docs/linux/man/1-makekeys/>makekeys</a>(1) utility can be useful for scripts that generate the config.</p><h2>Usage</h2><p>Example config:</p><dl><dd><pre>{
+ &quot;nodes&quot;: {
+&quot;alice&quot;: {
+ &quot;privateKey&quot;:
+ &quot;5e2295679394e5e1db67c238abbc10292ad9b127904394c52cc5fff39383e920&quot;,
+ &quot;peers&quot;: []
+},
+&quot;bob&quot;: {
+ &quot;privateKey&quot;:
+ &quot;6569bf3f0d168faa6dfb2912f8ee5ee9b938319e97618fdf06caed73b1aad1cc&quot;,
+ &quot;peers&quot;: [ &quot;alice&quot; ]
+}
+ }
+}</pre></dd><dd></dd></dl><p>Example use:</p><dl><dd><pre>makekeys | head -20 &gt;keys.txt
+node /usr/libexec/cjdns/tools/lib/makesim.js keys.txt |
+/usr/libexec/cjdns/sybilsim</pre></dd><dd></dd></dl><h2>See Also</h2><p><a href=/docs/linux/man/1-makekeys/>makekeys</a>(1), <a href=/docs/linux/man/1-cjdroute/>cjdroute</a>(1) <a href=/docs/linux/man/8-sybilsim/>sybilsim</a>(8) &#8212; Cjdns packet switch =============================================</p><h2>Synopsis</h2><p><code>/usr/libexec/cjdns/sybilsim &lt; config.json</code></p><h2>Description</h2><p>Sybilsim reads a list of nodes and peers from stdin and simulates the corresponding mesh without any actual networking using the same code as cjdroute. This is useful for testing and optimizing cjdroute. Every node must have a valid cjdns private key. The <a href=/docs/linux/man/1-makekeys/>makekeys</a>(1) utility can be useful for scripts that generate the config.</p><h2>Usage</h2><p>Example config:</p><dl><dd><pre>{
+ &quot;nodes&quot;: {
+&quot;alice&quot;: {
+ &quot;privateKey&quot;:
+ &quot;5e2295679394e5e1db67c238abbc10292ad9b127904394c52cc5fff39383e920&quot;,
+ &quot;peers&quot;: []
+},
+&quot;bob&quot;: {
+ &quot;privateKey&quot;:
+ &quot;6569bf3f0d168faa6dfb2912f8ee5ee9b938319e97618fdf06caed73b1aad1cc&quot;,
+ &quot;peers&quot;: [ &quot;alice&quot; ]
+}
+ }
+}</pre></dd><dd></dd></dl><p>Example use:</p><dl><dd><pre>makekeys | head -20 &gt;keys.txt
+node /usr/libexec/cjdns/tools/lib/makesim.js keys.txt |
+/usr/libexec/cjdns/sybilsim</pre></dd><dd></dd></dl><h2>See Also</h2><p><a href=/docs/linux/man/1-makekeys/>makekeys</a>(1), <a href=/docs/linux/man/1-cjdroute/>cjdroute</a>(1)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

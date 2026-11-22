@@ -1,0 +1,45 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>rlm_attr_filter(5) · Linux Manual Pages</title><meta name=description content="rlm_attr_filter – FreeRADIUS Module"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/5-rlm_attr_filter/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="rlm_attr_filter(5) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/5-rlm_attr_filter/"><meta property="og:description" content="rlm_attr_filter – FreeRADIUS Module"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/5/>Section 5</a></p><article><header class=man-header><h1>rlm_attr_filter(5)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>rlm_attr_filter &#8211; FreeRADIUS Module</p><h2>Description</h2><p>The <i>rlm_attr_filter</i> module exists for filtering certain attributes and values in received ( or transmitted ) radius packets. It gives the server a flexible framework to filter the attributes we send to or receive from home servers or NASes. This makes sense, for example, in an out-sourced dialup situation to various policy decisions, such as restricting a client to certain ranges of Idle-Timeout or Session-Timeout. Filter rules are normally defined and applied on a per-realm basis, where the realm is anything that is defined and matched based on the configuration of the <i>rlm_realm</i> module. Filter rules can optionally be applied using another attribute, by editing the <i>key</i> configuration for this module. In 2.0.1 and earlier versions, the "accounting" section filtered the Accounting-Request, even though it was documented as filtering the response. This issue has been fixed in version 2.0.2 and later versions. The "preacct" section may now be used to filter Accounting-Request packets. The "accounting" section now filters Accounting-Response packets. Administrators using "attr_filter" in the "accounting" section SHOULD move the reference to "attr_filter" from "accounting" to "preacct". The file that defines the attribute filtering rules follows a similar syntax to the <i>users</i> file. There are a few differences however:</p><dl><dd><pre> There are no check-items allowed other than the name of the key.
+ There can only be a single DEFAULT entry.
+The rules for each entry are parsed to top to bottom, and an
+attribute must pass *all* the rules which affect it in order to
+make it past the filter. Order of the rules is important.
+The operators and their purpose in defining the rules are as
+follows:
+</dd><dl><dt><code>= </code>
+</dt><dd>THIS OPERATOR IS NOT ALLOWED. If used, and warning message is
+printed and it is treated as ==
+</dd><dt><code>:= </code>
+</dt><dd>Set, this attribute and value will always be placed in the
+output A/V Pairs. If the attribute exists, it is overwritten.
+</dd><dt><code>== </code>
+</dt><dd>Equal, value must match exactly.
+</dd><dt><code>=* </code>
+</dt><dd>Always Equal, allow all values for the specified attribute.
+</dd><dt><code>!* </code>
+</dt><dd>Never Equal, disallow all values for the specified attribute.
+( This is redundant, as any A/V Pair not explicitly permitted
+will be dropped ).
+</dd><dt><code>!= </code>
+</dt><dd>Not Equal, value must not match.
+</dd><dt><code>&gt;= </code>
+</dt><dd>Greater Than or Equal
+</dd><dt><code>&lt;= </code>
+</dt><dd>Less Than or Equal
+</dd><dt><code>&gt; </code>
+</dt><dd>Greater Than
+</dd><dt><code>&lt; </code>
+</dt><dd>Less Than
+</dd></dl>
+If regular expressions are enabled the following operators are
+also possible. ( Regular Expressions are included by default
+unless your system doesn't support them, which should be rare ).
+The value field uses standard regular expression syntax.
+<dl><dt><code>=~ </code>
+</dt><dd>Regular Expression Equal
+</dd><dt><code>!~ </code>
+</dt><dd>Regular Expression Not Equal
+</dd></dl>
+See the default <i>/etc/raddb/attrs</i> for working examples of
+sample rule ordering and how to use the different operators.</pre></dl><p>The configuration items are:</p><dl><dt>file</dt><dd>This specifies the location of the file used to load the filter rules. This file is used to filter the accounting response, packet before it is proxied, proxy response from the home server, or our response to the NAS.</dd><dt>key</dt><dd>Usually %{Realm} (the default). Can also be %{User-Name}, or other attribute that exists in the request. Note that the module always keys off of attributes in the request, and NOT in any other packet.</dd><dt>relaxed</dt><dd>If set to &#8216;yes&#8217;, then attributes which do not match any filter rules explicitly, will also be allowed. This behaviour may be overridden for an individual filter block using the Relax-Filter check item. The default for this configuration item is &#8216;no&#8217;.</dd></dl><h2>Sections</h2><dl><dt>preacct</dt><dd>Filters Accounting-Request packets.</dd><dt>accounting</dt><dd>Filters Accounting-Response packets.</dd><dt>pre-proxy</dt><dd>Filters Accounting-Request or Access-Request packets prior to proxying them.</dd><dt>post-proxy</dt><dd>Filters Accounting-Response, Access-Accept, Access-Reject, or Access-Challenge responses from a home server.</dd><dt>authorize</dt><dd>Filters Access-Request packets.</dd><dt>post-auth</dt><dd>Filters Access-Accept or Access-Reject packets.</dd></dl><h2>Files</h2><p><i>/etc/raddb/radiusd.conf</i> <i>/etc/raddb/filter/*</i></p><h2>See Also</h2><p><code><a href=/docs/linux/man/8-radiusd/>radiusd</a></code>(8), <code><a href=/docs/linux/man/5-radiusd-conf/>radiusd.conf</a></code>(5)</p><h2>Author</h2><p>Chris Parker, cparker [at] segv.org</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

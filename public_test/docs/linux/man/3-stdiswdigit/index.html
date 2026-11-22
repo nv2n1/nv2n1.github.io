@@ -1,0 +1,62 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdiswdigit(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdiswdigit/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdiswdigit(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdiswdigit/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdiswdigit(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::iswdigit - std::iswdigit</p><h2>Synopsis</h2><pre><code>Defined in header&lt;cwctype&gt;
+    int iswdigit(wint_t ch);</code></pre><p>Checks if the given wide character corresponds (if narrowed) to one of the ten decimal digit characters 0123456789.
+If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined.</p><h2>Parameters</h2><p>ch - wide character</p><h2>Return value</h2><p>Non-zero value if the wide character is an numeric character, zero otherwise.</p><h2>Notes</h2><p>std::iswdigit and std::iswxdigit are the only standard wide character classification functions that are not affected by the currently installed C locale.</p><h2>Example</h2><p>Some locales offer additional character classes that detect non-ASCII digits
+// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;cwctype&gt;
+#include &lt;clocale&gt;
+void test(wchar_t a3, wchar_t u3, wchar_t j3)
+{
+std::wcout &lt;&lt; std::boolalpha
+&lt;&lt; &quot;          &lsquo;&quot; &lt;&lt; a3 &lt;&lt; &quot;&rsquo;   &lsquo;&quot; &lt;&lt; u3 &lt;&lt; &quot;&rsquo;  &lsquo;&quot; &lt;&lt; j3 &lt;&lt; &quot;&rsquo;\n&quot;
+&lt;&lt; &quot;iswdigit &quot;
+&lt;&lt; (bool)std::iswdigit(a3) &lt;&lt; &quot;  &quot;
+&lt;&lt; (bool)std::iswdigit(u3) &lt;&lt; &quot; &quot;
+&lt;&lt; (bool)std::iswdigit(j3) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;jdigit:  &quot;
+&lt;&lt; (bool)std::iswctype(a3, std::wctype(&quot;jdigit&quot;)) &lt;&lt; &rsquo; '
+&lt;&lt; (bool)std::iswctype(u3, std::wctype(&quot;jdigit&quot;)) &lt;&lt; &rsquo; '
+&lt;&lt; (bool)std::iswctype(j3, std::wctype(&quot;jdigit&quot;)) &lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+wchar_t a3 = L'3&rsquo;;  // the ASCII digit 3
+wchar_t u3 = L&rsquo;三&rsquo;; // the CJK numeral 3
+wchar_t j3 = L'３&rsquo;; // the fullwidth digit 3
+std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
+std::wcout &lt;&lt; &quot;In american locale:\n&quot;;
+test(a3, u3, j3);
+std::wcout &lt;&lt; &quot;\nIn japanese locale:\n&quot;;
+std::setlocale(LC_ALL, &quot;ja_JP.utf8&quot;);
+test(a3, u3, j3);
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> In american locale:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> &lsquo;3&rsquo; &lsquo;三&rsquo; &lsquo;３&rsquo;
+ <wbr> iswdigit true false false
+ <wbr> jdigit: false false false</p><p> <wbr> In japanese locale:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> &lsquo;3&rsquo; &lsquo;三&rsquo; &lsquo;３&rsquo;
+ <wbr> iswdigit true false false
+ <wbr> jdigit: false false true</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is classified as a digit by a locale
+isdigit(std::locale) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is a digit
+isdigit <i>(function)</i>
+ASCII values iscntrl isprint isspace isblank isgraph ispunct isalnum isalpha isupper islower isdigit isxdigit
+decimal hexadecimal octal characters iswcntrl iswprint iswspace iswblank iswgraph iswpunct iswalnum iswalpha iswupper iswlower iswdigit iswxdigit
+0–8 \x0–\x8 \0–\10 control codes (NUL, etc.) ≠0 0 0 0 0 0 0 0 0 0 0 0
+9 \x9 \11 tab (\t) ≠0 0 ≠0 ≠0 0 0 0 0 0 0 0 0
+10–13 \xA–\xD \12–\15 whitespaces (\n, \v, \f, \r) ≠0 0 ≠0 0 0 0 0 0 0 0 0 0
+14–31 \xE–\x1F \16–\37 control codes ≠0 0 0 0 0 0 0 0 0 0 0 0
+32 \x20 \40 space 0 ≠0 ≠0 ≠0 0 0 0 0 0 0 0 0
+33–47 \x21–\x2F \41–\57 !"#$%&&rsquo;()*+,-./ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+48–57 \x30–\x39 \60–\71 0123456789 0 ≠0 0 0 ≠0 0 ≠0 0 0 0 ≠0 ≠0
+58–64 \x3A–\x40 \72–\100:;&lt;=>?@ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+65–70 \x41–\x46 \101–\10ABCDEF 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 ≠0
+71–90 \x47–\x5A \107–\13GHIJKLMNOP 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> QRSTUVWXYZ
+91–96 \x5B–\x60 \133–\14[]^_` 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+97–102\x61–\x66 \141–\14abcdef 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 ≠0
+103–12\x67–\x7A \147–\17ghijklmnop 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> qrstuvwxyz
+123–12\x7B–\x7E \172–\17{|}~ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+127 \x7F \177 backspace character (DEL) ≠0 0 0 0 0 0 0 0 0 0 0 0</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

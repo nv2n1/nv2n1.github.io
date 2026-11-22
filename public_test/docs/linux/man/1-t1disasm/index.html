@@ -1,0 +1,30 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>t1disasm(1) · Linux Manual Pages</title><meta name=description content="t1disasm – disassemble PostScript Type 1 font"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-t1disasm/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="t1disasm(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-t1disasm/"><meta property="og:description" content="t1disasm – disassemble PostScript Type 1 font"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>t1disasm(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>t1disasm &#8211; disassemble PostScript Type 1 font</p><h2>SYNOPSIS</h2><p><code>t1disasm</code> [<i>input</i> [<i>output</i>]]</p><h2>DESCRIPTION</h2><p><code>t1disasm</code> disassembles Adobe Type 1 font programs in either PFA (hexadecimal) or PFB (binary) formats into human-readable form. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input.</p><p><code>t1disasm</code> performs eexec and charstring decryption as specified in the &#8220;black book&#8221;, <i>Adobe Type 1 Font Format.</i> Additionally, the charstring binary tokens are expanded into human-readable text form, using the names given in the black book and later documents describing Type 2 opcodes.</p><h2>EXAMPLES</h2><pre>
+% t1disasm Utopia-Regular.pfb Utopia-Regular.raw
+% t1disasm Utopia-Regular.pfa Utopia-Regular.raw
+</pre><p>In <code>Subrs</code> entries in Utopia-Regular.raw will look like</p><dl><dt></dt><dd><pre>
+<code>dup 5 {
+        8 111 vstem
+        -12 128 hstem
+        707 -20 hstem
+        return
+        } |
+</code></pre></dd></dl><p>and the <code>CharStrings</code> entries like</p><dl><dt></dt><dd><pre>
+<code>/exclam {
+        58 242 hsbw
+        6 callsubr
+        5 4 callsubr
+        63 707 rmoveto
+        -54 0 -5 -22 4 -45 rrcurveto
+        40 -431 rlineto
+        29 hlineto
+        42 431 rlineto
+        4 45 -5 22 -55 0 rrcurveto
+        closepath
+        6 4 callsubr
+        -719 vmoveto
+        243 callsubr
+        endchar
+        } |-
+</code></pre></dd></dl><h2>SEE ALSO</h2><p><i>Adobe Type 1 Font Format</i> is available free from Adobe as a PDF file: <a rel=nofollow href=http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF>http://partners.adobe.com/asn/developer/PDFS/TN/T1_SPEC.PDF</a></p><p><i>The Type 2 Charstring Format,</i> also available from Adobe as a PDF file, describes the newer Type 2 operators, which are also used in some multiple-master Type 1 fonts like Adobe Jenson and Kepler: <a rel=nofollow href=http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf>http://partners.adobe.com/asn/developer/PDFS/TN/5177.Type2.pdf</a></p><h2>AUTHORS</h2><p>Lee Hetherington (ilh [at] lcs.mit.edu)<br>Eddie Kohler (ekohler [at] gmail.com)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

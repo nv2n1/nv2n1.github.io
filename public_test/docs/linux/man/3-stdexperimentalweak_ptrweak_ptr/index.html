@@ -1,0 +1,23 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdexperimentalweak_ptrweak_ptr(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdexperimentalweak_ptrweak_ptr/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdexperimentalweak_ptrweak_ptr(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdexperimentalweak_ptrweak_ptr/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdexperimentalweak_ptrweak_ptr(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::experimental::weak_ptr&lt;T>::weak_ptr - std::experimental::weak_ptr&lt;T>::weak_ptr</p><h2>Synopsis</h2><pre><code>constexpr weak_ptr() noexcept;
+(1)(library fundamentals TS)
+    weak_ptr(const weak_ptr &amp;r) noexcept;
+(2)(library fundamentals TS)
+    template &lt;class Y&gt;
+    (2)(library fundamentals TS)
+        weak_ptr(const weak_ptr&lt;Y&gt; &amp;r) noexcept;
+template &lt;class Y&gt;
+(2)(library fundamentals TS)
+    weak_ptr(const std::experimental::shared_ptr&lt;Y&gt; &amp;r) noexcept;
+weak_ptr(weak_ptr &amp;&amp;r) noexcept;
+(3)(library fundamentals TS)
+    template &lt;class Y&gt;
+    (3)(library fundamentals TS)
+        weak_ptr(weak_ptr&lt;Y&gt; &amp;&amp;r) noexcept;</code></pre><p>Constructs a new weak_ptr that potentially shares an object with r.</p><ol><li>Default constructor. Constructs empty weak_ptr.</li><li>Constructs new weak_ptr which shares an object managed by r. If r manages no object, <em>this manages no object too. The templated overloads don&rsquo;t participate in overload resolution unless either Y</em> is implicitly convertible to T*, or Y is the type "array of N U" for some type U and some number N, and T is the type "array of unknown bound of (possibly cv-qualified) U".</li><li>Move constructors. Moves a weak_ptr instance from r into <em>this. After this, r is empty and r.use_count()==0. The templated overload doesn&rsquo;t participate in overload resolution unless either Y</em> is implicitly convertible to T*, or Y is the type "array of N U" for some type U and some number N, and T is the type "array of unknown bound of (possibly cv-qualified) U".</li></ol><h2>Parameters</h2><p>r - a std::experimental::shared_ptr or std::experimental::weak_ptr that will be viewed by this std::experimental::weak_ptr</p><h2>Exceptions</h2><p>noexcept specification:
+noexcept</p><h2>Example</h2><p> This section is incomplete
+ Reason: no example</p><h2>See also</h2><pre><code>creates a new weak_ptr
+constructor   (public member function of std::weak_ptr&lt;T&gt;)
+assigns the weak_ptr
+operator=     (public member function of std::weak_ptr&lt;T&gt;)
+</code></pre><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

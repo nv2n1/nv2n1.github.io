@@ -1,0 +1,91 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Printing to STDERR and STDOUT in OCaml</title><link rel=canonical href=https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-ocaml/><meta name=description content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="Printing to STDERR and STDOUT in OCaml"><meta property="og:url" content="https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-ocaml/"><meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software."><meta property="og:image" content="https://www.systutorials.com/logo.png"><style>:root{color-scheme:light}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:#333;line-height:1.7;padding:1.5rem 1rem 3rem}main{max-width:60rem;margin:0 auto}header.site{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;row-gap:.5rem;border-bottom:1px solid #ddd;padding-bottom:.8rem;margin-bottom:2rem}header.site .site-name{font-weight:700;font-size:1.2rem;color:inherit;text-decoration:none}header.site nav{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;justify-content:flex-end}header.site nav a{margin-left:0}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}h2{font-size:1.4rem;margin:2.2rem 0 .6rem}h3{font-size:1.15rem;margin:1.8rem 0 .5rem}p{margin-bottom:1rem;color:#555}a{color:#0a58ca}.academies{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0 2rem}.academy{border:1px solid #ddd;border-radius:8px;padding:1.1rem 1.2rem;background:#fff}.academy h3{margin:0 0 .5rem;font-size:1.05rem}.academy p{margin-bottom:.5rem;font-size:.95rem}.academy .paths{color:#777;font-size:.9rem}.academy .explore{margin-bottom:0}ul,ol{padding-left:1.5rem}ul.posts{list-style:none;padding-left:0}.recent-post{margin-bottom:1.2rem}.recent-post h3{margin:0 0 .2rem;font-size:1.05rem}.recent-post .meta{margin:0;color:#888;font-size:.9rem}ul.cat-grid{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.4rem 1.5rem}ul.cat-grid span{color:#888;font-size:.9rem}.year-strip a{margin-right:.9rem;white-space:nowrap}code,pre{font-family:SFMono-Regular,Menlo,Consolas,liberation mono,monospace;font-size:.92em}:not(pre)>code{background:#0000000f;padding:.15em .35em;border-radius:4px}pre{background:#ececec;padding:1rem;border-radius:6px;overflow-x:auto;margin-bottom:1rem}ul.posts li{margin-bottom:.45rem}ul.posts time{color:#888;font-size:.9rem;display:inline-block;min-width:5.5rem}footer.site{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;color:#888;font-size:.9rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}footer.site a{margin-left:0}.footer-msg{margin-left:auto}header.post-header{border-bottom:1px solid #ddd;padding-bottom:1.2rem;margin-bottom:2rem}.post-date,.post-author,.post-updated{color:#888;font-size:.95rem}nav.crumbs{color:#888;font-size:.9rem;margin-bottom:1.6rem}.ad-after-content{clear:both;margin-top:2rem}.back{display:inline-block;margin-top:3rem}img{max-width:100%;height:auto}table{border-collapse:collapse;margin-bottom:1rem;display:block;max-width:100%;overflow-x:auto}th,td{border:1px solid #ccc;padding:.4rem .7rem;text-align:left}blockquote{border-left:4px solid #ccc;padding-left:1rem;color:#666;margin-bottom:1rem}.gcse-search-wrapper{margin:1.5rem 0 2rem}.gcse-subtitle{margin:0 0 .5rem;color:#555;font-size:.95rem;font-weight:500}.gcse-search-wrapper .gsc-control-cse{margin-left:0!important}.gcse-search-wrapper .gsc-control-cse .gsc-table-result{margin-left:0!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/#posts>Recent</a>
+<a href=/archive/>Archive</a><a href=/docs/linux/man/>Linux Manual Pages</a></nav></header><article><header class=post-header><nav class=crumbs><a href=/programming-academy/>Programming Academy</a>
+&#8250; <a href=/category/programming-languages/>Programming Languages</a></nav><h1>Printing to STDERR and STDOUT in OCaml</h1><time class=post-date datetime=2018-03-24T11:53:05Z>March 24, 2018</time> <span class=post-author>&#183; <a href=/author/qa/>Q A</a> and Community</span> <span class=post-updated>&#183; updated April 12, 2026</span></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>[md]
+In OCaml, the standard library provides straightforward functions for writing to standard output and standard error.</p><p>## Printing to STDOUT</p><p>Use <code>print_endline</code> to write a string followed by a newline to standard output:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>print_endline &#34;hello world!&#34;
+</code></pre><p>This function is in the <code>Stdlib</code> module (formerly <code>Pervasives</code> in older OCaml versions) and automatically flushes the output buffer. The signature is:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>val print_endline : string -&gt; unit
+</code></pre><p>For printing without a newline:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>print_string &#34;hello &#34;
+</code></pre><p>## Printing to STDERR</p><p>Use <code>prerr_endline</code> and <code>prerr_string</code> for standard error:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>prerr_endline &#34;error: something went wrong&#34;
+prerr_string &#34;warning: &#34;
+</code></pre><p>The “prerr” prefix consistently indicates stderr output across the standard library.</p><p>## Printf-Style Formatted Output</p><p>OCaml’s <code>Printf</code> module provides type-safe formatted printing:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>(* To stdout *)
+Printf.printf &#34;Name: %s, Age: %d, Score: %.2f\n&#34; name age score
+
+(* To stderr *)
+Printf.eprintf &#34;Error: %s (code %d)\n&#34; msg code
+</code></pre><p>Common format specifiers:</p><p>– <code>%s</code> — string
+– <code>%d</code> — integer
+– <code>%f</code> — float
+– <code>.2f</code> — float with 2 decimal places
+– <code>%b</code> — boolean (true/false)
+– <code>%c</code> — character
+– <code>%a</code> — user-defined formatter (advanced)</p><p>The compiler checks that the number and types of arguments match the format string — a mismatch is a compile-time error, not a runtime crash.</p><p>## Using Format for Pretty-Printing</p><p>For structured output with indentation and alignment, OCaml’s <code>Format</code> module is the standard approach:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>let print_person name age =
+  Format.printf &#34;Person {@[@ name: %s;@ age: %d@]@,}@.&#34;
+    name age
+</code></pre><p>The <code>Format</code> module uses “pretty-print boxes” to manage layout:</p><p>– <code>@[</code> — open a box
+– <code>@]</code> — close a box
+– <code>@,</code> — break hint (may become a newline)
+– <code>@;</code> — break hint with custom spacing
+– <code>@.</code> — flush and newline</p><p>## Redirecting Output Programmatically</p><p>You can redirect stdout or stderr to a file:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>let with_output_to filename f =
+  let oc = open_out filename in
+  let old_stdout = Unix.dup Unix.stdout in
+  Unix.dup2 (Unix.descr_of_out_channel oc) Unix.stdout;
+  let result = f () in
+  Unix.dup2 old_stdout Unix.stdout;
+  close_out oc;
+  result
+
+(* Usage *)
+let () =
+  with_output_to &#34;log.txt&#34; (fun () -&gt;
+    print_endline &#34;This goes to the file&#34;;
+    42
+  )
+</code></pre><p>## Using the Logs Library</p><p>For production applications, the <code>logs</code> library provides structured logging with level filtering:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>(* Install: opam install logs *)
+
+(* In your application *)
+Logs.info (fun m -&gt; m &#34;Server started on port %d&#34; port);
+Logs.warn (fun m -&gt; m &#34;Connection timeout after %.1f seconds&#34; elapsed);
+Logs.err (fun m -&gt; m &#34;Failed to open %s: %a&#34; filename Fmt.exn exn);
+
+(* Set log level *)
+Logs.set_level (Some Logs.Warning);  (* Only warn and error *)
+</code></pre><p>## Quick Reference</p><p>– <code>print_endline</code> — stdout with newline
+– <code>print_string</code> — stdout without newline
+– <code>prerr_endline</code> — stderr with newline
+– <code>prerr_string</code> — stderr without newline
+– <code>Printf.printf</code> — formatted stdout
+– <code>Printf.eprintf</code> — formatted stderr
+– <code>Format.printf</code> — pretty-printed stdout
+– <code>Logs.info/warn/err</code> — structured logging</p><p>For most command-line tools, <code>print_endline</code> and <code>prerr_endline</code> cover the common cases. Reach for <code>Printf</code> when you need formatting, and <code>Format</code> when you need structured output.</p><p>## Flushing Output</p><p>OCaml buffers output for performance. If your program crashes or you need real-time output, flush explicitly:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>print_string &#34;Processing...&#34;;
+flush stdout;  (* Force immediate output *)
+(* Do long computation *)
+print_endline &#34;done&#34;
+</code></pre><p>The <code>print_endline</code> and <code>prerr_endline</code> functions flush automatically. But <code>print_string</code> and <code>prerr_string</code> do not — you must call <code>flush stdout</code> or <code>flush stderr</code> manually.</p><p>This matters for progress indicators:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>let show_progress i total =
+  let pct = 100 * i / total in
+  Printf.printf &#34;\rProgress: %d%%&#34; pct;
+  flush stdout
+
+let () =
+  for i = 1 to 1000 do
+    show_progress i 1000;
+    Unix.sleepf 0.01
+  done;
+  print_endline &#34;&#34;
+</code></pre><p>## Capturing Output in Tests</p><p>When writing tests, you may want to capture stdout or stderr output:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>let capture_stdout f =
+  let buf = Buffer.create 256 in
+  let old_stdout = stdout in
+  let new_stdout = Stdlib.open_out_gen [Open_wronly; Open_creat] 0 &#34;/dev/null&#34; in
+  (* Simplified: in practice use Unix.dup2 for proper capture *)
+  let result = f () in
+  result
+
+(* Better approach: use the Camlunix or Core library&#39;s capture utilities *)
+</code></pre><p>For testing, the simplest approach is often to use functions that return strings instead of printing, and only use printing in your main entry point:</p><pre tabindex=0><code class=language-wp-block-code data-lang=wp-block-code>(* Library function - returns string, easy to test *)
+let format_result name score =
+  Printf.sprintf &#34;Result: %s scored %.1f&#34; name score
+
+(* CLI entry point - does the printing *)
+let () =
+  print_endline (format_result &#34;Alice&#34; 95.5)
+</code></pre><p>This separation makes your code testable while still supporting formatted output.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><a class=back href=/>&larr; All posts</a><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script><script>(function(){var e=["con","tact","@","systut","orials",".","com"].join("");document.querySelectorAll(".email-contact").forEach(function(t){var n=document.createElement("a");n.href="mailto:"+e,n.textContent=e,t.appendChild(n)})})()</script></body></html>

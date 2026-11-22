@@ -1,0 +1,166 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>nfstest-host(3) · Linux Manual Pages</title><meta name=description content="nfstest.host – Host module"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-nfstest-host/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="nfstest-host(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-nfstest-host/"><meta property="og:description" content="nfstest.host – Host module"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>nfstest-host(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>nfstest.host &#8211; Host module</p><h2>Description</h2><p>Provides a set of tools for running commands on the local host or a remote host, including a mechanism for running commands in the background. It provides methods for mounting and unmounting from an NFS server and a mechanism to simulate a network partition via the use of &#8216;iptables&#8217;. Currently, there is no mechanism to restore the iptables rules to their original state.</p><h2>Classes</h2><h3>class Host(baseobj.BaseObj)</h3><pre>Host object
+Host() -&gt; New Host object
+Usage:
+ from nfstest.host import Host
+ # Create host object for local host
+ x = Host()
+ # Create host object for remote host
+ y = Host(host='192.168.0.11')
+ # Run command to the local host
+ x.run_cmd(&quot;ls -l&quot;)
+ # Send command to the remote host and run it as root
+ y.run_cmd(&quot;ls -l&quot;, sudo=True)
+ # Run command in the background
+ x.run_cmd(&quot;tcpdump&quot;, sudo=True, wait=False)
+ ....
+ ....
+ # Stop command running in the background
+ x.stop_cmd()
+ # Mount volume using default options
+ x.mount()
+ # Unmount volume
+ x.umount()
+<code>Methods defined here:</code>
+---------------------
+<code>__del__(self)</code>
+Destructor
+Gracefully unmount volume and reset network.
+<code>__init__(self, **kwargs)</code>
+Constructor
+Initialize object's private data.
+<dl><dl><dt><code>host:</code>
+</dt><dd>Hostname or IP address [default: localhost]
+</dd><dt><code>user:</code>
+</dt><dd>User to log in to host [default: '']
+</dd><dt><code>server:</code>
+</dt><dd>NFS server name or IP address [default: None]
+</dd><dt><code>nfsversion:</code>
+</dt><dd>NFS version [default: 4.1]
+</dd><dt><code>proto:</code>
+</dt><dd>NFS protocol name [default: 'tcp']
+</dd><dt><code>port:</code>
+</dt><dd>NFS server port [default: 2049]
+</dd><dt><code>sec:</code>
+</dt><dd>Security flavor [default: 'sys']
+</dd><dt><code>export:</code>
+</dt><dd>Exported file system to mount [default: '/']
+</dd><dt><code>mtpoint:</code>
+</dt><dd>Mount point [default: '/mnt/t']
+</dd><dt><code>datadir:</code>
+</dt><dd>Data directory where files are created [default: '']
+</dd><dt><code>mtopts:</code>
+</dt><dd>Mount options [default: 'hard,rsize=4096,wsize=4096']
+</dd><dt><code>interface:</code>
+</dt><dd>Network device interface [default: 'eth0']
+</dd><dt><code>nomount:</code>
+</dt><dd>Debug option so the server is not actually mounted [default: False]
+</dd><dt><code>iptables:</code>
+</dt><dd>Iptables command [default: '/usr/sbin/iptables']
+</dd><dt><code>sudo:</code>
+</dt><dd>Sudo command [default: '/usr/bin/sudo']
+</dd></dl></dl>
+<code>get_route(self, ipaddr)</code>
+Get routing information for destination IP address
+Returns a tuple: (gateway, device name, src IP address)
+<code>mount(self, **kwargs)</code>
+Mount the file system on the given mount point.
+<dl><dl><dt><code>server:</code>
+</dt><dd>NFS server name or IP address [default: self.server]
+</dd><dt><code>nfsversion:</code>
+</dt><dd>NFS version [default: self.nfsversion]
+</dd><dt><code>proto:</code>
+</dt><dd>NFS protocol name [default: self.proto]
+</dd><dt><code>port:</code>
+</dt><dd>NFS server port [default: self.port]
+</dd><dt><code>sec:</code>
+</dt><dd>Security flavor [default: self.sec]
+</dd><dt><code>export:</code>
+</dt><dd>Exported file system to mount [default: self.export]
+</dd><dt><code>mtpoint:</code>
+</dt><dd>Mount point [default: self.mtpoint]
+</dd><dt><code>datadir:</code>
+</dt><dd>Data directory where files are created [default: self.datadir]
+</dd><dt><code>mtopts:</code>
+</dt><dd>Mount options [default: self.mtopts]
+</dd></dl></dl><dl><dt></dt><dd>Return the mount point.
+</dd></dl>
+<code>network_drop(self, ipaddr, port)</code>
+Simulate a network drop by dropping all tcp packets going to the
+given ipaddr and port using the iptables commands.
+<code>network_reset(self)</code>
+Reset the network by flushing all the chains in the table using
+the iptables command.
+<code>nfsstr(self, version=None)</code>
+Return the NFS string for the given NFS version
+<dl><dl><dt><code>version:</code>
+</dt><dd>NFS version, default is the object attribute nfsversion
+</dd></dl></dl>
+<code>nfsvers(self, version=None)</code>
+Return major and minor version for the given NFS version
+<dl><dl><dt><code>version:</code>
+</dt><dd>NFS version, default is the object attribute nfsversion
+</dd></dl></dl>
+<code>run_cmd(self, cmd, sudo=False, dlevel='DBG1', msg='', wait=True)</code>
+Run the command to the remote machine using ssh.
+There is no user authentication, so remote host must allow
+ssh connection without any passwords for the user.
+For a localhost the command is just executed and ssh is not used.
+The object for the process of the command is stored in object
+attribute 'self.process' to be used by methods wait_cmd() and
+stop_cmd(). The standard output of the command is also stored
+in the object attribute 'self.pstdout' while the standard error
+output of the command is stored in 'self.pstderr'.
+<dl><dl><dt><code>cmd:</code>
+</dt><dd>Command to execute
+</dd><dt><code>sudo:</code>
+</dt><dd>Run command using sudo if option is True
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd><dt><code>wait:</code>
+</dt><dd>Wait for command to complete before returning
+</dd></dl></dl><dl><dt></dt><dd>Return the standard output of the command and the return code or
+exit status is stored in the object attribute 'self.returncode'.
+</dd></dl>
+<code>stop_cmd(self, process=None, dlevel=None, msg='')</code>
+Terminate command started by run_cmd() by calling wait_cmd()
+with the 'terminate' option set to True.
+<dl><dl><dt><code>process:</code>
+</dt><dd>The object for the process of the command to terminate,
+or terminate all commands started by run_cmd() if this
+option is not given
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user, default
+is the level given by run_cmd()
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd></dl></dl><dl><dt></dt><dd>Return the exit status of the last command
+</dd></dl>
+<code>sudo_cmd(self, cmd)</code>
+Prefix the SUDO command if effective user is not root.
+<code>umount(self)</code>
+Unmount the file system.
+<code>wait_cmd(self, process=None, terminate=False, dlevel=None, msg='')</code>
+Wait for command started by run_cmd() to finish.
+<dl><dl><dt><code>process:</code>
+</dt><dd>The object for the process of the command to wait for,
+or wait for all commands started by run_cmd() if this
+option is not given
+</dd><dt><code>terminate:</code>
+</dt><dd>If True, send a signal to terminate the command or commands
+and then wait for all commands to finish
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user, default
+is the level given by run_cmd()
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd></dl></dl><dl><dt></dt><dd>Return the exit status of the last command
+</dd></dl>
+<code>Static methods defined here:</code>
+----------------------------
+<code>get_ip_address(host='', ipv6=False)</code>
+Get IP address associated with the given host name.
+This could be run as an instance or class method.</pre><h2>See Also</h2><p><code><a href=/docs/linux/man/3-baseobj/>baseobj</a>(3)</code></p><h2>Bugs</h2><p>No known bugs.</p><h2>Author</h2><p>Jorge Mora (mora [at] netapp.com)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

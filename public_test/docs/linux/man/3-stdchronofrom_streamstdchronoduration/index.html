@@ -1,0 +1,104 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdchronofrom_streamstdchronoduration(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdchronofrom_streamstdchronoduration/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdchronofrom_streamstdchronoduration(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdchronofrom_streamstdchronoduration/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdchronofrom_streamstdchronoduration(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::chrono::from_stream(std::chrono::duration) - std::chrono::from_stream(std::chrono::duration)</p><h2>Synopsis</h2><pre><code>template &lt;class CharT, class Traits, class Rep, class Period,
+          class Alloc = std::allocator&lt;CharT&gt;&gt;
+std::basic_istream&lt;CharT, Traits&gt; &amp;
+from_stream(std::basic_istream&lt;CharT, Traits&gt; &amp;is, const CharT *fmt, (since C++ 20)
+                                                                         std::chrono::duration&lt;Rep, Period&gt; &amp;d,
+            std::basic_string&lt;CharT, Traits, Alloc&gt; *abbrev = nullptr,
+            std::chrono::minutes *offset = nullptr);</code></pre><p>Attempts to parse the input stream is into the std::chrono::duration d, interpreted as the time of day since midnight, according to the format string fmt.
+Behaves as an UnformattedInputFunction, except that it has an unspecified effect on is.gcount(). After constructing and checking the sentry object, attempts to parse the input stream is into d according to the format string fmt. If the parse fails to decode a valid duration, is.setstate(std::ios_base::failbit) is called and d is not modified.
+If the format specifier %Z is used and successfully parsed, the parsed value is assigned to *abbrev if abbrev is not null. If the format specifier %z or a modified variant is used and successfully parsed, the parsed value is assigned to *offset if offset is not null.
+Format string
+The format string consists of zero or more conversion specifiers and ordinary characters. Each ordinary character, excluding whitespace characters and the terminating null character, matches one identical character from the input stream, or causes the function to fail if the next character on the stream does not compare equal.
+Each whitespace character matches zero or more whitespace characters in the input stream.
+Each unmodified conversion specifier begins with a % character followed by a character that determines the behavior of the specifier. Some conversion specifiers have a modified form in which an E or O modifier character is inserted after the % character. Some conversion specifiers have a modified form in which a width parameter given as a positive decimal integer (shown as N below) is inserted after the % character. Each conversion specifier causes the matched characters to be interpreted as parts of date and time types according to the table below.
+A character sequence in the format string that begins with a % but does not match one of the conversion specifiers below is interpreted as ordinary characters.
+If from_stream fails to parse everything specified by the format string, or if insufficient information is parsed to specify a complete result, or if parsing discloses contradictory information, is.setstate(std::ios_base::failbit) is called.
+The following conversion specifiers are available:
+Conversion Explanation
+specifier
+%% Matches a literal % character.
+%n Matches one whitespace character.
+%t Matches zero or one whitespace character.
+Year
+%C
+%NC Parses the century as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%EC The modified commands %EC and %OC interpret the locale&rsquo;s alternative representation of the century.
+%OC
+%y
+%Ny Parses the last two decimal digits of the year. If the century is not otherwise specified (e.g. with %C), values in the range [69, 99] are presumed to refer to the years 1969 to 1999, and values in the range [00, 68] are presumed to refer to the years 2000 to 2068. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%Ey The modified commands %Ey and %Oy interpret the locale&rsquo;s alternative representation.
+%Oy
+%Y Parses the year as a decimal number. The width N specifies the maximum number of characters to read. The default width is 4. Leading zeroes are permitted but not required.
+%NY The modified command %EY interprets the locale&rsquo;s alternative representation.
+%EY
+Month
+%b
+%B Parses the locale&rsquo;s full or abbreviated case-insensitive month name.
+%h
+%m Parses the month as a decimal number (January is 1). The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%Nm The modified command %Om interprets the locale&rsquo;s alternative representation.
+%Om
+Day
+%d
+%Nd
+%Ed Parses the day of month as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%e The modified commands %Ed and %Ee interpret the locale&rsquo;s alternative representation.
+%Ne
+%Ee
+Day of the week
+%a Parses the locale&rsquo;s full or abbreviated case-insensitive weekday name.
+%A
+%u Parses the ISO weekday as a decimal number (1-7), where Monday is 1. The width N specifies the maximum number of characters to read. The default width is 1. Leading zeroes are permitted but not required.
+%Nu The modified command %Ou interprets the locale&rsquo;s alternative representation.
+%Ou
+%w Parses the weekday as a decimal number (0-6), where Sunday is 0. The width N specifies the maximum number of characters to read. The default width is 1. Leading zeroes are permitted but not required.
+%Nw The modified command %Ow interprets the locale&rsquo;s alternative representation.
+%Ow
+ISO 8601 week-based year
+In ISO 8601 weeks begin with Monday and the first week of the year must satisfy the following requirements:</p><ul><li>Includes January 4</li><li>Includes first Thursday of the year
+%g Parses the last two decimal digits of the ISO 8601 week-based year. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%Ng
+%G Parses the ISO 8601 week-based year as a decimal number. The width N specifies the maximum number of characters to read. The default width is 4. Leading zeroes are permitted but not required.
+%NG
+%V Parses the ISO 8601 week of the year as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NV
+Week/day of the year
+%j Parses the day of the year as a decimal number (January 1 is 1). The width N specifies the maximum number of characters to read. The default width is 3. Leading zeroes are permitted but not required.
+%Nj
+%U Parses the week number of the year as a decimal number. The first Sunday of the year is the first day of week 01. Days of the same year prior to that are in week 00. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NU
+%W Parses the week number of the year as a decimal number. The first Monday of the year is the first day of week 01. Days of the same year prior to that are in week 00. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NW
+Date
+%D Equivalent to "%m/%d/%y".
+%F Equivalent to "%Y-%m-%d". If the width is specified, it is only applied to the %Y.
+%NF
+%x Parses the locale&rsquo;s date representation.
+%Ex The modified command %Ex interprets the locale&rsquo;s alternate date representation.
+Time of day
+%H Parses the hour (24-hour clock) as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NH The modified command %OH interprets the locale&rsquo;s alternative representation.
+%OH
+%I Parses the hour (12-hour clock) as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NI
+%M Parses the minute as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NM The modified command %OM interprets the locale&rsquo;s alternative representation.
+%OM
+%S Parses the second as a decimal number. The width N specifies the maximum number of characters to read. The default width is 2. Leading zeroes are permitted but not required.
+%NS The modified command %OS interprets the locale&rsquo;s alternative representation.
+%OS
+%p Parses the locale&rsquo;s equivalent of the AM/PM designations associated with a 12-hour clock. The command %I must precede %p in the format string.
+%R Equivalent to "%H:%M".
+%T Equivalent to "%H:%M:%S".
+%r Parses the locale&rsquo;s 12-hour clock time.
+%X Parses the locale&rsquo;s time representation.
+%EX The modified command %EX interprets the locale&rsquo;s alternate time representation.</li></ul><h2>Miscellaneous</h2><p>%c Parses the locale&rsquo;s date and time representation.
+%Ec The modified command %Ec interprets the locale&rsquo;s alternative date and time representation.
+%z Parses the offset from UTC in the format [+|-]hh[mm]. For example -0430 refers to 4 hours 30 minutes behind UTC and 04 refers to 4 hours ahead of UTC.
+%Ez The modified commands %Ez and %Oz parses the format [+|-]h[h][:mm] (i.e., requiring a : between the hours and minutes and making the leading zero for hour optional).
+%Oz
+%Z Parses the time zone abbreviation or name, taken as the longest sequence of characters that only contains the characters A through Z, a through z, 0 through 9, -, +, _, and /.</p><h2>Return value</h2><p>is.</p><h2>See also</h2><p>parse parses a chrono object from a stream
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(C++20)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

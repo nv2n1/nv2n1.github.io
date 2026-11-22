@@ -1,0 +1,54 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>xbindkeys(1) · Linux Manual Pages</title><meta name=description content="xbindkeys – a grabbing keys program for X"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-xbindkeys/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="xbindkeys(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-xbindkeys/"><meta property="og:description" content="xbindkeys – a grabbing keys program for X"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>xbindkeys(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>xbindkeys &#8211; a grabbing keys program for X</p><h2>SYNOPSIS</h2><p><code>xbindkeys</code> [ <i>options</i> ]</p><h2>DESCRIPTION</h2><p><i>XbindKeys</i> is a program that grab keys and mouse button events in X and starts associated shell command.</p><h2>COMMAND LINE OPTIONS</h2><p>Available command line options are as follows:</p><dl><dt><code>-d, &#8211;defaults</code></dt><dd>Print a default rc file</dd><dt><code>-f, &#8211;file</code></dt><dd>Use an alternative rc file</dd><dt><code>-h, &#8211;help</code></dt><dd>Short help on options plus version/author info.</dd><dt><code>-X, &#8211;display</code></dt><dd>Set X display to use</dd><dt><code>-v, &#8211;verbose</code></dt><dd>More information on xbindkeys when it run</dd><dt><code>-k, &#8211;key</code></dt><dd>Identify one key pressed (useful to fill the configuration file)</dd><dt><code>-mk, &#8211;multikey</code></dt><dd>Identify multi key pressed (useful to fill the configuration file)</dd><dt><code>-g, &#8211;geometry</code></dt><dd>size and position of window with -k|-mk option</dd><dt><code>-n, &#8211;nodaemon</code></dt><dd>don&#8217;t start as daemon</dd></dl><p>If guile support have not been disabled:</p><dl><dt><code>-dg, &#8211;defaults-guile</code></dt><dd>Print a default guile configuration file</dd><dt><code>-fg, &#8211;file-guile</code></dt><dd>Use an alternative guile configuration file</dd></dl><h2>XBINDKEYSRC</h2><p>XBindKeys uses a configuration files. This file is $HOME/.xbindkeysrc, used only for one user. All whitespace is ignored in the files except for within the commands names double quotes.</p><p>The configuration file consists of commands names in double quotes, and associated keys in the next line.</p><p>Comments are started with a pound (#) and extend to the end of the line.</p><p>You can see a default file with the &#8211;defaults option or create a default $HOME/.xbindkeysrc with</p><pre>
+ 'xbindkeys --defaults &gt; $HOME/.xbindkeysrc'.
+</pre><h2>KEYSYMS</h2><p>The program expects combinations of keysyms to be used by using plus(+) characters to combine them together.</p><p>The format of a command line is:</p><pre>
+    &quot;command to start &amp;&quot;
+       associated key
+</pre><p>To specify an associated key, you can use &#8216;xbindkeys &#8211;key&#8217; or<br>&nbsp;<wbr>&#8216;xbindkeys &#8211;multikey&#8217;&nbsp;<wbr>and put one of the two lines in the&nbsp;<wbr> configuration file.</p><p>A list of keys is in /usr/include/X11/keysym.h and in /usr/include/X11/keysymdef.h. The XK_ is not needed.</p><p>List of modifiers:</p><pre>
+    Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+    Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+</pre><p>The release modifier is not a standard X modifier, but you can use it if you want to catch release events instead of press events.</p><p>By defaults, xbindkeys does not pay attention with the modifiers NumLock, CapsLock and ScrollLock. Add the lines above in the configuration file, if you want to pay attention to them.</p><p>&nbsp;<wbr>keystate_numlock&nbsp;<wbr>=&nbsp;<wbr>enable</p><pre>
+    keystate_capslock = enable
+    keystate_scrolllock= enable
+</pre><h2>EXAMPLES</h2><p># control+shift+d starts an xterm (it&#8217;s a comment)</p><pre>
+&quot;xterm&quot; 
+  control+shift + q
+# Menu key starts xbindkeys_show
+&quot;xbindkeys_show&quot;
+  Menu
+# Control + mouse button 1 starts an xterm
+&quot;xterm&quot;
+  Control + b:1
+# Control+Shift+a  release event starts rxvt
+&quot;rxvt&quot;
+  release+control+shift + a
+# Control + mouse button 2 release event starts rxvt
+&quot;rxvt&quot;
+  Control + b:2 + Release
+</pre><h2>SCHEME CONFIGURATION STYLE</h2><p>If the guile support have not been disabled, you can use an alternate configuration file written in scheme. xbindkeys read first the scheme configuration file, and if this file doesn&#8217;t exist, it read the standard configuration file.</p><p>For more details, please see here</p><pre><code>
+  http://www.gnu.org/software/guile/guile.html
+Note: The guile configuration file is the prefered way if you have a non trivial
+configuration like for example double click, timed click or keys combinations.
+The defaults is ~/.xbindkeysrc.scm
+Use xbindkeys --defaults-guile for more details.
+And xbindkeys --defaults-guile &gt; ~/.xbindkeysrc.scm to use this method.
+</code></pre><h2>NOTE</h2><p>xbindkeys reload its configuration file each time it has changed. But if you want to force it reloading its configuration file, you can send a HUP signal:</p><p>killall -HUP xbindkeys</p><p>When HUP signal is send to xbindkeys, changes in $HOME/.xbindkeysrc takes effect only after moving mouse.</p><h2>BUGS</h2><p>If you find a bug, please send a mail to &lt;hocwp [at] free.fr></p><h2>HOMEPAGE</h2><pre>
+<a rel=nofollow href=http://hocwp.free.fr/xbindkeys>http://hocwp.free.fr/xbindkeys</a>
+</pre><h2>AUTHOR</h2><p>Philippe Brochard &lt;hocwp [at] free.fr></p><pre>
+Marcello Mathias Herreshoff for the guile support &lt;marcello [at] hummer.stanford.edu&gt;
+</pre><h2>FILES</h2><pre>
+$HOME/.xbindkeysrc
+        The users configuration file.
+$HOME/.xbindkeysrc.scm
+        The users configuration file in scheme style (if guile support have not been disabled).
+</pre><h2>SEE ALSO</h2><pre>
+<code>xbindkeys_show</code>
+    Utility for showing the actual keybinding with xbindkeys
+<code>xmodmap(1x)</code>
+    Utility for modifying keymap &amp; button mappings in X.
+<code>xev(1x)</code>
+    Print contents of X events.
+<code>/usr/include/X11/keysymdef.h</code>
+    X11 KeySym definitions.
+</pre><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

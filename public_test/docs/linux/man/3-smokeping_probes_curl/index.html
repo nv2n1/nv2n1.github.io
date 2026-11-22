@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>smokeping_probes_curl(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-smokeping_probes_curl/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="smokeping_probes_curl(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-smokeping_probes_curl/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>smokeping_probes_curl(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>Smokeping::probes::Curl - a</p><p><a href=/docs/linux/man/1-curl/>curl</a>(1) probe for SmokePing</p><h2>Overview</h2>Fetches an <font size=-1>HTTP</font> or <font size=-1>HTTPS URL</font> using <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1).<h2>Synopsis</h2><pre> *** Probes ***
+ +Curl
+ binary = /usr/bin/curl
+ forks = 5
+ offset = 50%
+ step = 300
+ # The following variables can be overridden in each target section
+ agent = User-Agent: Lynx/2.8.4rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6c
+ expect = Status: green
+ extraargs = -6 --head --user user:password
+ extrare = / /
+ follow_redirects = yes
+ include_redirects = yes
+ insecure_ssl = 1
+ interface = eth0
+ pings = 5
+ ssl2 = 1
+ timeout = 20
+ urlformat = <a rel=nofollow href=http://%host%/>http://%host%/</a> # mandatory
+ # [...]
+ *** Targets ***
+ probe = Curl # if this should be the default probe
+ # [...]
+ + mytarget
+ # probe = Curl # if the default probe is something else
+ host = my.host
+ agent = User-Agent: Lynx/2.8.4rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6c
+ expect = Status: green
+ extraargs = -6 --head --user user:password
+ extrare = / /
+ follow_redirects = yes
+ include_redirects = yes
+ insecure_ssl = 1
+ interface = eth0
+ pings = 5
+ ssl2 = 1
+ timeout = 20
+ urlformat = <a rel=nofollow href=http://%host%/>http://%host%/</a> # mandatory</pre><h2>Description</h2>(see <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) for details of the options below)<h2>Variables</h2>Supported probe-specific variables:<dl compact><dt>binary</dt><dd>The location of your curl binary.
+Default value: /usr/bin/curl</dd><dt>forks</dt><dd>Run this many concurrent processes at maximum
+Example value: 5
+Default value: 5</dd><dt>offset</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font size=-1>NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.)
+Example value: 50%</dd><dt>step</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font size=-1>RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font size=-1>RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.)
+Example value: 300</dd></dl><p>Supported target-specific variables:</p><dl compact><dt>agent</dt><dd>The ``-A'' <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) option. This is a full <font size=-1>HTTP</font> User-Agent header including the words ``User-Agent:''. Note that it does not need any quotes around it.
+Example value: User-Agent: Lynx/2.8.4rel.1 libwww-FM/2.14 <font size=-1>SSL-MM/1.4.1</font> OpenSSL/0.9.6c</dd><dt>expect</dt><dd>Require the given text to appear somewhere in the response, otherwise probe is treated as a failure
+Example value: Status: green
+Default value:</dd><dt>extraargs</dt><dd>Any extra arguments you might want to hand to <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1). The arguments should be separated by the regexp specified in ``extrare'', which contains just the space character (`` '') by default.
+Note that curl will be called with the resulting list of arguments without any shell expansion. If you need to specify any arguments containing spaces, you should set ``extrare'' to something else.
+As a complicated example, to explicitly set the ``Host:'' header in Curl requests, you need to set ``extrare'' to something else, eg. ``/;/'', and then specify <tt>"extraargs = --header;Host: <a rel=nofollow href=http://www.example.com>www.example.com</a>"</tt>.
+Example value: -6 --head --user user:password</dd><dt>extrare</dt><dd>The regexp used to split the extraargs string into an argument list, in the ``/regexp/'' notation. This contains just the space character (`` '') by default, but if you need to specify any arguments containing spaces, you can set this variable to a different value.
+Example value: / /
+Default value: / /</dd><dt>follow_redirects</dt><dd>If this variable is set to 'yes', curl will follow any <font size=-1>HTTP</font> redirection steps (the '-L' option). If set to 'no', <font size=-1>HTTP</font> Location: headers will not be followed. See also 'include_redirects'.
+Example value: yes
+Default value: no</dd><dt>include_redirects</dt><dd>If this variable is set to 'yes', the measurement result will include the time spent on following any <font size=-1>HTTP</font> redirection steps. If set to 'no', only the last step is measured. See also 'follow_redirects'.
+Example value: yes
+Default value: no</dd><dt>insecure_ssl</dt><dd>The ``-k'' <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) option. Accept <font size=-1>SSL</font> connections that don't have a secure certificate chain to a trusted <font size=-1>CA.</font> Note that if you are going to monitor https targets, you'll probably have to either enable this option or specify the <font size=-1>CA</font> path to curl through extraargs below. For more info, see the <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) manual page.
+Example value: 1</dd><dt>interface</dt><dd>The ``--interface'' <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) option. Bind to a specific interface, <font size=-1>IP</font> address or host name.
+Example value: eth0</dd><dt>pings</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font size=-1>RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font size=-1>RRD</font> files or somehow convert them.
+Example value: 5</dd><dt>ssl2</dt><dd>The ``-2'' <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) option. Force <font size=-1>SSL2.</font>
+Example value: 1</dd><dt>timeout</dt><dd>The ``-m'' <i><a href=/docs/linux/man/1-curl/>curl</a></i>(1) option. Maximum timeout in seconds.
+Example value: 20
+Default value: 10</dd><dt>urlformat</dt><dd>The template of the <font size=-1>URL</font> to fetch. Can be any one that curl supports. Any occurrence of the string '%host%' will be replaced with the host to be probed.
+Example value: <a rel=nofollow href=http://%host%/>http://%host%/</a>
+This setting is mandatory.</dd></dl><h2>Authors</h2><pre> Gerald Combs &lt;gerald [AT] ethereal.com&gt;
+ Niko Tyni &lt;ntyni [at] iki.fi&gt;</pre><h2>Notes</h2>You should consider setting a lower value for the <tt>"pings"</tt> variable than the default 20, as repetitive <font size=-1>URL</font> fetching may be quite heavy on the server.<p>The <font size=-1>URL</font> to be tested used to be specified by the variable &lsquo;url&rsquo; in earlier versions of Smokeping, and the &lsquo;host&rsquo; setting did not influence it in any way. The variable name has now been changed to &lsquo;urlformat&rsquo;, and it can (and in most cases should) contain a placeholder for the &lsquo;host&rsquo; variable.</p><h2>See Also</h2><i><a href=/docs/linux/man/1-curl/>curl</a></i>(1), &lt;<a rel=nofollow href=http://curl.haxx.se/>http://curl.haxx.se/</a>><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdrefstdcref(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdrefstdcref/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdrefstdcref(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdrefstdcref/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdrefstdcref(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::ref,std::cref - std::ref,std::cref</p><h2>Synopsis</h2><pre><code>Defined in header&lt;functional&gt;
+    template &lt;class T&gt;
+    (1)(since C++ 11)
+        std::reference_wrapper&lt;T&gt; ref(T &amp;t) noexcept;
+template &lt;class T&gt;
+(2)(since C++ 11)
+    std::reference_wrapper&lt;T&gt; ref(std::reference_wrapper&lt;T&gt; t) noexcept;
+template &lt;class T&gt;
+(3)(since C++ 11)
+    void ref(const T &amp;&amp;) = delete;
+template &lt;class T&gt;
+(4)(since C++ 11)
+    std::reference_wrapper&lt;const T&gt; cref(const T &amp;t) noexcept;
+template &lt;class T&gt;
+(5)(since C++ 11)
+    std::reference_wrapper&lt;const T&gt; cref(std::reference_wrapper&lt;T&gt; t) noexcept;
+template &lt;class T&gt;
+(6)(since C++ 11)
+    void cref(const T &amp;&amp;) = delete;</code></pre><p>Function templates ref and cref are helper functions that generate an object of type std::reference_wrapper, using template_argument_deduction to determine the template argument of the result.
+T may be an incomplete type. <i>(since C++20)</i></p><h2>Parameters</h2><p>t - lvalue reference to object that needs to be wrapped or an instance of std::reference_wrapper</p><h2>Return value</h2><ol><li>std::reference_wrapper&lt;T>(t)</li><li>ref(t.get())</li><li>std::reference_wrapper&lt;const T>(t)</li><li>cref(t.get())
+3,6) rvalue reference wrapper is deleted.</li></ol><h2>Example</h2><p>// Run this code<pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+void f(int &amp;n1, int &amp;n2, const int &amp;n3)
+{
+std::cout &lt;&lt; &quot;In function: &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n3 &lt;&lt; &lsquo;\n&rsquo;;
+++n1; // increments the copy of n1 stored in the function object
+++n2; // increments the main()&rsquo;s n2
+// ++n3; // compile error
+}
+int main()
+{
+int n1 = 1, n2 = 2, n3 = 3;
+std::function&lt;void()&gt; bound_f = std::bind(f, n1, std::ref(n2), std::cref(n3));
+n1 = 10;
+n2 = 11;
+n3 = 12;
+std::cout &lt;&lt; &quot;Before function: &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n3 &lt;&lt; &lsquo;\n&rsquo;;
+bound_f();
+std::cout &lt;&lt; &quot;After function: &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n3 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> Before function: 10 11 12
+ <wbr> In function: 1 11 12
+ <wbr> After function: 10 12 12</p><h2>See also</h2><p>reference_wrapper CopyConstructible and CopyAssignable reference wrapper
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

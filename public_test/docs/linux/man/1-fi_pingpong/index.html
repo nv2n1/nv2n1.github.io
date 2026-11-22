@@ -1,0 +1,42 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>fi_pingpong(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-fi_pingpong/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="fi_pingpong(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-fi_pingpong/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>fi_pingpong(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>fi_pingpong - Quick and simple pingpong test for libfabric</p><h2>SYNOPSIS</h2><dl><dt></dt><dd><pre><code>
+&amp;nbsp;
+fi_pingpong &amp;nbsp;
+[OPTIONS] &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+start server
+    &amp;nbsp;
+fi_pingpong &amp;nbsp;
+[OPTIONS] &amp; nbsp;
+&lt;server address&gt; &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+connect to server
+</code></pre></dd></dl><h2>DESCRIPTION</h2><p>fi_pingpong is a pingpong test for the core feature of the libfabric library: transmitting data between two processes. fi_pingpong also displays aggregated statistics after each test run, and can additionally verify data integrity upon receipt.</p><p>By default, the datagram (FI_EP_DGRAM) endpoint is used for the test, unless otherwise specified via -e.</p><h2>HOW TO RUN TESTS</h2><p>Two copies of the program must be launched: first, one copy must be launched as the server. Second, another copy is launched with the address of the server.</p><p>As a client-server test, each have the following usage model:</p><h3>Start the server</h3><dl><dt></dt><dd><pre>
+server$&nbsp;fi_pingpong
+</pre></dd></dl><h3>Start the client</h3><dl><dt></dt><dd><pre>
+client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
+</pre></dd></dl><h2>OPTIONS</h2><p>The server and client must be able to communicate properly for the fi_pingpong utility to function. If any of the -e, -I, -S, or -p options are used, then they must be specified on the invocation for both the server and the client process. If the -d option is specified on the server, then the client will select the appropriate domain if no hint is provided on the client side. If the -d option is specified on the client, then it must also be specified on the server. If both the server and client specify the -d option and the given domains cannot communicate, then the application will fail.</p><h3>Control Messaging</h3><p>-B &lt;src_port> : The non-default source port number of the control socket. If this is not provided then the server will bind to port 47592 by default and the client will allow the port to be selected automatically.</p><p>-P &lt;dest_port> : The non-default destination port number of the control socket. If this is not provided then the client will connect to 47592 by default. The server ignores this option.</p><h3>Fabric Filtering</h3><p>-p &lt;provider_name> : The name of the underlying fabric provider (e.g., sockets, psm, usnic, etc.). If a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by fi_getinfo(3)).</p><p>-e &lt;endpoint> : The type of endpoint to be used for data messaging between the two processes. Supported values are dgram, rdm, and msg. For more information on endpoint types, see fi_endpoint(3).</p><p>-d &lt;domain> : The name of the specific domain to be used.</p><h3>Test Options</h3><p>-I &lt;iter> : The number of iterations of the test will run.</p><p>-S &lt;msg_size> : The specific size of the message in bytes the test will use or &lsquo;all&rsquo; to run all the default sizes.</p><p>-c : Activate data integrity checks at the receiver (note: this will degrade performance).</p><h3>Utility</h3><p>-v : Activate output debugging (warning: highly verbose)</p><p>-h : Displays help output for the pingpong test.</p><h2>USAGE EXAMPLES</h2><h3>A simple example</h3><h3>Server: fi_pingpong -p&nbsp;&lt;provider_name></h3><p>server$ fi_pingpong -p sockets</p><h3>Client: fi_pingpong -p&nbsp;&lt;provider_name>&nbsp;&lt;server_addr></h3><p>client$ fi_pingpong -p sockets 192.168.0.123</p><h3>An example with various options</h3><h3>Server:</h3><p>server$ fi_pingpong -p usnic -I 1000 -S 1024</p><h3>Client:</h3><p>client$ fi_pingpong -p usnic -I 1000 -S 1024 192.168.0.123</p><p>Specifically, this will run a pingpong test with:</p><dl><dt>&bull;</dt><dd>usNIC provider</dd><dt>&bull;</dt><dd>1000 iterations</dd><dt>&bull;</dt><dd>1024 bytes message size</dd><dt>&bull;</dt><dd>server node as 192.168.0.123</dd></dl><h3>A longer test</h3><h3>Server:</h3><p>server$ fi_pingpong -p usnic -I 10000 -S all</p><h3>Client:</h3><p>client$ fi_pingpong -p usnic -I 10000 -S all 192.168.0.123</p><h2>DEFAULTS</h2><p>There is no default provider; if a provider is not specified via the -p switch, the test will pick one from the list of available providers (as returned by fi_getinfo(3)).</p><p>If no endpoint type is specified, &lsquo;dgram&rsquo; is used.</p><p>The default tested sizes are: 64, 256, 1024, 4096, 65536, and 1048576. The test will only test sizes that are within the selected endpoints maximum message size boundary.</p><h2>OUTPUT</h2><p>Each test generates data messages which are accounted for. Specifically, the displayed statistics at the end are :</p><dl><dt>&bull;</dt><dd>bytes : number of bytes per message sent</dd><dt>&bull;</dt><dd>#sent : number of messages (ping) sent from the client to the server</dd><dt>&bull;</dt><dd>#ack : number of replies (pong) of the server received by the client</dd><dt>&bull;</dt><dd>total : amount of memory exchanged between the processes</dd><dt>&bull;</dt><dd>time : duration of this single test</dd><dt>&bull;</dt><dd>MB/sec : throughput computed from total and time</dd><dt>&bull;</dt><dd>usec/xfer : average time for transferring a message outbound (ping or pong) in microseconds</dd><dt>&bull;</dt><dd>Mxfers/sec : average amount of transfers of message outbound per second</dd></dl><h2>SEE ALSO</h2><p>fi_getinfo(3), fi_endpoint(3) <a href=/docs/linux/man/7-fabric/>fabric</a>(7),</p><h2>AUTHORS</h2><p>OpenFabrics.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

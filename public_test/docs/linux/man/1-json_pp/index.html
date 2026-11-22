@@ -1,0 +1,31 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>json_pp(1) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-json_pp/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="json_pp(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-json_pp/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>json_pp(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>json_pp - JSON::PP command utility</p><h2>SYNOPSIS</h2><pre><code>
+json_pp[-v][-f from_format][-t to_format][-json_opt options_to_json1[, options_to_json2[, ...]]]
+</code></pre><h2>DESCRIPTION</h2><p>json_pp converts between some input and output formats (one of them is <font size=-1>JSON</font>). This program was copied from json_xs and modified.</p><p>The default input format is json and the default output format is json with pretty option.</p><h2>OPTIONS</h2><h3>-f</h3><pre>
+    -f from_format
+</pre><p>Reads a data in the given format from <font size=-1>STDIN.</font></p><p>Format types:</p><dl><dt>json</dt><dd>as <font size=-1>JSON</font></dd><dt>eval</dt><dd>as Perl code</dd></dl><h3>-t</h3><p>Writes a data in the given format to <font size=-1>STDOUT.</font></p><dl><dt>null</dt><dd>no action.</dd><dt>json</dt><dd>as <font size=-1>JSON</font></dd><dt>dumper</dt><dd>as Data::Dumper</dd></dl><h3>-json_opt</h3><p>options to <font size=-1>JSON::PP</font></p><p>Acceptable options are:</p><pre>
+    ascii latin1 utf8 pretty indent space_before space_after relaxed canonical allow_nonref
+    allow_singlequote allow_barekey allow_bignum loose escape_slash indent_length
+</pre><p>Multiple options must be separated by commas:</p><pre>
+    Right: -json_opt pretty,canonical
+    Wrong: -json_opt pretty -json_opt canonical
+</pre><h3>-v</h3><p>Verbose option, but currently no action in fact.</p><h3>-V</h3><p>Prints version and exits.</p><h2>EXAMPLES</h2><pre><code>
+$ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
+    json_pp - f json - t dumper - json_opt pretty,
+    utf8, allow_bignum
+              $VAR1 = {'bar' = &gt; bless({'value' = &gt; [
+                                            '0000000',
+                                            '0000000',
+                                            '5678900',
+                                            '1234'
+                                        ],
+                                        'sign' = &gt; '+'},
+                                       'Math::BigInt'),
+                       'foo' = &gt; "\x{3042}\x{3044}"};
+$ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
+    json_pp - f json - t dumper - json_opt pretty
+                                      $VAR1 = {
+    'bar' = &gt; '1234567890000000000000000',
+    'foo' = &gt; "\x{e3}\x{81}\x{82}\x{e3}\x{81}\x{84}"};
+</code></pre><h2>SEE ALSO</h2><p><font size=-1>JSON::PP</font>, json_xs</p><h2>AUTHOR</h2><p>Makamaka Hannyaharamitu, &lt;makamaka[at]cpan.org></p><h2>COPYRIGHT AND LICENSE</h2><p>Copyright 2010 by Makamaka Hannyaharamitu</p><p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

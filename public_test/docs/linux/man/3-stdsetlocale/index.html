@@ -1,0 +1,35 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdsetlocale(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdsetlocale/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdsetlocale(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdsetlocale/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdsetlocale(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::setlocale - std::setlocale</p><h2>Synopsis</h2><pre><code>Defined in header&lt;clocale&gt;
+    char *setlocale(int category, const char *locale);</code></pre><p>The setlocale function installs the specified system locale or its portion as the new C locale. The modifications remain in effect and influences the execution of all locale-sensitive C library functions until the next call to setlocale. If locale is a null pointer, setlocale queries the current C locale without modifying it.</p><h2>Parameters</h2><p>category - locale category identifier, one of the LC_xxx macros. May be 0.
+locale - system-specific locale identifier. Can be "" for the user-preferred locale or "C" for the minimal locale</p><h2>Return value</h2><p>Pointer to a narrow null-terminated string identifying the C locale after applying the changes, if any, or null pointer on failure.
+A copy of the returned string along with the category used in this call to std::setlocale may be used later in the program to restore the locale back to the state at the end of this call.</p><h2>Notes</h2><p>During program startup, the equivalent of std::setlocale(LC_ALL, "C"); is executed before any user code is run.
+Although the return type is char*, modifying the pointed-to characters is undefined behavior.
+Because setlocale modifies global state which affects execution of locale-dependent functions, it is undefined behavior to call it from one thread, while another thread is executing any of the following functions: std::fprintf, std::isprint, std::iswdigit, std::localeconv, std::tolower, std::fscanf, std::ispunct, std::iswgraph, std::mblen, std::toupper, std::isalnum, std::isspace, std::iswlower, std::mbstowcs, std::towlower, std::isalpha, std::isupper, std::iswprint, std::mbtowc, std::towupper, std::isblank, std::iswalnum, std::iswpunct, std::setlocale, std::wcscoll, std::iscntrl, std::iswalpha, std::iswspace, std::strcoll, std::wcstod, std::isdigit, std::iswblank, std::iswupper, std::strerror, std::wcstombs, std::isgraph, std::iswcntrl, std::iswxdigit, std::strtod, std::wcsxfrm, std::islower, std::iswctype, std::isxdigit.
+POSIX also defines a locale named "POSIX", which is always accessible and is exactly equivalent to the default minimal "C" locale.
+POSIX also specifies that the returned pointer, not just the contents of the pointed-to string, may be invalidated by subsequent calls to setlocale.</p><h2>Example</h2><p>// Run this code<pre><code>#include &lt;cstdio&gt;
+#include &lt;clocale&gt;
+#include &lt;ctime&gt;
+#include &lt;cwchar&gt;
+int main()
+{
+// the C locale will be UTF-8 enabled English;
+// decimal dot will be German
+// date and time formatting will be Japanese
+std::setlocale(LC_ALL, &quot;en_US.UTF-8&quot;);
+std::setlocale(LC_NUMERIC, &quot;de_DE.UTF-8&quot;);
+std::setlocale(LC_TIME, &quot;ja_JP.UTF-8&quot;);
+wchar_t str[100];
+std::time_t t = std::time(NULL);
+std::wcsftime(str, 100, L&quot;%A %c&quot;, std::localtime(&amp;t));
+std::wprintf(L&quot;Number: %.2f\nDate: %Ls\n&quot;, 3.14, str);
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> Number: 3,14
+ <wbr> Date: 月曜日 2011年12月19日 18時04分40秒</p><h2>See also</h2><p>LC_ALL
+LC_COLLATE locale categories for std::setlocale
+LC_CTYPE (macro constant)
+LC_MONETARY
+LC_NUMERIC
+LC_TIME
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> set of polymorphic facets that encapsulate cultural differences
+locale <i>(class)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

@@ -1,0 +1,96 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sgsvj0(3) · Linux Manual Pages</title><meta name=description content="sgsvj0.f –"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-sgsvj0/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sgsvj0(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-sgsvj0/"><meta property="og:description" content="sgsvj0.f –"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>sgsvj0(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>sgsvj0.f &#8211;</p><h2>SYNOPSIS</h2><h3>Functions/Subroutines</h3><p>subroutine <code>sgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br><i></i><code>SGSVJ0</code> pre-processor for the routine sgesvj.</p><h2>Function/Subroutine Documentation</h2><h3>subroutine sgsvj0 (character*1JOBV, integerM, integerN, real, dimension( lda, * )A, integerLDA, real, dimension( n )D, real, dimension( n )SVA, integerMV, real, dimension( ldv, * )V, integerLDV, realEPS, realSFMIN, realTOL, integerNSWEEP, real, dimension( lwork )WORK, integerLWORK, integerINFO)</h3><p><code>SGSVJ0</code> pre-processor for the routine sgesvj.</p><p><code>Purpose:</code></p><dl><dt></dt><dd><pre>
+ SGSVJ0 is called from SGESVJ as a pre-processor and that is its main
+ purpose. It applies Jacobi rotations in the same way as SGESVJ does, but
+ it does not check convergence (stopping criterion). Few tuning
+ parameters (marked by [TP]) are available for the implementer.
+</pre><p>&nbsp;<wbr></dd></dl><p><code>Parameters:</code></p><dl><dt></dt><dd><i>JOBV</i></dd><pre>
+          JOBV is CHARACTER*1
+          Specifies whether the output from this procedure is used
+          to compute the matrix V:
+          = 'V': the product of the Jacobi rotations is accumulated
+                 by postmulyiplying the N-by-N array V.
+                (See the description of V.)
+          = 'A': the product of the Jacobi rotations is accumulated
+                 by postmulyiplying the MV-by-N array V.
+                (See the descriptions of MV and V.)
+          = 'N': the Jacobi rotations are not accumulated.
+</pre><p><i>M</i></p><pre>
+          M is INTEGER
+          The number of rows of the input matrix A.  M &gt;= 0.
+</pre><p><i>N</i></p><pre>
+          N is INTEGER
+          The number of columns of the input matrix A.
+          M &gt;= N &gt;= 0.
+</pre><p><i>A</i></p><pre>
+          A is REAL array, dimension (LDA,N)
+          On entry, M-by-N matrix A, such that A*diag(D) represents
+          the input matrix.
+          On exit,
+          A_onexit * D_onexit represents the input matrix A*diag(D)
+          post-multiplied by a sequence of Jacobi rotations, where the
+          rotation threshold and the total number of sweeps are given in
+          TOL and NSWEEP, respectively.
+          (See the descriptions of D, TOL and NSWEEP.)
+</pre><p><i>LDA</i></p><pre>
+          LDA is INTEGER
+          The leading dimension of the array A.  LDA &gt;= max(1,M).
+</pre><p><i>D</i></p><pre>
+          D is REAL array, dimension (N)
+          The array D accumulates the scaling factors from the fast scaled
+          Jacobi rotations.
+          On entry, A*diag(D) represents the input matrix.
+          On exit, A_onexit*diag(D_onexit) represents the input matrix
+          post-multiplied by a sequence of Jacobi rotations, where the
+          rotation threshold and the total number of sweeps are given in
+          TOL and NSWEEP, respectively.
+          (See the descriptions of A, TOL and NSWEEP.)
+</pre><p><i>SVA</i></p><pre>
+          SVA is REAL array, dimension (N)
+          On entry, SVA contains the Euclidean norms of the columns of
+          the matrix A*diag(D).
+          On exit, SVA contains the Euclidean norms of the columns of
+          the matrix onexit*diag(D_onexit).
+</pre><p><i>MV</i></p><pre>
+          MV is INTEGER
+          If JOBV .EQ. 'A', then MV rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV = 'N',   then MV is not referenced.
+</pre><p><i>V</i></p><pre>
+          V is REAL array, dimension (LDV,N)
+          If JOBV .EQ. 'V' then N rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV .EQ. 'A' then MV rows of V are post-multipled by a
+                           sequence of Jacobi rotations.
+          If JOBV = 'N',   then V is not referenced.
+</pre><p><i>LDV</i></p><pre>
+          LDV is INTEGER
+          The leading dimension of the array V,  LDV &gt;= 1.
+          If JOBV = 'V', LDV .GE. N.
+          If JOBV = 'A', LDV .GE. MV.
+</pre><p><i>EPS</i></p><pre>
+          EPS is REAL
+          EPS = SLAMCH('Epsilon')
+</pre><p><i>SFMIN</i></p><pre>
+          SFMIN is REAL
+          SFMIN = SLAMCH('Safe Minimum')
+</pre><p><i>TOL</i></p><pre>
+          TOL is REAL
+          TOL is the threshold for Jacobi rotations. For a pair
+          A(:,p), A(:,q) of pivot columns, the Jacobi rotation is
+          applied only if ABS(COS(angle(A(:,p),A(:,q)))) .GT. TOL.
+</pre><p><i>NSWEEP</i></p><pre>
+          NSWEEP is INTEGER
+          NSWEEP is the number of sweeps of Jacobi rotations to be
+          performed.
+</pre><p><i>WORK</i></p><pre>
+          WORK is REAL array, dimension LWORK.
+</pre><p><i>LWORK</i></p><pre>
+          LWORK is INTEGER
+          LWORK is the dimension of WORK. LWORK .GE. M.
+</pre><p><i>INFO</i></p><pre>
+          INFO is INTEGER
+          = 0 : successful exit.
+          &lt; 0 : if INFO = -i, then the i-th argument had an illegal value
+</pre><p>&nbsp;<wbr></dl><p><code>Author:</code></p><dl><dt></dt><dd>Univ. of Tennessee</dd><p>Univ. of California Berkeley</p><p>Univ. of Colorado Denver</p><p>NAG Ltd.</dl><p><code>Date:</code></p><dl><dt></dt><dd>September 2012</dd></dl><p><code>Further Details:</code></p><dl><dt></dt><dd>SGSVJ0 is used just to enable SGESVJ to call a simplified version of itself to work on a submatrix of the original matrix.</dd></dl><p><code>Contributors:</code></p><dl><dt></dt><dd>Zlatko Drmac (Zagreb, Croatia) and Kresimir Veselic (Hagen, Germany)</dd></dl><p><code>Bugs, Examples and Comments:</code></p><dl><dt></dt><dd>Please report all bugs and send interesting test examples and comments to drmac [at] math.hr. Thank you.</dd></dl><p>Definition at line 218 of file sgsvj0.f.</p><h2>Author</h2><p>Generated automatically by Doxygen for LAPACK from the source code.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

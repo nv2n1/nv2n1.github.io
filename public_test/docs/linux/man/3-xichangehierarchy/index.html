@@ -1,0 +1,58 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>xichangehierarchy(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-xichangehierarchy/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="xichangehierarchy(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-xichangehierarchy/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>xichangehierarchy(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>XIChangeHierarchy - change the device hierarchy.</p><h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput2.h&gt;</pre><pre>Status XIChangeHierarchy( Display *display,
+ XIAnyHierarchyChangeInfo *changes,
+ int num_changes);</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>num_changes
+ Specifies the number of elements in changes.</pre><pre>changes
+ Specifies the changes to be made.</pre><h2>Description</h2><dl compact><dd><pre>XIChangeHierarchy modifies the device hierarchy by creating or
+removing master devices or changing the attachment of slave
+devices. If num_changes is non-zero, changes is an array of
+XIAnyHierarchyChangeInfo structures. If num_changes is equal or less than
+zero, XIChangeHierarchy does nothing.</pre></dd></dl><dl compact><dd><pre>XIChangeHierarchy processes changes in order, effective
+immediately. If an error occurs, processing is aborted and the
+error is reported to the client. Changes already made remain
+effective.</pre></dd></dl><dl compact><dd><pre>The list of changes is any combination of
+XIAnyHierarchyChangeInfo. The type of a hierarchy change can be
+XIAddMaster, XIRemoveMaster, XIAttachSlave or XIDetachSlave.</pre></dd></dl><dl compact><dd><pre>typedef union {
+ int type;
+ XIAddMasterInfo add;
+ XIRemoveMasterInfo remove;
+ XIAttachSlave attach;
+ XIDetachSlave detach;
+} XIAnyHierarchyChangeInfo;</pre></dd></dl><dl compact><dd><pre>typedef struct {
+ int type; /* XIAddMaster */
+ char* name;
+ Bool send_core;
+ Bool enable;
+} XIAddMasterInfo;</pre></dd></dl><dl compact><dd><pre>typedef struct {
+ int type; /* XIRemoveMaster */
+ int deviceid;
+ int return_mode;
+ int return_pointer;
+ int return_keyboard;
+} XIRemoveMasterInfo;</pre></dd></dl><dl compact><dd><pre>typedef struct {
+ int type; /* XIAttachSlave */
+ int deviceid;
+ int new_master;
+} XIAttachSlaveInfo;</pre></dd></dl><dl compact><dd><pre>typedef struct {
+ int type; /* XIDetachSlave */
+ int deviceid;
+} XIDetachSlaveInfo;</pre></dd></dl><dl compact><dd><pre>XIAddMasterInfo creates a new master pointer and a new
+master keyboard labelled &quot;name pointer&quot; and &quot;name keyboard&quot;
+respectively. If sendCore is True, the devices will send core
+events. If enable is True, the device is enabled immediately.</pre></dd></dl><dl compact><dd><pre>XIAddMasterInfo can generate a BadValue error.</pre></dd></dl><dl compact><dd><pre>XIRemoveMasterInfo removes device and its paired master device.
+If returnMode is XIAttachToMaster, all pointers attached to
+device or its paired master device are attached to
+returnPointer. Likewise, all keyboards are attached to
+returnKeyboard. If returnMode is XIFloating, all attached
+devices are set to floating.</pre></dd></dl><dl compact><dd><pre>XIRemoveMasterInfo can generate a BadValue and a BadDevice
+error.</pre></dd></dl><dl compact><dd><pre>XIAttachSlaveInfo attaches device to new_master. If the device
+is currently attached to a master device, it is detached from
+the master device and attached to the new master device.</pre></dd></dl><dl compact><dd><pre>XIAttachSlaveInfo can generate a BadDevice error.</pre></dd></dl><dl compact><dd><pre>XIDettachSlaveInfo deattaches device from the current master
+device and sets it floating. If the device is already floating,
+no changes are made.</pre></dd></dl><dl compact><dd><pre>XIDetachSlaveInfo can generate a BadDevice error.</pre></dd></dl><dl compact><dd><pre>XIChangeHierarchy generates an XIHierarchyEvent if any
+modifications were successful.</pre></dd></dl><h2>Diagnostics</h2><dl compact><dd><pre>BadDevice
+ An invalid device was specified. The device does not
+ exist or is not a appropriate for the type of change.</pre></dd></dl><dl compact><dd><pre>BadValue
+ Some numeric value falls out of the allowed range.</pre></dd></dl><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

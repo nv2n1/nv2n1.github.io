@@ -1,0 +1,45 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stditer_value_tstditer_reference_tstditer_difference_t(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stditer_value_tstditer_reference_tstditer_difference_t/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stditer_value_tstditer_reference_tstditer_difference_t(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stditer_value_tstditer_reference_tstditer_difference_t/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stditer_value_tstditer_reference_tstditer_difference_t(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::iter_value_t,std::iter_reference_t,std::iter_difference_t, - std::iter_value_t,std::iter_reference_t,std::iter_difference_t,</p><h2>Synopsis</h2><pre><code>Defined in header &lt;iterator&gt;
+template&lt; class T &gt;
+concept /*dereferenceable*/ = /* see below */; // exposition only
+template&lt; class T &gt;                                                      (1) (since
+using iter_value_t = /* see below */;                                        C++20)
+template&lt; /*dereferenceable*/ T &gt;                                        (2) (since
+using iter_reference_t = decltype(*std::declval&lt;T&amp;&gt;());                      C++20)
+template&lt; class T &gt;                                                      (3) (since
+using iter_difference_t = /* see below */;                                   C++20)
+template&lt; /*dereferenceable*/ T&gt;
+requires /* see below */                                                 (4) (since
+C++20)
+using iter_rvalue_reference_t =
+decltype(ranges::iter_move(std::declval&lt;T&amp;&gt;()));
+template&lt; Readable T &gt;
+using iter_common_reference_t =                                          (5) (since
+std::common_reference_t&lt;std::iter_reference_t&lt;T&gt;,                            C++20)
+std::iter_value_t&lt;T&gt;&amp;&gt;;</code></pre><p>Compute the associated types of an iterator. The exposition-only concept
+dereferenceable is satisfied if and only if the expression <wbr>*std::declval&lt;T&>() <wbr>is
+valid and has a referenceable type <wbr>(in particular, not void).
+1) <wbr>Computes the value type of T. If std::iterator_traits&lt;T> <wbr>is not specialized, then
+std::iter_value_t&lt;T> <wbr>is std::readable_traits&lt;T>::value_type. Otherwise, it is
+std::iterator_traits&lt;T>::value_type.
+2) <wbr>Computes the reference type of T.
+3) <wbr>Computes the difference type of T. If std::iterator_traits&lt;T> <wbr>is not specialized,
+then std::iter_difference_t&lt;T> <wbr>is std::incrementable_traits&lt;T>::difference_type.
+Otherwise, it is std::iterator_traits&lt;T>::difference_type.
+4) <wbr>Computes the rvalue reference type of T. The <wbr>"see below" <wbr>portion of the
+constraint on this alias template is satisfied if and only if the expression
+ranges::iter_move(std::declval&lt;T&>()) <wbr>is valid and has a referenceable type <wbr>(in
+particular, not void).
+5) <wbr>Computes the common reference type of T. This is the common reference type
+between its reference type and an lvalue reference to its value type.</p><h2>See also</h2><p>Readable <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>specifies that a type is readable by applying operator <wbr>*
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>(concept)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>specifies that a Semiregular type can be incremented with pre-
+WeaklyIncrementable <wbr> <wbr>and post-increment operators
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>(concept)
+readable_traits <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>computes the value type of a Readable type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr><i>(class template)</i>
+incrementable_traits computes the difference type of a WeaklyIncrementable type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr><i>(class template)</i>
+iterator_traits <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>provides uniform interface to the properties of an iterator
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr><i>(class template)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

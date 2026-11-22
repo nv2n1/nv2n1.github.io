@@ -1,0 +1,68 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdcommon_type(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdcommon_type/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdcommon_type(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdcommon_type/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdcommon_type(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::common_type - std::common_type</p><h2>Synopsis</h2><pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class... T&gt;
+    (since C++ 11)
+        struct common_type;</code></pre><p>Determines the common type among all types T&mldr;, that is the type all T&mldr; can be implicitly converted to. If such a type exists (as determined according to the rules below), the member type names that type. Otherwise, there is no member type.</p><ul><li>If sizeof&mldr;(T) is zero, there is no member type.</li><li>If sizeof&mldr;(T) is one (i.e., T&mldr; contains only one type T0), the member type names the same type as std::common_type&lt;T0, T0>::type if it exists; otherwise there is no member type.</li><li>If sizeof&mldr;(T) is two (i.e., T&mldr; contains exactly two types T1 and T2), *If applying std::decay to at least one of T1 and T2 produces a different type, the member type names the same type as std::common_type&lt;std::decay&lt;T1>::type, std::decay&lt;T2>::type>::type, if it exists;
+if not, there is no member type.
+* Otherwise, if there is a user specialization for std::common_type&lt;T1, T2>, that specialization is used;
+*Otherwise, if std::decay&lt;decltype(false ? std::declval&lt;T1>() : std::declval&lt;T2>())>::type is a valid type, the member type denotes that type;</li></ul><p> <wbr> <wbr> <wbr> <wbr> <wbr> * Otherwise, if std::decay&lt;decltype(false ? std::declval&lt;const T1 &>() : std::declval&lt;const T2 &>())>::type is a valid type, the member type denotes that type; <i>(since C++20)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> * Otherwise, there is no member type.</p><ul><li>If sizeof&mldr;(T) is greater than two (i.e., T&mldr; consists of the types T1, T2, R&mldr;), then if std::common_type&lt;T1, T2>::type exists, the member type denotes std::common_type&lt;std::common_type&lt;T1, T2>::type, R&mldr;>::type if such a type exists. In all other cases, there is no member type.
+The types in the parameter pack T shall each be a complete type, (possibly cv-qualified) void, or an array of unknown bound. Otherwise, the behavior is undefined.
+If an instantiation of a template above depends, directly or indirectly, on an incomplete type, and that instantiation could yield a different result if that type were hypothetically completed, the behavior is undefined.</li></ul><h2>Member types</h2><p>Name Definition
+type the common type for all T&mldr;</p><h2>Helper types</h2><p>template&lt; class&mldr; T > <i>(since C++14)</i>
+using common_type_t = typename common_type&lt;T&mldr;>::type;</p><h2>Specializations</h2><p>Users may specialize common_type for types T1 and T2 if</p><ul><li>At least one of T1 and T2 depends on a user-defined type, and</li><li>std::decay is an identity transformation for both T1 and T2.</li></ul><p>If such a specialization has a member named type, it must be a public and unambiguous member type that names a cv-unqualified non-reference type to which both T1 and T2 are explicitly convertible. Additionally, std::common_type&lt;T1, T2>::type and std::common_type&lt;T2, T1>::type must denote the same type.
+A program that adds common_type specializations in violation of these rules has undefined behavior.
+Note that the behavior of a program that adds a specialization to any other template from &lt;type_traits> is undefined.
+The following specializations are already provided by the standard library:</p><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specializes the std::common_type trait
+std::common_type&lt;std::chrono::duration> <i>(class template specialization)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specializes the std::common_type trait
+std::common_type&lt;std::chrono::time_point> <i>(class template specialization)</i></p><h2>Possible implementation</h2><p> <wbr> // primary template (used for zero types)
+ <wbr> template &lt;class &mldr;T>
+ <wbr> struct common_type {};</p><p> <wbr> //////// one type
+ <wbr> template &lt;class T>
+ <wbr> struct common_type&lt;T> : common_type&lt;T, T> {};</p><p> <wbr> //////// two types</p><p> <wbr> // default implementation for two types
+ <wbr> template&lt;class T1, class T2>
+ <wbr> using cond_t = decltype(false ? std::declval&lt;T1>() : std::declval&lt;T2>());</p><p> <wbr> template&lt;class T1, class T2, class=void>
+ <wbr> struct common_type_2_default {};</p><p> <wbr> template&lt;class T1, class T2>
+ <wbr> struct common_type_2_default&lt;T1, T2, std::void_t&lt;cond_t&lt;T1, T2>>> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> using type = std::decay_t&lt;cond_t&lt;T1, T2>>;
+ <wbr> };</p><p> <wbr> // dispatcher to decay the type before applying specializations
+ <wbr> template&lt;class T1, class T2, class D1 = std::decay_t&lt;T1>, class D2=std::decay_t&lt;T2>>
+ <wbr> struct common_type_2_impl : common_type&lt;D1, D2> {};</p><p> <wbr> template&lt;class D1, class D2>
+ <wbr> struct common_type_2_impl&lt;D1, D2, D1, D2> : common_type_2_default&lt;D1, D2> {};</p><p> <wbr> template &lt;class T1, class T2>
+ <wbr> struct common_type&lt;T1, T2> : common_type_2_impl&lt;T1, T2> { };</p><p> <wbr> //////// 3+ types</p><p> <wbr> template&lt;class AlwaysVoid, class T1, class T2, class&mldr;R>
+ <wbr> struct common_type_multi_impl { };</p><p> <wbr> template&lt; class T1, class T2, class&mldr;R>
+ <wbr> struct common_type_multi_impl&lt;std::void_t&lt;common_type_t&lt;T1, T2>>, T1, T2, R&mldr;>
+ <wbr> <wbr> <wbr> <wbr> <wbr> : common_type&lt;common_type_t&lt;T1, T2>, R&mldr;> { };</p><p> <wbr> template &lt;class T1, class T2, class&mldr; R>
+ <wbr> struct common_type&lt;T1, T2, R&mldr;>
+ <wbr> <wbr> <wbr> <wbr> <wbr> : common_type_multi_impl&lt;void, T1, T2, R&mldr;> { };</p><h2>Notes</h2><p>For arithmetic types not subject to promotion, the common type may be viewed as the type of the (possibly mixed-mode) arithmetic expression such as T0() + T1() + &mldr; + Tn().
+Defect reports
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.
+DR Applied to Behavior as published Correct behavior
+LWG_2141 C++11 common_type&lt;int, int>::type is int&& decayed result type
+LWG_2408 C++11 common_type is not SFINAE-friendly made SFINAE-friendly
+LWG_2460 C++11 common_type specializations are nearly impossible to write reduced number of specializations needed</p><h2>Examples</h2><p>Demonstrates mixed-mode arithmetic on a user-defined class
+// Run this code<pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+template &lt;class T&gt;
+struct Number {
+T n;
+};
+template &lt;class T, class U&gt;
+Number&lt;typename std::common_type&lt;T, U&gt;::type&gt; operator+(const Number&lt;T&gt; &amp;lhs,
+const Number&lt;U&gt; &amp;rhs)
+{
+return {lhs.n + rhs.n};
+}
+int main()
+{
+Number&lt;int&gt; i1 = {1}, i2 = {2};
+Number&lt;double&gt; d1 = {2.3}, d2 = {3.5};
+std::cout &lt;&lt; &quot;i1i2: &quot; &lt;&lt; (i1 + i2).n &lt;&lt; &quot;\ni1d2: &quot; &lt;&lt; (i1 + d2).n &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;d1i2: &quot; &lt;&lt; (d1 + i2).n &lt;&lt; &quot;\nd1d2: &quot; &lt;&lt; (d1 + d2).n &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p><h2>Output:</h2><p> <wbr> i1i2: 3
+ <wbr> i1d2: 4.5
+ <wbr> d1i2: 4.3
+ <wbr> d1d2: 5.8</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

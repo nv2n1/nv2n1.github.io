@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>wsgen-java-1-7-0-openjdk-1-7-0-131-2-6-9-0-el7_3-x86_64(1) · Linux Manual Pages</title><meta name=description content="wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/1-wsgen-java-1-7-0-openjdk-1-7-0-131-2-6-9-0-el7_3-x86_64/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="wsgen-java-1-7-0-openjdk-1-7-0-131-2-6-9-0-el7_3-x86_64(1) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/1-wsgen-java-1-7-0-openjdk-1-7-0-131-2-6-9-0-el7_3-x86_64/"><meta property="og:description" content="wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/1/>Section 1</a></p><article><header class=man-header><h1>wsgen-java-1-7-0-openjdk-1-7-0-131-2-6-9-0-el7_3-x86_64(1)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>wsgen &#8211; Java(TM) API for XML Web Services (JAX-WS) 2.0</p><p><code>Specification Version:</code> 2.1<br><code>Implementation Version:</code> 2.1.1</p><p>The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint implementation class (SEI) and generates all the required artifacts for web service deployment, and invocation</p><h2>Overview</h2><p>The <i>wsgen</i> tool generates JAX-WS portable artifacts used in JAX-WS web services. The tool reads a web service endpoint class and generates all the required artifacts for web service deployment, and invocation. JAXWS 2.1.1 RI also provides a wsgen ant task, see <i>Wsgen ant task</i> @ <a rel=nofollow href=https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsgenant.html>https://jax-ws.dev.java.net/nonav/2.1.1/docs/wsgenant.html</a> for details.</p><h2>Launching wsgen</h2><dl compact><dd></dd><dl compact><dt>o</dt><dd><code>Solaris/Linux</code></dd><dl compact><dd></dd><dl compact><dt>*</dt><dd><i>export JAXWS_HOME=/pathto/jaxws-ri</i></dd><dt>*</dt><dd><i>$JAXWS_HOME/bin/wsgen.sh -help</i></dd></dl></dl><dt>o</dt><dd><code>Windows</code></dd><dl compact><dd></dd><dl compact><dt>*</dt><dd><i>set JAXWS_HOME=c:\pathto\jaxws-ri</i></dd><dt>*</dt><dd><i>%JAXWS_HOME%in\wsgen.bat -help</i></dd></dl></dl></dl></dl><h2>Syntax</h2><pre><code>wsgen [options] &lt;SEI&gt;</code>
+<br></pre><p>The following table lists the <i>wsgen</i> options.</p><pre><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<code>Option</code><code>Description</code>
+<tt>-classpath &lt;path&gt;</tt>
+<tt>-cp &lt;path&gt;</tt>
+<tt>-d &lt;directory&gt;</tt>
+<tt>-extension</tt>
+<tt>-help</tt>Display help
+<tt>-keep</tt>Keep generated files
+<tt>-r &lt;directory&gt;</tt>
+<tt>-s &lt;directory&gt;</tt>
+<tt>-verbose</tt>
+<tt>-version</tt>
+<tt>-wsdl[:protocol]</tt>
+<tt>-servicename &lt;name&gt;</tt>
+<tt>-portname &lt;name&gt;</tt></pre><h2>Example</h2><pre><code>wsgen -d stock -cp myclasspath stock.StockService</code> </pre><p>This will generate the wrapper classes needed for StockService annotated with @WebService annotation inside <code>stock</code>directory.</p><pre><code>wsgen -wsdl -d stock -cp myclasspath stock.StockService</code> </pre><p>This will generate a SOAP 1.1 WSDL and schema for your Java class stock.StockService annotated with @WebService annotation.</p><pre><code>wsgen -wsdl:Xsoap1.2 -d stock -cp myclasspath stock.StockService</code> </pre><p>Will generate a SOAP 1.2 WSDL.</p><p>Note that you do not have to generate WSDL at the development time as JAXWS runtime will automatically generate a WSDL for you when you deploy your service.</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

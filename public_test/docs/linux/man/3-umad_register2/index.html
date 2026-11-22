@@ -1,0 +1,33 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>umad_register2(3) · Linux Manual Pages</title><meta name=description content="umad_register2 – register the specified management class and version for port"><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-umad_register2/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="umad_register2(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-umad_register2/"><meta property="og:description" content="umad_register2 – register the specified management class and version for port"><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>umad_register2(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>umad_register2 &#8211; register the specified management class and version for port</p><h2>Synopsis</h2><pre><code>#include &lt;infiniband/umad.h&gt;
+int umad_register2(int port_fd, struct umad_reg_attr *attr, uint32_t *agent_id);</code></pre><h2>Description</h2><p><code>umad_register2()</code> registers for a MAD agent using the provided registration attributes <i>port_fd</i> the port on which to register the agent <i>attr</i> The registration attributes as defined by the structure passed. See below for details of this structure. <i>agent_id</i> returned on success. agent_id identifies the kernel MAD agent a MAD is received by or to be sent by. agent_id is returned in the umad header "struct ib_user_mad" on recv and specified in umad_send when sending.</p><h2>Registration Attribute Structure</h2><pre>struct umad_reg_attr {
+uint8_t mgmt_class;
+uint8_t mgmt_class_version;
+uint32_t flags;
+uint64_t method_mask[2];
+uint32_t oui;
+uint8_t rmpp_version;
+};
+<i>mgmt_class</i>
+Management class to register for.
+<i>mgmt_class_version</i>
+Management class version to register for.
+<i>flags</i>
+Registration flags. If a flag specified is not supported by the kernel,
+an error is returned, and the supported flags are returned in this field.
+Current flags are:
+UMAD_USER_RMPP -- flag to indicate the kernel should not process
+RMPP packets. All RMPP packets will be treated like individual
+MADs. The user is responsible for implementing the RMPP
+protocol.
+<i>method_mask</i>
+A bit mask which indicates which unsolicited methods this agent should
+receive. Setting this array to 0 will result in the agent only
+receiving response MADs for which a request was sent.
+<i>oui</i>
+The oui (in host order) to use for vendor classes 0x30 - 0x4f.
+Otherwise ignored.
+<i>rmpp_version</i>
+If the class supports RMPP and kernel RMPP is enabled (the default)
+indicate which rmpp_version to use.</pre><h2>Return Value</h2><p><code>umad_register2()</code> returns 0 on success and +ERRNO on failure.</p><h2>See Also</h2><p><code><a href=/docs/linux/man/3-umad_unregister/>umad_unregister</a></code>(3)</p><h2>Author</h2><dl><dt>Ira Weiny &lt;ira.weiny [at] intel.com></dt><dd></dd></dl><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

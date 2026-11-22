@@ -1,0 +1,28 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sdl_setpalette(3) · Linux Manual Pages</title><meta name=description content="SDL_SetPalette – Sets the colors in the palette of an 8-bit surface."><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-sdl_setpalette/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="sdl_setpalette(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-sdl_setpalette/"><meta property="og:description" content="SDL_SetPalette – Sets the colors in the palette of an 8-bit surface."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>sdl_setpalette(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>SDL_SetPalette &#8211; Sets the colors in the palette of an 8-bit surface.</p><h2>Synopsis</h2><p><code>#include "SDL.h"</p><p>int SDL_SetPalette</code>(<code>SDL_Surface *surface, int flags, SDL_Color *colors, int firstcolor, int ncolors</code>);</p><h2>Description</h2><p>Sets a portion of the palette for the given 8-bit surface.</p><p>Palettized (8-bit) screen surfaces with the <code>SDL_HWPALETTE</code> flag have two palettes, a logical palette that is used for mapping blits to/from the surface and a physical palette (that determines how the hardware will map the colors to the display). <i>SDL_BlitSurface</i> always uses the logical palette when blitting surfaces (if it has to convert between surface pixel formats). Because of this, it is often useful to modify only one or the other palette to achieve various special color effects (e.g., screen fading, color flashes, screen dimming).</p><p>This function can modify either the logical or physical palette by specifing <code>SDL_LOGPAL</code> or <code>SDL_PHYSPAL</code>the in the <code>flags</code> parameter.</p><p>When <code>surface</code> is the surface associated with the current display, the display colormap will be updated with the requested colors. If <code>SDL_HWPALETTE</code> was set in <i>SDL_SetVideoMode</i> flags, <code>SDL_SetPalette</code> will always return <code>1</code>, and the palette is guaranteed to be set the way you desire, even if the window colormap has to be warped or run under emulation.</p><p>The color components of a <i></i><code>SDL_Color</code> structure are 8-bits in size, giving you a total of 256^3=16777216 colors.</p><h2>Return Value</h2><p>If <code>surface</code> is not a palettized surface, this function does nothing, returning <code>0</code>. If all of the colors were set as passed to <code>SDL_SetPalette</code>, it will return <code>1</code>. If not all the color entries were set exactly as given, it will return <code>0</code>, and you should look at the surface palette to determine the actual color palette.</p><h2>Example</h2><pre><tt> /* Create a display surface with a grayscale palette */
+ SDL_Surface *screen;
+ SDL_Color colors[256];
+ int i;
+ .
+ .
+ .
+ /* Fill colors with color information */
+ for(i=0;i&lt;256;i++){
+ colors[i].r=i;
+ colors[i].g=i;
+ colors[i].b=i;
+ }
+ /* Create display */
+ screen=SDL_SetVideoMode(640, 480, 8, SDL_HWPALETTE);
+ if(!screen){
+ printf(&quot;Couldn't set video mode: %s
+&quot;, SDL_GetError());
+ exit(-1);
+ }
+ /* Set palette */
+ SDL_SetPalette(screen, SDL_LOGPAL|SDL_PHYSPAL, colors, 0, 256);
+ .
+ .
+ .
+ .</tt></pre><h2>See Also</h2><p><i>SDL_SetColors</i>, <i>SDL_SetVideoMode</i>, <i>SDL_Surface</i>, <i>SDL_Color</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

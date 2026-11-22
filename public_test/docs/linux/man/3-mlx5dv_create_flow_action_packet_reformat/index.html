@@ -1,0 +1,24 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>mlx5dv_create_flow_action_packet_reformat(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="mlx5dv_create_flow_action_packet_reformat(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>mlx5dv_create_flow_action_packet_reformat(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>mlx5dv_create_flow_action_packet_reformat - Flow action reformat packet for mlx5 provider</p><h2>SYNOPSIS</h2><dl><dt></dt><dd><pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+struct ibv_flow_action *
+mlx5dv_create_flow_action_packet_reformat(struct ibv_context *ctx,
+                                          size_t data_sz,
+                                          void *data,
+                                          enum mlx5dv_flow_action_packet_reformat_type reformat_type,
+                                          enum mlx5dv_flow_table_type ft_type)
+</code></pre></dd></dl><h2>DESCRIPTION</h2><p>Create a packet reformat flow steering action. It allows adding/removing packet headers.</p><h2>ARGUMENTS</h2><dl><dt>ctx</dt><dd></dd><dt></dt><dd><pre>
+RDMA device context to create the action on.
+</pre></dd><dt>data_sz</dt><dd></dd><dt></dt><dd><pre>
+The size of *data* buffer.
+</pre></dd><dt>data</dt><dd></dd><dt></dt><dd><pre>
+A buffer which contains headers in case the actions requires them.
+</pre></dd><dt>reformat_type</dt><dd></dd><dt></dt><dd><pre>
+The reformat type to be create. Use enum mlx5dv_flow_action_packet_reformat_type.
+</pre></dd><dl><dt></dt><dd>MLX5DV_FLOW_ACTION_PACKET_REFORMAT_TYPE_L2_TUNNEL_TO_L2: Decap a generic L2 tunneled packet up to inner L2.
+MLX5DV_FLOW_ACTION_PACKET_REFORMAT_TYPE_L2_TO_L2_TUNNEL: Generic encap, data should contain the encapsulating headers.
+MLX5DV_FLOW_ACTION_PACKET_REFORMAT_TYPE_L3_TUNNEL_TO_L2: Will do decap where the inner packet starts from L3. data should be MAC or MAC + vlan (14 or 18 bytes) to be appended to the packet after the decap action.
+MLX5DV_FLOW_ACTION_PACKET_REFORMAT_TYPE_L2_TO_L3_TUNNEL: Will do encap where is L2 of the original packet will not be included. data should be the encapsulating header.</dd></dl><dt>ft_type</dt><dd></dd><dt></dt><dd><pre>
+It defines the flow table type to which the packet reformat action
+</pre></dd><dl><dt></dt><dd>will be attached.</dd></dl></dl><h2>RETURN VALUE</h2><p>Upon success mlx5dv_create_flow_action_packet_reformat will return a new struct ibv_flow_action object, on error NULL will be returned and errno will be set.</p><h2>SEE ALSO</h2><p>ibv_create_flow(3), ibv_create_flow_action(3)</p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>

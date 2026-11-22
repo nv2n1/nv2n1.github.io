@@ -1,0 +1,44 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>stdgetline(3) · Linux Manual Pages</title><link rel=canonical href=https://www.systutorials.com/docs/linux/man/3-stdgetline/><meta property="og:site_name" content="SysTutorials"><meta property="og:type" content="website"><meta property="og:title" content="stdgetline(3) · Linux Manual Pages"><meta property="og:url" content="https://www.systutorials.com/docs/linux/man/3-stdgetline/"><meta property="og:description" content="Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands."><meta property="og:image" content="https://www.systutorials.com/logo.png"><link rel=stylesheet href="/docs/linux/man/man.css?v=8"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-ZEXV9L9E6P")</script></head><body><main><header class=site><a class=site-name href=/>SysTutorials</a><nav><a href=/docs/linux/man/>Linux Manual Pages</a><a href=/privacy-policy/>Privacy</a></nav></header><p class=crumbs><a href=/docs/linux/man/>Linux Manual Pages</a> › <a href=/docs/linux/man/3/>Section 3</a></p><article><header class=man-header><h1>stdgetline(3)</h1></header><div class=ad-above-fold><ins class=adsbygoogle style=display:inline-block;width:300px;height:250px data-ad-client=ca-pub-5988258742963952 data-ad-slot=4315544630></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div><p>std::getline - std::getline</p><h2>Synopsis</h2><pre><code>Defined in header &lt;string&gt;
+template&lt; class CharT, class Traits, class Allocator &gt;
+std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp; input,  (1)
+std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str,
+CharT delim );
+template&lt; class CharT, class Traits, class Allocator &gt;
+std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp;&amp; input, (1) (since C++11)
+std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str,
+CharT delim );
+template&lt; class CharT, class Traits, class Allocator &gt;
+std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp; input,  (2)
+std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str );
+template&lt; class CharT, class Traits, class Allocator &gt;
+std::basic_istream&lt;CharT,Traits&gt;&amp; getline( std::basic_istream&lt;CharT,Traits&gt;&amp;&amp; input, (2) (since C++11)
+std::basic_string&lt;CharT,Traits,Allocator&gt;&amp; str );</code></pre><p>getline reads characters from an input stream and places them into a string:</p><ol><li>Behaves as UnformattedInputFunction, except that input.gcount() is not affected. After constructing and checking the sentry object, performs the following:</li><li>Calls str.erase()</li><li>Extracts characters from input and appends them to str until one of the following occurs (checked in the order listed)
+a) end-of-file condition on input, in which case, getline sets eofbit.
+b) the next available input character is delim, as tested by Traits::eq(c, delim), in which case the delimiter character is extracted from input, but is not appended to str.
+c) str.max_size() characters have been stored, in which case getline sets failbit and returns.</li><li>If no characters were extracted for whatever reason (not even the discarded delimiter), getline sets failbit and returns.</li><li>Same as getline(input, str, input.widen(&rsquo;\n&rsquo;)), that is, the default delimiter is the endline character.</li></ol><h2>Parameters</h2><p>input - the stream to get data from
+str - the string to put the data into
+delim - the delimiter character</p><h2>Return value</h2><p>input</p><h2>Notes</h2><p>When used immediately after whitespace-delimited input, e.g. after int n; std::cin >> n;, getline consumes the endline character left on the input stream by operator>>, and returns immediately. A common solution is to ignore all leftover characters on the line of input with cin.ignore(std::numeric_limits&lt;std::streamsize>::max(), &lsquo;\n&rsquo;); before switching to line-oriented input.</p><h2>Example</h2><p>The following example demonstrates how to use getline function to read user&rsquo;s input and how to process file line by line.
+// Run this code<pre><code>#include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+int main()
+{
+// greet the user
+std::string name;
+std::cout &lt;&lt; &quot;What is your name? &quot;;
+std::getline(std::cin, name);
+std::cout &lt;&lt; &quot;Hello &quot; &lt;&lt; name &lt;&lt; &quot;, nice to meet you.\n&quot;;
+// read file line by line
+std::istringstream input;
+input.str(&quot;1\n2\n3\n4\n5\n6\n7\n&quot;);
+int sum = 0;
+for (std::string line; std::getline(input, line);) {
+sum += std::stoi(line);
+}
+std::cout &lt;&lt; &quot;\nThe sum is: &quot; &lt;&lt; sum &lt;&lt; &quot;\n&quot;;
+}
+</code></pre></p><h2>Possible output:</h2><p> <wbr> What is your name? John Q. Public
+ <wbr> Hello John Q. Public, nice to meet you.</p><p> <wbr> The sum is 28</p><h2>See also</h2><p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts characters until the given character is found
+getline <i>(public member function of std::basic_istream&lt;CharT,Traits>)</i></p><div class=ad-after-content><ins class=adsbygoogle style=display:block data-ad-client=ca-pub-5988258742963952 data-ad-slot=3544342269 data-ad-format=auto data-full-width-responsive=true></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({})</script></div></article><footer class=site><a href=/privacy-policy/>Privacy</a>
+<a href=/license/>License</a>
+<span class=footer-msg>Report issues or contribute: <a href=https://github.com/nv2n1/nv2n1.github.io target=_blank rel=noopener>GitHub</a></span></footer></main><script>(function(){var e=window.location.href,t=e.replace(/[?&]gsc\.tab=\d+/,"").replace(/#gsc\.tab=\d+/,"");t!==e&&window.history.replaceState({},document.title,t)})()</script></body></html>
