@@ -62,6 +62,23 @@ $(document).ready(function() {
 <li><b>Quote</b>: ctrl + shift + 3</li>
 </ul>
 
+<h2>BB Code Introduction</h2>
+<p><strong>BBCode</strong> (Bulletin Board Code) is a lightweight markup language used to format messages in Internet forums. Introduced in 1998, it uses square bracket tags (e.g., <code>[b]bold[/b]</code>) that are translated into HTML before display.</p>
+
+<h3>Basic Grammar</h3>
+<p>BBCode tags follow the pattern <code>[tag]content[/tag]</code> or <code>[tag=value]content[/tag]</code> for tags with parameters. Common tags include:</p>
+<ul>
+<li><strong>Text formatting</strong>: <code>[b]</code> bold, <code>[i]</code> italic, <code>[u]</code> underline, <code>[s]</code> strikethrough</li>
+<li><strong>Links</strong>: <code>[url]https://example.com[/url]</code> or <code>[url=https://example.com]link text[/url]</code></li>
+<li><strong>Images</strong>: <code>[img]https://example.com/image.png[/img]</code></li>
+<li><strong>Quotes</strong>: <code>[quote]text[/quote]</code> or <code>[quote="author"]text[/quote]</code></li>
+<li><strong>Code</strong>: <code>[code]code here[/code]</code> for monospaced formatting</li>
+<li><strong>Lists</strong>: <code>[list][*]item 1[*]item 2[/list]</code> (ordered: <code>[list=1]</code>)</li>
+<li><strong>Tables</strong>: <code>[table][tr][th]header[/th][/tr][tr][td]cell[/td][/tr][/table]</code></li>
+<li><strong>Colors/sizes</strong>: <code>[color=red]text[/color]</code>, <code>[size=14]text[/size]</code></li>
+</ul>
+<p>Tags can be nested (e.g., <code>[b][i]bold italic[/i][/b]</code>), but must be properly closed in reverse order.</p>
+
 <h2>License</h2>
 <p>This tool uses WysiBB v1.5.0, distributed under the MIT license.</p>
 <p>BB Code Editor provided by <a href="https://www.systutorials.com/">SysTutorials</a>.</p>
