@@ -61,7 +61,7 @@ With content quality sorted, I turned to organization. I used LLM analysis of po
 - **Web3 & Crypto Academy:** Blockchain, smart contracts, DeFi, cryptocurrency
 - **Programming Academy:** Programming languages, algorithms, data structures, software development
 
-Each academy serves as a curated learning path with clear progression from fundamentals to advanced topics. I set up bidirectional linking — academies link to posts, and posts link back to academies. This creates multiple navigation paths and improves SEO through internal linking.
+Each academy serves as a curated learning path with clear progression from fundamentals to advanced topics. I set up bidirectional linking: academies link to posts, and posts link back to academies. This creates multiple navigation paths and improves SEO through internal linking.
 
 ### Phase 3: Hub Development
 
@@ -78,7 +78,7 @@ Hubs solve the discoverability problem. A visitor interested in machine learning
 
 LLMs excel at content extension and topic analysis when you provide clear instructions. The key is specificity:
 
-- **Clear Prompts:** Don’t just say “extend content” — specify what to add
+- **Clear Prompts:** Don’t just say “extend content”: specify what to add
 - **Context Awareness:** Understand the post’s topic before generating extensions
 - **Quality Thresholds:** Minimum word counts prevent thin, low-value content
 
@@ -124,4 +124,4 @@ Using OpenClaw and LLMs transformed systutorials.com from a disorganized archive
 
 With the right tools and a systematic approach, even large archives can be systematically improved while maintaining content integrity. The combination of OpenClaw’s automation capabilities and LLMs’ content understanding made this transformation feasible in hours rather than months.
 
-If you’re facing similar challenges with a large content archive, I hope this experience helps you see what’s possible. The tools exist — you just need a structured approach to use them effectively.
+If you’re facing similar challenges with a large content archive, I hope this experience helps you see what’s possible. The tools exist: you just need a structured approach to use them effectively.

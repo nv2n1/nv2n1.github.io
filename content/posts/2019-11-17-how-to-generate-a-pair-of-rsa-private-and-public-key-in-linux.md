@@ -62,7 +62,7 @@ You’ll be prompted twice:
     Enter PEM pass phrase:
     Verifying - Enter PEM pass phrase:
 
-Without encryption, anyone with filesystem access can use your key. Store passphrases in a password manager or secure vault—you’ll need it every time you use the key.
+Without encryption, anyone with filesystem access can use your key. Store passphrases in a password manager or secure vault: you’ll need it every time you use the key.
 
 ## Extract the Public Key
 
@@ -169,7 +169,7 @@ Create a certificate signing request (CSR) to submit to a certificate authority:
 openssl req -new -key server.key -out server.csr
 ```
 
-You’ll be prompted for certificate details: country, organization, common name (domain), and other fields. Fill them accurately—the CA will verify them.
+You’ll be prompted for certificate details: country, organization, common name (domain), and other fields. Fill them accurately: the CA will verify them.
 
 ## Verify Key Pair Consistency
 
@@ -228,4 +228,4 @@ sudo systemctl start rngd
 
 **Incompatible format errors**: If legacy tools reject your key, try the PKCS#1 conversion above or verify the tool’s documentation for supported formats.
 
-**Can’t read encrypted key**: Ensure the passphrase is entered correctly. If you’ve forgotten it, the key is effectively lost—generate a new one.
+**Can’t read encrypted key**: Ensure the passphrase is entered correctly. If you’ve forgotten it, the key is effectively lost: generate a new one.

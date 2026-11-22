@@ -10,7 +10,7 @@ canonical: /how-to-get-bash-scripts-own-path/
 url: /how-to-get-bash-scripts-own-path/
 ---
 
-When a Bash script needs to reference its own location — for sourcing additional files, logging, or managing relative paths — `$0` seems like the obvious choice. But it’s a trap: `$0` behaves differently depending on whether your script is executed directly or sourced.
+When a Bash script needs to reference its own location (for sourcing additional files, logging, or managing relative paths) `$0` seems like the obvious choice. But it’s a trap: `$0` behaves differently depending on whether your script is executed directly or sourced.
 
 ## The Problem with \$0
 
@@ -28,7 +28,7 @@ source script.sh
 . script.sh
 ```
 
-`$0` no longer contains the sourced script’s path — it contains the path of the *calling* shell or parent script instead. This breaks any logic that relies on knowing the script’s actual location.
+`$0` no longer contains the sourced script’s path: it contains the path of the *calling* shell or parent script instead. This breaks any logic that relies on knowing the script’s actual location.
 
 ## The Solution: \${BASH_SOURCE\[0\]}
 
@@ -106,7 +106,7 @@ SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
 
 - **`${BASH_SOURCE[0]}`**: You want the path of the currently executing script file
 - **`$0`**: You’re documenting program invocation, or you need the command the user actually typed
-- **`${BASH_SOURCE[@]}`**: Debugging — prints the entire call stack of sourced files
+- **`${BASH_SOURCE[@]}`**: Debugging: prints the entire call stack of sourced files
 
 The bottom line: for any script logic that depends on the script’s own location, reach for `${BASH_SOURCE[0]}` and avoid the pitfalls of `$0`.
 

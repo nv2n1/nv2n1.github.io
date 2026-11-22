@@ -103,7 +103,7 @@ Not:
 
 ## Why This Matters
 
-Using `text/plain` with inline encoding improves readability, reduces file size (no base64 bloat), and ensures the log appears in the message body where users expect it—especially important when logs are critical diagnostic information that shouldn’t require downloading an attachment.
+Using `text/plain` with inline encoding improves readability, reduces file size (no base64 bloat), and ensures the log appears in the message body where users expect it, especially important when logs are critical diagnostic information that shouldn’t require downloading an attachment.
 
 ## 2026 Comprehensive Guide: Best Practices
 

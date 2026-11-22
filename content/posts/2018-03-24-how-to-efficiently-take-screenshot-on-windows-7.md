@@ -10,7 +10,7 @@ canonical: /how-to-efficiently-take-screenshot-on-windows-7/
 url: /how-to-efficiently-take-screenshot-on-windows-7/
 ---
 
-The built-in Print Screen workflow is cumbersome — capture, open Paint, paste, crop, save. There are better approaches depending on your needs.
+The built-in Print Screen workflow is cumbersome: capture, open Paint, paste, crop, save. There are better approaches depending on your needs.
 
 ## Snipping Tool and Snip & Sketch
 
@@ -22,10 +22,10 @@ On Windows 8 and later, **Snip & Sketch** is the successor. It’s faster and mo
 
 Use these keyboard shortcuts for instant capture:
 
-- `Win + Print Screen` — Captures full screen and saves directly to `%UserProfile%\Pictures\Screenshots`
-- `Win + Shift + S` — Opens Snip & Sketch overlay for rectangular, free-form, window, or full-screen selection
-- `Print Screen` — Copies full screen to clipboard (paste into any image editor)
-- `Alt + Print Screen` — Copies active window to clipboard
+- `Win + Print Screen`: Captures full screen and saves directly to `%UserProfile%\Pictures\Screenshots`
+- `Win + Shift + S`: Opens Snip & Sketch overlay for rectangular, free-form, window, or full-screen selection
+- `Print Screen`: Copies full screen to clipboard (paste into any image editor)
+- `Alt + Print Screen`: Copies active window to clipboard
 
 The `Win + Shift + S` workflow is fastest for most tasks: select your area, get an instant preview, edit if needed, and copy to clipboard.
 
@@ -33,9 +33,9 @@ The `Win + Shift + S` workflow is fastest for most tasks: select your area, get 
 
 For more control, consider:
 
-- **Greenshot** (free, open source) — Lightweight, annotation tools, configurable hotkeys, automatic cloud upload support
-- **ShareX** (free, open source) — Extremely flexible with automation, image effects, and hosting integration
-- **Flameshot** (free, Linux/Windows/Mac) — Simple, modern interface with built-in editor
+- **Greenshot** (free, open source): Lightweight, annotation tools, configurable hotkeys, automatic cloud upload support
+- **ShareX** (free, open source): Extremely flexible with automation, image effects, and hosting integration
+- **Flameshot** (free, Linux/Windows/Mac): Simple, modern interface with built-in editor
 
 These tools work on Windows 7 and all modern versions.
 
@@ -54,9 +54,9 @@ This eliminates the save-and-upload step for most workflows.
 
 If you need automation, `screencapture` equivalent utilities exist:
 
-- **nircmd** (by NirSoft) — Silent capture to file: `nircmd savescreen C:\path\screenshot.png`
-- **ImageMagick** (cross-platform) — `magick import screenshot.png`
-- **Python with Pillow** — Scriptable screen capture for batch operations
+- **nircmd** (by NirSoft): Silent capture to file: `nircmd savescreen C:\path\screenshot.png`
+- **ImageMagick** (cross-platform): `magick import screenshot.png`
+- **Python with Pillow**: Scriptable screen capture for batch operations
 
 ## Recommendations by Use Case
 
@@ -68,7 +68,7 @@ If you need automation, `screencapture` equivalent utilities exist:
 
 **Automation**: nircmd or scripted tools for batch or scheduled captures.
 
-Skip Paint entirely — modern tools handle annotation, cropping, and saving in one step.
+Skip Paint entirely: modern tools handle annotation, cropping, and saving in one step.
 
 ## Additional Tips and Best Practices
 

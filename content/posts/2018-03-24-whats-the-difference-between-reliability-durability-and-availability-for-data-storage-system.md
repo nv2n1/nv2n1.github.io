@@ -25,7 +25,7 @@ In practice, durability is achieved through:
 - Replicating data across physically independent systems
 - Checksums and redundancy (RAID, erasure coding, etc.)
 
-If a node crashes mid-write, durability doesn’t require the system to continue operating—only that previously committed data survives.
+If a node crashes mid-write, durability doesn’t require the system to continue operating: only that previously committed data survives.
 
 ## Availability
 
@@ -37,7 +37,7 @@ In distributed system contexts, availability has multiple interpretations:
 
 **System availability** (traditional HA): The entire system remains operational and accessible to clients, even if individual components fail. Classic examples include heartbeat-based failover with virtual IP address takeover.
 
-**Node availability** (CAP Theorem context): Individual nodes that haven’t failed continue to serve requests. This is stricter—it means you can’t arbitrarily shut down healthy nodes to preserve consistency. For example, in a system that values availability over consistency, a minority partition will continue responding to writes rather than blocking to maintain a consistent state.
+**Node availability** (CAP Theorem context): Individual nodes that haven’t failed continue to serve requests. This is stricter: it means you can’t arbitrarily shut down healthy nodes to preserve consistency. For example, in a system that values availability over consistency, a minority partition will continue responding to writes rather than blocking to maintain a consistent state.
 
 These interpretations matter because a system optimized for node availability might behave differently than one optimized for system availability.
 
@@ -47,7 +47,7 @@ Reliability is the most ambiguous of the three terms. Different communities defi
 
 - Some use it as a synonym for availability
 - Some use it to mean the system as a whole remains available (vs. individual nodes)
-- Some use it to mean fault-tolerant consensus—the ability to reach agreement despite failures (essentially what CAP Theorem calls “consistency”)
+- Some use it to mean fault-tolerant consensus: the ability to reach agreement despite failures (essentially what CAP Theorem calls “consistency”)
 - Many use it carelessly without a specific definition
 
 Because there’s no consensus, avoid using “reliable” or “reliability” in technical specifications. Instead, be explicit: say “the system maintains availability during node failures” or “data survives total power loss” or “the cluster reaches consensus despite network partitions.”
@@ -58,13 +58,13 @@ Because there’s no consensus, avoid using “reliable” or “reliability” 
 
 - **Durable**: Yes. Data written to disk on 3 nodes survives any single node failure.
 - **Available**: Yes. If one node fails, the remaining replicas serve read requests, and the namenode continues accepting writes.
-- **Reliable**: Don’t use this term—specify what you mean.
+- **Reliable**: Don’t use this term: specify what you mean.
 
 **Scenario 2: Single-node database with no replication**
 
 - **Durable**: Only if data is flushed to disk before acknowledging writes.
 - **Available**: No. A disk failure or crash stops the service entirely.
-- **Reliable**: Ambiguous—clarify your requirement.
+- **Reliable**: Ambiguous: clarify your requirement.
 
 **Scenario 3: Replicated database with quorum-based writes**
 
@@ -77,5 +77,5 @@ When designing or evaluating storage systems:
 
 - **Define durability guarantees** in terms of failure scenarios (e.g., “survives simultaneous failure of any 2 nodes”)
 - **Define availability requirements** explicitly (e.g., “system continues accepting reads/writes with up to N failures” or “RTO \< 5 minutes”)
-- **Avoid “reliability”** without clarification—use the specific term you mean
+- **Avoid “reliability”** without clarification: use the specific term you mean
 - **Understand the tradeoffs** (CAP Theorem): you can’t have perfect durability, availability, and consistency simultaneously under network partition

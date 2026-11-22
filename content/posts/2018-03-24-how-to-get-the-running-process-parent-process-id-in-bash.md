@@ -10,7 +10,7 @@ canonical: /how-to-get-the-running-process-parent-process-id-in-bash/
 url: /how-to-get-the-running-process-parent-process-id-in-bash/
 ---
 
-Every process running on a Unix-like system has a parent process. The parent process ID (PPID) identifies which process spawned the current one — critical information when debugging process hierarchies, managing child processes, or writing robust shell scripts.
+Every process running on a Unix-like system has a parent process. The parent process ID (PPID) identifies which process spawned the current one: critical information when debugging process hierarchies, managing child processes, or writing robust shell scripts.
 
 ## Built-in variable
 
@@ -123,10 +123,10 @@ echo "Original parent was $PARENT_PID"
 
 ## Related inspection tools
 
-- `cat /proc/<PID>/status` — detailed process info including PPID on Linux
-- `lsof -p <PID>` — view open files and process relationships
-- `ps -ef` — full process listing with parent-child relationships
-- `journalctl` — systemd journal often tracks process lineage for services
+- `cat /proc/<PID>/status`: detailed process info including PPID on Linux
+- `lsof -p <PID>`: view open files and process relationships
+- `ps -ef`: full process listing with parent-child relationships
+- `journalctl`: systemd journal often tracks process lineage for services
 
 ## 2026 Best Practices and Advanced Techniques
 

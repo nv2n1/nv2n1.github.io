@@ -55,14 +55,14 @@ This outputs the directory containing both `.cmi` (compiled interface) and `.mli
 
 Core provides interface files for all its modules. Some frequently referenced ones:
 
-– `core.mli` — The main Core module with all re-exports
-– `list.mli` — Extended list operations
-– `option.mli` — Option type utilities
-– `string.mli` — Enhanced string functions
-– `int.mli` — Integer operations
-– `map.mli` and `set.mli` — Map and Set data structures
-– `result.mli` — Result type helpers
-– `printf.mli` — Type-safe formatting
+– `core.mli`: The main Core module with all re-exports
+– `list.mli`: Extended list operations
+– `option.mli`: Option type utilities
+– `string.mli`: Enhanced string functions
+– `int.mli`: Integer operations
+– `map.mli` and `set.mli`: Map and Set data structures
+– `result.mli`: Result type helpers
+– `printf.mli`: Type-safe formatting
 
 \## Reading .mli Files in Your Editor
 
@@ -87,9 +87,9 @@ less $(ocamlfind query core)/list.mli
 
 Core has been split into multiple packages:
 
-– \*\*core_kernel\*\* — Portable subset that works on all platforms (including JavaScript via js_of_ocaml)
-– \*\*core\*\* — Full Core, including Unix-specific functionality
-– \*\*core_unix\*\* — Unix-specific extensions (in newer versions)
+– \*\*core_kernel\*\*: Portable subset that works on all platforms (including JavaScript via js_of_ocaml)
+– \*\*core\*\*: Full Core, including Unix-specific functionality
+– \*\*core_unix\*\*: Unix-specific extensions (in newer versions)
 
 The `.mli` files for each are in separate directories:
 
@@ -186,4 +186,4 @@ let make_config ~verbose ~max_size = { verbose; max_size }
 \*\*3. The .mli acts as the public API contract.\*\*
 Any value not listed in the .mli is private to the module.
 
-This pattern — interface-driven development — is central to OCaml’s module system and helps catch errors early.
+This pattern (interface-driven development) is central to OCaml’s module system and helps catch errors early.

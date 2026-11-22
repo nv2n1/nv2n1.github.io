@@ -16,11 +16,11 @@ Benchmarks exist to answer one question: how fast can this system process data? 
 
 The AMPLab benchmark evaluated five systems circa 2013:
 
-- **Redshift** – Amazon’s columnar data warehouse (built on ParAccel)
-- **Hive** – Hadoop SQL layer for batch processing
-- **Shark** – early Spark-based SQL engine (superseded by Spark SQL)
-- **Impala** – Cloudera’s MPP query engine for in-memory analytics
-- **Tez/Stinger** – alternative Hadoop execution engine with improved task scheduling
+- **Redshift**: Amazon’s columnar data warehouse (built on ParAccel)
+- **Hive**: Hadoop SQL layer for batch processing
+- **Shark**: early Spark-based SQL engine (superseded by Spark SQL)
+- **Impala**: Cloudera’s MPP query engine for in-memory analytics
+- **Tez/Stinger**: alternative Hadoop execution engine with improved task scheduling
 
 While these specific implementations have evolved or been replaced, the benchmark design itself remains instructive.
 
@@ -32,7 +32,7 @@ The suite ran standard SQL queries across four categories:
 
 **Aggregations**: GROUP BY operations and COUNT/SUM aggregates to evaluate shuffle and reduction performance.
 
-**Joins**: Multiple join patterns—including star joins with fact and dimension tables—to stress distributed join algorithms.
+**Joins**: Multiple join patterns (including star joins with fact and dimension tables) to stress distributed join algorithms.
 
 **User-Defined Functions (UDFs)**: Custom functions to measure serialization overhead and per-row processing costs.
 
@@ -46,7 +46,7 @@ The benchmark exposed fundamental design decisions:
 
 **MPP databases** (Redshift, Impala, Trino) optimize for query latency through aggressive compilation, columnar storage, and vectorized execution. They target sub-second to low-second latency but require manual schema design, statistics management, and typically run on smaller, more powerful clusters. They handle failures through replication and redundancy rather than distributed recovery.
 
-This wasn’t a case of one approach being “better”—they solved different problems. The benchmark made these trade-offs explicit and measurable.
+This wasn’t a case of one approach being “better”: they solved different problems. The benchmark made these trade-offs explicit and measurable.
 
 ## Datasets and Reproducibility
 
@@ -57,7 +57,7 @@ The benchmark used public datasets hosted on AWS S3:
 - **Source**: Intel’s HiBench toolkit for synthetic data generation, plus Common Crawl samples
 - **Access**: Public S3 bucket enabling anyone to reproduce results
 
-This design—open datasets, clear queries, public results—was crucial. You could deploy your own cluster and validate whether your setup matched published baselines.
+This design (open datasets, clear queries, public results) was crucial. You could deploy your own cluster and validate whether your setup matched published baselines.
 
 ## What The Benchmark Didn’t Measure
 
@@ -79,15 +79,15 @@ The original benchmark targeted systems and configurations that have largely mov
 **For evaluating modern systems**, consider:
 
 - **TPC-H** and **TPC-DS** have become industry standards with more comprehensive query coverage and clearly defined scale factors (SF 100, SF 1000, etc.)
-- **Cloud data warehouses** (Snowflake, BigQuery, Redshift) now dominate analytical workloads—benchmark them in their native cloud region with their actual cost structure, not as lift-and-shift comparisons
+- **Cloud data warehouses** (Snowflake, BigQuery, Redshift) now dominate analytical workloads: benchmark them in their native cloud region with their actual cost structure, not as lift-and-shift comparisons
 - **Trino, DuckDB, and ClickHouse** have shifted baselines significantly through improved query optimization, adaptive execution, and columnar processing even in open-source tools
-- **Your actual queries and schemas matter more than synthetic benchmarks**—if your workload is heavy on star joins and aggregations, TPC-H is relevant; if it’s mostly scans with UDFs, you need different tests
+- **Your actual queries and schemas matter more than synthetic benchmarks**: if your workload is heavy on star joins and aggregations, TPC-H is relevant; if it’s mostly scans with UDFs, you need different tests
 
 ## Running Your Own Benchmark
 
 If you want to benchmark a new cluster or compare tools:
 
-1.  **Define queries** that resemble your actual workloads—not hypothetical ones
+1.  **Define queries** that resemble your actual workloads: not hypothetical ones
 2.  **Use reproducible datasets** (public benchmarks, anonymized production samples, or synthetic generators with fixed seeds)
 3.  **Measure end-to-end latency**, not just execution time (include planning, compilation, network roundtrips)
 4.  **Run multiple iterations** to account for caching effects, garbage collection, and statistical noise

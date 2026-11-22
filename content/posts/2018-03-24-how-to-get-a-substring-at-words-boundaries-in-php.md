@@ -14,7 +14,7 @@ When truncating strings, you often need to avoid cutting off in the middle of a 
 
 ## The problem
 
-Given a string like `"ab cc dde ffg ff"`, if you want a substring of maximum 7 characters starting at position 0, a simple `substr($a, 0, 7)` produces `"ab cc d"` — cutting the word `dde` in half. You need to stop at the last complete word instead: `"ab cc"`.
+Given a string like `"ab cc dde ffg ff"`, if you want a substring of maximum 7 characters starting at position 0, a simple `substr($a, 0, 7)` produces `"ab cc d"`: cutting the word `dde` in half. You need to stop at the last complete word instead: `"ab cc"`.
 
 ## Solution
 

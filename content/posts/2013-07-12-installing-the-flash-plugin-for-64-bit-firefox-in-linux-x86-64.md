@@ -37,7 +37,7 @@ Adobe officially discontinued Flash Player on December 31, 2020:
 
 ## Modern Alternatives for Flash Content
 
-### Ruffle — Flash Emulator
+### Ruffle: Flash Emulator
 
 <a href="https://ruffle.rs" rel="nofollow noopener" target="_blank">Ruffle</a> is an open-source Flash Player emulator written in Rust that runs Flash content without the original plugin:
 
@@ -52,7 +52,7 @@ Adobe officially discontinued Flash Player on December 31, 2020:
 
 Ruffle supports a growing subset of ActionScript 1/2/3 and works with many legacy Flash games and animations. It’s actively maintained and receives regular compatibility updates.
 
-### Lightspark — Open Source Flash Player
+### Lightspark: Open Source Flash Player
 
 Lightspark is another open-source Flash player that focuses on ActionScript 3 compatibility:
 
@@ -63,7 +63,7 @@ sudo apt install lightspark       # Ubuntu/Debian
 
 Lightspark integrates with Firefox as an NPAPI plugin replacement and supports many AS3-based applications.
 
-### Flashpoint — Archival Project
+### Flashpoint: Archival Project
 
 <a href="https://flashpointarchive.org" rel="nofollow noopener" target="_blank">BlueMaxima’s Flashpoint</a> is a web game preservation project that has archived thousands of Flash games and animations. It includes a curated launcher with built-in Flash support for playing preserved content offline.
 

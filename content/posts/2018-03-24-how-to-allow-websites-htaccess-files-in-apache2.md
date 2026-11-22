@@ -53,13 +53,13 @@ sudo systemctl restart apache2
 
 The `AllowOverride` directive accepts several values:
 
-- `All` — Allow all directives in .htaccess
-- `None` — Disable .htaccess completely (default for performance)
-- `AuthConfig` — Allow authentication directives (AuthType, Require, etc.)
-- `FileInfo` — Allow document type directives (ErrorDocument, Redirect, RewriteEngine, etc.)
-- `Indexes` — Allow directory indexing directives
-- `Limit` — Allow host access control (Allow, Deny, Order)
-- `Options` — Allow Options directive
+- `All`: Allow all directives in .htaccess
+- `None`: Disable .htaccess completely (default for performance)
+- `AuthConfig`: Allow authentication directives (AuthType, Require, etc.)
+- `FileInfo`: Allow document type directives (ErrorDocument, Redirect, RewriteEngine, etc.)
+- `Indexes`: Allow directory indexing directives
+- `Limit`: Allow host access control (Allow, Deny, Order)
+- `Options`: Allow Options directive
 
 For URL rewriting (most common use of .htaccess), you need at least `FileInfo`:
 
@@ -86,7 +86,7 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-Test by accessing `http://your-server/test` — it should serve `test.html`.
+Test by accessing `http://your-server/test`: it should serve `test.html`.
 
 ## Common .htaccess Use Cases
 

@@ -91,7 +91,7 @@ Or remove all active traces:
 
 ### Practical Limitations and Alternatives
 
-**Performance**: Tracing adds overhead and becomes unwieldy with high-frequency calls. The fib example above shows redundant calls—fib(3) is computed twice. Traces get long quickly.
+**Performance**: Tracing adds overhead and becomes unwieldy with high-frequency calls. The fib example above shows redundant calls: fib(3) is computed twice. Traces get long quickly.
 
 **Scope**: `#trace` only works in the interactive toplevel. For compiled code, use a debugger like `ocamldebug`:
 

@@ -56,7 +56,7 @@ if ( isMobileDevice() ) {
 }
 ```
 
-This is more maintainable than inline regex and easier to update as device identifiers change. Note that user-agent detection has inherent limitations—modern JavaScript detection or server-side analytics can be more accurate, but user-agent detection remains lightweight for most deployments.
+This is more maintainable than inline regex and easier to update as device identifiers change. Note that user-agent detection has inherent limitations: modern JavaScript detection or server-side analytics can be more accurate, but user-agent detection remains lightweight for most deployments.
 
 ## Let Users Override Device Detection
 
@@ -100,7 +100,7 @@ Use structured logo configuration with DPI variants (1x, 1.5x, 2x) instead of re
 
 ## Cache Management with Device Detection
 
-File caching with device detection requires careful handling—mobile and desktop versions must be cached separately to avoid serving the wrong markup to users.
+File caching with device detection requires careful handling: mobile and desktop versions must be cached separately to avoid serving the wrong markup to users.
 
 The best approach is separate cache directories:
 
@@ -126,7 +126,7 @@ if ( isMobileDevice() ) {
 }
 ```
 
-The separate directory approach is preferable for performance—it preserves caching benefits for all users.
+The separate directory approach is preferable for performance: it preserves caching benefits for all users.
 
 Create the cache directories with proper permissions:
 

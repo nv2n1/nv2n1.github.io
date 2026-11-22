@@ -48,7 +48,7 @@ systemctl --user enable --now guake
 
 **Hotkey Activation**
 
-The default hotkey is F12. When pressed, Guake appears from the top of the screen. Press F12 again and it disappears. This is the core feature — you never need to click or minimize/maximize windows.
+The default hotkey is F12. When pressed, Guake appears from the top of the screen. Press F12 again and it disappears. This is the core feature: you never need to click or minimize/maximize windows.
 
 **Tab Management**
 

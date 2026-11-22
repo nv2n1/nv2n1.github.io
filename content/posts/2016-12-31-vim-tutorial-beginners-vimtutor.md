@@ -35,7 +35,7 @@ Run `vimtutor --help` to see all available languages on your system. The languag
 
 ## What You’ll Learn: Seven Lessons
 
-The tutorial builds sequentially—each lesson assumes you’ve completed the previous one. Critical point: you must actually execute the commands. Reading alone doesn’t build muscle memory.
+The tutorial builds sequentially: each lesson assumes you’ve completed the previous one. Critical point: you must actually execute the commands. Reading alone doesn’t build muscle memory.
 
 ### Lesson 1: Movement and Basic Editing
 
@@ -66,7 +66,7 @@ Common combinations:
     yw             yank (copy) word
     y$             yank to end of line
 
-Undo with `u`, redo with `Ctrl-R`. Vim maintains a full undo history—you can undo multiple times or navigate with `:undolist` for complex undo trees.
+Undo with `u`, redo with `Ctrl-R`. Vim maintains a full undo history: you can undo multiple times or navigate with `:undolist` for complex undo trees.
 
 ### Lesson 3: Putting and Replacing
 
@@ -77,7 +77,7 @@ After deleting or copying text, paste it back:
     r              replace single character
     R              replace mode (overwrite characters)
 
-When you delete something with `d`, Vim stores it in a register. Paste it with `p` or `P`. The same applies to yanked text—copy with `y`, paste with `p`. Each register is independent, so you can store multiple text blocks simultaneously.
+When you delete something with `d`, Vim stores it in a register. Paste it with `p` or `P`. The same applies to yanked text: copy with `y`, paste with `p`. Each register is independent, so you can store multiple text blocks simultaneously.
 
 ### Lesson 4: Navigation and Search
 
@@ -216,6 +216,6 @@ Macros are particularly powerful. Record a sequence with `qa`, type your command
 
 ## Building Muscle Memory
 
-The tutorial intentionally focuses on essentials. Vim has enormous depth—`man vim` and `:help` will keep you learning for years. The approach that actually works: learn one new command daily, use it in real work, and let repetition build automaticity. Vim rewards consistent daily use far more than cramming knowledge.
+The tutorial intentionally focuses on essentials. Vim has enormous depth: `man vim` and `:help` will keep you learning for years. The approach that actually works: learn one new command daily, use it in real work, and let repetition build automaticity. Vim rewards consistent daily use far more than cramming knowledge.
 
 Start with vimtutor today. Spend 30 minutes on it. Then use Vim for actual work, consulting the help system as needed. Consistency matters more than comprehensiveness.

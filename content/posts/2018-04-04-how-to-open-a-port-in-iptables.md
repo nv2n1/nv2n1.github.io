@@ -22,10 +22,10 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 
 Breaking this down:
 
-- `-A INPUT` — append a rule to the INPUT chain
-- `-p tcp` — match TCP protocol (use `udp` for UDP, or omit for both)
-- `--dport 80` — match destination port 80
-- `-j ACCEPT` — jump to ACCEPT target (allow the traffic)
+- `-A INPUT`: append a rule to the INPUT chain
+- `-p tcp`: match TCP protocol (use `udp` for UDP, or omit for both)
+- `--dport 80`: match destination port 80
+- `-j ACCEPT`: jump to ACCEPT target (allow the traffic)
 
 ## Common Port-Opening Scenarios
 
@@ -203,7 +203,7 @@ sudo nft list ruleset
 
 ## Important Considerations
 
-Order matters — iptables processes rules top-to-bottom. A REJECT rule placed early will block traffic before a later ACCEPT rule sees it.
+Order matters: iptables processes rules top-to-bottom. A REJECT rule placed early will block traffic before a later ACCEPT rule sees it.
 
 Always test SSH rules on remote systems before saving. Open the port, verify connectivity, then persist the rules. If you lock yourself out, console access or out-of-band management is your only option.
 

@@ -114,7 +114,7 @@ sudo systemctl restart systemd-networkd
 
 ## Important Considerations
 
-Disabling IPv6 completely can break some services. Test thoroughly in your environment first. Some applications—particularly container orchestration, service meshes, and modern web services—may have issues without IPv6 support.
+Disabling IPv6 completely can break some services. Test thoroughly in your environment first. Some applications (particularly container orchestration, service meshes, and modern web services) may have issues without IPv6 support.
 
 If you only want to disable IPv6 on specific interfaces, modify the sysctl parameter for that interface:
 

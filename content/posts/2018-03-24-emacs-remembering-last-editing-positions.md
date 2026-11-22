@@ -10,7 +10,7 @@ canonical: /emacs-remembering-last-editing-positions/
 url: /emacs-remembering-last-editing-positions/
 ---
 
-Emacs doesn’t restore your cursor to the last editing position by default—Vim does this out of the box. Fortunately, `save-place-mode` is built into Emacs and requires minimal configuration to enable this behavior.
+Emacs doesn’t restore your cursor to the last editing position by default: Vim does this out of the box. Fortunately, `save-place-mode` is built into Emacs and requires minimal configuration to enable this behavior.
 
 ## Basic Setup
 

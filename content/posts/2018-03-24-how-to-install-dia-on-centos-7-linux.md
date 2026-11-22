@@ -48,13 +48,13 @@ sudo make install
 
 Dia includes built-in shape libraries for many diagram types:
 
-- **Flowchart** — Process flows, decision trees, algorithm diagrams
-- **UML** — Class diagrams, sequence diagrams, use case diagrams
-- **Network** — Network topology, server racks, firewall layouts
-- **Circuit** — Electrical and logic circuits
-- **Database** — Entity-relationship diagrams
-- **Sybase** — Database schema diagrams
-- **GRAFCET** — Sequential function charts
+- **Flowchart**: Process flows, decision trees, algorithm diagrams
+- **UML**: Class diagrams, sequence diagrams, use case diagrams
+- **Network**: Network topology, server racks, firewall layouts
+- **Circuit**: Electrical and logic circuits
+- **Database**: Entity-relationship diagrams
+- **Sybase**: Database schema diagrams
+- **GRAFCET**: Sequential function charts
 
 ## Basic Usage
 
@@ -67,13 +67,13 @@ Dia includes built-in shape libraries for many diagram types:
 
 **Keyboard shortcuts:**
 
-- `Ctrl+N` — New diagram
-- `Ctrl+S` — Save diagram
-- `Ctrl+E` — Export to another format
-- `Ctrl+Z` — Undo
-- `Delete` — Remove selected object
-- `Ctrl+G` — Group selected objects
-- `Ctrl+Shift+G` — Ungroup
+- `Ctrl+N`: New diagram
+- `Ctrl+S`: Save diagram
+- `Ctrl+E`: Export to another format
+- `Ctrl+Z`: Undo
+- `Delete`: Remove selected object
+- `Ctrl+G`: Group selected objects
+- `Ctrl+Shift+G`: Ungroup
 
 ## Exporting Diagrams
 
@@ -103,11 +103,11 @@ Each shape file defines the geometry (SVG path), connection points, and text box
 
 While Dia is functional, there are more modern diagramming tools available:
 
-- **draw.io (diagrams.net)** — Web-based, free, excellent collaboration
-- **LibreOffice Draw** — Part of the LibreOffice suite, good for general diagrams
-- **Inkscape** — Vector graphics editor with diagramming capabilities
-- **Mermaid** — Text-based diagram generation (integrates with Markdown)
-- **PlantUML** — Text-based UML diagram generation
+- **draw.io (diagrams.net)**: Web-based, free, excellent collaboration
+- **LibreOffice Draw**: Part of the LibreOffice suite, good for general diagrams
+- **Inkscape**: Vector graphics editor with diagramming capabilities
+- **Mermaid**: Text-based diagram generation (integrates with Markdown)
+- **PlantUML**: Text-based UML diagram generation
 
 For quick network or flowchart diagrams, Dia remains a solid lightweight choice that doesn’t require an internet connection or modern web browser.
 

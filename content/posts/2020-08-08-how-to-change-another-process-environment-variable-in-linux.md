@@ -10,7 +10,7 @@ canonical: /how-to-change-another-process-environment-variable-in-linux/
 url: /how-to-change-another-process-environment-variable-in-linux/
 ---
 
-Each process on Linux has its own environment variable namespace. While normally isolated, there are scenarios where you might need to modify a running process’s environment—usually for debugging, testing, or dynamic configuration changes.
+Each process on Linux has its own environment variable namespace. While normally isolated, there are scenarios where you might need to modify a running process’s environment: usually for debugging, testing, or dynamic configuration changes.
 
 The standard approach uses GDB’s ability to call functions within a running process. This works by attaching GDB to the target process and invoking `putenv()` directly in the process’s memory space.
 
@@ -19,10 +19,10 @@ The standard approach uses GDB’s ability to call functions within a running pr
 Before attempting this method, understand its constraints:
 
 - **Requires root access** (via `sudo`) to attach to processes you don’t own
-- **Only affects environment variables not yet cached** — if the application or its libraries have already read and cached an environment variable, the change won’t be visible to code using the cached value
-- **Stops the process during attachment** — execution pauses while GDB is attached
-- **GDB must be installed** — some minimal containers or hardened systems may not have it available
-- **Works best on dynamically-linked binaries** — statically-linked binaries with inlined stdlib functions may not respond as expected
+- **Only affects environment variables not yet cached**: if the application or its libraries have already read and cached an environment variable, the change won’t be visible to code using the cached value
+- **Stops the process during attachment**: execution pauses while GDB is attached
+- **GDB must be installed**: some minimal containers or hardened systems may not have it available
+- **Works best on dynamically-linked binaries**: statically-linked binaries with inlined stdlib functions may not respond as expected
 
 ## Basic Method
 
@@ -118,7 +118,7 @@ If you don’t see `getenv` calls after modifying the environment, the applicati
 
 For processes that cache environment variables, consider:
 
-- **Process restart**: The simplest solution — stop and restart with new variables
+- **Process restart**: The simplest solution: stop and restart with new variables
 - **Configuration files**: Modify application config files and trigger a reload if the app supports hot-reloading
 - **Signal handlers**: Some applications respond to `SIGHUP` to reload configuration
 - **Running as the target user**: Use `sudo -u username` to execute processes with specific environment variables from the start

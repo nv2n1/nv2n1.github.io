@@ -10,7 +10,7 @@ canonical: /what-are-the-ddl-and-dml-of-shark-spark-sql/
 url: /what-are-the-ddl-and-dml-of-shark-spark-sql/
 ---
 
-Spark SQL doesn’t have a separate DDL/DML specification distinct from Hive QL — it inherits its SQL dialect directly from Hive. If you’re designing a SQL engine or looking to understand Spark SQL’s data definition and manipulation capabilities, you need to reference Hive’s DDL and DML documentation.
+Spark SQL doesn’t have a separate DDL/DML specification distinct from Hive QL: it inherits its SQL dialect directly from Hive. If you’re designing a SQL engine or looking to understand Spark SQL’s data definition and manipulation capabilities, you need to reference Hive’s DDL and DML documentation.
 
 ## Why Spark SQL Uses Hive QL
 
@@ -20,12 +20,12 @@ Spark SQL was built on top of Hive’s query execution layer, so it adopted Hive
 
 Data Definition Language (DDL) covers schema and metadata operations. Common DDL statements in Spark SQL include:
 
-- **CREATE TABLE** — Define new tables with column types and constraints
-- **ALTER TABLE** — Modify table structure, add/drop columns, rename tables
-- **DROP TABLE** — Remove tables from the catalog
-- **CREATE DATABASE** — Create schema namespaces
-- **CREATE VIEW** — Define logical views over existing tables
-- **TRUNCATE TABLE** — Remove all rows while preserving structure
+- **CREATE TABLE**: Define new tables with column types and constraints
+- **ALTER TABLE**: Modify table structure, add/drop columns, rename tables
+- **DROP TABLE**: Remove tables from the catalog
+- **CREATE DATABASE**: Create schema namespaces
+- **CREATE VIEW**: Define logical views over existing tables
+- **TRUNCATE TABLE**: Remove all rows while preserving structure
 
 Example:
 
@@ -49,12 +49,12 @@ Spark SQL also supports external tables, temporary views, and managed tables wit
 
 Data Manipulation Language (DML) covers data access and modification. Standard DML operations include:
 
-- **SELECT** — Query data with filtering, aggregation, and joins
-- **INSERT INTO** — Add rows to existing tables
-- **INSERT OVERWRITE** — Replace table data
-- **UPDATE** — Modify existing rows (available in Delta Lake)
-- **DELETE** — Remove rows (available in Delta Lake)
-- **WITH** — Common table expressions (CTEs) for complex queries
+- **SELECT**: Query data with filtering, aggregation, and joins
+- **INSERT INTO**: Add rows to existing tables
+- **INSERT OVERWRITE**: Replace table data
+- **UPDATE**: Modify existing rows (available in Delta Lake)
+- **DELETE**: Remove rows (available in Delta Lake)
+- **WITH**: Common table expressions (CTEs) for complex queries
 
 Example:
 

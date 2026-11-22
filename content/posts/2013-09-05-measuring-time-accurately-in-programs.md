@@ -14,7 +14,7 @@ Measuring time accurately matters for performance profiling, benchmarking, and l
 
 ## POSIX Time APIs: gettimeofday and clock_gettime
 
-`gettimeofday()` and `clock_gettime()` are the standard POSIX calls for reading system time. `gettimeofday()` returns seconds and microseconds but lacks resolution metadata. `clock_gettime()` is more flexible—you specify a clock type and get nanosecond precision, plus you can query resolution with `clock_getres()`.
+`gettimeofday()` and `clock_gettime()` are the standard POSIX calls for reading system time. `gettimeofday()` returns seconds and microseconds but lacks resolution metadata. `clock_gettime()` is more flexible: you specify a clock type and get nanosecond precision, plus you can query resolution with `clock_getres()`.
 
 Both functions are implemented via VDSO (Virtual Dynamic Shared Object) on modern Linux, avoiding kernel context switches. Typical overhead on x86-64:
 

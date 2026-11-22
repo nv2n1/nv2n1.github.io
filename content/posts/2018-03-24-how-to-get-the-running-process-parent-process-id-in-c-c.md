@@ -30,7 +30,7 @@ gcc -o get_ppid get_ppid.c
 ./get_ppid
 ```
 
-The `getppid()` call returns the PID of the parent process. This value can change if the parent terminates before the child—the kernel will reparent the process to init (PID 1) or systemd (on modern distributions).
+The `getppid()` call returns the PID of the parent process. This value can change if the parent terminates before the child: the kernel will reparent the process to init (PID 1) or systemd (on modern distributions).
 
 ## Getting PPID for a specific process
 

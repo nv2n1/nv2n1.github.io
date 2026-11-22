@@ -42,7 +42,7 @@ This works for emotional expressions, objects, animals, symbols, and more.
 
 ### Frequently Used Emoji Tab
 
-The emoji keyboard displays your most recently used emoji in the first tab (the clock icon). This is useful for emoji you use regularly—they’ll appear at the top for quick access.
+The emoji keyboard displays your most recently used emoji in the first tab (the clock icon). This is useful for emoji you use regularly: they’ll appear at the top for quick access.
 
 You can also tap and hold on an emoji to see variations. For example, holding a thumbs up lets you choose different skin tones if applicable.
 

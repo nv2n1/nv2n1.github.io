@@ -10,7 +10,7 @@ canonical: /how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/
 url: /how-to-get-a-free-web-server-ssl-tls-certificates-for-my-websites/
 ---
 
-Securing your website with HTTPS is no longer optional—it’s essential for SEO, user trust, and browser compatibility. The good news: Let’s Encrypt provides free certificates, and the tooling has matured significantly.
+Securing your website with HTTPS is no longer optional: it’s essential for SEO, user trust, and browser compatibility. The good news: Let’s Encrypt provides free certificates, and the tooling has matured significantly.
 
 ## Using Certbot with Nginx or Apache
 
@@ -28,7 +28,7 @@ For Apache:
 sudo certbot --apache
 ```
 
-Certbot handles the renewal automatically with a timer that runs daily—no manual intervention needed.
+Certbot handles the renewal automatically with a timer that runs daily: no manual intervention needed.
 
 ## Manual Certificate Installation
 

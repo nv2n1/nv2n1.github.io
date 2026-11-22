@@ -10,7 +10,7 @@ canonical: /synchronizing-thunderbird-calendar-with-apple-icloud-calendar/
 url: /synchronizing-thunderbird-calendar-with-apple-icloud-calendar/
 ---
 
-Thunderbird’s native calendar support doesn’t include direct iCloud integration, but you can sync iCloud calendars using CalDAV—Apple’s standard calendar protocol. This approach gives you read-write access to your iCloud calendars from within Thunderbird.
+Thunderbird’s native calendar support doesn’t include direct iCloud integration, but you can sync iCloud calendars using CalDAV: Apple’s standard calendar protocol. This approach gives you read-write access to your iCloud calendars from within Thunderbird.
 
 ## Install TbSync and the CalDAV provider
 
@@ -20,7 +20,7 @@ TbSync is the synchronization backbone you’ll need. It handles multiple calend
 2.  Search for **TbSync** and install it
 3.  Once installed, click the gear icon next to TbSync to access its settings
 4.  In the **Actions** menu, select **CalDAV and CardDAV**
-5.  You’ll be prompted to install the **CalDAV and CardDAV** provider add-on—install it
+5.  You’ll be prompted to install the **CalDAV and CardDAV** provider add-on: install it
 6.  After installation, return to **Actions** → **CalDAV and CardDAV** to add your account
 
 ## Create an app-specific password
@@ -30,7 +30,7 @@ iCloud requires app-specific passwords for third-party clients for security reas
 1.  Visit <a href="https://appleid.apple.com/account/manage" rel="nofollow noopener" target="_blank">https://appleid.apple.com/account/manage</a> in your browser
 2.  Navigate to **Security** → **App-specific passwords**
 3.  Select **Other App** and generate a password for Thunderbird
-4.  Save this 16-character password—you’ll use it immediately
+4.  Save this 16-character password: you’ll use it immediately
 
 ## Add your iCloud account to TbSync
 
@@ -44,7 +44,7 @@ iCloud requires app-specific passwords for third-party clients for security reas
 
 1.  In TbSync’s account settings for your iCloud account, enable synchronization
 2.  Set your preferred sync interval (30 minutes or hourly is typical for most users)
-3.  Select which iCloud calendars to sync—you can choose individual calendars or sync all of them
+3.  Select which iCloud calendars to sync: you can choose individual calendars or sync all of them
 4.  Click **Synchronize now** to fetch calendars immediately
 
 Your iCloud calendars will appear in Thunderbird’s calendar sidebar and automatically sync according to your interval settings. You can create, edit, and delete events in Thunderbird, and changes will sync back to iCloud.
@@ -53,7 +53,7 @@ Your iCloud calendars will appear in Thunderbird’s calendar sidebar and automa
 
 **Authentication failures**: Ensure you’re using the app-specific password, not your iCloud password. If you continue to have issues, regenerate a new app-specific password.
 
-**Calendars not appearing**: Check that you’ve enabled calendar synchronization in the TbSync account settings—contacts and calendars are separate toggles.
+**Calendars not appearing**: Check that you’ve enabled calendar synchronization in the TbSync account settings: contacts and calendars are separate toggles.
 
 **Sync conflicts**: If you modify the same event in multiple places simultaneously, TbSync will typically keep the most recent version. To minimize conflicts, allow sync intervals to complete before making changes.
 
@@ -63,7 +63,7 @@ Your iCloud calendars will appear in Thunderbird’s calendar sidebar and automa
 
 CalDAV synchronization is bidirectional, so changes made in Thunderbird sync to iCloud and vice versa. This differs from the read-only public calendar option, which provides no editing capability.
 
-If you use Thunderbird on multiple devices, each installation will maintain its own sync schedule. This is intentional—each client operates independently to avoid circular sync conflicts.
+If you use Thunderbird on multiple devices, each installation will maintain its own sync schedule. This is intentional: each client operates independently to avoid circular sync conflicts.
 
 For users managing multiple iCloud accounts, repeat the account creation process in TbSync for each additional account. Each will sync independently based on its configured interval.
 

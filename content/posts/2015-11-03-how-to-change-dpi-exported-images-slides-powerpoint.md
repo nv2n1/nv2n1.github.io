@@ -10,7 +10,7 @@ canonical: /how-to-change-dpi-exported-images-slides-powerpoint/
 url: /how-to-change-dpi-exported-images-slides-powerpoint/
 ---
 
-PowerPoint exports slides at 96 DPI by default, which is too low for professional printing. Print shops typically require 150 DPI for acceptable quality or 300 DPI for high-quality output. The UI export options in PowerPoint don’t reliably control the actual output DPI—you need to change a registry setting on Windows or use alternative methods on macOS.
+PowerPoint exports slides at 96 DPI by default, which is too low for professional printing. Print shops typically require 150 DPI for acceptable quality or 300 DPI for high-quality output. The UI export options in PowerPoint don’t reliably control the actual output DPI: you need to change a registry setting on Windows or use alternative methods on macOS.
 
 ## Windows: Registry-Based DPI Control
 
@@ -73,7 +73,7 @@ For multiple Office versions, add separate registry sections:
 2.  Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options` (adjust version as needed)
 3.  Right-click the empty space on the right and select **New → DWORD (32-bit) Value**
 4.  Name it `ExportBitmapResolution`
-5.  Double-click it and enter `300` (in decimal, not hex—the editor converts automatically)
+5.  Double-click it and enter `300` (in decimal, not hex: the editor converts automatically)
 6.  Click OK and close the registry editor
 7.  Restart PowerPoint
 
@@ -124,7 +124,7 @@ If you can’t or don’t want to change the registry, export at default resolut
 convert slide-96dpi.png -density 300 -units PixelsPerInch slide-300dpi.png
 ```
 
-Be aware this only changes the DPI metadata—it doesn’t improve actual image quality. The pixel count stays the same. For genuine quality improvement, export at higher DPI directly from PowerPoint.
+Be aware this only changes the DPI metadata: it doesn’t improve actual image quality. The pixel count stays the same. For genuine quality improvement, export at higher DPI directly from PowerPoint.
 
 ## Revert to Default
 

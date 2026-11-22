@@ -92,7 +92,7 @@ If a library appears in dozens of dependencies, optimizing its build time yields
 
 ### Handling Circular Dependencies
 
-Graphviz will render circular dependencies, making them immediately visible as cycles in the graph. If you see loops, your project has a real problem—CMake will catch this during configuration, but the visual is helpful for communicating the issue to team members.
+Graphviz will render circular dependencies, making them immediately visible as cycles in the graph. If you see loops, your project has a real problem: CMake will catch this during configuration, but the visual is helpful for communicating the issue to team members.
 
 ## Practical Workflow
 

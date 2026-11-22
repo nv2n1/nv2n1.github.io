@@ -10,7 +10,7 @@ canonical: /bash-learning-materials/
 url: /bash-learning-materials/
 ---
 
-Start with the official Bash manual—it’s comprehensive and essential before writing production scripts. Access it locally with:
+Start with the official Bash manual: it’s comprehensive and essential before writing production scripts. Access it locally with:
 
 ``` bash
 man bash
@@ -59,7 +59,7 @@ The <a href="https://google.github.io/styleguide/shellguide.html" rel="nofollow 
 - Apply `set -euo pipefail` at script start
 - Comment non-obvious logic
 
-Adapt these to your team’s needs rather than following dogmatically—the core rules (quoting, `set -euo pipefail`, using `local`) matter everywhere.
+Adapt these to your team’s needs rather than following dogmatically: the core rules (quoting, `set -euo pipefail`, using `local`) matter everywhere.
 
 ## ShellCheck: Your Static Analyzer
 
@@ -133,7 +133,7 @@ for file in "${list[@]}"; do ...
 **Globbing in conditionals**: `[ ]` expands globs; `[[ ]]` doesn’t:
 
 ``` bash
-# Dangerous—expands *.txt
+# Dangerous: expands *.txt
 if [ "$file" = *.txt ]; then ...
 
 # Safe
@@ -143,11 +143,11 @@ if [[ "$file" == *.txt ]]; then ...
 **Subshell scope**: Variables assigned in `(...)` don’t affect the parent:
 
 ``` bash
-# Wrong—var is unset after the subshell
+# Wrong: var is unset after the subshell
 (var="value")
 echo "$var"  # empty
 
-# Right—use { ... ; } for grouping without a subshell
+# Right: use { ... ; } for grouping without a subshell
 { var="value"; }
 echo "$var"  # prints "value"
 ```
@@ -155,11 +155,11 @@ echo "$var"  # prints "value"
 **Pipe subshells**: The rightmost command in a pipe runs in a subshell:
 
 ``` bash
-# Wrong—count is lost
+# Wrong: count is lost
 cat file | grep pattern | wc -l
 count=$?  # $? is 0 (wc succeeded), not the line count
 
-# Right—use command substitution
+# Right: use command substitution
 count=$(grep pattern file | wc -l)
 ```
 
@@ -256,6 +256,6 @@ A 500-line Bash script is harder to maintain and debug than a 500-line Python sc
 3.  Write new scripts with `set -euo pipefail` and proper quoting
 4.  Build a small function library for logging, error handling, and argument parsing
 5.  Test scripts locally before deploying
-6.  Study the <a href="https://www.tldp.org/LDP/abs/html/" rel="nofollow noopener" target="_blank">Advanced Bash-Scripting Guide</a> selectively once fundamentals are solid—focus on sections relevant to your work
+6.  Study the <a href="https://www.tldp.org/LDP/abs/html/" rel="nofollow noopener" target="_blank">Advanced Bash-Scripting Guide</a> selectively once fundamentals are solid: focus on sections relevant to your work
 
 The time invested in learning Bash properly pays off in more reliable automation and faster debugging when things break.

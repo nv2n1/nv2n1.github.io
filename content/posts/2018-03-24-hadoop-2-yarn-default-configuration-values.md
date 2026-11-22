@@ -64,7 +64,7 @@ mapred getconf -confKey mapreduce.job.maps
 
 ## Configuration Precedence and Overrides
 
-Hadoop loads configuration in this order — later sources override earlier ones:
+Hadoop loads configuration in this order: later sources override earlier ones:
 
 1.  Compiled-in defaults (in source code)
 2.  `*-default.xml` files in JARs

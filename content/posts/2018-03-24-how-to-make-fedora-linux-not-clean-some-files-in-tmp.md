@@ -10,7 +10,7 @@ canonical: /how-to-make-fedora-linux-not-clean-some-files-in-tmp/
 url: /how-to-make-fedora-linux-not-clean-some-files-in-tmp/
 ---
 
-Fedora uses `systemd-tmpfiles` to automatically clean up temporary files and directories. By default, this includes volatile files in `/tmp/`, which can cause problems for applications that rely on files persisting there — like HDFS DataNodes that store their PID files as `hadoop-hadoop-datanode.pid`.
+Fedora uses `systemd-tmpfiles` to automatically clean up temporary files and directories. By default, this includes volatile files in `/tmp/`, which can cause problems for applications that rely on files persisting there, like HDFS DataNodes that store their PID files as `hadoop-hadoop-datanode.pid`.
 
 ## How systemd-tmpfiles Works
 
@@ -55,12 +55,12 @@ The `--dry-run` flag shows what would be cleaned without actually removing anyth
 
 The main field types you’ll encounter:
 
-- `d` — create directory if missing
-- `f` — create regular file if missing
-- `x` — exclude path from cleanup (most important for your use case)
-- `X` — exclude directory contents recursively
-- `e` — set permissions/ownership on existing files
-- `z` — set SELinux labels
+- `d`: create directory if missing
+- `f`: create regular file if missing
+- `x`: exclude path from cleanup (most important for your use case)
+- `X`: exclude directory contents recursively
+- `e`: set permissions/ownership on existing files
+- `z`: set SELinux labels
 
 Each rule follows: `TYPE PATH MODE UID GID AGE ARGUMENT`
 
@@ -72,19 +72,19 @@ For exclusions, you typically only need:
 
 If you’re running applications that need persistent state in `/tmp/`, consider these alternatives:
 
-1.  **Use `/var/lib/` instead** — Designed for application data that should survive reboots:
+1.  **Use `/var/lib/` instead**: Designed for application data that should survive reboots:
 
     ``` bash
     mkdir -p /var/lib/myapp
     ```
 
-2.  **Use `/run/` for runtime data** — Backed by tmpfs but with different cleanup policies:
+2.  **Use `/run/` for runtime data**: Backed by tmpfs but with different cleanup policies:
 
     ``` bash
     mkdir -p /run/myapp
     ```
 
-3.  **Configure application-specific tmpfiles.d rules** — Create application-specific cleanup rules:
+3.  **Configure application-specific tmpfiles.d rules**: Create application-specific cleanup rules:
 
         # /etc/tmpfiles.d/hadoop.conf
         d /tmp/hadoop 0755 hadoop hadoop 30d

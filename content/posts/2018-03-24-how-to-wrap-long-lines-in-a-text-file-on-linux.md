@@ -12,7 +12,7 @@ url: /how-to-wrap-long-lines-in-a-text-file-on-linux/
 
 Long lines in text files can be difficult to read in a terminal. Linux provides several built-in tools to wrap or fold long lines to fit your screen width, each with different strengths.
 
-## Using fold — Simple Line Wrapping
+## Using fold: Simple Line Wrapping
 
 `fold` wraps lines at a specified character width:
 
@@ -29,9 +29,9 @@ fold -s -w 80 longfile.txt
 
 The `-s` flag is important: it breaks at whitespace when possible, preventing words from being split in the middle. Without `-s`, `fold` breaks at exactly the character limit.
 
-## Using fmt — Smart Paragraph Reflow
+## Using fmt: Smart Paragraph Reflow
 
-`fmt` is more intelligent than `fold` — it understands paragraph breaks and reflows text naturally:
+`fmt` is more intelligent than `fold`: it understands paragraph breaks and reflows text naturally:
 
 ```wp-block-code
 # Reflow text to 80 characters
@@ -43,13 +43,13 @@ fmt -p -w 80 longfile.txt
 # Only reflow lines longer than the goal width
 fmt -g 80 longfile.txt
 
-# Uniform spacing — collapse multiple spaces to one
+# Uniform spacing: collapse multiple spaces to one
 fmt -u -w 80 longfile.txt
 ```
 
 Unlike `fold`, `fmt` joins short lines together into paragraphs and breaks long lines at word boundaries. It’s the better choice for prose and documentation.
 
-## Using less — Interactive Viewing
+## Using less: Interactive Viewing
 
 When you just need to read a file with long lines, `less` offers toggleable wrapping:
 
@@ -70,7 +70,7 @@ You can also start less in chop mode:
 less -S longfile.txt
 ```
 
-## Using pr — Print-Formatted Output
+## Using pr: Print-Formatted Output
 
 `pr` formats text for printing with headers and page breaks:
 
@@ -159,10 +159,10 @@ python3 -m json.tool data.json
 
 ## Quick Reference
 
-- `fold -s -w 80 file` — Wrap at 80 chars, word-safe
-- `fmt -w 80 file` — Reflow paragraphs to 80 chars
-- `less -S file` — View with chop/wrap toggle (press -S)
-- `pr -w 80 file` — Print-formatted with wrapping
-- `:set wrap` in Vim — Soft wrap (visual only)
-- `:set textwidth=80` in Vim — Hard wrap (modifies file)
-- `gqip` in Vim — Reflow current paragraph
+- `fold -s -w 80 file`: Wrap at 80 chars, word-safe
+- `fmt -w 80 file`: Reflow paragraphs to 80 chars
+- `less -S file`: View with chop/wrap toggle (press -S)
+- `pr -w 80 file`: Print-formatted with wrapping
+- `:set wrap` in Vim: Soft wrap (visual only)
+- `:set textwidth=80` in Vim: Hard wrap (modifies file)
+- `gqip` in Vim: Reflow current paragraph

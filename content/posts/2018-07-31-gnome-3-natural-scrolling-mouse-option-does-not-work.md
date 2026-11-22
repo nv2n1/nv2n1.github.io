@@ -10,7 +10,7 @@ canonical: /gnome-3-natural-scrolling-mouse-option-does-not-work/
 url: /gnome-3-natural-scrolling-mouse-option-does-not-work/
 ---
 
-GNOME’s natural scrolling setting can be frustrating — especially when the GUI option is missing or doesn’t apply to your mouse while leaving your touchpad alone. The issue usually comes down to your session type, GNOME version, and how input devices are registered on your system.
+GNOME’s natural scrolling setting can be frustrating, especially when the GUI option is missing or doesn’t apply to your mouse while leaving your touchpad alone. The issue usually comes down to your session type, GNOME version, and how input devices are registered on your system.
 
 ## Check your session type first
 
@@ -54,7 +54,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 gsettings get org.gnome.desktop.peripherals.touchpad natural-scroll
 ```
 
-This separation is the key to having natural scrolling on your touchpad but standard scrolling on your mouse — or vice versa.
+This separation is the key to having natural scrolling on your touchpad but standard scrolling on your mouse, or vice versa.
 
 ## Verify device registration with libinput
 
@@ -101,7 +101,7 @@ Verify the quirks took effect:
 libinput list-devices | grep -A 5 "Natural scrolling"
 ```
 
-Order matters — libinput matches quirks top-to-bottom, so place more specific device entries before general ones.
+Order matters: libinput matches quirks top-to-bottom, so place more specific device entries before general ones.
 
 ## Troubleshooting common issues
 

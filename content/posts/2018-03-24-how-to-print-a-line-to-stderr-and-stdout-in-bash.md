@@ -68,7 +68,7 @@ command 2>&1 | tee combined.log
 command > output.log 2> errors.log
 ```
 
-The order matters with redirects. `2>&1` sends FD 2 to wherever FD 1 currently points. If you do `2>&1 1>/dev/null`, STDERR still goes to the terminal while STDOUT goes nowhere—not what you want.
+The order matters with redirects. `2>&1` sends FD 2 to wherever FD 1 currently points. If you do `2>&1 1>/dev/null`, STDERR still goes to the terminal while STDOUT goes nowhere: not what you want.
 
 ## Practical Examples
 
@@ -185,4 +185,4 @@ echo "Line 1" > output.log
 echo "Line 2" >> output.log  # >> appends, > overwrites
 ```
 
-Proper stream handling is critical in production scripts—it determines whether your error messages actually reach the people monitoring your systems.
+Proper stream handling is critical in production scripts: it determines whether your error messages actually reach the people monitoring your systems.

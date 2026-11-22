@@ -20,15 +20,15 @@ The gold standard for privacy-conscious users. Signal uses end-to-end encryption
 
 **Telegram**
 
-Over 900 million users globally. Fast, feature-rich, and supports large group chats (up to 200,000 members). Offers cloud-synced messages across devices. Note: personal chats aren’t encrypted by default—you need to explicitly enable “Secret Chats” for end-to-end encryption. Useful for channels and public discussion, less ideal if privacy is mandatory. Available on all major platforms.
+Over 900 million users globally. Fast, feature-rich, and supports large group chats (up to 200,000 members). Offers cloud-synced messages across devices. Note: personal chats aren’t encrypted by default: you need to explicitly enable “Secret Chats” for end-to-end encryption. Useful for channels and public discussion, less ideal if privacy is mandatory. Available on all major platforms.
 
 **WeChat**
 
-Dominates in China and increasingly popular in Southeast Asia. More than a messenger—it’s a full ecosystem including payments, social feeds, and mini-programs. If you’re doing business in or with China, WeChat is essentially non-negotiable. Registration requires a phone number and existing user verification in some regions.
+Dominates in China and increasingly popular in Southeast Asia. More than a messenger: it’s a full ecosystem including payments, social feeds, and mini-programs. If you’re doing business in or with China, WeChat is essentially non-negotiable. Registration requires a phone number and existing user verification in some regions.
 
 **WhatsApp**
 
-Still the global leader with 2+ billion users. Owned by Meta. End-to-end encrypted by default. Strong network effect—everyone already uses it. Privacy concerns around data sharing with parent company Meta, though messages themselves stay encrypted.
+Still the global leader with 2+ billion users. Owned by Meta. End-to-end encrypted by default. Strong network effect: everyone already uses it. Privacy concerns around data sharing with parent company Meta, though messages themselves stay encrypted.
 
 **iMessage (Apple)**
 
@@ -65,7 +65,7 @@ Reasonably popular in Eastern Europe and South Asia. End-to-end encrypted chats 
 - **Community/gaming**: Discord
 - **Apple ecosystem only**: iMessage
 
-The reality is you’ll likely end up with multiple apps depending on who you’re communicating with. Network effects matter—use whatever your contacts already use, but keep Signal installed for conversations where privacy genuinely matters.
+The reality is you’ll likely end up with multiple apps depending on who you’re communicating with. Network effects matter: use whatever your contacts already use, but keep Signal installed for conversations where privacy genuinely matters.
 
 ## 2026 Best Practices and Advanced Techniques
 

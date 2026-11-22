@@ -38,7 +38,7 @@ jshell> java.util.Arrays.stream(numbers).sum()
 $6 ==> 15
 ```
 
-jshell handles most Java syntax seamlessly—you can declare variables, define methods, create classes, and execute arbitrary code without boilerplate. Tab-completion works well for method names and packages.
+jshell handles most Java syntax seamlessly: you can declare variables, define methods, create classes, and execute arbitrary code without boilerplate. Tab-completion works well for method names and packages.
 
 Useful jshell commands:
 

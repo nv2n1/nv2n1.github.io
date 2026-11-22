@@ -18,7 +18,7 @@ Linux kernel 4.19.70 is a stable release containing 95 fixes and improvements ac
 
 **ALSA USB Audio Improvements**
 
-The release includes several USB audio enhancements. A quirk was added for Behringer UFX1604 to apply implicit feedback like the UFX1204 model, fixing noisy playback issues. An invalid NULL pointer check in `snd_emuusb_set_samplerate()` was corrected—the check was occurring after a `container_of()` call which always returns a valid pointer, so the validation was moved earlier in the function.
+The release includes several USB audio enhancements. A quirk was added for Behringer UFX1604 to apply implicit feedback like the UFX1204 model, fixing noisy playback issues. An invalid NULL pointer check in `snd_emuusb_set_samplerate()` was corrected: the check was occurring after a `container_of()` call which always returns a valid pointer, so the validation was moved earlier in the function.
 
 A critical fix prevents potential concurrent access to deleted audio sequencer pools. The `snd_seq_ioctl_get_client_pool()` function now properly acquires locks before accessing the input pool, preventing crashes when the pool is resized via ioctl while being accessed.
 
@@ -92,7 +92,7 @@ IOMMU DMA scatterlist segment merging was fixed to handle devices with `max_segm
 
 STM32 MDMA interrupt handler now properly checks for NULL channel pointer before dereferencing it in error messages.
 
-OMAP DMA frame index register handling was corrected—the FI value was incorrectly calculated, missing the “minus 1” required by OMAP TRM specifications. The fix applies to both omap-dma.c and removes the workaround from omap_vout_vrfb.c.
+OMAP DMA frame index register handling was corrected: the FI value was incorrectly calculated, missing the “minus 1” required by OMAP TRM specifications. The fix applies to both omap-dma.c and removes the workaround from omap_vout_vrfb.c.
 
 **Device Bus and Control**
 
@@ -134,7 +134,7 @@ VMCI doorbell reference counting was corrected to release resources if `schedule
 
 DMA segment size is now properly configured to `UINT_MAX` with `dma_set_max_seg_size()`, silencing spurious DMA-API debug warnings on kernels with `CONFIG_DMA_API_DEBUG_SG`.
 
-Broadwell EU computation was fixed—`subslice_mask` is indexed by slice, not subslice.
+Broadwell EU computation was fixed: `subslice_mask` is indexed by slice, not subslice.
 
 GGTT deballoon in Linux guest VMs now checks for valid `drm_mm_node` before removal, preventing NULL pointer dereference when unloading the i915 driver.
 
@@ -200,7 +200,7 @@ ARM64 page granule sizes are no longer treated as strict mismatches, allowing sy
 
 **AFS (Andrew File System)**
 
-`afs_d_revalidate()` no longer unconditionally updates `d_fsdata` without holding locks—it now only updates when the directory version actually changes.
+`afs_d_revalidate()` no longer unconditionally updates `d_fsdata` without holding locks: it now only updates when the directory version actually changes.
 
 `afs_put_read()` now safely handles NULL `req->pages` before array access, preventing null pointer dereference.
 

@@ -93,9 +93,9 @@ std::int64_t count(const std::map<std::string, std::int64_t>& map)
 
 This applies to all standard associative containers that have `operator[]`:
 
-- **`std::map`** — Use `at()` on const references
-- **`std::unordered_map`** — Same issue; use `at()` on const references
-- **`std::array`** and **`std::vector`** — Their `operator[]` is const-qualified, so no issue there (though no bounds checking)
+- **`std::map`**: Use `at()` on const references
+- **`std::unordered_map`**: Same issue; use `at()` on const references
+- **`std::array`** and **`std::vector`**: Their `operator[]` is const-qualified, so no issue there (though no bounds checking)
 
 For vectors and arrays on const references, `operator[]` works fine because it doesn’t modify the container. If you want bounds checking on const vector access, use `at()` there too.
 

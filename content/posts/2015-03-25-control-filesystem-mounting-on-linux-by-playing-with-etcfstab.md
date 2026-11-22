@@ -112,13 +112,13 @@ For security on shared systems, consider restricting options:
 
     /dev/sdb1 /mnt/external vfat user,noauto,ro,nosuid,nodev,noexec 0 0
 
-This allows users to mount read-only with no execution or device access—useful for untrusted USB drives.
+This allows users to mount read-only with no execution or device access: useful for untrusted USB drives.
 
 ## Handling Non-Critical Filesystems
 
 Non-critical filesystems (backups, optional storage, slow network mounts) should not block boot if they’re unavailable.
 
-### Option 1: noauto — Manual or Scheduled Mounting
+### Option 1: noauto: Manual or Scheduled Mounting
 
 Add `noauto` to skip automatic mounting:
 
@@ -156,15 +156,15 @@ sudo systemctl enable mnt-backup.mount
 sudo systemctl start mnt-backup.mount
 ```
 
-### Option 2: x-systemd.automount — Mount on First Access
+### Option 2: x-systemd.automount: Mount on First Access
 
-The `x-systemd.automount` option mounts a filesystem lazily—when something first tries to access it—reducing boot time:
+The `x-systemd.automount` option mounts a filesystem lazily (when something first tries to access it) reducing boot time:
 
     UUID=large-disk-uuid /mnt/large-disk ext4 noauto,x-systemd.automount,rw,defaults 0 0
 
 Systemd creates an automount unit that transparently mounts the filesystem when accessed, then unmounts it after idle time.
 
-### Option 3: nofail — Continue Boot if Device Missing
+### Option 3: nofail: Continue Boot if Device Missing
 
 The `nofail` option allows boot to proceed even if the device doesn’t exist:
 
@@ -194,7 +194,7 @@ For user-mountable NFS:
 
     server.example.com:/share /mnt/netshare nfs noauto,user,ro,vers=4.2,hard,timeo=30,nosuid,nodev,noexec 0 0
 
-This allows users to mount read-only and prevents execution of binaries or device access—appropriate for untrusted or shared mounts.
+This allows users to mount read-only and prevents execution of binaries or device access: appropriate for untrusted or shared mounts.
 
 ## Troubleshooting Mount Failures
 

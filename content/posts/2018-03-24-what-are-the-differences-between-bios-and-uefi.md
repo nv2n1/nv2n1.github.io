@@ -12,7 +12,7 @@ url: /what-are-the-differences-between-bios-and-uefi/
 
 **Storage Limitations**
 
-BIOS uses MBR (Master Boot Record) partitioning, which maxes out at 2.2TB addressable space due to 32-bit LBA limitations. UEFI uses GPT (GUID Partition Table), supporting drives up to 9.4 zettabytes theoretically—practically unlimited for current hardware. If you’re deploying systems with large storage arrays or NVMe drives, UEFI is mandatory.
+BIOS uses MBR (Master Boot Record) partitioning, which maxes out at 2.2TB addressable space due to 32-bit LBA limitations. UEFI uses GPT (GUID Partition Table), supporting drives up to 9.4 zettabytes theoretically: practically unlimited for current hardware. If you’re deploying systems with large storage arrays or NVMe drives, UEFI is mandatory.
 
 **Boot Process**
 
@@ -74,7 +74,7 @@ Legacy BIOS persists only in:
 - Specialized industrial equipment
 - Virtual environments explicitly configured for it
 
-If you’re deploying new infrastructure, assume UEFI. If supporting older systems, verify firmware mode before installing or upgrading the OS—mixing BIOS and UEFI approaches on the same system causes boot failures.
+If you’re deploying new infrastructure, assume UEFI. If supporting older systems, verify firmware mode before installing or upgrading the OS: mixing BIOS and UEFI approaches on the same system causes boot failures.
 
 ## Additional Tips and Best Practices
 

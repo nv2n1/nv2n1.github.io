@@ -28,11 +28,11 @@ The Papirus icon theme is particularly well-maintained and works consistently ac
 
 Open Cinnamon Settings (accessible via the system menu or `cinnamon-settings` from the terminal) and navigate to **Themes**. You’ll see separate sections for:
 
-- **Window borders** — Controls the titlebar and window decoration style
-- **Icons** — Sets the icon theme system-wide
-- **Controls** — Applies to GTK widgets and buttons
-- **Cursor** — Selects the mouse pointer theme
-- **Desktop** — Background and desktop-specific settings
+- **Window borders**: Controls the titlebar and window decoration style
+- **Icons**: Sets the icon theme system-wide
+- **Controls**: Applies to GTK widgets and buttons
+- **Cursor**: Selects the mouse pointer theme
+- **Desktop**: Background and desktop-specific settings
 
 Select matching variants within each category. Papirus pairs well with Adwaita controls for a modern, flat appearance.
 

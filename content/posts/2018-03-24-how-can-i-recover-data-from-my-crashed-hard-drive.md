@@ -10,7 +10,7 @@ canonical: /how-can-i-recover-data-from-my-crashed-hard-drive/
 url: /how-can-i-recover-data-from-my-crashed-hard-drive/
 ---
 
-When a hard drive fails physically, data recovery becomes challenging but sometimes possible. If the drive isn’t recognized by the system or showing signs of mechanical failure, professional recovery services may be necessary—but they’re expensive. Before going that route, you can attempt recovery yourself using open-source tools.
+When a hard drive fails physically, data recovery becomes challenging but sometimes possible. If the drive isn’t recognized by the system or showing signs of mechanical failure, professional recovery services may be necessary, but they’re expensive. Before going that route, you can attempt recovery yourself using open-source tools.
 
 ## When to attempt DIY recovery
 
@@ -21,11 +21,11 @@ You can safely attempt recovery if:
 - You can access the drive through a USB adapter on another system
 - There are no clicking, beeping, or grinding sounds (signs of mechanical failure)
 
-If the drive makes unusual noises or isn’t detected at all, the platters or read/write heads are likely damaged—professional recovery is your only option.
+If the drive makes unusual noises or isn’t detected at all, the platters or read/write heads are likely damaged: professional recovery is your only option.
 
 ## Using PhotoRec for file recovery
 
-PhotoRec is a free, open-source tool designed to recover lost files. Despite its name, it recovers far more than photos—it can reconstruct hundreds of file types including documents, archives, databases, and media files.
+PhotoRec is a free, open-source tool designed to recover lost files. Despite its name, it recovers far more than photos: it can reconstruct hundreds of file types including documents, archives, databases, and media files.
 
 Install PhotoRec on your recovery system:
 
@@ -107,4 +107,4 @@ Professional data recovery services cost \$300–\$3,000+ but are worth it if:
 - DIY recovery attempts fail completely
 - You need guaranteed chain-of-custody for legal/compliance reasons
 
-Budget several days for recovery regardless of method—don’t expect instant results.
+Budget several days for recovery regardless of method: don’t expect instant results.

@@ -10,7 +10,7 @@ canonical: /ascii-table-and-ascii-code/
 url: /ascii-table-and-ascii-code/
 ---
 
-ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable characters and control codes. Since computers work with numbers at the lowest level, ASCII provides a universal way to represent text—each character has a unique numeric value.
+ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable characters and control codes. Since computers work with numbers at the lowest level, ASCII provides a universal way to represent text: each character has a unique numeric value.
 
 Standardized in 1963, ASCII remains foundational to modern computing. Most character-encoding schemes today (UTF-8, UTF-16, ISO-8859-1) maintain backward compatibility with ASCII for the 0-127 range, meaning the first 128 characters are identical across these encodings.
 
@@ -151,7 +151,7 @@ Most control codes are obsolete for their original purposes, but a few remain re
 | 10  | 012 | 0x0A | LF   | 42  | 052 | 0x2A | \*   | 74  | 112 | 0x4A | J    | 106 | 152 | 0x6A | j    |
 | 11  | 013 | 0x0B | VT   | 43  | 053 | 0x2B | \+   | 75  | 113 | 0x4B | K    | 107 | 153 | 0x6B | k    |
 | 12  | 014 | 0x0C | FF   | 44  | 054 | 0x2C | ,    | 76  | 114 | 0x4C | L    | 108 | 154 | 0x6C | l    |
-| 13  | 015 | 0x0D | CR   | 45  | 055 | 0x2D | –    | 77  | 115 | 0x4D | M    | 109 | 155 | 0x6D | m    |
+| 13  | 015 | 0x0D | CR   | 45  | 055 | 0x2D |:    | 77  | 115 | 0x4D | M    | 109 | 155 | 0x6D | m    |
 | 14  | 016 | 0x0E | SO   | 46  | 056 | 0x2E | .    | 78  | 116 | 0x4E | N    | 110 | 156 | 0x6E | n    |
 | 15  | 017 | 0x0F | SI   | 47  | 057 | 0x2F | /    | 79  | 117 | 0x4F | O    | 111 | 157 | 0x6F | o    |
 | 16  | 020 | 0x10 | DLE  | 48  | 060 | 0x30 | 0    | 80  | 120 | 0x50 | P    | 112 | 160 | 0x70 | p    |

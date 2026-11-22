@@ -71,17 +71,17 @@ WPS Office binaries are compiled against specific library versions. The `libbz2.
 
 If you’re deploying across multiple machines, document this change or consider using a configuration management tool like Ansible or Puppet to apply the fix automatically. This symlink should persist across system updates since it’s in `/lib64/` rather than a temporary directory.
 
-If you encounter similar issues with other WPS Office components or libraries, apply the same diagnostic and symlink approach. Always verify backward compatibility before creating symlinks—newer major versions may not work.
+If you encounter similar issues with other WPS Office components or libraries, apply the same diagnostic and symlink approach. Always verify backward compatibility before creating symlinks: newer major versions may not work.
 
 ## Related Linux Commands
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

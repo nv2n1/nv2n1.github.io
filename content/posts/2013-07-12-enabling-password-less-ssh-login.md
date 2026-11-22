@@ -10,7 +10,7 @@ canonical: /enabling-password-less-ssh-login/
 url: /enabling-password-less-ssh-login/
 ---
 
-If you don’t already have a key pair, use Ed25519 — it’s faster and more secure than RSA:
+If you don’t already have a key pair, use Ed25519: it’s faster and more secure than RSA:
 
 ``` bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -71,7 +71,7 @@ chmod 600 ~/.ssh/authorized_keys
 Wrong permissions are the \#1 reason passwordless login fails. SSH enforces strict permission checks:
 
 ``` bash
-# Home directory — no group/other write
+# Home directory: no group/other write
 chmod 700 ~
 
 # .ssh directory
@@ -99,9 +99,9 @@ ssh -v username@remotemachine
 
 Look for these lines in the output:
 
-- `Offering public key: ...` — your key was sent to the server
-- `Server accepts key` — authentication succeeded
-- `Authentication refused: bad ownership or modes` — permissions problem
+- `Offering public key: ...`: your key was sent to the server
+- `Server accepts key`: authentication succeeded
+- `Authentication refused: bad ownership or modes`: permissions problem
 
 For even more detail, use `-vv` or `-vvv`.
 
@@ -143,7 +143,7 @@ Or if it failed:
 
 - Run `ssh -v` and check the server logs (see debugging section above)
 - Ensure the remote user actually owns `~/.ssh/` and `~/.ssh/authorized_keys`
-- On some systems, SELinux policies block SSH access — check `sudo audit2allow` output
+- On some systems, SELinux policies block SSH access: check `sudo audit2allow` output
 
 ## Use SSH Config for Easier Access
 

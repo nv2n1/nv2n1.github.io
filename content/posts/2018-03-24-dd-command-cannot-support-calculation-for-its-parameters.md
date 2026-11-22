@@ -18,7 +18,7 @@ $ dd if=/dev/zero of=./4Ktest100M bs=4KB count=25000*9
 dd: invalid number '25000*9'
 ```
 
-You’ll get an error because `dd` expects literal numeric values, not expressions. The shell doesn’t expand `25000*9` as arithmetic — it’s passed to `dd` as a literal string.
+You’ll get an error because `dd` expects literal numeric values, not expressions. The shell doesn’t expand `25000*9` as arithmetic: it’s passed to `dd` as a literal string.
 
 \## Using Shell Arithmetic Expansion
 
@@ -119,12 +119,12 @@ dd if=/dev/zero of=file bs=1K count=$COUNT
 
 `dd` does understand size suffixes:
 
-– `c` or `w` — bytes (1 or 2)
-– `b` — 512 bytes
-– `K` — 1024 bytes (KiB)
-– `M` — 1048576 bytes (MiB)
-– `G` — 1073741824 bytes (GiB)
-– `T` — 1099511627776 bytes (TiB)
+– `c` or `w`: bytes (1 or 2)
+– `b`: 512 bytes
+– `K`: 1024 bytes (KiB)
+– `M`: 1048576 bytes (MiB)
+– `G`: 1073741824 bytes (GiB)
+– `T`: 1099511627776 bytes (TiB)
 
 Note: Use uppercase `K`, `M`, `G` for binary multipliers. Lowercase `k` means 1000 (decimal) in some dd implementations, which can cause subtle size mismatches.
 
@@ -154,13 +154,13 @@ dd if=/dev/nvme0n1 of=disk.img bs=4M status=progress
 
 `dd` is available on virtually every Unix system, but some alternatives offer better features:
 
-\*\*dc3dd\*\* — Enhanced dd with hashing and progress:
+\*\*dc3dd\*\*: Enhanced dd with hashing and progress:
 
 ```wp-block-code
 dc3dd if=/dev/sda of=disk.img hash=sha256 log=copy.log
 ```
 
-\*\*ddrescue\*\* — For recovering data from failing drives:
+\*\*ddrescue\*\*, For recovering data from failing drives:
 
 ```wp-block-code
 ddrescue /dev/sda disk.img rescue.log

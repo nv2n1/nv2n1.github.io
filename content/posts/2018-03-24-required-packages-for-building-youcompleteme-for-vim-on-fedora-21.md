@@ -25,7 +25,7 @@ On Fedora, install the Python development package:
 sudo dnf install python3-devel
 ```
 
-If you’re building YouCompleteMe for Python 2 (not recommended — Python 2 reached end-of-life in 2020), you’d use:
+If you’re building YouCompleteMe for Python 2 (not recommended: Python 2 reached end-of-life in 2020), you’d use:
 
 ``` bash
 sudo dnf install python2-devel
@@ -56,10 +56,10 @@ Or if using vim-plug or another plugin manager, navigate to the installation dir
 
 The `install.py` script supports several completion engines:
 
-- `--clangd-completer` — C/C++ and Objective-C support (recommended, requires clangd)
-- `--java-completer` — Java support (requires Maven)
-- `--go-completer` — Go support
-- `--rust-completer` — Rust support (requires rustup)
+- `--clangd-completer`: C/C++ and Objective-C support (recommended, requires clangd)
+- `--java-completer`: Java support (requires Maven)
+- `--go-completer`: Go support
+- `--rust-completer`: Rust support (requires rustup)
 
 For example, to build with C/C++ and Rust support:
 
@@ -92,9 +92,9 @@ If you have multiple Python versions installed, explicitly point CMake to the co
 
 If YouCompleteMe proves difficult to maintain, consider these modern alternatives:
 
-- **vim-lsp** with language servers — lightweight and language-agnostic
-- **coc.nvim** — more active maintenance, though heavier
-- **neovim with built-in LSP** — if you can switch to Neovim
+- **vim-lsp** with language servers: lightweight and language-agnostic
+- **coc.nvim**: more active maintenance, though heavier
+- **neovim with built-in LSP**: if you can switch to Neovim
 
 For Neovim 0.8+, native LSP with Mason for language server management is significantly easier to set up than YouCompleteMe.
 
@@ -102,11 +102,11 @@ For Neovim 0.8+, native LSP with Mason for language server management is signifi
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

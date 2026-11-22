@@ -80,7 +80,7 @@ Then apply your new configuration or restart the network service.
 ## Prevention Tips
 
 - Always flush an interface before making significant configuration changes
-- Use `netplan` or `systemd-networkd` on modern systems—they handle state transitions better
+- Use `netplan` or `systemd-networkd` on modern systems: they handle state transitions better
 - Check for running services that might manage networking (NetworkManager, dhcpcd) that could interfere:
 
 ``` bash
@@ -94,12 +94,12 @@ If either is running and you’re managing networking manually, consider disabli
 
 When troubleshooting network connectivity:
 
-- ping host – Test basic connectivity
-- traceroute host – Trace the path packets take
-- ss -tulpn – Show listening ports
-- ip addr show – Display network interfaces
-- nmcli device status – NetworkManager device status
-- curl -I url – Check HTTP headers
+- ping host: Test basic connectivity
+- traceroute host: Trace the path packets take
+- ss -tulpn: Show listening ports
+- ip addr show: Display network interfaces
+- nmcli device status: NetworkManager device status
+- curl -I url: Check HTTP headers
 
 ## Quick Reference
 

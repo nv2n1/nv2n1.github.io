@@ -75,8 +75,8 @@ chrome --proxy-server="socks5://127.0.0.1:1080"
 
 Windows doesn’t natively support SOCKS proxies at the system level. Use third-party tools like:
 
-- **Proxifier** — GUI application that routes any Windows traffic through a SOCKS proxy
-- **ProxyCap** — Similar functionality with detailed filtering rules
+- **Proxifier**: GUI application that routes any Windows traffic through a SOCKS proxy
+- **ProxyCap**: Similar functionality with detailed filtering rules
 
 ## Setting Up with Authentication Key
 

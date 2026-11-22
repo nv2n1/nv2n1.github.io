@@ -102,8 +102,8 @@ nginx -t
 
 WordPress stores domain references in two key options:
 
-- `siteurl` — the WordPress installation URL
-- `home` — the site’s front page URL
+- `siteurl`: the WordPress installation URL
+- `home`: the site’s front page URL
 
 Back up your database first:
 
@@ -149,7 +149,7 @@ Look for output like:
 
 Check multiple paths to ensure redirects preserve the full URL structure.
 
-Browser testing is equally important — some browsers cache redirects aggressively. Use a private/incognito window or clear your cache before testing. Some CDNs and intermediate proxies may also cache 301s, so testing with curl first is more reliable.
+Browser testing is equally important: some browsers cache redirects aggressively. Use a private/incognito window or clear your cache before testing. Some CDNs and intermediate proxies may also cache 301s, so testing with curl first is more reliable.
 
 Test from multiple locations if your site uses geolocation-based routing, as edge caches may behave differently by region. If using a CDN like Cloudflare, test with a direct IP connection to bypass the cache:
 
@@ -192,7 +192,7 @@ Use this command to monitor new requests hitting the old domain over time:
 tail -f /var/log/apache2/access.log | grep "old-domain.com"
 ```
 
-Traffic should decline steadily over weeks as search engines and users update their bookmarks. A sudden drop to zero indicates DNS issues or hosting problems — the domain may have gone offline.
+Traffic should decline steadily over weeks as search engines and users update their bookmarks. A sudden drop to zero indicates DNS issues or hosting problems: the domain may have gone offline.
 
 ## Control Panel Alternatives
 

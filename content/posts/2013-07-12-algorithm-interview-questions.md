@@ -23,7 +23,7 @@ Understanding tradeoffs between these structures is essential for algorithm desi
 
 ## Sorting Linked Lists with Merge Sort
 
-Merge sort is the optimal choice for linked lists—O(n log n) time and O(log n) space for the recursion stack. Unlike quicksort, it requires no random access and performs consistently regardless of input distribution.
+Merge sort is the optimal choice for linked lists: O(n log n) time and O(log n) space for the recursion stack. Unlike quicksort, it requires no random access and performs consistently regardless of input distribution.
 
 ``` python
 class Node:
@@ -70,11 +70,11 @@ def merge_sort_list(head):
     return merge_sorted_lists(left, right)
 ```
 
-The slow/fast pointer approach avoids materializing the middle index—a natural fit for linked list traversal without random access.
+The slow/fast pointer approach avoids materializing the middle index: a natural fit for linked list traversal without random access.
 
 ## Sorting Arrays with Quicksort
 
-Quicksort remains standard for arrays despite O(n²) worst-case complexity—average O(n log n) performance, superior cache locality, and in-place operation make it practical. Production implementations often use introsort, switching to heapsort if recursion depth exceeds 2⌊log n⌋ to prevent pathological cases.
+Quicksort remains standard for arrays despite O(n²) worst-case complexity: average O(n log n) performance, superior cache locality, and in-place operation make it practical. Production implementations often use introsort, switching to heapsort if recursion depth exceeds 2⌊log n⌋ to prevent pathological cases.
 
 ``` python
 def quicksort(arr, low=0, high=None):
@@ -167,7 +167,7 @@ def reverse_string_inplace(s):
         right -= 1
 ```
 
-The slice approach creates O(n) temporary space for immutable strings—unavoidable due to string immutability. The two-pointer approach is O(1) space for lists.
+The slice approach creates O(n) temporary space for immutable strings: unavoidable due to string immutability. The two-pointer approach is O(1) space for lists.
 
 ## Cycle Detection in Linked Lists
 
@@ -214,7 +214,7 @@ def find_cycle_start(head):
     return slow
 ```
 
-When slow and fast pointers meet, a cycle exists. By resetting slow to head and advancing both at speed 1, they meet at the cycle start. This works because the distance from head to cycle start equals the distance from the meeting point to the cycle start—a mathematical property of the two-pointer technique.
+When slow and fast pointers meet, a cycle exists. By resetting slow to head and advancing both at speed 1, they meet at the cycle start. This works because the distance from head to cycle start equals the distance from the meeting point to the cycle start: a mathematical property of the two-pointer technique.
 
 ## Fisher-Yates Shuffle
 
@@ -231,7 +231,7 @@ def shuffle(arr):
     return arr
 ```
 
-Iterate backward through the array, swapping each element with a randomly selected element from the range \[0, i\]. This ensures uniform distribution—crucial for algorithms like randomized quicksort. Avoid naive shuffle approaches (randomly swapping any two elements) as they produce skewed distributions.
+Iterate backward through the array, swapping each element with a randomly selected element from the range \[0, i\]. This ensures uniform distribution: crucial for algorithms like randomized quicksort. Avoid naive shuffle approaches (randomly swapping any two elements) as they produce skewed distributions.
 
 ## String to Integer Conversion
 
@@ -362,7 +362,7 @@ def level_order_traversal(root):
     return result
 ```
 
-Track `level_size` before processing to avoid mixing levels—critical for correct grouping. Use `deque` from `collections` for O(1) popleft operations rather than lists.
+Track `level_size` before processing to avoid mixing levels: critical for correct grouping. Use `deque` from `collections` for O(1) popleft operations rather than lists.
 
 ## Reversing a Linked List
 
@@ -383,7 +383,7 @@ def reverse_linked_list(head):
     return prev
 ```
 
-Recursive variant (use cautiously—stack depth equals list length, risking stack overflow on large lists):
+Recursive variant (use cautiously: stack depth equals list length, risking stack overflow on large lists):
 
 ``` python
 def reverse_linked_list_recursive(head, prev=None):
@@ -396,4 +396,4 @@ def reverse_linked_list_recursive(head, prev=None):
     return reverse_linked_list_recursive(next_temp, head)
 ```
 
-Prefer the iterative approach for production code—constant O(1) stack space versus O(n) recursion depth. Test both with empty lists and single-node lists to verify boundary handling. The iterative version is also more readable and performs better on systems with stack size limits.
+Prefer the iterative approach for production code: constant O(1) stack space versus O(n) recursion depth. Test both with empty lists and single-node lists to verify boundary handling. The iterative version is also more readable and performs better on systems with stack size limits.

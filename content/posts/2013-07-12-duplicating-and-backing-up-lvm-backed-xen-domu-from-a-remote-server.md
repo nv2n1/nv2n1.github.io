@@ -41,7 +41,7 @@ virsh shutdown vm-10.0.0.123
 
 ### Step 2: Image the Snapshot
 
-Transfer the snapshot to a file using `dd`. Use a block size appropriate for your storage—4M is generally faster than 1K for modern disks:
+Transfer the snapshot to a file using `dd`. Use a block size appropriate for your storage: 4M is generally faster than 1K for modern disks:
 
 ``` bash
 dd if=/dev/vg_xen/vm-10.0.0.123-snapshot of=/home/backups/vm-10.0.0.123-lv.img bs=4M conv=fsync
@@ -67,7 +67,7 @@ Use `scp` or `rsync`. `rsync` is preferable for large files since it can resume 
 rsync -avz --progress /home/backups/vm-10.0.0.123-lv.img root@10.0.0.11:/home/backups/
 ```
 
-For encrypted, high-speed transfer over SSH, rsync uses the SSH cipher configured in your SSH config. Avoid manually specifying weak ciphers—modern SSH (OpenSSH 7.1+) disables arcfour by default for security reasons. Instead, ensure your SSH config uses reasonable defaults:
+For encrypted, high-speed transfer over SSH, rsync uses the SSH cipher configured in your SSH config. Avoid manually specifying weak ciphers: modern SSH (OpenSSH 7.1+) disables arcfour by default for security reasons. Instead, ensure your SSH config uses reasonable defaults:
 
 ``` bash
 # ~/.ssh/config

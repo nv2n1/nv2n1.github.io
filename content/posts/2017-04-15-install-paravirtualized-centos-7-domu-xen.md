@@ -14,7 +14,7 @@ Xen remains a solid hypervisor choice for specific workloads, though KVM dominat
 
 ## Why Paravirtualization Matters
 
-Paravirtualized guests communicate directly with the hypervisor rather than emulating hardware, resulting in better performance for I/O-bound workloads. Network throughput and disk I/O latency both improve significantly with paravirtualized drivers. However, this requires explicit kernel support and careful configuration during installation—the standard installation flow won’t work without additional parameters.
+Paravirtualized guests communicate directly with the hypervisor rather than emulating hardware, resulting in better performance for I/O-bound workloads. Network throughput and disk I/O latency both improve significantly with paravirtualized drivers. However, this requires explicit kernel support and careful configuration during installation: the standard installation flow won’t work without additional parameters.
 
 You trade flexibility (the guest must know it’s virtualized) for performance, which makes sense for dedicated server workloads but less so for general-purpose VMs.
 
@@ -46,12 +46,12 @@ Create `rocky9.cfg` in your VM directory with the installation parameters:
     ramdisk="/home/xen/rocky9/initrd.img"
     extra="ksdevice= inst.repo=https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/ ip=10.0.0.222::10.0.0.2:255.255.255.0:rocky9:eth0:none nameserver=8.8.8.8"
 
-The `extra` field is critical—it passes kernel arguments directly to the installer:
+The `extra` field is critical: it passes kernel arguments directly to the installer:
 
-- `ksdevice=` – Skips hardware probing for the kickstart device
-- `inst.repo=` – Points to the installation repository (must be accessible from your VM)
-- `ip=` – Format is `address::gateway:netmask:hostname:interface:autoconf`
-- `nameserver=` – DNS resolver for package downloads
+- `ksdevice=`: Skips hardware probing for the kickstart device
+- `inst.repo=`: Points to the installation repository (must be accessible from your VM)
+- `ip=`: Format is `address::gateway:netmask:hostname:interface:autoconf`
+- `nameserver=`: DNS resolver for package downloads
 
 Adjust the IP address, gateway, and netmask to match your network. For DHCP instead of static IP, use `ip=dhcp` and omit the explicit address parameters.
 
@@ -71,7 +71,7 @@ This allocates the file faster than `dd` on systems with sparse file support. Ve
 ls -lh /home/xen/rocky9/vmdisk0
 ```
 
-If you’re using LVM volumes instead of raw files, the configuration remains identical—just reference the logical volume path in the disk line:
+If you’re using LVM volumes instead of raw files, the configuration remains identical: just reference the logical volume path in the disk line:
 
     disk=['phy:/dev/vg0/rocky9,xvda,w']
 
@@ -85,7 +85,7 @@ xl create -c /home/xen/rocky9/rocky9.cfg
 
 The `-c` flag attaches the console so you can interact with the installer. Monitor package downloads and follow the standard Rocky Linux 9 installation prompts. Choose text mode if prompted by the graphical installer.
 
-Watch for network timeouts during package downloads—if the installer hangs, your bridge configuration is likely incorrect. Press Ctrl+Alt+F2 to drop to a shell and test connectivity:
+Watch for network timeouts during package downloads: if the installer hangs, your bridge configuration is likely incorrect. Press Ctrl+Alt+F2 to drop to a shell and test connectivity:
 
 ``` bash
 ip addr show
@@ -141,7 +141,7 @@ ip link show
 nmcli connection show
 ```
 
-Ensure the `ip=` parameter is syntactically correct—missing colons or incorrect netmask notation will silently fail. Test manually on a test guest to validate the network setup:
+Ensure the `ip=` parameter is syntactically correct: missing colons or incorrect netmask notation will silently fail. Test manually on a test guest to validate the network setup:
 
 ``` bash
 ip addr add 10.0.0.222/24 dev eth0

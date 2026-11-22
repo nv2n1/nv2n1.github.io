@@ -10,7 +10,7 @@ canonical: /hashing-library-for-c/
 url: /hashing-library-for-c/
 ---
 
-When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options—from POSIX standard library functions to specialized third-party libraries. The right choice depends on your dataset characteristics, memory constraints, and whether you need dynamic resizing.
+When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options: from POSIX standard library functions to specialized third-party libraries. The right choice depends on your dataset characteristics, memory constraints, and whether you need dynamic resizing.
 
 ## Standard Library: hsearch()
 

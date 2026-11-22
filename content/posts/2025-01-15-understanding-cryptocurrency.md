@@ -28,7 +28,7 @@ Early cryptocurrency adoption was primarily speculative. By 2026, the market has
 
 **Bitcoin (BTC)**: Primarily functions as a store of value and inflation hedge. Institutional holdings by corporations and some sovereign wealth funds have normalized its portfolio allocation role.
 
-**Smart Contract Platforms**: Ethereum, Solana, Polygon, and others provide the computational infrastructure for decentralized applications. Transaction costs, finality times, and throughput vary significantly between chains—Ethereum prioritizes security and decentralization, while Solana trades some decentralization for higher throughput.
+**Smart Contract Platforms**: Ethereum, Solana, Polygon, and others provide the computational infrastructure for decentralized applications. Transaction costs, finality times, and throughput vary significantly between chains: Ethereum prioritizes security and decentralization, while Solana trades some decentralization for higher throughput.
 
 **Stablecoins**: Cryptocurrencies pegged to fiat currencies (usually USD) through either collateral reserves, algorithmic mechanisms, or government backing. These serve as the primary medium of exchange within blockchain ecosystems.
 
@@ -52,7 +52,7 @@ This regulatory environment accelerated institutional participation. Bitcoin and
 
 ## Technical Fundamentals
 
-Blockchain networks function through consensus mechanisms. Proof of Work (Bitcoin) requires computational puzzle-solving to validate transactions—highly secure but energy-intensive. Proof of Stake (Ethereum post-2022) selects validators based on staked collateral, reducing energy consumption by 99%.
+Blockchain networks function through consensus mechanisms. Proof of Work (Bitcoin) requires computational puzzle-solving to validate transactions: highly secure but energy-intensive. Proof of Stake (Ethereum post-2022) selects validators based on staked collateral, reducing energy consumption by 99%.
 
 Transaction throughput varies dramatically. Bitcoin handles ~7 transactions per second; Ethereum handles 12-15; Solana claims 65,000. These differences drive where applications run and their transaction costs (measured in satoshis, wei, or other base units).
 

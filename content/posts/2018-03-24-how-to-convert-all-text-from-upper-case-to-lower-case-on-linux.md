@@ -22,7 +22,7 @@ echo "HELLO WORLD" | tr '[:upper:]' '[:lower:]'
 
 Output: `hello world`
 
-`tr` works character-by-character and is efficient for single-pass conversions. It’s ideal when you need maximum portability to older systems, but it doesn’t handle Unicode properly by default — it only processes ASCII ranges.
+`tr` works character-by-character and is efficient for single-pass conversions. It’s ideal when you need maximum portability to older systems, but it doesn’t handle Unicode properly by default: it only processes ASCII ranges.
 
 ## Using awk for inline processing
 

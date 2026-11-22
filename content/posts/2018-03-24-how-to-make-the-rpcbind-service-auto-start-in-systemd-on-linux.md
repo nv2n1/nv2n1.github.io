@@ -46,7 +46,7 @@ If `systemctl enable` doesn’t work or the service has dependency issues, you c
 systemctl add-wants multi-user.target rpcbind.service
 ```
 
-This is more forceful than `enable` — it creates the symlink even if the unit file has conditions or other restrictions that might prevent normal enablement. Check what was created:
+This is more forceful than `enable`: it creates the symlink even if the unit file has conditions or other restrictions that might prevent normal enablement. Check what was created:
 
 ``` bash
 ls -la /etc/systemd/system/multi-user.target.wants/ | grep rpcbind
@@ -110,7 +110,7 @@ ConditionVirtualization=
 Type=simple
 ```
 
-Save and exit — the file is written to `/etc/systemd/system/rpcbind.service.d/override.conf`. Reload and test:
+Save and exit: the file is written to `/etc/systemd/system/rpcbind.service.d/override.conf`. Reload and test:
 
 ``` bash
 systemctl daemon-reload
@@ -130,11 +130,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

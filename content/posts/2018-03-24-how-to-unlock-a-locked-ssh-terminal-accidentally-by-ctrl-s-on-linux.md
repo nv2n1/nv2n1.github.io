@@ -10,7 +10,7 @@ canonical: /how-to-unlock-a-locked-ssh-terminal-accidentally-by-ctrl-s-on-linux/
 url: /how-to-unlock-a-locked-ssh-terminal-accidentally-by-ctrl-s-on-linux/
 ---
 
-If you’ve accidentally frozen your SSH terminal with Ctrl+S, you’re experiencing flow control lock — a terminal feature that dates back to the era of slow serial connections. Your session isn’t actually hung; it’s just paused.
+If you’ve accidentally frozen your SSH terminal with Ctrl+S, you’re experiencing flow control lock: a terminal feature that dates back to the era of slow serial connections. Your session isn’t actually hung; it’s just paused.
 
 ## The Quick Fix
 
@@ -20,7 +20,7 @@ That’s it. Your session will resume and you can continue working.
 
 ## Why This Happens
 
-Ctrl+S triggers XON/XOFF flow control, which tells the terminal to stop sending output. This was useful when transmitting data over slow serial lines, but it persists in modern terminals for backward compatibility. If you accidentally press Ctrl+S, all output stops — though your session is still active.
+Ctrl+S triggers XON/XOFF flow control, which tells the terminal to stop sending output. This was useful when transmitting data over slow serial lines, but it persists in modern terminals for backward compatibility. If you accidentally press Ctrl+S, all output stops, though your session is still active.
 
 ## How to Prevent Accidental Freezes
 
@@ -73,10 +73,10 @@ Look for `ixon` (output flow control) and `ixoff` (input flow control) in the ou
 
 ## Related Commands
 
-- `stty` — View and modify terminal settings
-- `stty -ixon` — Disable output flow control
-- `stty -ixoff` — Disable input flow control
-- `stty -ixon -ixoff` — Disable both directions
+- `stty`: View and modify terminal settings
+- `stty -ixon`: Disable output flow control
+- `stty -ixoff`: Disable input flow control
+- `stty -ixon -ixoff`: Disable both directions
 
 Most sysadmins disable this feature entirely since flow control isn’t needed over modern networks, but keep it in mind if you’re working on legacy systems or using serial connections.
 
@@ -100,7 +100,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -118,7 +118,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

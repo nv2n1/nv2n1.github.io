@@ -20,7 +20,7 @@ If you’re encountering this message in 2026, you’re likely:
 
 ## Why Flash Is Gone
 
-Adobe’s decision to sunset Flash was industry-wide. Every modern browser — Chrome, Firefox, Safari, Edge — dropped Flash support years ago. There is no legitimate way to re-enable it, nor should you attempt to. Flash executables represent a massive security liability with a long history of critical vulnerabilities.
+Adobe’s decision to sunset Flash was industry-wide. Every modern browser (Chrome, Firefox, Safari, Edge) dropped Flash support years ago. There is no legitimate way to re-enable it, nor should you attempt to. Flash executables represent a massive security liability with a long history of critical vulnerabilities.
 
 ## What You Should Do Instead
 
@@ -43,7 +43,7 @@ Replace Flash content with modern web standards:
 
 Isolate the machine from the internet. If Flash content is business-critical:
 
-- Run it in a containerized environment (Docker) with an old browser image — but only on an air-gapped network
+- Run it in a containerized environment (Docker) with an old browser image, but only on an air-gapped network
 - Consider proprietary Flash player archives (preserved by enthusiasts), but understand the security implications are severe
 - Use emulation tools like Ruffle (an open-source Flash runtime written in Rust), though compatibility is incomplete
 
@@ -82,7 +82,7 @@ sudo dnf install ruffle
 # It works as a browser extension or standalone player
 ```
 
-Ruffle is incomplete — many Flash features won’t work — but it’s better than nothing for simple content, and it doesn’t create the security nightmare that real Flash would.
+Ruffle is incomplete (many Flash features won’t work), but it’s better than nothing for simple content, and it doesn’t create the security nightmare that real Flash would.
 
 ## The Bottom Line
 

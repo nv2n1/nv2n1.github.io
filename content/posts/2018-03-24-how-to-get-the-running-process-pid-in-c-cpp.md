@@ -39,7 +39,7 @@ The `pid_t` type is a signed integer (typically `int` on modern systems) that ho
 
 ## Getting the parent process ID
 
-Use `getppid()` to retrieve your parent’s PID — useful when you need to signal or track the calling process:
+Use `getppid()` to retrieve your parent’s PID: useful when you need to signal or track the calling process:
 
 ``` c
 #include <unistd.h>
@@ -139,7 +139,7 @@ int main() {
 
 ## Cross-platform considerations
 
-On Linux and Unix systems, `getpid()` is always available and reliable. Windows doesn’t have POSIX parity here — `GetCurrentProcessId()` from `windows.h` is the equivalent. For truly cross-platform code, consider wrapping the platform-specific calls or using a library like Boost.Process.
+On Linux and Unix systems, `getpid()` is always available and reliable. Windows doesn’t have POSIX parity here: `GetCurrentProcessId()` from `windows.h` is the equivalent. For truly cross-platform code, consider wrapping the platform-specific calls or using a library like Boost.Process.
 
 The PID value wraps around after reaching a system-defined maximum (typically 2^22 on Linux), so don’t rely on PIDs being globally unique over the lifetime of the system.
 

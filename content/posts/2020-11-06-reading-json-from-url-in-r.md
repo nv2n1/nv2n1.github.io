@@ -35,7 +35,7 @@ btc <- fromJSON("https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1
 str(btc)
 ```
 
-The function automatically converts the JSON response into an R data structure—typically a list or data frame depending on the API response format.
+The function automatically converts the JSON response into an R data structure: typically a list or data frame depending on the API response format.
 
 ### Working with the returned data
 
@@ -130,9 +130,9 @@ if (!is.null(response$error)) {
 
 For specific use cases, consider these packages:
 
-- **`httr2`** – Better control over HTTP headers, authentication, and requests
-- **`arrow`** – Superior performance for large JSON datasets
-- **`tidyjson`** – Easier wrangling of deeply nested JSON structures
+- **`httr2`**: Better control over HTTP headers, authentication, and requests
+- **`arrow`**: Superior performance for large JSON datasets
+- **`tidyjson`**: Easier wrangling of deeply nested JSON structures
 
 ``` r
 library(httr2)

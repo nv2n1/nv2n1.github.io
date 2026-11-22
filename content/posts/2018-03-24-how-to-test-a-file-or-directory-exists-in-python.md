@@ -123,7 +123,7 @@ print(path.readlink())    # Shows the target path
 
 ### Which should I use?
 
-Use `pathlib` for new code — it’s more readable, handles platform differences automatically, and integrates better with modern Python. Use `os.path` only when maintaining legacy code or when you specifically need its behavior.
+Use `pathlib` for new code: it’s more readable, handles platform differences automatically, and integrates better with modern Python. Use `os.path` only when maintaining legacy code or when you specifically need its behavior.
 
 ## 2026 Best Practices and Advanced Techniques
 

@@ -10,7 +10,7 @@ canonical: /minimizes-thunderbird-windows-into-the-system-tray/
 url: /minimizes-thunderbird-windows-into-the-system-tray/
 ---
 
-Keeping Thunderbird running constantly makes sense for monitoring incoming mail, but leaving it on the taskbar consumes screen real estate. System tray integration is cleaner—minimize to a small icon and optionally display unread message counts.
+Keeping Thunderbird running constantly makes sense for monitoring incoming mail, but leaving it on the taskbar consumes screen real estate. System tray integration is cleaner: minimize to a small icon and optionally display unread message counts.
 
 Thunderbird’s addon ecosystem provides platform-specific solutions for this. Note that addon availability and compatibility can vary; check the Mozilla Addons site for current status and reviews before installing.
 
@@ -47,12 +47,12 @@ Newer Thunderbird versions include some minimize-to-tray functionality natively 
 3.  Look for options under “Thunderbird Start” or “On Startup” regarding minimize behavior
 4.  Some themes and configurations support tray integration without addons
 
-Additionally, your OS may handle this automatically—check your system settings for minimize behavior or tray management tools.
+Additionally, your OS may handle this automatically: check your system settings for minimize behavior or tray management tools.
 
 ## Addon Compatibility Notes
 
 - Thunderbird addons are versioned; verify compatibility with your current Thunderbird version before installing
-- The Mozilla Addons site filters results by version—install directly from there rather than third-party sources
+- The Mozilla Addons site filters results by version: install directly from there rather than third-party sources
 - If an addon stops working after an update, check the reviews and discussion tabs for user workarounds or alternatives
 - Some minimize-to-tray functionality may require restarting Thunderbird to take effect
 

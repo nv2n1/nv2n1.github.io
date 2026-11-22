@@ -12,7 +12,7 @@ url: /convert-string-to-int-and-reverse/
 
 Converting strings to integers is a fundamental operation in C++, but the method you choose affects both code clarity and performance. Here are the four main approaches, ranked by use case.
 
-## std::stoi() — The Default Choice
+## std::stoi(): The Default Choice
 
 `std::stoi()` is the standard C++11 method for most situations. It’s exception-based, handles whitespace automatically, and works with custom number bases.
 
@@ -65,7 +65,7 @@ int number = std::stoi(hexStr, nullptr, 16);  // Result: 255
 
 Use `std::stoi()` when code clarity matters more than raw performance, or when exception-based error handling fits your control flow.
 
-## std::from_chars() — Maximum Performance (C++17+)
+## std::from_chars(): Maximum Performance (C++17+)
 
 For performance-critical code, `std::from_chars()` provides low-overhead conversion without exceptions or global state manipulation:
 
@@ -96,7 +96,7 @@ int main()
 
 **Advantages:**
 
-- No exception overhead — ideal for tight parsing loops
+- No exception overhead: ideal for tight parsing loops
 - Returns both conversion status and pointer to first unconverted character
 - Supports custom bases via optional parameter
 - Minimal allocations or state changes
@@ -116,7 +116,7 @@ if (ec == std::errc()) {
 
 Choose `std::from_chars()` when parsing large datasets or in performance-sensitive code paths. It’s the standard choice for new C++17+ projects.
 
-## std::istringstream — Stream-Based Parsing
+## std::istringstream: Stream-Based Parsing
 
 String streams treat strings as input streams, allowing familiar `>>` syntax:
 
@@ -162,7 +162,7 @@ if (iss >> a >> b >> c && iss.eof()) {
 
 Use `std::istringstream` when parsing space-separated or structured input formats, or when working with existing stream-based code.
 
-## strtol() — C Interoperability
+## strtol(): C Interoperability
 
 For C library compatibility or working in constrained environments, `strtol()` provides error reporting via `errno`:
 
@@ -206,7 +206,7 @@ int main()
 - Check `endptr` to detect failed conversions
 - Returns `long`, requiring explicit cast to `int`
 - Risk of overflow when casting `long` to `int`
-- Avoid `atoi()` — it cannot distinguish between zero and conversion failure
+- Avoid `atoi()`: it cannot distinguish between zero and conversion failure
 
 Use `strtol()` only when interfacing with C code or legacy systems.
 

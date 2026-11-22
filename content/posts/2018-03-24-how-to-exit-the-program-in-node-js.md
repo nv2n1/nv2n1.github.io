@@ -10,7 +10,7 @@ canonical: /how-to-exit-the-program-in-node-js/
 url: /how-to-exit-the-program-in-node-js/
 ---
 
-When your Node.js application encounters a fatal error or needs to terminate, you need a reliable way to shut it down. Understanding how to exit gracefully—or forcefully when necessary—is essential for production applications.
+When your Node.js application encounters a fatal error or needs to terminate, you need a reliable way to shut it down. Understanding how to exit gracefully (or forcefully when necessary) is essential for production applications.
 
 ## Using process.exit()
 
@@ -33,11 +33,11 @@ Exit codes are standard across Unix-like systems: `0` indicates success, while a
 
 Common exit codes in Node.js:
 
-- `0` — successful termination
-- `1` — general error
-- `2` — misuse of shell command
-- `130` — process killed by Ctrl+C (SIGINT)
-- `143` — process terminated by SIGTERM
+- `0`: successful termination
+- `1`: general error
+- `2`: misuse of shell command
+- `130`: process killed by Ctrl+C (SIGINT)
+- `143`: process terminated by SIGTERM
 
 If you don’t specify a code, `process.exit()` defaults to `0`.
 
@@ -126,7 +126,7 @@ Use `process.exit()` only when:
 - You’ve already cleaned up resources (closed connections, files, etc.)
 - Running in a container or with a process manager that can restart the application
 
-Avoid calling `process.exit()` in libraries or modules—let the application decide when to terminate. Process managers like PM2, systemd, or Docker handle restarts automatically, so exiting with the correct code is more important than trying to recover within the process.
+Avoid calling `process.exit()` in libraries or modules: let the application decide when to terminate. Process managers like PM2, systemd, or Docker handle restarts automatically, so exiting with the correct code is more important than trying to recover within the process.
 
 ## 2026 Best Practices and Advanced Techniques
 

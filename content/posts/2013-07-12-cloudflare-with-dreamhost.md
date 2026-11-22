@@ -10,7 +10,7 @@ canonical: /cloudflare-with-dreamhost/
 url: /cloudflare-with-dreamhost/
 ---
 
-Cloudflare is a widely-used CDN and DDoS mitigation service that caches content globally and improves performance. DreamHost offers native integration, though understanding the DNS setup—particularly for apex domains—is critical for avoiding routing issues.
+Cloudflare is a widely-used CDN and DDoS mitigation service that caches content globally and improves performance. DreamHost offers native integration, though understanding the DNS setup (particularly for apex domains) is critical for avoiding routing issues.
 
 ## Quick Setup Through DreamHost Control Panel
 

@@ -27,14 +27,14 @@ Use `<source>` tags instead of the `src` attribute on the `<video>` element itse
 
 ## Common Attributes
 
-- **controls** — displays play/pause, volume, and progress bar
-- **autoplay** — starts playing automatically (requires `muted` attribute to work without user interaction)
-- **muted** — mutes audio by default
-- **loop** — restarts the video when it ends
-- **poster** — specifies a thumbnail image shown before playback starts
-- **width** and **height** — set dimensions (aspect ratio is preserved)
-- **preload** — accepts `"none"`, `"metadata"`, or `"auto"` to control what loads before playback
-- **playsinline** — plays inline on mobile devices instead of fullscreen (important for iOS)
+- **controls**: displays play/pause, volume, and progress bar
+- **autoplay**: starts playing automatically (requires `muted` attribute to work without user interaction)
+- **muted**: mutes audio by default
+- **loop**: restarts the video when it ends
+- **poster**: specifies a thumbnail image shown before playback starts
+- **width** and **height**: set dimensions (aspect ratio is preserved)
+- **preload**: accepts `"none"`, `"metadata"`, or `"auto"` to control what loads before playback
+- **playsinline**: plays inline on mobile devices instead of fullscreen (important for iOS)
 
 ## Responsive Video Implementation
 
@@ -180,7 +180,7 @@ The `<track>` element references WebVTT caption files, improving accessibility f
 
 ## Common Issues and Solutions
 
-**Video doesn’t autoplay:** Verify the `muted` attribute is present. Check browser autoplay policies—some browsers require user interaction or specific user settings.
+**Video doesn’t autoplay:** Verify the `muted` attribute is present. Check browser autoplay policies: some browsers require user interaction or specific user settings.
 
 **Poor mobile performance:** Add `playsinline` to prevent fullscreen behavior on iOS, which can improve perceived performance.
 

@@ -66,7 +66,7 @@ Or log them out if they’re connected via SSH or another session.
 find / -uid 1000 -exec chown 2000 {} \;
 ```
 
-This is critical—without it, the user will lose access to their home directory and other files.
+This is critical: without it, the user will lose access to their home directory and other files.
 
 A safer approach using `find` with `-exec`:
 

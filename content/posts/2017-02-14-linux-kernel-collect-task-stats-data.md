@@ -49,7 +49,7 @@ long __sched io_schedule_timeout(long timeout)
 }
 ```
 
-The delay calculation — the time from `delayacct_blkio_start()` to `delayacct_blkio_end()` — is stored in the task’s `delays->blkio_delay` field. The kernel maintains this in nanosecond precision internally.
+The delay calculation (the time from `delayacct_blkio_start()` to `delayacct_blkio_end()`) is stored in the task’s `delays->blkio_delay` field. The kernel maintains this in nanosecond precision internally.
 
 ## Accumulating Delays into blkio_delay_total
 
@@ -72,10 +72,10 @@ This code adds the current `blkio_delay` to the running total. The ternary opera
 
 The kernel tracks several types of delays using the same instrumentation pattern:
 
-- **cpu_delay_total** — time waiting for CPU scheduling (measured during context switch path)
-- **blkio_delay_total** — time waiting for block I/O (measured in `io_schedule` paths)
-- **swapin_delay_total** — time waiting for swapped-in pages (measured in page fault handler)
-- **freepages_delay_total** — time waiting for memory reclamation during page allocation
+- **cpu_delay_total**: time waiting for CPU scheduling (measured during context switch path)
+- **blkio_delay_total**: time waiting for block I/O (measured in `io_schedule` paths)
+- **swapin_delay_total**: time waiting for swapped-in pages (measured in page fault handler)
+- **freepages_delay_total**: time waiting for memory reclamation during page allocation
 
 Each follows the same pattern: mark start time when entering the wait path, calculate delta when resuming, and accumulate into the task’s delay counters.
 
@@ -112,17 +112,17 @@ You can also access this programmatically via the netlink taskstats interface. F
 
 The kernel measures delays using `ktime_get_ns()`, providing nanosecond precision at the API level. However, several factors affect measurement accuracy and usefulness:
 
-**Timer Source Granularity** — Resolution depends on the system’s timer source. Modern systems use TSC (Time Stamp Counter) with NTP correction or HPET (High Precision Event Timer). Virtualized systems may have coarser granularity, potentially missing sub-millisecond delays. Check your system with:
+**Timer Source Granularity**: Resolution depends on the system’s timer source. Modern systems use TSC (Time Stamp Counter) with NTP correction or HPET (High Precision Event Timer). Virtualized systems may have coarser granularity, potentially missing sub-millisecond delays. Check your system with:
 
 ``` bash
 cat /sys/devices/system/clocksource/clocksource0/current_clocksource
 ```
 
-**Overhead Not Included** — The kernel only measures the actual I/O wait duration, not the time spent in the scheduler before yielding or the latency to reach the I/O path. Context switch overhead is separate from I/O delay.
+**Overhead Not Included**: The kernel only measures the actual I/O wait duration, not the time spent in the scheduler before yielding or the latency to reach the I/O path. Context switch overhead is separate from I/O delay.
 
-**Per-I/O Granularity** — Each `delayacct_blkio_end()` call adds to the total, so you see cumulative delays, not per-request breakdowns. For individual I/O tracing, use `blktrace` or `iotrace`.
+**Per-I/O Granularity**: Each `delayacct_blkio_end()` call adds to the total, so you see cumulative delays, not per-request breakdowns. For individual I/O tracing, use `blktrace` or `iotrace`.
 
-**Sampling Blind Spots** — The kernel only tracks explicit I/O waits via `io_schedule()` paths. Asynchronous I/O, buffered reads that hit cache, and memory-mapped file accesses may not register as I/O delays.
+**Sampling Blind Spots**: The kernel only tracks explicit I/O waits via `io_schedule()` paths. Asynchronous I/O, buffered reads that hit cache, and memory-mapped file accesses may not register as I/O delays.
 
 ## When to Use taskstats
 
@@ -135,10 +135,10 @@ Taskstats is most useful when you need to:
 
 For workload analysis, combine taskstats with complementary tools:
 
-- **iotop** — real-time I/O usage per process (uses `/proc/<pid>/io`)
-- **iostat** — per-device I/O statistics
-- **bpftrace / eBPF** — trace individual I/O requests and latencies
-- **perf** — CPU sampling and event tracing
+- **iotop**: real-time I/O usage per process (uses `/proc/<pid>/io`)
+- **iostat**: per-device I/O statistics
+- **bpftrace / eBPF**: trace individual I/O requests and latencies
+- **perf**: CPU sampling and event tracing
 
 ## Example: Monitoring a Batch Job
 

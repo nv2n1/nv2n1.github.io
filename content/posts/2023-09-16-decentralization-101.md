@@ -10,7 +10,7 @@ canonical: /decentralization-101/
 url: /decentralization-101/
 ---
 
-Decentralization is the transfer of control and decision-making from a centralized entity—typically a company, government, or institution—to a distributed network of participants. In practice, this means no single actor can unilaterally control the system, change its rules, or shut it down.
+Decentralization is the transfer of control and decision-making from a centralized entity (typically a company, government, or institution) to a distributed network of participants. In practice, this means no single actor can unilaterally control the system, change its rules, or shut it down.
 
 ## The Three Dimensions of Decentralization
 
@@ -45,6 +45,6 @@ The trend now favors **Immutable Core Logic** (removing upgrade capabilities fro
 
 **Sovereignty**: Participants own and control their assets directly. No counterparty can freeze, seize, or manipulate accounts without consensus from the network.
 
-These properties enable use cases impossible in centralized systems—permissionless transactions, censorship-resistant applications, and systems that operate without requiring institutional gatekeepers.
+These properties enable use cases impossible in centralized systems: permissionless transactions, censorship-resistant applications, and systems that operate without requiring institutional gatekeepers.
 
 The practical reality: true decentralization requires effort across all three dimensions and constant vigilance against gradual recentralization. Most systems occupy a spectrum rather than being purely decentralized or centralized.

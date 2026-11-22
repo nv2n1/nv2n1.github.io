@@ -20,7 +20,7 @@ The special variable `$$` expands to the PID of the current shell process:
 echo $$
 ```
 
-This returns a single integer — the PID of your current Bash instance. Use it in scripts to identify which process is running:
+This returns a single integer: the PID of your current Bash instance. Use it in scripts to identify which process is running:
 
 ``` bash
 #!/bin/bash
@@ -95,8 +95,8 @@ done
 
 ## Related process variables
 
-- `$PPID` — the parent process ID (the PID of the shell that launched your script)
-- `$BASHPID` — the PID of the current Bash shell (differs from `$$` in subshells)
+- `$PPID`: the parent process ID (the PID of the shell that launched your script)
+- `$BASHPID`: the PID of the current Bash shell (differs from `$$` in subshells)
 
 In subshells, `$$` may return the parent’s PID, but `$BASHPID` always gives the actual subshell’s PID:
 

@@ -85,7 +85,7 @@ You can also edit the configuration files directly in `~/.config/cinnamon-sessio
 
 ### Switching Back to GNOME or Another Desktop
 
-If you decide to switch to GNOME or another desktop environment, you don’t need to uninstall Cinnamon—just select a different session at the login screen. To remove Cinnamon entirely:
+If you decide to switch to GNOME or another desktop environment, you don’t need to uninstall Cinnamon: just select a different session at the login screen. To remove Cinnamon entirely:
 
 ``` bash
 sudo dnf groupremove 'Cinnamon Desktop'
@@ -109,11 +109,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

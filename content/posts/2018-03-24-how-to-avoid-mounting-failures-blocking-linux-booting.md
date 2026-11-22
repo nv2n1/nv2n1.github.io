@@ -10,7 +10,7 @@ canonical: /how-to-avoid-mounting-failures-blocking-linux-booting/
 url: /how-to-avoid-mounting-failures-blocking-linux-booting/
 ---
 
-When a filesystem listed in `/etc/fstab` fails to mount during boot, the system can hang or drop to an emergency shell, preventing normal startup. This happens because the kernel treats all mount entries equally by default. Non-critical filesystems—network shares, external drives, or optional data partitions—shouldn’t block your entire system from booting.
+When a filesystem listed in `/etc/fstab` fails to mount during boot, the system can hang or drop to an emergency shell, preventing normal startup. This happens because the kernel treats all mount entries equally by default. Non-critical filesystems (network shares, external drives, or optional data partitions) shouldn’t block your entire system from booting.
 
 ## Understanding fstab mount options
 

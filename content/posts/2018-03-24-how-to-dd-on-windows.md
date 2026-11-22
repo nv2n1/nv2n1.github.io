@@ -40,7 +40,7 @@ dd if=/mnt/c/backups/image.iso of=/dev/sdb bs=4M status=progress
 lsblk
 ```
 
-This shows all connected block devices with their sizes and mount points — essential for confirming you’re targeting the correct drive.
+This shows all connected block devices with their sizes and mount points: essential for confirming you’re targeting the correct drive.
 
 ## Cygwin: The Compatibility Layer
 
@@ -66,13 +66,13 @@ dd if=/dev/sda of=backup.img bs=4M status=progress
 
 If you want to avoid installing additional environments:
 
-**physdisk** — Command-line tool for raw disk access. Syntax differs from dd, making it less intuitive for users familiar with Linux utilities.
+**physdisk**: Command-line tool for raw disk access. Syntax differs from dd, making it less intuitive for users familiar with Linux utilities.
 
-**Rufus** — GUI tool specifically designed for writing ISO images to USB drives. Fast setup, no command line required, ideal for simple image writing tasks.
+**Rufus**: GUI tool specifically designed for writing ISO images to USB drives. Fast setup, no command line required, ideal for simple image writing tasks.
 
-**Win32 Disk Imager** — Another GUI option for writing image files to USB drives.
+**Win32 Disk Imager**: Another GUI option for writing image files to USB drives.
 
-**PowerShell with .NET** — You can write disk imaging scripts using `System.IO.FileStream`, but this is verbose and requires significant code:
+**PowerShell with .NET**: You can write disk imaging scripts using `System.IO.FileStream`, but this is verbose and requires significant code:
 
 ``` powershell
 $source = "C:\backups\image.iso"
@@ -117,7 +117,7 @@ dd is dangerous. It operates at the block device level and has no confirmation p
 
 **Before executing any dd command:**
 
-1.  **Verify the target device** — Use `lsblk` (WSL2/Cygwin) or `Get-Disk` (PowerShell) to list all devices and confirm sizes:
+1.  **Verify the target device**: Use `lsblk` (WSL2/Cygwin) or `Get-Disk` (PowerShell) to list all devices and confirm sizes:
 
     ``` bash
     lsblk
@@ -129,14 +129,14 @@ dd is dangerous. It operates at the block device level and has no confirmation p
     Get-Disk | Select-Object Number,Size,FriendlyName
     ```
 
-2.  **Double-check the output file path** — Confirm `of=` points to the correct device. Device identifiers can shift if you plug in USB drives in different orders.
+2.  **Double-check the output file path**: Confirm `of=` points to the correct device. Device identifiers can shift if you plug in USB drives in different orders.
 
-3.  **Use status=progress** — This flag provides real-time progress updates and confirms the operation is executing:
+3.  **Use status=progress**: This flag provides real-time progress updates and confirms the operation is executing:
 
     ``` bash
     dd if=source.iso of=/dev/sdb bs=4M status=progress
     ```
 
-4.  **Ensure proper permissions** — Both WSL2 and Cygwin require Administrator/root access. Running without proper elevation will either fail silently or produce incomplete writes.
+4.  **Ensure proper permissions**: Both WSL2 and Cygwin require Administrator/root access. Running without proper elevation will either fail silently or produce incomplete writes.
 
-5.  **Test with small files first** — If you’re unfamiliar with dd on your setup, create a test file and write it to a USB drive you don’t need, then verify the output with `hexdump` or similar tools before working with critical backups.
+5.  **Test with small files first**: If you’re unfamiliar with dd on your setup, create a test file and write it to a USB drive you don’t need, then verify the output with `hexdump` or similar tools before working with critical backups.

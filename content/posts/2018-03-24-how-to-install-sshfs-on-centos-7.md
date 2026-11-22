@@ -55,11 +55,11 @@ sshfs#user@remote-host:/path/to/remote  /mnt/remote  fuse  defaults,allow_other,
 
 Key fstab options:
 
-- `allow_other` — Allow other users to access the mount
-- `reconnect` — Automatically reconnect if the connection drops
-- `identityFile` — Path to SSH private key for authentication
-- `ServerAliveInterval=15` — Keep the connection alive
-- `ServerAliveCountMax=3` — Number of keepalive failures before disconnect
+- `allow_other`: Allow other users to access the mount
+- `reconnect`: Automatically reconnect if the connection drops
+- `identityFile`: Path to SSH private key for authentication
+- `ServerAliveInterval=15`: Keep the connection alive
+- `ServerAliveCountMax=3`: Number of keepalive failures before disconnect
 
 ## Performance Tuning
 
@@ -106,9 +106,9 @@ sshfs user@remote:/data /mnt/remote
 
 ## SSHFS vs NFS vs Samba
 
-- **SSHFS** — Zero server config, encrypted, slower. Best for occasional remote access.
-- **NFS** — Fastest, no encryption overhead. Best for trusted LAN environments.
-- **Samba/SMB** — Good Windows compatibility, moderate speed. Best for mixed OS environments.
+- **SSHFS**: Zero server config, encrypted, slower. Best for occasional remote access.
+- **NFS**: Fastest, no encryption overhead. Best for trusted LAN environments.
+- **Samba/SMB**: Good Windows compatibility, moderate speed. Best for mixed OS environments.
 
 SSHFS is ideal when you need secure file access to a remote server without setting up NFS or Samba. Any server with SSH running is immediately accessible.
 
@@ -129,11 +129,11 @@ For fstab mounts, key-based authentication is essential since interactive passwo
 
 ## Quick Reference
 
-- `sshfs user@host:/remote /local` — Mount remote directory
-- `fusermount -u /local` — Unmount
-- `-o reconnect` — Auto-reconnect on disconnect
-- `-C` — Enable compression
-- `-o allow_other` — Allow other users to access
+- `sshfs user@host:/remote /local`: Mount remote directory
+- `fusermount -u /local`: Unmount
+- `-o reconnect`: Auto-reconnect on disconnect
+- `-C`: Enable compression
+- `-o allow_other`: Allow other users to access
 
 ## SSHFS for Development Workflows
 
@@ -160,16 +160,16 @@ However, SSHFS is not ideal for heavy I/O workloads like compilation or large gi
 
 ## Alternatives to SSHFS
 
-**rclone mount** — Supports many cloud storage backends with FUSE:
+**rclone mount**: Supports many cloud storage backends with FUSE:
 
 ```wp-block-code
 rclone mount remote:bucket /mnt/cloud
 ```
 
-**s3fs** — Mount S3-compatible buckets:
+**s3fs**: Mount S3-compatible buckets:
 
 ```wp-block-code
 s3fs mybucket /mnt/s3 -o passwd_file=$HOME/.passwd-s3fs
 ```
 
-**goofys** — High-performance S3 mounting optimized for speed.
+**goofys**: High-performance S3 mounting optimized for speed.

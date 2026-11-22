@@ -28,15 +28,15 @@ The header file displays above the file listing, and the footer displays below i
 
 ## Configuration Directives Explained
 
-**Options +Indexes** — enables directory listing. Use `-Indexes` to disable it.
+**Options +Indexes**: enables directory listing. Use `-Indexes` to disable it.
 
 **IndexOptions** controls appearance:
 
-- `FancyIndexing` — enables column headers and file type icons
-- `VersionSort` — sorts filenames naturally (1, 2, 10 instead of 1, 10, 2)
-- `NameWidth=*` — auto-sizes the filename column
-- `HTMLTable` — renders listings as an HTML table for better styling
-- `Charset=UTF-8` — sets character encoding
+- `FancyIndexing`: enables column headers and file type icons
+- `VersionSort`: sorts filenames naturally (1, 2, 10 instead of 1, 10, 2)
+- `NameWidth=*`: auto-sizes the filename column
+- `HTMLTable`: renders listings as an HTML table for better styling
+- `Charset=UTF-8`: sets character encoding
 
 **HeaderName** specifies the header file. Apache searches for `.header.html`, `header.html`, or `HEADER.HTML` in order. Using `/header.html` forces it to look in the document root.
 
@@ -46,7 +46,7 @@ The header file displays above the file listing, and the footer displays below i
 
 ## Creating Header and Footer Files
 
-Create `header.html` and `footer.html` in your document root. Do **not** include `<html>` or `<body>` tags — Apache wraps the directory listing between them automatically.
+Create `header.html` and `footer.html` in your document root. Do **not** include `<html>` or `<body>` tags: Apache wraps the directory listing between them automatically.
 
 ``` html
 <div class="header" style="background: #f0f0f0; padding: 15px; border-radius: 4px; margin-bottom: 20px;">

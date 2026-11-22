@@ -10,7 +10,7 @@ canonical: /understanding-the-use-of-stdany-in-c-with-an-example/
 url: /understanding-the-use-of-stdany-in-c-with-an-example/
 ---
 
-`std::any` (C++17) is a type-safe container for single values of any type. It lets you store an `int`, string, custom struct, or vector in the same variable without losing type information—unlike `void*` pointers, which are inherently unsafe.
+`std::any` (C++17) is a type-safe container for single values of any type. It lets you store an `int`, string, custom struct, or vector in the same variable without losing type information: unlike `void*` pointers, which are inherently unsafe.
 
 ## How It Works
 

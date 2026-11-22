@@ -10,7 +10,7 @@ canonical: /playing-youtube-video-background-iphone/
 url: /playing-youtube-video-background-iphone/
 ---
 
-Playing YouTube audio in the background on iPhone is restricted by design—the official YouTube app only supports it with a Premium subscription. Here are the legitimate approaches and their tradeoffs.
+Playing YouTube audio in the background on iPhone is restricted by design: the official YouTube app only supports it with a Premium subscription. Here are the legitimate approaches and their tradeoffs.
 
 ## Browser Method (Safari/Firefox)
 
@@ -55,7 +55,7 @@ ffmpeg -i video.m4a -q:a 0 -map a output.mp3
 
 ## Podcast Apps as a Workaround
 
-If you subscribe to YouTube channels that publish content elsewhere, some distribute RSS feeds. Apps like AntennaPod or Podcast Addict let you subscribe directly, bypassing YouTube’s app entirely. This only works for creators offering feeds—most don’t.
+If you subscribe to YouTube channels that publish content elsewhere, some distribute RSS feeds. Apps like AntennaPod or Podcast Addict let you subscribe directly, bypassing YouTube’s app entirely. This only works for creators offering feeds: most don’t.
 
 ## Control Center Playback Controls
 

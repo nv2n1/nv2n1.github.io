@@ -10,7 +10,7 @@ canonical: /how-to-force-ssh-client-to-authenticate-using-password-on-linux/
 url: /how-to-force-ssh-client-to-authenticate-using-password-on-linux/
 ---
 
-When you have SSH key-based authentication set up, the client will prefer it by default. This can make it difficult to test whether password authentication is working—especially after changing a password or troubleshooting login issues.
+When you have SSH key-based authentication set up, the client will prefer it by default. This can make it difficult to test whether password authentication is working, especially after changing a password or troubleshooting login issues.
 
 ## Force password-only authentication
 
@@ -63,11 +63,11 @@ Then simply `ssh testserver` will use password auth.
 
 SSH supports several authentication mechanisms, tried in the order specified by `PreferredAuthentications`:
 
-- **publickey** — public/private key pairs
-- **password** — plaintext password (over encrypted channel)
-- **keyboard-interactive** — challenge-response (includes TOTP, 2FA)
-- **gssapi-with-mic** — Kerberos/GSSAPI authentication
-- **hostbased** — host-based authentication (rarely used)
+- **publickey**: public/private key pairs
+- **password**: plaintext password (over encrypted channel)
+- **keyboard-interactive**: challenge-response (includes TOTP, 2FA)
+- **gssapi-with-mic**: Kerberos/GSSAPI authentication
+- **hostbased**: host-based authentication (rarely used)
 
 You can check what methods a server accepts by attempting connection and observing the output, or examine `/etc/ssh/sshd_config` on the server if you have access.
 
@@ -85,12 +85,12 @@ The `-vv` flag shows detailed connection information, including which authentica
 
 When troubleshooting network connectivity:
 
-- ping host – Test basic connectivity
-- traceroute host – Trace the path packets take
-- ss -tulpn – Show listening ports
-- ip addr show – Display network interfaces
-- nmcli device status – NetworkManager device status
-- curl -I url – Check HTTP headers
+- ping host: Test basic connectivity
+- traceroute host: Trace the path packets take
+- ss -tulpn: Show listening ports
+- ip addr show: Display network interfaces
+- nmcli device status: NetworkManager device status
+- curl -I url: Check HTTP headers
 
 ## Quick Reference
 

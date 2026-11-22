@@ -10,7 +10,7 @@ canonical: /how-to-get-the-epoch-timestamp-in-c/
 url: /how-to-get-the-epoch-timestamp-in-c/
 ---
 
-The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access — whether for logging, scheduling, or benchmarking.
+The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access, whether for logging, scheduling, or benchmarking.
 
 ## Basic Second-Level Precision
 
@@ -23,7 +23,7 @@ time_t now = time(NULL);
 printf("Current epoch: %ld\n", (long)now);
 ```
 
-This returns seconds since epoch as a `time_t`. It’s portable, lightweight, and fine for most applications. However, `time()` has resolution limitations — typically one second — and calling it repeatedly can be slow on some systems.
+This returns seconds since epoch as a `time_t`. It’s portable, lightweight, and fine for most applications. However, `time()` has resolution limitations (typically one second) and calling it repeatedly can be slow on some systems.
 
 ## Nanosecond Precision with clock_gettime()
 
@@ -105,7 +105,7 @@ uint64_t get_epoch_nanos(void) {
 
 - `time()` is cheap but has poor resolution
 - `clock_gettime(CLOCK_REALTIME)` is fast on modern Linux but slower on some BSD systems
-- Calling these repeatedly in tight loops adds measurable overhead — cache results if precision allows
+- Calling these repeatedly in tight loops adds measurable overhead: cache results if precision allows
 - Check return values; `clock_gettime()` can fail if the clock isn’t supported
 
 Use `CLOCK_REALTIME` for timestamps you’ll log or store, and `CLOCK_MONOTONIC` for measuring elapsed time within a running process.

@@ -53,7 +53,7 @@ sudo usermod -a -G disk $USER
 newgrp disk
 ```
 
-Log out and back in for the change to take full effect. Note that adding users to the `disk` group grants broad filesystem access—only do this for trusted users.
+Log out and back in for the change to take full effect. Note that adding users to the `disk` group grants broad filesystem access: only do this for trusted users.
 
 ### Configure mount options in fstab
 
@@ -85,10 +85,10 @@ This reduces startup overhead significantly.
 
 If gthumb continues causing issues, consider:
 
-- **feh** — fast, lightweight command-line image viewer with no external device enumeration
-- **eog (Eye of GNOME)** — minimal image viewer with quick startup
-- **Nautilus** — file manager with solid thumbnail and preview support
-- **swayimg** or **imv** — modern, fast image viewers for Wayland or X11
+- **feh**: fast, lightweight command-line image viewer with no external device enumeration
+- **eog (Eye of GNOME)**: minimal image viewer with quick startup
+- **Nautilus**: file manager with solid thumbnail and preview support
+- **swayimg** or **imv**: modern, fast image viewers for Wayland or X11
 
 ## Troubleshooting stuck mounts
 
@@ -118,7 +118,7 @@ If the device still doesn’t respond, run a filesystem check on another system:
 sudo fsck -n /dev/sdX1
 ```
 
-The `-n` flag performs a read-only check without modifications. Persistent unresponsiveness suggests hardware failure—try a different USB port, cable, or device before investing further troubleshooting time.
+The `-n` flag performs a read-only check without modifications. Persistent unresponsiveness suggests hardware failure: try a different USB port, cable, or device before investing further troubleshooting time.
 
 ## 2026 Comprehensive Guide: Best Practices
 

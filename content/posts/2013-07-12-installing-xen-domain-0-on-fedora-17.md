@@ -214,15 +214,15 @@ xl list
 
 ### Common xl Commands
 
-- `xl create <config>` — Create and start a domain
-- `xl console <domain>` — Attach to serial console
-- `xl shutdown <domain>` — Graceful shutdown
-- `xl destroy <domain>` — Force shutdown
-- `xl reboot <domain>` — Reboot domain
-- `xl save <domain> <file>` — Suspend to disk
-- `xl restore <file>` — Resume from disk
-- `xl vcpu-set <domain> <count>` — Adjust vCPUs (if supported)
-- `xl mem-set <domain> <MB>` — Adjust memory (if supported)
+- `xl create <config>`: Create and start a domain
+- `xl console <domain>`: Attach to serial console
+- `xl shutdown <domain>`: Graceful shutdown
+- `xl destroy <domain>`: Force shutdown
+- `xl reboot <domain>`: Reboot domain
+- `xl save <domain> <file>`: Suspend to disk
+- `xl restore <file>`: Resume from disk
+- `xl vcpu-set <domain> <count>`: Adjust vCPUs (if supported)
+- `xl mem-set <domain> <MB>`: Adjust memory (if supported)
 
 Most operations replace the legacy `xm` command directly.
 

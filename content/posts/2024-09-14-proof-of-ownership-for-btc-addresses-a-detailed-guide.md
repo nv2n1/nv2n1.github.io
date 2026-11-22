@@ -20,7 +20,7 @@ The mechanism relies on public-key cryptography:
 2.  **Signing**: You sign the nonce with your private key using your wallet or signing tool.
 3.  **Verification**: The verifier uses your public address to validate the signature cryptographically. A valid signature proves you control the private key.
 
-The signature is a mathematical proof—it can’t be forged without the private key, and it’s specific to both the message and the key that signed it.
+The signature is a mathematical proof: it can’t be forged without the private key, and it’s specific to both the message and the key that signed it.
 
 ## BIP-322: The Current Standard
 
@@ -92,11 +92,11 @@ Web services often provide verification tools. For example:
 
 ## Important Considerations
 
-**The signature is message-specific.** A signature for one nonce is useless for another. This prevents replay attacks—an attacker cannot reuse a signature captured in one transaction for a different purpose.
+**The signature is message-specific.** A signature for one nonce is useless for another. This prevents replay attacks: an attacker cannot reuse a signature captured in one transaction for a different purpose.
 
 **Signatures don’t move funds.** No BTC changes hands. This is purely cryptographic proof.
 
-**Keep your private key secure.** The tools performing the signing must be trustworthy. Always sign offline or on air-gapped devices when possible. Never sign arbitrary messages from untrusted sources—they might contain hidden data or be used maliciously.
+**Keep your private key secure.** The tools performing the signing must be trustworthy. Always sign offline or on air-gapped devices when possible. Never sign arbitrary messages from untrusted sources: they might contain hidden data or be used maliciously.
 
 **Timestamp matters.** Many services include timestamps in challenges to prevent old signatures from being replayed. Always verify the timestamp is recent.
 
@@ -106,4 +106,4 @@ Web services often provide verification tools. For example:
 
 Legitimate services won’t ask you to sign messages outside their official platforms. If someone sends you a message requesting a signature via email or chat, verify it’s actually from the service before proceeding. Scammers may try to trick you into signing messages that grant them control or access.
 
-Always confirm the exact challenge text. Even a single character difference creates a completely different valid signature, so malicious modifications would fail verification—but only if you’re paying attention.
+Always confirm the exact challenge text. Even a single character difference creates a completely different valid signature, so malicious modifications would fail verification, but only if you’re paying attention.

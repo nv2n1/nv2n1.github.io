@@ -10,7 +10,7 @@ canonical: /disable-selinux-in-fedora/
 url: /disable-selinux-in-fedora/
 ---
 
-SELinux provides mandatory access controls that catch security violations most firewall and file permission rules miss. Before disabling it, exhaust other options — SELinux warnings often reveal real security problems worth understanding.
+SELinux provides mandatory access controls that catch security violations most firewall and file permission rules miss. Before disabling it, exhaust other options: SELinux warnings often reveal real security problems worth understanding.
 
 That said, there are legitimate reasons to adjust SELinux: testing application behavior without policy violations, troubleshooting misbehaving software, or running systems where the overhead isn’t justified. You have three practical options: permissive mode (log without blocking), temporary disable, and permanent disable.
 
@@ -85,7 +85,7 @@ To:
 
     SELINUX=disabled
 
-Reboot for the change to apply. Disabling SELinux completely removes the kernel module from enforcement — it’s different from permissive mode, which still performs checks and logging.
+Reboot for the change to apply. Disabling SELinux completely removes the kernel module from enforcement: it’s different from permissive mode, which still performs checks and logging.
 
 **Warning:** Some packages and systemd services expect SELinux to be available. Fully disabling it can cause unexpected behavior. Permissive mode is almost always preferable.
 

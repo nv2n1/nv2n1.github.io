@@ -53,7 +53,7 @@ You should see output confirming the font path and variants.
 
 ## Restart Thunderbird Completely
 
-Don’t just close the window—fully terminate the process and clear font-related memory:
+Don’t just close the window: fully terminate the process and clear font-related memory:
 
 ``` bash
 killall thunderbird
@@ -181,4 +181,4 @@ If emoji still render incorrectly:
 
     Create a new profile and check if emoji render correctly. If they do, your original profile is corrupted and needs the cache-clearing steps above.
 
-Most emoji sizing issues resolve after installing Noto Color Emoji, rebuilding the font cache, and restarting Thunderbird. If problems persist, the issue is usually cached fonts within Thunderbird itself—the cache-clearing steps fix nearly all remaining cases.
+Most emoji sizing issues resolve after installing Noto Color Emoji, rebuilding the font cache, and restarting Thunderbird. If problems persist, the issue is usually cached fonts within Thunderbird itself: the cache-clearing steps fix nearly all remaining cases.

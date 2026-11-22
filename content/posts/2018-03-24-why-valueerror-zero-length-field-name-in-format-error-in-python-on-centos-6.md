@@ -23,7 +23,7 @@ This raises `ValueError: zero length field name in format` on older Python inter
 
 \## Why This Happens
 
-The `{}` syntax without explicit position numbers was introduced in Python 2.7 and Python 3.1. If your code runs on an older Python version — like Python 2.6 or earlier — the interpreter doesn’t recognize empty field names and raises this error.
+The `{}` syntax without explicit position numbers was introduced in Python 2.7 and Python 3.1. If your code runs on an older Python version (like Python 2.6 or earlier), the interpreter doesn’t recognize empty field names and raises this error.
 
 You can verify your Python version:
 
@@ -51,7 +51,7 @@ This works on all Python versions that support `.format()` (Python 2.6+).
 
 \## Modern Approach: Use f-strings
 
-If you’re on Python 3.6 or later (which you should be in 2026), use f-strings instead — they’re cleaner and faster:
+If you’re on Python 3.6 or later (which you should be in 2026), use f-strings instead: they’re cleaner and faster:
 
 ```wp-block-code
 print(f'== {d} SPF')
@@ -79,19 +79,19 @@ print(f'{1000000:,}')  # 1,000,000 with comma separators
 
 If you’re maintaining legacy code that must run on Python 2.6 or 2.7, you have options:
 
-\*\*Use explicit positional arguments\*\* — safest for compatibility:
+\*\*Use explicit positional arguments\*\*: safest for compatibility:
 
 ```wp-block-code
 print('== {0} SPF'.format(d))
 ```
 
-\*\*Use percent formatting\*\* — the old syntax that works everywhere:
+\*\*Use percent formatting\*\*: the old syntax that works everywhere:
 
 ```wp-block-code
 print('== %s SPF' % d)
 ```
 
-\*\*Upgrade your environment\*\* — Python 2 reached end-of-life in January 2020. Moving to Python 3.10+ eliminates this entire class of compatibility issues and gives you performance improvements, better error messages, and modern syntax features.
+\*\*Upgrade your environment\*\*: Python 2 reached end-of-life in January 2020. Moving to Python 3.10+ eliminates this entire class of compatibility issues and gives you performance improvements, better error messages, and modern syntax features.
 
 \## Check Your Codebase
 

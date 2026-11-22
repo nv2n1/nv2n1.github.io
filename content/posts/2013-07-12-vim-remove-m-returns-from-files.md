@@ -24,11 +24,11 @@ To enter the literal `^M`, type `Ctrl+V` followed by `Ctrl+M` in command mode. T
 
 Breaking down the command:
 
-- `:` — enter ex command mode
-- `1,$` — range from line 1 to the last line (you can use `%` as shorthand)
-- `s/pattern/replacement/flags` — substitution command
-- `^M` — the carriage return character (entered as `Ctrl+V` + `Ctrl+M`)
-- `g` — replace all occurrences on each line
+- `:`: enter ex command mode
+- `1,$`: range from line 1 to the last line (you can use `%` as shorthand)
+- `s/pattern/replacement/flags`: substitution command
+- `^M`: the carriage return character (entered as `Ctrl+V` + `Ctrl+M`)
+- `g`: replace all occurrences on each line
 
 So the equivalent shorthand version:
 
@@ -106,7 +106,7 @@ In Vim, you can also check by looking at the status line (rightmost corner), whi
 :set list
 ```
 
-This shows whitespace characters — `$` marks line ends, and you’ll see `^M` if carriage returns are present.
+This shows whitespace characters: `$` marks line ends, and you’ll see `^M` if carriage returns are present.
 
 ## Essential Editor Configuration
 

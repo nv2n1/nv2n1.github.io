@@ -10,7 +10,7 @@ canonical: /how-to-find-out-failed-disks-sata-ports-in-linux/
 url: /how-to-find-out-failed-disks-sata-ports-in-linux/
 ---
 
-Linux device names like `/dev/sda` and `/dev/sdb` are unreliable identifiers for physical hardware. They shift when you add, remove, or reseat drives, and there’s no guaranteed mapping between a SATA port and its device name. When a disk fails, you need to know exactly which physical slot to replace—guessing wrong takes down the wrong system.
+Linux device names like `/dev/sda` and `/dev/sdb` are unreliable identifiers for physical hardware. They shift when you add, remove, or reseat drives, and there’s no guaranteed mapping between a SATA port and its device name. When a disk fails, you need to know exactly which physical slot to replace: guessing wrong takes down the wrong system.
 
 ## Get the Serial Number
 
@@ -99,7 +99,7 @@ sudo smartctl -a /dev/sdb
 sudo smartctl -A /dev/sdb | grep -E "Reallocated_Sector_Ct|Current_Pending_Sector"
 ```
 
-A failing disk typically shows increased reallocated sectors, pending sectors, or offline uncorrectable errors. If SMART reports healthy but you see kernel errors, the drive may be failing in ways SMART doesn’t detect—replace it anyway.
+A failing disk typically shows increased reallocated sectors, pending sectors, or offline uncorrectable errors. If SMART reports healthy but you see kernel errors, the drive may be failing in ways SMART doesn’t detect: replace it anyway.
 
 ## Enable Proactive Monitoring
 

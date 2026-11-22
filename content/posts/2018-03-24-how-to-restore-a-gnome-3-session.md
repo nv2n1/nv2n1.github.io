@@ -10,7 +10,7 @@ canonical: /how-to-restore-a-gnome-3-session/
 url: /how-to-restore-a-gnome-3-session/
 ---
 
-GNOME can automatically restore your session—reopening all applications and windows that were running when you last logged out. This differs from autostart scripts, which launch specific programs on every login regardless of what was running before.
+GNOME can automatically restore your session: reopening all applications and windows that were running when you last logged out. This differs from autostart scripts, which launch specific programs on every login regardless of what was running before.
 
 ## Automatic Session Restoration
 
@@ -32,7 +32,7 @@ Verify the setting:
 dconf read /org/gnome/gnome-session/auto-save-session
 ```
 
-GNOME will now save your session state when you log out and restore it on the next login. This includes open windows, workspace layout, and application state—though individual apps may not preserve internal state (like file positions or unsaved documents).
+GNOME will now save your session state when you log out and restore it on the next login. This includes open windows, workspace layout, and application state, though individual apps may not preserve internal state (like file positions or unsaved documents).
 
 ## Manual Session Management
 

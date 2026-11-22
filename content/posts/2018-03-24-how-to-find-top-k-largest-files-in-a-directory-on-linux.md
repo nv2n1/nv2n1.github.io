@@ -37,7 +37,7 @@ find . -type f -printf '%s %p\n' | sort -rn | head -n 20 | awk '{printf "%.1fMB\
 
 This approach is cleaner than piping through `du` because:
 
-- `find -printf '%s %p\n'` outputs size in bytes and path — no subprocess overhead
+- `find -printf '%s %p\n'` outputs size in bytes and path: no subprocess overhead
 - `sort -rn` sorts numerically (more reliable with large files)
 - `awk` formats the output in MB for readability
 
@@ -82,7 +82,7 @@ sudo find / -type f -printf '%s %p\n' 2>/dev/null | sort -rn | head -n 20 | \
   awk '{printf "%.2fGB\t%s\n", $1/1073741824, $2}'
 ```
 
-The `2>/dev/null` suppresses permission errors on directories you can’t read. Be patient — this can take minutes on large systems with many files. Consider restricting to specific mount points: `find /home /var -type f ...` instead.
+The `2>/dev/null` suppresses permission errors on directories you can’t read. Be patient: this can take minutes on large systems with many files. Consider restricting to specific mount points: `find /home /var -type f ...` instead.
 
 ### Interactive exploration with ncdu
 
@@ -103,7 +103,7 @@ Navigate with arrow keys, press `d` to delete, `q` to quit. Much faster for ad-h
 ### Performance considerations
 
 - For a single directory level, `du -ah --max-depth=1` is fastest
-- For recursive scans, `find -printf` with `sort -rn` beats `du -exec` — fewer processes spawned
+- For recursive scans, `find -printf` with `sort -rn` beats `du -exec`: fewer processes spawned
 - On very large directories (100k+ files), even `sort` can be slow. Pipe to `head -n K` as early as possible
-- If you’re scripting, use byte sizes in sort (`sort -rn`) rather than human-readable — it’s predictable and faster
+- If you’re scripting, use byte sizes in sort (`sort -rn`) rather than human-readable: it’s predictable and faster
 - On networked or slow storage, `du` can thrash; `find -printf` is more responsive for initial results

@@ -18,9 +18,9 @@ ocamlopt -S -inline 20 -nodynlink not.ml -o not.opt
 
 This produces a `.s` file containing the generated assembly. The flags break down as:
 
-- `-S` — Stop after assembly generation and keep the `.s` file
-- `-inline 20` — Inline functions with up to 20 instructions (controls inlining aggressiveness)
-- `-nodynlink` — Disable dynamic linking (simplifies the output and makes it more readable)
+- `-S`: Stop after assembly generation and keep the `.s` file
+- `-inline 20`: Inline functions with up to 20 instructions (controls inlining aggressiveness)
+- `-nodynlink`: Disable dynamic linking (simplifies the output and makes it more readable)
 
 ## Example
 
@@ -52,16 +52,16 @@ The resulting `not.s` file contains x86-64 assembly. The function `camlNot__not_
 
 The assembly structure typically includes:
 
-- **Data section** — Constants, closure metadata, and initialized data
-- **Code section** — Actual machine code with function symbols
-- **Frame table** — GC metadata for stack frame traversal
-- **GNU stack note** — Marks the stack as non-executable where applicable
+- **Data section**: Constants, closure metadata, and initialized data
+- **Code section**: Actual machine code with function symbols
+- **Frame table**: GC metadata for stack frame traversal
+- **GNU stack note**: Marks the stack as non-executable where applicable
 
 Key symbols in the assembly:
 
-- `camlNot__not_1008` — The compiled function body
-- `camlNot__entry` — Module initialization code
-- `camlNot__1` — Closure structure or data for the function
+- `camlNot__not_1008`: The compiled function body
+- `camlNot__entry`: Module initialization code
+- `camlNot__1`: Closure structure or data for the function
 
 ## Additional Compiler Flags for Assembly Inspection
 

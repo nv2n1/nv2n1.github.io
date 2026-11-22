@@ -107,7 +107,7 @@ Ruffle automatically handles embedded SWF files.
 
 ## When All Else Fails
 
-If a file won’t play anywhere, document what you’re dealing with. Some SWF files are genuinely incompatible with anything available now. Consider whether you need the Flash version or if the content exists elsewhere — many Flash games and applications have been ported to other formats or archived by preservation communities.
+If a file won’t play anywhere, document what you’re dealing with. Some SWF files are genuinely incompatible with anything available now. Consider whether you need the Flash version or if the content exists elsewhere: many Flash games and applications have been ported to other formats or archived by preservation communities.
 
 Start with Ruffle. It’s maintained, doesn’t require emulation overhead, and handles the vast majority of real-world SWF files. Only dig into alternatives if you hit a specific failure.
 

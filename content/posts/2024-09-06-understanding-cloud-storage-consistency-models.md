@@ -14,7 +14,7 @@ Cloud storage systems face a fundamental trade-off: you can’t have everything 
 
 ### Strong Consistency
 
-Guarantees that any read returns the most recent write. After you write data, every subsequent read—regardless of which node handles it—sees that write immediately.
+Guarantees that any read returns the most recent write. After you write data, every subsequent read (regardless of which node handles it) sees that write immediately.
 
 **When to use:** Financial transactions, medical records, critical configuration data. Anything where stale reads are unacceptable.
 
@@ -24,7 +24,7 @@ Guarantees that any read returns the most recent write. After you write data, ev
 - PostgreSQL in synchronous replication mode
 - etcd (Kubernetes’ config store) with default settings
 
-**The cost:** Write latency increases because you’re waiting for acknowledgment across multiple nodes. During network partitions, you lose availability—writes may fail rather than risk inconsistency.
+**The cost:** Write latency increases because you’re waiting for acknowledgment across multiple nodes. During network partitions, you lose availability: writes may fail rather than risk inconsistency.
 
 ### Eventual Consistency
 

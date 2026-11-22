@@ -124,11 +124,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

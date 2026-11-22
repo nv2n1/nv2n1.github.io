@@ -81,6 +81,6 @@ This is valuable for understanding filesystem mutations between recovery points.
 
 ## Limitations and Constraints
 
-Snapshots don’t work with encryption zones in the same way as regular directories — verify your security model when combining these features. Additionally, snapshots provide point-in-time recovery at the filesystem level but don’t guarantee application-level consistency for databases or other stateful services.
+Snapshots don’t work with encryption zones in the same way as regular directories: verify your security model when combining these features. Additionally, snapshots provide point-in-time recovery at the filesystem level but don’t guarantee application-level consistency for databases or other stateful services.
 
 You cannot take snapshots of snapshots, and the `.snapshot` directory hierarchy has specific access restrictions. Regular users can only view snapshots they have permission to access based on the underlying directory permissions.

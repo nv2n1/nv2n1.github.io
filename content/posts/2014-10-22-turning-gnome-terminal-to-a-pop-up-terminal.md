@@ -141,10 +141,10 @@ The script maintains a single terminal window ID in `/dev/shm/toggle-terminal.$U
 
 On each invocation:
 
-1.  **Read the state file** — Retrieve the tracked terminal window ID
-2.  **Verify the window exists** — Confirm the stored ID still points to an open window using `xdotool getwindowname`
-3.  **Create if needed** — Spawn a new terminal if none is tracked or the old one was closed
-4.  **Toggle visibility** — If the terminal is focused, minimize it; otherwise raise and focus it
+1.  **Read the state file**: Retrieve the tracked terminal window ID
+2.  **Verify the window exists**: Confirm the stored ID still points to an open window using `xdotool getwindowname`
+3.  **Create if needed**: Spawn a new terminal if none is tracked or the old one was closed
+4.  **Toggle visibility**: If the terminal is focused, minimize it; otherwise raise and focus it
 
 ## Handling edge cases
 

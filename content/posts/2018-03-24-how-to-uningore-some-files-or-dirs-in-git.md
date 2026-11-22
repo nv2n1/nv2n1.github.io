@@ -10,7 +10,7 @@ canonical: /how-to-uningore-some-files-or-dirs-in-git/
 url: /how-to-uningore-some-files-or-dirs-in-git/
 ---
 
-Sometimes you have a global gitignore rule—like ignoring all `*.log` files—but need to track one specific exception. Git lets you negate patterns using the `!` character.
+Sometimes you have a global gitignore rule (like ignoring all `*.log` files), but need to track one specific exception. Git lets you negate patterns using the `!` character.
 
 ```gitignore
 # Ignore all log files
@@ -63,7 +63,7 @@ Use `!` with glob patterns:
 
 ## When files are already tracked
 
-If a file was committed before being added to `.gitignore`, the ignore pattern won’t remove it from version control—it’ll still appear in `git status` as modified. Remove it from Git’s index without deleting the local file:
+If a file was committed before being added to `.gitignore`, the ignore pattern won’t remove it from version control: it’ll still appear in `git status` as modified. Remove it from Git’s index without deleting the local file:
 
 ``` bash
 git rm --cached <file>

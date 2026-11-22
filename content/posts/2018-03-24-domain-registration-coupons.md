@@ -28,9 +28,9 @@ The deep discounts (under \$5) almost always come with catch: auto-renewal at fu
 
 **Direct registrar promotions**: Namecheap, GoDaddy, and Porkbun regularly advertise first-year discounts on their homepages. These change monthly, so check directly rather than relying on coupon sites.
 
-**Bundled hosting deals**: If you need both domain and hosting, some providers offer one free domain with a hosting plan. Verify the renewal cost separately—many lock you into their hosting to keep the domain cheap.
+**Bundled hosting deals**: If you need both domain and hosting, some providers offer one free domain with a hosting plan. Verify the renewal cost separately: many lock you into their hosting to keep the domain cheap.
 
-**Bulk registration**: If registering multiple domains, some registrars (like Namecheap) offer modest discounts at 5+ domains. Also check their WHOIS privacy pricing—it’s often included free for bulk registrations.
+**Bulk registration**: If registering multiple domains, some registrars (like Namecheap) offer modest discounts at 5+ domains. Also check their WHOIS privacy pricing: it’s often included free for bulk registrations.
 
 **Alternative registrars**: Porkbun and Dynadot typically undercut major competitors on renewal pricing and include free WHOIS privacy. They’re less aggressive with marketing emails than GoDaddy.
 
@@ -47,7 +47,7 @@ Rather than coupon hunting, optimize your registrar choice:
 
 1.  **Use Dynadot or Porkbun** for straightforward pricing and no surprise renewals
 2.  **Buy domains for 3–5 years upfront** if the registrar offers a discount for multi-year terms
-3.  **Monitor ICANN domain price floors**—you can’t go below the registry fee, which varies by TLD
+3.  **Monitor ICANN domain price floors**: you can’t go below the registry fee, which varies by TLD
 4.  **Consolidate at one registrar** to simplify bulk management and potentially qualify for volume discounts
 5.  **Set up domain monitoring** with `whois` queries or registrar tools to track expiration dates
 

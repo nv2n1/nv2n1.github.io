@@ -112,7 +112,7 @@ Generate a token on GitHub:
 3.  Give it a descriptive name
 4.  Select the `repo` scope for full repository access (or `public_repo` if the repo is public)
 5.  Set an expiration date (90 days or less is recommended)
-6.  Click “Generate token” and copy it immediately — you won’t see it again
+6.  Click “Generate token” and copy it immediately: you won’t see it again
 
 Update your remote if needed:
 

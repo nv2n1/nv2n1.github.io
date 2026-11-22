@@ -16,9 +16,9 @@ Package managers on Debian and Ubuntu systems maintain detailed logs of all inst
 
 The main log files you’ll work with are:
 
-- `/var/log/dpkg.log` — Low-level package management operations logged by dpkg
-- `/var/log/apt/history.log` — High-level apt operations (installs, upgrades, removals)
-- `/var/log/aptitude` — Operations performed through aptitude (if used)
+- `/var/log/dpkg.log`: Low-level package management operations logged by dpkg
+- `/var/log/apt/history.log`: High-level apt operations (installs, upgrades, removals)
+- `/var/log/aptitude`: Operations performed through aptitude (if used)
 
 Note that `/var/log/apt/history.log` is rotated regularly, so older entries move to compressed files like `/var/log/apt/history.log.1.gz`. For historical records beyond what’s in the uncompressed file, you’ll need to decompress and search those.
 
@@ -126,7 +126,7 @@ If you encounter problems during installation, check these common solutions:
 
 ## Verification Steps
 
-After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the –version or -v flag to display their version information.
+After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the --version or -v flag to display their version information.
 
 ## Keeping Your Installation Updated
 

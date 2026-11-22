@@ -18,26 +18,26 @@ Vim supports multiple regex engines, controlled by the `magic` setting. By defau
 
 Key characters in Vim regex:
 
-- `.` — matches any single character
-- `*` — matches zero or more of the preceding character
-- `\+` — matches one or more (requires backslash escape in standard mode)
-- `\?` — matches zero or one
-- `\{n,m}` — matches between n and m occurrences
-- `^` — start of line
-- `$` — end of line
-- `\<` and `\>` — word boundaries
-- `\(` and `\)` — capture groups (requires backslash escape in standard mode)
-- `|` — alternation (requires backslash escape: `\|` in standard mode)
+- `.`: matches any single character
+- `*`: matches zero or more of the preceding character
+- `\+`: matches one or more (requires backslash escape in standard mode)
+- `\?`: matches zero or one
+- `\{n,m}`: matches between n and m occurrences
+- `^`: start of line
+- `$`: end of line
+- `\<` and `\>`: word boundaries
+- `\(` and `\)`: capture groups (requires backslash escape in standard mode)
+- `|`: alternation (requires backslash escape: `\|` in standard mode)
 
 ## Magic vs Nomagic
 
 Vim has different regex modes that affect which characters require escaping:
 
-**`:set magic`** (default) — most metacharacters work as expected, but parentheses and pipes need backslashes
+**`:set magic`** (default): most metacharacters work as expected, but parentheses and pipes need backslashes
 
-**`:set nomagic`** — almost everything needs escaping, limiting usefulness
+**`:set nomagic`**: almost everything needs escaping, limiting usefulness
 
-**`:set smartcase`** and **`:set ignorecase`** — control case sensitivity in patterns
+**`:set smartcase`** and **`:set ignorecase`**: control case sensitivity in patterns
 
 To use extended regex syntax without backslashes, use `\v` at the start of your pattern (very magic mode):
 
@@ -101,12 +101,12 @@ This removes spaces before equals signs but only when not preceded by a word cha
 
 Character classes provide shortcuts for common patterns:
 
-- `\d` — digit (equivalent to `[0-9]`)
-- `\D` — non-digit
-- `\w` — word character `[a-zA-Z0-9_]`
-- `\W` — non-word character
-- `\s` — whitespace
-- `\S` — non-whitespace
+- `\d`: digit (equivalent to `[0-9]`)
+- `\D`: non-digit
+- `\w`: word character `[a-zA-Z0-9_]`
+- `\W`: non-word character
+- `\s`: whitespace
+- `\S`: non-whitespace
 
 Example: Remove trailing whitespace from all lines:
 
@@ -191,4 +191,4 @@ Refer to these when experimenting with new patterns. The `:helpgrep` command sea
 :helpgrep word_boundary
 ```
 
-Practice with real files in your own environment — regex intuition comes through repeated use, not memorization.
+Practice with real files in your own environment: regex intuition comes through repeated use, not memorization.

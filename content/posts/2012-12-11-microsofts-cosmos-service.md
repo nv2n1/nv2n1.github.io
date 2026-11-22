@@ -20,7 +20,7 @@ Cosmos operates at truly massive scale:
 - **Compute infrastructure**: Tens of thousands of machines distributed across multiple datacenters
 - **Processing model**: Massively parallel processing based on Dryad, a directed acyclic graph (DAG) execution engine developed by Microsoft Research
 
-The key distinction from simpler MapReduce systems is Cosmos’s ability to represent arbitrary computational DAGs rather than simple map-reduce chains. This flexibility allows for more complex data transformations and optimizations. The system also implements automatic computation placement that considers data locality — a critical optimization at this scale to minimize network overhead.
+The key distinction from simpler MapReduce systems is Cosmos’s ability to represent arbitrary computational DAGs rather than simple map-reduce chains. This flexibility allows for more complex data transformations and optimizations. The system also implements automatic computation placement that considers data locality: a critical optimization at this scale to minimize network overhead.
 
 ## SCOPE Query Language
 
@@ -42,7 +42,7 @@ This model allows efficient resource utilization while giving teams predictable 
 
 A key value proposition of Cosmos is enabling cross-dataset analysis. By providing ubiquitous access to data across different OSD (Object Storage Device) datasets, teams can combine knowledge from multiple sources to derive insights impossible from isolated datasets. This capability became central to Microsoft’s big data analytics strategy.
 
-Cosmos represents an engineering solution to the fundamental problem of operating analytics at petabyte scale — efficient data movement, intelligent query compilation, and flexible resource management across thousands of machines. While cloud alternatives like Azure Synapse now offer similar capabilities to external customers, Cosmos remains a testament to the infrastructure required to support modern enterprise-scale analytics.
+Cosmos represents an engineering solution to the fundamental problem of operating analytics at petabyte scale: efficient data movement, intelligent query compilation, and flexible resource management across thousands of machines. While cloud alternatives like Azure Synapse now offer similar capabilities to external customers, Cosmos remains a testament to the infrastructure required to support modern enterprise-scale analytics.
 
 ## 2026 Best Practices and Advanced Techniques
 

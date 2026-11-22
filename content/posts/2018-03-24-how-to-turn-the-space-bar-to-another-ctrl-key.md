@@ -172,7 +172,7 @@ Or on X11 with `xev`:
 xev
 ```
 
-Hold space—should show Ctrl. Tap space quickly—should show space character. If it feels off, adjust timeout settings in your config.
+Hold space: should show Ctrl. Tap space quickly: should show space character. If it feels off, adjust timeout settings in your config.
 
 ## Common Issues
 
@@ -189,4 +189,4 @@ Some applications bypass normal key handling (games, some terminals). Test with 
 xcape only works on X11. Switch to keyd or interception-tools for Wayland, or set `QT_QPA_PLATFORM=xcb` as a workaround (not reliable long-term).
 
 **Small delay before space is recognized**
-This is normal—the system waits for the timeout before deciding “tap” vs “hold.” Reduce timeout if acceptable (trade-off: faster Ctrl, slower space).
+This is normal: the system waits for the timeout before deciding “tap” vs “hold.” Reduce timeout if acceptable (trade-off: faster Ctrl, slower space).

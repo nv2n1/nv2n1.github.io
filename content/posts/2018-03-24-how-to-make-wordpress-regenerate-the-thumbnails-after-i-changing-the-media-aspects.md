@@ -10,7 +10,7 @@ canonical: /how-to-make-wordpress-regenerate-the-thumbnails-after-i-changing-the
 url: /how-to-make-wordpress-regenerate-the-thumbnails-after-i-changing-the-media-aspects/
 ---
 
-When you change thumbnail dimensions in WordPress, existing images won’t automatically resize to match. You need to regenerate them — either through a plugin or command line.
+When you change thumbnail dimensions in WordPress, existing images won’t automatically resize to match. You need to regenerate them: either through a plugin or command line.
 
 ## Using a Plugin
 

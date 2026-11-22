@@ -74,11 +74,11 @@ Here’s the safe sequence when modifying `/etc/fstab`:
 
 ### Important Considerations
 
-**Avoid restarting targets on systems with running services** — restarting `local-fs.target` or `remote-fs.target` can interrupt active mounts and cause services that depend on those filesystems to fail. On servers in production, mount new filesystems individually with `mount` rather than restarting targets.
+**Avoid restarting targets on systems with running services**: restarting `local-fs.target` or `remote-fs.target` can interrupt active mounts and cause services that depend on those filesystems to fail. On servers in production, mount new filesystems individually with `mount` rather than restarting targets.
 
 **For NFS and remote mounts**, if you’re adding new entries to `/etc/fstab`, the `remote-fs.target` restart ensures they’re mounted during boot sequence initialization. However, if the system is already running, individual mounting is safer.
 
-**Use systemd mount units for better control** — instead of relying solely on `/etc/fstab`, consider creating systemd `.mount` files for complex mount scenarios. This gives you finer control over dependencies and failure handling.
+**Use systemd mount units for better control**: instead of relying solely on `/etc/fstab`, consider creating systemd `.mount` files for complex mount scenarios. This gives you finer control over dependencies and failure handling.
 
 ### Checking Active Mounts
 

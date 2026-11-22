@@ -124,7 +124,7 @@ sudo lshw | grep serial
 - Virtualized environments may not expose accurate serial numbers unless explicitly configured by the hypervisor
 - Container images typically lack DMI data entirely
 - Some OEM systems obfuscate or randomize serial numbers for security
-- Cloud providers may virtualize or override this data — check their metadata services instead
+- Cloud providers may virtualize or override this data: check their metadata services instead
 - You need root/sudo privileges to read DMI data on most systems
 
 ## 2026 Best Practices and Advanced Techniques

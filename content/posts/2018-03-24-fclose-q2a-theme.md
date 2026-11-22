@@ -16,8 +16,8 @@ The fclose theme is a lightweight Question2Answer theme distributed as a set of 
 
 You need two core files to run fclose:
 
-- **qa-theme.php** — The theme class that extends `qa_html_theme_base` and controls page layout
-- **qa-styles.css** — The stylesheet with all theme-specific styling
+- **qa-theme.php**: The theme class that extends `qa_html_theme_base` and controls page layout
+- **qa-styles.css**: The stylesheet with all theme-specific styling
 
 You’ll source your own icon set rather than relying on bundled icons. This keeps your installation visually distinct and lets you match your community’s branding.
 

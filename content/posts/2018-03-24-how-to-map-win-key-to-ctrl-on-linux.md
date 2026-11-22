@@ -163,7 +163,7 @@ Press the Win key and watch the logs confirm the remap.
 
 - Some applications (browsers, IDEs) may hardcode Super key behavior and ignore remaps
 - Wayland support through evremap is mature, but some edge cases exist
-- If using a desktop environment, always prefer Settings over manual config — they survive updates and usually override manual files
+- If using a desktop environment, always prefer Settings over manual config: they survive updates and usually override manual files
 - Remapping at the TTY level affects all sessions but persists through kernel updates less reliably
 
 ## Troubleshooting
@@ -176,7 +176,7 @@ sudo setcap cap_sys_admin=ep $(which evremap)
 ```
 
 **xmodmap changes don’t persist:**
-Verify your startup file is being sourced. Check `~/.bashrc` vs `~/.bash_profile` — graphical sessions use the latter. Alternatively, place a desktop file in `~/.config/autostart/`:
+Verify your startup file is being sourced. Check `~/.bashrc` vs `~/.bash_profile`: graphical sessions use the latter. Alternatively, place a desktop file in `~/.config/autostart/`:
 
 ``` ini
 [Desktop Entry]

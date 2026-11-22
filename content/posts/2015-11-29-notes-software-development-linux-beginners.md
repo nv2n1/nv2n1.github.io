@@ -75,7 +75,7 @@ zypper search package-name
 zypper remove package-name
 ```
 
-Modern distributions also support `flatpak` and `snap` for containerized packages, but avoid these initially for development tools — native packages integrate better with build systems.
+Modern distributions also support `flatpak` and `snap` for containerized packages, but avoid these initially for development tools: native packages integrate better with build systems.
 
 ### Building Software from Source
 
@@ -95,7 +95,7 @@ Modern projects use different build systems:
 - **Meson**: `meson setup builddir && meson compile -C builddir && sudo meson install -C builddir`
 - **Language-specific tools**: `cargo build --release` (Rust), `go build` (Go), `python -m build` (Python)
 
-Always check the project documentation before building — the specific steps matter.
+Always check the project documentation before building: the specific steps matter.
 
 ## Text Editors and Development Environments
 
@@ -103,16 +103,16 @@ Your choice of editor significantly impacts workflow. Options range from simple 
 
 **Beginner-friendly**
 
-- `nano` — minimal learning curve, suitable for quick edits
-- `gedit` / `kate` — GUI editors with basic features
-- **VS Code** — install via your package manager, highly configurable
+- `nano`: minimal learning curve, suitable for quick edits
+- `gedit` / `kate`: GUI editors with basic features
+- **VS Code**: install via your package manager, highly configurable
 
 **Intermediate to advanced**
 
-- `vim` — powerful but steep learning curve; start with `vimtutor`
-- `emacs` — extensible and powerful; significant investment to learn
-- **JetBrains IDEs** — feature-rich but resource-intensive
-- **Helix** — modern Rust-written editor gaining traction
+- `vim`: powerful but steep learning curve; start with `vimtutor`
+- `emacs`: extensible and powerful; significant investment to learn
+- **JetBrains IDEs**: feature-rich but resource-intensive
+- **Helix**: modern Rust-written editor gaining traction
 
 Start simple. Master one editor rather than jumping between them. If vim seems overwhelming, use nano or VS Code until you’re ready to invest time in deeper editor mastery.
 
@@ -182,9 +182,9 @@ Avoid ad-hoc debugging in production. Implement proper logging from the start.
 You don’t need to master everything immediately. Follow this path:
 
 1.  Install a Linux distribution you’re comfortable with
-2.  Learn your distro’s package manager — install a few packages to practice
+2.  Learn your distro’s package manager: install a few packages to practice
 3.  Choose a simple editor (nano is fine to start)
-4.  Build something small — a shell script, a simple C program, a Python script
+4.  Build something small: a shell script, a simple C program, a Python script
 5.  Deploy it to a test environment and run it
 
 Within a few weeks of regular work, core commands become muscle memory. The shell feels less intimidating. You’ll develop habits that make Linux development fast and productive.

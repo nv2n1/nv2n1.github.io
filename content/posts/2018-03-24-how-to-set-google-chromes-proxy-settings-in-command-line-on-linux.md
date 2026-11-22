@@ -28,10 +28,10 @@ The proxy specification follows this format:
 
 Supported schemes:
 
-- `http` — HTTP proxy (default if omitted)
-- `https` — HTTPS proxy
-- `socks` or `socks5` — SOCKS v5 proxy
-- `socks4` — SOCKS v4 proxy
+- `http`: HTTP proxy (default if omitted)
+- `https`: HTTPS proxy
+- `socks` or `socks5`: SOCKS v5 proxy
+- `socks4`: SOCKS v4 proxy
 
 If you don’t specify a scheme, Chrome assumes HTTP.
 
@@ -125,7 +125,7 @@ This approach survives Chrome updates and restarts, unlike command-line flags wh
 
 ## Troubleshooting
 
-- Chrome won’t start with proxy flags? Try `chromium` instead of `google-chrome` — some distributions use the open-source Chromium package
+- Chrome won’t start with proxy flags? Try `chromium` instead of `google-chrome`: some distributions use the open-source Chromium package
 - Test connectivity to your proxy: `nc -zv proxy.example.com 3128`
 - Check Chrome’s net log for proxy issues: `--net-log-level=1 --log-net-log=/tmp/net.log`
 - If using SOCKS, verify the SOCKS server listens on the specified port: `ss -tlnp | grep SOCKS_PORT`
@@ -136,11 +136,11 @@ Command-line proxy configuration is ephemeral and applies only to that browser i
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

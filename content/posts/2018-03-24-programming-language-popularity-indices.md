@@ -10,7 +10,7 @@ canonical: /programming-language-popularity-indices/
 url: /programming-language-popularity-indices/
 ---
 
-Tracking programming language adoption helps inform hiring decisions, tool investment, and technology strategy. Several indices measure popularity across different dimensions — job postings, GitHub activity, Stack Overflow traffic, and search trends — so no single metric tells the complete story.
+Tracking programming language adoption helps inform hiring decisions, tool investment, and technology strategy. Several indices measure popularity across different dimensions (job postings, GitHub activity, Stack Overflow traffic, and search trends), so no single metric tells the complete story.
 
 ### TIOBE Index
 

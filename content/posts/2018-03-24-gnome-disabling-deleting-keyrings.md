@@ -29,7 +29,7 @@ ls -la ~/.gnome2/keyrings/
 
 ### Backing Up Before Deletion
 
-Always backup keyrings before deletion — they contain encrypted passwords and SSH keys you may need:
+Always backup keyrings before deletion: they contain encrypted passwords and SSH keys you may need:
 
 ``` bash
 cp -r ~/.local/share/gnome-keyring/ ~/.local/share/gnome-keyring.backup
@@ -106,12 +106,12 @@ secret-tool clear service example-service username myuser
 
 ### Resetting Password for Locked Keyring
 
-If your keyring is locked and you forgot the password, deletion is often the only option. However, you can attempt to change it through the Passwords and Keys GUI application — search for “Passwords” in your applications menu.
+If your keyring is locked and you forgot the password, deletion is often the only option. However, you can attempt to change it through the Passwords and Keys GUI application: search for “Passwords” in your applications menu.
 
 ### After Deletion
 
 - New keyrings will be created automatically when needed
-- SSH keys won’t be automatically cached — you’ll need to re-add them to ssh-agent or configure them again
+- SSH keys won’t be automatically cached: you’ll need to re-add them to ssh-agent or configure them again
 - Saved browser passwords, email credentials, and VPN configs will be lost
 - You’ll be prompted to re-enter passwords for services on next login
 

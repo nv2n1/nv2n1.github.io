@@ -10,7 +10,7 @@ canonical: /where-is-the-source-code-for-the-free-command-on-linux/
 url: /where-is-the-source-code-for-the-free-command-on-linux/
 ---
 
-The `free` command—along with `ps`, `top`, `kill`, `pgrep`, and dozens of other system utilities—is maintained as part of the **procps-ng** project.
+The `free` command (along with `ps`, `top`, `kill`, `pgrep`, and dozens of other system utilities) is maintained as part of the **procps-ng** project.
 
 ## Source repository
 
@@ -40,19 +40,19 @@ The `/proc` interface is Linux-specific; similar tools on other Unix systems may
 
 ## Key utilities in procps-ng
 
-- **free** — Display free, used, and cached memory
-- **ps** — List running processes with detailed information
-- **top** — Interactive real-time process and resource monitor
-- **htop** — Improved interactive process viewer (separate project, but similar role)
-- **pgrep/pkill** — Find and signal processes by name or attributes
-- **pmap** — Show memory map and resident set of a process
-- **vmstat** — Virtual memory statistics and I/O activity
-- **slabtop** — Kernel memory slab allocation in real time
-- **uptime** — System uptime and load average
-- **w** — Connected users and their active commands
-- **sysctl** — Read and modify kernel runtime parameters
-- **snice** — Change process priority by name
-- **watch** — Run a command repeatedly with full-screen output
+- **free**: Display free, used, and cached memory
+- **ps**: List running processes with detailed information
+- **top**: Interactive real-time process and resource monitor
+- **htop**: Improved interactive process viewer (separate project, but similar role)
+- **pgrep/pkill**: Find and signal processes by name or attributes
+- **pmap**: Show memory map and resident set of a process
+- **vmstat**: Virtual memory statistics and I/O activity
+- **slabtop**: Kernel memory slab allocation in real time
+- **uptime**: System uptime and load average
+- **w**: Connected users and their active commands
+- **sysctl**: Read and modify kernel runtime parameters
+- **snice**: Change process priority by name
+- **watch**: Run a command repeatedly with full-screen output
 
 Note: `skill` and `snice` are deprecated in favor of `pkill` and standard `nice`/`renice` commands.
 

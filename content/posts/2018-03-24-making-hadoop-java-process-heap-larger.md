@@ -64,7 +64,7 @@ For a 32GB node, consider these starting points:
 - **YARN ResourceManager**: 4–8GB for large clusters (\>100 nodes)
 - **YARN NodeManager**: 2–4GB (scale with number of containers)
 
-Never allocate all available memory to Java heaps—reserve 20–30% for OS, buffers, and other processes.
+Never allocate all available memory to Java heaps: reserve 20–30% for OS, buffers, and other processes.
 
 ## Applying Changes
 

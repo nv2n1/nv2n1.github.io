@@ -22,9 +22,9 @@ $url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_
 
 This reconstructs the scheme, host, and path. However, there are several caveats:
 
-- **HTTP_HOST includes the port** — if your site runs on port 8080, `HTTP_HOST` will be `example.com:8080`
-- **Trusting HTTP_HOST is a security risk** — the Host header comes directly from the client and can be spoofed. An attacker can inject arbitrary hosts to poison caches or bypass security checks
-- **REQUEST_URI includes query strings** — if you need just the path without query parameters, use `$_SERVER['SCRIPT_NAME']` or parse `REQUEST_URI` separately
+- **HTTP_HOST includes the port**: if your site runs on port 8080, `HTTP_HOST` will be `example.com:8080`
+- **Trusting HTTP_HOST is a security risk**: the Host header comes directly from the client and can be spoofed. An attacker can inject arbitrary hosts to poison caches or bypass security checks
+- **REQUEST_URI includes query strings**: if you need just the path without query parameters, use `$_SERVER['SCRIPT_NAME']` or parse `REQUEST_URI` separately
 
 ## More Robust Approach
 
@@ -101,7 +101,7 @@ $scheme = $_SERVER['HTTP_X_FORWARDED_PROTO'] ??
 $host = $_SERVER['HTTP_X_FORWARDED_HOST'] ?? $_SERVER['HTTP_HOST'];
 ```
 
-Frameworks like Laravel handle this automatically with the `TrustProxies` middleware—define which proxies you trust and which headers to use.
+Frameworks like Laravel handle this automatically with the `TrustProxies` middleware: define which proxies you trust and which headers to use.
 
 ## Security Notes
 

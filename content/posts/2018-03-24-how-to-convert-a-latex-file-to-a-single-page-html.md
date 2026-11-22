@@ -78,9 +78,9 @@ latex2html -split +0 -info "" -no_navigation doc.tex
 
 Breaking down the flags:
 
-- `-split +0` — prevents splitting into multiple files (single-page output)
-- `-info ""` — suppresses the info section
-- `-no_navigation` — removes navigation buttons
+- `-split +0`: prevents splitting into multiple files (single-page output)
+- `-info ""`: suppresses the info section
+- `-no_navigation`: removes navigation buttons
 
 This outputs an `index.html` file in a directory named `doc/`.
 

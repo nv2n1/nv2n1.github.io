@@ -10,7 +10,7 @@ canonical: /sorting-two-lists-together-according-to-the-order-of-one-list-in-pyt
 url: /sorting-two-lists-together-according-to-the-order-of-one-list-in-python/
 ---
 
-When working with paired data across multiple lists—like x and y coordinates—you often need to sort one list while maintaining the correspondence with another. The standard approach is using `zip()`, `sorted()`, and tuple unpacking.
+When working with paired data across multiple lists (like x and y coordinates) you often need to sort one list while maintaining the correspondence with another. The standard approach is using `zip()`, `sorted()`, and tuple unpacking.
 
 ## The Pattern
 
@@ -54,7 +54,7 @@ Result:
 [(1, 9), (2, 10), (3, 6), (5, 7), (6, 8)]
 ```
 
-`sorted()` orders tuples lexicographically by default—first by the first element, then by the second if tied.
+`sorted()` orders tuples lexicographically by default: first by the first element, then by the second if tied.
 
 **Step 3: Unpack back to separate lists**
 
@@ -121,7 +121,7 @@ For large datasets, this approach is efficient. The pattern:
 - Performs O(n log n) comparison sorting
 - Unpacks in O(n) time
 
-If you’re repeatedly sorting the same data with different keys, consider storing the data structure differently—like a list of named tuples or a Pandas DataFrame.
+If you’re repeatedly sorting the same data with different keys, consider storing the data structure differently, like a list of named tuples or a Pandas DataFrame.
 
 ``` python
 from collections import namedtuple

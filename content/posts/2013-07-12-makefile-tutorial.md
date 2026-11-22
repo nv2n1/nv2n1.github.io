@@ -12,7 +12,7 @@ url: /makefile-tutorial/
 
 Make is a build automation tool that reads configuration files (makefiles) to compile programs and manage project workflows. It’s been a standard in Unix/Linux development for decades and remains essential for managing builds where dependencies matter.
 
-Make works by defining targets and their dependencies, then specifying commands to build each target. When you run `make`, it determines which targets are out of date and rebuilds only what’s necessary—critical for large projects where recompiling everything wastes time.
+Make works by defining targets and their dependencies, then specifying commands to build each target. When you run `make`, it determines which targets are out of date and rebuilds only what’s necessary: critical for large projects where recompiling everything wastes time.
 
 ## Basic Makefile Structure
 
@@ -48,16 +48,16 @@ clean:
 .PHONY: all clean
 ```
 
-The `.PHONY` declaration tells Make that `all` and `clean` are not actual files—this prevents conflicts if you ever create files with those names.
+The `.PHONY` declaration tells Make that `all` and `clean` are not actual files: this prevents conflicts if you ever create files with those names.
 
 Breaking down the variables:
 
-- `$@` — the target filename
-- `$<` — first dependency
-- `$^` — all dependencies
-- `$?` — dependencies newer than target
-- `$(CC)` — C compiler
-- `$(CFLAGS)` — compiler flags
+- `$@`: the target filename
+- `$<`: first dependency
+- `$^`: all dependencies
+- `$?`: dependencies newer than target
+- `$(CC)`: C compiler
+- `$(CFLAGS)`: compiler flags
 
 ## Controlling Command Output
 
@@ -77,7 +77,7 @@ Running `make build` now produces only:
     Building project...
     Build complete
 
-Without the `@` symbols, you’d see the actual compiler invocation as well. Use `@` selectively—keep important build steps visible for debugging, but silence repetitive commands.
+Without the `@` symbols, you’d see the actual compiler invocation as well. Use `@` selectively: keep important build steps visible for debugging, but silence repetitive commands.
 
 ## Error Handling and Conditional Execution
 
@@ -210,13 +210,13 @@ clean:
 .PHONY: all clean
 ```
 
-The `|` operator indicates an order-only dependency—directories must exist before compilation but don’t trigger rebuilds.
+The `|` operator indicates an order-only dependency: directories must exist before compilation but don’t trigger rebuilds.
 
 ## Best Practices
 
 - Use variables for compiler flags, source files, and installation paths for easy maintenance
 - Declare `.PHONY` targets to avoid filename conflicts
-- Keep commands portable—avoid bash-only syntax if your project builds on different systems
+- Keep commands portable: avoid bash-only syntax if your project builds on different systems
 - Use meaningful echo messages to help users understand build progress
 - Test your Makefile with `make -n` before running it
 - Separate compilation from installation to keep builds reproducible

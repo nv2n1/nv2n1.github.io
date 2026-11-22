@@ -21,7 +21,7 @@ Single-user mode skips mounting filesystems listed in fstab, letting you fix the
 For GRUB 2 (standard on modern systems):
 
 1.  At the GRUB menu, press `e` to edit the default entry
-2.  Find the `linux` line (not `kernel` — that’s legacy GRUB)
+2.  Find the `linux` line (not `kernel`: that’s legacy GRUB)
 3.  Add `single` to the end of the kernel parameters
 4.  Press `Ctrl+x` to boot
 

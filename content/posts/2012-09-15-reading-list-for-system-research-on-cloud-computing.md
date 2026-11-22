@@ -10,7 +10,7 @@ canonical: /reading-list-for-system-research-on-cloud-computing/
 url: /reading-list-for-system-research-on-cloud-computing/
 ---
 
-Understanding distributed systems and cloud computing starts with the literature. These papers form the foundation for anyone working in the space — they’re not just historical artifacts, they’re still actively referenced and their design principles remain relevant.
+Understanding distributed systems and cloud computing starts with the literature. These papers form the foundation for anyone working in the space: they’re not just historical artifacts, they’re still actively referenced and their design principles remain relevant.
 
 ### Internet-Scale Systems and Datacenters
 
@@ -49,7 +49,7 @@ Modern systems like etcd, Consul, and ZooKeeper implement similar consensus prot
 
 - Ghemawat, S., Gobioff, H., and Leung, S. “The Google File System.” SOSP’03, 2003.
 
-GFS principles inform systems like HDFS, Ceph, and cloud storage backends today. The paper clearly addresses scalability, consistency guarantees, and fault tolerance — challenges that remain central.
+GFS principles inform systems like HDFS, Ceph, and cloud storage backends today. The paper clearly addresses scalability, consistency guarantees, and fault tolerance: challenges that remain central.
 
 ## Key-Value Stores and Databases
 
@@ -73,8 +73,8 @@ As systems matured, the limitations of eventual consistency became clear. Recent
 
 - Corbett, J. C. et al. “Spanner: Google’s Globally-Distributed Database.” OSDI’12, 2012.
 
-Spanner is particularly important — it shows how to provide ACID semantics across geographically distributed datacenters using synchronized clocks and careful engineering. Understanding the CAP theorem trade-offs and how Spanner navigates them is essential for modern systems work.
+Spanner is particularly important: it shows how to provide ACID semantics across geographically distributed datacenters using synchronized clocks and careful engineering. Understanding the CAP theorem trade-offs and how Spanner navigates them is essential for modern systems work.
 
 ## Where to Start
 
-If you’re new to this material, begin with “Paxos Made Simple” and the MapReduce paper — both are relatively accessible and provide context for everything else. Then move to GFS, Dynamo, and Bigtable as a coherent progression through the storage layer. Finally, study Spanner to see how modern systems handle the consistency problem at global scale.
+If you’re new to this material, begin with “Paxos Made Simple” and the MapReduce paper: both are relatively accessible and provide context for everything else. Then move to GFS, Dynamo, and Bigtable as a coherent progression through the storage layer. Finally, study Spanner to see how modern systems handle the consistency problem at global scale.

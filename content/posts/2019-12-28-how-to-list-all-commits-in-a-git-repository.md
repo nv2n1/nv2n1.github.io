@@ -163,14 +163,14 @@ git log --format="%h %s %an %ad" --date=short
 
 Useful format fields:
 
-- `%h` — abbreviated commit hash
-- `%H` — full commit hash
-- `%s` — subject line
-- `%b` — message body
-- `%an` — author name
-- `%ae` — author email
-- `%ad` — author date
-- `%ar` — author date (relative)
+- `%h`: abbreviated commit hash
+- `%H`: full commit hash
+- `%s`: subject line
+- `%b`: message body
+- `%an`: author name
+- `%ae`: author email
+- `%ad`: author date
+- `%ar`: author date (relative)
 
 Export as pipe-delimited for CSV processing:
 

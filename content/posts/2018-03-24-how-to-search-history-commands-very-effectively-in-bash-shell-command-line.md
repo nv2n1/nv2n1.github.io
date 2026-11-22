@@ -22,7 +22,7 @@ Press `Ctrl + R` to enter reverse-search mode. Type any part of the command you 
 
 Bash displays the most recent match. Press `Ctrl + R` again to cycle backward through older matches. Press `Ctrl + S` to search forward (if you’ve gone too far back). Hit `Enter` to execute or `Ctrl + G` to cancel without running anything.
 
-This works on every system with bash—no installation required.
+This works on every system with bash: no installation required.
 
 ### Optimizing Bash History Settings
 
@@ -107,7 +107,7 @@ cat /dev/null > ~/.bash_history
 
 **Zsh**: Default on macOS. Offers better completion and can be configured with frameworks like Oh My Zsh for enhanced history features including `!?` substring search.
 
-**Fish**: Friendly Interactive Shell provides automatic history search as you type by default—start typing and previous matching commands appear. No Ctrl + R needed. Trade-off: less portable than bash, rarely the system default.
+**Fish**: Friendly Interactive Shell provides automatic history search as you type by default: start typing and previous matching commands appear. No Ctrl + R needed. Trade-off: less portable than bash, rarely the system default.
 
 For most sysadmins, bash + fzf provides the best balance of compatibility and usability.
 

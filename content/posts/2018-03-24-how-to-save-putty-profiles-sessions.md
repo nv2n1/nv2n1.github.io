@@ -47,7 +47,7 @@ PuTTY stores saved SSH keys separately at `HKEY_CURRENT_USER\Software\SimonTatha
 regedit /e "%USERPROFILE%\Desktop\putty-ssh-keys.reg" HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\SshHostKeys
 ```
 
-This exports the known host key fingerprints. Your private keys (.ppk files) are stored on disk, not in the registry — back those up separately from wherever you saved them.
+This exports the known host key fingerprints. Your private keys (.ppk files) are stored on disk, not in the registry: back those up separately from wherever you saved them.
 
 ## Import on Another Machine
 

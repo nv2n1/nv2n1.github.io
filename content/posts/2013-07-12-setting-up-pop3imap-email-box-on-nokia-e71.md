@@ -83,7 +83,7 @@ This approach is more secure than enabling broad “less secure” access and pr
 
 ## Troubleshooting Connection Issues
 
-**Credentials failing**: Double-check username and password. Many providers accept either your full email address or just the username portion — verify with their documentation.
+**Credentials failing**: Double-check username and password. Many providers accept either your full email address or just the username portion: verify with their documentation.
 
 **Server not found**: Confirm your email provider’s exact server addresses and ports. Check:
 
@@ -93,7 +93,7 @@ This approach is more secure than enabling broad “less secure” access and pr
 
 **Connection timeout**: If you’re behind a firewall or restrictive network, port 587 for SMTP or port 993 for IMAP are less likely to be blocked than 25 or 110.
 
-**SSL/TLS errors**: Ensure you’re using the correct secure ports. Port 143 and 110 are unencrypted — switch to 993 and 995 respectively if the server supports SSL/TLS.
+**SSL/TLS errors**: Ensure you’re using the correct secure ports. Port 143 and 110 are unencrypted: switch to 993 and 995 respectively if the server supports SSL/TLS.
 
 ## Multi-Device Considerations
 

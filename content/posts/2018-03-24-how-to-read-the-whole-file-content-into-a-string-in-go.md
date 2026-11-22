@@ -78,7 +78,7 @@ This approach reads the file line-by-line, keeping memory usage constant regardl
 
 ## Preserving Line Breaks
 
-If you need to preserve the exact file content including line breaks, stick with the simple `os.ReadFile()` approach—it maintains the original formatting:
+If you need to preserve the exact file content including line breaks, stick with the simple `os.ReadFile()` approach: it maintains the original formatting:
 
 ``` go
 content, err := os.ReadFile("file.txt")

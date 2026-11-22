@@ -18,7 +18,7 @@ ssh-keygen -t ed25519 -C "your-email@example.com"
 
 Ed25519 keys are preferred over RSA for better security and performance. The command creates `~/.ssh/id_ed25519` (private key) and `~/.ssh/id_ed25519.pub` (public key). Share the public key with your Git server administrator to set up your account.
 
-Keep your private key secure—never share it or commit it to repositories.
+Keep your private key secure: never share it or commit it to repositories.
 
 ## SSH Configuration for Non-Standard Ports
 
@@ -102,7 +102,7 @@ You can also use `git add .` to stage all modified files, but it’s safer to be
 git commit -m "Fix authentication bug in login handler"
 ```
 
-Write clear commit messages—future you will thank you. Keep the first line under 50 characters and add details below if needed.
+Write clear commit messages: future you will thank you. Keep the first line under 50 characters and add details below if needed.
 
 **Push to the server:**
 

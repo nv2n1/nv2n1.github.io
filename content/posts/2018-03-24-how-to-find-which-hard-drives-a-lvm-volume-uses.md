@@ -10,7 +10,7 @@ canonical: /how-to-find-which-hard-drives-a-lvm-volume-uses/
 url: /how-to-find-which-hard-drives-a-lvm-volume-uses/
 ---
 
-When managing LVM storage, you need to know which physical disks support each logical volume — especially for risk assessment when hardware fails. This guide shows you how to trace those relationships.
+When managing LVM storage, you need to know which physical disks support each logical volume, especially for risk assessment when hardware fails. This guide shows you how to trace those relationships.
 
 ## Using lvdisplay to map extents
 

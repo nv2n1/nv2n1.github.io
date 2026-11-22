@@ -46,7 +46,7 @@ Common reasons Vim doesn’t detect the filetype:
 
 ## Ensure Filetype Detection Is Enabled
 
-The most common issue — add this to your `~/.vimrc`:
+The most common issue: add this to your `~/.vimrc`:
 
 ```wp-block-code
 filetype plugin indent on
@@ -92,7 +92,7 @@ au BufRead,BufNewFile *.conf set filetype=dosini
 au BufRead,BufNewFile *.env set filetype=sh
 ```
 
-Or use a modeline in the file itself — this works regardless of extension:
+Or use a modeline in the file itself: this works regardless of extension:
 
 ```wp-block-code
 # vim: set filetype=yaml :
@@ -102,10 +102,10 @@ Or use a modeline in the file itself — this works regardless of extension:
 
 Vim checks multiple sources to determine filetype, in this order:
 
-1.  **Modeline** — Inline comments in the file itself (highest priority)
-2.  **ftdetect scripts** — `~/.vim/ftdetect/*.vim` and system-wide scripts
-3.  **filetype.vim** — Global extension-to-filetype mappings
-4.  **Scripts in \$VIMRUNTIME** — Built-in detection rules shipped with Vim
+1.  **Modeline**: Inline comments in the file itself (highest priority)
+2.  **ftdetect scripts**: `~/.vim/ftdetect/*.vim` and system-wide scripts
+3.  **filetype.vim**: Global extension-to-filetype mappings
+4.  **Scripts in \$VIMRUNTIME**: Built-in detection rules shipped with Vim
 
 The last matching rule wins. If you have conflicting rules, the load order determines which takes effect.
 
@@ -113,23 +113,23 @@ The last matching rule wins. If you have conflicting rules, the load order deter
 
 Quick lookup for frequently used filetypes:
 
-- `c` — C source files (.c, .h)
-- `cpp` — C++ source files (.cpp, .hpp, .cc)
-- `python` — Python (.py)
-- `javascript` — JavaScript (.js, .mjs)
-- `typescript` — TypeScript (.ts)
-- `sh` — Shell scripts (.sh, .bash, .zsh)
-- `yaml` — YAML (.yml, .yaml)
-- `json` — JSON (.json)
-- `markdown` — Markdown (.md)
-- `html` — HTML (.html, .htm)
-- `css` — CSS (.css)
-- `go` — Go (.go)
-- `rust` — Rust (.rs)
-- `java` — Java (.java)
-- `tex` — LaTeX (.tex)
-- `dockerfile` — Dockerfile (Dockerfile\*)
-- `toml` — TOML (.toml)
+- `c`: C source files (.c, .h)
+- `cpp`: C++ source files (.cpp, .hpp, .cc)
+- `python`: Python (.py)
+- `javascript`: JavaScript (.js, .mjs)
+- `typescript`: TypeScript (.ts)
+- `sh`: Shell scripts (.sh, .bash, .zsh)
+- `yaml`: YAML (.yml, .yaml)
+- `json`: JSON (.json)
+- `markdown`: Markdown (.md)
+- `html`: HTML (.html, .htm)
+- `css`: CSS (.css)
+- `go`: Go (.go)
+- `rust`: Rust (.rs)
+- `java`: Java (.java)
+- `tex`: LaTeX (.tex)
+- `dockerfile`: Dockerfile (Dockerfile\*)
+- `toml`: TOML (.toml)
 
 ## Creating a Custom Filetype
 
@@ -191,9 +191,9 @@ Neovim’s approach is more structured than Vim’s autocommand method and handl
 
 ## Quick Reference
 
-- `:set ft=python` — Set filetype manually
-- `:set ft?` — Check current filetype
-- `:verbose set ft?` — Debug which script set it
-- `filetype plugin indent on` — Enable all filetype features
+- `:set ft=python`: Set filetype manually
+- `:set ft?`: Check current filetype
+- `:verbose set ft?`: Debug which script set it
+- `filetype plugin indent on`: Enable all filetype features
 - Modeline: `# vim: set filetype=yaml :`
-- `~/.vim/ftdetect/` — Custom detection rules directory
+- `~/.vim/ftdetect/`: Custom detection rules directory

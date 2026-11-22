@@ -23,7 +23,7 @@ S3 provides **strong read-after-write consistency** for:
 - DELETE operations
 - Both initial and subsequent requests to the same object
 
-All updates to a single object key are atomic. The exceptions that existed in earlier S3 documentation—regarding HEAD or GET requests before object creation—have been eliminated. S3 now guarantees strong consistency uniformly.
+All updates to a single object key are atomic. The exceptions that existed in earlier S3 documentation (regarding HEAD or GET requests before object creation) have been eliminated. S3 now guarantees strong consistency uniformly.
 
 List operations behave differently. The `ListObjects` and `ListObjectsV2` APIs are **eventually consistent by default**, meaning they may temporarily miss recently added or deleted objects. If you need immediate consistency on list results, you’ll need to track object keys separately or use DynamoDB for metadata.
 
@@ -38,7 +38,7 @@ DynamoDB is a fully managed NoSQL database with explicit consistency options per
 - **Strongly consistent reads:** Guaranteed to reflect all successful writes before the read. Costs 2× read capacity units.
 - **Eventually consistent reads (default):** May return stale data immediately after a write. Uses standard read capacity.
 
-Write operations always provide strong consistency—all writes are immediately durable and visible to subsequent reads. You don’t choose consistency for writes.
+Write operations always provide strong consistency: all writes are immediately durable and visible to subsequent reads. You don’t choose consistency for writes.
 
 **When to use each:**
 
@@ -46,7 +46,7 @@ Write operations always provide strong consistency—all writes are immediately 
 - Analytics, reporting, caches, or user session data: use eventual consistency to reduce costs
 - Hybrid approaches: perform strongly consistent reads for critical path operations and eventually consistent reads for secondary data
 
-DynamoDB’s flexible model lets you optimize cost per operation. However, this requires disciplined application code—developers must understand why each read uses its chosen consistency level.
+DynamoDB’s flexible model lets you optimize cost per operation. However, this requires disciplined application code: developers must understand why each read uses its chosen consistency level.
 
 ## Google Cloud Storage
 
@@ -61,13 +61,13 @@ Google Cloud Storage provides strong consistency for most operations within regi
 - Eventual consistency for access control revocations (permission removals may take several minutes to propagate globally)
 - All upload operations are atomic
 
-**Caching caveat:** When objects are cached—particularly publicly readable objects served through CDN or Google’s own edge caches—the cache layer serves data according to its TTL and invalidation policy. This is separate from storage consistency. A cached object may be stale relative to the current version in GCS, but that’s expected CDN behavior, not a storage consistency issue.
+**Caching caveat:** When objects are cached (particularly publicly readable objects served through CDN or Google’s own edge caches), the cache layer serves data according to its TTL and invalidation policy. This is separate from storage consistency. A cached object may be stale relative to the current version in GCS, but that’s expected CDN behavior, not a storage consistency issue.
 
 **Practical impact:** Cloud Storage is reliable for applications needing strong read-after-write semantics. Access control changes take time to propagate, so plan for gradual permission updates in security-sensitive workflows.
 
 ## Azure Storage
 
-Azure Storage guarantees strong consistency across all operations—a design that balances the CAP theorem constraints through careful replication.
+Azure Storage guarantees strong consistency across all operations: a design that balances the CAP theorem constraints through careful replication.
 
 **Azure provides:**
 

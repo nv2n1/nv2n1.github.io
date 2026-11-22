@@ -74,7 +74,7 @@ If gore feels sluggish, consider:
 
 ## Why not use bash/sh directly?
 
-Some developers try piping Go code to `go run /dev/stdin`. This works but isn’t a true REPL — you lose state between commands and lack the convenience of gore’s `:import` and introspection commands.
+Some developers try piping Go code to `go run /dev/stdin`. This works but isn’t a true REPL: you lose state between commands and lack the convenience of gore’s `:import` and introspection commands.
 
 ``` bash
 echo 'package main; import ("fmt"); func main() { fmt.Println(1+1) }' | go run /dev/stdin
@@ -84,7 +84,7 @@ It’s serviceable for one-off calculations but doesn’t replace an actual REPL
 
 ## Recommendation
 
-Use gore for interactive exploration and testing. Install it once and keep it in your PATH. For production testing or code that needs to persist, switch to test files or the standard `go run` workflow. The REPL is a convenience tool — not a replacement for proper testing practices.
+Use gore for interactive exploration and testing. Install it once and keep it in your PATH. For production testing or code that needs to persist, switch to test files or the standard `go run` workflow. The REPL is a convenience tool: not a replacement for proper testing practices.
 
 ## Practical Tips and Common Gotchas
 

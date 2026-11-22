@@ -29,7 +29,7 @@ Breaking this down:
 
 ## Important caveat: race conditions
 
-This approach has a critical limitation—it’s not atomic. If another process modifies the crontab between the `crontab -l` and `crontab -` operations, those changes are lost. In production environments with multiple admins or automation tools, this can cause silent data loss.
+This approach has a critical limitation: it’s not atomic. If another process modifies the crontab between the `crontab -l` and `crontab -` operations, those changes are lost. In production environments with multiple admins or automation tools, this can cause silent data loss.
 
 To minimize risk:
 
@@ -94,7 +94,7 @@ fi
 - The `crontab` command behavior may differ slightly across Linux distributions
 - SELinux or AppArmor policies may restrict crontab access
 
-For production automation, prefer system crontabs in `/etc/cron.d/` where possible—they’re more predictable and don’t involve user account complications.
+For production automation, prefer system crontabs in `/etc/cron.d/` where possible: they’re more predictable and don’t involve user account complications.
 
 ## Additional Tips and Best Practices
 

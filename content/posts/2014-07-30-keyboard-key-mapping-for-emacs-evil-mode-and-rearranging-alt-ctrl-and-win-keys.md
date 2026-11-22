@@ -10,13 +10,13 @@ canonical: /keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-an
 url: /keyboard-key-mapping-for-emacs-evil-mode-and-rearranging-alt-ctrl-and-win-keys/
 ---
 
-Emacs keybindings rely heavily on Ctrl because the editor was designed for Lisp machines in the 1970s—machines where Ctrl sat near the spacebar. Modern PC keyboards moved it to the corner, making constant reaches painful. Once millions of users built muscle memory around these bindings, changing them became impractical.
+Emacs keybindings rely heavily on Ctrl because the editor was designed for Lisp machines in the 1970s: machines where Ctrl sat near the spacebar. Modern PC keyboards moved it to the corner, making constant reaches painful. Once millions of users built muscle memory around these bindings, changing them became impractical.
 
 If modern keyboard ergonomics matter to you, several practical solutions exist.
 
 ## Evil Mode for Vim-Like Keybindings
 
-If you’re comfortable with Vim, Evil mode brings modal editing and home-row-friendly key mappings into Emacs while keeping Emacs’ power and extensibility. Your hands stay on the home row for cursor movement and editing—no constant Ctrl reaches.
+If you’re comfortable with Vim, Evil mode brings modal editing and home-row-friendly key mappings into Emacs while keeping Emacs’ power and extensibility. Your hands stay on the home row for cursor movement and editing: no constant Ctrl reaches.
 
 Install Evil with `use-package`:
 
@@ -141,7 +141,7 @@ setxkbmap -option altwin:swap_alt_win
 
 Software remapping can feel fragile if you work across multiple machines. Programmable keyboards provide system-independent remapping.
 
-Ergonomic split keyboards (Kinesis, ErgoDox, Lily58) let you customize key placement natively. Mechanical keyboards with QMK or VIA firmware (\$100–\$200) give you remapping that works everywhere—operating system independent.
+Ergonomic split keyboards (Kinesis, ErgoDox, Lily58) let you customize key placement natively. Mechanical keyboards with QMK or VIA firmware (\$100–\$200) give you remapping that works everywhere: operating system independent.
 
 A cost-effective approach: remap Caps Lock to Control (OS-level) plus a \$30 mechanical keyboard. This combination addresses most strain issues.
 

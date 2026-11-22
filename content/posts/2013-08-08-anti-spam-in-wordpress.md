@@ -38,7 +38,7 @@ Spambots register accounts to post promotional content, phishing links, or malwa
 
 **WPBruiser** combines honeypot fields, JavaScript behavior analysis, and optional CAPTCHA. It integrates cleanly with comment and registration forms and doesn’t require external services.
 
-**Strongest option:** If your site doesn’t require user-generated content, simply disable registration entirely in Settings → General → Membership. This eliminates the attack vector completely—no plugin needed.
+**Strongest option:** If your site doesn’t require user-generated content, simply disable registration entirely in Settings → General → Membership. This eliminates the attack vector completely: no plugin needed.
 
 ## Brute-Force Attack Prevention
 
@@ -67,7 +67,7 @@ Beyond plugins, enforce these practices:
 - Enable automatic core, theme, and plugin updates (Settings → General → WordPress Updates)
 - Install an SSL certificate (WordPress enforces HTTPS by default in version 6.0+)
 - Disable XML-RPC if you don’t use it: add `define('XMLRPC_REQUEST_FILTER_IPS', array('127.0.0.1'));` to wp-config.php
-- Limit login attempts to registered users only—many attacks target nonexistent accounts
+- Limit login attempts to registered users only: many attacks target nonexistent accounts
 
 ## Minimal Effective Plugin Stack
 

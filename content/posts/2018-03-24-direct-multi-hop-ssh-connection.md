@@ -146,7 +146,7 @@ The `-T` flag disables pseudoterminal allocation, useful for verifying connectiv
 - Restrict proxy access with firewall rules to only necessary ports and source IPs
 - Use different SSH keys for different security zones (bastion vs. internal hosts)
 - Monitor proxy logs for unusual connection patterns
-- Set `ProxyUseFdpass yes` in your config if your proxy is also an OpenSSH 5.4+ client—this avoids re-authentication on the proxy for subsequent hops
+- Set `ProxyUseFdpass yes` in your config if your proxy is also an OpenSSH 5.4+ client: this avoids re-authentication on the proxy for subsequent hops
 - Consider disabling password authentication on the proxy entirely and requiring SSH keys only
 
 ## Chaining without config (one-off connections)

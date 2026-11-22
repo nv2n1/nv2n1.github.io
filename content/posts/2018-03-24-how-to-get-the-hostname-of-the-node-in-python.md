@@ -146,10 +146,10 @@ def log_event(message: str) -> None:
 
 ### Summary
 
-- **`socket.gethostname()`** — Standard choice for most applications
-- **`socket.getfqdn()`** — Use when you need the full domain name
-- **`platform.node()`** — Cross-platform alternative to `socket.gethostname()`
-- **Containerized environments** — Explicitly set or inject the hostname via environment variables
+- **`socket.gethostname()`**: Standard choice for most applications
+- **`socket.getfqdn()`**: Use when you need the full domain name
+- **`platform.node()`**: Cross-platform alternative to `socket.gethostname()`
+- **Containerized environments**: Explicitly set or inject the hostname via environment variables
 
 For monitoring and logging systems, always cache the hostname at startup to avoid repeated system calls.
 

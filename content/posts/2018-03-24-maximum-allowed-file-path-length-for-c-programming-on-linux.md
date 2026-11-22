@@ -16,8 +16,8 @@ When writing C programs on Linux that handle file paths, you need to allocate bu
 
 On Linux systems, `<linux/limits.h>` provides two key macros:
 
-- `NAME_MAX` — maximum length of a single filename component (255 characters)
-- `PATH_MAX` — maximum length of a complete path including the null terminator (4096 characters)
+- `NAME_MAX`: maximum length of a single filename component (255 characters)
+- `PATH_MAX`: maximum length of a complete path including the null terminator (4096 characters)
 
 You can view these on your system:
 
@@ -101,7 +101,7 @@ Never use static large buffers in production code if you can avoid it. Instead:
 
 - Use dynamic allocation with `realpath()` or `canonicalize_file_name()` which handle sizing internally
 - Use functions that accept path length parameters (e.g., `getcwd()` takes a size argument)
-- Check return values — functions will fail if paths exceed allocated buffer size
+- Check return values: functions will fail if paths exceed allocated buffer size
 
 ``` c
 #include <stdlib.h>

@@ -38,7 +38,7 @@ If you need full-disk or partition-level encryption, BitLocker is built into Win
 manage-bde -on C:
 ```
 
-This encrypts your entire drive transparently. The trade-off is that all data on that partition is encrypted — you can’t selectively encrypt individual folders.
+This encrypts your entire drive transparently. The trade-off is that all data on that partition is encrypted: you can’t selectively encrypt individual folders.
 
 ### Windows EFS (Encrypting File System)
 
@@ -48,7 +48,7 @@ Windows has a built-in file-level encryption system accessible via file properti
 2.  Select **Properties** → **Advanced**
 3.  Check **Encrypt contents to secure data**
 
-This uses Windows’ Data Protection API (DPAPI) tied to your user account. It’s convenient for local protection but offers no portability — encrypted files can only be read on the same Windows installation with the same user account. If you reinstall Windows or move files to another machine, they become inaccessible.
+This uses Windows’ Data Protection API (DPAPI) tied to your user account. It’s convenient for local protection but offers no portability: encrypted files can only be read on the same Windows installation with the same user account. If you reinstall Windows or move files to another machine, they become inaccessible.
 
 ## If You Need EncFS Specifically
 
@@ -87,6 +87,6 @@ Mount your vault into the container, though this introduces complexity for regul
 - **For general folder encryption with cloud sync:** Use Cryptomator. It’s reliable, maintained, and does what EncFS does on Windows.
 - **For transparent full-disk protection:** Use BitLocker if you have Windows Pro/Enterprise.
 - **If you have existing EncFS vaults:** Migrate them to Cryptomator format or keep them in a Linux VM/WSL environment.
-- **For maximum compatibility across operating systems:** Cryptomator again — it’s the only solution that works consistently everywhere.
+- **For maximum compatibility across operating systems:** Cryptomator again: it’s the only solution that works consistently everywhere.
 
 Most developers and sysadmins migrating from Linux find Cryptomator sufficient. If you absolutely need EncFS behavior, a lightweight WSL2 environment with EncFS running inside works, but it’s unnecessary complexity in most cases.

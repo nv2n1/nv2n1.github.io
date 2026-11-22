@@ -18,10 +18,10 @@ ps2pdf -dPDFSETTINGS=/printer file.ps file.pdf
 
 The `/printer` setting produces high-quality output appropriate for publication. Other available quality settings include:
 
-- `/screen` — lowest quality, smallest file size
-- `/ebook` — medium quality, reasonable file size
-- `/printer` — high quality, suitable for printing
-- `/prepress` — highest quality, for professional printing
+- `/screen`: lowest quality, smallest file size
+- `/ebook`: medium quality, reasonable file size
+- `/printer`: high quality, suitable for printing
+- `/prepress`: highest quality, for professional printing
 
 ## Embedding Fonts
 

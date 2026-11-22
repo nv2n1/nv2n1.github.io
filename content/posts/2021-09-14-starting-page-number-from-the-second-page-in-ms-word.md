@@ -30,7 +30,7 @@ Once you’ve enabled different first page formatting:
 2.  Go to **Insert** \> **Page Number**
 3.  Choose your desired position (top of page, bottom of page, margins, etc.)
 
-At this point, Word will show page numbers starting from “2” on your second page—because it’s counting from the actual page position.
+At this point, Word will show page numbers starting from “2” on your second page, because it’s counting from the actual page position.
 
 ## Start Numbering from 1 on Page 2
 
@@ -44,7 +44,7 @@ Now your second page will display as “1”, third page as “2”, and so on. 
 
 ## Using Section Breaks for More Control
 
-If you need finer control—for example, you have multiple sections with different numbering schemes—you can use section breaks instead:
+If you need finer control (for example, you have multiple sections with different numbering schemes) you can use section breaks instead:
 
 1.  Place your cursor at the end of page 1
 2.  Go to **Layout** \> **Breaks** \> **Next Page** (this creates a section break)

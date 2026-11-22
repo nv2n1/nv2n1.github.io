@@ -18,26 +18,26 @@ PUMA (Princeton University MapReduce Benchmark) is a comprehensive benchmark sui
 
 The suite includes three benchmarks from the standard Hadoop distribution:
 
-- **TeraSort** — measures raw I/O and sorting performance
-- **WordCount** — tests text processing and basic aggregation patterns
-- **Grep** — evaluates filtering and pattern matching efficiency
+- **TeraSort**: measures raw I/O and sorting performance
+- **WordCount**: tests text processing and basic aggregation patterns
+- **Grep**: evaluates filtering and pattern matching efficiency
 
 The remaining ten benchmarks were developed specifically for PUMA to capture workload characteristics often absent from standard distributions:
 
-- **Aggregate** — group-by operations with variable selectivity
-- **Join** — multi-dataset correlation and merge patterns
-- **Bayes** — statistical computations and iterative algorithms
-- **PageRank** — graph processing with high shuffle volumes
-- **Kmeans** — clustering algorithms with iterative refinement
+- **Aggregate**: group-by operations with variable selectivity
+- **Join**: multi-dataset correlation and merge patterns
+- **Bayes**: statistical computations and iterative algorithms
+- **PageRank**: graph processing with high shuffle volumes
+- **Kmeans**: clustering algorithms with iterative refinement
 - And several others targeting specific computation-to-shuffle ratios
 
 ## Why PUMA Matters
 
 The key strength of PUMA is its comprehensive approach to workload classification. Benchmarks are deliberately constructed to exhibit combinations of:
 
-- **High/low computation intensity** — CPU-bound vs. I/O-bound phases
-- **High/low shuffle volumes** — network and disk I/O stress patterns
-- **Varying data distributions** — skewed vs. uniform datasets
+- **High/low computation intensity**: CPU-bound vs. I/O-bound phases
+- **High/low shuffle volumes**: network and disk I/O stress patterns
+- **Varying data distributions**: skewed vs. uniform datasets
 
 This matrix of characteristics exposes performance bottlenecks that simpler benchmarks miss. A MapReduce framework that excels at WordCount may struggle with shuffle-heavy join operations, and PUMA reveals these tradeoffs.
 

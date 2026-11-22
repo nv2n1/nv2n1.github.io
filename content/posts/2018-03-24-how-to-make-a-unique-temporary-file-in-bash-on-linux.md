@@ -23,7 +23,7 @@ echo "Temporary file created at: $tmpfile"
 rm "$tmpfile"
 ```
 
-By default, `mktemp` creates files in `/tmp` with the mode `0600` (readable and writable only by the owner). This is secure — the file won’t be accessible to other users.
+By default, `mktemp` creates files in `/tmp` with the mode `0600` (readable and writable only by the owner). This is secure: the file won’t be accessible to other users.
 
 For a template that makes your intent clear:
 
@@ -89,7 +89,7 @@ This approach keeps related temporary files organized without sacrificing unique
 **Don’t use `$$` alone for uniqueness:**
 
 ``` bash
-# Bad — PID alone can collide across multiple runs
+# Bad: PID alone can collide across multiple runs
 tmpfile="/tmp/data.$$.txt"
 ```
 
@@ -98,21 +98,21 @@ Process IDs can be reused rapidly, especially in containerized environments. `mk
 **Don’t hardcode paths:**
 
 ``` bash
-# Bad — what if /tmp is full or doesn't exist?
+# Bad: what if /tmp is full or doesn't exist?
 tmpfile="/tmp/myfile"
 ```
 
 Some systems mount `/tmp` with `noexec`. Use `TMPDIR` environment variable or let `mktemp` handle it:
 
 ``` bash
-# Good — respects TMPDIR environment variable
+# Good: respects TMPDIR environment variable
 tmpfile=$(mktemp)
 ```
 
 **Don’t forget quoting:**
 
 ``` bash
-# Bad — if tmpfile contains spaces, the script breaks
+# Bad: if tmpfile contains spaces, the script breaks
 rm $tmpfile
 
 # Good

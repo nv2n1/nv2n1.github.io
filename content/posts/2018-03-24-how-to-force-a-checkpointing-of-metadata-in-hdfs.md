@@ -107,11 +107,11 @@ If edit logs exceed 500MB, a checkpoint becomes urgent for recovery speed. Perfo
 
 ## Common Issues
 
-**“Checkpoint already in progress”** — Wait for the previous checkpoint to complete. Check Secondary NameNode status in the web UI.
+**“Checkpoint already in progress”**: Wait for the previous checkpoint to complete. Check Secondary NameNode status in the web UI.
 
-**Slow checkpoint on large clusters** — This is normal. The Secondary NameNode needs time to download, merge, and re-upload the fsimage. For multi-terabyte namespaces, expect 5-15 minutes.
+**Slow checkpoint on large clusters**: This is normal. The Secondary NameNode needs time to download, merge, and re-upload the fsimage. For multi-terabyte namespaces, expect 5-15 minutes.
 
-**Edit logs not shrinking after checkpoint** — Verify the Secondary NameNode successfully uploaded the new fsimage by checking its logs for “Upload successful” messages. If missing, check network connectivity and storage space on both NameNode and Secondary NameNode.
+**Edit logs not shrinking after checkpoint**: Verify the Secondary NameNode successfully uploaded the new fsimage by checking its logs for “Upload successful” messages. If missing, check network connectivity and storage space on both NameNode and Secondary NameNode.
 
 ## Safe Practices
 
@@ -121,4 +121,4 @@ Always checkpoint before major maintenance:
 - Firmware updates on storage systems
 - Planned cluster restarts
 
-Never force checkpoints back-to-back—allow 30+ seconds between operations for proper fsimage rotation.
+Never force checkpoints back-to-back: allow 30+ seconds between operations for proper fsimage rotation.

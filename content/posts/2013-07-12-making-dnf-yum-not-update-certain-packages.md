@@ -10,7 +10,7 @@ canonical: /making-dnf-yum-not-update-certain-packages/
 url: /making-dnf-yum-not-update-certain-packages/
 ---
 
-You may need to prevent certain packages from being updated during system maintenance—the kernel on production servers, or specific library versions you’ve carefully tuned. When you run `dnf update` or `yum update`, you want those packages skipped entirely.
+You may need to prevent certain packages from being updated during system maintenance: the kernel on production servers, or specific library versions you’ve carefully tuned. When you run `dnf update` or `yum update`, you want those packages skipped entirely.
 
 The solution is straightforward: add an exclusion to DNF or YUM’s configuration file.
 
@@ -91,7 +91,7 @@ yum update --exclude='kernel*'
 
 ## Excluding Installonly Packages
 
-The kernel and some other packages use DNF’s `installonly_limit` setting—they’re designed to keep multiple versions installed. These packages don’t remove old versions during updates; they install alongside.
+The kernel and some other packages use DNF’s `installonly_limit` setting: they’re designed to keep multiple versions installed. These packages don’t remove old versions during updates; they install alongside.
 
 Check which packages are treated as installonly:
 

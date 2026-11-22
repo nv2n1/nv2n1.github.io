@@ -31,7 +31,7 @@ The most frequent culprit is a line that got split across multiple lines during 
     pages
     kernel.shmall = 4294967296
 
-Here, the comment on line 43 is incomplete — it mentions “in” but doesn’t finish the thought. The word “pages” ends up on its own line (44), which is invalid syntax. This should be:
+Here, the comment on line 43 is incomplete: it mentions “in” but doesn’t finish the thought. The word “pages” ends up on its own line (44), which is invalid syntax. This should be:
 
     # Controls the maximum number of shared memory segments, in pages
     kernel.shmall = 4294967296

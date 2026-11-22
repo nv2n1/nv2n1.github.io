@@ -36,7 +36,7 @@ This disables the block editor globally. The `GUTENBERG_PHASE` constant set to `
 
 If you want to keep the block editor but only disable the legacy visual editor in classic posts, omit that line and use the user-level settings or programmatic approaches instead.
 
-Note: `DISALLOW_FILE_EDIT` is sometimes confused with editor disabling, but it actually prevents editing themes and plugins through the admin interface—a separate security concern.
+Note: `DISALLOW_FILE_EDIT` is sometimes confused with editor disabling, but it actually prevents editing themes and plugins through the admin interface: a separate security concern.
 
 ## Disable for Specific Users
 

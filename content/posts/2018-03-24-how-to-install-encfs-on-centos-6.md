@@ -10,7 +10,7 @@ canonical: /how-to-install-encfs-on-centos-6/
 url: /how-to-install-encfs-on-centos-6/
 ---
 
-EncFS provides an encrypted filesystem in user space — files are encrypted on the fly and stored in an existing directory. It’s lighter than LUKS and doesn’t require root access or dedicated partitions. Here’s how to set it up on CentOS 6.
+EncFS provides an encrypted filesystem in user space: files are encrypted on the fly and stored in an existing directory. It’s lighter than LUKS and doesn’t require root access or dedicated partitions. Here’s how to set it up on CentOS 6.
 
 ## Install EncFS
 
@@ -40,7 +40,7 @@ encfs ~/.encrypted ~/encrypted
 On first run, EncFS asks configuration questions:
 
 - **Security level:** Choose “p” for paranoid (AES-256, 4096-bit key) or “x” for expert mode
-- **Password:** Set a strong encryption password — this cannot be recovered if lost
+- **Password:** Set a strong encryption password: this cannot be recovered if lost
 
 After setup, `~/encrypted` is your decrypted view. Any files placed here are automatically encrypted and stored in `~/.encrypted`.
 
@@ -96,23 +96,23 @@ tar -czf encrypted_backup.tar.gz ~/.encrypted/
 rsync -av ~/.encrypted/ user@backup-server:~/encrypted_backup/
 ```
 
-The backup contains encrypted filenames and content — no plaintext is exposed. The `.encfs6.xml` configuration file must also be backed up separately, as you need both the password and the config to decrypt.
+The backup contains encrypted filenames and content: no plaintext is exposed. The `.encfs6.xml` configuration file must also be backed up separately, as you need both the password and the config to decrypt.
 
 ## EncFS vs Other Encryption Tools
 
 **EncFS vs LUKS:**
 
-- EncFS — no root needed, uses existing directory, slower, per-file encryption
-- LUKS — needs root, dedicated partition/volume, faster, block-level encryption
+- EncFS: no root needed, uses existing directory, slower, per-file encryption
+- LUKS: needs root, dedicated partition/volume, faster, block-level encryption
 
 **EncFS vs CryFS:**
 
-- CryFS — similar concept but hides file sizes and directory structure better
-- EncFS — more mature, faster, but leaks some metadata (file sizes, approximate names)
+- CryFS: similar concept but hides file sizes and directory structure better
+- EncFS: more mature, faster, but leaks some metadata (file sizes, approximate names)
 
 **EncFS vs gocryptfs:**
 
-- gocryptfs — Go-based, actively maintained, better performance than EncFS
-- EncFS — older, some known security weaknesses in default configuration
+- gocryptfs: Go-based, actively maintained, better performance than EncFS
+- EncFS: older, some known security weaknesses in default configuration
 
 For new projects in 2026, gocryptfs or CryFS are generally recommended over EncFS due to active maintenance and stronger security defaults.

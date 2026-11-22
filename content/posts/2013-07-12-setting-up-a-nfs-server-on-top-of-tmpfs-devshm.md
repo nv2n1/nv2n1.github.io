@@ -35,7 +35,7 @@ sudo systemctl status nfs-server
 
 ## Configuring /dev/shm Export
 
-Edit `/etc/exports` and add an entry for `/dev/shm`. The critical requirement is the `fsid` option—NFS uses this to uniquely identify the filesystem for NFSv3 and protocol negotiation:
+Edit `/etc/exports` and add an entry for `/dev/shm`. The critical requirement is the `fsid` option: NFS uses this to uniquely identify the filesystem for NFSv3 and protocol negotiation:
 
 ``` bash
 # /etc/exports
@@ -44,9 +44,9 @@ Edit `/etc/exports` and add an entry for `/dev/shm`. The critical requirement is
 
 Breaking down the options:
 
-- `rw` — read/write access
-- `fsid=1` — assigns a unique filesystem ID (required for pseudo-filesystems like tmpfs)
-- `sync` — ensure writes are committed to storage before responding (safer, slightly slower)
+- `rw`: read/write access
+- `fsid=1`: assigns a unique filesystem ID (required for pseudo-filesystems like tmpfs)
+- `sync`: ensure writes are committed to storage before responding (safer, slightly slower)
 
 Alternatively, use `async` if you prioritize speed over durability for temporary data:
 
@@ -56,8 +56,8 @@ Alternatively, use `async` if you prioritize speed over durability for temporary
 
 Other useful options to consider:
 
-- `no_subtree_check` — improves performance by skipping subtree permission checks (acceptable for temporary exports)
-- `no_all_squash` — preserves UID/GID mapping from clients (use `all_squash` to map all requests to a specific user if you need isolation)
+- `no_subtree_check`: improves performance by skipping subtree permission checks (acceptable for temporary exports)
+- `no_all_squash`: preserves UID/GID mapping from clients (use `all_squash` to map all requests to a specific user if you need isolation)
 
 A more complete example:
 
@@ -79,7 +79,7 @@ The `-a` flag applies all entries. Verify the export was registered:
 sudo exportfs -v
 ```
 
-You should see `/dev/shm` listed with the fsid option. Check for warnings—if exportfs complains, review your syntax.
+You should see `/dev/shm` listed with the fsid option. Check for warnings: if exportfs complains, review your syntax.
 
 ## Mounting from a Client
 

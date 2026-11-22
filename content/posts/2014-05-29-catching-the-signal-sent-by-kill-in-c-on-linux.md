@@ -10,25 +10,25 @@ canonical: /catching-the-signal-sent-by-kill-in-c-on-linux/
 url: /catching-the-signal-sent-by-kill-in-c-on-linux/
 ---
 
-Programs need to shut down gracefully—saving state, closing connections, flushing buffers—rather than terminating abruptly. A daemon might receive a termination signal and need to persist in-memory data before exiting. The challenge is catching these signals in C and responding appropriately.
+Programs need to shut down gracefully (saving state, closing connections, flushing buffers) rather than terminating abruptly. A daemon might receive a termination signal and need to persist in-memory data before exiting. The challenge is catching these signals in C and responding appropriately.
 
 ## Signal basics
 
 The `kill` command sends `SIGTERM` by default. This signal is catchable and allows for graceful shutdown.
 
-`kill -9` sends `SIGKILL`, which cannot be caught, blocked, or ignored—the process terminates immediately. `SIGSTOP` also cannot be caught or ignored. Understanding this distinction is critical: you cannot make `SIGKILL` safe. If graceful shutdown is essential, rely on `SIGTERM`.
+`kill -9` sends `SIGKILL`, which cannot be caught, blocked, or ignored: the process terminates immediately. `SIGSTOP` also cannot be caught or ignored. Understanding this distinction is critical: you cannot make `SIGKILL` safe. If graceful shutdown is essential, rely on `SIGTERM`.
 
 `Ctrl-C` from the terminal sends `SIGINT`, which is also catchable.
 
 ## Using sigaction to catch signals
 
-The `sigaction()` system call is the modern, portable way to install signal handlers. Avoid the older `signal()` function—it has inconsistent behavior across platforms and less control.
+The `sigaction()` system call is the modern, portable way to install signal handlers. Avoid the older `signal()` function: it has inconsistent behavior across platforms and less control.
 
 ### Key rules for signal handlers
 
 **Only call async-signal-safe functions.** These functions won’t corrupt internal state if called during another function’s execution. Safe functions include: `write()`, `exit()`, `_Exit()`, `signal()`, `sigaction()`, `atomic` operations. Unsafe functions: `printf()`, `malloc()`, `pthread_*`, `syslog()`, most library functions.
 
-**Keep handlers short and simple.** Do minimal work in the handler itself—typically just setting a flag.
+**Keep handlers short and simple.** Do minimal work in the handler itself: typically just setting a flag.
 
 **Use `sigaction()` with `SA_SIGINFO`** to get additional context about the signal through the `siginfo_t` structure.
 
@@ -91,7 +91,7 @@ gcc -o daemon daemon.c
 kill $!
 ```
 
-The handler sets a flag rather than performing complex work. The main loop checks the flag and exits cleanly. The `volatile sig_atomic_t` is crucial—it guarantees atomic reads and prevents the compiler from caching the value in a register.
+The handler sets a flag rather than performing complex work. The main loop checks the flag and exits cleanly. The `volatile sig_atomic_t` is crucial: it guarantees atomic reads and prevents the compiler from caching the value in a register.
 
 ## Catching multiple signals
 
@@ -155,11 +155,11 @@ sigaddset(&set, SIGTERM);
 sigaddset(&set, SIGINT);
 
 sigprocmask(SIG_BLOCK, &set, &oldset);
-/* Critical section—signals are queued until unblocked */
+/* Critical section: signals are queued until unblocked */
 sigprocmask(SIG_SETMASK, &oldset, NULL);
 ```
 
-Blocked signals are queued and delivered once unblocked. In multi-threaded programs, use `pthread_sigmask()` instead—it blocks signals per-thread.
+Blocked signals are queued and delivered once unblocked. In multi-threaded programs, use `pthread_sigmask()` instead: it blocks signals per-thread.
 
 ## Common signals and their uses
 

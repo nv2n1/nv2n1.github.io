@@ -44,9 +44,9 @@ ocamlopt -o example unix.cmxa example.ml
 
 For arbitrary C functions, you need to write OCaml stubs. This involves:
 
-1.  **C stub file** (`mylib_stubs.c`) — wraps the C function
-2.  **OCaml interface** (`mylib.mli`) — declares the OCaml function
-3.  **Dune or Makefile** — compiles both
+1.  **C stub file** (`mylib_stubs.c`): wraps the C function
+2.  **OCaml interface** (`mylib.mli`): declares the OCaml function
+3.  **Dune or Makefile**: compiles both
 
 ### Simple Example: Wrapping a C Function
 
@@ -143,16 +143,16 @@ external use_ptr : opaque_ptr -> unit = "caml_use_ptr"
 
 ## Resources
 
-- **Official Manual**: <a href="https://v2.ocaml.org/manual/index.html" rel="nofollow noopener" target="_blank">Chapter 20: Interfacing C with OCaml</a> — comprehensive reference
+- **Official Manual**: <a href="https://v2.ocaml.org/manual/index.html" rel="nofollow noopener" target="_blank">Chapter 20: Interfacing C with OCaml</a>: comprehensive reference
 - **Ctypes Library**: Alternative to hand-written stubs; safer and easier for complex bindings
 - **OCaml FFI Best Practices**: Memory management, garbage collection interaction, and error handling
 
 ## Common Pitfalls
 
-- **Forgetting `CAMLparam`/`CAMLreturn`** — these manage the OCaml stack and garbage collector
-- **Not protecting heap allocations** — use `caml_copy_string()` and similar functions
-- **Mixing OCaml and C calling conventions** — always wrap C functions in the stub layer
-- **Mismatched types** — `Int_val()` extracts int, `Val_int()` wraps it; strings require `String_val()` and `caml_copy_string()`
+- **Forgetting `CAMLparam`/`CAMLreturn`**: these manage the OCaml stack and garbage collector
+- **Not protecting heap allocations**: use `caml_copy_string()` and similar functions
+- **Mixing OCaml and C calling conventions**: always wrap C functions in the stub layer
+- **Mismatched types**: `Int_val()` extracts int, `Val_int()` wraps it; strings require `String_val()` and `caml_copy_string()`
 
 For complex C libraries, consider using **Ctypes** or code generation tools rather than hand-written stubs. This reduces maintenance burden and safety issues.
 

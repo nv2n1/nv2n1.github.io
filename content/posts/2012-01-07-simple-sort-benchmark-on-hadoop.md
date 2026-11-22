@@ -14,7 +14,7 @@ Running benchmarks after a Hadoop installation helps validate that your cluster 
 
 ## What the Sort Benchmark Does
 
-The Sort benchmark uses MapReduce to sort an input directory into an output directory. The mapper and reducer are both identity operations — they pass data through unchanged. This means performance differences reflect the overhead of the MapReduce framework itself, HDFS I/O, and network shuffling between nodes, rather than any computational complexity in the application logic.
+The Sort benchmark uses MapReduce to sort an input directory into an output directory. The mapper and reducer are both identity operations: they pass data through unchanged. This means performance differences reflect the overhead of the MapReduce framework itself, HDFS I/O, and network shuffling between nodes, rather than any computational complexity in the application logic.
 
 The benchmark uses Sequence files with BytesWritable keys and values as input and output formats. This format is common in Hadoop workloads and better represents real-world distributed processing than plain text.
 

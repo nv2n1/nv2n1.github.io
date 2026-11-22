@@ -45,8 +45,8 @@ setenv LD_LIBRARY_PATH /opt/lib
 
 csh distinguishes between shell variables and environment variables:
 
-– `setenv` — creates an environment variable (inherited by child processes)
-– `set` — creates a shell variable (local to current shell only)
+– `setenv`: creates an environment variable (inherited by child processes)
+– `set`: creates a shell variable (local to current shell only)
 
 ```wp-block-code
 # Environment variable - child processes see this
@@ -139,13 +139,13 @@ If you’re coming from bash, these differences catch people out:
 – csh uses `unsetenv` instead of `unset` (for env vars)
 – csh syntax doesn’t support `VARIABLE=value` at the shell prompt (that’s a POSIX shell feature)
 – Variable references require `$` prefix
-– No `export` command — use `setenv` directly
+– No `export` command: use `setenv` directly
 – No inline variable assignment like bash’s `VAR=val command`
 
 Quick reference for common bash-to-csh translations:
 
 \| Bash \| csh/tcsh \|
-\|——\|———-\|
+\|--\|----\|
 \| `export VAR=val` \| `setenv VAR val` \|
 \| `VAR=val` \| `set VAR = val` \|
 \| `unset VAR` \| `unsetenv VAR` \|

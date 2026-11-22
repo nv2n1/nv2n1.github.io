@@ -64,7 +64,7 @@ If you call `fsync()` after `fclose()`, it won’t work:
 FILE *fp = fopen("data.txt", "w");
 fprintf(fp, "important data");
 fclose(fp);
-fsync(fileno(fp));  // Error — fp is already closed
+fsync(fileno(fp));  // Error: fp is already closed
 ```
 
 Instead, sync the file descriptor before closing:
@@ -222,7 +222,7 @@ fprintf(fp, "data");  // Undefined behavior
 ``` c
 FILE *fp = fopen("file.txt", "r");
 if (some_error_condition) {
-    return 1;  // fp never closed — resource leak
+    return 1;  // fp never closed: resource leak
 }
 fclose(fp);
 ```

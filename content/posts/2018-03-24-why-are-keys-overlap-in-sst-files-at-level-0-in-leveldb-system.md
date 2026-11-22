@@ -42,7 +42,7 @@ Now Level 0 contains overlapping ranges:
 - SSTable \#1 covers keys \[1–9\]
 - SSTable \#2 covers keys \[1–90\]
 
-Both files contain the key “1” and “2” with potentially different values—that’s the overlap.
+Both files contain the key “1” and “2” with potentially different values: that’s the overlap.
 
 ## How Compaction Resolves Overlaps
 
@@ -57,7 +57,7 @@ Continuing the example:
 - **Merge input:** SSTable \#1 {1, 2, 3, 8, 9, 9} + SSTable \#2 {1, 2, 8, 30, 90, 90} + Level 1 SSTable {1, 90}
 - **Merge output:** Consolidated Level 1 SSTables with no overlaps, e.g., {1, 2, 3, 8, 9, 30, 90}
 
-In Level 1 and beyond, key ranges are non-overlapping—you can binary search to find which SSTable contains a key without reading all files.
+In Level 1 and beyond, key ranges are non-overlapping: you can binary search to find which SSTable contains a key without reading all files.
 
 ## Why This Matters for Operations
 

@@ -30,7 +30,7 @@ This handles the key edge cases:
 - **Directory is last in PATH**: The `(:|$)` suffix matches either a colon or end of string
 - **Trailing slashes**: The pattern accounts for both `/usr/local/mytool/bin` and `/usr/local/mytool/bin/`
 
-Note: This approach doesn’t handle all edge cases — for example, if `/usr/local/mytool/bin` appears as a substring within another path like `/usr/local/mytool/bin2`, it will match. For most practical purposes this is acceptable, but be aware of the limitation.
+Note: This approach doesn’t handle all edge cases, for example, if `/usr/local/mytool/bin` appears as a substring within another path like `/usr/local/mytool/bin2`, it will match. For most practical purposes this is acceptable, but be aware of the limitation.
 
 ## The parameter expansion approach
 
@@ -99,7 +99,7 @@ fi
 
 - **Shell expansion**: These checks only see the current shell’s `$PATH`. They won’t detect changes made by parent shells or login scripts.
 - **Trailing slashes**: The case statement approach treats `/usr/local/mytool/bin` and `/usr/local/mytool/bin/` as identical, which is usually desired behavior.
-- **Symlinks**: These checks compare paths as strings — they don’t resolve symlinks. If you need to verify that the actual directory exists, combine with `test -d`.
+- **Symlinks**: These checks compare paths as strings: they don’t resolve symlinks. If you need to verify that the actual directory exists, combine with `test -d`.
 
 ## Combining with directory existence check
 

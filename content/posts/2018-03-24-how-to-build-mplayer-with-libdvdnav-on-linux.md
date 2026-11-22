@@ -28,7 +28,7 @@ sudo apt-get install build-essential yasm libdvdnav-dev libdvdread-dev \
   libasound2-dev libfontconfig1-dev libfreetype6-dev
 ```
 
-The key package here is `libdvdnav-devel` (or `libdvdnav-dev`), which provides the DVD navigation library. Include audio support packages matching your system’s audio server — `alsa-lib-devel` for ALSA or `pipewire-jack-devel` for modern PipeWire systems.
+The key package here is `libdvdnav-devel` (or `libdvdnav-dev`), which provides the DVD navigation library. Include audio support packages matching your system’s audio server: `alsa-lib-devel` for ALSA or `pipewire-jack-devel` for modern PipeWire systems.
 
 ## Obtaining and Extracting the Source
 

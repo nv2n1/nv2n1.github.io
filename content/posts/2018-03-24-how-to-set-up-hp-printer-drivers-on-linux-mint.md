@@ -137,4 +137,4 @@ To view all configured printers and remove via GUI:
 sudo system-config-printer
 ```
 
-Most HP printers—including multifunction devices—work reliably on Linux once HPLIP is properly installed. If you encounter driver issues on a specific model, check the <a href="https://hplipopensource.com/hplip-web/supported_devices/printers" rel="nofollow noopener" target="_blank">HPLIP Supported Printers database</a> to confirm your model is supported and note any quirks for that device.
+Most HP printers (including multifunction devices) work reliably on Linux once HPLIP is properly installed. If you encounter driver issues on a specific model, check the <a href="https://hplipopensource.com/hplip-web/supported_devices/printers" rel="nofollow noopener" target="_blank">HPLIP Supported Printers database</a> to confirm your model is supported and note any quirks for that device.

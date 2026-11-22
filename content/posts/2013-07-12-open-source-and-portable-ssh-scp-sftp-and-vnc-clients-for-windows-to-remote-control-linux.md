@@ -45,7 +45,7 @@ When using these tools over untrusted networks:
 
 - Use SSH tunneling to wrap VNC connections: `ssh -L 5900:localhost:5900 user@remote`. Then connect your VNC viewer to `localhost:5900`.
 - Prefer key-based SSH authentication over passwords.
-- Restrict VNC to localhost and access it only through SSH tunnels—never expose VNC directly to the network.
+- Restrict VNC to localhost and access it only through SSH tunnels: never expose VNC directly to the network.
 - Keep your SSH client updated. If using built-in Windows SSH, run `winget upgrade` regularly.
 
 ## Command-Line Alternatives (Windows 10+)

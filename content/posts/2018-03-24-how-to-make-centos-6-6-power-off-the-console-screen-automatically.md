@@ -117,7 +117,7 @@ If power-off still doesn’t work after removing `nomodeset`:
 - Check BIOS settings for display power management options
 - Verify your GPU driver is loaded: `lsmod | grep -E "nouveau|amdgpu|i915"`
 - Try adding `pcie_port_pm=off` to GRUB if using PCIe devices
-- Some VM environments don’t support DPMS—check if you’re in a virtual machine
+- Some VM environments don’t support DPMS: check if you’re in a virtual machine
 
 ## References
 

@@ -59,7 +59,7 @@ Git matches the hostname in your URL to the `Host` entry and applies the corresp
 
 ## Common Patterns
 
-**Multiple accounts on the same server** — use host aliases:
+**Multiple accounts on the same server**: use host aliases:
 
     Host github-work
       HostName github.com
@@ -97,7 +97,7 @@ Test the configuration without cloning:
 ssh -T git@github.com
 ```
 
-This connects and authenticates without performing git operations — useful for verifying setup.
+This connects and authenticates without performing git operations: useful for verifying setup.
 
 ## Ed25519 Keys (Modern Alternative)
 
@@ -117,7 +117,7 @@ Then reference in config:
 - SSH checks `~/.ssh/config` before attempting authentication, so the right key is always selected automatically
 - The `Host` value in the config file must match the hostname in your git remote URL exactly (unless you use `HostName` to redirect)
 - If a server rejects your key, verify the public key is added to that server’s authorized_keys and that file permissions are correct (700 for the directory, 600 for the file)
-- You can test multiple identities with `IdentityFile` entries — SSH tries them in order until one works
+- You can test multiple identities with `IdentityFile` entries: SSH tries them in order until one works
 
 ## Git Workflow Tips
 

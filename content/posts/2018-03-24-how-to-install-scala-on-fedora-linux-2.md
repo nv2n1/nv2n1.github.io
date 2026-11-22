@@ -138,12 +138,12 @@ Most libraries support both Scala 2.13 and Scala 3. For new projects, use Scala 
 
 ## Quick Reference
 
-- `Coursier setup` — Install Scala and tools (recommended)
-- `sdk install scala` — SDKMAN method
-- `sudo dnf install scala` — System package
-- `sbt new scala/scala3.g8` — Create new project from template
-- `sbt run` — Build and run
-- `sbt console` — REPL with project dependencies
+- `Coursier setup`: Install Scala and tools (recommended)
+- `sdk install scala`: SDKMAN method
+- `sudo dnf install scala`: System package
+- `sbt new scala/scala3.g8`: Create new project from template
+- `sbt run`: Build and run
+- `sbt console`: REPL with project dependencies
 
 ## Building and Running Scala Projects
 

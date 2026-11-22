@@ -20,9 +20,9 @@ On modern iPhones with Face ID (iPhone X and later), swipe down from the top-rig
 
 In the WiFi section of Control Center:
 
-- Tap the WiFi icon to disconnect from your current network (it doesn’t disable WiFi entirely—it just disconnects)
+- Tap the WiFi icon to disconnect from your current network (it doesn’t disable WiFi entirely: it just disconnects)
 - To fully disable WiFi, go to Settings \> WiFi and toggle it off
-- The Bluetooth icon works similarly—tapping it in Control Center disconnects from paired devices without fully disabling Bluetooth
+- The Bluetooth icon works similarly: tapping it in Control Center disconnects from paired devices without fully disabling Bluetooth
 
 For complete disabling without using Settings:
 
@@ -62,12 +62,12 @@ On iOS 16 and later, you can customize your Control Center layout by going to Se
 
 When troubleshooting network connectivity:
 
-- ping host – Test basic connectivity
-- traceroute host – Trace the path packets take
-- ss -tulpn – Show listening ports
-- ip addr show – Display network interfaces
-- nmcli device status – NetworkManager device status
-- curl -I url – Check HTTP headers
+- ping host: Test basic connectivity
+- traceroute host: Trace the path packets take
+- ss -tulpn: Show listening ports
+- ip addr show: Display network interfaces
+- nmcli device status: NetworkManager device status
+- curl -I url: Check HTTP headers
 
 ## Quick Reference
 

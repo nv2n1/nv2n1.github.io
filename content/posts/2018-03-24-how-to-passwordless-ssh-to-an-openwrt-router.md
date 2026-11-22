@@ -24,7 +24,7 @@ Make sure you have an SSH key pair on your local machine. If you don’t have on
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
-Ed25519 keys are preferred over RSA for their security and smaller size — important on resource-constrained routers. If you need RSA for legacy compatibility, use `-t rsa -b 4096` instead.
+Ed25519 keys are preferred over RSA for their security and smaller size: important on resource-constrained routers. If you need RSA for legacy compatibility, use `-t rsa -b 4096` instead.
 
 ## Add your public key to Dropbear
 

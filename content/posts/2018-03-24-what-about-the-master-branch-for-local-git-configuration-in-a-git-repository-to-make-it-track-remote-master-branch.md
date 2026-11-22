@@ -79,7 +79,7 @@ git config branch.main.merge
 
 ## Default Branch Names
 
-Most repositories now use `main` as the default branch instead of `master`. When you clone a repository, Git automatically checks out the default branch and sets up tracking for it. If you’re working with an older repository still using `master`, the same commands apply—just substitute `master` for `main`.
+Most repositories now use `main` as the default branch instead of `master`. When you clone a repository, Git automatically checks out the default branch and sets up tracking for it. If you’re working with an older repository still using `master`, the same commands apply: just substitute `master` for `main`.
 
 ## Why This Matters
 

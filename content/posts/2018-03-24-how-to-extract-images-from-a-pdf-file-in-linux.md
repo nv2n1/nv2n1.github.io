@@ -131,7 +131,7 @@ Arch:
 sudo pacman -S poppler imagemagick ghostscript pdftk
 ```
 
-Start with pdfimages for most workflows—it’s lightweight, fast, and extracts embedded images without rasterization. Switch to ImageMagick or Ghostscript when you need page rendering or more granular control over output format and quality.
+Start with pdfimages for most workflows: it’s lightweight, fast, and extracts embedded images without rasterization. Switch to ImageMagick or Ghostscript when you need page rendering or more granular control over output format and quality.
 
 ### GUI Option: LibreOffice Draw
 

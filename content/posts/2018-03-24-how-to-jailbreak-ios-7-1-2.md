@@ -18,7 +18,7 @@ iOS 7.1.2 was released in 2014, and jailbreaking it today is neither practical n
 
 **App incompatibility**: The modern App Store no longer supports iOS 7.1.2. Most apps require iOS 13 or higher. Even if you jailbreak, you can’t install current versions of messaging apps, banking software, or other tools you’d actually use.
 
-**Device obsolescence**: iPhone 4S was last supported by iOS 5.1. The “iOS 7.1.2” claim suggests confusion—iPhone 4S maxes out at iOS 5.1.1. Even if you have a compatible device from that era, the hardware is too slow for practical modern use.
+**Device obsolescence**: iPhone 4S was last supported by iOS 5.1. The “iOS 7.1.2” claim suggests confusion: iPhone 4S maxes out at iOS 5.1.1. Even if you have a compatible device from that era, the hardware is too slow for practical modern use.
 
 **Wi-Fi and cellular issues**: iOS 7 doesn’t support modern Wi-Fi 6 or LTE bands. You’ll have severe connectivity problems on current networks.
 
@@ -38,13 +38,13 @@ iOS 7.1.2 was released in 2014, and jailbreaking it today is neither practical n
 
 **Better alternatives:**
 
-- Use a modern iPhone with current iOS—security and app support matter
+- Use a modern iPhone with current iOS: security and app support matter
 - For development testing, use Xcode simulators or TestFlight
 - For legacy app access, use macOS Rosetta or virtualization instead
 
 ## The bottom line
 
-Jailbreaking iOS 7.1.2 in 2026 is a historical curiosity, not a practical solution. The ecosystem has moved on, and the security risks far outweigh any benefits. If you have questions about running old iOS versions for specific purposes (device collection, development archaeology, etc.), ask—but active use isn’t viable.
+Jailbreaking iOS 7.1.2 in 2026 is a historical curiosity, not a practical solution. The ecosystem has moved on, and the security risks far outweigh any benefits. If you have questions about running old iOS versions for specific purposes (device collection, development archaeology, etc.), ask, but active use isn’t viable.
 
 ## Quick Reference
 

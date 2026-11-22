@@ -10,7 +10,7 @@ canonical: /how-to-convert-a4-paper-format-to-read-on-kindle-5/
 url: /how-to-convert-a4-paper-format-to-read-on-kindle-5/
 ---
 
-A4-sized PDFs—particularly technical papers and academic documents—render poorly on Kindle devices. The small fonts become nearly unreadable, and Amazon’s “Send to Kindle” feature often destroys formatting in the process. You need a tool designed specifically for this workflow.
+A4-sized PDFs (particularly technical papers and academic documents) render poorly on Kindle devices. The small fonts become nearly unreadable, and Amazon’s “Send to Kindle” feature often destroys formatting in the process. You need a tool designed specifically for this workflow.
 
 ## Why Standard Conversion Fails
 
@@ -123,7 +123,7 @@ done
 
 **Equations aren’t rendering**: Some PDFs have embedded fonts issues. Try converting to an intermediate format first using `gs` (Ghostscript) or `pdftops`.
 
-k2pdfopt isn’t perfect for every PDF—some heavily formatted research papers may still require manual adjustment—but it handles the vast majority of technical documents far better than any automated service. For dense academic papers, it’s the most practical solution available on Linux.
+k2pdfopt isn’t perfect for every PDF (some heavily formatted research papers may still require manual adjustment), but it handles the vast majority of technical documents far better than any automated service. For dense academic papers, it’s the most practical solution available on Linux.
 
 ## 2026 Comprehensive Guide: Best Practices
 

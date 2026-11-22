@@ -26,7 +26,7 @@ Place this file in the root directory you want to protect. The directive automat
 
 The `Options -Indexes` directive removes the `Indexes` option from Apache’s module behavior. Without it, Apache cannot generate a directory listing when someone requests a directory URL without a specific file. Visitors will instead receive a 403 Forbidden error.
 
-This approach preserves full file access—users can still download files if they know the exact path. Only the automatic directory listing is disabled.
+This approach preserves full file access: users can still download files if they know the exact path. Only the automatic directory listing is disabled.
 
 ## Alternative Methods
 
@@ -87,7 +87,7 @@ sudo service apache2 reload
 
 - `.htaccess` has performance overhead compared to server configuration. For high-traffic sites, move directives to the main Apache config.
 - Some hosting providers disable `.htaccess` via `AllowOverride None` for security reasons. Contact your host if directives aren’t working.
-- Disabling directory listing is basic security-through-obscurity. Don’t rely on it as your only protection for sensitive files—use proper authentication and access controls.
+- Disabling directory listing is basic security-through-obscurity. Don’t rely on it as your only protection for sensitive files: use proper authentication and access controls.
 - Ensure sensitive files have restrictive file permissions as an additional layer: `chmod 600 sensitive.txt`
 
 ## 2026 Best Practices and Advanced Techniques

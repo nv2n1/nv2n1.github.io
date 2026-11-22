@@ -117,7 +117,7 @@ cat /etc/fstab
 
 ## Step 5: Reboot and Change Firmware Settings
 
-Reboot into your system BIOS/UEFI firmware (usually F2, F10, Del, or Esc during startup—check your motherboard manual).
+Reboot into your system BIOS/UEFI firmware (usually F2, F10, Del, or Esc during startup: check your motherboard manual).
 
 - Disable Legacy/BIOS boot mode
 - Enable UEFI boot mode

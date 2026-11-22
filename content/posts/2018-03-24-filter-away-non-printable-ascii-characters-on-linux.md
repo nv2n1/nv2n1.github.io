@@ -10,7 +10,7 @@ canonical: /filter-away-non-printable-ascii-characters-on-linux/
 url: /filter-away-non-printable-ascii-characters-on-linux/
 ---
 
-When processing text files or command output, non-printable ASCII characters corrupt formatting, break parsing, or create unexpected behavior. You need the right tool for your specific case — whether you’re stripping control characters, handling UTF-8, or cleaning up embedded escape sequences.
+When processing text files or command output, non-printable ASCII characters corrupt formatting, break parsing, or create unexpected behavior. You need the right tool for your specific case, whether you’re stripping control characters, handling UTF-8, or cleaning up embedded escape sequences.
 
 ## Understanding Printable ASCII
 
@@ -21,7 +21,7 @@ The standard printable ASCII range includes:
 - Carriage Return (hex 0D)
 - Printable characters (hex 20–7E)
 
-Everything outside this range — including null bytes, bell characters, and escape sequences — is non-printable. The challenge is deciding what to preserve based on your input data.
+Everything outside this range (including null bytes, bell characters, and escape sequences) is non-printable. The challenge is deciding what to preserve based on your input data.
 
 ## Using tr for Direct Filtering
 
@@ -59,7 +59,7 @@ Or to remove only control characters:
 sed 's/[[:cntrl:]]//g' input.txt > output.txt
 ```
 
-The `[:cntrl:]` class is useful when processing UTF-8 files — it strips control codes without damaging multibyte sequences.
+The `[:cntrl:]` class is useful when processing UTF-8 files: it strips control codes without damaging multibyte sequences.
 
 ## Handling UTF-8 Properly
 
@@ -85,7 +85,7 @@ Log files often contain color codes and formatting sequences. Strip these with a
 cat messy.log | tr -d '[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]' | sed 's/\x1B\[[0-9;]*m//g' > clean.log
 ```
 
-The first `tr` command removes control characters. The second `sed` command strips ANSI SGR (Select Graphic Rendition) codes — the escape sequences that handle colors and text attributes.
+The first `tr` command removes control characters. The second `sed` command strips ANSI SGR (Select Graphic Rendition) codes: the escape sequences that handle colors and text attributes.
 
 For more aggressive cleanup that also removes other escape sequences:
 
@@ -97,9 +97,9 @@ sed 's/\x1B\[[^m]*m//g' input.txt > output.txt
 
 For large files:
 
-- **tr** — Fastest. Optimized for character-by-character translation. Use this when possible.
-- **sed** — Moderate speed. Better for complex patterns or multiple transformations in one pass.
-- **grep** — Slowest for this use case. Line-buffered and overkill for character filtering.
+- **tr**: Fastest. Optimized for character-by-character translation. Use this when possible.
+- **sed**: Moderate speed. Better for complex patterns or multiple transformations in one pass.
+- **grep**: Slowest for this use case. Line-buffered and overkill for character filtering.
 
 For typical log processing (100MB files), `tr` completes in milliseconds while `sed` takes seconds.
 
@@ -133,4 +133,4 @@ tail -f application.log | tr -d '[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]'
 
 **Testing what characters are present:** Use `od -c input.txt | head` to see all characters in octal, or `hexdump -C input.txt | head` for hex view.
 
-Choose `tr` for straightforward filtering — it’s fast, simple, and reliable. Use `sed` when combining filtering with other transformations. Avoid overthinking it; the hex range `\x00-\x08\x0B\x0C\x0E-\x1F\x7F` removes all problematic control characters without damaging valid data.
+Choose `tr` for straightforward filtering: it’s fast, simple, and reliable. Use `sed` when combining filtering with other transformations. Avoid overthinking it; the hex range `\x00-\x08\x0B\x0C\x0E-\x1F\x7F` removes all problematic control characters without damaging valid data.

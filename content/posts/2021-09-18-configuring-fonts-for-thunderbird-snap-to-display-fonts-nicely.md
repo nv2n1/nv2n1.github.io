@@ -10,7 +10,7 @@ canonical: /configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
 url: /configuring-fonts-for-thunderbird-snap-to-display-fonts-nicely/
 ---
 
-Snaps bundle applications with their dependencies to work across distributions, but this isolation creates compatibility gaps. One common problem with Thunderbird snap is missing or incorrectly rendered fonts—a direct result of how fontconfig is handled inside the snap sandbox.
+Snaps bundle applications with their dependencies to work across distributions, but this isolation creates compatibility gaps. One common problem with Thunderbird snap is missing or incorrectly rendered fonts: a direct result of how fontconfig is handled inside the snap sandbox.
 
 ## Why Thunderbird snap doesn’t use system fonts
 
@@ -67,7 +67,7 @@ Your modified file should look like:
 </fontconfig>
 ```
 
-The `ignore_missing="yes"` attribute ensures fontconfig won’t fail if paths don’t exist—useful for portability across systems with different font configurations.
+The `ignore_missing="yes"` attribute ensures fontconfig won’t fail if paths don’t exist: useful for portability across systems with different font configurations.
 
 After saving, close Thunderbird completely and reopen it. The system font configuration should now apply.
 

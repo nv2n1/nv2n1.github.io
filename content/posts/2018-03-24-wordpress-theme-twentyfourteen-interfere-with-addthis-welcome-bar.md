@@ -33,10 +33,10 @@ The simplest solution is to override the placeholder’s positioning to prevent 
 
 You have several options:
 
-- **Child theme stylesheet** — Add the rule to your child theme’s `style.css` (recommended for maintainability)
-- **Theme customizer** — Go to **Appearance → Customize → Additional CSS** and paste the rule there
-- **Custom CSS plugins** — Use <a href="https://wordpress.org/plugins/custom-css-js/" rel="nofollow noopener" target="_blank">Simple Custom CSS and JS</a> or similar
-- **functions.php** — Enqueue a custom stylesheet in your theme’s `functions.php`:
+- **Child theme stylesheet**: Add the rule to your child theme’s `style.css` (recommended for maintainability)
+- **Theme customizer**: Go to **Appearance → Customize → Additional CSS** and paste the rule there
+- **Custom CSS plugins**: Use <a href="https://wordpress.org/plugins/custom-css-js/" rel="nofollow noopener" target="_blank">Simple Custom CSS and JS</a> or similar
+- **functions.php**: Enqueue a custom stylesheet in your theme’s `functions.php`:
 
 ``` php
 function fix_addthis_placeholder() {
@@ -56,9 +56,9 @@ Setting `position: absolute` removes the element from the document flow, so it n
 
 If the above doesn’t fully resolve your issue:
 
-- **Adjust the bar’s offset** — Some AddThis configurations let you set a negative margin on the bar itself to overlap the gap
-- **Move the bar placement** — Consider placing the Welcome Bar lower on the page rather than at the very top, which can sidestep layout conflicts entirely
-- **Disable and use inline sharing** — If the Welcome Bar causes persistent problems, disable it and use inline AddThis buttons instead
+- **Adjust the bar’s offset**: Some AddThis configurations let you set a negative margin on the bar itself to overlap the gap
+- **Move the bar placement**: Consider placing the Welcome Bar lower on the page rather than at the very top, which can sidestep layout conflicts entirely
+- **Disable and use inline sharing**: If the Welcome Bar causes persistent problems, disable it and use inline AddThis buttons instead
 
 ## Note on modern alternatives
 

@@ -41,9 +41,9 @@ If the installer still auto-detects incorrectly, use manual partitioning:
 2.  Delete any auto-created GPT partition table
 3.  Create a new MBR/MS-DOS partition table
 4.  Create your partitions:
-    - `/boot` — 1 GiB, Linux (type 83)
-    - `/` — remaining space, Linux (type 83)
-    - Optionally swap — Linux Swap (type 82)
+    - `/boot`: 1 GiB, Linux (type 83)
+    - `/`: remaining space, Linux (type 83)
+    - Optionally swap: Linux Swap (type 82)
 5.  Mark the `/boot` partition as bootable (set the boot flag)
 6.  Do not create an ESP (EFI System Partition)
 
@@ -110,7 +110,7 @@ If you see both MBR and GPT markers, remove the GPT table:
 sudo parted /dev/sda mklabel msdos
 ```
 
-This will destroy the partition table—back up your data first. Repartition and reinstall if necessary.
+This will destroy the partition table: back up your data first. Repartition and reinstall if necessary.
 
 **BIOS not recognizing the boot partition**
 

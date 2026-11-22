@@ -100,7 +100,7 @@ The number at the end is the priority (higher wins in automatic mode). View the 
 sudo update-alternatives --config editor
 ```
 
-This method is cleaner than environment variables for system-wide defaults and integrates with package management — if you remove a package, the alternative is automatically cleaned up.
+This method is cleaner than environment variables for system-wide defaults and integrates with package management: if you remove a package, the alternative is automatically cleaned up.
 
 ## Override the Editor for a Single Command
 
@@ -182,7 +182,7 @@ If your editor isn’t launching when expected:
 2.  Test the editor directly with an empty file: `$EDITOR /tmp/test.txt`
 3.  Check that the path exists: `which $EDITOR` or `ls -l $(which $EDITOR)`
 4.  Try setting `VISUAL` explicitly if `EDITOR` doesn’t work
-5.  Some tools (like git) read from config files instead — check `git config core.editor`
+5.  Some tools (like git) read from config files instead: check `git config core.editor`
 
 For git specifically, configure it directly:
 

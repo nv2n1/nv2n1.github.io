@@ -25,8 +25,8 @@ That’s it. On a fresh Ubuntu server, this should be one of your first installa
 
 The `zlib1g-dev` package includes:
 
-- **libz.so** — the runtime library
-- **zlib.h** — the header file needed for compilation
+- **libz.so**: the runtime library
+- **zlib.h**: the header file needed for compilation
 - Development tools for linking against zlib
 
 If you only need the runtime library (not development), `zlib1g` is sufficient. For almost all use cases though, grab the `-dev` version.
@@ -99,7 +99,7 @@ While newer compression algorithms like Zstandard (zstd) and Brotli offer better
 
 **HTTP Compression**: The majority of web traffic still uses gzip compression, which is built on Zlib. Most HTTP clients and servers support it natively.
 
-**Universal Support**: Every major programming language—Python, Node.js, Go, Rust, C++—has built-in or readily available Zlib bindings. This makes it the safest choice for compressing data that needs to move between different systems or languages.
+**Universal Support**: Every major programming language (Python, Node.js, Go, Rust, C++) has built-in or readily available Zlib bindings. This makes it the safest choice for compressing data that needs to move between different systems or languages.
 
 **Legacy Compatibility**: Countless existing tools, file formats (PNG, ZIP, PDF), and network protocols depend on Zlib. You’ll encounter it constantly in real-world systems.
 
@@ -113,7 +113,7 @@ If you’re setting up a development environment, also consider:
 sudo apt install libssl-dev libcurl4-openssl-dev libreadline-dev libbz2-dev
 ```
 
-These cover OpenSSL, curl, readline, and bzip2—all commonly needed alongside zlib when compiling from source.
+These cover OpenSSL, curl, readline, and bzip2: all commonly needed alongside zlib when compiling from source.
 
 ## 2026 Best Practices and Advanced Techniques
 

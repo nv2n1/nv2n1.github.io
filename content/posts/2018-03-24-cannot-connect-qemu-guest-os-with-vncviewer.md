@@ -100,7 +100,7 @@ This forwards the remote QEMU VNC port through your SSH tunnel.
 
 While VNC remains functional, consider these modern options for better performance and features:
 
-- **SPICE** (Simple Protocol for Independent Computing Environments) — better performance than VNC, built into QEMU:
+- **SPICE** (Simple Protocol for Independent Computing Environments): better performance than VNC, built into QEMU:
 
   ``` bash
   qemu-system-x86_64 -hda disk.img -spice port=5930,disable-ticketing=on
@@ -108,9 +108,9 @@ While VNC remains functional, consider these modern options for better performan
 
   Connect with `remote-viewer spice://127.0.0.1:5930`
 
-- **RDP/Remote Desktop** — if your guest OS supports it (Windows, some Linux DMs)
+- **RDP/Remote Desktop**: if your guest OS supports it (Windows, some Linux DMs)
 
-- **SSH X11 forwarding** — lightweight for graphical apps without full desktop access
+- **SSH X11 forwarding**: lightweight for graphical apps without full desktop access
 
 ## Troubleshooting
 

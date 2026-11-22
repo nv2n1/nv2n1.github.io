@@ -10,7 +10,7 @@ canonical: /how-to-activate-or-deactivate-a-linux-host-with-gnome-remotely/
 url: /how-to-activate-or-deactivate-a-linux-host-with-gnome-remotely/
 ---
 
-Controlling a GNOME desktop remotely—locking the display, activating the screensaver, or blanking the screen—requires you to interact with the running GNOME session. The approach depends on your GNOME version and what you’re trying to accomplish.
+Controlling a GNOME desktop remotely (locking the display, activating the screensaver, or blanking the screen) requires you to interact with the running GNOME session. The approach depends on your GNOME version and what you’re trying to accomplish.
 
 ## Using systemd User Sessions and D-Bus
 

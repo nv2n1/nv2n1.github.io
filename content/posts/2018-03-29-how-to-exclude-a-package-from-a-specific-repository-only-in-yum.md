@@ -138,7 +138,7 @@ This clears all exclusions for that command only.
 - Repository-level exclusions take precedence over global settings
 - Wildcards use shell globbing (not regex): `nginx*`, `php-*`, `kernel-*`
 - Exclusions apply to both install and update operations
-- If you exclude a package that’s required as a dependency, DNF will fail — use module streams or dependency resolution instead
+- If you exclude a package that’s required as a dependency, DNF will fail: use module streams or dependency resolution instead
 - Check `/var/log/dnf.log` to see which packages were skipped due to exclusions
 
 ## 2026 Comprehensive Guide: Best Practices

@@ -38,10 +38,10 @@ sudo pacman -S gnome-tweaks
 
 Open GNOME Tweaks and navigate to the **Appearance** tab (in newer versions) or **Fonts** section. You can customize:
 
-- **Interface Font** — controls UI elements (buttons, menus, labels)
-- **Document Font** — used in text editors and document viewers
-- **Monospace Font** — applied to terminals and code editors
-- **Legacy Window Titles** — titlebar font (if available in your GNOME version)
+- **Interface Font**: controls UI elements (buttons, menus, labels)
+- **Document Font**: used in text editors and document viewers
+- **Monospace Font**: applied to terminals and code editors
+- **Legacy Window Titles**: titlebar font (if available in your GNOME version)
 
 Changes apply immediately in most cases. If they don’t, restart GNOME Shell:
 
@@ -158,7 +158,7 @@ For lower-level control and discovery of undocumented settings, install `dconf-e
 sudo dnf install dconf-editor
 ```
 
-Navigate to `org.gnome.desktop.interface` to view all font-related keys. This is useful for discovering hidden options but be cautious—changing wrong values can break your desktop. Always note the original value before changing anything.
+Navigate to `org.gnome.desktop.interface` to view all font-related keys. This is useful for discovering hidden options but be cautious: changing wrong values can break your desktop. Always note the original value before changing anything.
 
 ## Listing Available Fonts
 

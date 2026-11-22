@@ -26,10 +26,10 @@ This works regardless of the visual mode you used (character, line, or block). T
 
 Alternatively, you can use Vim’s automatic marks that track visual selection boundaries. After you select text and exit visual mode, Vim sets these marks:
 
-- `'<` — first line of the selection
-- `'>` — last line of the selection
-- `` `< `` — starting character position
-- `` `> `` — ending character position
+- `'<`: first line of the selection
+- `'>`: last line of the selection
+- `` `< ``: starting character position
+- `` `> ``: ending character position
 
 You can reference these marks directly in a substitution command:
 
@@ -44,7 +44,7 @@ This is often the more intuitive approach since you can see the line range in th
 Here’s how it works in practice:
 
 1.  Select your target text in visual mode (or visual line mode with `V`, or visual block mode with `Ctrl-v`)
-2.  Press `:` — Vim automatically prefills `:'<,'>` in the command line
+2.  Press `:`: Vim automatically prefills `:'<,'>` in the command line
 3.  Type your substitution: `s/from/to/gc`
 
 The `g` flag replaces all occurrences per line, and `c` prompts for confirmation on each match.
@@ -78,7 +78,7 @@ To replace from the selection start to the end of the file:
 :'<,$s/from/to/gc
 ```
 
-Both approaches handle multiline selections identically. Choose whichever feels more natural for your workflow—many users prefer `'<,'>` for its visibility and control.
+Both approaches handle multiline selections identically. Choose whichever feels more natural for your workflow: many users prefer `'<,'>` for its visibility and control.
 
 ## Essential Vim Configuration
 

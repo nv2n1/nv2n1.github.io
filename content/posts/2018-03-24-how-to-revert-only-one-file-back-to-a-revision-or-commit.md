@@ -108,7 +108,7 @@ Git 2.23+ introduced `git restore` as a clearer alternative:
 git restore --source=commit_sha1 my_file.name
 ```
 
-This is functionally identical to `git checkout` but has clearer semantics — checkout is primarily for switching branches, while restore explicitly restores files.
+This is functionally identical to `git checkout` but has clearer semantics: checkout is primarily for switching branches, while restore explicitly restores files.
 
 **Using `git reset` for unstaged changes:**
 

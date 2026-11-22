@@ -10,7 +10,7 @@ canonical: /how-to-do-diff-like-git-diff-word-diff-without-git-on-linux/
 url: /how-to-do-diff-like-git-diff-word-diff-without-git-on-linux/
 ---
 
-The `git diff --word-diff` output is clean and readable for tracking changes at the word level instead of line-by-line. If you need that functionality outside a git repository—or just want a standalone tool—`wdiff` is purpose-built for exactly this.
+The `git diff --word-diff` output is clean and readable for tracking changes at the word level instead of line-by-line. If you need that functionality outside a git repository (or just want a standalone tool) `wdiff` is purpose-built for exactly this.
 
 ## Using wdiff for word-level diffs
 

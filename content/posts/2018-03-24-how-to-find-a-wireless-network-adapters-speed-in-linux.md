@@ -10,7 +10,7 @@ canonical: /how-to-find-a-wireless-network-adapters-speed-in-linux/
 url: /how-to-find-a-wireless-network-adapters-speed-in-linux/
 ---
 
-When troubleshooting wireless performance, you need to know both the negotiated link speed and actual throughput. `ethtool` won’t help here — it’s for wired interfaces. For wireless adapters, you’ll need different tools depending on what information you’re after.
+When troubleshooting wireless performance, you need to know both the negotiated link speed and actual throughput. `ethtool` won’t help here: it’s for wired interfaces. For wireless adapters, you’ll need different tools depending on what information you’re after.
 
 ## Using iwconfig for link speed
 
@@ -32,7 +32,7 @@ Output example:
               Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
               Tx excessive retries:4  Invalid misc:1084   Missed beacon:0
 
-The **Bit Rate** field shows the current link speed (58.5 Mb/s in this case). Keep in mind this is the negotiated rate with the access point — not necessarily the actual throughput you’ll see in practice.
+The **Bit Rate** field shows the current link speed (58.5 Mb/s in this case). Keep in mind this is the negotiated rate with the access point: not necessarily the actual throughput you’ll see in practice.
 
 ## Using iw for detailed connection info
 
@@ -104,11 +104,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

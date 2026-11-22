@@ -50,7 +50,7 @@ modinfo ixgbe
 
 ## Loading multiple modules
 
-If you need to load several related modules, add them all to the same file or create separate files — both approaches work fine:
+If you need to load several related modules, add them all to the same file or create separate files: both approaches work fine:
 
 ``` bash
 sudo tee /etc/modules-load.d/network-drivers.conf << EOF
@@ -146,11 +146,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

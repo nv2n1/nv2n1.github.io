@@ -32,8 +32,8 @@ mplayer -ass -subcp cp936 "Gone with the Wind.avi" -sub "Gone.With.the.Wind.1939
 
 Common Chinese codepages:
 
-- `cp936` / `gbk` — Simplified Chinese (most common)
-- `cp950` / `big5` — Traditional Chinese
+- `cp936` / `gbk`: Simplified Chinese (most common)
+- `cp950` / `big5`: Traditional Chinese
 
 ### Auto-loading Subtitles
 
@@ -57,9 +57,9 @@ mplayer "Gone with the Wind.avi" -sub-fuzziness 1 -subcp cp936
 
 Fuzziness levels:
 
-- `0` — Exact filename match only
-- `1` — Load all subtitles containing the video name
-- `2` — Load all subtitles in the current directory
+- `0`: Exact filename match only
+- `1`: Load all subtitles containing the video name
+- `2`: Load all subtitles in the current directory
 
 ## Embedded Subtitles
 

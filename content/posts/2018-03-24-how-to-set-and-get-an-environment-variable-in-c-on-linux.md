@@ -31,7 +31,7 @@ int main(void) {
 }
 ```
 
-**Important:** `getenv()` returns a pointer to a string managed by the C library. Don’t modify the returned string, and don’t rely on it persisting after subsequent `getenv()` or `setenv()` calls—make a copy with `strdup()` if you need to keep it:
+**Important:** `getenv()` returns a pointer to a string managed by the C library. Don’t modify the returned string, and don’t rely on it persisting after subsequent `getenv()` or `setenv()` calls: make a copy with `strdup()` if you need to keep it:
 
 ``` c
 #include <stdlib.h>
@@ -83,7 +83,7 @@ The third parameter to `setenv()` controls overwrite behavior:
 - **1** (true): overwrite if the variable already exists
 - **0** (false): leave existing variables unchanged
 
-Always check the return value—`setenv()` returns -1 on failure (typically due to memory allocation issues).
+Always check the return value: `setenv()` returns -1 on failure (typically due to memory allocation issues).
 
 ### Removing Variables
 

@@ -40,7 +40,7 @@ Find the EFI System Partition on your system:
 sudo fdisk -l
 ```
 
-Look for a partition marked “EFI System” — it’s typically small (100–550 MB) and usually `/dev/nvme0n1p1` or `/dev/sda1` on newer systems.
+Look for a partition marked “EFI System”: it’s typically small (100–550 MB) and usually `/dev/nvme0n1p1` or `/dev/sda1` on newer systems.
 
 Verify the ESP exists and contains Windows boot files:
 
@@ -94,7 +94,7 @@ After editing, regenerate the main GRUB config file:
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
-On some Fedora installations, the output path may be `/boot/efi/EFI/fedora/grub.cfg` — check your actual GRUB location first:
+On some Fedora installations, the output path may be `/boot/efi/EFI/fedora/grub.cfg`: check your actual GRUB location first:
 
 ``` bash
 sudo find /boot -name grub.cfg

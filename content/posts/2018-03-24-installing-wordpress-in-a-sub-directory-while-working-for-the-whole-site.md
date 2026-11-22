@@ -34,7 +34,7 @@ Before moving files, update WordPress configuration in the admin panel:
 4.  Set **Site Address (URL)** to `https://example.com`
 5.  Click **Save Changes**
 
-You may see a 404 error after saving—this is expected. Don’t attempt to access the site yet.
+You may see a 404 error after saving: this is expected. Don’t attempt to access the site yet.
 
 ## Moving Core Files
 
@@ -73,7 +73,7 @@ cp /var/www/html/wordpress/index.php /var/www/html/index.php
 cp /var/www/html/wordpress/.htaccess /var/www/html/.htaccess
 ```
 
-If you’re using Nginx instead of Apache, you don’t have `.htaccess`—configure rewrites in your server block instead.
+If you’re using Nginx instead of Apache, you don’t have `.htaccess`: configure rewrites in your server block instead.
 
 ## Modifying Root index.php
 

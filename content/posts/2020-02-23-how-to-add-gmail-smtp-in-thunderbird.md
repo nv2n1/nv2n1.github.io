@@ -10,7 +10,7 @@ canonical: /how-to-add-gmail-smtp-in-thunderbird/
 url: /how-to-add-gmail-smtp-in-thunderbird/
 ---
 
-Gmail requires OAuth2 authentication for SMTP access — direct passwords have been disabled entirely. This is the only supported method for sending mail through Gmail in Thunderbird, whether you’re using a personal or Workspace account.
+Gmail requires OAuth2 authentication for SMTP access: direct passwords have been disabled entirely. This is the only supported method for sending mail through Gmail in Thunderbird, whether you’re using a personal or Workspace account.
 
 ## OAuth2 Setup
 
@@ -22,7 +22,7 @@ Open Thunderbird and go to **Account Settings → Outgoing Server (SMTP)**. Clic
 - **Authentication method:** OAuth2
 - **User Name:** your.email@gmail.com
 
-When you click **OK**, Thunderbird launches a browser window asking you to sign in with your Google account and grant mail-sending permissions. Your actual password never enters Thunderbird — OAuth2 exchanges it for a limited, revocable token instead.
+When you click **OK**, Thunderbird launches a browser window asking you to sign in with your Google account and grant mail-sending permissions. Your actual password never enters Thunderbird: OAuth2 exchanges it for a limited, revocable token instead.
 
 ## Why OAuth2 Matters
 
@@ -32,7 +32,7 @@ This approach beats password authentication in several ways:
 - You can revoke Thunderbird’s access anytime without changing your Gmail password
 - Google logs which apps have permissions to your account
 - Two-factor authentication works without configuration
-- Permissions are limited in scope — Thunderbird can only send mail, not read it
+- Permissions are limited in scope: Thunderbird can only send mail, not read it
 
 ## Google Workspace Considerations
 

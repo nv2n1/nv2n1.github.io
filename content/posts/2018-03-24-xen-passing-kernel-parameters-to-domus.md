@@ -38,14 +38,14 @@ Or edit the file directly with your preferred editor. The parameters will then a
 
 Here are frequently used parameters for DomU kernels:
 
-- `single` — boot to single-user mode (useful for recovery)
-- `ro` — mount root filesystem read-only initially
-- `rw` — mount root filesystem read-write
-- `console=hvc0` — use Xen hypervisor console as primary console
-- `quiet` — suppress verbose kernel output
-- `loglevel=7` — set kernel log verbosity (0-7)
-- `init=/bin/bash` — use bash as init (recovery scenario)
-- `systemd.unit=rescue.target` — boot into systemd rescue mode
+- `single`: boot to single-user mode (useful for recovery)
+- `ro`: mount root filesystem read-only initially
+- `rw`: mount root filesystem read-write
+- `console=hvc0`: use Xen hypervisor console as primary console
+- `quiet`: suppress verbose kernel output
+- `loglevel=7`: set kernel log verbosity (0-7)
+- `init=/bin/bash`: use bash as init (recovery scenario)
+- `systemd.unit=rescue.target`: boot into systemd rescue mode
 
 ## Multiple parameters
 

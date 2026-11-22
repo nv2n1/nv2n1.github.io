@@ -26,7 +26,7 @@ func main() {
 }
 ```
 
-`os.Getpid()` returns an `int` representing the current process’s ID. This works across all platforms—Linux, macOS, Windows, and others.
+`os.Getpid()` returns an `int` representing the current process’s ID. This works across all platforms: Linux, macOS, Windows, and others.
 
 ## Getting the Parent Process ID
 

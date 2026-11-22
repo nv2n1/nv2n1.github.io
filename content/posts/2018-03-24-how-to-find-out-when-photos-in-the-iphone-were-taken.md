@@ -28,9 +28,9 @@ This shows the capture date, but limited additional metadata. For comprehensive 
 
 Several reliable options exist for viewing complete EXIF information:
 
-- **Exif Metadata** — Clean interface, shows GPS, camera model, exposure settings, and original timestamps
-- **Photos Exif Editor** — View and edit EXIF data, useful for batch operations
-- **Preview** — Built into macOS; connect your iPhone and import photos to view full metadata
+- **Exif Metadata**: Clean interface, shows GPS, camera model, exposure settings, and original timestamps
+- **Photos Exif Editor**: View and edit EXIF data, useful for batch operations
+- **Preview**: Built into macOS; connect your iPhone and import photos to view full metadata
 
 ### Command Line Approach (macOS/Linux)
 

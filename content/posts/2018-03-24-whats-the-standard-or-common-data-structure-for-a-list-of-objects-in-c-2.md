@@ -22,7 +22,7 @@ Arrays provide O(1) random access to any element and are efficient for iteration
 int values[100];  // Fixed size of 100 integers
 ```
 
-This approach is simple but inflexible—you must know the size upfront and cannot grow the array later.
+This approach is simple but inflexible: you must know the size upfront and cannot grow the array later.
 
 **Dynamic allocation** uses the heap and allows runtime sizing decisions:
 
@@ -108,7 +108,7 @@ Arrays work well for fixed or predictably sized collections, but consider altern
 
 - **Linked lists** when you frequently insert/delete at arbitrary positions
 - **Hash tables** when searching by key is primary
-- **Struct arrays** when storing related data (essentially an object)—wrap the array and its size together:
+- **Struct arrays** when storing related data (essentially an object): wrap the array and its size together:
 
 ``` c
 typedef struct {
@@ -125,7 +125,7 @@ This pattern prevents passing separate size variables and reduces error-prone bo
 - Always pair `malloc()` with `free()`
 - Set pointers to `NULL` after freeing to catch use-after-free bugs
 - Use `calloc()` if you need zero-initialized memory
-- Consider `realloc()` failures carefully—keep the old pointer safe
+- Consider `realloc()` failures carefully: keep the old pointer safe
 - For safety-critical code, use AddressSanitizer (`-fsanitize=address`) during development to catch memory errors
 
 ## 2026 Comprehensive Guide: Best Practices

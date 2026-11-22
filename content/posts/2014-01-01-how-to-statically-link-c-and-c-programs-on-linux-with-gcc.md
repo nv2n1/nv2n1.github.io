@@ -10,37 +10,37 @@ canonical: /how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
 url: /how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
 ---
 
-Static linking embeds all library code directly into your binary. On Linux, this sounds straightforward but glibc introduces complications that pure static binaries don’t truly exist — the C library still loads dynamic features at runtime like NSS (Name Service Switch), locale data, and character set converters. Understanding these constraints is essential before committing to static linking.
+Static linking embeds all library code directly into your binary. On Linux, this sounds straightforward but glibc introduces complications that pure static binaries don’t truly exist: the C library still loads dynamic features at runtime like NSS (Name Service Switch), locale data, and character set converters. Understanding these constraints is essential before committing to static linking.
 
 ## When Static Linking Makes Sense
 
 Static linking solves real problems in specific scenarios:
 
-- **Reproducible builds** — binaries work identically across Linux distributions without worrying about glibc version differences
-- **Simplified deployment** — no need to manage shared library dependencies on target systems
-- **Embedded systems** — reduced attack surface and predictable memory layout
-- **Legacy environment support** — systems where installing dev libraries isn’t an option
+- **Reproducible builds**: binaries work identically across Linux distributions without worrying about glibc version differences
+- **Simplified deployment**: no need to manage shared library dependencies on target systems
+- **Embedded systems**: reduced attack surface and predictable memory layout
+- **Legacy environment support**: systems where installing dev libraries isn’t an option
 
 For most modern applications, better alternatives exist:
 
-- **musl libc** — designed from scratch for static linking; produces smaller, truly portable binaries
-- **Containers** (Docker, Podman) — manage dependencies consistently without static compilation overhead
-- **AppImage or similar formats** — portable execution with runtime dependency bundling
-- **Cross-compilation toolchains** — musl-based cross-compilers for embedded targets
+- **musl libc**: designed from scratch for static linking; produces smaller, truly portable binaries
+- **Containers** (Docker, Podman): manage dependencies consistently without static compilation overhead
+- **AppImage or similar formats**: portable execution with runtime dependency bundling
+- **Cross-compilation toolchains**: musl-based cross-compilers for embedded targets
 
 ## The glibc Static Linking Reality
 
 If you choose glibc static linking anyway, be aware of these gotchas:
 
-**DNS resolution breaks easily** — NSS loads shared libraries at runtime for hostname lookups. Without proper `/etc/nsswitch.conf` on the target system or alternative DNS solutions, your binary won’t resolve hostnames. Solutions include hardcoding IPs, using `getaddrinfo()` with careful fallbacks, or linking against `musl-libc` instead.
+**DNS resolution breaks easily**: NSS loads shared libraries at runtime for hostname lookups. Without proper `/etc/nsswitch.conf` on the target system or alternative DNS solutions, your binary won’t resolve hostnames. Solutions include hardcoding IPs, using `getaddrinfo()` with careful fallbacks, or linking against `musl-libc` instead.
 
-**Binary size explodes** — glibc static linking produces 5-10MB binaries even for simple programs. musl produces 200KB for equivalent functionality.
+**Binary size explodes**: glibc static linking produces 5-10MB binaries even for simple programs. musl produces 200KB for equivalent functionality.
 
-**dlopen() and plugins don’t work** — you can’t dynamically load shared libraries from a statically-linked binary.
+**dlopen() and plugins don’t work**: you can’t dynamically load shared libraries from a statically-linked binary.
 
-**Character encoding issues** — missing GCONV_PATH environment variable can break locale conversion on systems with different glibc installations.
+**Character encoding issues**: missing GCONV_PATH environment variable can break locale conversion on systems with different glibc installations.
 
-**Licensing complications** — glibc is LGPL; static linking may trigger license obligations if you redistribute binaries.
+**Licensing complications**: glibc is LGPL; static linking may trigger license obligations if you redistribute binaries.
 
 ## Static Linking C Programs
 
@@ -113,9 +113,9 @@ g++ -static -static-libstdc++ -static-libgcc program.cpp -o program
 
 Flag meanings:
 
-- `-static` — attempt to link all libraries statically (glibc exceptions apply)
-- `-static-libstdc++` — link libstdc++ statically instead of dynamically
-- `-static-libgcc` — link libgcc statically
+- `-static`: attempt to link all libraries statically (glibc exceptions apply)
+- `-static-libstdc++`: link libstdc++ statically instead of dynamically
+- `-static-libgcc`: link libgcc statically
 
 Verify with `ldd`:
 
@@ -185,7 +185,7 @@ strace -e open,openat ./program 2>&1 | grep "\.so"
 cat /proc/<pid>/maps
 ```
 
-Even with `-static`, glibc may attempt to load NSS modules, locale data, or timezone information from `/etc` or `/usr/share`. This is expected and not a sign of failure — only if those files don’t exist and hostname lookups fail is there a real problem.
+Even with `-static`, glibc may attempt to load NSS modules, locale data, or timezone information from `/etc` or `/usr/share`. This is expected and not a sign of failure: only if those files don’t exist and hostname lookups fail is there a real problem.
 
 ## Testing Across Distributions
 

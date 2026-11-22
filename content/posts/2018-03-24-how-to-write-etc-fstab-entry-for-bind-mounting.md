@@ -60,10 +60,10 @@ You can combine `bind` with other options using commas:
 
 Common combinations:
 
-- `bind,ro` — Read-only bind mount
-- `bind,nosuid` — Disable SUID bits on this mount
-- `bind,nodev` — Disable device files
-- `bind,noexec` — Disable executable files
+- `bind,ro`: Read-only bind mount
+- `bind,nosuid`: Disable SUID bits on this mount
+- `bind,nodev`: Disable device files
+- `bind,noexec`: Disable executable files
 
 ## Recursive Bind Mounts (Linux 5.12+)
 
@@ -89,11 +89,11 @@ sudo systemctl daemon-reload
 
 ## Common Issues
 
-**“Target mount point does not exist”** — Ensure the target directory exists before mounting. The kernel will not create it automatically.
+**“Target mount point does not exist”**: Ensure the target directory exists before mounting. The kernel will not create it automatically.
 
-**Permission issues** — Users without root access cannot perform bind mounts unless they’re configured with the `user` option in `/etc/fstab`. However, this only works for non-device filesystems and has security implications; most setups require root or `sudo`.
+**Permission issues**: Users without root access cannot perform bind mounts unless they’re configured with the `user` option in `/etc/fstab`. However, this only works for non-device filesystems and has security implications; most setups require root or `sudo`.
 
-**Mounts not persisting at boot** — Verify the `/etc/fstab` syntax is correct and test with `sudo mount -a` before rebooting. Check logs with `journalctl -u systemd-remount-fs.service` if mounts fail during boot.
+**Mounts not persisting at boot**: Verify the `/etc/fstab` syntax is correct and test with `sudo mount -a` before rebooting. Check logs with `journalctl -u systemd-remount-fs.service` if mounts fail during boot.
 
 ## Alternative: Using Systemd Units
 

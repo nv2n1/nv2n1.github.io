@@ -144,11 +144,11 @@ java Test
 
 ## Quick Reference
 
-- `sudo dnf install java-17-openjdk` — Install JRE on Fedora
-- `sudo apt install default-jre` — Install JRE on Ubuntu
-- `java -version` — Verify installation
-- `alternatives --config java` — Switch Java versions
-- `JAVA_HOME=/usr/lib/jvm/java-17-openjdk` — Set Java home
+- `sudo dnf install java-17-openjdk`: Install JRE on Fedora
+- `sudo apt install default-jre`: Install JRE on Ubuntu
+- `java -version`: Verify installation
+- `alternatives --config java`: Switch Java versions
+- `JAVA_HOME=/usr/lib/jvm/java-17-openjdk`: Set Java home
 
 ## Container-Based Java Runtime
 
@@ -166,9 +166,9 @@ ENTRYPOINT ["java", "-jar", "/app/myapp.jar"]
 
 Popular container JRE images:
 
-- `eclipse-temurin:17-jre` — Adoptium Eclipse Temurin (recommended)
-- `amazoncorretto:17` — Amazon Corretto
-- `azul/zulu-openjdk:17-jre` — Azul Zulu
+- `eclipse-temurin:17-jre`: Adoptium Eclipse Temurin (recommended)
+- `amazoncorretto:17`: Amazon Corretto
+- `azul/zulu-openjdk:17-jre`: Azul Zulu
 
 These images are regularly updated with security patches and are smaller than full JDK images.
 

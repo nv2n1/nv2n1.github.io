@@ -201,4 +201,4 @@ The migration thread mechanism has remained largely stable from kernel 5.x throu
 - **6.x kernels**: Integrated better with the scheduler’s load-balancing framework
 - **6.10+**: Added further refinements to migration latency and CPU hotplug response times
 
-The fundamental architecture — per-CPU serialized work queues woken by the scheduler — remains consistent across all recent versions.
+The fundamental architecture (per-CPU serialized work queues woken by the scheduler) remains consistent across all recent versions.

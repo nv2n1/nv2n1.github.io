@@ -39,7 +39,7 @@ host=$(hostname)
 echo "Running on: $host"
 ```
 
-Use modern command substitution syntax `$()` instead of backticks—it’s cleaner, nests better, and is POSIX-compliant:
+Use modern command substitution syntax `$()` instead of backticks: it’s cleaner, nests better, and is POSIX-compliant:
 
 ``` bash
 # Good

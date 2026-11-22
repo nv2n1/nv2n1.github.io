@@ -101,7 +101,7 @@ hdfs fsck /path/to/file -files -blocks
 - Always increase replication during planned maintenance windows for critical data
 - Test replication changes on a subset of files before applying to entire directories
 - Use `-setReplication` with the `-R` flag cautiously on large directory trees; it generates significant metadata operations
-- Monitor DataNode disk space before increasing replication — ensure sufficient capacity exists across the cluster
+- Monitor DataNode disk space before increasing replication: ensure sufficient capacity exists across the cluster
 
 ## 2026 Comprehensive Guide: Best Practices
 

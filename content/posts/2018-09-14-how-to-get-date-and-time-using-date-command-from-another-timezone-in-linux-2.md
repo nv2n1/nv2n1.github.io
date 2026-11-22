@@ -240,5 +240,5 @@ The TZ environment variable is the standard POSIX approach and offers these adva
 - Available on every POSIX-compliant system without additional dependencies
 - No performance overhead compared to other tools
 - Works in shell scripts, cron jobs, and systemd services
-- Easy to debug — timezone is explicit in each command
+- Easy to debug: timezone is explicit in each command
 - Portable across distributions

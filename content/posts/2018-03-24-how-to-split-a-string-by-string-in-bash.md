@@ -24,7 +24,7 @@ for i in "${ADDR[@]}"; do
 done
 ```
 
-This splits the string into an array. The `<<<` operator (here-string) passes the string to `read`, which populates the array `ADDR`. This approach is efficient—no external processes spawned.
+This splits the string into an array. The `<<<` operator (here-string) passes the string to `read`, which populates the array `ADDR`. This approach is efficient: no external processes spawned.
 
 For a single-line array assignment without a loop:
 

@@ -48,7 +48,7 @@ Set Fcitx5 as your default input method:
 
 1.  Open **Settings** → **Language Support** (if not present, run `sudo apt install language-support-zh`)
 2.  Set “Keyboard input method system” to **Fcitx 5**
-3.  **Log out completely and log back in** — a GNOME Shell restart is insufficient
+3.  **Log out completely and log back in**: a GNOME Shell restart is insufficient
 
 After logging back in, switch input methods using **Ctrl + Space**. Access configuration via:
 

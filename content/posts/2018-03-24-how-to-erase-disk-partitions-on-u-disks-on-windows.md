@@ -43,7 +43,7 @@ exit
 
 Replace `X` with your USB drive’s disk number from the `list disk` output. The `clean all` command removes all partitions and wipes the partition table. Use `clean` instead for faster execution without secure overwriting.
 
-**Warning:** DiskPart operations are immediate and irreversible. Verify the disk number before executing — selecting the wrong disk will destroy that drive’s data.
+**Warning:** DiskPart operations are immediate and irreversible. Verify the disk number before executing: selecting the wrong disk will destroy that drive’s data.
 
 ## Secure Erasure with DBAN
 
@@ -79,7 +79,7 @@ After formatting with standard tools, securely overwrite free space:
 cipher /w:Z:
 ```
 
-Replace `Z:` with your USB drive’s letter. This overwrites unallocated space with random data, preventing recovery of deleted files. It’s faster than DBAN but less thorough — use it for drives already in use that you want to clean up incrementally.
+Replace `Z:` with your USB drive’s letter. This overwrites unallocated space with random data, preventing recovery of deleted files. It’s faster than DBAN but less thorough: use it for drives already in use that you want to clean up incrementally.
 
 ## Quick Format vs. Full Erase
 
@@ -96,10 +96,10 @@ Replace `Z:` with your USB drive’s letter. This overwrites unallocated space w
 
 ## Before You Start
 
-- **Backup critical files** — these operations are permanent
+- **Backup critical files**: these operations are permanent
 - **Verify the disk number** in Disk Management before running commands; wrong selection destroys the wrong drive
-- **Check for write protection** — some USB drives have physical write-protect switches; disable them before attempting erasure
-- **Plan for time** — DBAN with thorough methods takes hours on large drives
+- **Check for write protection**: some USB drives have physical write-protect switches; disable them before attempting erasure
+- **Plan for time**: DBAN with thorough methods takes hours on large drives
 - **Test on a non-critical drive first** if you’re new to DiskPart
 
 For most users, Disk Management or DiskPart handles routine USB drive formatting. Reserve secure erasure tools (DBAN or Cipher) for drives that contained confidential information or before retiring the drive.

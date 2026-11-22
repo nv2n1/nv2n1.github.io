@@ -62,7 +62,7 @@ With `smartcase` enabled:
 - If your search pattern is **all lowercase**, the search is case insensitive: `/dog` matches `dog`, `Dog`, and `DOG`
 - If your pattern contains **any uppercase characters**, the search becomes case sensitive: `/Dog` only matches `Dog`, not `dog` or `DOG`
 
-This strikes a balance—you get intuitive case-insensitive searching for simple queries, but explicit casing takes effect when you actually care about it.
+This strikes a balance: you get intuitive case-insensitive searching for simple queries, but explicit casing takes effect when you actually care about it.
 
 ### Practical Configuration
 
@@ -85,7 +85,7 @@ These options also affect search and replace operations. When using `:s/pattern/
 :%s/dog\C/cat/g     " Case sensitive replacement across file
 ```
 
-For batch replacements, `smartcase` is particularly helpful—searching for `/myvar` (lowercase) will replace all variations, while `/MyVar` will only match that exact case.
+For batch replacements, `smartcase` is particularly helpful: searching for `/myvar` (lowercase) will replace all variations, while `/MyVar` will only match that exact case.
 
 ## Essential Vim Configuration
 

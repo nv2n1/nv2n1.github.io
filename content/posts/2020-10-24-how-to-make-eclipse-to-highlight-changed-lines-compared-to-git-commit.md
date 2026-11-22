@@ -10,7 +10,7 @@ canonical: /how-to-make-eclipse-to-highlight-changed-lines-compared-to-git-commi
 url: /how-to-make-eclipse-to-highlight-changed-lines-compared-to-git-commit/
 ---
 
-Eclipse’s IDE capabilities make it useful for managing larger codebases, especially those version-controlled with Git. The Quick Diff feature lets you see at a glance which lines differ from your last commit—essential when reviewing your work before staging changes.
+Eclipse’s IDE capabilities make it useful for managing larger codebases, especially those version-controlled with Git. The Quick Diff feature lets you see at a glance which lines differ from your last commit: essential when reviewing your work before staging changes.
 
 ## Enable Quick Diff in Eclipse
 
@@ -41,7 +41,7 @@ Now modified lines will display a `~` character, and newly added lines will show
 
 ## Practical Tips
 
-The Quick Diff feature respects your Git index. If you stage changes with `git add`, those staged lines won’t appear as modified—only unstaged changes highlight. To see all uncommitted changes (staged and unstaged), ensure your reference is set to the current HEAD.
+The Quick Diff feature respects your Git index. If you stage changes with `git add`, those staged lines won’t appear as modified: only unstaged changes highlight. To see all uncommitted changes (staged and unstaged), ensure your reference is set to the current HEAD.
 
 If you’re working with multiple branches, Quick Diff references HEAD of your current branch. Switch branches with `git checkout`, and the highlighting updates automatically the next time the editor refreshes.
 
@@ -56,7 +56,7 @@ For large files with many changes, the Quick Diff feature can occasionally impac
 
 By default, Quick Diff shows changes against HEAD. To compare against a specific earlier commit, you’ll need to manually stage or stash changes and check out different commits, then use Quick Diff alongside standard `git diff` output in a terminal for precise comparisons.
 
-The Quick Diff feature works across all text-based editors in Eclipse—not just source code. You can use it for configuration files, documentation, and any other text files tracked in Git.
+The Quick Diff feature works across all text-based editors in Eclipse: not just source code. You can use it for configuration files, documentation, and any other text files tracked in Git.
 
 ## 2026 Comprehensive Guide: Best Practices
 

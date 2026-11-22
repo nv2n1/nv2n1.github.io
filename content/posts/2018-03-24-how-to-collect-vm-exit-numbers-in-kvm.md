@@ -48,7 +48,7 @@ perf record -e kvm:kvm_exit -a sleep 30
 perf script | grep kvm_exit | head -20
 ```
 
-This captures exit events including the specific exit reason (e.g., `EXIT_REASON_HLT`, `EXIT_REASON_IO_INSTRUCTION`, `EXIT_REASON_CPUID`, `EXIT_REASON_EPT_VIOLATION`). Exit reasons vary by CPU architecture—x86_64 and ARM64 have different sets.
+This captures exit events including the specific exit reason (e.g., `EXIT_REASON_HLT`, `EXIT_REASON_IO_INSTRUCTION`, `EXIT_REASON_CPUID`, `EXIT_REASON_EPT_VIOLATION`). Exit reasons vary by CPU architecture: x86_64 and ARM64 have different sets.
 
 For more granular analysis, combine multiple KVM tracepoints:
 
@@ -79,11 +79,11 @@ timeout 10 cat /sys/kernel/debug/tracing/trace_pipe > /tmp/kvm_exits.txt
 
 Common high-volume exits typically include:
 
-- **HLT**: Guest CPU idle loop—usually normal and low-cost
-- **IO_INSTRUCTION**: I/O port access requiring emulation—investigate if excessive
-- **EPT_VIOLATION**: Memory mapping faults—high rates suggest memory pressure or suboptimal guest memory configuration
-- **CPUID**: CPUID instruction execution—usually infrequent unless workload heavily queries CPU features
-- **PAUSE**: Guest pause instruction—normal in spinlock scenarios, but can indicate contention
+- **HLT**: Guest CPU idle loop: usually normal and low-cost
+- **IO_INSTRUCTION**: I/O port access requiring emulation: investigate if excessive
+- **EPT_VIOLATION**: Memory mapping faults: high rates suggest memory pressure or suboptimal guest memory configuration
+- **CPUID**: CPUID instruction execution: usually infrequent unless workload heavily queries CPU features
+- **PAUSE**: Guest pause instruction: normal in spinlock scenarios, but can indicate contention
 
 Use `perf stat -e kvm:*` to get a quick breakdown across your running VMs, then drill into specific reasons with `perf record` and `perf script` filtering.
 
@@ -101,7 +101,7 @@ Check your kernel config:
 grep -E 'CONFIG_KVM=|CONFIG_DEBUG_FS' /boot/config-$(uname -r)
 ```
 
-For production workloads, reserve detailed tracing for specific troubleshooting windows—continuous high-frequency KVM event tracing adds measurable overhead.
+For production workloads, reserve detailed tracing for specific troubleshooting windows: continuous high-frequency KVM event tracing adds measurable overhead.
 
 ## 2026 Best Practices and Advanced Techniques
 

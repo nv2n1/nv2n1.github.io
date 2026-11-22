@@ -36,7 +36,7 @@ Breaking it down:
 
 - `\n` matches the newline between the two lines
 - `\$` escapes dollar signs (special in PCRE)
-- The pattern matches anywhere in the file — no leading/trailing newlines required
+- The pattern matches anywhere in the file: no leading/trailing newlines required
 
 For use in conditionals or scripts, add the `-q` flag to suppress output:
 

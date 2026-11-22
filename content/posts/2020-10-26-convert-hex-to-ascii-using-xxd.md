@@ -12,7 +12,7 @@ url: /convert-hex-to-ascii-using-xxd/
 
 Hex-encoded strings are common in system administration, debugging, and network packet analysis. Whether you’re examining binary data, decoding network protocols, or troubleshooting data encoding issues, you’ll often need to convert between hex and ASCII representations.
 
-`xxd` is the standard tool for this task on Unix-like systems. It creates hexdumps and reverses them back to binary form — which for ASCII means converting back to readable text.
+`xxd` is the standard tool for this task on Unix-like systems. It creates hexdumps and reverses them back to binary form, which for ASCII means converting back to readable text.
 
 ## How xxd Works
 
@@ -50,7 +50,7 @@ $ echo "6162636465666768696A6B6C6D6E6F707172737475767778797A0A" | xxd -p -r
 abcdefghijklmnopqrstuvwxyz
 ```
 
-Case doesn’t matter for the hex input — `xxd -r` handles both automatically.
+Case doesn’t matter for the hex input: `xxd -r` handles both automatically.
 
 ## Practical Examples
 
@@ -84,7 +84,7 @@ Hello, World!
 
 **Converting hex with control characters and binary data:**
 
-Not all hex represents text. If your data contains null bytes or non-printable characters, `xxd -r -p` handles them correctly — you just won’t see them in terminal output:
+Not all hex represents text. If your data contains null bytes or non-printable characters, `xxd -r -p` handles them correctly: you just won’t see them in terminal output:
 
 ``` bash
 $ echo "4865 6c00 6c6f" | xxd -r -p | od -c

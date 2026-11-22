@@ -223,4 +223,4 @@ let x = 10
 
 ## Practical Considerations
 
-Choose based on your ecosystem: Scala for JVM projects, F# for .NET teams, OCaml for compiler development and formal verification, Haskell for strongly-typed systems and mathematical computing. Syntax differences become muscle memory quickly—the real distinction is in typing discipline and runtime behavior.
+Choose based on your ecosystem: Scala for JVM projects, F# for .NET teams, OCaml for compiler development and formal verification, Haskell for strongly-typed systems and mathematical computing. Syntax differences become muscle memory quickly: the real distinction is in typing discipline and runtime behavior.

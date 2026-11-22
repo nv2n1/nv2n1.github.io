@@ -50,7 +50,7 @@ func main() {
 }
 ```
 
-This pattern is critical for required configuration — fail fast if essential variables are missing rather than silently using empty strings.
+This pattern is critical for required configuration: fail fast if essential variables are missing rather than silently using empty strings.
 
 ## Getting all variables
 
@@ -97,7 +97,7 @@ func main() {
 }
 ```
 
-Call `godotenv.Load()` early in `main()`, before any code that depends on those variables. In production, skip this step entirely — environment variables should be injected by your orchestration layer.
+Call `godotenv.Load()` early in `main()`, before any code that depends on those variables. In production, skip this step entirely: environment variables should be injected by your orchestration layer.
 
 ## Type conversion and defaults
 
@@ -138,7 +138,7 @@ In Kubernetes and cloud environments, inject variables via:
 - **Secrets**: For credentials and tokens
 - **System environment**: Set directly via deployment manifests or container runtime
 
-Your Go code remains unchanged — `os.Getenv()` works identically whether the variable comes from a `.env` file, Docker environment flag, or Kubernetes Secret.
+Your Go code remains unchanged: `os.Getenv()` works identically whether the variable comes from a `.env` file, Docker environment flag, or Kubernetes Secret.
 
 A common pattern for required configuration:
 

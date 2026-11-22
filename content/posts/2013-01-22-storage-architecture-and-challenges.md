@@ -17,7 +17,7 @@ Andrew Fikes, Principal Engineer at Google, presented on storage architecture an
 Google’s storage systems had to address several interconnected problems that become critical as data volume and request rates grow:
 
 **Reliability and Redundancy**
-When you’re managing petabytes of data across thousands of machines, hardware failure isn’t a possibility—it’s a certainty. The presentation discusses how Google approaches replication strategies, trade-offs between synchronous and asynchronous replication, and why traditional RAID approaches become impractical at datacenter scale. Understanding failure modes and recovery mechanisms is essential for any distributed storage system.
+When you’re managing petabytes of data across thousands of machines, hardware failure isn’t a possibility: it’s a certainty. The presentation discusses how Google approaches replication strategies, trade-offs between synchronous and asynchronous replication, and why traditional RAID approaches become impractical at datacenter scale. Understanding failure modes and recovery mechanisms is essential for any distributed storage system.
 
 **Consistency and Partition Tolerance**
 The CAP theorem constrains what’s possible: you can’t guarantee consistency, availability, and partition tolerance simultaneously. Different Google storage systems make different choices depending on use cases. Bigtable prioritizes consistency, while other systems favor availability. These architectural decisions cascade through application design.
@@ -58,6 +58,6 @@ Several principles emerge consistently across Google’s storage work:
 
 ## Relevance Today
 
-While specific systems have evolved—newer architectures like CockroachDB, Spanner, and object stores like S3 have pushed boundaries further—the fundamental challenges Fikes described remain constant. Modern cloud-native architectures still grapple with consistency models, replication strategies, and the tension between durability and performance. The 2010 analysis provides foundational context for why contemporary systems are designed the way they are.
+While specific systems have evolved (newer architectures like CockroachDB, Spanner, and object stores like S3 have pushed boundaries further), the fundamental challenges Fikes described remain constant. Modern cloud-native architectures still grapple with consistency models, replication strategies, and the tension between durability and performance. The 2010 analysis provides foundational context for why contemporary systems are designed the way they are.
 
 Understanding these architectural decisions helps when selecting or designing storage solutions for modern infrastructure, whether you’re operating on-premises, in cloud environments, or hybrid deployments.

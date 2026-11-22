@@ -14,7 +14,7 @@ If gnuplot or ps2epsi fails to run or produces excessive warnings on modern Fedo
 
     Fontconfig warning: "/etc/fonts/conf.d/50-user.conf", line 14: reading configurations from ~/.fonts.conf is deprecated.
 
-This happens because `/etc/fonts/conf.d/50-user.conf` still includes a deprecated reference to `~/.fonts.conf`. While the warning alone doesn’t break functionality in all cases, it can cause gnuplot to hang, fail silently, or produce corrupted output—especially when generating PostScript or EPS files.
+This happens because `/etc/fonts/conf.d/50-user.conf` still includes a deprecated reference to `~/.fonts.conf`. While the warning alone doesn’t break functionality in all cases, it can cause gnuplot to hang, fail silently, or produce corrupted output, especially when generating PostScript or EPS files.
 
 ## The Fix
 
@@ -85,11 +85,11 @@ If the PostScript file generates without warnings and contains valid content, yo
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

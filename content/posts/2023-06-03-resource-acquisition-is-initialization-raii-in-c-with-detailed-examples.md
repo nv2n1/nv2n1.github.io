@@ -10,7 +10,7 @@ canonical: /resource-acquisition-is-initialization-raii-in-c-with-detailed-examp
 url: /resource-acquisition-is-initialization-raii-in-c-with-detailed-examples/
 ---
 
-Resource Acquisition Is Initialization (RAII) is a fundamental programming idiom in C++ that ties the lifecycle of a resource—memory, file handles, network sockets, database connections, locks—to the lifecycle of an object. When the object is created, the resource is acquired. When the object is destroyed and goes out of scope, the resource is automatically released.
+Resource Acquisition Is Initialization (RAII) is a fundamental programming idiom in C++ that ties the lifecycle of a resource (memory, file handles, network sockets, database connections, locks) to the lifecycle of an object. When the object is created, the resource is acquired. When the object is destroyed and goes out of scope, the resource is automatically released.
 
 ## The Core Principle
 
@@ -25,7 +25,7 @@ C++ guarantees that destructors are called when objects go out of scope, even if
 
 RAII is your primary defense against resource leaks in C++. Without it, you must manually manage every resource and catch every exception path where cleanup might be skipped. With RAII, cleanup is automatic and exception-safe by default.
 
-Consider a function that opens a file, reads data, and processes it. Without RAII, you’d need explicit try-catch blocks and manual cleanup. With RAII, the file handle closes automatically when the stream object exits scope—even if an exception occurs mid-processing.
+Consider a function that opens a file, reads data, and processes it. Without RAII, you’d need explicit try-catch blocks and manual cleanup. With RAII, the file handle closes automatically when the stream object exits scope: even if an exception occurs mid-processing.
 
 ## Smart Pointers
 
@@ -171,7 +171,7 @@ Explicitly delete the copy constructor and assignment operator to prevent accide
 
 ## RAII vs. Garbage Collection
 
-Unlike Java or Python, which eventually garbage-collect unused objects, C++ provides deterministic destruction. You know exactly when a resource is freed—immediately when the object exits scope. This predictability is critical for:
+Unlike Java or Python, which eventually garbage-collect unused objects, C++ provides deterministic destruction. You know exactly when a resource is freed: immediately when the object exits scope. This predictability is critical for:
 
 - **Real-time systems**: No unpredictable GC pauses.
 - **Embedded systems**: Control over when memory is freed.
@@ -187,4 +187,4 @@ This determinism is one reason C++ dominates systems programming and performance
 - Use move semantics (move constructor and move assignment) to safely transfer resource ownership.
 - Never manually `new` or `delete` in application code.
 - Prefer `std::make_unique` and `std::make_shared` for construction.
-- Remember that RAII applies to all resources, not just memory—files, sockets, database connections, and synchronization primitives all benefit from the pattern.
+- Remember that RAII applies to all resources, not just memory: files, sockets, database connections, and synchronization primitives all benefit from the pattern.

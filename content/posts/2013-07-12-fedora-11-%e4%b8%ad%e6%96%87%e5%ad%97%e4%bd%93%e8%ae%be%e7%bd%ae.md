@@ -107,9 +107,9 @@ Then add to your Fontconfig similarly:
 
 Modern Fedora repositories include:
 
-- `noto-fonts-cjk` — Google’s Noto Sans CJK, comprehensive and well-maintained
-- `source-han-sans-fonts` / `source-han-serif-fonts` — Adobe’s Source Han fonts
-- `lato-fonts` — Good Latin coverage with reasonable Chinese support
+- `noto-fonts-cjk`: Google’s Noto Sans CJK, comprehensive and well-maintained
+- `source-han-sans-fonts` / `source-han-serif-fonts`: Adobe’s Source Han fonts
+- `lato-fonts`: Good Latin coverage with reasonable Chinese support
 
 Stick with open-source fonts. Avoid proprietary Microsoft fonts; they violate licensing terms and open-source alternatives are now comparable in quality.
 

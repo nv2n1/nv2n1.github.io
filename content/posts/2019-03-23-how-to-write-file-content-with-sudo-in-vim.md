@@ -22,10 +22,10 @@ From Vim’s normal mode, type:
 
 This pipes your buffer through `tee` running as root:
 
-- `:w` — write the current buffer
-- `!` — pipe to an external command
-- `sudo tee` — execute tee with root privileges
-- `%` — current filename
+- `:w`: write the current buffer
+- `!`: pipe to an external command
+- `sudo tee`: execute tee with root privileges
+- `%`: current filename
 
 Vim sends your buffer to `tee` via stdin, `tee` writes it to disk as root, and you’re done. You’ll be prompted for your sudo password if needed.
 
@@ -40,8 +40,8 @@ Press `y` to proceed. Then:
 
     [O]k, (L)oad File, (I)gnore:
 
-- `L` — reload the file from disk (recommended)
-- `I` — keep your buffer without reloading (use if you want to verify before reloading)
+- `L`: reload the file from disk (recommended)
+- `I`: keep your buffer without reloading (use if you want to verify before reloading)
 
 Your undo history stays intact. You don’t lose your edits or have to reopen the file.
 

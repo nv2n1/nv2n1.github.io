@@ -22,10 +22,10 @@ find . -type f -printf '%T@ %p\n' | sort -rn | sed 's/^[^ ]* //'
 
 Break this down:
 
-- `find . -type f` — find all regular files recursively from current directory
-- `-printf '%T@ %p\n'` — print modification time as Unix timestamp (`%T@`) and path (`%p`)
-- `sort -rn` — sort numerically in reverse order (newest first); use `-n` for oldest first
-- `sed 's/^[^ ]* //'` — remove the timestamp, leaving just the path
+- `find . -type f`: find all regular files recursively from current directory
+- `-printf '%T@ %p\n'`: print modification time as Unix timestamp (`%T@`) and path (`%p`)
+- `sort -rn`: sort numerically in reverse order (newest first); use `-n` for oldest first
+- `sed 's/^[^ ]* //'`: remove the timestamp, leaving just the path
 
 Example output:
 

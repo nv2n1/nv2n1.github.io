@@ -14,7 +14,7 @@ If you’re running AdSense responsive ads on a content area narrower than full 
 
 ## The Problem with Auto Format
 
-When you use `data-ad-format="auto"`, Google’s algorithm chooses ad dimensions based on available space and performance data. On narrower layouts—typically under 728px—it often selects horizontal ads that don’t fit well with content flow and may have lower CTR than rectangle ads.
+When you use `data-ad-format="auto"`, Google’s algorithm chooses ad dimensions based on available space and performance data. On narrower layouts (typically under 728px), it often selects horizontal ads that don’t fit well with content flow and may have lower CTR than rectangle ads.
 
 ## Forcing Rectangle Ad Format
 
@@ -50,9 +50,9 @@ This restricts ads to rectangle dimensions: primarily 336×280 (large rectangle)
 
 ## Other Useful Format Options
 
-- `data-ad-format="horizontal"` — Forces leaderboard (728×90) or similar horizontal formats
-- `data-ad-format="vertical"` — Restricts to vertical skyscraper (120×600, 160×600, 300×600)
-- `data-ad-format="auto"` — Default behavior; Google optimizes based on performance
+- `data-ad-format="horizontal"`: Forces leaderboard (728×90) or similar horizontal formats
+- `data-ad-format="vertical"`: Restricts to vertical skyscraper (120×600, 160×600, 300×600)
+- `data-ad-format="auto"`: Default behavior; Google optimizes based on performance
 
 ## Why Rectangle Ads Perform Better
 
@@ -65,7 +65,7 @@ Rectangle ads typically have higher engagement rates because:
 
 ## Important Notes
 
-You don’t need any special AdSense account tier to use specific ad formats—this is a standard feature available in the AdSense settings interface under “Advanced Options.” You can also manage ad format preferences per placement in your AdSense dashboard.
+You don’t need any special AdSense account tier to use specific ad formats: this is a standard feature available in the AdSense settings interface under “Advanced Options.” You can also manage ad format preferences per placement in your AdSense dashboard.
 
 Keep in mind that forcing a specific format may reduce the number of available ads in Google’s inventory for your site, potentially lowering overall earnings. Monitor your performance metrics after making changes. If revenue drops significantly, consider using `"auto"` or testing different formats to find the optimal balance.
 

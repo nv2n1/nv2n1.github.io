@@ -72,7 +72,7 @@ Create a basic network server that listens for touch input and translates it to 
 
 - **Latency**: WiFi-based solutions may have slight input lag depending on your network. Test responsiveness before relying on it for precision work.
 - **Network reliability**: Both your iPhone and Linux machine must remain on the same WiFi network. 5GHz connections generally perform better than 2.4GHz.
-- **Security**: WiFi Mouse listens on port 1978 by default. Restrict firewall access to your local network only — do not expose this port to the internet.
+- **Security**: WiFi Mouse listens on port 1978 by default. Restrict firewall access to your local network only: do not expose this port to the internet.
 - **Battery drain**: Using your iPhone as an input device will consume battery faster than normal use. Keep it plugged in for extended sessions.
 
 ### Troubleshooting

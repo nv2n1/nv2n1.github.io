@@ -23,7 +23,7 @@ xterm reads font configuration from `~/.Xresources`. Add these lines:
     XTerm*faceNameDoublesize: Noto Mono
     XTerm*dynamicColors: true
 
-The `faceNameDoublesize` setting is critical—CJK characters are double-width and need explicit font specification.
+The `faceNameDoublesize` setting is critical: CJK characters are double-width and need explicit font specification.
 
 Apply changes immediately:
 
@@ -37,10 +37,10 @@ Note: You’ll need to restart xterm for changes to take effect. Simply reloadin
 
 Not all monospace fonts include CJK glyphs. These work well:
 
-- **Noto Mono** — excellent coverage of all CJK ranges, recommended choice
-- **DejaVu Sans Mono** — widely available, decent CJK coverage
-- **Ubuntu Mono** — solid option with good support
-- **Liberation Mono** — reasonable alternative, though CJK rendering quality varies
+- **Noto Mono**: excellent coverage of all CJK ranges, recommended choice
+- **DejaVu Sans Mono**: widely available, decent CJK coverage
+- **Ubuntu Mono**: solid option with good support
+- **Liberation Mono**: reasonable alternative, though CJK rendering quality varies
 
 Check installed fonts:
 
@@ -118,7 +118,7 @@ Characters should display clearly. If you see boxes, proceed to troubleshooting.
 
 ## Troubleshooting
 
-**Font names are case-sensitive** — verify exact names with `fc-list`:
+**Font names are case-sensitive**: verify exact names with `fc-list`:
 
 ``` bash
 fc-list | grep -i noto
@@ -140,7 +140,7 @@ xterm -e bash
 
 Look for font warnings in the terminal output.
 
-**Verify UTF-8 is active** — ensure `XTerm*utf8: 1` is in `~/.Xresources` and reloaded:
+**Verify UTF-8 is active**: ensure `XTerm*utf8: 1` is in `~/.Xresources` and reloaded:
 
 ``` bash
 xrdb -query | grep -i utf8
@@ -148,7 +148,7 @@ xrdb -query | grep -i utf8
 
 **Kill and restart xterm completely.** Resource reloading doesn’t update running instances; you must close and reopen xterm.
 
-**Check X font path** — if fonts aren’t being found:
+**Check X font path**: if fonts aren’t being found:
 
 ``` bash
 xset q
@@ -161,7 +161,7 @@ xset fp+ /usr/share/fonts/opentype/noto
 xset fp rehash
 ```
 
-**Test with a different terminal** — if CJK works in GNOME Terminal or Konsole but not xterm, the issue is xterm-specific. Try simplifying your `~/.Xresources` to just the essentials: `utf8`, `locale`, `faceName`, and `faceNameDoublesize`.
+**Test with a different terminal**: if CJK works in GNOME Terminal or Konsole but not xterm, the issue is xterm-specific. Try simplifying your `~/.Xresources` to just the essentials: `utf8`, `locale`, `faceName`, and `faceNameDoublesize`.
 
 Once CJK characters render correctly, your xterm configuration is complete. The UTF-8 and locale settings ensure proper encoding handling, while the font configuration handles the actual glyph rendering.
 

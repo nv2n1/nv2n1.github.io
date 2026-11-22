@@ -129,7 +129,7 @@ efibootmgr &>/dev/null && echo "UEFI" || echo "BIOS"
 - Most dmidecode commands require root privileges. Use `sudo`.
 - On some systems (older hardware, certain VMs), firmware data may be incomplete or missing.
 - BIOS and UEFI systems report information differently; UEFI systems are standard on hardware manufactured after 2020.
-- Never blindly update firmware without checking release notes—firmware updates can affect system stability if interrupted.
+- Never blindly update firmware without checking release notes: firmware updates can affect system stability if interrupted.
 
 ## 2026 Best Practices and Advanced Techniques
 

@@ -10,7 +10,7 @@ canonical: /switching-openclaw-to-qwen-free-via-openrouter/
 url: /switching-openclaw-to-qwen-free-via-openrouter/
 ---
 
-For months, I’ve been running OpenClaw — a personal AI assistant integrated with Telegram that monitors my crypto portfolio and handles daily tasks. Initially, I used Anthropic’s Claude Sonnet, but the recurring costs add up fast for a 24/7 agent.
+For months, I’ve been running OpenClaw: a personal AI assistant integrated with Telegram that monitors my crypto portfolio and handles daily tasks. Initially, I used Anthropic’s Claude Sonnet, but the recurring costs add up fast for a 24/7 agent.
 
 OpenRouter’s free tier provides access to capable open-source models like Qwen and Llama at zero cost. Here’s how to migrate your instance without losing functionality or requiring infrastructure changes.
 
@@ -104,7 +104,7 @@ Open-source models behave differently than commercial APIs:
 
 ## Sandboxing considerations
 
-If your agent accesses sensitive files, logs, or credentials, ensure sandboxing is enabled. Open-source models are less “lobotomized” than commercial APIs, meaning they may follow instructions more literally — including potentially dangerous ones. Run agents in restricted environments when they have access to production systems.
+If your agent accesses sensitive files, logs, or credentials, ensure sandboxing is enabled. Open-source models are less “lobotomized” than commercial APIs, meaning they may follow instructions more literally, including potentially dangerous ones. Run agents in restricted environments when they have access to production systems.
 
 ## Fallback and rate limits
 

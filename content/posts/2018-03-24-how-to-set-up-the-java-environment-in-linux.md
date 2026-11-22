@@ -76,7 +76,7 @@ sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk-21/bin/jav
 sudo update-alternatives --config java
 ```
 
-The number at the end (here `1`) is the priority — higher numbers take precedence when running `--auto`. This approach works across all POSIX-compliant systems and handles symlink management automatically.
+The number at the end (here `1`) is the priority: higher numbers take precedence when running `--auto`. This approach works across all POSIX-compliant systems and handles symlink management automatically.
 
 ## Manual Configuration (When Necessary)
 
@@ -113,7 +113,7 @@ export JAVA_HOME=/opt/java/default
 
 ## CLASSPATH (Usually Not Required)
 
-Modern Java doesn’t use `CLASSPATH` by default — the classpath is set by each application or build tool. Only set it if a legacy application explicitly requires it:
+Modern Java doesn’t use `CLASSPATH` by default: the classpath is set by each application or build tool. Only set it if a legacy application explicitly requires it:
 
 ``` bash
 export CLASSPATH=.:$JAVA_HOME/lib/*:$CLASSPATH
@@ -187,9 +187,9 @@ find /usr -name java -type f 2>/dev/null
 
 ## Best Practices
 
-- Use package managers when possible — they handle configuration and updates automatically
+- Use package managers when possible: they handle configuration and updates automatically
 - Prefer `update-alternatives` for managing multiple JDK versions instead of manual PATH editing
-- Set `JAVA_HOME` in shell rc files or system-wide, even if `java` is in PATH — build tools rely on it
+- Set `JAVA_HOME` in shell rc files or system-wide, even if `java` is in PATH: build tools rely on it
 - Use symlinks (like `/opt/java/default`) instead of hardcoding version numbers
 - Run `java -version` and `javac -version` after any changes to confirm the correct version
 - In containers or CI pipelines, set `JAVA_HOME` in Dockerfile or pipeline config, not relying on inherited shell config

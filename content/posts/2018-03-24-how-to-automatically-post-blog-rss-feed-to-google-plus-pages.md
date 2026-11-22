@@ -10,7 +10,7 @@ canonical: /how-to-automatically-post-blog-rss-feed-to-google-plus-pages/
 url: /how-to-automatically-post-blog-rss-feed-to-google-plus-pages/
 ---
 
-Google+ shut down in 2019, so the original premise of this post no longer applies. However, the broader problem—automatically sharing blog RSS feeds across social platforms—remains relevant. Here’s how to handle RSS-to-social distribution in 2026.
+Google+ shut down in 2019, so the original premise of this post no longer applies. However, the broader problem (automatically sharing blog RSS feeds across social platforms) remains relevant. Here’s how to handle RSS-to-social distribution in 2026.
 
 ## Modern RSS Distribution Tools
 
@@ -20,7 +20,7 @@ For most technical blogs, you have several solid options:
 
 **Make (formerly Integromat)** is a strong alternative with similar capabilities. It’s often cheaper than Zapier at scale and offers more granular control over post formatting and scheduling.
 
-**IFTTT** works for simple cases but is limited compared to Zapier or Make—fewer formatting options and less frequent feed polling.
+**IFTTT** works for simple cases but is limited compared to Zapier or Make: fewer formatting options and less frequent feed polling.
 
 **Bluesky’s** own RSS integration is native if you’re posting to that platform, though it’s read-only and doesn’t support scheduling.
 
@@ -29,7 +29,7 @@ For most technical blogs, you have several solid options:
 1.  Create a Zapier account and connect your RSS feed as a trigger
 2.  Select your RSS feed URL and test the connection
 3.  Add an action for each platform (Twitter, LinkedIn, Bluesky, etc.)
-4.  Customize the post format—most tools let you use feed fields like `{{title}}`, `{{link}}`, `{{description}}`
+4.  Customize the post format: most tools let you use feed fields like `{{title}}`, `{{link}}`, `{{description}}`
 5.  Set posting frequency (typically 1-24 hours)
 6.  Enable the Zap and monitor the first few posts
 

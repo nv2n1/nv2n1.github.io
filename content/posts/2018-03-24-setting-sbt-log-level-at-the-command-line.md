@@ -21,11 +21,11 @@ sbt --debug "publishLocal"
 
 Common log level flags:
 
-- `--error` — errors only
-- `--warn` — warnings and errors (default)
-- `--info` — info, warnings, and errors
-- `--debug` — verbose debugging output
-- `--trace` — most verbose, rarely needed
+- `--error`: errors only
+- `--warn`: warnings and errors (default)
+- `--info`: info, warnings, and errors
+- `--debug`: verbose debugging output
+- `--trace`: most verbose, rarely needed
 
 You can combine log level flags with other sbt options:
 
@@ -35,7 +35,7 @@ sbt --warn -Dsbt.log.noformat=true "test"
 sbt --info -mem 2048 "publishLocal"
 ```
 
-The `-Dsbt.log.noformat=true` flag strips ANSI color codes—useful in CI/CD where colored output breaks log parsing or causes formatting issues.
+The `-Dsbt.log.noformat=true` flag strips ANSI color codes: useful in CI/CD where colored output breaks log parsing or causes formatting issues.
 
 ## Interactive shell
 
@@ -152,7 +152,7 @@ In CI, prefer `--error` or `--warn` to keep logs readable and catch only real is
 
 Start with `--warn` for local development to catch issues without drowning in details. Use `--error` in CI pipelines to reduce noise. Switch to `--debug` only when investigating build failures or dependency resolution problems.
 
-For long-running builds, `--info` serves as a middle ground—it shows compilation progress and test counts without excessive verbosity.
+For long-running builds, `--info` serves as a middle ground: it shows compilation progress and test counts without excessive verbosity.
 
 If a build hangs or behaves unexpectedly, combine flags to diagnose the issue:
 

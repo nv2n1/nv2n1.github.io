@@ -80,7 +80,7 @@ release: all
     @echo "Releasing v$(RELEASE_VERSION)"
 ```
 
-Running `make` from the top directory works correctly — `external/release.mk` is found even though the current directory is the project root.
+Running `make` from the top directory works correctly: `external/release.mk` is found even though the current directory is the project root.
 
 ## Handling nested includes
 

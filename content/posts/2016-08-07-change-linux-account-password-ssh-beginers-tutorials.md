@@ -28,7 +28,7 @@ Type `yes` and press Enter. SSH will then prompt for your password:
 
     USER@HOST's password:
 
-Enter your current password. Characters won’t display as you type — this is normal for security.
+Enter your current password. Characters won’t display as you type: this is normal for security.
 
 ## Change Your Password with passwd
 
@@ -60,7 +60,7 @@ Most modern systems enforce password complexity. Aim for at least 12 characters 
 
     BAD PASSWORD: The password fails the dictionary check - too simplistic/systematic
 
-Test your new password immediately by opening a new SSH session in another terminal before closing your original connection. This catches typos early — you can’t see what you’re typing, so mistakes are easy.
+Test your new password immediately by opening a new SSH session in another terminal before closing your original connection. This catches typos early: you can’t see what you’re typing, so mistakes are easy.
 
 ## Check Password Expiration
 
@@ -92,7 +92,7 @@ sudo chage -d 0 USERNAME
 
 ## Prefer SSH Key Authentication
 
-Password authentication is less secure and requires regular changes. SSH key-based authentication is better — use Ed25519 keys (the modern standard):
+Password authentication is less secure and requires regular changes. SSH key-based authentication is better: use Ed25519 keys (the modern standard):
 
 ``` bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -132,7 +132,7 @@ Issues often relate to home directory permissions or authentication backend prob
 
 **Authentication token manipulation error**
 
-Your password has expired and you’re locked out. Contact your system administrator — they may need to temporarily reset your account or enable emergency access.
+Your password has expired and you’re locked out. Contact your system administrator: they may need to temporarily reset your account or enable emergency access.
 
 **Reset another user’s password (admin only)**
 

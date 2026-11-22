@@ -20,7 +20,7 @@ The simplest and most widely available method:
 openssl rand -base64 12
 ```
 
-This generates a 12-character base64-encoded string. Adjust the number to change length — `openssl rand -base64 32` gives you a longer password suitable for critical systems.
+This generates a 12-character base64-encoded string. Adjust the number to change length: `openssl rand -base64 32` gives you a longer password suitable for critical systems.
 
 The base64 output includes `+` and `/` characters, which can cause issues in some contexts. If you need URL-safe base64:
 
@@ -68,7 +68,7 @@ This is fine for non-critical use but shouldn’t replace cryptographic methods 
 
 Don’t rely on command-line generation alone for important credentials. Use a proper password manager:
 
-**pass** — the standard Unix password manager, using GPG encryption:
+**pass**: the standard Unix password manager, using GPG encryption:
 
 ``` bash
 pass generate services/myapp 32
@@ -77,7 +77,7 @@ pass show services/myapp
 
 Passwords are stored in `~/.password-store/` as GPG-encrypted files, with optional git integration for syncing across machines.
 
-**Bitwarden CLI** — for cross-platform teams:
+**Bitwarden CLI**: for cross-platform teams:
 
 ``` bash
 bw generate --length 32 --symbols
@@ -85,7 +85,7 @@ bw login
 bw add item passwordlogin --name "My Service"
 ```
 
-**1Password CLI** — enterprise-friendly:
+**1Password CLI**: enterprise-friendly:
 
 ``` bash
 op item create --category login --title "My Service"

@@ -10,13 +10,13 @@ canonical: /how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
 url: /how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/
 ---
 
-Choosing the right number of mappers and reducers directly impacts Hadoop job performance. This isn’t a set-and-forget configuration—it depends on your cluster characteristics, data size, and task complexity.
+Choosing the right number of mappers and reducers directly impacts Hadoop job performance. This isn’t a set-and-forget configuration: it depends on your cluster characteristics, data size, and task complexity.
 
 ## Mapper Configuration
 
 The number of mappers is primarily determined by the number of HDFS blocks in your input files. Each block typically generates one map task by default, so if you have 100 blocks, you’ll get roughly 100 mappers.
 
-**Optimal parallelism:** Aim for 10–100 mappers per node as a starting point. CPU-light mapping tasks can go as high as 200–300 per node, but this requires careful monitoring. The key constraint is task overhead—each map task incurs setup cost, so tasks should run for at least 1 minute to be worthwhile.
+**Optimal parallelism:** Aim for 10–100 mappers per node as a starting point. CPU-light mapping tasks can go as high as 200–300 per node, but this requires careful monitoring. The key constraint is task overhead: each map task incurs setup cost, so tasks should run for at least 1 minute to be worthwhile.
 
 If your input has too few blocks relative to your cluster size, increase the number of mappers by:
 
@@ -52,7 +52,7 @@ Or via command line:
 hadoop jar job.jar -D mapreduce.job.reduces=70
 ```
 
-**Note:** Unlike mappers, reducer count doesn’t scale linearly with input size. A job with 200 reducers won’t necessarily be faster than one with 50—it depends on data skew, network bandwidth, and reducer task complexity.
+**Note:** Unlike mappers, reducer count doesn’t scale linearly with input size. A job with 200 reducers won’t necessarily be faster than one with 50: it depends on data skew, network bandwidth, and reducer task complexity.
 
 ## Edge Cases and Considerations
 

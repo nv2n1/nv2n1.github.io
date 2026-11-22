@@ -18,7 +18,7 @@ Modern Linux offers significantly faster alternatives through eBPF (Extended Ber
 
 `bpftrace` is a high-level tracing language built on eBPF. It’s the fastest way to get syscall visibility on production systems, with overhead typically under 1-2% compared to `strace`‘s 2-10x slowdown.
 
-Basic example — trace all `open()` and `openat()` calls with process name:
+Basic example: trace all `open()` and `openat()` calls with process name:
 
 ``` bash
 sudo bpftrace -e 'tracepoint:syscalls:sys_enter_openat { printf("%s (%d): %s\n", comm, pid, str(args->filename)); }'
@@ -131,7 +131,7 @@ sudo bpftrace /etc/bpftrace/syscall_monitor.bt
 
 ## When to Use Each Tool
 
-- **`bpftrace`**: Production monitoring, security, performance debugging — zero-overhead syscall tracing
+- **`bpftrace`**: Production monitoring, security, performance debugging: zero-overhead syscall tracing
 - **`perf trace`**: System-wide profiling, integrating with performance tools
 - **`auditd`**: Compliance logging, persistent audit trails
-- **`strace`**: Development debugging only — too slow for production
+- **`strace`**: Development debugging only: too slow for production

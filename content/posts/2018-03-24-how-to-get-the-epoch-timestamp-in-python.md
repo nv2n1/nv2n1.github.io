@@ -105,7 +105,7 @@ readable = datetime.fromtimestamp(timestamp, tz=timezone.utc)
 print(readable)  # Output: 2026-01-01 12:30:45.123456+00:00
 ```
 
-For most applications, `time.time()` remains the default choice. Use `datetime` methods when you need timezone awareness or plan to perform date arithmetic. Reserve `time.time_ns()` for scenarios where microsecond precision is insufficient—typically observability infrastructure, performance testing, or systems programming where you’re measuring very short durations.
+For most applications, `time.time()` remains the default choice. Use `datetime` methods when you need timezone awareness or plan to perform date arithmetic. Reserve `time.time_ns()` for scenarios where microsecond precision is insufficient: typically observability infrastructure, performance testing, or systems programming where you’re measuring very short durations.
 
 ## Common Pitfalls and Best Practices
 
@@ -117,11 +117,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

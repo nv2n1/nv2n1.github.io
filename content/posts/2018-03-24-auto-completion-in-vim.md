@@ -102,7 +102,7 @@ local luasnip = require('luasnip')
 require('luasnip.loaders.from_vscode').lazy_load()
 ```
 
-Snippets integrate directly with completion engines — when you select a snippet completion, it expands with tab-stops.
+Snippets integrate directly with completion engines, when you select a snippet completion, it expands with tab-stops.
 
 ## Recommended Configuration (2026)
 
@@ -119,7 +119,7 @@ set completeopt=menu,menuone,noselect
 set pumheight=15
 ```
 
-Avoid the old omnicomplete + separate plugin approach — it’s fragmented and harder to maintain. LSP gives you uniform behavior across languages and matches modern IDE expectations without the bloat.
+Avoid the old omnicomplete + separate plugin approach: it’s fragmented and harder to maintain. LSP gives you uniform behavior across languages and matches modern IDE expectations without the bloat.
 
 ## Troubleshooting
 
@@ -127,7 +127,7 @@ Avoid the old omnicomplete + separate plugin approach — it’s fragmented and 
 
 **Slow completion**: Some language servers are resource-heavy (especially typescript-language-server). Consider debouncing with `completeparam` or switching servers.
 
-**Conflicts between snippets and completion**: Configure completion to not auto-select — let users explicitly choose with `<CR>`.
+**Conflicts between snippets and completion**: Configure completion to not auto-select: let users explicitly choose with `<CR>`.
 
 ## 2026 Best Practices and Advanced Techniques
 

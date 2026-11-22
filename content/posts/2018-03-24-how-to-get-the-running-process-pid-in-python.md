@@ -22,7 +22,7 @@ import os
 print(os.getpid())
 ```
 
-This returns an integer representing the current process ID. It’s lightweight and works in any context — scripts, long-running daemons, or applications spawned by supervisors like systemd or Gunicorn.
+This returns an integer representing the current process ID. It’s lightweight and works in any context: scripts, long-running daemons, or applications spawned by supervisors like systemd or Gunicorn.
 
 ## Practical Examples
 
@@ -116,13 +116,13 @@ This is useful for validating that your process was spawned correctly by an init
 
 ## Performance Notes
 
-`os.getpid()` is a system call, but it’s extremely fast and cached by the kernel. There’s no practical reason to avoid calling it repeatedly — the overhead is negligible even in tight loops.
+`os.getpid()` is a system call, but it’s extremely fast and cached by the kernel. There’s no practical reason to avoid calling it repeatedly: the overhead is negligible even in tight loops.
 
 ## Avoiding Common Pitfalls
 
 - **Don’t cache the PID across process boundaries.** If you fork a process, the child has a new PID. Call `os.getpid()` fresh each time you need it.
 - **Thread IDs are different.** If you need the thread ID, use `threading.get_ident()` instead.
-- **File descriptors and signals.** After obtaining the PID, you can safely write it to files or pass it to signal handlers — it won’t change for the current process.
+- **File descriptors and signals.** After obtaining the PID, you can safely write it to files or pass it to signal handlers: it won’t change for the current process.
 
 ## 2026 Best Practices and Advanced Techniques
 

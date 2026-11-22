@@ -101,7 +101,7 @@ This picks c2 and c3 (the `^..` syntax excludes c2’s parent but includes c2). 
 git cherry-pick c2..c4
 ```
 
-This picks c3 and c4 but excludes c2. Be careful with ranges — verify which commits you’re including.
+This picks c3 and c4 but excludes c2. Be careful with ranges: verify which commits you’re including.
 
 ### When to avoid cherry-pick
 
@@ -109,7 +109,7 @@ Cherry-pick is useful for targeted bug fixes, but overusing it can create mainte
 
 - **Repeated history:** If you cherry-pick the same commit to multiple branches, you’ll have duplicate logic spread across the codebase.
 - **Diverging branches:** If dev and master drift significantly, cherry-picking becomes error-prone.
-- **Better alternative — merge:** If you’re bringing over related features or larger changesets, merge the entire branch instead and selectively revert unwanted commits.
+- **Better alternative: merge:** If you’re bringing over related features or larger changesets, merge the entire branch instead and selectively revert unwanted commits.
 
 For ongoing development, prefer merging entire branches to keep history clean and make it easier to understand dependencies between code.
 

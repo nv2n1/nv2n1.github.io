@@ -38,7 +38,7 @@ scp -l 500 user@remote:/path/to/file ./
 scp -l 4000 backup.tar.gz server:/backups/
 ```
 
-This limits transfers to about 500 KB/s — enough for the transfer to complete while leaving bandwidth for other users.
+This limits transfers to about 500 KB/s: enough for the transfer to complete while leaving bandwidth for other users.
 
 **Transfer large files overnight without impacting daytime usage:**
 
@@ -78,7 +78,7 @@ Advantages of rsync over scp:
 
 - `--bwlimit` uses KB/s (more intuitive than Kbit/s)
 - Resumable transfers with `--partial`
-- Delta transfer — only sends changed portions of files
+- Delta transfer: only sends changed portions of files
 - Progress display with `--progress`
 - Bandwidth shaping is more precise
 
@@ -121,4 +121,4 @@ This approach is useful when you want to limit all SSH transfers system-wide rat
 - `rsync --bwlimit=125` = ~125 KB/s (KB/s)
 - `trickle -u 125 -d 125` = 125 KB/s each direction
 
-For most use cases, `rsync --bwlimit` is the best choice — it’s more precise, supports resume, and uses a more intuitive unit (KB/s).
+For most use cases, `rsync --bwlimit` is the best choice: it’s more precise, supports resume, and uses a more intuitive unit (KB/s).

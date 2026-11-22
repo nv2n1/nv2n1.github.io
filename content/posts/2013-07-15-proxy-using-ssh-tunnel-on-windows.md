@@ -33,7 +33,7 @@ Flag breakdown:
 - `-N`: Doesn’t execute a remote command, just forwards ports
 - `-p 2222`: Use this if your SSH server runs on a non-standard port
 
-The terminal will hang — this is expected. Keep it running to maintain the tunnel.
+The terminal will hang: this is expected. Keep it running to maintain the tunnel.
 
 Using a private key instead of a password:
 
@@ -196,7 +196,7 @@ Check that:
 
 ### Application ignores proxy settings
 
-Some apps have their own proxy configuration separate from Windows settings. Check the application’s preferences directly — Firefox, for example, has its own proxy settings that override system defaults. Chrome requires the command-line flag; it won’t read Windows proxy settings.
+Some apps have their own proxy configuration separate from Windows settings. Check the application’s preferences directly: Firefox, for example, has its own proxy settings that override system defaults. Chrome requires the command-line flag; it won’t read Windows proxy settings.
 
 ### No internet through the proxy
 
@@ -210,11 +210,11 @@ If this returns your remote server’s IP, the tunnel works. If it fails, the tu
 
 ## Security Considerations
 
-- Only tunnel through SSH servers you fully trust — unencrypted proxied traffic is visible to the remote server’s operator
+- Only tunnel through SSH servers you fully trust: unencrypted proxied traffic is visible to the remote server’s operator
 - SSH keys are more secure than passwords for remote access
-- If the remote server is compromised, so is your proxied traffic — don’t treat this as a VPN replacement for sensitive work on untrusted networks
+- If the remote server is compromised, so is your proxied traffic: don’t treat this as a VPN replacement for sensitive work on untrusted networks
 - For public WiFi, a proper VPN is more appropriate than SSH tunneling alone
-- Monitor your tunnel connection and close it when not needed — leaving it open indefinitely increases your exposure window
+- Monitor your tunnel connection and close it when not needed: leaving it open indefinitely increases your exposure window
 - Consider using a bastion host or jump server as an intermediary for additional security
 
 SSH tunneling is lightweight, requires no additional software on modern Windows, and works reliably for temporary proxy needs or accessing resources on remote networks.

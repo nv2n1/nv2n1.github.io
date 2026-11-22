@@ -10,7 +10,7 @@ canonical: /how-to-efficiently-archive-a-very-large-sparse-file/
 url: /how-to-efficiently-archive-a-very-large-sparse-file/
 ---
 
-Archiving or copying a 1TB sparse file containing only 32MB of actual data is impractical with naive approaches—you’ll waste time and I/O bandwidth copying zeros. The solution is using `SEEK_HOLE` and `SEEK_DATA` flags with `lseek()`, which allow tools to skip over hole regions entirely.
+Archiving or copying a 1TB sparse file containing only 32MB of actual data is impractical with naive approaches: you’ll waste time and I/O bandwidth copying zeros. The solution is using `SEEK_HOLE` and `SEEK_DATA` flags with `lseek()`, which allow tools to skip over hole regions entirely.
 
 ## How SEEK_HOLE and SEEK_DATA work
 
@@ -145,4 +145,4 @@ Compile and run on a sparse file to see extent mapping in action.
 
 ## Modern best practice
 
-In 2026, sparse file handling is standard—use `cp --sparse=auto` for general copying, `tar -S` for archiving, and verify with `du -h` versus `ls -lh` to confirm sparseness is preserved. For cloud storage and VM image management, this efficiency is essential.
+In 2026, sparse file handling is standard: use `cp --sparse=auto` for general copying, `tar -S` for archiving, and verify with `du -h` versus `ls -lh` to confirm sparseness is preserved. For cloud storage and VM image management, this efficiency is essential.

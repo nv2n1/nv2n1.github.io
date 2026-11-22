@@ -58,8 +58,8 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 
 WordPress supports two types of excerpts:
 
-- **Auto-generated** — WordPress takes the first 55 words of the post and adds \[…\] at the end
-- **Manual** — You write a custom summary in the Excerpt meta box on the post editor screen
+- **Auto-generated**: WordPress takes the first 55 words of the post and adds \[…\] at the end
+- **Manual**: You write a custom summary in the Excerpt meta box on the post editor screen
 
 To enable the Excerpt meta box: Screen Options (top right of post editor) → check “Excerpt”. Write a hand-crafted summary for important posts.
 
@@ -83,8 +83,8 @@ Use the `excerpt.rendered` field for display in your frontend application.
 
 Two different approaches to truncating content:
 
-- **Excerpts** — Automatic or manual summaries, stripped of HTML formatting, consistent length across all posts
-- **Read More tag** — Manual placement with `<!--more-->` in the editor, preserves HTML formatting, shows the content up to the tag
+- **Excerpts**: Automatic or manual summaries, stripped of HTML formatting, consistent length across all posts
+- **Read More tag**: Manual placement with `<!--more-->` in the editor, preserves HTML formatting, shows the content up to the tag
 
 For archive pages, excerpts are generally better because they’re consistent in length and don’t break layouts with unexpected HTML.
 
@@ -123,8 +123,8 @@ Excerpts also improve SEO by reducing duplicate content. When full posts appear 
 
 Several WordPress plugins handle excerpt management without editing theme files:
 
-- **Advanced Excerpt** – Control excerpt length, HTML tags preserved, and ending text
-- **Excerpt Editor** – Bulk edit excerpts from the post list screen
-- **WP Excerpt** – Auto-generate excerpts with configurable settings
+- **Advanced Excerpt**: Control excerpt length, HTML tags preserved, and ending text
+- **Excerpt Editor**: Bulk edit excerpts from the post list screen
+- **WP Excerpt**: Auto-generate excerpts with configurable settings
 
 For sites that cannot modify theme files, a plugin is the safer approach that survives theme updates.

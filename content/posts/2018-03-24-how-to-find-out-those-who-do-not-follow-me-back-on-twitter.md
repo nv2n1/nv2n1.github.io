@@ -86,13 +86,13 @@ You’ll need X API credentials from the developer portal and proper rate limit 
 
 **Bot Detection:** Aggressive unfollowing (especially automated) can trigger X’s spam detection. Unfollow strategically and gradually.
 
-**Privacy:** Some third-party tools request full account access. Review their privacy policies—use only established, reputable services.
+**Privacy:** Some third-party tools request full account access. Review their privacy policies: use only established, reputable services.
 
 **Data Accuracy:** Real-time accuracy isn’t guaranteed. X’s systems have slight delays in updating follower counts and relationships.
 
 ### Practical Workflow
 
-1.  Determine your actual need—are you cleaning followers for a business account or just curious?
+1.  Determine your actual need: are you cleaning followers for a business account or just curious?
 2.  Start with X Pro’s native tools if you have a subscription
 3.  For detailed analytics, try SocialBlade or similar for a week’s free trial
 4.  If managing hundreds of accounts, the API approach is most efficient and controllable

@@ -120,7 +120,7 @@ if (ec) {
 ## Summary
 
 - **C**: Use `stat()` for existence checks or `access()` when you need permission verification
-- **C++17+**: Use `std::filesystem::exists()` — it’s safer, more readable, and handles edge cases better
+- **C++17+**: Use `std::filesystem::exists()`: it’s safer, more readable, and handles edge cases better
 - **Always consider TOCTOU**: Pre-checking existence introduces race conditions; prefer opening files and handling errors instead
 
 ## Practical Tips and Common Gotchas

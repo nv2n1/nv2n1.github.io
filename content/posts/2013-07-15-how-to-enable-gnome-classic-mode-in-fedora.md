@@ -131,10 +131,10 @@ Once in Classic mode, you can further customize the desktop:
 
 Popular extensions for Classic mode include:
 
-- **Dash to Panel** — adds a modern taskbar with application previews
-- **Applications Menu** — provides a traditional application menu
-- **Caffeine** — prevents the screensaver from activating
-- **System Monitor** — displays CPU, memory, and network in the panel
+- **Dash to Panel**: adds a modern taskbar with application previews
+- **Applications Menu**: provides a traditional application menu
+- **Caffeine**: prevents the screensaver from activating
+- **System Monitor**: displays CPU, memory, and network in the panel
 
 Enable extensions in small batches and verify compatibility with your GNOME version before enabling multiple at once.
 

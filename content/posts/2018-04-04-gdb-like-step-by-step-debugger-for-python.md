@@ -10,7 +10,7 @@ canonical: /gdb-like-step-by-step-debugger-for-python/
 url: /gdb-like-step-by-step-debugger-for-python/
 ---
 
-The built-in pdb module is Python’s equivalent to gdb — a command-line debugger that lets you step through code, set breakpoints, inspect variables, and control execution flow. It’s essential for server-side debugging and situations where IDE graphical debuggers aren’t available.
+The built-in pdb module is Python’s equivalent to gdb: a command-line debugger that lets you step through code, set breakpoints, inspect variables, and control execution flow. It’s essential for server-side debugging and situations where IDE graphical debuggers aren’t available.
 
 ## Starting a pdb Session
 
@@ -50,9 +50,9 @@ Type `help` at the pdb prompt to list all commands. Here are the ones you’ll u
 | `down` | `d` | Move down one frame in the stack |
 | `return` | `r` | Execute until current function returns |
 | `until <lineno>` | `unt <lineno>` | Execute until reaching a specific line |
-| `whatis <var>` | — | Display variable type |
-| `condition <bp> <expr>` | — | Break only when expression evaluates true |
-| `commands <bp>` | — | Attach commands to run automatically at breakpoint |
+| `whatis <var>` |: | Display variable type |
+| `condition <bp> <expr>` |: | Break only when expression evaluates true |
+| `commands <bp>` |: | Attach commands to run automatically at breakpoint |
 
 ## Working Through a Practical Example
 

@@ -37,7 +37,7 @@ std::vector<std::string> split(const std::string& str, char delim)
 }
 ```
 
-Note the use of a const reference for the input string — this avoids unnecessary copying.
+Note the use of a const reference for the input string: this avoids unnecessary copying.
 
 ## Complete example
 

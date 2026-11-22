@@ -98,7 +98,7 @@ This approach allows internal traffic while keeping protection against unexpecte
 
 Disabling the firewall entirely only makes sense if you have network-level protections in place: physical isolation, VPC boundaries, private network clusters, or other cluster-level security controls.
 
-If your servers have any exposure to untrusted networks — the public internet, shared infrastructure, or cloud environments without network segmentation — leaving the firewall disabled is a significant security risk.
+If your servers have any exposure to untrusted networks (the public internet, shared infrastructure, or cloud environments without network segmentation) leaving the firewall disabled is a significant security risk.
 
 Before disabling FirewallD on production systems, verify:
 

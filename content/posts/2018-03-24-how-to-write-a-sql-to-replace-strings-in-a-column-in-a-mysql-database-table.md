@@ -127,9 +127,9 @@ WHERE department_id = 5;
 
 ### Safe practices
 
-1.  **Back up before bulk updates** — Always maintain a recent database backup.
-2.  **Test on a development instance** — Verify the replacement logic doesn’t produce unexpected results.
-3.  **Use transactions for safety** — Wrap large updates in a transaction so you can roll back if needed:
+1.  **Back up before bulk updates**: Always maintain a recent database backup.
+2.  **Test on a development instance**: Verify the replacement logic doesn’t produce unexpected results.
+3.  **Use transactions for safety**: Wrap large updates in a transaction so you can roll back if needed:
 
 ``` sql
 START TRANSACTION;
@@ -141,8 +141,8 @@ COMMIT;
 -- Or ROLLBACK; if something looks wrong
 ```
 
-4.  **Log your changes** — Document what was replaced, when, and why for audit trails.
-5.  **Verify after the update** — Run a SELECT query to confirm the replacements worked correctly:
+4.  **Log your changes**: Document what was replaced, when, and why for audit trails.
+5.  **Verify after the update**: Run a SELECT query to confirm the replacements worked correctly:
 
 ``` sql
 SELECT COUNT(*)

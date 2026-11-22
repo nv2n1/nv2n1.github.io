@@ -172,16 +172,16 @@ aws iam add-user-to-group --group-name developers --user-name bob.jones
 Have a user configure their AWS credentials and test these commands:
 
 ``` bash
-# Should work — lists all instances
+# Should work: lists all instances
 aws ec2 describe-instances
 
-# Should work — starts any instance
+# Should work: starts any instance
 aws ec2 start-instances --instance-ids i-1234567890abcdef0
 
-# Should work — stops dev instance
+# Should work: stops dev instance
 aws ec2 stop-instances --instance-ids i-dev-instance
 
-# Should fail with UnauthorizedOperation — stops prod instance
+# Should fail with UnauthorizedOperation: stops prod instance
 aws ec2 stop-instances --instance-ids i-prod-instance
 ```
 

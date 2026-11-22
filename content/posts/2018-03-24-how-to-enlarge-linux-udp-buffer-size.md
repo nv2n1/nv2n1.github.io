@@ -14,7 +14,7 @@ UDP packet loss on Linux commonly stems from undersized kernel buffers. When pac
 
 ## Why UDP Packets Get Lost
 
-The kernel maintains separate receive and transmit buffers for each socket. When a UDP packet arrives and the receive buffer is full, the kernel discards it. This happens even when the application is running normally—the issue is purely a buffering mismatch between network arrival rate and application consumption rate.
+The kernel maintains separate receive and transmit buffers for each socket. When a UDP packet arrives and the receive buffer is full, the kernel discards it. This happens even when the application is running normally: the issue is purely a buffering mismatch between network arrival rate and application consumption rate.
 
 ## Checking Current Buffer Configuration
 
@@ -97,7 +97,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 26214400)
 ```
 
-The kernel enforces the system `rmem_max` as a hard cap—requesting a larger buffer than the system limit will be silently capped.
+The kernel enforces the system `rmem_max` as a hard cap: requesting a larger buffer than the system limit will be silently capped.
 
 In Go:
 

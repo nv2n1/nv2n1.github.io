@@ -86,7 +86,7 @@ After reverting, `dmesg` should show devices reconnecting via `xhci_hcd`:
 - This method only works on Intel systems (chipsets with xHCI controllers). AMD and other manufacturers may use different register layouts.
 - Changes don’t persist across reboot. Add the command to a systemd service or udev rule if persistence is needed.
 - Requires root privileges to run `setpci`.
-- This is a hardware-level change and doesn’t affect the kernel’s USB driver stack directly — it changes controller behavior.
+- This is a hardware-level change and doesn’t affect the kernel’s USB driver stack directly: it changes controller behavior.
 - Some systems may not have this register implemented. If `setpci` returns an error, your chipset doesn’t support this method.
 
 ## 2026 Comprehensive Guide: Best Practices

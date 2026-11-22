@@ -39,7 +39,7 @@ After running the command:
     eee
     ffffff
 
-Without `-i`, `sed` prints the result to stdout instead of modifying the file — useful for previewing changes:
+Without `-i`, `sed` prints the result to stdout instead of modifying the file: useful for previewing changes:
 
 ``` bash
 sed '4d' ./file

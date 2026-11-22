@@ -46,7 +46,7 @@ For filesystems that are completely unresponsive (like a dead NFS server), use t
 umount -f /mnt/point
 ```
 
-This tells the kernel to forcefully unmount the filesystem without waiting for processes to close files. The behavior depends on the filesystem type — some filesystems ignore this flag entirely.
+This tells the kernel to forcefully unmount the filesystem without waiting for processes to close files. The behavior depends on the filesystem type: some filesystems ignore this flag entirely.
 
 ## Combining flags
 
@@ -81,7 +81,7 @@ If you identify specific processes preventing unmount, you can terminate them fi
 fuser -km /mnt/point
 ```
 
-The `-k` flag kills all processes accessing that mount. The `-m` flag specifically targets the mount. Be careful — this will terminate whatever is using the filesystem.
+The `-k` flag kills all processes accessing that mount. The `-m` flag specifically targets the mount. Be careful: this will terminate whatever is using the filesystem.
 
 ## Dealing with rootfs and system mounts
 

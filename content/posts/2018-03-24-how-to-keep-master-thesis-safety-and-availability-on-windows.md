@@ -16,10 +16,10 @@ The solution is version control with remote backup. Git provides local history a
 
 ## What You’ll Need
 
-- **Git for Windows** — the Git version control system with Windows integration
-- **A code hosting platform** — GitHub (free private repos), GitLab (free private repos), or Gitea (self-hosted)
-- **A text editor** — VS Code, Notepad++, or any editor you prefer
-- **The command line** — Git Bash or PowerShell
+- **Git for Windows**: the Git version control system with Windows integration
+- **A code hosting platform**: GitHub (free private repos), GitLab (free private repos), or Gitea (self-hosted)
+- **A text editor**: VS Code, Notepad++, or any editor you prefer
+- **The command line**: Git Bash or PowerShell
 
 GitHub and GitLab both offer unlimited free private repositories now, making them practical choices. Bitbucket still works, but these alternatives are more widely used.
 
@@ -129,4 +129,4 @@ git push backup main
 
 Git provides version control and local recovery from accidental deletions or corruption. A private remote repository protects against hardware failure and gives you access from any device. You maintain full privacy until you’re ready to publish. The entire history of your work stays available, allowing you to audit changes and recover anything.
 
-This setup scales with your thesis — whether you’re writing plain text, Markdown, or LaTeX files, Git handles them all efficiently.
+This setup scales with your thesis, whether you’re writing plain text, Markdown, or LaTeX files, Git handles them all efficiently.

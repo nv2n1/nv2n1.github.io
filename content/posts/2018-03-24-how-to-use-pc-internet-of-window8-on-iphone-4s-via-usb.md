@@ -16,7 +16,7 @@ Tethering your iPhone to your computer’s internet connection via USB is useful
 
 **On Windows 10/11:**
 
-1.  **Install iTunes or Apple Devices support** — Windows needs proper USB drivers to recognize your iPhone. Download from the Microsoft Store or Apple’s website.
+1.  **Install iTunes or Apple Devices support**: Windows needs proper USB drivers to recognize your iPhone. Download from the Microsoft Store or Apple’s website.
 
 2.  **Connect your iPhone** via USB cable and trust the computer when prompted.
 
@@ -59,7 +59,7 @@ Once connected via USB:
 **No internet traffic flowing:**
 
 - Confirm your PC’s primary internet connection is active
-- Check Windows Firewall isn’t blocking the connection — allow it through if necessary
+- Check Windows Firewall isn’t blocking the connection: allow it through if necessary
 - Verify the iPhone shows “Connected” under USB settings
 - Test connectivity: open Safari on the iPhone and load a webpage
 
@@ -73,9 +73,9 @@ Once connected via USB:
 
 If USB tethering proves unreliable, consider:
 
-- **WiFi Personal Hotspot** — More stable if your PC has dual-band WiFi; requires no cable
-- **Bluetooth tethering** — Lower bandwidth but wireless
-- **Native iOS network apps** — Apps like Speedtest or iMessage will use cellular/WiFi directly without PC sharing
+- **WiFi Personal Hotspot**: More stable if your PC has dual-band WiFi; requires no cable
+- **Bluetooth tethering**: Lower bandwidth but wireless
+- **Native iOS network apps**: Apps like Speedtest or iMessage will use cellular/WiFi directly without PC sharing
 
 USB tethering works well for brief periods or in environments where WiFi isn’t available, but for sustained use, wireless hotspot is generally more convenient on modern hardware.
 

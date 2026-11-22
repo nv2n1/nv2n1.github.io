@@ -111,7 +111,7 @@ Verify your setup works:
 ssh -v internal-db
 ```
 
-The verbose output shows each connection stage—first to the gateway, then the internal host.
+The verbose output shows each connection stage: first to the gateway, then the internal host.
 
 ## SCP and Other SSH Tools
 

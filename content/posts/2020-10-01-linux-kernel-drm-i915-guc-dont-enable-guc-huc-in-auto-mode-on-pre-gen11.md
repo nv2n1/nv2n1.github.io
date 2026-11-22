@@ -18,9 +18,9 @@ The i915 driver supports hardware-based GPU command submission and video codec a
 
 The `enable_guc` module parameter controls GuC/HuC behavior:
 
-- `0` – Disabled (explicit)
-- `-1` – Auto mode (hardware decides based on detection logic)
-- `2` – Enabled (explicit)
+- `0`: Disabled (explicit)
+- `-1`: Auto mode (hardware decides based on detection logic)
+- `2`: Enabled (explicit)
 
 ## Why Pre-Gen11 Needs Special Handling
 
@@ -99,7 +99,7 @@ Then rebuild your initramfs and reboot. Monitor kernel logs for warnings or stab
 sudo journalctl -b -k | grep -i "guc\|huc"
 ```
 
-This patch exemplifies how kernel maintainers handle hardware capability detection—providing sensible defaults that don’t break older systems while allowing power users to opt into experimental features when needed.
+This patch exemplifies how kernel maintainers handle hardware capability detection: providing sensible defaults that don’t break older systems while allowing power users to opt into experimental features when needed.
 
 ## 2026 Comprehensive Guide: Best Practices
 

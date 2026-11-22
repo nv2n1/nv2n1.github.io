@@ -10,7 +10,7 @@ canonical: /how-to-test-whether-the-git-repository-is-dirty/
 url: /how-to-test-whether-the-git-repository-is-dirty/
 ---
 
-The `git status` command shows repository state visually, but when you need to detect it programmatically in bash — say, to fail a CI pipeline or prevent deployments — you need a different approach.
+The `git status` command shows repository state visually, but when you need to detect it programmatically in bash (say, to fail a CI pipeline or prevent deployments) you need a different approach.
 
 ## Quick Method: Check Unstaged Changes
 
@@ -26,7 +26,7 @@ This checks for modifications to tracked files. The `--shortstat` flag outputs a
 
 ## Complete Dirty Check: Staged and Untracked
 
-However, “dirty” usually means *any* uncommitted work — staged changes, unstaged changes, and untracked files. Use this more comprehensive check:
+However, “dirty” usually means *any* uncommitted work: staged changes, unstaged changes, and untracked files. Use this more comprehensive check:
 
 ``` bash
 if ! git diff-index --quiet HEAD --; then
@@ -92,7 +92,7 @@ if git rev-parse --verify HEAD >/dev/null 2>&1; then
   # Normal check
   git diff-index --quiet HEAD --
 else
-  # New repo — check for any staged files
+  # New repo: check for any staged files
   [[ -n $(git diff-index --cached --quiet --exit-code) ]]
 fi
 ```
@@ -103,7 +103,7 @@ fi
 git diff-index --quiet HEAD -- src/
 ```
 
-Choose the method based on your definition of “dirty” — whether untracked files matter for your workflow.
+Choose the method based on your definition of “dirty”, whether untracked files matter for your workflow.
 
 ## 2026 Best Practices and Advanced Techniques
 

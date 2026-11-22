@@ -14,7 +14,7 @@ WordPress automatically generates archive pages, category listings, tag pages, a
 
 ## How noindex Works
 
-When a search engine like Google encounters `noindex` on a page, it removes that page from search results but continues crawling the page to discover links. This differs from `robots.txt` with `Disallow:`, which prevents crawling entirely. For WordPress archives, `noindex,follow` is typically the right choice — you want Google to follow links to your actual posts without listing the archive page itself.
+When a search engine like Google encounters `noindex` on a page, it removes that page from search results but continues crawling the page to discover links. This differs from `robots.txt` with `Disallow:`, which prevents crawling entirely. For WordPress archives, `noindex,follow` is typically the right choice: you want Google to follow links to your actual posts without listing the archive page itself.
 
 ## Adding noindex via Theme Functions (Recommended)
 
@@ -95,7 +95,7 @@ You can also verify in your browser’s developer tools. Open a category page, p
 
 ## Performance and Link Equity Considerations
 
-Using `noindex,follow` preserves internal link equity — your site’s authority still flows through archive pages to individual posts. This is better than blocking with `robots.txt`, which prevents crawling entirely and can waste crawl budget on pages you don’t want indexed anyway.
+Using `noindex,follow` preserves internal link equity: your site’s authority still flows through archive pages to individual posts. This is better than blocking with `robots.txt`, which prevents crawling entirely and can waste crawl budget on pages you don’t want indexed anyway.
 
 If an archive page is truly low-value, consider whether you need it at all. WordPress tag archives with a single post or empty pagination aren’t useful for users either. In these cases, disabling tag archives entirely via `register_taxonomy()` arguments may be cleaner.
 
@@ -103,8 +103,8 @@ If an archive page is truly low-value, consider whether you need it at all. Word
 
 - **Using bitwise OR (`|`) instead of logical OR (`||`)** in conditionals will cause syntax errors. Always use `||`.
 - **Placing code before `wp_head()`** means your tag won’t output. Use the `wp_head` hook to guarantee execution.
-- **Forgetting to clear caches** — if you use a page cache or CDN, flush caches after implementing noindex so Google sees the updated headers.
-- **Mixing plugin and code solutions** — avoid adding noindex both via Yoast and functions.php, which can create conflicts.
+- **Forgetting to clear caches**: if you use a page cache or CDN, flush caches after implementing noindex so Google sees the updated headers.
+- **Mixing plugin and code solutions**: avoid adding noindex both via Yoast and functions.php, which can create conflicts.
 
 ## Testing Before Deployment
 

@@ -49,9 +49,9 @@ With R installed, you can now add RStudio Desktop for a more convenient IDE expe
 
 When RStudio opens, it automatically detects your R installation. You’ll see three panels:
 
-- Console (bottom left) — where you type R commands
-- Environment/History (top right) — shows loaded variables and command history
-- Files/Plots/Help (bottom right) — file browser, plot viewer, and documentation
+- Console (bottom left), where you type R commands
+- Environment/History (top right): shows loaded variables and command history
+- Files/Plots/Help (bottom right): file browser, plot viewer, and documentation
 
 ## Verify Both Installations
 
@@ -113,7 +113,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -131,7 +131,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

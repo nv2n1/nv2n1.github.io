@@ -82,7 +82,7 @@ When you assign a string with unquoted variable expansion to an array, bash auto
 
 ## Comparison
 
-For most use cases, **awk is your best choice**: it’s concise, handles any amount of whitespace, and is available on every Unix-like system. Use `tr` with `cut` if you’re already using `cut` for other operations in the same pipeline. Avoid `sed` regex approaches unless you need its specific features—they’re harder to maintain.
+For most use cases, **awk is your best choice**: it’s concise, handles any amount of whitespace, and is available on every Unix-like system. Use `tr` with `cut` if you’re already using `cut` for other operations in the same pipeline. Avoid `sed` regex approaches unless you need its specific features: they’re harder to maintain.
 
 When processing large files repeatedly, test performance with `time` to see if the extra processing from `tr` adds meaningful overhead, but in practice the difference is negligible for typical workloads.
 

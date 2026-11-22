@@ -10,7 +10,7 @@ canonical: /how-to-add-inline-comments-for-multi-line-command-in-bash-script/
 url: /how-to-add-inline-comments-for-multi-line-command-in-bash-script/
 ---
 
-When you chain multiple commands with pipes or line continuations in Bash, the resulting one-liner becomes hard to read. Adding comments inline—rather than just before the entire command—makes the script self-documenting and maintainable.
+When you chain multiple commands with pipes or line continuations in Bash, the resulting one-liner becomes hard to read. Adding comments inline (rather than just before the entire command) makes the script self-documenting and maintainable.
 
 ## Inline comments with pipe-delimited commands
 
@@ -104,7 +104,7 @@ find /var/log "${filters[@]}" -exec gzip {} \;
 
 ## Key takeaway
 
-Use piped commands with inline comments (the first technique) whenever possible—it’s Bash-idiomatic and adds no overhead. For complex backslash continuations, prefer breaking the command into smaller steps or using functions and variables rather than forcing inline comments via subshells.
+Use piped commands with inline comments (the first technique) whenever possible: it’s Bash-idiomatic and adds no overhead. For complex backslash continuations, prefer breaking the command into smaller steps or using functions and variables rather than forcing inline comments via subshells.
 
 ## 2026 Best Practices and Advanced Techniques
 

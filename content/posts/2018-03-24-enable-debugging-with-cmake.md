@@ -71,28 +71,28 @@ lldb ./build/your_binary
 
 **Breakpoints and execution:**
 
-- `break function_name` or `b main` — set a breakpoint
-- `break file.cpp:42` — break at a specific line
-- `run` or `r` — start execution
-- `continue` or `c` — resume until next breakpoint
-- `next` or `n` — execute next line (doesn’t step into functions)
-- `step` or `s` — step into the next function call
-- `finish` — execute until current function returns
+- `break function_name` or `b main`: set a breakpoint
+- `break file.cpp:42`: break at a specific line
+- `run` or `r`: start execution
+- `continue` or `c`: resume until next breakpoint
+- `next` or `n`: execute next line (doesn’t step into functions)
+- `step` or `s`: step into the next function call
+- `finish`: execute until current function returns
 
 **Inspecting state:**
 
-- `print variable_name` or `p var` — display variable value
-- `print *pointer` — dereference and display pointer
-- `print array@10` — print first 10 elements of array
-- `watch variable_name` — pause when variable changes
-- `info locals` — show all local variables in current frame
-- `backtrace` or `bt` — print call stack
+- `print variable_name` or `p var`: display variable value
+- `print *pointer`: dereference and display pointer
+- `print array@10`: print first 10 elements of array
+- `watch variable_name`: pause when variable changes
+- `info locals`: show all local variables in current frame
+- `backtrace` or `bt`: print call stack
 
 **Navigation:**
 
-- `frame N` — switch to stack frame N
-- `list` or `l` — show source code around current line
-- `quit` or `q` — exit debugger
+- `frame N`: switch to stack frame N
+- `list` or `l`: show source code around current line
+- `quit` or `q`: exit debugger
 
 ## Enabling Core Dumps
 

@@ -22,7 +22,7 @@ Consistency models define the guarantees that a distributed system makes about t
 
 ## Weak Consistency Models
 
-**Causal Consistency** preserves causality—if operation B depends on operation A, then all processes will see A before B. This is stronger than FIFO ordering but weaker than sequential consistency. It’s useful for systems where dependency tracking is feasible.
+**Causal Consistency** preserves causality: if operation B depends on operation A, then all processes will see A before B. This is stronger than FIFO ordering but weaker than sequential consistency. It’s useful for systems where dependency tracking is feasible.
 
 **FIFO Consistency** (also called PRAM consistency) guarantees that writes from a single process are seen in order by all other processes, but writes from different processes may be seen in different orders. This is a reasonable model for eventually consistent systems with per-client ordering guarantees.
 
@@ -43,11 +43,11 @@ The gap between isolation levels and consistency models is important: a database
 
 ## Practical Trade-offs
 
-Strong consistency requires coordination, reducing availability and increasing latency. Systems like PostgreSQL with synchronous replication prioritize consistency. Weak consistency trades consistency for availability and partition tolerance—distributed caches and event logs often operate this way.
+Strong consistency requires coordination, reducing availability and increasing latency. Systems like PostgreSQL with synchronous replication prioritize consistency. Weak consistency trades consistency for availability and partition tolerance: distributed caches and event logs often operate this way.
 
 Most production systems operate in the middle: they provide strong consistency for critical operations (user authentication, financial transactions) and eventual consistency for best-effort operations (caching, analytics, logging). Redis can offer strong consistency with Sentinel or Cluster mode, while still accepting weaker reads when appropriate.
 
-When evaluating or building systems, document which consistency model applies to each data category. A single “consistency level” setting often masks complexity—you may need linearizable consistency for one table and eventual consistency for another.
+When evaluating or building systems, document which consistency model applies to each data category. A single “consistency level” setting often masks complexity: you may need linearizable consistency for one table and eventual consistency for another.
 
 ## References
 

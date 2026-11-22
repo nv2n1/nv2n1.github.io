@@ -10,7 +10,7 @@ canonical: /how-to-get-the-full-path-and-directory-of-a-python-script-itself/
 url: /how-to-get-the-full-path-and-directory-of-a-python-script-itself/
 ---
 
-When you need to load configuration files, data files, or assets relative to your script’s location, the current working directory won’t work — it depends entirely on where you called the script from, not where the script actually lives.
+When you need to load configuration files, data files, or assets relative to your script’s location, the current working directory won’t work: it depends entirely on where you called the script from, not where the script actually lives.
 
 Use `pathlib.Path`:
 
@@ -26,7 +26,7 @@ script_path = Path(__file__).resolve()
 print(script_path)
 ```
 
-The `.resolve()` call is critical — it follows symlinks and normalizes the path, giving you the true canonical location. This matters in production when scripts are symlinked or deployed through containers.
+The `.resolve()` call is critical: it follows symlinks and normalizes the path, giving you the true canonical location. This matters in production when scripts are symlinked or deployed through containers.
 
 ## Practical Examples
 
@@ -62,9 +62,9 @@ assets_dir.mkdir(parents=True, exist_ok=True)
 
 In some situations, `__file__` isn’t available:
 
-- **Interactive Python shells** — `__file__` doesn’t exist in REPL or Jupyter
-- **Frozen executables** — PyInstaller, cx_Freeze, and similar tools may not set `__file__`
-- **Entry points** — Some package installations don’t preserve `__file__` reliably
+- **Interactive Python shells**: `__file__` doesn’t exist in REPL or Jupyter
+- **Frozen executables**: PyInstaller, cx_Freeze, and similar tools may not set `__file__`
+- **Entry points**: Some package installations don’t preserve `__file__` reliably
 
 For these cases, use alternatives:
 
@@ -124,11 +124,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

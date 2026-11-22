@@ -172,4 +172,4 @@ curl -s https://example.com | grep -E "\.swf|<object|<embed|flash"
 
 ## Bottom Line
 
-Flash on the web is gone. Ruffle handles 95% of remaining use cases and requires zero plugin maintenance. For the small percentage of legacy internal applications, Ruffle usually works fine—test it first before building complex workarounds. If you absolutely must run unsupported legacy content, containerization or Wine are your only options, but this adds significant operational burden.
+Flash on the web is gone. Ruffle handles 95% of remaining use cases and requires zero plugin maintenance. For the small percentage of legacy internal applications, Ruffle usually works fine: test it first before building complex workarounds. If you absolutely must run unsupported legacy content, containerization or Wine are your only options, but this adds significant operational burden.

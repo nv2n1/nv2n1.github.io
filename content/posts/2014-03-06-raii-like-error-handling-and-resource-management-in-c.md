@@ -47,7 +47,7 @@ exit:
 }
 ```
 
-The goto here serves a clear purpose: structured error recovery with guaranteed cleanup order. Adding more resources is straightforward—just add additional cleanup labels. The pattern offers simplicity with zero runtime overhead, and the cleanup order is visually explicit.
+The goto here serves a clear purpose: structured error recovery with guaranteed cleanup order. Adding more resources is straightforward: just add additional cleanup labels. The pattern offers simplicity with zero runtime overhead, and the cleanup order is visually explicit.
 
 A more realistic example handling file I/O with multiple allocations:
 

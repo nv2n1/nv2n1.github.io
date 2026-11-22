@@ -30,7 +30,7 @@ The `UserKnownHostsFile=/dev/null` variant discards the key entirely (useful for
 ssh -o StrictHostKeyChecking=accept-new username@host
 ```
 
-The `accept-new` option (available in OpenSSH 7.6+) automatically adds the host key only if it’s new, but still rejects keys that changed — a safer middle ground than disabling checks entirely.
+The `accept-new` option (available in OpenSSH 7.6+) automatically adds the host key only if it’s new, but still rejects keys that changed: a safer middle ground than disabling checks entirely.
 
 ## Method 2: SSH Config File
 
@@ -104,7 +104,7 @@ This removes the host from `known_hosts`. The next connection will prompt you ag
 
 ## Best Practices
 
-- Use `accept-new` instead of `no` when possible — it balances convenience with security
+- Use `accept-new` instead of `no` when possible: it balances convenience with security
 - For interactive work, keep `StrictHostKeyChecking` enabled and manually approve new hosts
 - In CI/CD pipelines, use `accept-new` or pass keys via deploy keys rather than disabling checks entirely
 - Regularly audit `~/.ssh/known_hosts` for unexpected entries

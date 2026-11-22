@@ -41,13 +41,13 @@ Or navigate directly from File Explorer by enabling hidden files (View → Hidde
 
 While legacy Win32 applications still use `.lnk` files in these directories, this approach has significant limitations in modern Windows:
 
-**Store Apps and UWP Applications** — Modern apps from the Microsoft Store don’t store their Start Menu configuration as simple shortcuts. Instead, they’re managed through the Shell:AppsFolder virtual directory and Windows Registry entries. You won’t find traditional `.lnk` files for these apps.
+**Store Apps and UWP Applications**: Modern apps from the Microsoft Store don’t store their Start Menu configuration as simple shortcuts. Instead, they’re managed through the Shell:AppsFolder virtual directory and Windows Registry entries. You won’t find traditional `.lnk` files for these apps.
 
-**Pinned Items** — Items you pin to Start Menu in Windows 11 are stored in the Registry under:
+**Pinned Items**: Items you pin to Start Menu in Windows 11 are stored in the Registry under:
 
     HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount
 
-**Accessing Apps Folder** — To view all registered applications (including Store apps), use:
+**Accessing Apps Folder**: To view all registered applications (including Store apps), use:
 
     shell:appsFolder
 

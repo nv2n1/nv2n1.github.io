@@ -22,7 +22,7 @@ vSSH remains one of the more capable SSH clients for iOS, offering straightforwa
 
 Termius is polished and widely used for general SSH access. It supports port forwarding including dynamic (SOCKS) mode, with a clean UI that makes tunnel configuration relatively straightforward. The app syncs connection profiles across devices if you have an account, which can be useful if you’re juggling multiple iOS devices.
 
-### SSH Files – Secure ShellFish
+### SSH Files: Secure ShellFish
 
 This newer option integrates well with iOS’s file system and supports SSH tunneling, including SOCKS proxies. It’s particularly good if you want SSH functionality alongside file management tasks. Connection setup is intuitive, and the app respects iOS security models effectively.
 
@@ -48,7 +48,7 @@ This verifies the tunnel is actually routing traffic. Some iOS SSH clients inclu
 
 ### Recommendation
 
-For most sysadmins, **vSSH** or **Termius** are the safest choices—both have been around long enough to work out sandbox-related bugs, and both handle SOCKS configuration without requiring deep technical knowledge. If you’re already invested in iOS’s native security features and file system, **SSH Files** is worth a trial.
+For most sysadmins, **vSSH** or **Termius** are the safest choices: both have been around long enough to work out sandbox-related bugs, and both handle SOCKS configuration without requiring deep technical knowledge. If you’re already invested in iOS’s native security features and file system, **SSH Files** is worth a trial.
 
 The “best” client depends on what you’re using the proxy for. If it’s just browser tunneling, any of these work. If you’re proxying traffic from other iOS apps or need advanced features like certificate pinning, test before committing.
 

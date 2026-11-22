@@ -22,11 +22,11 @@ When should the authors anonymize themselves in a paper submitted to a conferenc
 
 **Several general concepts**:
 
-- **Peer review** is the evaluation of work by one or more people of similar competence to the producers of the work (peers). — <a href="https://en.wikipedia.org/wiki/Peer_review" rel="nofollow noopener" target="_blank">Wikipedia</a>
+- **Peer review** is the evaluation of work by one or more people of similar competence to the producers of the work (peers). <a href="https://en.wikipedia.org/wiki/Peer_review" rel="nofollow noopener" target="_blank">Wikipedia</a>
 
 - **Single-blind** describes experiments where information that could introduce bias or otherwise skew the result is withheld from the participants, but the experimenter will be in full possession of the facts.
 
-- **Double-blind** describes an especially stringent way of conducting an experiment which attempts to eliminate subjective, unrecognized biases carried by an experiment’s subjects (usually human) and conductors. — <a href="https://en.wikipedia.org/wiki/Blind_experiment" rel="nofollow noopener" target="_blank">Wikipedia</a>
+- **Double-blind** describes an especially stringent way of conducting an experiment which attempts to eliminate subjective, unrecognized biases carried by an experiment’s subjects (usually human) and conductors. <a href="https://en.wikipedia.org/wiki/Blind_experiment" rel="nofollow noopener" target="_blank">Wikipedia</a>
 
 **In summary**, “peer reviewed” means that your paper will be reviewed by one ore more reviewers before being accepted/published. If the peer review process is single-blind or double-blind, you should anonymize yourselves.
 

@@ -45,11 +45,11 @@ After entering these settings, enable the account and allow Pidgin to connect. I
 
 If Pidgin fails to connect:
 
-- Verify your password is correct — XMPP authentication is strict
+- Verify your password is correct: XMPP authentication is strict
 - Check that your Google Apps account has XMPP/Gtalk enabled in the admin console (Settings → Apps and more products → Google Talk)
 - Confirm port 5222 isn’t blocked by your firewall or network
 - Try toggling “Use TLS when available” in the Advanced tab if you encounter encryption issues
-- Some Google Workspace configurations require specific server addresses — check your domain’s XMPP documentation if `talk.google.com` fails
+- Some Google Workspace configurations require specific server addresses: check your domain’s XMPP documentation if `talk.google.com` fails
 
 ### Alternative: Using Your Full Email Address
 

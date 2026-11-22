@@ -12,7 +12,7 @@ url: /debug-linux-kernel-less-efforts/
 
 When you need to debug kernel behavior without full instrumentation frameworks, module parameters offer a pragmatic shortcut. Rather than immediately reaching for perf, kprobes, or eBPF, you can add simple toggles and state tracking directly in the code you’re investigating, then control them at runtime through sysfs.
 
-Frameworks like perf, kprobes, and eBPF are powerful but carry overhead. If you’re debugging a specific subsystem and need quick answers—how long a process runs on CPU, what conditions trigger a bug, whether certain code paths execute—injecting minimal instrumentation with runtime control beats rebuilding the kernel repeatedly.
+Frameworks like perf, kprobes, and eBPF are powerful but carry overhead. If you’re debugging a specific subsystem and need quick answers (how long a process runs on CPU, what conditions trigger a bug, whether certain code paths execute) injecting minimal instrumentation with runtime control beats rebuilding the kernel repeatedly.
 
 The technique is straightforward: add `module_param` declarations to export kernel variables, then read and write them via `/sys/module/*/parameters/` at runtime.
 
@@ -139,7 +139,7 @@ If you’re modifying scheduler code anyway, module parameters cost almost nothi
 
 **Timing functions**: Use `ktime_get_ns()` for nanosecond precision instead of legacy `do_gettimeofday()`. For very frequent calls, consider `local_clock()` (already nanoseconds) or `sched_clock_cpu()`.
 
-**Lock safety**: Avoid acquiring locks or doing heavy work in hot paths like schedulers. Keep instrumentation minimal—a few reads and conditional branches only.
+**Lock safety**: Avoid acquiring locks or doing heavy work in hot paths like schedulers. Keep instrumentation minimal: a few reads and conditional branches only.
 
 **Validation**: Always validate target PIDs exist before enabling traces to avoid wasted output:
 

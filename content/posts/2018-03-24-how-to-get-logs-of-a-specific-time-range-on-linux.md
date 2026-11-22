@@ -10,7 +10,7 @@ canonical: /how-to-get-logs-of-a-specific-time-range-on-linux/
 url: /how-to-get-logs-of-a-specific-time-range-on-linux/
 ---
 
-When processing application logs (like Hadoop/log4j output), you often need to extract entries from a specific time window. This is especially common in automated routines that run periodically—for example, pulling the last 4 hours of logs every 4 hours via cron.
+When processing application logs (like Hadoop/log4j output), you often need to extract entries from a specific time window. This is especially common in automated routines that run periodically, for example, pulling the last 4 hours of logs every 4 hours via cron.
 
 ## Log format considerations
 

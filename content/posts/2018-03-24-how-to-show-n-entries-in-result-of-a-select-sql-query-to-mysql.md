@@ -36,7 +36,7 @@ This skips the first 20 rows and returns the next 10 rows (rows 21-30). This is 
 SELECT * FROM qa_users LIMIT 20, 10;
 ```
 
-Both syntaxes are equivalent — `LIMIT offset, count` is just older notation. The explicit `OFFSET` keyword is clearer and recommended.
+Both syntaxes are equivalent: `LIMIT offset, count` is just older notation. The explicit `OFFSET` keyword is clearer and recommended.
 
 ### Practical Example: Pagination
 
@@ -94,7 +94,7 @@ Always combine `LIMIT` with `ORDER BY` when order matters:
 SELECT * FROM qa_users ORDER BY username ASC LIMIT 5;
 ```
 
-Without `ORDER BY`, the database returns 5 rows in whatever order is fastest internally — usually insertion order, but not guaranteed.
+Without `ORDER BY`, the database returns 5 rows in whatever order is fastest internally: usually insertion order, but not guaranteed.
 
 ### Getting the Total Count
 

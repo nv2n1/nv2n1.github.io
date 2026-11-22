@@ -10,7 +10,7 @@ canonical: /how-to-add-a-space-between-the-line-numbers-and-text-content-in-emac
 url: /how-to-add-a-space-between-the-line-numbers-and-text-content-in-emacs/
 ---
 
-Line number displays in Emacs can feel cramped without proper spacing. Modern Emacs provides built-in control over line number formatting and width—no external packages needed.
+Line number displays in Emacs can feel cramped without proper spacing. Modern Emacs provides built-in control over line number formatting and width: no external packages needed.
 
 ## Using display-line-numbers-mode
 

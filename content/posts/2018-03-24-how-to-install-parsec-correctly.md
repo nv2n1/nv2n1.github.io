@@ -47,9 +47,9 @@ source env.sh
 
 The common build configurations are:
 
-- `gcc-pthreads` — GCC with POSIX threads
-- `gcc-openmp` — GCC with OpenMP
-- `gcc` — GCC with sequential execution
+- `gcc-pthreads`: GCC with POSIX threads
+- `gcc-openmp`: GCC with OpenMP
+- `gcc`: GCC with sequential execution
 
 ### Building Benchmarks
 

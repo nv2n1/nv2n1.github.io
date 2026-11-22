@@ -10,7 +10,7 @@ canonical: /get-the-number-of-all-posts-in-wordpress/
 url: /get-the-number-of-all-posts-in-wordpress/
 ---
 
-The `wp_count_posts()` function returns a count object for any post type, making it essential for dashboards, theme displays, admin queries, and performance monitoring. Understanding how to use it correctly—and when to optimize—matters for WordPress development.
+The `wp_count_posts()` function returns a count object for any post type, making it essential for dashboards, theme displays, admin queries, and performance monitoring. Understanding how to use it correctly (and when to optimize) matters for WordPress development.
 
 ## Basic Usage
 
@@ -40,14 +40,14 @@ echo $count_custom->publish . " Custom Posts";
 
 `wp_count_posts()` returns a `stdClass` object with these properties:
 
-- **publish** — Published posts
-- **draft** — Draft posts
-- **pending** — Posts pending review
-- **private** — Private posts
-- **trash** — Trashed posts
-- **auto-draft** — Auto-saved drafts
-- **inherit** — Revision posts (typically for attachments)
-- **future** — Scheduled posts
+- **publish**: Published posts
+- **draft**: Draft posts
+- **pending**: Posts pending review
+- **private**: Private posts
+- **trash**: Trashed posts
+- **auto-draft**: Auto-saved drafts
+- **inherit**: Revision posts (typically for attachments)
+- **future**: Scheduled posts
 
 Access any status you need:
 

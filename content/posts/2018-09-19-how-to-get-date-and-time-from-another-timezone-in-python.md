@@ -68,7 +68,7 @@ print(f"Sydney: {sydney}")
 print(f"Mumbai: {mumbai}")
 ```
 
-All conversions reference the same instant in time — only the local representation changes.
+All conversions reference the same instant in time: only the local representation changes.
 
 ## Handling DST Transitions
 
@@ -141,7 +141,7 @@ display_event(event_utc, "Europe/Berlin")
 # 2026-06-15 17:00:00 CEST
 ```
 
-This approach ensures consistency across your system. Avoid storing timezone information with datetimes in the database — the timezone offset can change due to DST rule updates, making historical data unreliable.
+This approach ensures consistency across your system. Avoid storing timezone information with datetimes in the database: the timezone offset can change due to DST rule updates, making historical data unreliable.
 
 ## Getting the Current Time in a Specific Timezone
 
@@ -188,7 +188,7 @@ wrong = datetime(2026, 6, 15, 14, 30, tzinfo=eastern)
 correct = eastern.localize(datetime(2026, 6, 15, 14, 30))
 ```
 
-**Upgrade to Python 3.9+ if possible** — `zoneinfo` is simpler and doesn’t require workarounds.
+**Upgrade to Python 3.9+ if possible**: `zoneinfo` is simpler and doesn’t require workarounds.
 
 ## Avoiding Common Pitfalls
 
@@ -196,7 +196,7 @@ correct = eastern.localize(datetime(2026, 6, 15, 14, 30))
 
 ``` python
 # DON'T DO THIS
-naive_time = datetime.now()  # No timezone info — ambiguous
+naive_time = datetime.now()  # No timezone info: ambiguous
 
 # DO THIS
 aware_time = datetime.now(ZoneInfo("UTC"))  # Always timezone-aware

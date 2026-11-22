@@ -88,7 +88,7 @@ This approach loads different image sizes based on device width, improving perfo
 - **Aspect ratio**: Use `width` and `height` attributes together, or set one dimension and use `height: auto` in CSS to maintain aspect ratio
 - **Responsive design**: Avoid fixed pixel dimensions on fluid layouts; prefer percentage-based widths or CSS media queries
 - **Accessibility**: Always include meaningful `alt` text regardless of which method you use
-- **Platform limitations**: Check your Markdown processor’s documentation—not all support extensions equally
+- **Platform limitations**: Check your Markdown processor’s documentation: not all support extensions equally
 
 For static site generators like Jekyll or Hugo, check what Markdown library they use (kramdown, goldmark, etc.) to know which syntax extensions are available. For simple cases where you need one-off sizing, raw HTML remains the most portable solution.
 

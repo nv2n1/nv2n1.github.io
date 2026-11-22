@@ -22,7 +22,7 @@ runes := []rune(s) // Convert to rune array
 s2 := string(runes) // Convert back to string
 ```
 
-This works because Go allows you to cast a string to a `[]rune` slice. The conversion automatically decodes the UTF-8 bytes into individual Unicode code points. Converting back is equally straightforward—pass the rune slice to the `string()` function.
+This works because Go allows you to cast a string to a `[]rune` slice. The conversion automatically decodes the UTF-8 bytes into individual Unicode code points. Converting back is equally straightforward: pass the rune slice to the `string()` function.
 
 ## When to Use Each Approach
 
@@ -35,9 +35,9 @@ This works because Go allows you to cast a string to a `[]rune` slice. The conve
 
 **Avoid `[]rune` conversion when you only need to:**
 
-- Count characters without further manipulation—use `utf8.RuneCountInString(s)` instead
-- Check string length in bytes—use `len(s)`
-- Iterate through characters—use `for i, r := range s` which already decodes UTF-8
+- Count characters without further manipulation: use `utf8.RuneCountInString(s)` instead
+- Check string length in bytes: use `len(s)`
+- Iterate through characters: use `for i, r := range s` which already decodes UTF-8
 
 ## Practical Examples
 

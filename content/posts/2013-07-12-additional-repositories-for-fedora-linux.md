@@ -10,7 +10,7 @@ canonical: /additional-repositories-for-fedora-linux/
 url: /additional-repositories-for-fedora-linux/
 ---
 
-RPM Fusion provides software that the Fedora Project doesn’t ship—primarily due to licensing restrictions, patent concerns, or proprietary redistributability requirements. The repository splits into two branches:
+RPM Fusion provides software that the Fedora Project doesn’t ship: primarily due to licensing restrictions, patent concerns, or proprietary redistributability requirements. The repository splits into two branches:
 
 - **free**: Open Source Software that Fedora cannot distribute due to other legal or policy reasons
 - **nonfree**: Non-open source software, including proprietary drivers and restricted-use applications
@@ -119,11 +119,11 @@ For additional repositories and community projects, consult <a href="https://doc
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

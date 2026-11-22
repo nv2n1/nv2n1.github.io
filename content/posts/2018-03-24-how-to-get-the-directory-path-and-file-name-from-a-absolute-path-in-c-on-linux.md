@@ -45,7 +45,7 @@ int main(void) {
 
 - Both `dirname()` and `basename()` may modify their input strings
 - You **must** call `strdup()` on the original path before passing to either function
-- Do **not** free the pointers returned by `dirname()` or `basename()`—they point into the duplicated strings you allocated
+- Do **not** free the pointers returned by `dirname()` or `basename()`: they point into the duplicated strings you allocated
 - Always `free()` the `strdup()` allocations when done
 
 ## Testing edge cases
@@ -87,7 +87,7 @@ int main(void) {
 - **Trailing slashes**: `dirname("/foo/bar/")` returns `/foo/bar`, but `basename("/foo/bar/")` returns an empty string
 - **Root directory**: `dirname("/")` returns `/`, and `basename("/")` returns `/`
 - **Filename only**: `dirname("file.txt")` returns `.`, and `basename("file.txt")` returns `file.txt`
-- **Hidden files**: Work as expected—`dirname("/etc/.hidden")` returns `/etc`, `basename("/etc/.hidden")` returns `.hidden`
+- **Hidden files**: Work as expected: `dirname("/etc/.hidden")` returns `/etc`, `basename("/etc/.hidden")` returns `.hidden`
 
 ## Manual string parsing alternative
 
@@ -144,4 +144,4 @@ gcc -Wall -Wextra -o pathparse pathparse.c
 ./pathparse
 ```
 
-Note: Both approaches handle `strdup()` allocation failures identically—neither checks for NULL returns in these examples. In production code, you should check `strdup()` return values when error handling is required.
+Note: Both approaches handle `strdup()` allocation failures identically: neither checks for NULL returns in these examples. In production code, you should check `strdup()` return values when error handling is required.

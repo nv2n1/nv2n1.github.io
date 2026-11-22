@@ -21,7 +21,7 @@ sudo apt update
 sudo apt install ubuntu-gnome-desktop
 ```
 
-The package pulls in GNOME Shell, Mutter window manager, and standard GNOME applications. During installation, you’ll be prompted to select a display manager — this handles your login screen and session startup.
+The package pulls in GNOME Shell, Mutter window manager, and standard GNOME applications. During installation, you’ll be prompted to select a display manager: this handles your login screen and session startup.
 
 ## Choosing a Display Manager
 
@@ -55,7 +55,7 @@ sudo dpkg-reconfigure lightdm
 
 ## Switching Between Desktops
 
-Once both desktops are installed, log out from your current session. On the login screen, look for a menu or gear icon (⚙) — typically in the bottom-right or top-right corner, though placement depends on your display manager.
+Once both desktops are installed, log out from your current session. On the login screen, look for a menu or gear icon (⚙): typically in the bottom-right or top-right corner, though placement depends on your display manager.
 
 Click it to select your desired desktop environment (usually listed as “GNOME” or “Ubuntu” for GNOME, and “MATE” for MATE). Enter your credentials and you’ll boot into your chosen desktop.
 

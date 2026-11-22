@@ -16,19 +16,19 @@ There are three practical reasons.
 
 ## Short-form technical tips
 
-Some knowledge doesn’t warrant a full blog post. A 2000-word article dilutes what should be a focused tip. Q&A format works better for these bite-sized solutions — something like “How do I check if a port is in use without netstat?” or “What’s the difference between `sudo -u` and `su -`?” These fit naturally into questions and answers without padding.
+Some knowledge doesn’t warrant a full blog post. A 2000-word article dilutes what should be a focused tip. Q&A format works better for these bite-sized solutions: something like “How do I check if a port is in use without netstat?” or “What’s the difference between `sudo -u` and `su -`?” These fit naturally into questions and answers without padding.
 
 A blog demands narrative structure. A Q&A site lets you get straight to the point.
 
 ## Centralizing community questions
 
-Questions come from multiple channels — blog comments, social media DMs, mailing lists, Slack communities. Scattered questions mean scattered answers. A Q&A site gives people a standard place to ask, and you a single location to respond. Others encountering the same problem find the answer without duplicating your effort.
+Questions come from multiple channels: blog comments, social media DMs, mailing lists, Slack communities. Scattered questions mean scattered answers. A Q&A site gives people a standard place to ask, and you a single location to respond. Others encountering the same problem find the answer without duplicating your effort.
 
 This is especially useful when you notice patterns. The same three questions appearing across different platforms signals that a Q&A post would save everyone time.
 
 ## Documenting problems you solve later
 
-Sometimes you encounter an issue without an immediate answer. Write the question down anyway. When you eventually solve it — whether through research, experimentation, or community help — add the answer to the same post. You’ve created a permanent reference.
+Sometimes you encounter an issue without an immediate answer. Write the question down anyway. When you eventually solve it (whether through research, experimentation, or community help) add the answer to the same post. You’ve created a permanent reference.
 
 This approach works better than email threads or chat logs, which disappear. A public Q&A post becomes searchable documentation. The next person with the identical problem finds it instantly.
 

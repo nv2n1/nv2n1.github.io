@@ -10,7 +10,7 @@ canonical: /jsp-connecting-to-mysql/
 url: /jsp-connecting-to-mysql/
 ---
 
-Connecting to MySQL from JSP requires the mysql-connector-j JDBC driver and proper connection handling. The old mysql-connector-java artifact is deprecated—switch to mysql-connector-j, which supports MySQL 8.0+ with modern SSL/TLS, authentication plugins, and performance improvements.
+Connecting to MySQL from JSP requires the mysql-connector-j JDBC driver and proper connection handling. The old mysql-connector-java artifact is deprecated: switch to mysql-connector-j, which supports MySQL 8.0+ with modern SSL/TLS, authentication plugins, and performance improvements.
 
 ## Dependency Management
 
@@ -279,4 +279,4 @@ Then call the DAO from a servlet and forward the result to JSP for rendering.
 
 ## Summary
 
-Use connection pooling for all production systems—either Tomcat’s built-in JNDI pooling or HikariCP. Always use `PreparedStatement` for any query with parameters. Enable SSL/TLS and proper timeout settings. Log errors rather than exposing them to clients. For new projects, avoid embedding JDBC in JSP; separate data access into a DAO layer or use a modern ORM framework.
+Use connection pooling for all production systems: either Tomcat’s built-in JNDI pooling or HikariCP. Always use `PreparedStatement` for any query with parameters. Enable SSL/TLS and proper timeout settings. Log errors rather than exposing them to clients. For new projects, avoid embedding JDBC in JSP; separate data access into a DAO layer or use a modern ORM framework.

@@ -113,7 +113,7 @@ if (std::cin >> value) {
 
 ## Bottom Line
 
-`scanf` isn’t inherently broken for strings — you can use `%Ns` safely with a width specifier. The fundamental issue is that it was designed for predictable input and provides no clean way to handle parse failures or unexpected input formats. For interactive user input, `fgets` with `strtol`/`strtod` or C++ streams give you the control and error handling you actually need.
+`scanf` isn’t inherently broken for strings: you can use `%Ns` safely with a width specifier. The fundamental issue is that it was designed for predictable input and provides no clean way to handle parse failures or unexpected input formats. For interactive user input, `fgets` with `strtol`/`strtod` or C++ streams give you the control and error handling you actually need.
 
 ## 2026 Comprehensive Guide: Best Practices
 

@@ -34,11 +34,11 @@ Add an entry like this:
 
 Key options:
 
-- `user` — allows non-root users to mount/unmount
-- `users` — allows any user to mount, but only the user who mounted it can unmount it
-- `nouser` — default; only root can mount
-- `nofail` — system boots normally if device is missing
-- `noauto` — device won’t mount automatically at boot
+- `user`: allows non-root users to mount/unmount
+- `users`: allows any user to mount, but only the user who mounted it can unmount it
+- `nouser`: default; only root can mount
+- `nofail`: system boots normally if device is missing
+- `noauto`: device won’t mount automatically at boot
 
 After editing, test it:
 

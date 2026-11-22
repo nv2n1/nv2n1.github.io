@@ -46,10 +46,10 @@ gnome-tweaks
 
 Navigate to **Fonts** in the left sidebar. You’ll find options to configure:
 
-- **Interface Font** — used in window titles and menus
-- **Document Font** — default font for text editors and documents
-- **Monospace Font** — terminal and code editors
-- **Legacy Window Titles** — older application title bars
+- **Interface Font**: used in window titles and menus
+- **Document Font**: default font for text editors and documents
+- **Monospace Font**: terminal and code editors
+- **Legacy Window Titles**: older application title bars
 
 Adjust font sizes with the scaling slider or select different font families from the dropdown menus. Changes apply immediately to most applications.
 
@@ -143,7 +143,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -161,7 +161,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

@@ -88,13 +88,13 @@ a symlink
 
 The `<sys/stat.h>` header provides additional macros for other file types:
 
-- `S_ISREG()` — regular file
-- `S_ISDIR()` — directory
-- `S_ISLNK()` — symbolic link
-- `S_ISCHR()` — character device
-- `S_ISBLK()` — block device
-- `S_ISFIFO()` — FIFO/named pipe
-- `S_ISSOCK()` — socket
+- `S_ISREG()`: regular file
+- `S_ISDIR()`: directory
+- `S_ISLNK()`: symbolic link
+- `S_ISCHR()`: character device
+- `S_ISBLK()`: block device
+- `S_ISFIFO()`: FIFO/named pipe
+- `S_ISSOCK()`: socket
 
 ## Modern C++ approach using `std::filesystem`
 
@@ -161,6 +161,6 @@ if (lstat(path.c_str(), &s) != 0) {
 
 Common errors:
 
-- `ENOENT` — path does not exist
-- `EACCES` — permission denied
-- `ENOTDIR` — component of path is not a directory
+- `ENOENT`: path does not exist
+- `EACCES`: permission denied
+- `ENOTDIR`: component of path is not a directory

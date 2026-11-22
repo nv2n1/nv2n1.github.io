@@ -37,11 +37,11 @@ print(f"Value: {i:08x}")         # Output: Value: 000000ff
 
 The format specifiers work as follows:
 
-- `:x` — lowercase hex without prefix
-- `:X` — uppercase hex without prefix
-- `:#x` — lowercase hex with `0x` prefix
-- `:#X` — uppercase hex with `0X` prefix
-- `:08x` — zero-padded to 8 characters
+- `:x`: lowercase hex without prefix
+- `:X`: uppercase hex without prefix
+- `:#x`: lowercase hex with `0x` prefix
+- `:#X`: uppercase hex with `0X` prefix
+- `:08x`: zero-padded to 8 characters
 
 F-strings are the modern approach and more readable than `.format()`:
 
@@ -138,11 +138,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

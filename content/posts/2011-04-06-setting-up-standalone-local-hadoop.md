@@ -10,7 +10,7 @@ canonical: /setting-up-standalone-local-hadoop/
 url: /setting-up-standalone-local-hadoop/
 ---
 
-Hadoop’s default configuration runs in standalone (local) mode as a single JVM process — no HDFS daemons, no YARN, no distributed overhead. This mode is useful for development, testing MapReduce jobs, and debugging before moving to a clustered deployment.
+Hadoop’s default configuration runs in standalone (local) mode as a single JVM process: no HDFS daemons, no YARN, no distributed overhead. This mode is useful for development, testing MapReduce jobs, and debugging before moving to a clustered deployment.
 
 For new deployments, evaluate whether you need Hadoop at all. Consider cloud-native alternatives like AWS EMR, Google Dataproc, or Azure HDInsight, which handle infrastructure and scaling. If you’re running Hadoop 3.x+, the improvements in YARN resource management and HDFS reliability make it worth reviewing the latest documentation alongside this guide.
 

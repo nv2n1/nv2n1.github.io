@@ -145,7 +145,7 @@ Install from **Plugins → Add New**, activate, and configure under **Settings �
 - Disable “Keep HTML comments” in production (safe in development for debugging)
 
 **Image optimization:**
-Autoptimize doesn’t handle images well—use a dedicated plugin:
+Autoptimize doesn’t handle images well: use a dedicated plugin:
 
 - **ShortPixel** (free tier: 100 images/month)
 - **Imagify** (free tier: up to 25 MB/month)
@@ -161,7 +161,7 @@ sudo apt install imagemagick
 for img in *.jpg; do convert "$img" -quality 82 -strip "${img%.jpg}_compressed.jpg"; done
 ```
 
-**Test thoroughly** after enabling each option—some theme or plugin combinations break with aggressive minification:
+**Test thoroughly** after enabling each option: some theme or plugin combinations break with aggressive minification:
 
 1.  Clear all caches: Dashboard → WP Super Cache → Purge Cache
 2.  Clear OPcache: Restart PHP-FPM

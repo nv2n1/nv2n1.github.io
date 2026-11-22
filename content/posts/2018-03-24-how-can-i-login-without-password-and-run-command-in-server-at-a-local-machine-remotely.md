@@ -22,7 +22,7 @@ First, generate an ED25519 key pair on your local machine (A):
 ssh-keygen -t ed25519 -C "user@hostname" -f ~/.ssh/id_ed25519
 ```
 
-This creates `~/.ssh/id_ed25519` (private key) and `~/.ssh/id_ed25519.pub` (public key). Use ED25519 over RSA—it’s more secure and faster.
+This creates `~/.ssh/id_ed25519` (private key) and `~/.ssh/id_ed25519.pub` (public key). Use ED25519 over RSA: it’s more secure and faster.
 
 ### Add Your Public Key to the Remote Server
 

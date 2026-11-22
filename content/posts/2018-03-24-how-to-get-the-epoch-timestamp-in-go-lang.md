@@ -74,7 +74,7 @@ func main() {
 
 ## Parsing different time formats
 
-Go’s `time.Parse()` requires an exact layout string. Use the reference time `Mon Jan 2 15:04:05 MST 2006` as the pattern — this specific date/time is how Go handles format specifications.
+Go’s `time.Parse()` requires an exact layout string. Use the reference time `Mon Jan 2 15:04:05 MST 2006` as the pattern: this specific date/time is how Go handles format specifications.
 
 Common layouts:
 

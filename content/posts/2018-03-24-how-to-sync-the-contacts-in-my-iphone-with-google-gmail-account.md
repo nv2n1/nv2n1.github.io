@@ -37,7 +37,7 @@ If you’ve enabled two-factor authentication on your Google Account (which you 
 2.  Navigate to **Security** in the left sidebar
 3.  Scroll down to **App passwords**
 4.  Select **Mail** and **iPhone** as the app and device
-5.  Google will generate a 16-character password — use this instead of your regular password in the CardDAV setup
+5.  Google will generate a 16-character password: use this instead of your regular password in the CardDAV setup
 
 ### Troubleshooting Sync Issues
 
@@ -55,7 +55,7 @@ For bulk management or complex contact organization, log into <a href="https://c
 
 ### Workspace (Business) Users
 
-If you use Google Workspace (formerly Google Apps), the CardDAV method above works identically. Your workspace administrator may have additional security policies in place—check with them if you encounter authentication issues. Workspace accounts sometimes require organizational approval for third-party app access.
+If you use Google Workspace (formerly Google Apps), the CardDAV method above works identically. Your workspace administrator may have additional security policies in place: check with them if you encounter authentication issues. Workspace accounts sometimes require organizational approval for third-party app access.
 
 ## Additional Tips and Best Practices
 

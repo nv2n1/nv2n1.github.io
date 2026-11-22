@@ -10,11 +10,11 @@ canonical: /create-and-manage-virtual-machines-on-xen/
 url: /create-and-manage-virtual-machines-on-xen/
 ---
 
-Xen remains a robust hypervisor for production environments—AWS EC2, Citrix Hypervisor, and many hosting providers still rely on it. However, KVM has become the default for most Linux distributions due to simpler management and better integration with standard tooling. For new deployments on standard Linux, evaluate KVM with libvirt or container solutions like Docker and Kubernetes. That said, if you’re working with existing Xen infrastructure or need its advanced features, here’s how to create and manage virtual machines.
+Xen remains a robust hypervisor for production environments: AWS EC2, Citrix Hypervisor, and many hosting providers still rely on it. However, KVM has become the default for most Linux distributions due to simpler management and better integration with standard tooling. For new deployments on standard Linux, evaluate KVM with libvirt or container solutions like Docker and Kubernetes. That said, if you’re working with existing Xen infrastructure or need its advanced features, here’s how to create and manage virtual machines.
 
 ## File-Backed Virtual Block Devices
 
-File-backed VBDs are practical for testing and small deployments. They’re easy to duplicate—just copy the file and update the configuration. For production, consider LVM-backed or real block devices for better performance.
+File-backed VBDs are practical for testing and small deployments. They’re easy to duplicate: just copy the file and update the configuration. For production, consider LVM-backed or real block devices for better performance.
 
 Create a 20GB sparse file-backed VBD:
 
@@ -56,7 +56,7 @@ Create an installation profile `f41-install.cfg`:
     on_reboot = 'restart'
     on_crash = 'restart'
 
-If your Xen toolstack supports blktap2, use `tap:aio:` instead of `file:` for better performance. However, blktap2 is deprecated in newer Xen versions—stick with `file:` for compatibility.
+If your Xen toolstack supports blktap2, use `tap:aio:` instead of `file:` for better performance. However, blktap2 is deprecated in newer Xen versions: stick with `file:` for compatibility.
 
 Start the VM:
 
@@ -202,4 +202,4 @@ For new deployments, consider:
 - **Containers**: Docker/Podman for applications that don’t need full VMs
 - **Cloud-native solutions**: Kubernetes for orchestration if managing multiple machines
 
-If you’re maintaining existing Xen infrastructure, `xl` provides all necessary management. Avoid `xm`—it’s unmaintained and missing features in current Xen versions.
+If you’re maintaining existing Xen infrastructure, `xl` provides all necessary management. Avoid `xm`: it’s unmaintained and missing features in current Xen versions.

@@ -22,7 +22,7 @@ SQL layers abstract traditional relational query interfaces over distributed NoS
 
 **Cloudera Impala** provides low-latency SQL queries on Hadoop without translation to MapReduce. It shares metadata catalogs and SQL syntax with Hive, allowing users to switch between batch and interactive query modes. Impala works directly with HDFS and HBase, making it suitable for BI and exploratory analysis where sub-second response times matter.
 
-**Presto** (now part of Linux Foundation) is a distributed query engine supporting multiple backend storage systems—HDFS, S3, Cassandra, PostgreSQL, and others—through pluggable connectors. It’s become the de facto standard for SQL-on-anything architectures due to its flexibility, strong community, and production reliability at scale.
+**Presto** (now part of Linux Foundation) is a distributed query engine supporting multiple backend storage systems (HDFS, S3, Cassandra, PostgreSQL, and others) through pluggable connectors. It’s become the de facto standard for SQL-on-anything architectures due to its flexibility, strong community, and production reliability at scale.
 
 ### MapReduce-Based SQL
 

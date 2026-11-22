@@ -47,10 +47,10 @@ MATE uses a traditional panel system similar to GNOME 2. Customize panels by rig
 
 Recommended applets to add:
 
-- **CPU Frequency Scaling Monitor** — Shows and controls CPU governor
-- **System Monitor** — Graphs CPU, memory, and network usage
-- **Weather Report** — Current conditions in your panel
-- **Workspace Switcher** — Navigate virtual desktops
+- **CPU Frequency Scaling Monitor**: Shows and controls CPU governor
+- **System Monitor**: Graphs CPU, memory, and network usage
+- **Weather Report**: Current conditions in your panel
+- **Workspace Switcher**: Navigate virtual desktops
 
 ## Customize MATE Themes
 
@@ -64,17 +64,17 @@ Change the theme in **System → Preferences → Appearance**. You can also inst
 
 For a modern look with traditional layout, try these themes:
 
-- **Adwaita** — Clean GNOME-style theme
-- **TraditionalOk** — Classic green Mint look
-- **BlueMenta** — Blue variant of the Menta theme
+- **Adwaita**: Clean GNOME-style theme
+- **TraditionalOk**: Classic green Mint look
+- **BlueMenta**: Blue variant of the Menta theme
 
 ## MATE vs Cinnamon on Linux Mint
 
 Linux Mint 17 offers three desktop environments:
 
-- **Cinnamon** — Modern, GNOME 3-based, Mint’s default. Best for users who want a contemporary desktop with traditional elements.
-- **MATE** — GNOME 2 fork, lightweight, traditional. Best for users who prefer the classic GNOME 2 layout or have older hardware.
-- **Xfce** — Even lighter than MATE, good for very old hardware or minimal resource usage.
+- **Cinnamon**: Modern, GNOME 3-based, Mint’s default. Best for users who want a contemporary desktop with traditional elements.
+- **MATE**: GNOME 2 fork, lightweight, traditional. Best for users who prefer the classic GNOME 2 layout or have older hardware.
+- **Xfce**: Even lighter than MATE, good for very old hardware or minimal resource usage.
 
 MATE uses fewer resources than Cinnamon, making it better suited for machines with less than 2GB RAM.
 
@@ -97,11 +97,11 @@ Use it to:
 
 Configure shortcuts in **System → Preferences → Hardware → Keyboard Shortcuts**:
 
-- `Alt+F1` — Open main menu
-- `Alt+F2` — Run command
-- `Ctrl+Alt+D` — Show desktop
-- `Ctrl+Alt+Arrow` — Switch workspaces
-- `Alt+Tab` — Switch windows
+- `Alt+F1`: Open main menu
+- `Alt+F2`: Run command
+- `Ctrl+Alt+D`: Show desktop
+- `Ctrl+Alt+Arrow`: Switch workspaces
+- `Alt+Tab`: Switch windows
 
 Note: Linux Mint 17 is based on Ubuntu 14.04 LTS and reached end-of-life in 2019. If you’re still running it, consider upgrading to a current Linux Mint version for security updates and continued package support.
 
@@ -119,6 +119,6 @@ sudo mintupgrade check
 sudo mintupgrade upgrade
 ```
 
-Alternatively, do a clean install of the latest Linux Mint MATE edition — this is faster and avoids potential issues from accumulated configuration changes across multiple upgrades.
+Alternatively, do a clean install of the latest Linux Mint MATE edition: this is faster and avoids potential issues from accumulated configuration changes across multiple upgrades.
 
 Modern Linux Mint 22 with MATE provides the same traditional desktop experience but with updated packages, better hardware support, and security updates through 2029.

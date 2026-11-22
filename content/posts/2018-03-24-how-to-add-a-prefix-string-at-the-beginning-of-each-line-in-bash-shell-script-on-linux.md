@@ -55,7 +55,7 @@ This works well when you need conditional logic:
 awk '{print (NR > 1 ? "PREFIX" : "") $0}' file.txt
 ```
 
-This prefixes all lines except the first—useful for CSV or tabular data.
+This prefixes all lines except the first: useful for CSV or tabular data.
 
 ### Using `while` loop
 
@@ -80,7 +80,7 @@ some_command | awk '{print "PREFIX" $0}'
 
 ### Prefixing with timestamps
 
-A practical example—adding timestamps to log lines:
+A practical example: adding timestamps to log lines:
 
 ``` bash
 sed "s/^/$(date '+%Y-%m-%d %H:%M:%S') /" logfile.txt
@@ -104,7 +104,7 @@ for file in *.txt; do
 done
 ```
 
-This creates `.bak` backups before modification—essential when testing.
+This creates `.bak` backups before modification: essential when testing.
 
 ### Performance comparison
 
@@ -125,7 +125,7 @@ prefix='[ERROR] & '
 sed "s/^/${prefix//&/\\&}/" file.txt
 ```
 
-**Empty lines**: All methods handle empty lines correctly—they’ll receive the prefix with no content after it.
+**Empty lines**: All methods handle empty lines correctly: they’ll receive the prefix with no content after it.
 
 **File permissions**: When using `-i`, ensure your user has write permissions on the file and its directory.
 

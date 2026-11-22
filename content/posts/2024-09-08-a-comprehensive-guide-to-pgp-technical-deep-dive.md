@@ -16,7 +16,7 @@ PGP combines symmetric and asymmetric encryption to achieve both speed and secur
 
 **Asymmetric Encryption**: The session key is then encrypted with the recipient’s public key using RSA or ECC. Only the holder of the corresponding private key can decrypt it.
 
-**Digital Signatures**: You sign a message with your private key, producing a signature that others verify using your public key. This proves authenticity and non-repudiation—the signer cannot later deny signing the message.
+**Digital Signatures**: You sign a message with your private key, producing a signature that others verify using your public key. This proves authenticity and non-repudiation: the signer cannot later deny signing the message.
 
 ## The Web of Trust vs. Public Key Infrastructure
 
@@ -125,7 +125,7 @@ PGP remains indispensable for specific use cases:
 
 ## Modern Alternatives
 
-**Age**: A modern file encryption tool (successor to implicit in many Go projects) that offers simplicity and strong cryptography. No key servers, no trust model—just encrypt for specific recipients or passphrases. Excellent for scripting and DevOps:
+**Age**: A modern file encryption tool (successor to implicit in many Go projects) that offers simplicity and strong cryptography. No key servers, no trust model: just encrypt for specific recipients or passphrases. Excellent for scripting and DevOps:
 
 ``` bash
 age -R recipient-pubkey.txt -o document.enc document.txt

@@ -23,7 +23,7 @@ aa["a b"]=c
 aa["test"]=value
 ```
 
-Note that keys can contain spaces — this matters for how you handle them later.
+Note that keys can contain spaces: this matters for how you handle them later.
 
 ### Storing keys in an array
 
@@ -74,7 +74,7 @@ if [[ -v aa["foo"] ]]; then
 fi
 ```
 
-The `-v` test checks variable existence — for associative arrays, this is more reliable than testing with `[[` conditionals.
+The `-v` test checks variable existence, for associative arrays, this is more reliable than testing with `[[` conditionals.
 
 **Access values while iterating keys:**
 
@@ -95,7 +95,7 @@ Output:
 **Don’t use unquoted expansion:**
 
 ``` bash
-# Wrong — breaks on keys with spaces
+# Wrong: breaks on keys with spaces
 for key in ${!aa[@]}; do
   echo "$key"
 done
@@ -106,7 +106,7 @@ This would split “a b” into two separate iterations.
 \**Don’t use \`*\` in array expansion:\*\*
 
 ``` bash
-# Wrong — concatenates all keys into one string
+# Wrong: concatenates all keys into one string
 aakeys=${!aa[*]}
 ```
 
@@ -114,7 +114,7 @@ This gives you a single string instead of an array, making it hard to process in
 
 **Use `[0]` indexing carefully:**
 
-Associative array indices aren’t numeric — don’t assume you can loop with numeric indices like `${aa[0]}`. Always use the key expansion `${!aa[@]}`.
+Associative array indices aren’t numeric: don’t assume you can loop with numeric indices like `${aa[0]}`. Always use the key expansion `${!aa[@]}`.
 
 ### Key ordering note
 

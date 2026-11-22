@@ -163,7 +163,7 @@ If you see “Dropbox isn’t running” after starting it, the daemon may have 
 
 - Keep your `.dropbox` directory permissions restrictive: `chmod 700 ~/.dropbox`
 - On shared systems, each user needs their own Dropbox account and separate daemon instance
-- Dropbox doesn’t encrypt data locally by default — consider using an encrypted home directory for sensitive files
+- Dropbox doesn’t encrypt data locally by default: consider using an encrypted home directory for sensitive files
 - If using a non-standard location, ensure the directory has proper permissions before starting the daemon
 
 ## 2026 Best Practices and Advanced Techniques

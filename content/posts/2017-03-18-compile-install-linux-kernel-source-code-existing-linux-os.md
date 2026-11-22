@@ -116,7 +116,7 @@ Both will validate settings and warn about incompatibilities:
     .config:444:warning: symbol value 'm' invalid for MICROCODE
     .config:618:warning: symbol value 'm' invalid for CPU_FREQ_STAT
 
-These warnings are usually harmless—the build process will automatically disable invalid options.
+These warnings are usually harmless: the build process will automatically disable invalid options.
 
 To review your current configuration without editing:
 
@@ -257,7 +257,7 @@ make clean
 make -j $(nproc)
 ```
 
-Then rebuild. For custom kernels, module signing often causes friction—disabling it is usually the practical choice unless you have specific security requirements (like Secure Boot).
+Then rebuild. For custom kernels, module signing often causes friction: disabling it is usually the practical choice unless you have specific security requirements (like Secure Boot).
 
 ### GRUB doesn’t find the new kernel
 

@@ -14,7 +14,7 @@ Stripping newlines from strings is common when processing text input, especially
 
 ## Using `erase()` with `std::remove()`
 
-The most efficient method combines `std::remove()` and `erase()` — this is the erase-remove idiom:
+The most efficient method combines `std::remove()` and `erase()`: this is the erase-remove idiom:
 
 ``` cpp
 #include <iostream>

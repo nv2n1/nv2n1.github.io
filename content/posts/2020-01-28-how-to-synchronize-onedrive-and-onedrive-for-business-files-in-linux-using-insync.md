@@ -88,7 +88,7 @@ systemctl --user start insync
 
 ## Adding Your Account
 
-Click the Insync tray icon or launch the GUI. A browser window opens redirecting you to Microsoft’s OAuth authorization page. Log in with your Microsoft account — this works for both personal OneDrive and Office 365 accounts.
+Click the Insync tray icon or launch the GUI. A browser window opens redirecting you to Microsoft’s OAuth authorization page. Log in with your Microsoft account: this works for both personal OneDrive and Office 365 accounts.
 
 After authorizing, the browser redirects back to confirm successful authentication. Your account is now linked to the Insync daemon.
 
@@ -169,7 +169,7 @@ This is sometimes necessary with Office 365 single sign-on or after organization
 
 OneDrive for Business (SharePoint-backed storage) works identically to personal OneDrive. Insync automatically detects your account type and handles it appropriately.
 
-If you have both personal and business accounts, add multiple accounts to Insync — each syncs independently with its own base folder and selective sync settings.
+If you have both personal and business accounts, add multiple accounts to Insync: each syncs independently with its own base folder and selective sync settings.
 
 **Important**: Business accounts may have sync restrictions enforced by your organization’s admin policies. If sync fails, is slow, or behaves unexpectedly, contact your IT department to check tenant-level sync policies. They may have disabled certain sync features or rate-limited your account.
 
@@ -184,4 +184,4 @@ For large OneDrive folders (10GB+), consider these strategies:
 
 ## Licensing
 
-Insync offers a free trial with full functionality. After the trial expires, a perpetual license costs around \$30 USD. Premium support is available separately. The license is perpetual — you own it, and don’t need an annual renewal.
+Insync offers a free trial with full functionality. After the trial expires, a perpetual license costs around \$30 USD. Premium support is available separately. The license is perpetual: you own it, and don’t need an annual renewal.

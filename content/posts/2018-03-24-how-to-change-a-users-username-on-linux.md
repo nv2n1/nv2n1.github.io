@@ -28,9 +28,9 @@ sudo usermod -l user1 -d /home/user1 -m u1
 
 Breaking this down:
 
-- `-l user1` — changes the login name to `user1`
-- `-d /home/user1` — specifies the new home directory path
-- `-m` — moves the contents of the old home directory to the new path
+- `-l user1`: changes the login name to `user1`
+- `-d /home/user1`: specifies the new home directory path
+- `-m`: moves the contents of the old home directory to the new path
 
 The `-m` flag is critical; without it, the old directory remains untouched.
 
@@ -51,19 +51,19 @@ find /home/user1 -user user1
 
 ## Important Considerations
 
-**Kill user sessions first** — If the user is logged in, rename operations can fail or cause issues. Terminate their sessions:
+**Kill user sessions first**: If the user is logged in, rename operations can fail or cause issues. Terminate their sessions:
 
 ``` bash
 sudo pkill -u u1
 ```
 
-**Check for running processes** — Even if not logged in interactively, the user might have background processes or cron jobs:
+**Check for running processes**: Even if not logged in interactively, the user might have background processes or cron jobs:
 
 ``` bash
 ps aux | grep u1
 ```
 
-**Update cron jobs** — If the user has crontab entries, they won’t automatically update:
+**Update cron jobs**: If the user has crontab entries, they won’t automatically update:
 
 ``` bash
 sudo crontab -u u1 -l > /tmp/cron_backup.txt
@@ -71,13 +71,13 @@ sudo crontab -u user1 -i < /tmp/cron_backup.txt
 sudo crontab -u u1 -r
 ```
 
-**Rename mail spool** — Some systems maintain per-user mail:
+**Rename mail spool**: Some systems maintain per-user mail:
 
 ``` bash
 sudo mv /var/mail/u1 /var/mail/user1
 ```
 
-**Check sudoers and group memberships** — If the user appears in `/etc/sudoers` or `/etc/group`, update those manually:
+**Check sudoers and group memberships**: If the user appears in `/etc/sudoers` or `/etc/group`, update those manually:
 
 ``` bash
 sudo visudo  # Search for u1 and replace with user1
@@ -89,7 +89,7 @@ id user1
 sudo usermod -G group1,group2 user1
 ```
 
-**ACLs and file permissions** — If ACLs reference the old username, they won’t automatically update:
+**ACLs and file permissions**: If ACLs reference the old username, they won’t automatically update:
 
 ``` bash
 getfacl /path/to/resource | grep u1

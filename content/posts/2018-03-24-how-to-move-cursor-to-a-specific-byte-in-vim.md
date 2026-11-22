@@ -75,10 +75,10 @@ Jump to the start of the file:
 
 For comparison, here are other navigation methods:
 
-- `20G` or `:20` — jump to line 20
-- `gg` — jump to start of file
-- `G` — jump to end of file
-- `Ctrl+G` — show current position (line, column, byte)
+- `20G` or `:20`: jump to line 20
+- `gg`: jump to start of file
+- `G`: jump to end of file
+- `Ctrl+G`: show current position (line, column, byte)
 
 The `Ctrl+G` command is particularly useful when you need to see the current byte offset in your file.
 

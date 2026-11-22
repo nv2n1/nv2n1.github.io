@@ -10,7 +10,7 @@ canonical: /maximum-size-of-s3-objects/
 url: /maximum-size-of-s3-objects/
 ---
 
-Amazon S3 has a maximum object size of 5TB per object. This limit applies uniformly across all storage classes and regions — there are no exceptions or workarounds.
+Amazon S3 has a maximum object size of 5TB per object. This limit applies uniformly across all storage classes and regions: there are no exceptions or workarounds.
 
 ## Understanding the 5TB Ceiling
 
@@ -29,7 +29,7 @@ The multipart API specifications:
 - Last part can be smaller than 5MB
 - Minimum final object size of 5MB
 
-For a 5TB object with 5GB parts, you need about 1,024 parts — well under the 10,000 limit. Keep part count reasonable (ideally under 1,000) for better performance and simpler management.
+For a 5TB object with 5GB parts, you need about 1,024 parts: well under the 10,000 limit. Keep part count reasonable (ideally under 1,000) for better performance and simpler management.
 
 ## Uploading with AWS CLI
 
@@ -182,4 +182,4 @@ aws s3 cp large-file.iso s3://bucket-name/ \
 
 ## Storage Class Behavior
 
-The 5TB limit applies consistently across all storage classes: Standard, Intelligent-Tiering, Standard-IA, Glacier, and Glacier Deep Archive. Object size alone doesn’t influence which storage class to use — base that decision on access patterns and retention requirements instead.
+The 5TB limit applies consistently across all storage classes: Standard, Intelligent-Tiering, Standard-IA, Glacier, and Glacier Deep Archive. Object size alone doesn’t influence which storage class to use: base that decision on access patterns and retention requirements instead.

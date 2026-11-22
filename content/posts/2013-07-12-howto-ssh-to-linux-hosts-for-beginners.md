@@ -69,7 +69,7 @@ ssh -p 2222 username@hostname
 ssh -p 22 user@192.168.1.50
 ```
 
-The system will prompt for your password. Type it carefully — characters won’t display for security.
+The system will prompt for your password. Type it carefully: characters won’t display for security.
 
 ## SSH Key Authentication (Recommended)
 

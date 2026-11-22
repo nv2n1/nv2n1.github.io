@@ -16,7 +16,7 @@ paravirt_ops is an abstraction layer in the Linux kernel that allows the same bi
 
 Traditional virtualization requires the hypervisor to trap and emulate privileged CPU instructions. This is expensive. Paravirtualization offers a better approach: the guest OS cooperates with the hypervisor through well-defined hypercalls instead of instruction emulation.
 
-However, supporting both bare metal and multiple hypervisors in a single kernel creates a challenge. You can’t simply call different hypercalls at compile time — you need runtime selection.
+However, supporting both bare metal and multiple hypervisors in a single kernel creates a challenge. You can’t simply call different hypercalls at compile time: you need runtime selection.
 
 paravirt_ops addresses this by providing a set of function pointers for privileged operations. At boot, the kernel detects which environment it’s running in (bare metal, Xen, KVM, Hyper-V, etc.) and fills in the appropriate implementations.
 
@@ -102,7 +102,7 @@ If you’re building kernels for production:
 
 - For cloud instances, check your provider’s documentation. AWS Xen instances benefit from Xen paravirt_ops. Nitro instances need different tuning.
 - For on-premises virtualization, KVM is standard on RHEL/CentOS/Ubuntu.
-- For containers (Docker, Kubernetes), paravirt_ops is irrelevant — containers share the host kernel.
+- For containers (Docker, Kubernetes), paravirt_ops is irrelevant: containers share the host kernel.
 
 ## Checking Your Environment
 

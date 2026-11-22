@@ -95,11 +95,11 @@ yt-dlp -o "%(uploader)s - %(title)s.%(ext)s" https://www.youtube.com/watch?v=VID
 
 Useful template variables:
 
-- `%(title)s` — Video title
-- `%(uploader)s` — Channel name
-- `%(upload_date)s` — Upload date (YYYYMMDD)
-- `%(duration)s` — Duration in seconds
-- `%(ext)s` — File extension
+- `%(title)s`: Video title
+- `%(uploader)s`: Channel name
+- `%(upload_date)s`: Upload date (YYYYMMDD)
+- `%(duration)s`: Duration in seconds
+- `%(ext)s`: File extension
 
 **Limit download speed (useful on shared connections):**
 
@@ -216,7 +216,7 @@ yt-dlp -f bestvideo+bestaudio --merge-output-format mp4 https://www.youtube.com/
 ## Troubleshooting
 
 **“No video found” or extraction fails:**
-Update yt-dlp first — YouTube changes frequently:
+Update yt-dlp first: YouTube changes frequently:
 
 ``` bash
 pip install --upgrade yt-dlp

@@ -16,7 +16,7 @@ Xen remains in production use at scale across AWS EC2, Citrix Hypervisor, and va
 
 Dom0 performance directly affects your entire virtualized infrastructure. Since disk and network drivers run on Dom0, I/O-intensive guest workloads consume significant Dom0 CPU cycles. The Linux kernel calculates network parameters and allocates memory metadata structures based on boot-time memory availability. These allocations cannot be reliably adjusted at runtime.
 
-Memory ballooning—dynamically reducing Dom0’s memory to free resources for guests—creates a specific operational hazard. When you balloon an active Dom0, the kernel network parameters become incorrect for the reduced memory size. Critical services like SSH can become unresponsive, leaving you without remote access. This creates both operational risk and wasted memory due to oversized metadata structures allocated at boot.
+Memory ballooning (dynamically reducing Dom0’s memory to free resources for guests) creates a specific operational hazard. When you balloon an active Dom0, the kernel network parameters become incorrect for the reduced memory size. Critical services like SSH can become unresponsive, leaving you without remote access. This creates both operational risk and wasted memory due to oversized metadata structures allocated at boot.
 
 The solution is explicit resource dedication rather than dynamic ballooning.
 
@@ -79,7 +79,7 @@ Set Dom0’s initial memory via the `dom0_mem` parameter in your bootloader:
 
     dom0_mem=4G,min:512M
 
-The value accepts units: `K`, `M`, or `G` for kilobytes, megabytes, or gigabytes. The `min:` suffix sets a minimum memory floor if ballooning is accidentally triggered—treat this as a safety net, not a substitute for disabling ballooning outright.
+The value accepts units: `K`, `M`, or `G` for kilobytes, megabytes, or gigabytes. The `min:` suffix sets a minimum memory floor if ballooning is accidentally triggered: treat this as a safety net, not a substitute for disabling ballooning outright.
 
 ### Sizing guidelines
 

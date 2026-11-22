@@ -10,7 +10,7 @@ canonical: /how-to-convert-pdf-to-text-with-format-kept-on-linux/
 url: /how-to-convert-pdf-to-text-with-format-kept-on-linux/
 ---
 
-Many PDF-to-text conversions strip away formatting and spatial relationships, making tables unreadable and multi-column layouts collapse into linear text. If you need to preserve the relative positions of text elements—especially tables, columns, and indentation—you have several solid options.
+Many PDF-to-text conversions strip away formatting and spatial relationships, making tables unreadable and multi-column layouts collapse into linear text. If you need to preserve the relative positions of text elements (especially tables, columns, and indentation) you have several solid options.
 
 ## pdftotext with layout preservation
 
@@ -99,11 +99,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

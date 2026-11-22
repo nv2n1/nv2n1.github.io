@@ -10,7 +10,7 @@ canonical: /copying-output-of-commands-in-linux-terminals-to-x-selection-clipboa
 url: /copying-output-of-commands-in-linux-terminals-to-x-selection-clipboard/
 ---
 
-xclip is a utility that bridges the command line and X11 selections, letting you pipe command output directly to your clipboard. It’s indispensable for workflows where you’re generating content in the terminal and pasting it elsewhere—whether that’s a browser, text editor, or another application.
+xclip is a utility that bridges the command line and X11 selections, letting you pipe command output directly to your clipboard. It’s indispensable for workflows where you’re generating content in the terminal and pasting it elsewhere, whether that’s a browser, text editor, or another application.
 
 ## Installation
 

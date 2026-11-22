@@ -66,7 +66,7 @@ Key fields:
 - `vcpus`: Number of virtual CPUs
 - `memory`: RAM in MB
 - `vif`: Virtual network interface (bridge to physical network)
-- `disk`: Storage devices — the cdrom and primary disk
+- `disk`: Storage devices: the cdrom and primary disk
 - `bootloader`: Use pygrub to read the guest kernel from the disk
 
 Create the LVM volume first:

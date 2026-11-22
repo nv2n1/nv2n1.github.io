@@ -132,6 +132,6 @@ For CSV parsing, log file processing, or network protocol parsing with large inp
 - **Prefer `std::string_view`** to avoid allocations
 - **Reserve vector capacity** if you know approximate token count: `tokens.reserve(estimated_count)`
 - **Avoid repeated allocations** by reusing a function’s return vector in tight loops
-- **Profile first** before micro-optimizing—most string splits aren’t the bottleneck
+- **Profile first** before micro-optimizing: most string splits aren’t the bottleneck
 
 Choose the method matching your C++ standard, performance needs, and error handling requirements. For modern codebases, `std::ranges::split()` is cleaner; for maximum compatibility with older projects, the find/substr approach remains reliable.

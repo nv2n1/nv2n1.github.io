@@ -91,7 +91,7 @@ For more granular control, set multiple OCAMLRUNPARAM options:
 OCAMLRUNPARAM=b,l=16384 ./myprogram
 ```
 
-This enables backtraces (`b`) and sets the stack size to 16MB (`l=16384`). Note that this is a temporary workaround — fix the underlying recursion issue rather than just increasing stack size.
+This enables backtraces (`b`) and sets the stack size to 16MB (`l=16384`). Note that this is a temporary workaround: fix the underlying recursion issue rather than just increasing stack size.
 
 If your program uses native code compilation (`ocamlopt`), backtraces may be less detailed on some platforms. For comprehensive debugging, you can temporarily switch to bytecode compilation with `ocamlc`:
 

@@ -71,7 +71,7 @@ All VPN solutions will reduce bandwidth due to encryption and routing overhead. 
 
 **Legal and Privacy Risks**
 
-Using VPNs in mainland China exists in a gray legal area. While tourists and temporary visitors generally face no issues, long-term residents should understand local regulations. Additionally, free VPN services may not encrypt traffic properly or may log user activity—use only trusted providers or commercial services for sensitive data.
+Using VPNs in mainland China exists in a gray legal area. While tourists and temporary visitors generally face no issues, long-term residents should understand local regulations. Additionally, free VPN services may not encrypt traffic properly or may log user activity: use only trusted providers or commercial services for sensitive data.
 
 **Testing Before You Go**
 

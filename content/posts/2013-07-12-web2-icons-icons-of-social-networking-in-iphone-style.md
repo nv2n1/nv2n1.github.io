@@ -10,7 +10,7 @@ canonical: /web2-icons-icons-of-social-networking-in-iphone-style/
 url: /web2-icons-icons-of-social-networking-in-iphone-style/
 ---
 
-Web2 Icons is a free, unencumbered icon set designed with a clean, iPhone-inspired aesthetic that works well for social media links. It’s straightforward to integrate and requires no licensing overhead — useful when you need social icons fast without design work.
+Web2 Icons is a free, unencumbered icon set designed with a clean, iPhone-inspired aesthetic that works well for social media links. It’s straightforward to integrate and requires no licensing overhead: useful when you need social icons fast without design work.
 
 ## What’s in the Package
 
@@ -22,7 +22,7 @@ Web2 Icons is genuinely free for personal and commercial use. No attribution req
 
 ## Setting Up Web2 Icons
 
-Download the package from a source like IconArchive or the original project repository. Extract the files — you’ll get PNG images organized by size.
+Download the package from a source like IconArchive or the original project repository. Extract the files: you’ll get PNG images organized by size.
 
 For a basic HTML implementation:
 

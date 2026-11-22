@@ -18,7 +18,7 @@ curl "http://example.com/send?msg=hello world"
 
 The space causes the shell to treat `world` as a separate argument, so only `hello` gets sent. You need to properly URL-encode the space (and other special characters) as `%20`.
 
-## Using –data-urlencode with -G
+## Using --data-urlencode with -G
 
 The cleanest approach is combining `-G` (GET request) with `--data-urlencode`:
 
@@ -28,7 +28,7 @@ curl -G "http://example.com/send" --data-urlencode "msg=hello world"
 
 The `-G` flag tells curl to append the encoded data to the URL as query parameters instead of sending it as POST data. The `--data-urlencode` option handles the URL encoding automatically.
 
-## –data-urlencode Syntax
+## --data-urlencode Syntax
 
 The `--data-urlencode` option supports several formats:
 

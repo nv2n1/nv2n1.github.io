@@ -16,9 +16,9 @@ Google Docs comments are invaluable for collaborative work, but the web interfac
 
 Open your Google Doc and go to **File \> Download**. You have several format options:
 
-- **OpenDocument Format (.odt)** — Best for LibreOffice compatibility and preserves most formatting
-- **Microsoft Word (.docx)** — If you prefer Word or need better Office compatibility
-- **PDF** — Not useful for this purpose since PDFs won’t preserve editable comments
+- **OpenDocument Format (.odt)**: Best for LibreOffice compatibility and preserves most formatting
+- **Microsoft Word (.docx)**: If you prefer Word or need better Office compatibility
+- **PDF**: Not useful for this purpose since PDFs won’t preserve editable comments
 
 For this workflow, use ODT or DOCX depending on your preferred software below.
 
@@ -62,7 +62,7 @@ Google Docs doesn’t natively support printing comments to margins. Exporting f
 
 - Print a test page first to verify comment formatting looks correct
 - For documents with extensive comments, consider printing comment pages separately (some office suites support this)
-- Check that comment text isn’t cut off in the margins — adjust margins in the office application if needed
+- Check that comment text isn’t cut off in the margins: adjust margins in the office application if needed
 - If comments are long, consider reviewing them on-screen instead, since printed margins have limited space
 
 ## 2026 Best Practices and Advanced Techniques

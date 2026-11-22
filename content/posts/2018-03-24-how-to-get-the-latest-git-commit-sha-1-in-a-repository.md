@@ -42,7 +42,7 @@ Alternatively, if you prefer using `cut`:
 git rev-parse HEAD | cut -c 1-8
 ```
 
-The `--short` flag is generally preferred because it automatically handles collision avoidance — if your repo grows large enough that 7 characters aren’t unique, Git will use more.
+The `--short` flag is generally preferred because it automatically handles collision avoidance: if your repo grows large enough that 7 characters aren’t unique, Git will use more.
 
 ## Getting hashes from other refs
 

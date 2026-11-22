@@ -34,7 +34,7 @@ func fileExists(path string) bool {
 - Disk read errors
 - Invalid path
 
-If you only check `err != nil`, permission errors and missing files both return `false`. That’s wrong—they’re different conditions:
+If you only check `err != nil`, permission errors and missing files both return `false`. That’s wrong: they’re different conditions:
 
 ``` go
 // Wrong: treats all errors the same
@@ -106,7 +106,7 @@ var templates embed.FS
 fileExists(templates, "base.html")
 ```
 
-This abstraction means you write the function once and use it everywhere—local disk, memory, or cloud storage backends.
+This abstraction means you write the function once and use it everywhere: local disk, memory, or cloud storage backends.
 
 ## Checking Multiple File Attributes
 
@@ -156,7 +156,7 @@ filepath.WalkDir(".", func(path string, d fs.DirEntry, err error) error {
 
 ## Handling Race Conditions
 
-A file can be deleted between your existence check and when you actually use it. Don’t rely on a separate existence check—attempt the operation and handle the error:
+A file can be deleted between your existence check and when you actually use it. Don’t rely on a separate existence check: attempt the operation and handle the error:
 
 ``` go
 // Bad: TOCTOU (time-of-check to time-of-use) race

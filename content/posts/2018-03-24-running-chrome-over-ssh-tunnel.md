@@ -58,13 +58,13 @@ Then connect with just `ssh remote_host`.
 
 X11 forwarding over high-latency or bandwidth-constrained links gets slow. Try these improvements:
 
-**Compression** — Reduce bandwidth usage:
+**Compression**: Reduce bandwidth usage:
 
 ``` bash
 ssh -X -C username@remote_host
 ```
 
-**Minimize Chrome overhead** — Disable extensions and plugins:
+**Minimize Chrome overhead**: Disable extensions and plugins:
 
 ``` bash
 google-chrome --disable-extensions --disable-plugins --no-sandbox
@@ -120,7 +120,7 @@ If you see “wayland”, you have options:
 
 ## Troubleshooting X11 Forwarding
 
-**“Cannot connect to display” error** — Verify X11 forwarding is enabled on the remote server. Check `/etc/ssh/sshd_config`:
+**“Cannot connect to display” error**: Verify X11 forwarding is enabled on the remote server. Check `/etc/ssh/sshd_config`:
 
     X11Forwarding yes
 
@@ -130,7 +130,7 @@ Restart sshd if you made changes:
 sudo systemctl restart sshd
 ```
 
-**Font or rendering issues** — Chrome may lack fonts available on your local system. Force simpler rendering:
+**Font or rendering issues**: Chrome may lack fonts available on your local system. Force simpler rendering:
 
 ``` bash
 google-chrome --force-device-scale-factor=1

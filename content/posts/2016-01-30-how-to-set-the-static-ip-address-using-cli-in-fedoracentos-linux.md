@@ -26,7 +26,7 @@ or the more verbose:
 ip addr show
 ```
 
-Look for your interface name—typically `eth0`, `enp2s0`, or similar depending on your hardware and naming convention. You’ll use this name in all subsequent commands.
+Look for your interface name: typically `eth0`, `enp2s0`, or similar depending on your hardware and naming convention. You’ll use this name in all subsequent commands.
 
 ## Configure static IP with nmcli (recommended)
 

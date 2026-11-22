@@ -20,21 +20,21 @@ iptables organizes rules into **tables** and **chains**. For port forwarding, yo
 
 **Tables:**
 
-- `nat` — Network Address Translation; modifies source or destination addresses
-- `filter` — Packet filtering; accepts or drops packets
-- `mangle` — Advanced packet modifications (less common for basic port forwarding)
+- `nat`: Network Address Translation; modifies source or destination addresses
+- `filter`: Packet filtering; accepts or drops packets
+- `mangle`: Advanced packet modifications (less common for basic port forwarding)
 
 **Chains in the nat table:**
 
-- `PREROUTING` — Modifies destination addresses (DNAT) before routing
-- `POSTROUTING` — Modifies source addresses (SNAT) after routing
-- `OUTPUT` — Modifies packets originating from the firewall
+- `PREROUTING`: Modifies destination addresses (DNAT) before routing
+- `POSTROUTING`: Modifies source addresses (SNAT) after routing
+- `OUTPUT`: Modifies packets originating from the firewall
 
 **Chains in the filter table:**
 
-- `INPUT` — Packets destined for the firewall itself
-- `FORWARD` — Packets passing through the firewall to other networks
-- `OUTPUT` — Packets originating from the firewall
+- `INPUT`: Packets destined for the firewall itself
+- `FORWARD`: Packets passing through the firewall to other networks
+- `OUTPUT`: Packets originating from the firewall
 
 When a port-forwarded packet arrives, it passes through: PREROUTING (nat) → routing decision → FORWARD (filter) → POSTROUTING (nat) → delivery to the internal host.
 

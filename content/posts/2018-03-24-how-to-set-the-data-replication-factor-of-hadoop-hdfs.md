@@ -76,7 +76,7 @@ This shows live and dead DataNodes, used and available capacity, and block under
 
 ## Replication Constraints and Considerations
 
-**Bounds and validation:** HDFS enforces minimum and maximum replication constraints. Setting `dfs.replication` higher than your number of DataNodes means HDFS replicates to all available nodes but cannot reach the target factor—the NameNode logs warnings. A value of 0 is invalid; HDFS requires at least 1 replica per block.
+**Bounds and validation:** HDFS enforces minimum and maximum replication constraints. Setting `dfs.replication` higher than your number of DataNodes means HDFS replicates to all available nodes but cannot reach the target factor: the NameNode logs warnings. A value of 0 is invalid; HDFS requires at least 1 replica per block.
 
 **Rack topology:** If you’ve configured rack awareness (via `net.topology.script.file.name` or cloud provider integration), HDFS places replicas across racks by default. With a replication factor of 3, the standard placement is 2 replicas on one rack and 1 on another, surviving both node and rack outages.
 

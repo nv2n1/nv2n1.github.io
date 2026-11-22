@@ -16,7 +16,7 @@ In practical terms: once an operation completes and a client receives acknowledg
 
 ## Core Guarantees
 
-**Atomicity**: Each operation appears indivisible—it either fully completes or doesn’t execute at all. No partial states are visible.
+**Atomicity**: Each operation appears indivisible: it either fully completes or doesn’t execute at all. No partial states are visible.
 
 **Real-time Ordering**: If operation A completes before operation B starts (in wall-clock time), then A must appear before B in the logical order. This respects causality.
 
@@ -28,7 +28,7 @@ This differs from weaker consistency models like eventual consistency (where rep
 
 **Data correctness in critical systems**: Banking transfers, distributed transactions, and medical records require that no two clients ever see conflicting states. Linear consistency prevents race conditions and double-spends.
 
-**Easier reasoning**: Developers can write distributed code as if operating against a single machine—simpler logic, fewer subtle bugs.
+**Easier reasoning**: Developers can write distributed code as if operating against a single machine: simpler logic, fewer subtle bugs.
 
 **Regulatory compliance**: Many industries (finance, healthcare) legally require strong consistency guarantees that linear consistency provides.
 

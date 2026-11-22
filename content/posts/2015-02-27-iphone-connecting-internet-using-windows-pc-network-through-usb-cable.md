@@ -62,7 +62,7 @@ Check **Allow other network users to connect through this computer’s Internet 
 
 From the dropdown menu, select the new USB adapter (the one that appeared when you connected the iPhone).
 
-Click **OK**. Windows may prompt to configure the private network automatically — allow it.
+Click **OK**. Windows may prompt to configure the private network automatically: allow it.
 
 ### Step 6: Re-enable your internet adapter
 
@@ -138,4 +138,4 @@ If your PC is a laptop on battery, USB tethering will extend total runtime since
 
 USB internet sharing typically provides 50-100 Mbps on USB 2.0 and up to 480 Mbps theoretical on USB 3.0, though real throughput depends on your PC’s internet speed. It’s stable for browsing, email, and streaming, but less ideal for large file downloads or gaming due to slight latency introduced by the bridging layer.
 
-For temporary connectivity only — say, when your iPhone’s cellular is slow — USB tethering is more reliable than relying on weak Wi-Fi hotspot signals.
+For temporary connectivity only (say, when your iPhone’s cellular is slow) USB tethering is more reliable than relying on weak Wi-Fi hotspot signals.

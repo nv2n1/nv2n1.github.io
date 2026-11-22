@@ -105,7 +105,7 @@ PHP’s loose typing can create subtle security holes through type juggling:
 ``` php
 // Without strict types, dangerous comparisons occur
 if ((int) $_GET['id'] == 10) {
-    // User passes id=10e0 or id=10.0 — both cast to 10
+    // User passes id=10e0 or id=10.0: both cast to 10
 }
 
 // Type juggling comparison issues
@@ -139,7 +139,7 @@ if (!ctype_digit($input) || $input > PHP_INT_MAX) {
 $userId = (int) $input;
 ```
 
-The `filter_var()` approach is more robust—it rejects values that would cast to zero accidentally, like empty strings or non-numeric prefixes:
+The `filter_var()` approach is more robust: it rejects values that would cast to zero accidentally, like empty strings or non-numeric prefixes:
 
 ``` php
 filter_var("", FILTER_VALIDATE_INT);      // false

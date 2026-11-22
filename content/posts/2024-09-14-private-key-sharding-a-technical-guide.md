@@ -14,7 +14,7 @@ Private key sharding splits a private key into multiple parts called “shards�
 
 ## How Shamir’s Secret Sharing Works
 
-SSS uses polynomial interpolation to split a secret into `n` shards where `k` shards are sufficient to recover the original (a `k`-of-`n` threshold). With fewer than `k` shards, no information about the secret is leaked—not even a single bit.
+SSS uses polynomial interpolation to split a secret into `n` shards where `k` shards are sufficient to recover the original (a `k`-of-`n` threshold). With fewer than `k` shards, no information about the secret is leaked: not even a single bit.
 
 The mathematical basis is simple: a line requires 2 points to reconstruct, a parabola requires 3, and so on. You generate a random polynomial where the constant term is your private key, evaluate it at `n` distinct points, and distribute each point-value pair as a shard.
 
@@ -34,7 +34,7 @@ If your house burns down (losing Shard 1) or a deposit box is inaccessible, you 
 
 These are fundamentally different security models:
 
-**Multisig:** Requires multiple distinct private keys to sign a transaction. The blockchain enforces the threshold—it’s part of the smart contract or protocol. A 2-of-3 multisig wallet requires two separate key holders to approve every transaction. Useful for organizational control and on-chain auditability.
+**Multisig:** Requires multiple distinct private keys to sign a transaction. The blockchain enforces the threshold: it’s part of the smart contract or protocol. A 2-of-3 multisig wallet requires two separate key holders to approve every transaction. Useful for organizational control and on-chain auditability.
 
 **Sharding:** Happens entirely off-chain. The blockchain sees a normal single-signature transaction. The key-splitting is purely a mathematical protection mechanism for your software. No consensus layer involvement. Useful for personal asset protection and inheritance planning.
 
@@ -55,13 +55,13 @@ As of 2026, Trezor and Ledger both support SLIP-39 backup, replacing traditional
 
 **Shard Distribution Strategy:**
 
-1.  **Geographic diversity** — Store shards in physically separate locations (home, bank, lawyer’s office, etc.). A localized disaster shouldn’t compromise multiple shards.
+1.  **Geographic diversity**: Store shards in physically separate locations (home, bank, lawyer’s office, etc.). A localized disaster shouldn’t compromise multiple shards.
 
-2.  **Access control** — Consider who needs access to each shard. In estate planning scenarios, give one shard to a lawyer, another to a family member, and keep one yourself. This prevents any single party from accessing funds unilaterally.
+2.  **Access control**: Consider who needs access to each shard. In estate planning scenarios, give one shard to a lawyer, another to a family member, and keep one yourself. This prevents any single party from accessing funds unilaterally.
 
-3.  **Threshold selection** — Use `k > n/2` to prevent collusion. With 5 shards and a 2-of-5 threshold, any two people could collude and recover your key. A 3-of-5 requires three parties. For personal use with 5 geographic locations, 3-of-5 balances security and recoverability.
+3.  **Threshold selection**: Use `k > n/2` to prevent collusion. With 5 shards and a 2-of-5 threshold, any two people could collude and recover your key. A 3-of-5 requires three parties. For personal use with 5 geographic locations, 3-of-5 balances security and recoverability.
 
-4.  **Documentation** — Record the threshold, total shard count, and recovery procedure in a secure place (not with the shards themselves). Include which shards are stored where and how to contact holders if needed.
+4.  **Documentation**: Record the threshold, total shard count, and recovery procedure in a secure place (not with the shards themselves). Include which shards are stored where and how to contact holders if needed.
 
 **Recovery Process:**
 
@@ -88,13 +88,13 @@ Some custody platforms (Unchained, Casa) automate this process through secure cl
 
 **Hardware Wallet Backup:** SLIP-39 has become the standard for premium hardware wallets, replacing seed phrases for users who can tolerate the backup complexity.
 
-**High-Security Cold Storage:** For custody of large holdings, sharding combined with hardware devices creates layered protection—the key itself is split, and each shard is held on a separate device or location.
+**High-Security Cold Storage:** For custody of large holdings, sharding combined with hardware devices creates layered protection: the key itself is split, and each shard is held on a separate device or location.
 
 ## Limitations
 
-- **No on-chain enforcement** — Unlike multisig, sharding provides no blockchain-level auditability. You can’t prove to third parties that funds are protected.
-- **Recovery complexity** — You must physically gather shards and have compatible recovery software. In an emergency, this is slower than a single seed phrase.
-- **Coordination risk** — Shard holders must cooperate and be reachable. If a lawyer loses their shard or refuses access, recovery becomes difficult.
-- **Key reuse** — Once you recover the full key, you still have the risk of storing a complete key again. Plan for rotating or retiring sharded keys after one-time recovery.
+- **No on-chain enforcement**: Unlike multisig, sharding provides no blockchain-level auditability. You can’t prove to third parties that funds are protected.
+- **Recovery complexity**: You must physically gather shards and have compatible recovery software. In an emergency, this is slower than a single seed phrase.
+- **Coordination risk**: Shard holders must cooperate and be reachable. If a lawyer loses their shard or refuses access, recovery becomes difficult.
+- **Key reuse**: Once you recover the full key, you still have the risk of storing a complete key again. Plan for rotating or retiring sharded keys after one-time recovery.
 
 For most users, sharding complements but doesn’t replace multisig or standard cold storage. It’s most valuable when you need resilience against loss (fire, theft) without on-chain complexity, or as part of a broader institutional custody framework.

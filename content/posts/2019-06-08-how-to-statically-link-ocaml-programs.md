@@ -33,7 +33,7 @@ You’ll see a warning:
     /usr/lib/ocaml/libasmrun.a(unix.o): In function `caml_dlopen':
     (.text+0x37f): warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 
-This warning reveals the core limitation: functions like `dlopen()` still require glibc shared libraries at runtime, even though most of glibc is statically linked. Your binary isn’t truly portable across different glibc versions—it carries a hard dependency on the glibc ABI it was compiled against.
+This warning reveals the core limitation: functions like `dlopen()` still require glibc shared libraries at runtime, even though most of glibc is statically linked. Your binary isn’t truly portable across different glibc versions: it carries a hard dependency on the glibc ABI it was compiled against.
 
 Verify static linking:
 
@@ -77,7 +77,7 @@ ldd ./hello
 # Output: not a dynamic executable
 ```
 
-No warnings appear—musl doesn’t require dynamic library resolution at runtime.
+No warnings appear: musl doesn’t require dynamic library resolution at runtime.
 
 ## Building Projects with Dependencies
 
@@ -136,7 +136,7 @@ For production, consider `upx` or other compressors, though they add runtime dec
 upx --best -o hello.upx hello
 ```
 
-Be cautious with compression—some container registries and deployment systems may flag or decompress UPX binaries automatically.
+Be cautious with compression: some container registries and deployment systems may flag or decompress UPX binaries automatically.
 
 ## Choosing an Approach
 

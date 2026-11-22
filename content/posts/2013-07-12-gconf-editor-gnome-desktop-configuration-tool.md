@@ -16,10 +16,10 @@ Modern GNOME uses dconf as its configuration backend, replacing the older GConf 
 
 GNOME’s configuration hierarchy works like this:
 
-1.  **dconf** — the low-level database storing all settings
-2.  **gsettings** — the command-line interface for reading/writing dconf values
-3.  **dconf-editor** — a graphical browser for exploring and modifying settings
-4.  **GNOME Settings** — the user-facing GUI for common preferences
+1.  **dconf**: the low-level database storing all settings
+2.  **gsettings**: the command-line interface for reading/writing dconf values
+3.  **dconf-editor**: a graphical browser for exploring and modifying settings
+4.  **GNOME Settings**: the user-facing GUI for common preferences
 
 For scripting and automation, gsettings is your tool. For visual browsing of available options, dconf-editor works well. Direct dconf manipulation is rarely needed.
 

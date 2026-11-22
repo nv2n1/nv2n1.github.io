@@ -117,7 +117,7 @@ For systems that don’t yet support ed25519-sk, fall back to ecdsa-sk:
 ssh-keygen -t ecdsa-sk -C "your_email@example.com"
 ```
 
-You’ll be prompted to touch your hardware key during generation and each time you use it for authentication. This provides phishing resistance—attackers cannot use stolen credentials because they lack physical access to your key.
+You’ll be prompted to touch your hardware key during generation and each time you use it for authentication. This provides phishing resistance: attackers cannot use stolen credentials because they lack physical access to your key.
 
 Check your OpenSSH version with `ssh -V`. OpenSSH 8.2 or newer is required for security key support. If you’re on an older system, upgrade OpenSSH or use standard Ed25519 keys with a strong passphrase instead.
 

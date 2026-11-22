@@ -10,7 +10,7 @@ canonical: /convert-movie-file-to-wav-and-mp3-file-using-mplayer-and-lame/
 url: /convert-movie-file-to-wav-and-mp3-file-using-mplayer-and-lame/
 ---
 
-Converting audio tracks from video files is useful for extracting soundtracks, creating audio-only versions for podcasts, or generating files optimized for audio playback. While MPlayer was historically used for this task, **ffmpeg** is now the standard tool—it’s actively maintained, more efficient, and handles both extraction and encoding in one step.
+Converting audio tracks from video files is useful for extracting soundtracks, creating audio-only versions for podcasts, or generating files optimized for audio playback. While MPlayer was historically used for this task, **ffmpeg** is now the standard tool: it’s actively maintained, more efficient, and handles both extraction and encoding in one step.
 
 ## Installation
 
@@ -48,11 +48,11 @@ ffmpeg -i input_movie.mp4 -vn -acodec pcm_s16le -ar 44100 output.wav
 
 Breaking down the flags:
 
-- `-i input_movie.mp4` — input video file
-- `-vn` — disable video stream (audio only)
-- `-acodec pcm_s16le` — PCM codec for WAV format
-- `-ar 44100` — audio sample rate (44.1 kHz is standard for CD-quality audio)
-- `output.wav` — output filename
+- `-i input_movie.mp4`: input video file
+- `-vn`: disable video stream (audio only)
+- `-acodec pcm_s16le`: PCM codec for WAV format
+- `-ar 44100`: audio sample rate (44.1 kHz is standard for CD-quality audio)
+- `output.wav`: output filename
 
 For higher quality, use 48 kHz:
 
@@ -70,9 +70,9 @@ ffmpeg -i input_movie.mp4 -vn -acodec libmp3lame -ab 192k output.mp3
 
 Flags:
 
-- `-vn` — disable video
-- `-acodec libmp3lame` — MP3 encoder
-- `-ab 192k` — audio bitrate (192 kbps is good quality; use 128k for smaller files, 320k for maximum quality)
+- `-vn`: disable video
+- `-acodec libmp3lame`: MP3 encoder
+- `-ab 192k`: audio bitrate (192 kbps is good quality; use 128k for smaller files, 320k for maximum quality)
 
 For variable bitrate (VBR) encoding, which often provides better quality-to-filesize ratio:
 

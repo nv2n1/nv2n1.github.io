@@ -94,7 +94,7 @@ The function name must follow the JNI naming convention: `Java_<ClassName>_<Meth
 
 - `JNIEXPORT` and `JNICALL` are JNI macros that ensure correct calling conventions on Windows
 - `JNIEnv *env` provides access to JNI functions like throwing exceptions or calling back into Java
-- `jobject obj` is a reference to the Java object (`this`) — use `NULL` if it’s a static native method
+- `jobject obj` is a reference to the Java object (`this`): use `NULL` if it’s a static native method
 - Return type `jint` maps to Java `int`; JNI provides similar type mappings for all Java primitives and objects
 
 ## Step 4: Configure Visual Studio Project
@@ -287,7 +287,7 @@ If the DLL depends on VCRUNTIME140.dll or similar, install the corresponding Vis
 
 - Use **Release** configuration for production; Debug adds significant overhead
 - JNI has overhead (~100-200 nanoseconds per call). Keep frequently-called native methods lightweight and batch operations where possible
-- Move computationally intensive work to C/C++, but keep Java logic in Java — don’t push everything to native code
+- Move computationally intensive work to C/C++, but keep Java logic in Java: don’t push everything to native code
 - For large projects, consider CMake or Meson instead of the Visual Studio GUI to manage build complexity
 
 ## Example: Passing Strings and Arrays

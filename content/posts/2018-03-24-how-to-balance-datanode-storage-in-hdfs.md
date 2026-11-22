@@ -132,7 +132,7 @@ Avoid running during peak traffic unless bandwidth limits are set conservatively
 
 ## Important Notes
 
-The Balancer respects rack awareness and replication constraints—it won’t violate data locality or create replicas beyond policy. On large clusters with many under-replicated blocks, prioritize fixing replication issues first; the Balancer won’t operate effectively if the cluster is already struggling with block placement.
+The Balancer respects rack awareness and replication constraints: it won’t violate data locality or create replicas beyond policy. On large clusters with many under-replicated blocks, prioritize fixing replication issues first; the Balancer won’t operate effectively if the cluster is already struggling with block placement.
 
 ## 2026 Comprehensive Guide: Best Practices
 

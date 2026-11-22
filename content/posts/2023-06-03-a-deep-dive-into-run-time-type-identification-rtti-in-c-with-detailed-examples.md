@@ -14,9 +14,9 @@ RTTI is a C++ mechanism that allows you to determine an object’s type at runti
 
 ## Key RTTI Operators
 
-**typeid()** — Returns a `std::type_info` object representing the type. You can compare type information or get a human-readable name via `.name()`.
+**typeid()**: Returns a `std::type_info` object representing the type. You can compare type information or get a human-readable name via `.name()`.
 
-**dynamic_cast** — Safely converts pointers or references down an inheritance hierarchy. For pointers, a failed cast returns `nullptr`; for references, it throws `std::bad_cast`.
+**dynamic_cast**: Safely converts pointers or references down an inheritance hierarchy. For pointers, a failed cast returns `nullptr`; for references, it throws `std::bad_cast`.
 
 Both require virtual functions in the base class. RTTI is disabled if your base class lacks a virtual destructor or virtual methods.
 
@@ -86,7 +86,7 @@ void processRef(Animal& a) {
 
 Modern C++ offers better alternatives for most scenarios:
 
-**Virtual Functions** — If you need type-specific behavior, add a virtual method to the base class and override it in derived classes. This is faster and clearer:
+**Virtual Functions**: If you need type-specific behavior, add a virtual method to the base class and override it in derived classes. This is faster and clearer:
 
 ``` cpp
 class Animal {
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-**std::variant** — For small, fixed type hierarchies where inheritance feels overkill, use `std::variant` with `std::visit`:
+**std::variant**: For small, fixed type hierarchies where inheritance feels overkill, use `std::variant` with `std::visit`:
 
 ``` cpp
 struct Dog { void fetch() {} };

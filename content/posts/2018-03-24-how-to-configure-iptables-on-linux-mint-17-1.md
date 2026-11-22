@@ -55,8 +55,8 @@ sudo ip6tables-save | sudo tee /etc/iptables/rules.v6
 
 The rules are stored in plain text files:
 
-- `/etc/iptables/rules.v4` — IPv4 rules
-- `/etc/iptables/rules.v6` — IPv6 rules
+- `/etc/iptables/rules.v4`: IPv4 rules
+- `/etc/iptables/rules.v6`: IPv6 rules
 
 The `iptables-persistent` service will automatically load these files during boot.
 

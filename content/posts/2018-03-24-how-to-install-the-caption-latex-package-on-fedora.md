@@ -146,10 +146,10 @@ Combine with the `subcaption` package for subfigures:
 
 The caption package works well with:
 
-- **hyperref** — Captions are properly linked in PDF bookmarks
-- **babel** — Automatic translation of “Figure” and “Table” labels
-- **memoir** — Caption package can override memoir’s caption settings
-- **float** — Enhanced float placement alongside caption customization
+- **hyperref**: Captions are properly linked in PDF bookmarks
+- **babel**: Automatic translation of “Figure” and “Table” labels
+- **memoir**: Caption package can override memoir’s caption settings
+- **float**: Enhanced float placement alongside caption customization
 
 Load `hyperref` last in your preamble to ensure proper link generation:
 
@@ -161,11 +161,11 @@ Load `hyperref` last in your preamble to ensure proper link generation:
 
 ## Quick Reference
 
-- `sudo dnf install texlive-caption` — Install on Fedora
-- `\usepackage{caption}` — Load the package
-- `\captionsetup{labelfont=bf}` — Bold labels
-- `\usepackage{subcaption}` — Subfigure support
-- `kpsewhich caption.sty` — Verify installation
+- `sudo dnf install texlive-caption`: Install on Fedora
+- `\usepackage{caption}`: Load the package
+- `\captionsetup{labelfont=bf}`: Bold labels
+- `\usepackage{subcaption}`: Subfigure support
+- `kpsewhich caption.sty`: Verify installation
 
 ## Custom Caption Labels
 
@@ -242,4 +242,4 @@ Reset the counter or check for conflicts with other packages that modify counter
 
 **Caption not appearing in list of figures:**
 
-Make sure you’ve run LaTeX twice — the first run collects caption data, the second generates the list. Also verify that `\caption` is inside the float environment, not outside it.
+Make sure you’ve run LaTeX twice: the first run collects caption data, the second generates the list. Also verify that `\caption` is inside the float environment, not outside it.

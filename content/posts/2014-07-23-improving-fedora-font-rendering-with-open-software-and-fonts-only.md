@@ -110,7 +110,7 @@ Fontconfig controls how applications select and render fonts. Create `~/.config/
 </fontconfig>
 ```
 
-The `hintslight` setting provides good balance for screen rendering—it applies enough hinting for clarity without distorting letterforms. `hintfull` can appear too bold on most displays.
+The `hintslight` setting provides good balance for screen rendering: it applies enough hinting for clarity without distorting letterforms. `hintfull` can appear too bold on most displays.
 
 Reload the cache to apply changes:
 
@@ -145,10 +145,10 @@ Beyond Liberation, these open source fonts improve rendering coverage:
 sudo dnf install ibm-plex-fonts google-roboto-fonts
 ```
 
-- **DejaVu** — excellent serif and sans-serif with extensive Unicode support
-- **Noto** — covers most writing systems; particularly useful for CJK characters
-- **IBM Plex** — modern professional typeface family
-- **Google Roboto** — clean sans-serif optimized for screen display
+- **DejaVu**: excellent serif and sans-serif with extensive Unicode support
+- **Noto**: covers most writing systems; particularly useful for CJK characters
+- **IBM Plex**: modern professional typeface family
+- **Google Roboto**: clean sans-serif optimized for screen display
 
 ## Verify configuration
 
@@ -161,6 +161,6 @@ fc-match -v sans | head -20
 
 The second command shows which font is selected for sans-serif requests and its rendering properties. Open a terminal, web browser, and text editor to verify fonts render cleanly without pixelation or excessive boldness.
 
-If a specific application ignores your fontconfig settings, check whether it uses a toolkit other than GTK (Qt applications, for example, may require separate configuration). Most terminal emulators respect fontconfig directly—configure your preferred monospace font there as well.
+If a specific application ignores your fontconfig settings, check whether it uses a toolkit other than GTK (Qt applications, for example, may require separate configuration). Most terminal emulators respect fontconfig directly: configure your preferred monospace font there as well.
 
 After applying fontconfig changes to `/etc/fonts/local.conf`, always run `sudo fc-cache -fv` to rebuild the system font cache.

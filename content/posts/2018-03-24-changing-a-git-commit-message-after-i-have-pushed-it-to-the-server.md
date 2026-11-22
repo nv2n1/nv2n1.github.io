@@ -10,7 +10,7 @@ canonical: /changing-a-git-commit-message-after-i-have-pushed-it-to-the-server/
 url: /changing-a-git-commit-message-after-i-have-pushed-it-to-the-server/
 ---
 
-If you’ve pushed a commit with a bad message, you can fix it—but the approach depends on whether others have pulled that commit yet.
+If you’ve pushed a commit with a bad message, you can fix it, but the approach depends on whether others have pulled that commit yet.
 
 ## When Rewriting Is Safe
 
@@ -36,7 +36,7 @@ This rewrites only your local history. To update the remote:
 git push --force-with-lease
 ```
 
-Use `--force-with-lease` instead of `-f`. It’s safer—it only pushes if your local branch matches the remote, preventing accidental overwrites if someone else pushed while you were working.
+Use `--force-with-lease` instead of `-f`. It’s safer: it only pushes if your local branch matches the remote, preventing accidental overwrites if someone else pushed while you were working.
 
 If no one has pulled yet, a plain `git push` might work. Check first:
 
@@ -137,5 +137,5 @@ git push --force-with-lease
 - Never rewrite commits on shared branches like `main` or `develop`
 - For single-developer branches or feature branches no one else uses, amending is fine
 - Document controversial rewrites in commit messages or PRs
-- Check branch protection rules—some block force pushes entirely
+- Check branch protection rules: some block force pushes entirely
 - If you’re unsure whether others have pulled, assume they have and use a safer method

@@ -79,7 +79,7 @@ To enable this fallback, ensure password recovery is enabled in your Q2A admin s
 - Proper JSON formatting in config files
 - File encoding (should be UTF-8)
 
-**Redirect URI mismatches**: The most common issue. Verify the exact redirect URL matches what you’ve registered with each provider — including protocol (http vs https) and trailing slashes.
+**Redirect URI mismatches**: The most common issue. Verify the exact redirect URL matches what you’ve registered with each provider, including protocol (http vs https) and trailing slashes.
 
 **Users stuck after social login failure**: Implement the fallback password recovery flow. Have users verify their email address and reset their password through the forgot password feature, then they can log in normally.
 
@@ -92,4 +92,4 @@ For simpler setups, consider:
 - **Question2Answer Google Login plugin**: Lightweight, supports Google only
 - **Custom OAuth middleware**: If you’re comfortable with PHP, roll your own integration using industry libraries like `league/oauth2-client`
 
-Most established Q2A sites use the Open Login plugin for its flexibility and active maintenance. Evaluate your audience before choosing — developer communities benefit from GitHub integration, while general sites do better with Google and Facebook.
+Most established Q2A sites use the Open Login plugin for its flexibility and active maintenance. Evaluate your audience before choosing: developer communities benefit from GitHub integration, while general sites do better with Google and Facebook.

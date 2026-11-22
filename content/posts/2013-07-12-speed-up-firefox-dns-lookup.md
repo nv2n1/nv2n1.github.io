@@ -38,7 +38,7 @@ Apply with:
 sudo sysctl -p /etc/sysctl.d/99-disable-ipv6.conf
 ```
 
-Avoid modifying `/etc/modprobe.conf` directly on modern distributions — use sysctl instead for persistent, maintainable settings.
+Avoid modifying `/etc/modprobe.conf` directly on modern distributions: use sysctl instead for persistent, maintainable settings.
 
 ## Configure DNS Caching
 
@@ -107,7 +107,7 @@ This measures actual network performance independent of browser caching.
 
 If DNS lookups aren’t slow, the bottleneck likely lies elsewhere:
 
-- **High latency**: Check with `ping` or `mtr` — network latency is beyond the browser
+- **High latency**: Check with `ping` or `mtr`: network latency is beyond the browser
 - **Slow server**: Confirm with `curl -I https://example.com` measuring TTFB (Time To First Byte)
 - **Bloated site**: Large JavaScript bundles or render-blocking resources cause slowness independent of DNS
 

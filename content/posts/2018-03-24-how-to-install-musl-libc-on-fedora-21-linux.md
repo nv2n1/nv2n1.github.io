@@ -97,11 +97,11 @@ This approach avoids compilation but depends on the repository being maintained 
 
 ## Common Issues
 
-**`musl-gcc: command not found`** — Make sure `/usr/local/musl/bin` is in your PATH. Check with `echo $PATH`.
+**`musl-gcc: command not found`**: Make sure `/usr/local/musl/bin` is in your PATH. Check with `echo $PATH`.
 
-**Compilation fails with missing headers** — Ensure `gcc` and `make` are installed: `sudo dnf install gcc make`.
+**Compilation fails with missing headers**: Ensure `gcc` and `make` are installed: `sudo dnf install gcc make`.
 
-**Static binaries still link glibc** — Verify you’re using `musl-gcc`, not `gcc`. Run `which musl-gcc` to confirm the correct binary is in use.
+**Static binaries still link glibc**: Verify you’re using `musl-gcc`, not `gcc`. Run `which musl-gcc` to confirm the correct binary is in use.
 
 ## Updating musl
 
@@ -123,11 +123,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

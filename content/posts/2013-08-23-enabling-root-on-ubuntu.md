@@ -10,7 +10,7 @@ canonical: /enabling-root-on-ubuntu/
 url: /enabling-root-on-ubuntu/
 ---
 
-Ubuntu locks the root account by default as a safety measure—it prevents accidental system damage and enforces audit trails through `sudo`. If you genuinely need direct root access, here’s how to enable it and the security tradeoffs involved.
+Ubuntu locks the root account by default as a safety measure: it prevents accidental system damage and enforces audit trails through `sudo`. If you genuinely need direct root access, here’s how to enable it and the security tradeoffs involved.
 
 ## Set a root password
 
@@ -56,7 +56,7 @@ Add a line like:
 username ALL=(ALL) NOPASSWD: /usr/bin/systemctl
 ```
 
-This allows the user to run `systemctl` without a password prompt. Always use `visudo`—it validates syntax before saving and prevents lockouts. Never edit `/etc/sudoers` directly.
+This allows the user to run `systemctl` without a password prompt. Always use `visudo`: it validates syntax before saving and prevents lockouts. Never edit `/etc/sudoers` directly.
 
 For multiple commands:
 

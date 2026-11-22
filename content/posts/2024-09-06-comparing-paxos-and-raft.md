@@ -10,7 +10,7 @@ canonical: /comparing-paxos-and-raft/
 url: /comparing-paxos-and-raft/
 ---
 
-Paxos and Raft are foundational consensus algorithms for distributed systems. Both solve the same core problem — achieving agreement across multiple nodes despite failures — but take fundamentally different approaches.
+Paxos and Raft are foundational consensus algorithms for distributed systems. Both solve the same core problem (achieving agreement across multiple nodes despite failures), but take fundamentally different approaches.
 
 ## Paxos
 
@@ -32,7 +32,7 @@ A majority must agree in both phases for consensus. The algorithm guarantees saf
 **Trade-offs**:
 
 - Strong theoretical guarantees and flexible under arbitrary failure scenarios
-- Implementation complexity — the original paper’s ambiguity spawned years of debate and refinements like Multi-Paxos
+- Implementation complexity: the original paper’s ambiguity spawned years of debate and refinements like Multi-Paxos
 - Without optimizations, message complexity is O(2N) per round
 
 ## Raft
@@ -55,7 +55,7 @@ One RTT for election, one RTT for replication while leader is stable. Message co
 
 **Trade-offs**:
 
-- Designed for understandability — straightforward state transitions and roles
+- Designed for understandability: straightforward state transitions and roles
 - Efficient leader-based log replication minimizes latency for subsequent entries
 - Primarily optimized for state machine replication, not general consensus problems
 
@@ -67,8 +67,8 @@ One RTT for election, one RTT for replication while leader is stable. Message co
 | **Phases per round** | 2 (Prepare, Accept) | 1 (once leader stable) |
 | **Leader explicit** | No (Multi-Paxos adds this) | Yes, always |
 | **Message complexity** | O(2N) baseline | O(N) baseline |
-| **Implementation effort** | High — significant protocol subtleties | Low — clear state machine |
-| **Flexibility** | High — handles arbitrary topologies | Lower — optimized for single-leader |
+| **Implementation effort** | High (significant protocol subtleties | Low) clear state machine |
+| **Flexibility** | High (handles arbitrary topologies | Lower) optimized for single-leader |
 
 ## When to Use What
 

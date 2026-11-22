@@ -192,11 +192,11 @@ Sync compares local file modification times with S3 object metadata and uploads 
 
 Common sync options:
 
-- **–delete:** Remove S3 objects not present in local directory (dangerous—test first)
-- \**–exclude “*.tmp”:\*\* Skip files matching the pattern
-- \**–include “*.log”:\*\* Upload only matching files (when combined with –exclude)
-- **–no-progress:** Suppress per-file progress output
-- **–storage-class GLACIER:** Use Glacier for cheaper long-term storage
+- **--delete:** Remove S3 objects not present in local directory (dangerous: test first)
+- \**--exclude “*.tmp”:\*\* Skip files matching the pattern
+- \**--include “*.log”:\*\* Upload only matching files (when combined with --exclude)
+- **--no-progress:** Suppress per-file progress output
+- **--storage-class GLACIER:** Use Glacier for cheaper long-term storage
 
 Always use `--dryrun` before `--delete`:
 
@@ -274,13 +274,13 @@ aws s3api put-public-access-block \
 
 ## Common upload options
 
-- **–storage-class GLACIER:** Archive to cheaper long-term storage (retrieval has delay)
-- **–storage-class INTELLIGENT_TIERING:** Automatic cost optimization based on access patterns
-- **–sse AES256:** Enable server-side encryption with S3-managed keys
-- **–acl private:** Set object permissions (avoid `--acl public-read` in production)
-- **–metadata key=value:** Add custom metadata for tracking and automation
-- **–region:** Specify AWS region explicitly (overrides default config)
-- **–expected-size:** Hint to AWS CLI the file size for better progress estimation
+- **--storage-class GLACIER:** Archive to cheaper long-term storage (retrieval has delay)
+- **--storage-class INTELLIGENT_TIERING:** Automatic cost optimization based on access patterns
+- **--sse AES256:** Enable server-side encryption with S3-managed keys
+- **--acl private:** Set object permissions (avoid `--acl public-read` in production)
+- **--metadata key=value:** Add custom metadata for tracking and automation
+- **--region:** Specify AWS region explicitly (overrides default config)
+- **--expected-size:** Hint to AWS CLI the file size for better progress estimation
 
 ## Monitoring and cost management
 

@@ -10,15 +10,15 @@ canonical: /find-broken-links-on-my-site/
 url: /find-broken-links-on-my-site/
 ---
 
-Over time, internal and external links on your site inevitably break — pages get deleted, domains expire, content moves. Finding and fixing these broken links improves user experience and helps with SEO, since search engines penalize sites with dead links.
+Over time, internal and external links on your site inevitably break: pages get deleted, domains expire, content moves. Finding and fixing these broken links improves user experience and helps with SEO, since search engines penalize sites with dead links.
 
 ## Automated Checking Tools
 
 Several web-based tools can scan your site and report broken links:
 
-- **<a href="https://www.brokenlinkcheck.com/" rel="nofollow noopener" target="_blank">https://www.brokenlinkcheck.com/</a>** — Free tool that crawls your site and identifies dead links. Works well for small to medium sites.
-- **<a href="https://www.deadlinkchecker.com/" rel="nofollow noopener" target="_blank">https://www.deadlinkchecker.com/</a>** — Another straightforward checker with a simple interface.
-- **Google Search Console** — If your site is indexed, check the Coverage report for crawl errors that indicate unreachable pages.
+- **<a href="https://www.brokenlinkcheck.com/" rel="nofollow noopener" target="_blank">https://www.brokenlinkcheck.com/</a>**: Free tool that crawls your site and identifies dead links. Works well for small to medium sites.
+- **<a href="https://www.deadlinkchecker.com/" rel="nofollow noopener" target="_blank">https://www.deadlinkchecker.com/</a>**: Another straightforward checker with a simple interface.
+- **Google Search Console**: If your site is indexed, check the Coverage report for crawl errors that indicate unreachable pages.
 
 These tools are convenient if you want a quick scan without setup, but they have limitations: they may timeout on large sites, can’t check authenticated content, and may be throttled if you have many pages.
 
@@ -140,10 +140,10 @@ jobs:
 
 ## Best Practices
 
-- **Automate regularly** — Schedule checks weekly or monthly depending on how often you add content.
-- **Test before publishing** — Use `linkchecker` locally on staged content to catch broken links before going live.
-- **Update external links** — External links break due to third-party changes. Audit these annually.
-- **Set up monitoring** — Tools like Uptime Robot can monitor critical pages for 404s.
-- **Use redirects wisely** — When moving pages, 301 redirect old URLs rather than letting them break.
+- **Automate regularly**: Schedule checks weekly or monthly depending on how often you add content.
+- **Test before publishing**: Use `linkchecker` locally on staged content to catch broken links before going live.
+- **Update external links**: External links break due to third-party changes. Audit these annually.
+- **Set up monitoring**: Tools like Uptime Robot can monitor critical pages for 404s.
+- **Use redirects wisely**: When moving pages, 301 redirect old URLs rather than letting them break.
 
 For most sysadmins managing web infrastructure, combining `wget` or `linkchecker` with periodic automated checks provides reliable broken link detection without external dependencies.

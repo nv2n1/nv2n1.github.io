@@ -23,7 +23,7 @@ Most modern browsers have built-in print functionality that’s worth trying fir
     - **Background graphics**: Toggle to include/exclude images
     - **Scale**: Adjust to fit content properly
     - **Headers/footers**: Disable if not needed
-4.  Select “Save as PDF” instead of printing to paper — gives you a reusable file
+4.  Select “Save as PDF” instead of printing to paper: gives you a reusable file
 
 Modern browsers like Firefox and Chrome handle this reasonably well, but results vary by page structure.
 

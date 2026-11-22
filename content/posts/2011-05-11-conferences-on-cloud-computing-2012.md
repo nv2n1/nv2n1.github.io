@@ -82,7 +82,7 @@ Eighth Annual International Conference on Virtual Execution Environments (VEE 20
 
 “Virtualization has a central role on modern systems, nowadays being a key aspect of how systems are developed, executed, and managed in environments ranging from mobile computing devices to large-scale data centers. Virtualization techniques are applied at many interfaces, from hardware, to OS system calls, to high-level language run times, to cloud management stacks. While these approaches differ dramatically in implementation, they target similar benefits and often must tackle related challenges.
 
-The 2012 ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments brings together researchers across the many applications of virtualization in today’s systems. We invite original papers on topics relating to virtualization – especially those that will have broad appeal across these approaches.”
+The 2012 ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments brings together researchers across the many applications of virtualization in today’s systems. We invite original papers on topics relating to virtualization, especially those that will have broad appeal across these approaches.”
 
 <span style="text-decoration: underline;">Important Dates</span>
 
@@ -134,7 +134,7 @@ Electronic files of final papers due: Monday, April 30, 2012
 
 ACM Symposium on Cloud Computing 2012
 
-October 14th-17th, 2012 – San Jose, CA
+October 14th-17th, 2012: San Jose, CA
 
 “The ACM Symposium on Cloud Computing 2012 is the third in a new series of symposia that brings together researchers, developers, users, and practitioners interested in cloud computing.”
 

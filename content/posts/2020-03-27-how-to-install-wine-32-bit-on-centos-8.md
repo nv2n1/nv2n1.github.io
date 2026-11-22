@@ -53,7 +53,7 @@ tar xf wine-9.0.tar.xz
 cd wine-9.0
 ```
 
-Check available versions at <a href="https://wiki.winehq.org/Download" rel="nofollow noopener" target="_blank">https://wiki.winehq.org/Download</a> — use stable branches (9.x, 8.x) rather than development versions for production systems. Version 10.0 and later may have different build requirements, so verify compatibility with your system first.
+Check available versions at <a href="https://wiki.winehq.org/Download" rel="nofollow noopener" target="_blank">https://wiki.winehq.org/Download</a>: use stable branches (9.x, 8.x) rather than development versions for production systems. Version 10.0 and later may have different build requirements, so verify compatibility with your system first.
 
 ## Build 64-bit Wine
 
@@ -67,7 +67,7 @@ make -j$(nproc)
 cd ..
 ```
 
-Build time typically ranges from 20-45 minutes on modern systems. The `-j$(nproc)` flag parallelizes compilation across all available CPU cores. Monitor the build for errors—compilation failures often indicate missing dependencies.
+Build time typically ranges from 20-45 minutes on modern systems. The `-j$(nproc)` flag parallelizes compilation across all available CPU cores. Monitor the build for errors: compilation failures often indicate missing dependencies.
 
 If compilation fails, check the `config.log` file in the build64 directory for specific missing libraries:
 

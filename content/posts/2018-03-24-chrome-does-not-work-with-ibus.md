@@ -114,8 +114,8 @@ Configure Fcitx through its GUI or by editing `~/.config/fcitx/profile`.
 
 Open `chrome://flags` and search for:
 
-- `ime` — verify input method engine flags are not disabled
-- `wayland` — if using X11, ensure Wayland flags are disabled (better IBus support came later to Wayland)
+- `ime`: verify input method engine flags are not disabled
+- `wayland`: if using X11, ensure Wayland flags are disabled (better IBus support came later to Wayland)
 
 ### 8. Verify Locale Settings
 
@@ -143,7 +143,7 @@ If text appears but with the wrong input method active, or if switching doesn’
 
 ## When to Report Upstream
 
-If none of these steps work, the issue may be specific to your Chrome version or distribution. Check the Chromium bug tracker at bugs.chromium.org before reporting — search for “ibus” or your specific language input method. Include your Chrome version (`chrome://version`) and input method details when reporting.
+If none of these steps work, the issue may be specific to your Chrome version or distribution. Check the Chromium bug tracker at bugs.chromium.org before reporting: search for “ibus” or your specific language input method. Include your Chrome version (`chrome://version`) and input method details when reporting.
 
 ## 2026 Comprehensive Guide: Best Practices
 

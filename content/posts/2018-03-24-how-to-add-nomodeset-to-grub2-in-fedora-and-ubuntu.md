@@ -35,7 +35,7 @@ Common scenarios that require `nomodeset`:
 
 **On Ubuntu (GRUB2):**
 
-1.  Same process — press **e** at the GRUB menu
+1.  Same process: press **e** at the GRUB menu
 2.  Find the line starting with `linux`
 3.  Add `nomodeset` after `quiet splash` (or wherever in the parameter list)
 4.  Press **F10** to boot
@@ -128,10 +128,10 @@ Running with `nomodeset` long-term means no GPU acceleration, poor display perfo
 
 Several other kernel parameters can help with graphics troubleshooting:
 
-- `video=1024x768` — Force a specific resolution during boot
-- `vesafb.mtrr=3 vesafb.ywrap=1` — Improve VESA framebuffer performance
-- `drm_kms_helper.edid_firmware=edid/1024x768.bin` — Override EDID data for monitors that report wrong resolutions
-- `gpu_sched.enable_scheduler=0` — Disable the GPU scheduler (AMD debugging)
+- `video=1024x768`: Force a specific resolution during boot
+- `vesafb.mtrr=3 vesafb.ywrap=1`: Improve VESA framebuffer performance
+- `drm_kms_helper.edid_firmware=edid/1024x768.bin`: Override EDID data for monitors that report wrong resolutions
+- `gpu_sched.enable_scheduler=0`: Disable the GPU scheduler (AMD debugging)
 
 Combine parameters as needed:
 
@@ -141,10 +141,10 @@ nomodeset video=1024x768 vga=792
 
 The `vga=` parameter sets the console resolution before KMS loads. Common values:
 
-- `vga=791` — 1024x768x16
-- `vga=792` — 1024x768x24
-- `vga=794` — 1280x1024x16
-- `vga=795` — 1280x1024x24
+- `vga=791`: 1024x768x16
+- `vga=792`: 1024x768x24
+- `vga=794`: 1280x1024x16
+- `vga=795`: 1280x1024x24
 
 ## Debugging Graphics Issues
 

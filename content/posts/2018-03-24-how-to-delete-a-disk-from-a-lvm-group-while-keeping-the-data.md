@@ -29,7 +29,7 @@ Use `pvmove` to relocate all extents from the physical volume to other PVs in th
 pvmove /dev/sdb
 ```
 
-This command scans the target PV and migrates all allocated extents to other PVs in the same VG. The operation can take significant time depending on the volume of data—hours for large disks. Progress is displayed on the console.
+This command scans the target PV and migrates all allocated extents to other PVs in the same VG. The operation can take significant time depending on the volume of data: hours for large disks. Progress is displayed on the console.
 
 For verbose output to monitor the operation:
 

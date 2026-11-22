@@ -10,7 +10,7 @@ canonical: /how-to-detect-the-hash-and-get-the-hash-in-javascript/
 url: /how-to-detect-the-hash-and-get-the-hash-in-javascript/
 ---
 
-The URL hash — the fragment identifier after the `#` — serves several purposes: in-page navigation, client-side routing, and preserving application state. JavaScript provides straightforward APIs to read and monitor hash changes.
+The URL hash (the fragment identifier after the `#`) serves several purposes: in-page navigation, client-side routing, and preserving application state. JavaScript provides straightforward APIs to read and monitor hash changes.
 
 ## Reading the Current Hash
 

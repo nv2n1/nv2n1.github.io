@@ -92,7 +92,7 @@ find . -type f ! -regex '.*\(string1\|string2\|\.tmp\).*'
 
 - **Missing `-type f`:** Without it, directories matching your negation are also returned
 - **Unquoted wildcards:** Use quotes around patterns to prevent shell expansion: `find . ! -name '*string*'` not `find . ! -name *string*`
-- **ls limitations:** `ls` can truncate long filenames and doesn’t reliably handle special characters — prefer `find` for scripting
+- **ls limitations:** `ls` can truncate long filenames and doesn’t reliably handle special characters: prefer `find` for scripting
 
 ## Troubleshooting Common Issues
 
@@ -104,11 +104,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

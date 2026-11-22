@@ -46,7 +46,7 @@ MediaWiki’s category and template system enforces structure. WordPress require
 
 ## Current Considerations for 2026
 
-Modern WordPress (6.5+) has matured significantly since the original migration. The block editor is now the standard, which changes how content is managed. Caching solutions have improved—consider alternatives like WP Rocket or server-level caching via Redis if you’re handling traffic spikes.
+Modern WordPress (6.5+) has matured significantly since the original migration. The block editor is now the standard, which changes how content is managed. Caching solutions have improved: consider alternatives like WP Rocket or server-level caching via Redis if you’re handling traffic spikes.
 
 For technical documentation specifically, some teams now use WordPress alongside static site generators (using something like Headless WordPress with Astro or Hugo). But for a traditional blog-style technical site, WordPress remains practical and maintainable.
 

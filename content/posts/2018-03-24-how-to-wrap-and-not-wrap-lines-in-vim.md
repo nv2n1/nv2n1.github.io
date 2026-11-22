@@ -10,7 +10,7 @@ canonical: /how-to-wrap-and-not-wrap-lines-in-vim/
 url: /how-to-wrap-and-not-wrap-lines-in-vim/
 ---
 
-Line wrapping in Vim controls whether long lines display across multiple visual lines or extend beyond the window edge. This is purely visual—wrapping doesn’t modify your file. Understanding when to enable, disable, and configure wrapping is essential for different workflows.
+Line wrapping in Vim controls whether long lines display across multiple visual lines or extend beyond the window edge. This is purely visual: wrapping doesn’t modify your file. Understanding when to enable, disable, and configure wrapping is essential for different workflows.
 
 ## Enable and Disable Wrapping
 
@@ -52,7 +52,7 @@ Add a visual indicator where lines break:
 :set showbreak=&#x21aa;\ 
 ```
 
-The backslash-space adds padding after the indicator. Customize the character to your preference—common choices include `&#x21aa;`, `⋯`, or `>>>`.
+The backslash-space adds padding after the indicator. Customize the character to your preference: common choices include `&#x21aa;`, `⋯`, or `>>>`.
 
 ## Hard Wrapping vs Soft Wrapping
 
@@ -145,7 +145,7 @@ setlocal wrap
 setlocal nolinebreak
 ```
 
-Use `:set wrap?` frequently while working—switching between modes takes one keystroke and instantly changes your view.
+Use `:set wrap?` frequently while working: switching between modes takes one keystroke and instantly changes your view.
 
 ## 2026 Best Practices and Advanced Techniques
 

@@ -28,7 +28,7 @@ Verify the lock:
 sudo grep username /etc/shadow
 ```
 
-You’ll see something like `username:!$6$...` — the `!` indicates a locked account.
+You’ll see something like `username:!$6$...`: the `!` indicates a locked account.
 
 To unlock later:
 
@@ -64,7 +64,7 @@ Prevent interactive login while allowing automated processes to run:
 sudo usermod -s /usr/sbin/nologin username
 ```
 
-Or use `/bin/false`. The difference is minimal — both prevent shell access, though `nologin` may display a message to the user. Check the current shell:
+Or use `/bin/false`. The difference is minimal: both prevent shell access, though `nologin` may display a message to the user. Check the current shell:
 
 ``` bash
 sudo grep username /etc/passwd
@@ -130,7 +130,7 @@ sudo userdel -r username
 
 ## In multi-user or container environments
 
-If using container orchestration or cloud infrastructure, disabling local accounts is often unnecessary — remove the user from access control systems (LDAP, IAM policies, SSH key management) instead. For containerized deployments, rebuild images without the user rather than disabling within running containers.
+If using container orchestration or cloud infrastructure, disabling local accounts is often unnecessary: remove the user from access control systems (LDAP, IAM policies, SSH key management) instead. For containerized deployments, rebuild images without the user rather than disabling within running containers.
 
 For systems using systemd user services, note that disabling a user account doesn’t automatically stop their user-level systemd processes. Stop them explicitly:
 

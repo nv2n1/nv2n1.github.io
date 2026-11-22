@@ -14,7 +14,7 @@ Vim performs case-sensitive searches by default. If you search for `error`, it w
 
 ## Toggle Case Sensitivity During Search
 
-The quickest method — append `\c` anywhere in your search pattern:
+The quickest method: append `\c` anywhere in your search pattern:
 
 ```wp-block-code
 /error\c
@@ -50,7 +50,7 @@ set ignorecase
 
 ## Smart Case Sensitivity
 
-The best option for most users — combine `ignorecase` with `smartcase`:
+The best option for most users: combine `ignorecase` with `smartcase`:
 
 ```wp-block-code
 set ignorecase
@@ -59,8 +59,8 @@ set smartcase
 
 With `smartcase`:
 
-- Searching for `error` (all lowercase) — case-insensitive, matches `Error`, `ERROR`
-- Searching for `Error` (contains uppercase) — case-sensitive, matches only `Error`
+- Searching for `error` (all lowercase): case-insensitive, matches `Error`, `ERROR`
+- Searching for `Error` (contains uppercase): case-sensitive, matches only `Error`
 
 This gives you the best of both worlds: casual lowercase searches are flexible, while uppercase searches are precise.
 
@@ -76,7 +76,7 @@ nnoremap <leader>i :set ignorecase!<CR>
 nnoremap <leader>I :set ignorecase?<CR>
 ```
 
-Or use the built-in toggle shortcut — press `/` to start search, then `Ctrl+C` to toggle case sensitivity (with some Vim configurations).
+Or use the built-in toggle shortcut: press `/` to start search, then `Ctrl+C` to toggle case sensitivity (with some Vim configurations).
 
 ## Case-Insensitive Substitution
 
@@ -86,7 +86,7 @@ The `\c` flag also works with substitute commands:
 :%s/error/issue/gc\c
 ```
 
-Wait — the flag goes in the pattern, not after the flags:
+Wait: the flag goes in the pattern, not after the flags:
 
 ```wp-block-code
 :%s/error\c/issue/gc
@@ -102,7 +102,7 @@ For complex patterns with case-insensitivity:
 /\v\cerror_\d+
 ```
 
-The `\v` (very magic) makes special characters work without escaping, and `\c` enables case-insensitivity. The order doesn’t matter — `\c\v` works too.
+The `\v` (very magic) makes special characters work without escaping, and `\c` enables case-insensitivity. The order doesn’t matter: `\c\v` works too.
 
 ## Search History and Case
 
@@ -122,11 +122,11 @@ nnoremap <Esc> :nohlsearch<CR>
 
 ## Quick Reference
 
-- `/pattern\c` — Case-insensitive for this search only
-- `/pattern\C` — Case-sensitive for this search only
-- `:set ic` — Global case-insensitive
-- `:set smartcase` — Smart case (use with ic)
-- `:%s/old\c/new/g` — Case-insensitive substitution
+- `/pattern\c`: Case-insensitive for this search only
+- `/pattern\C`: Case-sensitive for this search only
+- `:set ic`: Global case-insensitive
+- `:set smartcase`: Smart case (use with ic)
+- `:%s/old\c/new/g`: Case-insensitive substitution
 
 ## Case-Insensitive Search in Visual Mode
 

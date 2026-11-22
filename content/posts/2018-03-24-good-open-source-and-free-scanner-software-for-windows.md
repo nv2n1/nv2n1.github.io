@@ -65,7 +65,7 @@ For a complete scanning workflow on Windows:
 
 Before choosing software, verify your scanner works with Windows drivers. Most modern scanners support WIA (Windows Image Acquisition), which both NAPS2 and Windows’ built-in scan app recognize. Older or specialized scanners may need TWAIN drivers from the manufacturer.
 
-Test your scanner with NAPS2 first — if it doesn’t show up in the scanner list, check Device Manager to confirm Windows recognizes the hardware.
+Test your scanner with NAPS2 first: if it doesn’t show up in the scanner list, check Device Manager to confirm Windows recognizes the hardware.
 
 ## Alternative: Built-in Windows Scan App
 

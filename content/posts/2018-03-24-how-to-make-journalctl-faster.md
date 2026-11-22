@@ -10,7 +10,7 @@ canonical: /how-to-make-journalctl-faster/
 url: /how-to-make-journalctl-faster/
 ---
 
-When you run `journalctl` without options on a system with years of log history, it can take seconds or even minutes to parse everything. The slowness comes from journalctl loading and deserializing potentially gigabytes of journal data. The solution is targeted querying — you almost never need the entire journal, so restrict what journalctl reads from disk.
+When you run `journalctl` without options on a system with years of log history, it can take seconds or even minutes to parse everything. The slowness comes from journalctl loading and deserializing potentially gigabytes of journal data. The solution is targeted querying: you almost never need the entire journal, so restrict what journalctl reads from disk.
 
 ## Limit output with -n (most recent entries)
 
@@ -101,7 +101,7 @@ Stack filters for surgical precision:
 journalctl -u nginx.service -p err --since "today" -n 50
 ```
 
-This shows the last 50 error-level messages from nginx since midnight — nearly instant, even on large journals.
+This shows the last 50 error-level messages from nginx since midnight: nearly instant, even on large journals.
 
 ## Use grep for pattern matching
 
@@ -141,9 +141,9 @@ This prevents unbounded growth and keeps queries snappy.
 
 In day-to-day use, combine filtering strategies:
 
-- **Quick health check:** `journalctl -b -p err` — errors from current boot
-- **Service troubleshooting:** `journalctl -u service-name --since "10 minutes ago" -f` — follow a service’s recent logs
-- **Overnight incident review:** `journalctl -b -1 -p warning..emerg` — warnings and errors from the previous boot
-- **Authentication issues:** `journalctl -u ssh.service -p err -n 20` — recent SSH errors
+- **Quick health check:** `journalctl -b -p err`: errors from current boot
+- **Service troubleshooting:** `journalctl -u service-name --since "10 minutes ago" -f`: follow a service’s recent logs
+- **Overnight incident review:** `journalctl -b -1 -p warning..emerg`: warnings and errors from the previous boot
+- **Authentication issues:** `journalctl -u ssh.service -p err -n 20`: recent SSH errors
 
 The key is always asking “do I actually need to read this data?” before letting journalctl scan the journal. With targeted queries, journalctl becomes a fast, indispensable tool.

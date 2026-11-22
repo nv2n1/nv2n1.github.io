@@ -10,7 +10,7 @@ canonical: /what-is-the-name-of-the-linux-based-os-a-survey/
 url: /what-is-the-name-of-the-linux-based-os-a-survey/
 ---
 
-You’re using a Linux-based OS right now, either directly or indirectly. But what do you actually call it? The naming question matters more than it seems — different distributions frame themselves differently, and understanding the terminology affects how you talk about infrastructure, apply for jobs, and read documentation.
+You’re using a Linux-based OS right now, either directly or indirectly. But what do you actually call it? The naming question matters more than it seems: different distributions frame themselves differently, and understanding the terminology affects how you talk about infrastructure, apply for jobs, and read documentation.
 
 ## How Major Distributions Identify Themselves
 
@@ -32,7 +32,7 @@ openSUSE describes itself as a “Linux distribution,” emphasizing community-d
 
 **Debian**
 
-Debian calls itself “Debian” first — as an operating system name. Its documentation acknowledges that GNU tools form much of the basic OS, which historically led to “GNU/Linux” naming. Debian also maintains non-Linux variants like GNU/kFreeBSD and GNU/Hurd, reinforcing that “Debian” is the primary identifier.
+Debian calls itself “Debian” first: as an operating system name. Its documentation acknowledges that GNU tools form much of the basic OS, which historically led to “GNU/Linux” naming. Debian also maintains non-Linux variants like GNU/kFreeBSD and GNU/Hurd, reinforcing that “Debian” is the primary identifier.
 
 **Ubuntu**
 
@@ -50,7 +50,7 @@ Enterprise distributions sometimes emphasize “platform” in marketing materia
 
 ## The GNU/Linux Naming Debate
 
-The historical GNU/Linux question reflects a legitimate technical truth: GNU tools are foundational to virtually every Linux distribution. The GNU toolchain — gcc, binutils, make, coreutils, grep, sed, awk, and more — remains essential for building and running Linux systems. Critical dependencies also include glibc, systemd, the Linux kernel, X11 (or Wayland), and desktop environments.
+The historical GNU/Linux question reflects a legitimate technical truth: GNU tools are foundational to virtually every Linux distribution. The GNU toolchain (gcc, binutils, make, coreutils, grep, sed, awk, and more) remains essential for building and running Linux systems. Critical dependencies also include glibc, systemd, the Linux kernel, X11 (or Wayland), and desktop environments.
 
 Naming the OS “GNU/Linux” acknowledges the GNU project’s critical contributions. However, this terminology has practical drawbacks:
 
@@ -71,4 +71,4 @@ In 2026, “GNU/Linux” remains historically accurate but largely academic. Und
 
 **When technical accuracy matters:** If you need to emphasize GNU tools specifically (like in licensing discussions or when distinguishing from other Unix-like systems), mentioning “GNU/Linux” is appropriate. But this is the exception, not the rule.
 
-The practical reality is that most sysadmins, developers, and infrastructure teams just use “Linux” and reference the specific distribution when needed. Understanding your system’s components — kernel version, glibc, systemd, package manager — matters far more than debating the name.
+The practical reality is that most sysadmins, developers, and infrastructure teams just use “Linux” and reference the specific distribution when needed. Understanding your system’s components (kernel version, glibc, systemd, package manager) matters far more than debating the name.

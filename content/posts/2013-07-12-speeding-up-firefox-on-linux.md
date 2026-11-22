@@ -115,6 +115,6 @@ For a more aggressive cleanup of your profile while Firefox is closed:
 firefox --profile ~/.mozilla/firefox/YOUR_PROFILE_NAME -offline
 ```
 
-Then restart normally. Be cautious with profile manipulation—always back up before major changes.
+Then restart normally. Be cautious with profile manipulation: always back up before major changes.
 
 These optimizations work best in combination. Start with the DNS and initial paint delay settings, then experiment with network and caching settings to find what works best for your hardware and network conditions.

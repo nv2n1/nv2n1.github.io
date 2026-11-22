@@ -153,6 +153,6 @@ If setxkbmap produces no visible effect:
 1.  Verify X11 is running: `echo $XDG_SESSION_TYPE` should return `x11`
 2.  Confirm X is accessible: `echo $DISPLAY` should show something like `:0` or `:1`
 3.  Check for conflicting configuration in startup scripts
-4.  Some desktop environments override xkb settings after login — check your DE’s keyboard settings
+4.  Some desktop environments override xkb settings after login: check your DE’s keyboard settings
 
 If you’re certain X11 is running but changes don’t persist, the issue is usually an auto-loading xmodmap or xkb configuration file that reapplies your old settings on each login. Find and remove it.

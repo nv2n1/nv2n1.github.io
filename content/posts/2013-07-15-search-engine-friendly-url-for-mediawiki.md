@@ -10,7 +10,7 @@ canonical: /search-engine-friendly-url-for-mediawiki/
 url: /search-engine-friendly-url-for-mediawiki/
 ---
 
-MediaWiki’s default URL structure — `www.example.com/w/index.php?title=TITLE` — works functionally but creates poor SEO signals and awkward shareable links. Clean URLs like `www.example.com/w/TITLE` improve search visibility, readability, and user experience while making pages easier to reference.
+MediaWiki’s default URL structure (`www.example.com/w/index.php?title=TITLE`) works functionally but creates poor SEO signals and awkward shareable links. Clean URLs like `www.example.com/w/TITLE` improve search visibility, readability, and user experience while making pages easier to reference.
 
 ## LocalSettings.php Configuration
 
@@ -21,7 +21,7 @@ $wgScript = "/w/index.php";
 $wgArticlePath = "/w/$1";
 ```
 
-The `$wgScript` variable points to your MediaWiki installation directory — adjust `/w/` if your installation lives elsewhere. The `$wgArticlePath` uses `$1` as a placeholder for the article title and generates the clean URL structure.
+The `$wgScript` variable points to your MediaWiki installation directory: adjust `/w/` if your installation lives elsewhere. The `$wgArticlePath` uses `$1` as a placeholder for the article title and generates the clean URL structure.
 
 If MediaWiki runs in your document root rather than a subdirectory:
 
@@ -79,7 +79,7 @@ RewriteCond %{REQUEST_URI} !^/w/rest\.php
 RewriteRule ^(.*)$ /w/index.php?title=$1 [L,QSA]
 ```
 
-The first two `RewriteCond` lines skip rewriting for actual files and directories — this prevents breaking CSS, images, JavaScript, and other assets. The three specific endpoint conditions protect MediaWiki’s API and resource loader from being rewritten. The `RewriteRule` passes the requested path as a title parameter while preserving any existing query strings with `[QSA]` (Query String Append).
+The first two `RewriteCond` lines skip rewriting for actual files and directories: this prevents breaking CSS, images, JavaScript, and other assets. The three specific endpoint conditions protect MediaWiki’s API and resource loader from being rewritten. The `RewriteRule` passes the requested path as a title parameter while preserving any existing query strings with `[QSA]` (Query String Append).
 
 For root-level MediaWiki installations, adjust the paths:
 
@@ -198,7 +198,7 @@ MediaWiki handles URL encoding automatically. Article titles with spaces become 
 
 ## Verification
 
-Test the new URL structure by visiting an article — you should see `https://example.com/w/Article_Title` in the address bar instead of the query string format. Verify:
+Test the new URL structure by visiting an article: you should see `https://example.com/w/Article_Title` in the address bar instead of the query string format. Verify:
 
 - Click through several pages and check that URLs remain clean
 - Edit an article and verify the editor loads correctly

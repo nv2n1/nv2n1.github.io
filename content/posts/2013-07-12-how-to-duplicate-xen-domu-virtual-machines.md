@@ -10,7 +10,7 @@ canonical: /how-to-duplicate-xen-domu-virtual-machines/
 url: /how-to-duplicate-xen-domu-virtual-machines/
 ---
 
-Xen remains in active production use—particularly in cloud infrastructure like AWS EC2 and Citrix Hypervisor—though KVM has become the standard hypervisor for most Linux distributions. If you’re managing legacy Xen deployments, this guide covers the essential steps for cloning VBD-based DomU instances.
+Xen remains in active production use (particularly in cloud infrastructure like AWS EC2 and Citrix Hypervisor), though KVM has become the standard hypervisor for most Linux distributions. If you’re managing legacy Xen deployments, this guide covers the essential steps for cloning VBD-based DomU instances.
 
 ## Prerequisites
 

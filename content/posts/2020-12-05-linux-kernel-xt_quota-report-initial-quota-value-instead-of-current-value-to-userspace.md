@@ -16,9 +16,9 @@ The `xt_quota` netfilter module reports quota values back to userspace for tools
 
 Originally, the `xt_quota` module copied the *current* quota value back to userspace after each packet match. This created issues:
 
-- **iptables-save couldn’t restore rules accurately** — the running value kept changing as traffic consumed the quota
-- **Rule removal failed** — matching specific quota rules became unreliable because the stored value diverged from the initial configuration
-- **State persistence broke** — saving and reloading firewall rules lost the original quota constraint
+- **iptables-save couldn’t restore rules accurately**: the running value kept changing as traffic consumed the quota
+- **Rule removal failed**: matching specific quota rules became unreliable because the stored value diverged from the initial configuration
+- **State persistence broke**: saving and reloading firewall rules lost the original quota constraint
 
 ## The Solution
 
@@ -28,20 +28,20 @@ The fix moves the `quota` field in the `xt_quota_info` structure from kernel-int
 
 The patch modified two files:
 
-**include/linux/netfilter/xt_quota.h** — Reordered structure fields:
+**include/linux/netfilter/xt_quota.h**: Reordered structure fields:
 
 ``` c
 struct xt_quota_info {
     u_int32_t       flags;
     u_int32_t       pad;
-    aligned_u64     quota;        /* Moved here — visible to userspace */
+    aligned_u64     quota;        /* Moved here: visible to userspace */
 
     /* Used internally by the kernel */
     struct xt_quota_priv    *master;
 };
 ```
 
-**net/netfilter/xt_quota.c** — Removed the line that overwrote the quota value:
+**net/netfilter/xt_quota.c**: Removed the line that overwrote the quota value:
 
 ``` c
 // REMOVED: q->quota = priv->quota;
@@ -79,9 +79,9 @@ Check rule details:
 iptables -L INPUT -v -n
 ```
 
-The quota column shows the configured limit, not the runtime counter. If you save and restore the ruleset, quotas reset to their original values — the expected behavior for firewall configuration management.
+The quota column shows the configured limit, not the runtime counter. If you save and restore the ruleset, quotas reset to their original values: the expected behavior for firewall configuration management.
 
-This patch represents a design fix that aligns the kernel’s internal state tracking with userspace policy persistence — a foundational requirement for reliable firewall administration.
+This patch represents a design fix that aligns the kernel’s internal state tracking with userspace policy persistence: a foundational requirement for reliable firewall administration.
 
 ## 2026 Best Practices and Advanced Techniques
 

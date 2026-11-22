@@ -24,9 +24,9 @@ aria2c -x 10 -s 10 -k 1M http://example.com/largefile.iso
 
 Flag breakdown:
 
-- `-x 10` — maximum 10 connections per host
-- `-s 10` — split file into 10 segments
-- `-k 1M` — minimum 1MB per segment (prevents excessive fragmentation)
+- `-x 10`: maximum 10 connections per host
+- `-s 10`: split file into 10 segments
+- `-k 1M`: minimum 1MB per segment (prevents excessive fragmentation)
 
 With custom output directory and filename:
 
@@ -47,7 +47,7 @@ When downloading multiple files concurrently:
 aria2c -x 5 -s 5 -j 3 http://example.com/file1.iso http://example.com/file2.iso http://example.com/file3.iso
 ```
 
-The `-j 3` flag processes 3 files in parallel. When running multiple concurrent downloads, reduce `-x` to avoid overwhelming the server — 5 connections per file across 3 parallel jobs is typically safe.
+The `-j 3` flag processes 3 files in parallel. When running multiple concurrent downloads, reduce `-x` to avoid overwhelming the server: 5 connections per file across 3 parallel jobs is typically safe.
 
 aria2 also maintains a session file, which is useful for resuming interrupted batch downloads:
 
@@ -114,7 +114,7 @@ Not all servers support multi-connection downloads. Check before attempting:
 curl -I http://example.com/file | grep -i accept-ranges
 ```
 
-If the response shows `Accept-Ranges: bytes`, the server supports range requests. If it’s absent or shows `Accept-Ranges: none`, multi-connection downloads won’t help — you’ll receive the full file from each connection.
+If the response shows `Accept-Ranges: bytes`, the server supports range requests. If it’s absent or shows `Accept-Ranges: none`, multi-connection downloads won’t help: you’ll receive the full file from each connection.
 
 ## Connection Limits and Rate Limiting
 

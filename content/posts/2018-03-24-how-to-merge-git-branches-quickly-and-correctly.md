@@ -65,7 +65,7 @@ git merge --abort
 
 ## Other Useful Merge Options
 
-**`--squash`** — Combine all commits from the source branch into a single commit on the target:
+**`--squash`**: Combine all commits from the source branch into a single commit on the target:
 
 ``` bash
 git merge --squash dev-harry
@@ -74,7 +74,7 @@ git commit -m "Feature: add X functionality"
 
 This is useful when a feature branch has many small, incremental commits you want to compress into one logical change.
 
-**`--ff-only`** — Only allow fast-forward merges. Fails if the branches have diverged:
+**`--ff-only`**: Only allow fast-forward merges. Fails if the branches have diverged:
 
 ``` bash
 git merge --ff-only dev-harry

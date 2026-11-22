@@ -21,19 +21,19 @@ Centralized exchanges operate like traditional financial intermediaries. You dep
 
 **Disadvantages:**
 
-- Counterparty risk — the exchange can be hacked, become insolvent, or face regulatory seizure (FTX, Mt. Gox, etc.)
+- Counterparty risk: the exchange can be hacked, become insolvent, or face regulatory seizure (FTX, Mt. Gox, etc.)
 - KYC/AML requirements and geographic restrictions
 - Centralized custody means you don’t control private keys
 - Regulatory compliance overhead passed to users
 
 ## Decentralized Exchanges (DEX)
 
-Decentralized exchanges use smart contracts to facilitate peer-to-peer trading directly between wallet addresses. You never relinquish custody of your funds — the contract simply atomically swaps tokens if conditions are met.
+Decentralized exchanges use smart contracts to facilitate peer-to-peer trading directly between wallet addresses. You never relinquish custody of your funds: the contract simply atomically swaps tokens if conditions are met.
 
 **Advantages:**
 
-- True self-custody — you control private keys at all times
-- Permissionless access — no KYC, geographic restrictions, or account freezes
+- True self-custody: you control private keys at all times
+- Permissionless access: no KYC, geographic restrictions, or account freezes
 - Transparent on-chain settlement
 - Censorship-resistant
 
@@ -42,7 +42,7 @@ Decentralized exchanges use smart contracts to facilitate peer-to-peer trading d
 - Variable transaction costs (gas fees can spike during network congestion)
 - Slower settlement times on congested blockchains (Ethereum mainnet: 12-15 seconds per block)
 - Liquidity fragmentation across multiple DEX protocols
-- User experience complexity — managing wallets, approvals, slippage calculations
+- User experience complexity: managing wallets, approvals, slippage calculations
 - Impermanent loss for liquidity providers
 
 ## Hybrid Models and 2026 Reality
@@ -59,11 +59,11 @@ Modern protocols like MEV-Share and intent-based systems (popularized by Ethereu
 
 **Proof of Reserves**
 
-Regulatory pressure has pushed major CEXs toward on-chain Proof of Reserves — cryptographically signed commitments showing they actually hold the assets claimed. Exchanges like Kraken and Coinbase publish regular PoR attestations, reducing but not eliminating counterparty risk. This doesn’t solve the solvency question (they could still be insolvent on liabilities) but adds transparency.
+Regulatory pressure has pushed major CEXs toward on-chain Proof of Reserves: cryptographically signed commitments showing they actually hold the assets claimed. Exchanges like Kraken and Coinbase publish regular PoR attestations, reducing but not eliminating counterparty risk. This doesn’t solve the solvency question (they could still be insolvent on liabilities) but adds transparency.
 
 **Liquidity Aggregation**
 
-DEX aggregators (0x Protocol, 1inch, CowSwap) route orders through multiple DEXs and now increasingly through CEXs, choosing the best execution. This bridges both worlds — you maintain custody while accessing deep liquidity. CowSwap’s batch auction model even improves fair pricing by batching orders and using solver competition.
+DEX aggregators (0x Protocol, 1inch, CowSwap) route orders through multiple DEXs and now increasingly through CEXs, choosing the best execution. This bridges both worlds: you maintain custody while accessing deep liquidity. CowSwap’s batch auction model even improves fair pricing by batching orders and using solver competition.
 
 ## Practical Decision Framework
 

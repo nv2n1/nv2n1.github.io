@@ -12,7 +12,7 @@ url: /handling-sparse-files-on-linux/
 
 Sparse files optimize storage by storing only metadata for contiguous zero-filled ranges instead of allocating actual disk blocks. They’re essential for VM images, virtual block devices, and large databases where much of the allocated space remains unused.
 
-Most modern filesystems support sparse files: ext4, btrfs, and XFS on Linux; NTFS on Windows; and APFS on macOS. However, support varies — notably, some older filesystems and network storage backends may not preserve sparseness during transfers.
+Most modern filesystems support sparse files: ext4, btrfs, and XFS on Linux; NTFS on Windows; and APFS on macOS. However, support varies: notably, some older filesystems and network storage backends may not preserve sparseness during transfers.
 
 ## Creating Sparse Files
 
@@ -116,7 +116,7 @@ This shows the extent layout and identifies holes in the file.
 
 ### ftruncate()
 
-For C code, `ftruncate()` is the preferred method for creating sparse files — it’s explicit and works identically across filesystems:
+For C code, `ftruncate()` is the preferred method for creating sparse files: it’s explicit and works identically across filesystems:
 
 ``` c
 #include <unistd.h>
@@ -167,7 +167,7 @@ int create_sparse_file(const char *path, off_t size)
 }
 ```
 
-The write at `size - 1` is critical — seeking alone doesn’t guarantee the file ends; a write operation anchors the end. However, prefer `ftruncate()` when possible.
+The write at `size - 1` is critical: seeking alone doesn’t guarantee the file ends; a write operation anchors the end. However, prefer `ftruncate()` when possible.
 
 ### fallocate()
 
@@ -225,7 +225,7 @@ This approach is much faster than reading the entire file for large sparse image
 
 ## Common Pitfalls
 
-**NFS and network storage**: Network filesystems often don’t preserve sparseness. Always test before relying on it. `scp` and `sftp` will materialize sparse files — use `rsync` with `--sparse` or `dd` with `conv=sparse` for remote transfers instead.
+**NFS and network storage**: Network filesystems often don’t preserve sparseness. Always test before relying on it. `scp` and `sftp` will materialize sparse files: use `rsync` with `--sparse` or `dd` with `conv=sparse` for remote transfers instead.
 
 **Filesystem support**: Some older or specialized filesystems may not handle sparse files well. Verify support with:
 

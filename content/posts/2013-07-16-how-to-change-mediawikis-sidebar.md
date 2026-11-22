@@ -33,8 +33,8 @@ Or access Special:SpecialPages and look for “Sidebar” under the MediaWiki na
 
 The sidebar uses asterisk-based markup to define its structure:
 
-- Single asterisk (`*`) — creates a collapsible section header
-- Double asterisks (`**`) — creates menu items within that section
+- Single asterisk (`*`): creates a collapsible section header
+- Double asterisks (`**`): creates menu items within that section
 
 ### Default Sidebar Structure
 
@@ -55,8 +55,8 @@ The keywords `SEARCH`, `TOOLBOX`, and `LANGUAGES` are special directives that re
 
 Links follow the pattern `target|display-text`:
 
-- `target` — the destination (wiki page, special page, or full URL)
-- `display-text` — what users see (can be a message key or plain text)
+- `target`: the destination (wiki page, special page, or full URL)
+- `display-text`: what users see (can be a message key or plain text)
 
 **Message keys** (lowercase, with hyphens) are automatically translated to the user’s language:
 
@@ -159,7 +159,7 @@ Common keys include:
 
 For complex sidebars beyond static links, consider these approaches:
 
-**Extension:DynamicPageList** — Populate sidebar links from category or namespace queries:
+**Extension:DynamicPageList**: Populate sidebar links from category or namespace queries:
 
     * Recent Articles
     <DPL>
@@ -170,8 +170,8 @@ For complex sidebars beyond static links, consider these approaches:
     format = ,** %PAGE%|%TITLE%,
     </DPL>
 
-**Conditional sections** — Some extensions like Extension:SidebarDynamicFunctions allow logic-based sections, though this adds complexity and isn’t necessary for most wikis.
+**Conditional sections**: Some extensions like Extension:SidebarDynamicFunctions allow logic-based sections, though this adds complexity and isn’t necessary for most wikis.
 
-**CSS and JavaScript** — Edit `MediaWiki:Sidebar.css` and `MediaWiki:Common.js` to style or add JavaScript behavior to sidebar elements without installing extensions.
+**CSS and JavaScript**: Edit `MediaWiki:Sidebar.css` and `MediaWiki:Common.js` to style or add JavaScript behavior to sidebar elements without installing extensions.
 
 For the vast majority of installations, the raw `MediaWiki:Sidebar` text format handles all typical requirements cleanly and without additional dependencies.

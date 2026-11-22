@@ -128,7 +128,7 @@ dos2unix input.txt
 tr -d '\n' < input.txt > output.txt
 ```
 
-Use the right tool for your specific use case—simple removal calls for `tr`, structured data favors `awk`, and complex logic benefits from `sed` patterns or pure Bash when performance isn’t critical.
+Use the right tool for your specific use case: simple removal calls for `tr`, structured data favors `awk`, and complex logic benefits from `sed` patterns or pure Bash when performance isn’t critical.
 
 ## 2026 Comprehensive Guide: Best Practices
 

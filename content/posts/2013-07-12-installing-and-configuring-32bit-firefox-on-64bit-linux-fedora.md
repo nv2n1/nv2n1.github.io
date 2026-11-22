@@ -119,7 +119,7 @@ ps aux | grep firefox
 The process should show 32-bit architecture. Alternatively, check in Firefox:
 
 - Open `about:buildconfig`
-- Look for “Target” — it should show `i686` or `i386`
+- Look for “Target”: it should show `i686` or `i386`
 
 ## Notes on Legacy Plugin Support
 

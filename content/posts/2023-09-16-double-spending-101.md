@@ -18,7 +18,7 @@ Blockchains exist, at their core, to solve this single problem.
 
 The prevention mechanism relies on three components working together:
 
-**Transaction mempool and ordering**: When you broadcast a transaction, it enters the mempool—a waiting area where unconfirmed transactions live. Nodes can see these transactions but don’t rely on them yet. Miners or validators select transactions from the mempool and bundle them into blocks.
+**Transaction mempool and ordering**: When you broadcast a transaction, it enters the mempool: a waiting area where unconfirmed transactions live. Nodes can see these transactions but don’t rely on them yet. Miners or validators select transactions from the mempool and bundle them into blocks.
 
 **Cryptographic commitment**: Once transactions are included in a block, that block is hashed and linked to the previous block. This hash becomes part of the next block, creating an immutable chain. Changing a single transaction in an old block changes that block’s hash, which breaks the link to all subsequent blocks.
 
@@ -40,9 +40,9 @@ Most modern networks make this prohibitively expensive. Bitcoin’s security bud
 
 Modern blockchain architectures have shifted the threat landscape significantly:
 
-**Layer 2 solutions** (Arbitrum, Optimism, Polygon) inherit security from their settlement layer but achieve fast finality within seconds. Once a transaction is processed on L2, reversal requires compromising the entire L2 sequencer or the base layer—effectively impossible for attackers.
+**Layer 2 solutions** (Arbitrum, Optimism, Polygon) inherit security from their settlement layer but achieve fast finality within seconds. Once a transaction is processed on L2, reversal requires compromising the entire L2 sequencer or the base layer: effectively impossible for attackers.
 
-**Proof of Stake with slashing** (Ethereum, Solana) penalizes validators economically for finalizing conflicting blocks. A validator who signs two conflicting blocks loses their entire stake. This creates economic finality much faster than PoW—often within 6-15 seconds.
+**Proof of Stake with slashing** (Ethereum, Solana) penalizes validators economically for finalizing conflicting blocks. A validator who signs two conflicting blocks loses their entire stake. This creates economic finality much faster than PoW: often within 6-15 seconds.
 
 **Instant finality protocols** (Solana, some newer chains) use BFT-style consensus where the network agrees on a single canonical transaction sequence. Once \>66% of validators sign a block, it’s final. No reorganization is possible.
 

@@ -10,7 +10,7 @@ canonical: /git-diff-with-long-lines/
 url: /git-diff-with-long-lines/
 ---
 
-When working with files containing long lines, `git diff` output becomes hard to read — the diff spans beyond your terminal width, forcing you to scroll horizontally or losing context entirely. While you can’t force all files to use short lines, several strategies make diff output much more manageable.
+When working with files containing long lines, `git diff` output becomes hard to read: the diff spans beyond your terminal width, forcing you to scroll horizontally or losing context entirely. While you can’t force all files to use short lines, several strategies make diff output much more manageable.
 
 ## Using Word Diff for Line-Level Changes
 
@@ -92,7 +92,7 @@ Then `git diff` will use word-diff mode and line-wrapping pager automatically.
 - `git diff --unified=3`: Adjusts context lines (default is 3); use fewer for dense diffs
 - `git diff --color-words`: Like `--word-diff=color` but uses a different algorithm
 
-Each situation is different — experiment with these options to find what works best for your workflow.
+Each situation is different: experiment with these options to find what works best for your workflow.
 
 ## Git Workflow Tips
 

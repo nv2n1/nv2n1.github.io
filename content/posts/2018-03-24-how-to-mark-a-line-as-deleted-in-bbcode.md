@@ -18,7 +18,7 @@ This renders as strikethrough text with a horizontal line through the middle. So
 
     [strike]strikethrough text[/strike]
 
-Both tags are functionally equivalent — the choice depends on your platform’s BBCode parser.
+Both tags are functionally equivalent: the choice depends on your platform’s BBCode parser.
 
 ## HTML Output and Semantic Markup
 
@@ -50,20 +50,20 @@ The command is <del>ifconfig</del> <ins>ip addr</ins>
 <span style="text-decoration: line-through;">strikethrough text</span>
 ```
 
-Generic span with inline CSS provides styling without semantic meaning. Older or minimal BBCode parsers use this approach, but avoid it in new implementations — semantic markup is better for accessibility and screen readers.
+Generic span with inline CSS provides styling without semantic meaning. Older or minimal BBCode parsers use this approach, but avoid it in new implementations: semantic markup is better for accessibility and screen readers.
 
 ## Common Use Cases in Technical Communities
 
 Strikethrough is widely used in sysadmin and technical forums for:
 
-- **Marking deprecated commands or syntax** — showing what users should stop using while keeping the history visible
-- **Indicating corrections** — removing incorrect information without deleting it, preserving discussion context
-- **Collaborative editing** — tracking changes in wikis, documentation, or issue trackers
-- **Representing rollbacks** — marking decisions or deployments that were undone
+- **Marking deprecated commands or syntax**: showing what users should stop using while keeping the history visible
+- **Indicating corrections**: removing incorrect information without deleting it, preserving discussion context
+- **Collaborative editing**: tracking changes in wikis, documentation, or issue trackers
+- **Representing rollbacks**: marking decisions or deployments that were undone
 
 ## Browser Rendering and Accessibility
 
-All modern browsers render strikethrough consistently across `<s>`, `<del>`, and CSS `text-decoration: line-through`. The visual appearance is identical — a horizontal line through text at approximately the middle height.
+All modern browsers render strikethrough consistently across `<s>`, `<del>`, and CSS `text-decoration: line-through`. The visual appearance is identical: a horizontal line through text at approximately the middle height.
 
 However, screen readers handle these differently:
 
@@ -93,7 +93,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -111,7 +111,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

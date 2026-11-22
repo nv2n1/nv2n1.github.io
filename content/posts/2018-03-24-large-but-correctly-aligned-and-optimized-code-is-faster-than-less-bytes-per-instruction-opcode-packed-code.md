@@ -30,7 +30,7 @@ The three-instruction sequence is faster on contemporary CPUs, despite being lar
 
 ## Why Alignment and Decoded Instruction Cache Matter
 
-Modern x86-64 CPUs don’t execute raw bytes—they execute decoded micro-operations (µops). The instruction decoder itself is a bottleneck. When instructions are misaligned or tightly packed, the decoder must work harder:
+Modern x86-64 CPUs don’t execute raw bytes: they execute decoded micro-operations (µops). The instruction decoder itself is a bottleneck. When instructions are misaligned or tightly packed, the decoder must work harder:
 
 - **Instruction boundaries become ambiguous**: The decoder must track where one instruction ends and the next begins, consuming decode cycles
 - **Decoded µop cache misses increase**: CPUs like recent Intel and AMD designs cache decoded instructions. Poor alignment reduces hit rates

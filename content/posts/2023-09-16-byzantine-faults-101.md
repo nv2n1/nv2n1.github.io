@@ -10,13 +10,13 @@ canonical: /byzantine-faults-101/
 url: /byzantine-faults-101/
 ---
 
-A Byzantine Fault occurs when a component in a distributed system behaves unpredictably or maliciously—sending contradictory information to different parts of the system, corrupting data, or deviating entirely from the protocol. The result is potential inconsistency across the network, making consensus impossible without proper safeguards.
+A Byzantine Fault occurs when a component in a distributed system behaves unpredictably or maliciously: sending contradictory information to different parts of the system, corrupting data, or deviating entirely from the protocol. The result is potential inconsistency across the network, making consensus impossible without proper safeguards.
 
 The term originates from the Byzantine Generals Problem, a thought experiment where distributed generals must reach agreement on a battle strategy despite some generals being traitors who send conflicting messages. The formal problem and its solution remain the foundation for understanding fault tolerance in decentralized systems.
 
 ## Why Byzantine Fault Tolerance Matters
 
-In any distributed system where you can’t trust all nodes—whether it’s a blockchain network, a multi-datacenter database cluster, or a peer-to-peer application—Byzantine fault tolerance (BFT) becomes essential. Unlike crash faults where a node simply stops responding, Byzantine faults are insidious: a compromised node actively works against the system while remaining online.
+In any distributed system where you can’t trust all nodes (whether it’s a blockchain network, a multi-datacenter database cluster, or a peer-to-peer application) Byzantine fault tolerance (BFT) becomes essential. Unlike crash faults where a node simply stops responding, Byzantine faults are insidious: a compromised node actively works against the system while remaining online.
 
 This is especially critical for:
 
@@ -43,7 +43,7 @@ This 3f+1 quorum requirement exists because honest nodes must maintain a superma
 
 PBFT has O(n²) message complexity, making it expensive for large networks. Modern variants improve this:
 
-- **Tendermint** (used by Cosmos) implements BFT consensus with fixed validators and instant finality. No forks are possible—once a block reaches consensus, it’s irreversible.
+- **Tendermint** (used by Cosmos) implements BFT consensus with fixed validators and instant finality. No forks are possible: once a block reaches consensus, it’s irreversible.
 - **PBFT variants** like Istanbul BFT reduce communication overhead while maintaining Byzantine tolerance.
 - **Delegated Proof of Stake (DPoS)** systems like EOS use BFT-like mechanisms but add staking penalties and reputation to discourage Byzantine behavior economically.
 
@@ -54,13 +54,13 @@ PBFT has O(n²) message complexity, making it expensive for large networks. Mode
 When designing Byzantine-tolerant systems, account for:
 
 - **Network partitions**: BFT systems must handle split-brain scenarios. Most block consensus under network partition to avoid confirming conflicting transactions on both sides.
-- **Synchrony assumptions**: Fully synchronous systems assume known network latency bounds (unrealistic). Most production systems assume partial synchrony—eventual fairness without strict timing guarantees.
+- **Synchrony assumptions**: Fully synchronous systems assume known network latency bounds (unrealistic). Most production systems assume partial synchrony: eventual fairness without strict timing guarantees.
 - **Leader election**: If your primary fails or acts Byzantine, replacing it requires coordination. This is expensive and can stall the network.
-- **Validator rotation**: Fixed validators create centralization risk. Systems like Ethereum 2.0 use validator slashing—penalizing Byzantine behavior by destroying the faulty node’s stake.
+- **Validator rotation**: Fixed validators create centralization risk. Systems like Ethereum 2.0 use validator slashing: penalizing Byzantine behavior by destroying the faulty node’s stake.
 
 ## Real-World Trade-offs
 
-Stronger Byzantine tolerance costs throughput and latency. Ethereum’s Proof of Stake achieves ~12-second finality with probabilistic guarantees. Tendermint reaches finality in seconds with stronger guarantees but at lower transaction throughput. Bitcoin trades finality time for simplicity and decentralization—finality is assumed after ~6 confirmations (roughly 1 hour), not instantaneous.
+Stronger Byzantine tolerance costs throughput and latency. Ethereum’s Proof of Stake achieves ~12-second finality with probabilistic guarantees. Tendermint reaches finality in seconds with stronger guarantees but at lower transaction throughput. Bitcoin trades finality time for simplicity and decentralization: finality is assumed after ~6 confirmations (roughly 1 hour), not instantaneous.
 
 Most production systems don’t require 3f+1 because they operate in permissioned settings. A private consortium blockchain with 11 validators (tolerating 3 faults) is practical; a public network would need hundreds to thousands of validators, creating different failure modes entirely.
 
@@ -74,4 +74,4 @@ Systems can detect Byzantine nodes through:
 
 In Tendermint and Ethereum 2.0, Byzantine behavior is recorded on-chain, enabling automatic penalties. In PBFT, view changes and evidence of misbehavior prevent the faulty node from further damage.
 
-The key insight: Byzantine fault tolerance isn’t about making systems immune to faults—it’s about ensuring faults don’t compromise agreement among honest nodes.
+The key insight: Byzantine fault tolerance isn’t about making systems immune to faults: it’s about ensuring faults don’t compromise agreement among honest nodes.

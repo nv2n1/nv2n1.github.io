@@ -10,7 +10,7 @@ canonical: /default-descending-sort-order-and-inline-quote-when-reply-in-thunder
 url: /default-descending-sort-order-and-inline-quote-when-reply-in-thunderbird/
 ---
 
-Thunderbird’s most powerful settings live outside the UI—buried in the config editor or preferences file. This guide covers setting emails to sort newest-first by default and enabling inline quoting for replies, two changes that significantly improve daily usability.
+Thunderbird’s most powerful settings live outside the UI: buried in the config editor or preferences file. This guide covers setting emails to sort newest-first by default and enabling inline quoting for replies, two changes that significantly improve daily usability.
 
 ## Accessing the Config Editor
 
@@ -31,7 +31,7 @@ This applies only to folders without an explicit manual sort preference. Once yo
 
 ## Enable Inline Quoting for Replies
 
-By default, Thunderbird blocks quoted text at the top of replies. To switch to inline quoting—inserting the original message throughout your response so you can reply point-by-point:
+By default, Thunderbird blocks quoted text at the top of replies. To switch to inline quoting: inserting the original message throughout your response so you can reply point-by-point:
 
     mail.reply_quote_inline = true
 
@@ -77,7 +77,7 @@ Enter the preference name and value, then restart Thunderbird.
 
 ## Applying Changes
 
-Close and restart Thunderbird after any config modification. Changes don’t take effect while the application runs. Be aware that major version upgrades can reset or override custom settings—if preferences revert after updating, reapply them using the same process.
+Close and restart Thunderbird after any config modification. Changes don’t take effect while the application runs. Be aware that major version upgrades can reset or override custom settings: if preferences revert after updating, reapply them using the same process.
 
 ## Editing prefs.js Directly
 

@@ -29,12 +29,12 @@ This outputs symbol names, but the default format can be hard to parse. You’ll
 
 The letters indicate the symbol type:
 
-- `T` — function or data in the text (code) section
-- `D` — initialized global data
-- `B` — uninitialized global data (BSS section)
-- `U` — undefined symbol (external reference)
-- `a` — absolute symbol
-- `R` — read-only data
+- `T`: function or data in the text (code) section
+- `D`: initialized global data
+- `B`: uninitialized global data (BSS section)
+- `U`: undefined symbol (external reference)
+- `a`: absolute symbol
+- `R`: read-only data
 
 ### More useful formats
 
@@ -149,11 +149,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

@@ -10,7 +10,7 @@ canonical: /beginners-guide-x86-64-instruction-encoding/
 url: /beginners-guide-x86-64-instruction-encoding/
 ---
 
-Before encoding instructions, you need to understand the two assembly syntaxes you’ll encounter—they differ fundamentally in operand order and addressing format.
+Before encoding instructions, you need to understand the two assembly syntaxes you’ll encounter: they differ fundamentally in operand order and addressing format.
 
 **Intel syntax** (Intel/AMD manuals):
 
@@ -30,21 +30,21 @@ For most instructions, this reversal is consistent. Some multi-operand instructi
 
 x86-64 instructions encode as a variable-length byte sequence. Each instruction can contain:
 
-- **Opcode** — the operation itself, often requiring a REX prefix in 64-bit mode
-- **REX prefix** (optional) — extends register and operand width for 64-bit operations
-- **ModR/M byte** — specifies registers and addressing modes
-- **SIB byte** (optional) — scale-index-base byte for complex addressing
-- **Displacement** (optional) — offset for memory operands
-- **Immediate** (optional) — constant operand value
+- **Opcode**: the operation itself, often requiring a REX prefix in 64-bit mode
+- **REX prefix** (optional): extends register and operand width for 64-bit operations
+- **ModR/M byte**: specifies registers and addressing modes
+- **SIB byte** (optional): scale-index-base byte for complex addressing
+- **Displacement** (optional): offset for memory operands
+- **Immediate** (optional): constant operand value
 
 ### REX Prefix Format
 
 The REX prefix has the format `0100WRXB` (a single byte starting with bits `0100`):
 
-- **W** — promotes operation to 64-bit width (1) or keeps 32-bit (0)
-- **R** — extends the ModR/M `reg` field to access registers r8–r15
-- **X** — extends the SIB `index` field to access r8–r15
-- **B** — extends the ModR/M `r/m` field to access r8–r15
+- **W**: promotes operation to 64-bit width (1) or keeps 32-bit (0)
+- **R**: extends the ModR/M `reg` field to access registers r8–r15
+- **X**: extends the SIB `index` field to access r8–r15
+- **B**: extends the ModR/M `r/m` field to access r8–r15
 
 A REX prefix is required whenever you use r8–r15, or when you need 64-bit operand size on certain instructions.
 
@@ -52,21 +52,21 @@ A REX prefix is required whenever you use r8–r15, or when you need 64-bit oper
 
 The ModR/M byte breaks down as `[mod][reg][r/m]` (8 bits total):
 
-- **mod (2 bits)** — addressing mode:
-  - `00` — indirect addressing (e.g., `[rax]`)
-  - `01` — indirect with 8-bit displacement (e.g., `[rax+offset]`)
-  - `10` — indirect with 32-bit displacement
-  - `11` — register direct
-- **reg (3 bits)** — register operand (extended by REX.R)
-- **r/m (3 bits)** — register or memory operand (extended by REX.B)
+- **mod (2 bits)**: addressing mode:
+  - `00`: indirect addressing (e.g., `[rax]`)
+  - `01`: indirect with 8-bit displacement (e.g., `[rax+offset]`)
+  - `10`: indirect with 32-bit displacement
+  - `11`: register direct
+- **reg (3 bits)**: register operand (extended by REX.R)
+- **r/m (3 bits)**: register or memory operand (extended by REX.B)
 
 ### SIB Byte Format (When Needed)
 
 The SIB byte is `[scale][index][base]` and only appears when mod ≠ `11` and ModR/M.r/m = `100` (with mod = `11`, r/m `100` is simply the RSP register):
 
-- **scale (2 bits)** — `00`=1x, `01`=2x, `10`=4x, `11`=8x
-- **index (3 bits)** — index register (extended by REX.X)
-- **base (3 bits)** — base register (extended by REX.B)
+- **scale (2 bits)**: `00`=1x, `01`=2x, `10`=4x, `11`=8x
+- **index (3 bits)**: index register (extended by REX.X)
+- **base (3 bits)**: base register (extended by REX.B)
 
 ## Practical Tools: as and objdump
 
@@ -118,11 +118,11 @@ Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
 `4c` in binary is `0100 1100`:
 
-- Bits 7-4: `0100` — this is a REX prefix
-- W=1 — 64-bit operation
-- R=1 — register field uses high bit (accessing r8–r15)
-- X=0 — SIB index field not extended
-- B=0 — r/m field accesses rax–rdi
+- Bits 7-4: `0100`: this is a REX prefix
+- W=1: 64-bit operation
+- R=1: register field uses high bit (accessing r8–r15)
+- X=0: SIB index field not extended
+- B=0: r/m field accesses rax–rdi
 
 **Step 2: Parse the opcode**
 
@@ -132,9 +132,9 @@ Let’s decode the bytes `4c 03 47 0a` from the third instruction above.
 
 `47` in binary is `0100 0111`:
 
-- mod=`01` — indirect with 8-bit displacement
-- reg=`000` — register 0 (combined with REX.R=1, this becomes register 8, i.e., r8)
-- r/m=`111` — register 7 (rdi, since REX.B=0)
+- mod=`01`: indirect with 8-bit displacement
+- reg=`000`: register 0 (combined with REX.R=1, this becomes register 8, i.e., r8)
+- r/m=`111`: register 7 (rdi, since REX.B=0)
 
 **Step 4: Parse the displacement**
 
@@ -163,9 +163,9 @@ When using r8–r15, you encode the low 3 bits in ModR/M (or SIB) and set the co
 
 Bytes: `4d 01 c1`
 
-- `4d` — REX.W=1, REX.R=1 (extends the reg field for r8, the source), REX.B=1 (extends the r/m field for r9, the destination)
-- `01` — ADD r/m64, r64 opcode (note: source is in reg field, destination in r/m)
-- `c1` — mod=`11` (register mode), reg=`000` (r8 with REX.R=1), r/m=`001` (r9 with REX.B=1)
+- `4d`: REX.W=1, REX.R=1 (extends the reg field for r8, the source), REX.B=1 (extends the r/m field for r9, the destination)
+- `01`: ADD r/m64, r64 opcode (note: source is in reg field, destination in r/m)
+- `c1`: mod=`11` (register mode), reg=`000` (r8 with REX.R=1), r/m=`001` (r9 with REX.B=1)
 
 In AT&T syntax: `add %r8, %r9` (source first, destination second).
 
@@ -179,20 +179,20 @@ add (%rax,%rcx,4), %r8
 
 Bytes: `4c 03 04 88`
 
-- `4c` — REX.W=1, REX.R=1 (r8 in the reg field, the destination)
-- `03` — ADD r64, r/m64 opcode
-- `04` — mod=`00` (no displacement), reg=`000` (r8), r/m=`100` (SIB follows)
-- `88` — SIB byte: scale=`10` (4x), index=`001` (rcx), base=`000` (rax)
+- `4c`: REX.W=1, REX.R=1 (r8 in the reg field, the destination)
+- `03`: ADD r64, r/m64 opcode
+- `04`: mod=`00` (no displacement), reg=`000` (r8), r/m=`100` (SIB follows)
+- `88`: SIB byte: scale=`10` (4x), index=`001` (rcx), base=`000` (rax)
 
 With a displacement, mod changes and the displacement bytes follow the SIB. For `add 8(%rdi,%rsi,2), %r8`:
 
 Bytes: `4c 03 44 77 08`
 
-- `4c` — REX.W=1, REX.R=1
-- `03` — ADD r64, r/m64 opcode
-- `44` — mod=`01` (8-bit displacement), reg=`000` (r8), r/m=`100` (SIB)
-- `77` — SIB: scale=`01` (2x), index=`110` (rsi), base=`111` (rdi)
-- `08` — 8-bit displacement (8)
+- `4c`: REX.W=1, REX.R=1
+- `03`: ADD r64, r/m64 opcode
+- `44`: mod=`01` (8-bit displacement), reg=`000` (r8), r/m=`100` (SIB)
+- `77`: SIB: scale=`01` (2x), index=`110` (rsi), base=`111` (rdi)
+- `08`: 8-bit displacement (8)
 
 Note that GNU `as` prefers the opcode `01` form (ADD r/m64, r64, destination in r/m) when the memory operand is the destination, so `add %r8, (%rax,%rcx,4)` assembles to `4c 01 04 88` instead.
 

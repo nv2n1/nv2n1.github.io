@@ -10,7 +10,7 @@ canonical: /get-error-message-on-usb2-stick-read-only-file-system-what-should-i-
 url: /get-error-message-on-usb2-stick-read-only-file-system-what-should-i-do-linux-systutorials-qa/
 ---
 
-A USB drive that’s mounted as read-only is frustrating — you can read files but can’t write, delete, or modify anything. This usually happens due to filesystem issues, hardware problems, or missing drivers.
+A USB drive that’s mounted as read-only is frustrating: you can read files but can’t write, delete, or modify anything. This usually happens due to filesystem issues, hardware problems, or missing drivers.
 
 ## Check the Current State
 
@@ -28,7 +28,7 @@ Get detailed error messages from the kernel:
 dmesg | tail -50
 ```
 
-Look for lines mentioning your USB device — they’ll often indicate why it’s read-only.
+Look for lines mentioning your USB device: they’ll often indicate why it’s read-only.
 
 ## Common Causes and Fixes
 
@@ -122,7 +122,7 @@ At this point, replacement is the best option.
 
 ## Debugging with dmesg
 
-Always post relevant `dmesg` output when asking for help — it often contains the root cause. Focus on lines with timestamps near when you plugged in the drive:
+Always post relevant `dmesg` output when asking for help: it often contains the root cause. Focus on lines with timestamps near when you plugged in the drive:
 
 ``` bash
 dmesg | grep -i usb

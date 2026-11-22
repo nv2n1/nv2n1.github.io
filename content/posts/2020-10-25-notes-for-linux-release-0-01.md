@@ -16,16 +16,16 @@ This document preserves the original release notes for Linux kernel version 0.01
 
 The 0.01 distribution included:
 
-- `linux-0.01.tar.Z` — kernel source code
-- `bash.Z` — compressed bash binary for testing
-- `update.Z` — compressed update utility
-- `RELNOTES-0.01` — this release notes file
+- `linux-0.01.tar.Z`: kernel source code
+- `bash.Z`: compressed bash binary for testing
+- `update.Z`: compressed update utility
+- `RELNOTES-0.01`: this release notes file
 
 ## Initial Release Notes
 
 ### What This Is
 
-A free Unix-like kernel for 386-based AT machines with full source code included. The version number (0.01) made clear this was pre-alpha software—early adopters interested in kernel internals rather than a production system.
+A free Unix-like kernel for 386-based AT machines with full source code included. The version number (0.01) made clear this was pre-alpha software: early adopters interested in kernel internals rather than a production system.
 
 Hardware requirements were minimal by necessity:
 
@@ -66,11 +66,11 @@ Linux was developed on Minix but diverged significantly. Key design choices incl
 
 ### Memory Management
 
-The memory subsystem was deliberately minimal—just `memory.c` and `page.s`, a few hundred lines total.
+The memory subsystem was deliberately minimal: just `memory.c` and `page.s`, a few hundred lines total.
 
 The i386 virtual address space (4GB) was divided into 64 segments of 64MB each. The first segment held the kernel with physical memory identity-mapped. User tasks received individual segments.
 
-Paging handled demand loading and copy-on-write for forked processes. The kernel didn’t actively allocate pages—it wrote to user space and let the paging system handle faults reactively. This passivity made memory management simple and robust.
+Paging handled demand loading and copy-on-write for forked processes. The kernel didn’t actively allocate pages: it wrote to user space and let the paging system handle faults reactively. This passivity made memory management simple and robust.
 
 ### Filesystem
 
@@ -84,7 +84,7 @@ The tradeoff was explicit: no deadlocks possible, but race conditions could occu
 
 A single unified data structure represented all task information rather than scattered control blocks. This simplified scheduling and exception handling.
 
-All faults resulted in exit code 11 (segmentation fault). The system proved relatively stable—the `crashme` stress test hadn’t crashed it yet.
+All faults resulted in exit code 11 (segmentation fault). The system proved relatively stable: the `crashme` stress test hadn’t crashed it yet.
 
 ## Building and Installation
 
@@ -108,6 +108,6 @@ Essential binaries (`bash`, `update`) had to be placed in `/bin` on the root fil
 
 This 0.01 release was explicitly a source snapshot for study, not production software. Linus noted the system would change substantially before a 1.0 release and encouraged developers to contact him with questions and bug reports.
 
-The design philosophy was pragmatic: get it working fast, keep it simple, stay powerful enough for Unix software compatibility. Decisions favoring implementation speed over modularity proved sound—the codebase was maintainable and correct.
+The design philosophy was pragmatic: get it working fast, keep it simple, stay powerful enough for Unix software compatibility. Decisions favoring implementation speed over modularity proved sound: the codebase was maintainable and correct.
 
 The fundamental architecture established here persisted through decades of Linux development, despite scaling to support billions of devices and vastly more complex hardware. The core principles of efficient system calls, pageable virtual memory, and interrupt-driven I/O remain central to modern Linux kernels.

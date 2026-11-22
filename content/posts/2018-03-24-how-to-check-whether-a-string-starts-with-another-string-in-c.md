@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-Note: `compare()` safely handles edge cases where the prefix is longer than the string — it returns non-zero without undefined behavior.
+Note: `compare()` safely handles edge cases where the prefix is longer than the string: it returns non-zero without undefined behavior.
 
 ## Using find() as an Alternative
 
@@ -125,7 +125,7 @@ int main() {
 
 ## Empty String Behavior
 
-All methods handle empty prefix strings consistently — an empty prefix is considered to match any string:
+All methods handle empty prefix strings consistently: an empty prefix is considered to match any string:
 
 ``` cpp
 std::string text = "anything";
@@ -136,7 +136,7 @@ This is the correct and expected behavior.
 
 ## Recommendation
 
-Use `std::string::starts_with()` for C++20 and later projects. For older codebases, `compare()` is the reliable workhorse. Avoid `find()` for prefix checking unless you have a specific reason — it’s not semantically clear and performs unnecessary work.
+Use `std::string::starts_with()` for C++20 and later projects. For older codebases, `compare()` is the reliable workhorse. Avoid `find()` for prefix checking unless you have a specific reason: it’s not semantically clear and performs unnecessary work.
 
 ## 2026 Comprehensive Guide: Best Practices
 

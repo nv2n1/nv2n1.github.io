@@ -14,7 +14,7 @@ Chrome on Linux sometimes fails to start with the error “Your profile could no
 
 ## Quick Fix: Remove Corrupted Web Data
 
-The most reliable solution is to delete the corrupted `Web Data` file from your Chrome profile directory. This file stores browsing history, autofill data, and other metadata—removing it forces Chrome to rebuild it on next launch.
+The most reliable solution is to delete the corrupted `Web Data` file from your Chrome profile directory. This file stores browsing history, autofill data, and other metadata: removing it forces Chrome to rebuild it on next launch.
 
 Back up your profile first, then remove the Web Data files:
 
@@ -40,7 +40,7 @@ If the above doesn’t work, you can delete the entire profile directory and let
 rm -rf ~/.config/google-chrome/Default
 ```
 
-This will reset all your settings, bookmarks, and extensions—only do this if the Web Data deletion fails.
+This will reset all your settings, bookmarks, and extensions: only do this if the Web Data deletion fails.
 
 ## Prevent Future Corruption
 
@@ -100,11 +100,11 @@ The Web Data deletion approach resolves this issue in the vast majority of cases
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

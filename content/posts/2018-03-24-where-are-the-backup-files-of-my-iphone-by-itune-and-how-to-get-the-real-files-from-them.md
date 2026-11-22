@@ -24,7 +24,7 @@ On Windows, the easiest way to navigate there is to press `Win + R`, type `%appd
 
 ## Understanding iTunes Backup Files
 
-iTunes stores backups as a collection of files with hashed names. You won’t see recognizable filenames like “Photos” or “Messages”—instead you’ll find files named with 40-character SHA-1 hashes (e.g., `3d0d7e5af71c5ce4a404a6b0b05fb7a69e6cb292`).
+iTunes stores backups as a collection of files with hashed names. You won’t see recognizable filenames like “Photos” or “Messages”: instead you’ll find files named with 40-character SHA-1 hashes (e.g., `3d0d7e5af71c5ce4a404a6b0b05fb7a69e6cb292`).
 
 Each backup folder also contains a `Manifest.db` file (SQLite database) and an `Info.plist` file. The manifest file maps the hashed filenames to their actual locations within the backup structure.
 
@@ -50,16 +50,16 @@ However, manually extracting data this way is tedious and requires understanding
 
 Third-party tools handle the complexity:
 
-- **iPhone Backup Extractor** — GUI-based tool with a free tier suitable for basic extraction
-- **iExplorer** — Cross-platform tool that mounts backups as virtual drives
-- **PhoneRescue** — Handles encrypted and unencrypted backups
-- **SQLite Browser (DB Browser for SQLite)** — Open-source tool for direct SQLite inspection of unencrypted backups
+- **iPhone Backup Extractor**: GUI-based tool with a free tier suitable for basic extraction
+- **iExplorer**: Cross-platform tool that mounts backups as virtual drives
+- **PhoneRescue**: Handles encrypted and unencrypted backups
+- **SQLite Browser (DB Browser for SQLite)**: Open-source tool for direct SQLite inspection of unencrypted backups
 
 ### Encrypted Backups
 
 If you enabled encryption in iTunes (Settings \> Summary \> Back Up to This Computer \> Encrypt iPhone Backup), the files are protected. Most tools can decrypt and extract from encrypted backups if you provide the password, but command-line sqlite3 queries won’t work directly.
 
-For encrypted backups, use a dedicated extraction tool that supports decryption—most modern tools do, but verify before purchasing.
+For encrypted backups, use a dedicated extraction tool that supports decryption: most modern tools do, but verify before purchasing.
 
 ## Important Limitations
 

@@ -20,9 +20,9 @@ Firefox Sync uses end-to-end encryption based on the onepw protocol. Here’s wh
 
 Your master password never leaves your browser. Mozilla’s servers never see it, not even during login. Instead, your browser uses the password to derive cryptographic keys locally. These keys decrypt your sync data on your device.
 
-The FxA (Firefox Accounts) server stores a “wrapped copy” of kB (the key bundle that encrypts your sync data). This wrapped copy is useless without your password—it cannot be unwrapped or decrypted by anyone who doesn’t know your password. Even Mozilla cannot unwrap it.
+The FxA (Firefox Accounts) server stores a “wrapped copy” of kB (the key bundle that encrypts your sync data). This wrapped copy is useless without your password: it cannot be unwrapped or decrypted by anyone who doesn’t know your password. Even Mozilla cannot unwrap it.
 
-All synced data—passwords, bookmarks, history, form data—is encrypted with keys derived from your master password before it ever leaves your device. The server only stores encrypted blobs. It has no ability to read them.
+All synced data (passwords, bookmarks, history, form data) is encrypted with keys derived from your master password before it ever leaves your device. The server only stores encrypted blobs. It has no ability to read them.
 
 ## What This Means Practically
 
@@ -30,7 +30,7 @@ If someone steals your Firefox account credentials:
 
 - They cannot decrypt your passwords stored in Sync without your master password
 - They cannot access your synced bookmarks, history, or form data
-- Mozilla cannot hand over your passwords to law enforcement or attackers—they literally don’t have the decryption keys
+- Mozilla cannot hand over your passwords to law enforcement or attackers: they literally don’t have the decryption keys
 
 If you forget your master password:
 
@@ -55,7 +55,7 @@ This protection has limits:
 
 You can review the technical implementation in Mozilla’s official documentation: the <a href="https://github.com/mozilla/fxa-auth-server" rel="nofollow noopener" target="_blank">onepw protocol specification</a> details exactly how password-based key derivation and encryption work in Firefox Sync.
 
-The bottom line: Firefox Sync’s encryption is solid. Your synced passwords are safe from Mozilla, ISPs, network eavesdroppers, and server breaches—as long as your master password remains secret and your device isn’t compromised.
+The bottom line: Firefox Sync’s encryption is solid. Your synced passwords are safe from Mozilla, ISPs, network eavesdroppers, and server breaches: as long as your master password remains secret and your device isn’t compromised.
 
 ## 2026 Comprehensive Guide: Best Practices
 

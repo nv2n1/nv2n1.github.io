@@ -22,7 +22,7 @@ The addon processes large folders without freezing the UI and lets you preview m
 
 ### Manually Sort Folders
 
-Thunderbird sorts folders alphabetically or by creation date by default. If you frequently access specific folders — like “Current Projects” or “Urgent” — you want them at the top without renaming. This addon lets you drag folders into your preferred sidebar order. It’s a small improvement that compounds over weeks of daily use, particularly if you manage 20+ folders across multiple accounts.
+Thunderbird sorts folders alphabetically or by creation date by default. If you frequently access specific folders (like “Current Projects” or “Urgent”) you want them at the top without renaming. This addon lets you drag folders into your preferred sidebar order. It’s a small improvement that compounds over weeks of daily use, particularly if you manage 20+ folders across multiple accounts.
 
 ## Import, Export, and Backup
 
@@ -45,13 +45,13 @@ ImportExportTools NG also supports custom filename patterns when exporting indiv
 
 ### Change Quote and Reply Format
 
-Thunderbird’s default reply format uses `>` prefixes for quoted text — a convention many organizations consider outdated. This addon switches to Outlook-style inline quoting without markers, or uses colored block quotes instead. Configure it globally or per-account for different email identities with varying formatting requirements.
+Thunderbird’s default reply format uses `>` prefixes for quoted text: a convention many organizations consider outdated. This addon switches to Outlook-style inline quoting without markers, or uses colored block quotes instead. Configure it globally or per-account for different email identities with varying formatting requirements.
 
 The addon integrates directly into the compose window and applies settings consistently across your setup.
 
 ### ReFwdFormatter
 
-Strips `>` prefixes entirely and reformats replies into clean Outlook-style blocks. HTML emails render significantly better with this approach — quoted text appears as a distinct visual block rather than marked-up lines. This is particularly useful when corresponding with non-technical users who expect professional HTML formatting.
+Strips `>` prefixes entirely and reformats replies into clean Outlook-style blocks. HTML emails render significantly better with this approach: quoted text appears as a distinct visual block rather than marked-up lines. This is particularly useful when corresponding with non-technical users who expect professional HTML formatting.
 
 ReFwdFormatter respects existing quote format settings and doesn’t conflict with Change Quote and Reply Format when both are installed.
 
@@ -72,7 +72,7 @@ Right-click a folder, select copy, then paste at the destination. The operation 
 
 Install addons through Thunderbird’s addon manager: **Preferences \> Add-ons \> Extensions**, search by name, and install. Thunderbird verifies compatibility on restart.
 
-If an addon doesn’t appear in your version, check the addon’s GitHub repository — community-maintained forks often patch compatibility issues faster than official channels.
+If an addon doesn’t appear in your version, check the addon’s GitHub repository: community-maintained forks often patch compatibility issues faster than official channels.
 
 ### Handling Compatibility Issues
 

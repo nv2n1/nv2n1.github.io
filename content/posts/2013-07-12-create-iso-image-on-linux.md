@@ -10,7 +10,7 @@ canonical: /create-iso-image-on-linux/
 url: /create-iso-image-on-linux/
 ---
 
-ISO images are sector-by-sector copies of optical media stored as binary files. They’re useful for archiving DVDs or creating portable copies without keeping physical disks around. On Linux, several tools can accomplish this—`dd` is the simplest, but modern alternatives offer better features.
+ISO images are sector-by-sector copies of optical media stored as binary files. They’re useful for archiving DVDs or creating portable copies without keeping physical disks around. On Linux, several tools can accomplish this: `dd` is the simplest, but modern alternatives offer better features.
 
 ## Using dd to Create an ISO Image
 
@@ -26,7 +26,7 @@ Or with the symlinked device:
 sudo dd if=/dev/cdrom of=/path/to/store/image.iso bs=8192 status=progress
 ```
 
-The `status=progress` flag displays transfer speed and remaining time—helpful for large DVDs. On most modern distributions, `/dev/cdrom` symlinks to `/dev/sr0`, but verify with `ls -l /dev/cdrom`.
+The `status=progress` flag displays transfer speed and remaining time: helpful for large DVDs. On most modern distributions, `/dev/cdrom` symlinks to `/dev/sr0`, but verify with `ls -l /dev/cdrom`.
 
 **Block size note:** The `bs=8192` setting reads data in 8KB chunks, balancing speed and buffer usage. You can increase to `bs=32768` on systems with ample RAM for faster transfers on modern hardware.
 

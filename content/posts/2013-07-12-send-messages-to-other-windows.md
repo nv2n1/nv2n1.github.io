@@ -20,7 +20,7 @@ if (wnd == NULL) {
 }
 ```
 
-The first parameter is the window class name (NULL to skip). The second is the window title. Always use wide-character versions (`FindWindowW()`, `GetWindowTextW()`) for Unicode compatibility—ANSI variants like `FindWindowA()` fail with non-ASCII characters and are legacy cruft at this point.
+The first parameter is the window class name (NULL to skip). The second is the window title. Always use wide-character versions (`FindWindowW()`, `GetWindowTextW()`) for Unicode compatibility: ANSI variants like `FindWindowA()` fail with non-ASCII characters and are legacy cruft at this point.
 
 Window titles vary by system locale and application language. On Chinese systems, Calculator appears as “计算器” rather than “Calculator”. For robust automation across locales, query the window class name instead:
 

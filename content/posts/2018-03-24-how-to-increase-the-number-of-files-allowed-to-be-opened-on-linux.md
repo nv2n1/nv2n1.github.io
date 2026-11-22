@@ -10,7 +10,7 @@ canonical: /how-to-increase-the-number-of-files-allowed-to-be-opened-on-linux/
 url: /how-to-increase-the-number-of-files-allowed-to-be-opened-on-linux/
 ---
 
-When you hit the open files limit on Linux, you’ll see errors like “Too many open files” — typically when running applications that create many temporary file handles. The default limit is often 1024, which isn’t enough for resource-heavy workloads.
+When you hit the open files limit on Linux, you’ll see errors like “Too many open files”: typically when running applications that create many temporary file handles. The default limit is often 1024, which isn’t enough for resource-heavy workloads.
 
 Check your current limit:
 

@@ -123,10 +123,10 @@ vim ~/.thunderbird/[profile].default/Mail/[account-name]/msgFilterRules.dat
 
 Common filter actions include:
 
-- `action=copy` — Copy matching messages to a folder
-- `action=move` — Move matching messages to a folder
-- `action=delete` — Permanently delete matching messages
-- `action=mark` — Mark messages as read, flagged, or with a tag
+- `action=copy`: Copy matching messages to a folder
+- `action=move`: Move matching messages to a folder
+- `action=delete`: Permanently delete matching messages
+- `action=mark`: Mark messages as read, flagged, or with a tag
 
 Conditions support boolean logic with `AND`, `OR`, and `NOT` operators:
 

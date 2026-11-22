@@ -10,7 +10,7 @@ canonical: /common-ssd-read-write-throughput/
 url: /common-ssd-read-write-throughput/
 ---
 
-SSD performance varies significantly based on drive model, interface (NVMe vs SATA), and workload characteristics. Understanding how to benchmark your drives is more useful than memorizing typical specs—here’s how to measure actual throughput on your hardware.
+SSD performance varies significantly based on drive model, interface (NVMe vs SATA), and workload characteristics. Understanding how to benchmark your drives is more useful than memorizing typical specs: here’s how to measure actual throughput on your hardware.
 
 ## Basic Throughput Testing with dd
 
@@ -31,7 +31,7 @@ echo 3 > /proc/sys/vm/drop_caches
 time dd if=./test of=/dev/null bs=1M status=progress
 ```
 
-The key metric is total bytes divided by elapsed real time. Avoid relying on user/sys time—wall-clock time is what matters for I/O operations.
+The key metric is total bytes divided by elapsed real time. Avoid relying on user/sys time: wall-clock time is what matters for I/O operations.
 
 ## Better: Using fio for Production-Grade Benchmarking
 
@@ -51,7 +51,7 @@ fio --name=rand4k --ioengine=libaio --direct=1 --bs=4k --iodepth=64 \
   --rw=randread --size=10G --numjobs=4 --group_reporting --runtime=60
 ```
 
-The `--direct=1` flag bypasses the page cache, giving true device performance. `--iodepth` controls queue depth—increase this for drives that benefit from deeper queuing.
+The `--direct=1` flag bypasses the page cache, giving true device performance. `--iodepth` controls queue depth: increase this for drives that benefit from deeper queuing.
 
 ## Expected Throughput Ranges (2026)
 
@@ -89,7 +89,7 @@ If your drive is underperforming compared to specs:
 
 - Check `dmesg` for controller firmware issues
 - Verify AHCI/NVMe mode in BIOS (not IDE mode)
-- Monitor temperature with `nvme smart-log` or `smartctl -a /dev/nvme0n1`—thermal throttling kills throughput
+- Monitor temperature with `nvme smart-log` or `smartctl -a /dev/nvme0n1`: thermal throttling kills throughput
 - Test directly attached to host, not through USB docks or hubs
 
 Use these methods to establish a baseline for your specific hardware rather than relying on generic expectations.

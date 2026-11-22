@@ -14,7 +14,7 @@ If you’re working with Mingle Forum and need to remove canonical links from fo
 
 ### Finding the Code Reference
 
-The line numbers (like `-1260`) in a diff refer to specific locations within the file being modified. In this case, you’re looking for code in your Mingle Forum class file—typically named something like `wpf.class.php` or a similar forum-related class file in your theme directory.
+The line numbers (like `-1260`) in a diff refer to specific locations within the file being modified. In this case, you’re looking for code in your Mingle Forum class file: typically named something like `wpf.class.php` or a similar forum-related class file in your theme directory.
 
 To locate the canonical link logic:
 
@@ -49,8 +49,8 @@ if ( is_forum_page() || is_single_forum_post() ) {
 
 Replace `is_forum_page()` with whatever function your forum plugin provides to detect forum pages. Common options include:
 
-- `mingleforum_is_forum()` — Check Mingle Forum documentation for exact function names
-- `is_singular('forum')` — If forums are a custom post type
+- `mingleforum_is_forum()`: Check Mingle Forum documentation for exact function names
+- `is_singular('forum')`: If forums are a custom post type
 - Custom conditional based on page ID or URL
 
 ### Alternative: Remove via wp_head Hook

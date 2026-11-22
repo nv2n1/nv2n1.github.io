@@ -107,19 +107,19 @@ pg_wal_replay_until_timeline_id --directory=/var/lib/postgresql/data
 
 ### Best Practices to Avoid Corruption
 
-1.  **Regular automated backups** — daily or more frequently for critical databases
-2.  **Test restores monthly** — backups are useless if they don’t work
-3.  **Enable crash recovery** — MySQL has `innodb_flush_log_at_trx_commit=1` for durability
-4.  **Monitor disk health** — use `smartctl` to catch failing drives early
-5.  **Use appropriate storage** — avoid ext3 for databases; ext4, XFS, or ZFS are better
-6.  **Keep binary logs** — essential for point-in-time recovery
+1.  **Regular automated backups**: daily or more frequently for critical databases
+2.  **Test restores monthly**: backups are useless if they don’t work
+3.  **Enable crash recovery**: MySQL has `innodb_flush_log_at_trx_commit=1` for durability
+4.  **Monitor disk health**: use `smartctl` to catch failing drives early
+5.  **Use appropriate storage**: avoid ext3 for databases; ext4, XFS, or ZFS are better
+6.  **Keep binary logs**: essential for point-in-time recovery
 
 ### Important Caveats
 
-- **Data loss is possible** — backups may not contain very recent transactions
-- **Application consistency matters** — restored backups may leave your app in an inconsistent state; coordinate with development
-- **Downtime required** — expect service interruption during large restores
-- **Verify after recovery** — always run application-level consistency checks post-restore
+- **Data loss is possible**: backups may not contain very recent transactions
+- **Application consistency matters**: restored backups may leave your app in an inconsistent state; coordinate with development
+- **Downtime required**: expect service interruption during large restores
+- **Verify after recovery**: always run application-level consistency checks post-restore
 
 The key is having a tested backup strategy *before* you need it. Corruption at 3 AM is not the time to discover your backups don’t work.
 

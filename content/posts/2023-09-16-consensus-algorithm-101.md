@@ -10,7 +10,7 @@ canonical: /consensus-algorithm-101/
 url: /consensus-algorithm-101/
 ---
 
-In distributed systems like blockchains, consensus is the mechanism by which all nodes agree on a single version of the ledger state. Without it, a decentralized network falls apart—you’d have conflicting transaction histories, double-spending, and no way to determine which version is authoritative. Consensus algorithms solve this by providing cryptographic or economic guarantees that make dishonest behavior either computationally infeasible or financially irrational.
+In distributed systems like blockchains, consensus is the mechanism by which all nodes agree on a single version of the ledger state. Without it, a decentralized network falls apart: you’d have conflicting transaction histories, double-spending, and no way to determine which version is authoritative. Consensus algorithms solve this by providing cryptographic or economic guarantees that make dishonest behavior either computationally infeasible or financially irrational.
 
 ## Proof of Work (PoW)
 
@@ -26,7 +26,7 @@ Bitcoin’s original mechanism. Nodes (miners) compete to solve computationally 
 
 Ethereum transitioned to this in 2022. Validators lock up cryptocurrency as collateral (“stake”). The network randomly selects validators weighted by stake size to propose and attest to new blocks. Validators who misbehave lose their stake.
 
-**Strengths:** Energy-efficient (99.95% less than PoW). Faster finality. Lower barrier to entry for validators. Economically sound—attacking costs you real money.
+**Strengths:** Energy-efficient (99.95% less than PoW). Faster finality. Lower barrier to entry for validators. Economically sound: attacking costs you real money.
 
 **Weaknesses:** Wealth concentration (the rich get richer). Requires significant capital to be a validator. Slashing conditions are complex and can be contentious.
 
@@ -69,4 +69,4 @@ This approach trades some simplicity for practical gains: you get finality guara
 
 **Decentralization:** No single entity controls which transactions are valid.
 
-Choose or design consensus based on what you actually need. For a public chain handling value, finality and decentralization matter most. For an internal ledger, PoA is faster and perfectly reasonable. Most 2026 production systems are hybrid by necessity—pure PoW or pure PoS alone rarely hits all requirements.
+Choose or design consensus based on what you actually need. For a public chain handling value, finality and decentralization matter most. For an internal ledger, PoA is faster and perfectly reasonable. Most 2026 production systems are hybrid by necessity: pure PoW or pure PoS alone rarely hits all requirements.

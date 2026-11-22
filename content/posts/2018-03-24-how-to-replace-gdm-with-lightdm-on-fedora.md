@@ -20,10 +20,10 @@ sudo dnf install lightdm lightdm-gtk-greeter
 
 The `lightdm-gtk-greeter` provides the graphical login screen. Other greeter options include:
 
-- `lightdm-gtk-greeter` — Simple, GTK-based, fast loading (recommended for most users)
-- `lightdm-webkit2-greeter` — Themeable with HTML, CSS, and JavaScript for custom login screens
-- `lightdm-kde-greeter` — KDE Plasma integration with Plasma-style branding
-- `lightdm-another-greeter` — Minimal, keyboard-driven greeter
+- `lightdm-gtk-greeter`: Simple, GTK-based, fast loading (recommended for most users)
+- `lightdm-webkit2-greeter`: Themeable with HTML, CSS, and JavaScript for custom login screens
+- `lightdm-kde-greeter`: KDE Plasma integration with Plasma-style branding
+- `lightdm-another-greeter`: Minimal, keyboard-driven greeter
 
 ## Switch Default Display Manager
 
@@ -58,10 +58,10 @@ xserver-command=Xorg
 
 Key settings:
 
-- `greeter-session` — Which greeter to display
-- `user-session` — Default desktop session (gnome, plasma, xfce, etc.)
-- `allow-guest` — Enable or disable guest login
-- `autologin-user` — Skip login for a specific user (see below)
+- `greeter-session`: Which greeter to display
+- `user-session`: Default desktop session (gnome, plasma, xfce, etc.)
+- `allow-guest`: Enable or disable guest login
+- `autologin-user`: Skip login for a specific user (see below)
 
 ## Customize the Greeter Appearance
 
@@ -175,8 +175,8 @@ GDM and GNOME are developed together, so GDM has better support for GNOME-specif
 
 ## Quick Reference
 
-- `sudo dnf install lightdm lightdm-gtk-greeter` — Install
-- `sudo systemctl enable lightdm` — Set as default
-- `/etc/lightdm/lightdm.conf` — Main config
-- `/etc/lightdm/lightdm-gtk-greeter.conf` — Greeter appearance
-- `sudo systemctl disable lightdm && sudo systemctl enable gdm` — Switch back
+- `sudo dnf install lightdm lightdm-gtk-greeter`: Install
+- `sudo systemctl enable lightdm`: Set as default
+- `/etc/lightdm/lightdm.conf`: Main config
+- `/etc/lightdm/lightdm-gtk-greeter.conf`: Greeter appearance
+- `sudo systemctl disable lightdm && sudo systemctl enable gdm`: Switch back

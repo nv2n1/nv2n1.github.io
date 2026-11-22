@@ -33,13 +33,13 @@ This adds two buttons to the HTML editor. When clicked, they insert the specifie
 
 The `QTags.addButton()` function accepts seven parameters:
 
-1.  **ID** — Unique identifier for the button (e.g., `wiki_button`)
-2.  **Display Label** — Text shown on the button (e.g., `Wiki`)
-3.  **Opening Tag** — Code inserted before selection or at cursor (e.g., `[yadawiki link="" show=""]`)
-4.  **Closing Tag** — Code inserted after selection (empty string if not needed)
-5.  **Keyboard Shortcut** — Single character for Alt+Shift+X shortcut (e.g., `w`)
-6.  **Title/Tooltip** — Hover text describing the button
-7.  **Priority** — Display order (higher numbers appear later)
+1.  **ID**: Unique identifier for the button (e.g., `wiki_button`)
+2.  **Display Label**: Text shown on the button (e.g., `Wiki`)
+3.  **Opening Tag**: Code inserted before selection or at cursor (e.g., `[yadawiki link="" show=""]`)
+4.  **Closing Tag**: Code inserted after selection (empty string if not needed)
+5.  **Keyboard Shortcut**: Single character for Alt+Shift+X shortcut (e.g., `w`)
+6.  **Title/Tooltip**: Hover text describing the button
+7.  **Priority**: Display order (higher numbers appear later)
 
 ## Practical Examples
 
@@ -91,15 +91,15 @@ add_action('admin_enqueue_scripts', 'add_custom_quicktags');
 
 ## Important Considerations
 
-**Text Editor Availability** — Custom quicktags only appear in the WordPress Text/HTML editor. The Block Editor (Gutenberg) uses a different system. For Block Editor support, you’d need to create a custom block instead.
+**Text Editor Availability**: Custom quicktags only appear in the WordPress Text/HTML editor. The Block Editor (Gutenberg) uses a different system. For Block Editor support, you’d need to create a custom block instead.
 
-**Escaping Special Characters** — If your markup contains quotes, escape them properly with backslashes as shown above: `\"` for double quotes.
+**Escaping Special Characters**: If your markup contains quotes, escape them properly with backslashes as shown above: `\"` for double quotes.
 
-**Keyboard Shortcuts** — The single-character shortcut uses Alt+Shift+X (where X is your character). Avoid conflicts with standard WordPress shortcuts.
+**Keyboard Shortcuts**: The single-character shortcut uses Alt+Shift+X (where X is your character). Avoid conflicts with standard WordPress shortcuts.
 
-**Script Dependencies** — The `quicktags` script must be enqueued before your custom code runs. Using `wp_add_inline_script()` with `quicktags` as the handle ensures proper ordering.
+**Script Dependencies**: The `quicktags` script must be enqueued before your custom code runs. Using `wp_add_inline_script()` with `quicktags` as the handle ensures proper ordering.
 
-**User Capabilities** — This code runs for all users with editor access. To limit to specific roles, check `current_user_can()` before enqueuing.
+**User Capabilities**: This code runs for all users with editor access. To limit to specific roles, check `current_user_can()` before enqueuing.
 
 ## Modern Alternative: Block Editor
 

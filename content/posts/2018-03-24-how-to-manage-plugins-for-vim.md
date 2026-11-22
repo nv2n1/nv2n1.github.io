@@ -97,7 +97,7 @@ This is dramatically simpler than manually tracking files across directories.
 - Keep your plugin list in version control (vimrc in a dotfiles repo)
 - Periodically run `:PlugUpdate` to stay current with bug fixes and features
 - Use lazy-loading for plugins you don’t use every session
-- Read plugin documentation—many have optional features you can enable in your vimrc
+- Read plugin documentation: many have optional features you can enable in your vimrc
 - Avoid installing conflicting plugins (e.g., multiple fuzzy-finders for the same use case)
 
 With a proper plugin manager, your Vim setup becomes reproducible and maintainable across systems.

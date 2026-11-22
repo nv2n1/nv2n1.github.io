@@ -60,7 +60,7 @@ Create an X.509 certificate and private key (valid for 100 years):
 openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=VirtualBox MOK/"
 ```
 
-Keep these files in a safe location—you’ll need the private key every time you upgrade VirtualBox.
+Keep these files in a safe location: you’ll need the private key every time you upgrade VirtualBox.
 
 ### Step 3: Sign the vboxdrv module
 
@@ -74,7 +74,7 @@ sudo /usr/src/kernels/$(uname -r)/scripts/sign-file sha256 ./MOK.priv ./MOK.der 
 sudo mokutil --import MOK.der
 ```
 
-This command will prompt you to set a password. Remember this password—you’ll need it during the next reboot.
+This command will prompt you to set a password. Remember this password: you’ll need it during the next reboot.
 
 ### Step 5: Reboot and enroll the key
 

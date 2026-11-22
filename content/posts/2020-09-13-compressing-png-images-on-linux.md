@@ -82,7 +82,7 @@ pngquant --force --quality 75-95 --speed 4 file.png -o file.png
 
 ## Comparing Results
 
-For maximum compression, combine both approaches—use pngquant first for aggressive size reduction, then optipng for final lossless optimization:
+For maximum compression, combine both approaches: use pngquant first for aggressive size reduction, then optipng for final lossless optimization:
 
 ``` bash
 pngquant --quality 80-95 --speed 4 input.png -o temp.png

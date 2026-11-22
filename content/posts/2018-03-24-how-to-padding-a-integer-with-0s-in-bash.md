@@ -24,9 +24,9 @@ echo "$str"  # Output: 00000042
 
 Here, `%08d` means:
 
-- `%d` — format as decimal integer
-- `0` — pad with zeros (not spaces)
-- `8` — total width of 8 characters
+- `%d`: format as decimal integer
+- `0`: pad with zeros (not spaces)
+- `8`: total width of 8 characters
 
 ### Common Patterns
 
@@ -81,7 +81,7 @@ n=7
 n=${n#${n%%[!0]*}}  # This is convoluted; avoid it
 ```
 
-In practice, **stick with `printf`** — it’s clearer and more efficient.
+In practice, **stick with `printf`**: it’s clearer and more efficient.
 
 ### Right-Padding with Spaces or Other Characters
 

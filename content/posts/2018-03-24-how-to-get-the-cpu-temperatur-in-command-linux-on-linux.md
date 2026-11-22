@@ -130,7 +130,7 @@ If `sensors` returns no output or error messages:
 
 - Verify the kernel module is loaded: `lsmod | grep coretemp`
 - Load it manually: `sudo modprobe coretemp`
-- Check your BIOS settings — some systems disable sensor access
+- Check your BIOS settings: some systems disable sensor access
 - On virtual machines, sensors may not be available at all
 
 ## Check Maximum Temperature Support

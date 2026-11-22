@@ -10,7 +10,7 @@ canonical: /sending-emails-securely/
 url: /sending-emails-securely/
 ---
 
-Sending sensitive information via email requires careful consideration. Whether you’re sharing financial details, credentials, or confidential documents, there’s no single “secure email” solution that eliminates all risk — you need to match the method to your threat model.
+Sending sensitive information via email requires careful consideration. Whether you’re sharing financial details, credentials, or confidential documents, there’s no single “secure email” solution that eliminates all risk: you need to match the method to your threat model.
 
 ## Understand the Risk
 
@@ -32,7 +32,7 @@ gpg --full-generate-key
 # Encrypt a file for a recipient (you need their public key first)
 gpg --encrypt --recipient recipient@example.com --armor sensitive-data.txt
 
-# This creates sensitive-data.txt.asc — a text file safe to email
+# This creates sensitive-data.txt.asc: a text file safe to email
 # Recipient decrypts with:
 gpg --decrypt sensitive-data.txt.asc
 ```
@@ -49,7 +49,7 @@ openssl enc -aes-256-cbc -salt -in sensitive-data.txt -out sensitive-data.enc -S
 openssl enc -d -aes-256-cbc -in sensitive-data.enc
 ```
 
-Share the passphrase over a separate channel (phone, encrypted chat, Signal) — never via email.
+Share the passphrase over a separate channel (phone, encrypted chat, Signal): never via email.
 
 ## Self-Destructing Message Services
 
@@ -63,9 +63,9 @@ These work well for one-time sensitive shares, but you’re trusting the provide
 
 If you need ongoing encrypted email:
 
-- **Proton Mail** — End-to-end encryption, Swiss jurisdiction, audited open-source clients
-- **Tutanota** — German-based, encrypted by default, open-source
-- **Disroot** — Community-run, privacy-focused
+- **Proton Mail**: End-to-end encryption, Swiss jurisdiction, audited open-source clients
+- **Tutanota**: German-based, encrypted by default, open-source
+- **Disroot**: Community-run, privacy-focused
 
 These protect message content from the provider, but metadata (sender, recipient, timestamps) remains visible. They’re suitable for general private communication, not covert operations.
 
@@ -93,7 +93,7 @@ Files transfer directly peer-to-peer with encryption, no server involvement.
 
 ## Avoid
 
-- Sending credentials or sensitive data in plaintext email — ever
+- Sending credentials or sensitive data in plaintext email: ever
 - Relying solely on HTTPS/TLS encryption in transit
 - Assuming “deleted” emails are actually deleted from provider backups
 - Using email for secrets that should use a secrets manager (Bitwarden, Vault) instead

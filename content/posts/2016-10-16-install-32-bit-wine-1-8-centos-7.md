@@ -10,7 +10,7 @@ canonical: /install-32-bit-wine-1-8-centos-7/
 url: /install-32-bit-wine-1-8-centos-7/
 ---
 
-RHEL-based distributions only provide 64-bit Wine packages in their standard repositories. Many Windows applications—especially legacy software—require 32-bit Wine. Building Wine from source is the most reliable approach to get a working 32-bit installation alongside 64-bit support.
+RHEL-based distributions only provide 64-bit Wine packages in their standard repositories. Many Windows applications (especially legacy software) require 32-bit Wine. Building Wine from source is the most reliable approach to get a working 32-bit installation alongside 64-bit support.
 
 ## Prerequisites and Resource Requirements
 
@@ -150,7 +150,7 @@ Expected output:
     /usr/local/bin/wine: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), ...
     /usr/local/bin/wine64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), ...
 
-The “ELF 32-bit” and “ELF 64-bit” strings confirm correct installation. If you see “ELF 64-bit” for both, the 32-bit build failed—check the make output for errors and ensure all i686 development libraries installed.
+The “ELF 32-bit” and “ELF 64-bit” strings confirm correct installation. If you see “ELF 64-bit” for both, the 32-bit build failed: check the make output for errors and ensure all i686 development libraries installed.
 
 ## Running Windows Applications
 

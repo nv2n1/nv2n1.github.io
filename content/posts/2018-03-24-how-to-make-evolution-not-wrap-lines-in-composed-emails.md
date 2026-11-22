@@ -28,7 +28,7 @@ The limitation here is that preformatted text in plain text emails appears in a 
 
 ## Sending HTML Emails
 
-For most modern email clients and corporate environments, HTML email is the practical solution. In Evolution, compose normally and send as HTML — text breaks become soft wraps that reflow in the recipient’s client, while explicit `<br>` tags and block-level elements force hard breaks.
+For most modern email clients and corporate environments, HTML email is the practical solution. In Evolution, compose normally and send as HTML: text breaks become soft wraps that reflow in the recipient’s client, while explicit `<br>` tags and block-level elements force hard breaks.
 
 To force HTML mode for a single message, go **Message \> Format \> HTML** in the composer. To change the default, use **Edit \> Preferences \> Composer** and toggle “Compose messages in HTML format.”
 

@@ -12,7 +12,7 @@ url: /how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/
 
 If you’re trying to add a domain to a Dreamhost account and get the error “You can’t add that domain: already in our system,” the domain is already configured for DNS hosting in another Dreamhost account. You need to remove the DNS hosting from the original account before you can host it elsewhere.
 
-This process is safe—removing DNS hosting doesn’t delete your domain registration. The domain remains registered in the original account; you’re only stopping Dreamhost from managing its nameservers.
+This process is safe: removing DNS hosting doesn’t delete your domain registration. The domain remains registered in the original account; you’re only stopping Dreamhost from managing its nameservers.
 
 ## Remove DNS Hosting from the Original Account
 

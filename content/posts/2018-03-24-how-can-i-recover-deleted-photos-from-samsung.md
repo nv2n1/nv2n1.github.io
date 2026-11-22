@@ -10,7 +10,7 @@ canonical: /how-can-i-recover-deleted-photos-from-samsung/
 url: /how-can-i-recover-deleted-photos-from-samsung/
 ---
 
-Deleted photos from your Samsung phone aren’t necessarily gone forever—they remain on disk until overwritten. Here’s how to recover them.
+Deleted photos from your Samsung phone aren’t necessarily gone forever: they remain on disk until overwritten. Here’s how to recover them.
 
 ## Act quickly to preserve data
 
@@ -25,7 +25,7 @@ If you had Samsung Cloud enabled before deletion, recovery is straightforward:
 3.  Select **Restore** and choose photos
 4.  Filter by date to find recently deleted items
 
-This works if backups were active. Check your Google Photos library too—it may have auto-synced photos even if you weren’t aware.
+This works if backups were active. Check your Google Photos library too: it may have auto-synced photos even if you weren’t aware.
 
 ## Use Google Photos recovery
 
@@ -55,15 +55,15 @@ sudo apt install testdisk  # includes PhotoRec
 3.  Select the partition, choose file system type, mark JPEG as the target
 4.  Select destination folder and start recovery
 
-PhotoRec doesn’t need root access on the phone itself—it works with USB mass storage. This is reliable but requires command-line comfort.
+PhotoRec doesn’t need root access on the phone itself: it works with USB mass storage. This is reliable but requires command-line comfort.
 
 ## Third-party data recovery software
 
 If you prefer a GUI, options include:
 
-- **Dr.Fone (paid)** — works on Windows/Mac, supports Samsung devices directly via ADB
-- **EaseUS MobiSaver** — straightforward interface, free trial with limited recovery
-- **Wondershare Recoverit** — handles both cloud and device recovery
+- **Dr.Fone (paid)**: works on Windows/Mac, supports Samsung devices directly via ADB
+- **EaseUS MobiSaver**: straightforward interface, free trial with limited recovery
+- **Wondershare Recoverit**: handles both cloud and device recovery
 
 These tools typically work better than PhotoRec for Android because they understand Samsung’s file systems better, though they’re commercial.
 
@@ -88,7 +88,7 @@ This accesses the internal storage directly if you have root. Deleted files may 
 
 ## Reality check
 
-Recovery success depends on how much the phone has been used since deletion. Heavy usage—multiple photos, videos, or app installs—overwrites deleted data. If months have passed or the device was heavily used, recovery becomes unlikely. Professional data recovery labs can sometimes recover from NAND flash, but costs \$300–\$1000+.
+Recovery success depends on how much the phone has been used since deletion. Heavy usage: multiple photos, videos, or app installs: overwrites deleted data. If months have passed or the device was heavily used, recovery becomes unlikely. Professional data recovery labs can sometimes recover from NAND flash, but costs \$300–\$1000+.
 
 For immediate recovery, check cloud backups first. If they don’t exist, PhotoRec or Dr.Fone offer reasonable chances within days of deletion.
 

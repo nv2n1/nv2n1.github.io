@@ -89,7 +89,7 @@ except (socket.error, OSError) as e:
 
 **Performance:** All of these methods are fast, but `socket.gethostname()` is the most efficient. If you’re calling it repeatedly in a loop, cache the result rather than calling it on each iteration.
 
-**Which to use:** For most applications, `socket.gethostname()` or `os.uname().nodename` are sufficient and don’t require DNS lookups. Use `socket.getfqdn()` only when you specifically need the domain name. Avoid shelling out unless you have a specific reason—it’s slower and adds a subprocess dependency.
+**Which to use:** For most applications, `socket.gethostname()` or `os.uname().nodename` are sufficient and don’t require DNS lookups. Use `socket.getfqdn()` only when you specifically need the domain name. Avoid shelling out unless you have a specific reason: it’s slower and adds a subprocess dependency.
 
 ## Common Pitfalls and Best Practices
 
@@ -101,11 +101,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

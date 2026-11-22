@@ -61,7 +61,7 @@ Use arithmetic-specific operators for integer comparisons:
 The `(( ))` command is preferred for readability and is POSIX-compliant in most modern shells:
 
 ``` bash
-# Using (( )) — preferred
+# Using (( )): preferred
 if (( exit_code != 0 )); then
     echo "Command failed with exit code $exit_code"
 fi
@@ -70,7 +70,7 @@ if (( count > 100 )); then
     echo "Count exceeds threshold"
 fi
 
-# Using [ ] with -lt, -gt, etc. — still valid
+# Using [ ] with -lt, -gt, etc., still valid
 if [ "$count" -ge 50 ]; then
     echo "At least 50 items"
 fi

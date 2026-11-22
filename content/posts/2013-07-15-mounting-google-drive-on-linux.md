@@ -10,7 +10,7 @@ canonical: /mounting-google-drive-on-linux/
 url: /mounting-google-drive-on-linux/
 ---
 
-rclone is the modern standard for mounting Google Drive on Linux — it’s actively maintained, handles authentication reliably, and works across distributions without compilation.
+rclone is the modern standard for mounting Google Drive on Linux: it’s actively maintained, handles authentication reliably, and works across distributions without compilation.
 
 ## Install rclone
 
@@ -43,7 +43,7 @@ rclone config
 
 Follow the interactive prompts:
 
-1.  Create a new remote — name it `gdrive` (or your preference)
+1.  Create a new remote: name it `gdrive` (or your preference)
 2.  Choose `drive` as the storage type
 3.  Leave client ID and secret blank (rclone uses built-in credentials)
 4.  Select your preferred scope:
@@ -85,12 +85,12 @@ rclone mount gdrive: ~/gdrive \
 
 **What each option does:**
 
-- `--vfs-cache-mode full` — Cache entire files locally for offline access and repeated read performance
-- `--vfs-cache-max-age 168h` — Keep cached files for 7 days before re-fetching
-- `--cache-dir ~/.cache/rclone` — Store cache in a dedicated directory (easier cleanup)
-- `--allow-other` — Allow other system users to access the mount (requires `user_allow_other` in `/etc/fuse.conf`)
-- `--no-checksum` — Skip checksum verification on uploads (faster, use only if you trust your network)
-- `--dir-cache-time 1h` — Cache directory listings for 1 hour (reduces API calls)
+- `--vfs-cache-mode full`: Cache entire files locally for offline access and repeated read performance
+- `--vfs-cache-max-age 168h`: Keep cached files for 7 days before re-fetching
+- `--cache-dir ~/.cache/rclone`: Store cache in a dedicated directory (easier cleanup)
+- `--allow-other`: Allow other system users to access the mount (requires `user_allow_other` in `/etc/fuse.conf`)
+- `--no-checksum`: Skip checksum verification on uploads (faster, use only if you trust your network)
+- `--dir-cache-time 1h`: Cache directory listings for 1 hour (reduces API calls)
 
 ## Unmount
 

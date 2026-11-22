@@ -21,7 +21,7 @@ Download the Goodbye Spammer plugin from the MyBB Mods site, then:
 3.  Navigate to **ACP \> Plugins** and activate the plugin
 4.  Go to **ACP \> Configuration \> Goodbye Spammer Settings** to configure the plugin options and save your changes
 
-The plugin respects MyBB’s permission system—only users with appropriate moderator or administrator privileges (or users in a group specifically configured with access in the plugin settings) can use this tool.
+The plugin respects MyBB’s permission system: only users with appropriate moderator or administrator privileges (or users in a group specifically configured with access in the plugin settings) can use this tool.
 
 ## Using the Tool
 
@@ -40,7 +40,7 @@ The tool will ban the user account and delete all posts and topics they created.
 
 **Check post count.** Use the ACP user search to see how many posts the target user has created. If the number is extremely high (thousands), the operation may take time to complete and could temporarily impact forum performance.
 
-**Review recent activity.** Check the user’s post history before deletion. Some users initially flagged as spammers may have legitimate posts mixed in—the tool deletes everything without filtering.
+**Review recent activity.** Check the user’s post history before deletion. Some users initially flagged as spammers may have legitimate posts mixed in: the tool deletes everything without filtering.
 
 **Spam moderation logs.** After running the tool, check your forum logs for confirmation that posts were removed and the user was banned. This provides an audit trail for your records.
 

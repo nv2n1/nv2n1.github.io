@@ -10,7 +10,7 @@ canonical: /how-to-improve-mplayer-video-quality/
 url: /how-to-improve-mplayer-video-quality/
 ---
 
-MPlayer is effectively unmaintained. If you’re starting fresh, use **mpv** — the actively maintained fork with better codec support, hardware acceleration, and improved filter performance. That said, if you’re working with existing MPlayer setups, you can still improve playback quality through filters.
+MPlayer is effectively unmaintained. If you’re starting fresh, use **mpv**: the actively maintained fork with better codec support, hardware acceleration, and improved filter performance. That said, if you’re working with existing MPlayer setups, you can still improve playback quality through filters.
 
 ## When to Use Filters vs. When to Switch
 
@@ -18,7 +18,7 @@ Before spending time tuning MPlayer, consider:
 
 - **New system or playback setup?** Use mpv instead. The quality and performance gains are substantial.
 - **Legacy MPlayer environment?** Filters can help, but you’ll hit CPU and codec limitations.
-- **Old or low-bitrate video?** Denoise filters help, but they’re taxing—test first.
+- **Old or low-bitrate video?** Denoise filters help, but they’re taxing: test first.
 
 ## Video Filters in MPlayer
 
@@ -26,24 +26,24 @@ Configure filters in `~/.mplayer/config`:
 
     vf=hqdn3d
 
-The `hqdn3d` filter applies high-quality denoise to reduce noise and compression artifacts. It’s CPU-intensive—test on your hardware first. Monitor CPU load with `top` or `htop` during playback.
+The `hqdn3d` filter applies high-quality denoise to reduce noise and compression artifacts. It’s CPU-intensive: test on your hardware first. Monitor CPU load with `top` or `htop` during playback.
 
 ### Common Filters
 
 **Denoising:**
 
-- `hqdn3d` — High-quality denoise (CPU-heavy, luma_strength and chroma_strength parameters available)
-- `dn3d` — Lighter denoise with lower overhead
+- `hqdn3d`: High-quality denoise (CPU-heavy, luma_strength and chroma_strength parameters available)
+- `dn3d`: Lighter denoise with lower overhead
 
 **Scaling and Interpolation:**
 
-- `scale=w=iw:h=ih:interp=lanczos` — Upscale with quality Lanczos interpolation
-- `scale=w=-1:h=720:interp=spline36` — Scale to 720p height, maintain aspect ratio
-- `scale=w=1920:h=-1:interp=ewa_lanczossharp` — Scale to 1920p width with sharper interpolation
+- `scale=w=iw:h=ih:interp=lanczos`: Upscale with quality Lanczos interpolation
+- `scale=w=-1:h=720:interp=spline36`: Scale to 720p height, maintain aspect ratio
+- `scale=w=1920:h=-1:interp=ewa_lanczossharp`: Scale to 1920p width with sharper interpolation
 
 **Post-processing:**
 
-- `pp=hb/vb/dr/al` — Remove blocks, borders, and apply deringing and adaptive lowpass
+- `pp=hb/vb/dr/al`: Remove blocks, borders, and apply deringing and adaptive lowpass
 
 ### Combining Multiple Filters
 

@@ -97,9 +97,9 @@ This is overkill for simple monitoring but necessary when you need to enforce ba
 
 For daily network troubleshooting:
 
-1.  **Quick check**: `sudo nethogs` — see which processes are using bandwidth right now
-2.  **Remote host analysis**: `sudo iftop` — understand traffic patterns between hosts
-3.  **Connection audit**: `ss -tunap` — list all listening sockets and their owners
+1.  **Quick check**: `sudo nethogs`: see which processes are using bandwidth right now
+2.  **Remote host analysis**: `sudo iftop`: understand traffic patterns between hosts
+3.  **Connection audit**: `ss -tunap`: list all listening sockets and their owners
 4.  **Scripted monitoring**: Parse `/proc/net/dev` or use `vnstat` for historical traffic without live overhead
 
 `nethogs` handles most use cases. It’s lightweight, doesn’t require deep kernel knowledge, and mirrors the experience of using `top` for CPU/memory. If you need to see remote host traffic instead of process ownership, switch to `iftop`. For automation or scripting, combine `ss` output with standard Unix tools.

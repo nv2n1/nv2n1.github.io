@@ -58,15 +58,15 @@ Printf.eprintf "Error: %s (code %d)\n" msg code
 
 Common format specifiers:
 
-– `%s` — string
-– `%d` — integer
-– `%f` — float
-– `.2f` — float with 2 decimal places
-– `%b` — boolean (true/false)
-– `%c` — character
-– `%a` — user-defined formatter (advanced)
+– `%s`: string
+– `%d`: integer
+– `%f`: float
+– `.2f`: float with 2 decimal places
+– `%b`: boolean (true/false)
+– `%c`: character
+– `%a`: user-defined formatter (advanced)
 
-The compiler checks that the number and types of arguments match the format string — a mismatch is a compile-time error, not a runtime crash.
+The compiler checks that the number and types of arguments match the format string: a mismatch is a compile-time error, not a runtime crash.
 
 \## Using Format for Pretty-Printing
 
@@ -80,11 +80,11 @@ let print_person name age =
 
 The `Format` module uses “pretty-print boxes” to manage layout:
 
-– `@[` — open a box
-– `@]` — close a box
-– `@,` — break hint (may become a newline)
-– `@;` — break hint with custom spacing
-– `@.` — flush and newline
+– `@[`: open a box
+– `@]`: close a box
+– `@,`: break hint (may become a newline)
+– `@;`: break hint with custom spacing
+– `@.`: flush and newline
 
 \## Redirecting Output Programmatically
 
@@ -126,14 +126,14 @@ Logs.set_level (Some Logs.Warning);  (* Only warn and error *)
 
 \## Quick Reference
 
-– `print_endline` — stdout with newline
-– `print_string` — stdout without newline
-– `prerr_endline` — stderr with newline
-– `prerr_string` — stderr without newline
-– `Printf.printf` — formatted stdout
-– `Printf.eprintf` — formatted stderr
-– `Format.printf` — pretty-printed stdout
-– `Logs.info/warn/err` — structured logging
+– `print_endline`: stdout with newline
+– `print_string`: stdout without newline
+– `prerr_endline`: stderr with newline
+– `prerr_string`: stderr without newline
+– `Printf.printf`: formatted stdout
+– `Printf.eprintf`: formatted stderr
+– `Format.printf`: pretty-printed stdout
+– `Logs.info/warn/err`: structured logging
 
 For most command-line tools, `print_endline` and `prerr_endline` cover the common cases. Reach for `Printf` when you need formatting, and `Format` when you need structured output.
 
@@ -148,7 +148,7 @@ flush stdout;  (* Force immediate output *)
 print_endline "done"
 ```
 
-The `print_endline` and `prerr_endline` functions flush automatically. But `print_string` and `prerr_string` do not — you must call `flush stdout` or `flush stderr` manually.
+The `print_endline` and `prerr_endline` functions flush automatically. But `print_string` and `prerr_string` do not: you must call `flush stdout` or `flush stderr` manually.
 
 This matters for progress indicators:
 

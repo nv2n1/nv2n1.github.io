@@ -14,7 +14,7 @@ Linux is a multi-user operating system where multiple users can run processes si
 
 ## What are user groups?
 
-A user group is a collection of user accounts that can be assigned permissions as a unit. This simplifies administration significantly — instead of granting access to individual users, an admin grants access to a group, and all members automatically receive those permissions.
+A user group is a collection of user accounts that can be assigned permissions as a unit. This simplifies administration significantly: instead of granting access to individual users, an admin grants access to a group, and all members automatically receive those permissions.
 
 Every Linux user belongs to at least one primary group (usually created with the same name as the user). Users can also be added to additional secondary groups. This is especially useful for managing elevated privileges: the `sudo` group (Debian/Ubuntu), `wheel` group (Fedora/RHEL/CentOS/Rocky), or `doas` group (on systems using doas instead of sudo) determines which users can run privileged commands.
 

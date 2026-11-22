@@ -29,11 +29,11 @@ This works by:
 
 The `comments` option in Vim defines how comment markers work. Each entry follows a pattern like `{flags}:{marker}`. Common flags include:
 
-- `s` – start of a multi-line comment
-- `m` – middle lines of a multi-line comment
-- `e` – end of a multi-line comment
-- `f` – only auto-insert if the line already has the marker
-- `b` – blank lines between comment markers
+- `s`: start of a multi-line comment
+- `m`: middle lines of a multi-line comment
+- `e`: end of a multi-line comment
+- `f`: only auto-insert if the line already has the marker
+- `b`: blank lines between comment markers
 
 For C/C++, you might also want to handle `/* */` style comments:
 

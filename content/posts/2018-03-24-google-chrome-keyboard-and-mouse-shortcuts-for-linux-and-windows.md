@@ -25,10 +25,10 @@ url: /google-chrome-keyboard-and-mouse-shortcuts-for-linux-and-windows/
 
 **Middle-click shortcuts:**
 
-- Ctrl+click a link — opens link in background tab
-- Ctrl+Shift+click a link — opens link in foreground tab and switches to it
-- Middle-click a link — opens link in background tab
-- Middle-click a tab — closes the tab
+- Ctrl+click a link: opens link in background tab
+- Ctrl+Shift+click a link: opens link in foreground tab and switches to it
+- Middle-click a link: opens link in background tab
+- Middle-click a tab: closes the tab
 
 ## Navigation & Search
 
@@ -85,7 +85,7 @@ url: /google-chrome-keyboard-and-mouse-shortcuts-for-linux-and-windows/
 
 ## Linux-Specific Notes
 
-On Linux, Alt+F for the menu varies by desktop environment. GNOME and KDE handle keyboard navigation differently — if Alt+F doesn’t work in your window manager, try right-clicking the title bar or use the three-dot menu button instead.
+On Linux, Alt+F for the menu varies by desktop environment. GNOME and KDE handle keyboard navigation differently: if Alt+F doesn’t work in your window manager, try right-clicking the title bar or use the three-dot menu button instead.
 
 For keyboard navigation without a mouse, use Tab to cycle through page elements and Enter to activate links or buttons. In many Linux environments, you can also use Alt+number to jump directly to a tab.
 
@@ -97,10 +97,10 @@ Ctrl+Alt+T typically opens a terminal in GNOME-based Linux distributions, which 
 
 ## Bookmark & Link Management
 
-- **Drag link to bookmarks bar** — save link as bookmark
-- **Shift+Ctrl+B** — toggle bookmarks bar on/off
-- **Middle-click a bookmark** — open in new background tab
-- **Shift+middle-click a bookmark** — open in new foreground tab
+- **Drag link to bookmarks bar**: save link as bookmark
+- **Shift+Ctrl+B**: toggle bookmarks bar on/off
+- **Middle-click a bookmark**: open in new background tab
+- **Shift+middle-click a bookmark**: open in new foreground tab
 
 ## Command-Line Chrome Launch
 

@@ -14,7 +14,7 @@ Finding quality free images for your website means balancing availability, licen
 
 ## Google Image Search (with license filtering)
 
-Google Images remains useful for locating free content, but the licensing filter is critical. Use the Advanced Search and filter by usage rights — specifically “free to use, share, or modify, even commercially.” This narrows results significantly and reduces legal risk.
+Google Images remains useful for locating free content, but the licensing filter is critical. Use the Advanced Search and filter by usage rights: specifically “free to use, share, or modify, even commercially.” This narrows results significantly and reduces legal risk.
 
 The direct link with free usage rights pre-selected is available through Google’s advanced image search tool. Filter by your specific needs (color, size, file type) to save time.
 
@@ -24,19 +24,19 @@ The direct link with free usage rights pre-selected is available through Google�
 
 These platforms explicitly license content for reuse and are more reliable than general searches:
 
-**Unsplash** — High-quality photography under the Unsplash License (essentially free for all purposes, including commercial). Strong categorization and reliable uploader vetting. Regularly updated with new content.
+**Unsplash**: High-quality photography under the Unsplash License (essentially free for all purposes, including commercial). Strong categorization and reliable uploader vetting. Regularly updated with new content.
 
-**Pexels** — Stock photography and videos, free to use. Images are either Creative Commons Zero or released into the public domain. Good search filters and consistent quality.
+**Pexels**: Stock photography and videos, free to use. Images are either Creative Commons Zero or released into the public domain. Good search filters and consistent quality.
 
-**Pixabay** — Extensive library of photos, vectors, and illustrations under the Pixabay License. Works for commercial projects without attribution required. Vector graphics are especially useful for UI design.
+**Pixabay**: Extensive library of photos, vectors, and illustrations under the Pixabay License. Works for commercial projects without attribution required. Vector graphics are especially useful for UI design.
 
-**Freepik** — Large vector library plus photos. Free tier includes thousands of assets suitable for presentations, posters, and designs. Check individual license terms — some assets require attribution even in the free tier.
+**Freepik**: Large vector library plus photos. Free tier includes thousands of assets suitable for presentations, posters, and designs. Check individual license terms: some assets require attribution even in the free tier.
 
-**Flickr** — Extensive user-uploaded content with detailed license filtering. Many photographers release work under Creative Commons. Filter by commercial use and modification permissions directly in search.
+**Flickr**: Extensive user-uploaded content with detailed license filtering. Many photographers release work under Creative Commons. Filter by commercial use and modification permissions directly in search.
 
-**Open Peeps** — Free illustration library by Pablo Stanley. Hand-drawn character and scene illustrations useful for landing pages and marketing materials. Open source and actively maintained.
+**Open Peeps**: Free illustration library by Pablo Stanley. Hand-drawn character and scene illustrations useful for landing pages and marketing materials. Open source and actively maintained.
 
-**Wikimedia Commons** — Media repository backing Wikipedia. Strict licensing requirements but generally safe. Good for editorial content and educational material. Quality varies.
+**Wikimedia Commons**: Media repository backing Wikipedia. Strict licensing requirements but generally safe. Good for editorial content and educational material. Quality varies.
 
 ## License Verification Checklist
 
@@ -44,7 +44,7 @@ Before using any image:
 
 - Check the **explicit license** on the source platform, not just Google’s claim
 - Verify **commercial use** is permitted (critical for business sites)
-- Confirm **attribution requirements** — some free licenses require visible credit
+- Confirm **attribution requirements**: some free licenses require visible credit
 - Check **modification rights** if you plan to crop, resize, or edit
 - Review **territorial restrictions** (rare but they exist)
 - Screenshot or note the license in your project assets folder for documentation

@@ -56,7 +56,7 @@ Or to switch to graphical mode:
 sudo systemctl isolate graphical.target
 ```
 
-The `isolate` command starts the target and its dependencies while stopping conflicting units—equivalent to the legacy `init 3` or `init 5` commands.
+The `isolate` command starts the target and its dependencies while stopping conflicting units: equivalent to the legacy `init 3` or `init 5` commands.
 
 **Important caveat:** `isolate` may interrupt active services. In production environments, plan for potential downtime. Switching from graphical to multi-user will terminate your display manager and X11/Wayland session, killing any unsaved work in running applications. Use this primarily for troubleshooting or scheduled maintenance windows.
 
@@ -80,7 +80,7 @@ Verify the change:
 systemctl get-default
 ```
 
-This creates or updates a symlink at `/etc/systemd/system/default.target`. Run it once—systemd handles all necessary setup. The `enable` command isn’t needed for targets.
+This creates or updates a symlink at `/etc/systemd/system/default.target`. Run it once: systemd handles all necessary setup. The `enable` command isn’t needed for targets.
 
 ## Rescue and Emergency Targets
 
@@ -120,7 +120,7 @@ For severe troubleshooting when rescue mode isn’t sufficient:
 sudo systemctl isolate emergency.target
 ```
 
-Emergency mode provides only the root filesystem—mounted read-only—with virtually no services running. The root password is required. Use this only when:
+Emergency mode provides only the root filesystem (mounted read-only) with virtually no services running. The root password is required. Use this only when:
 
 - `rescue.target` won’t boot
 - You need maximum isolation to diagnose filesystem or boot issues
@@ -142,7 +142,7 @@ Systemd manages the default target via a symlink. View it with:
 ls -l /etc/systemd/system/default.target
 ```
 
-This symlink points to a file in `/usr/lib/systemd/system/`. Never manually edit this symlink—always use `systemctl set-default`. This command is idempotent, integrates with systemd’s management layer, and prevents configuration errors.
+This symlink points to a file in `/usr/lib/systemd/system/`. Never manually edit this symlink: always use `systemctl set-default`. This command is idempotent, integrates with systemd’s management layer, and prevents configuration errors.
 
 ## Common Workflows
 
@@ -160,7 +160,7 @@ sudo systemctl set-default graphical.target
 sudo systemctl start graphical.target
 ```
 
-Here, `start` launches the graphical target without stopping multi-user services—usually sufficient. Use `isolate` only if you encounter conflicts between targets.
+Here, `start` launches the graphical target without stopping multi-user services: usually sufficient. Use `isolate` only if you encounter conflicts between targets.
 
 ### Check What Loads at Boot Without Rebooting
 

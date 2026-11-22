@@ -20,7 +20,7 @@ iptables operates on three main chains:
 - **FORWARD**: rules for traffic passing through the system
 - **OUTPUT**: rules for outgoing traffic
 
-Each chain has a default policy (DROP, ACCEPT, or REJECT). Once a packet matches a rule, it’s acted upon immediately—no further rules in that chain are checked.
+Each chain has a default policy (DROP, ACCEPT, or REJECT). Once a packet matches a rule, it’s acted upon immediately: no further rules in that chain are checked.
 
 ## Basic Firewall Setup
 

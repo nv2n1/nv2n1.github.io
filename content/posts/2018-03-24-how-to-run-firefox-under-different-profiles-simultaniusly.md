@@ -10,7 +10,7 @@ canonical: /how-to-run-firefox-under-different-profiles-simultaniusly/
 url: /how-to-run-firefox-under-different-profiles-simultaniusly/
 ---
 
-Firefox uses a profile system to isolate settings, extensions, bookmarks, and browsing data. By default, Firefox only allows one instance per profile to run at a time—new instances redirect to the existing process. If you need multiple Firefox windows with different profiles open at once, you need to disable this behavior.
+Firefox uses a profile system to isolate settings, extensions, bookmarks, and browsing data. By default, Firefox only allows one instance per profile to run at a time: new instances redirect to the existing process. If you need multiple Firefox windows with different profiles open at once, you need to disable this behavior.
 
 ## The -no-remote Flag
 
@@ -94,7 +94,7 @@ The profile path shown in `about:support` (menu → Help → More Troubleshootin
 
 - Each profile instance uses separate memory and disk I/O. Running many profiles simultaneously will consume more resources.
 - Profile data doesn’t sync between instances. Changes made in one profile won’t appear in another until you restart.
-- Some extensions may behave unexpectedly when multiple instances access the same profile simultaneously (never do this—always use separate `-P` specifications).
+- Some extensions may behave unexpectedly when multiple instances access the same profile simultaneously (never do this: always use separate `-P` specifications).
 
 ## Troubleshooting
 

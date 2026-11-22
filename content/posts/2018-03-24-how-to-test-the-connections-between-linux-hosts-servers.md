@@ -100,11 +100,11 @@ netstat -tlnp
 
 The flags mean:
 
-- `t` – TCP sockets
-- `l` – listening sockets only
-- `n` – numeric output (IPs and ports, not names)
-- `p` – include process name and PID
-- `u` – UDP sockets (add this if you want UDP too)
+- `t`: TCP sockets
+- `l`: listening sockets only
+- `n`: numeric output (IPs and ports, not names)
+- `p`: include process name and PID
+- `u`: UDP sockets (add this if you want UDP too)
 
 For example, to see everything listening:
 

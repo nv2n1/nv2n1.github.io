@@ -10,7 +10,7 @@ canonical: /crypto-options-explained-a-guide-to-calls-puts-and-premiums/
 url: /crypto-options-explained-a-guide-to-calls-puts-and-premiums/
 ---
 
-A crypto option gives you the right — but not the obligation — to buy or sell a cryptocurrency at a fixed price before a set date. Unlike a futures contract, where you’re locked in, an option lets you walk away if the trade goes against you. Your downside is capped at the premium you paid.
+A crypto option gives you the right (but not the obligation) to buy or sell a cryptocurrency at a fixed price before a set date. Unlike a futures contract, where you’re locked in, an option lets you walk away if the trade goes against you. Your downside is capped at the premium you paid.
 
 ## Key Components
 
@@ -26,7 +26,7 @@ A crypto option gives you the right — but not the obligation — to buy or sel
 
 ## Use Cases for Crypto Options
 
-**Hedging**: If you hold 1 BTC and are concerned about a short-term price drop, buy a Put option. If BTC falls below your strike price, the Put gains value, offsetting losses on your spot holdings. This is insurance — you pay the premium for downside protection.
+**Hedging**: If you hold 1 BTC and are concerned about a short-term price drop, buy a Put option. If BTC falls below your strike price, the Put gains value, offsetting losses on your spot holdings. This is insurance: you pay the premium for downside protection.
 
 **Yield Generation**: Sell options (write calls or puts) to earn premiums as passive income. Covered call strategies are popular: sell call options against your existing holdings and collect the premium. The downside is capped gains if the asset rallies hard.
 
@@ -66,7 +66,7 @@ Alternatively, sell a 3,800 Call on 5 ETH for 200 USDC. You keep the premium; if
 
 ## Risks and Considerations
 
-**Time Decay**: Options lose value every day as expiration approaches. If the market doesn’t move, you lose money — potentially 100% of your premium for long options.
+**Time Decay**: Options lose value every day as expiration approaches. If the market doesn’t move, you lose money: potentially 100% of your premium for long options.
 
 **Complexity**: Multiple variables affect option prices. Misjudging volatility, time decay, or delta can be costly.
 

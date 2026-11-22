@@ -14,7 +14,7 @@ Node.js is available on Fedora through the DNF package manager and several alter
 
 ## Method 1: DNF (System Package Manager)
 
-The simplest method — install Node.js directly from Fedora’s repositories:
+The simplest method: install Node.js directly from Fedora’s repositories:
 
 ```wp-block-code
 sudo dnf install nodejs npm
@@ -48,7 +48,7 @@ This method gives you the latest patch releases within the selected major versio
 
 ## Method 3: NVM (Node Version Manager)
 
-NVM lets you install and switch between multiple Node.js versions per user — no root required:
+NVM lets you install and switch between multiple Node.js versions per user: no root required:
 
 ```wp-block-code
 # Install NVM
@@ -114,10 +114,10 @@ Now `npm install -g` works without root and installs to your home directory.
 
 ## Choosing the Right Method
 
-- **DNF** — Simple, system-wide, good for servers running a single Node.js version
-- **NodeSource** — Latest versions, system-wide, good for production servers
-- **NVM/FnM** — Multiple versions, per-user, best for development workstations
-- **Flatpak** — Sandboxed, least common, for security-sensitive environments
+- **DNF**: Simple, system-wide, good for servers running a single Node.js version
+- **NodeSource**: Latest versions, system-wide, good for production servers
+- **NVM/FnM**: Multiple versions, per-user, best for development workstations
+- **Flatpak**: Sandboxed, least common, for security-sensitive environments
 
 For most Fedora users, NVM provides the best development experience. For production servers, NodeSource gives you controlled, up-to-date system-wide installations.
 

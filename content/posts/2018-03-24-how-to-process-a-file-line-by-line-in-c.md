@@ -128,7 +128,7 @@ int main() {
 }
 ```
 
-This approach works when you know your maximum line length in advance and need predictable stack allocation. Be cautious with buffer overflow—always validate line length against your buffer size.
+This approach works when you know your maximum line length in advance and need predictable stack allocation. Be cautious with buffer overflow: always validate line length against your buffer size.
 
 ## Processing with Custom Delimiters
 

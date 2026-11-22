@@ -130,7 +130,7 @@ pdflatex document.tex
 
 **URLs with special characters:**
 
-Wrap the entire URL in the `url` field—BibTeX handles escaping automatically. If using `\url{}` in text, load the `hyperref` package:
+Wrap the entire URL in the `url` field: BibTeX handles escaping automatically. If using `\url{}` in text, load the `hyperref` package:
 
 ``` latex
 \usepackage{hyperref}
@@ -167,11 +167,11 @@ author = "First Author and Second Author and Third Author"
 
 ## Essential Guidelines
 
-- **Use HTTPS URLs only** — IEEE no longer accepts unsecured HTTP links
-- **Don’t use URL shorteners** — Always provide the full, canonical URL
-- **Verify access dates** — For volatile content (wikis, blogs), include the date you accessed it
-- **Title capitalization** — Use sentence case (capitalize only the first word and proper nouns)
-- **Special characters** — Escape dollar signs and underscores if not using braces: `\$` and `\_`
+- **Use HTTPS URLs only**: IEEE no longer accepts unsecured HTTP links
+- **Don’t use URL shorteners**: Always provide the full, canonical URL
+- **Verify access dates**: For volatile content (wikis, blogs), include the date you accessed it
+- **Title capitalization**: Use sentence case (capitalize only the first word and proper nouns)
+- **Special characters**: Escape dollar signs and underscores if not using braces: `\$` and `\_`
 
 ## Troubleshooting
 

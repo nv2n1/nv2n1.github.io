@@ -10,7 +10,7 @@ canonical: /wordpress-how-to-use-markdown-for-writing-posts/
 url: /wordpress-how-to-use-markdown-for-writing-posts/
 ---
 
-WordPress’s default block editor works fine for most users, but if you’re comfortable with Markdown—especially for code-heavy technical posts—you’ll want a solid setup that doesn’t corrupt existing content or create maintenance headaches.
+WordPress’s default block editor works fine for most users, but if you’re comfortable with Markdown (especially for code-heavy technical posts) you’ll want a solid setup that doesn’t corrupt existing content or create maintenance headaches.
 
 The key requirement: your solution must preserve Markdown in the database and render it on demand, rather than converting it to HTML and back. Solutions that do the latter will mangle posts with custom HTML, CSS, or embedded scripts.
 
@@ -22,11 +22,11 @@ The most reliable method combines plugins that handle two separate concerns:
 
 Use a Markdown parser that converts Markdown to HTML during page rendering without modifying stored content. The best option is <a href="https://michelf.ca/projects/php-markdown/extra/" rel="nofollow noopener" target="_blank">PHP Markdown Extra</a> by Michel Fortin, which handles tables, footnotes, and other extensions commonly needed in technical writing.
 
-You can integrate it as a WordPress plugin or include it directly in your theme’s `functions.php`. If self-hosting the parser, make sure your caching strategy handles the rendering overhead—enable page caching with <a href="https://wordpress.org/plugins/wp-super-cache/" rel="nofollow noopener" target="_blank">WP Super Cache</a> or <a href="https://wordpress.org/plugins/w3-total-cache/" rel="nofollow noopener" target="_blank">W3 Total Cache</a> to avoid repeated parsing on every request.
+You can integrate it as a WordPress plugin or include it directly in your theme’s `functions.php`. If self-hosting the parser, make sure your caching strategy handles the rendering overhead: enable page caching with <a href="https://wordpress.org/plugins/wp-super-cache/" rel="nofollow noopener" target="_blank">WP Super Cache</a> or <a href="https://wordpress.org/plugins/w3-total-cache/" rel="nofollow noopener" target="_blank">W3 Total Cache</a> to avoid repeated parsing on every request.
 
 **2. A proper Markdown editor**
 
-<a href="https://wordpress.org/plugins/markdown-quicktags/" rel="nofollow noopener" target="_blank">Markdown QuickTags</a> provides a clean interface with syntax buttons, live preview, and crucially—bidirectional conversion between HTML and Markdown. This matters when migrating old HTML posts: you can convert them to Markdown, edit in a readable format, and convert back if needed. The undo/redo functionality is essential when doing bulk conversions.
+<a href="https://wordpress.org/plugins/markdown-quicktags/" rel="nofollow noopener" target="_blank">Markdown QuickTags</a> provides a clean interface with syntax buttons, live preview, and crucially: bidirectional conversion between HTML and Markdown. This matters when migrating old HTML posts: you can convert them to Markdown, edit in a readable format, and convert back if needed. The undo/redo functionality is essential when doing bulk conversions.
 
 ### Compatibility with Existing Posts
 

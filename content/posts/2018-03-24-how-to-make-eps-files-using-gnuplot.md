@@ -24,10 +24,10 @@ plot sin(x)
 
 This generates an EPS file directly without intermediate conversions. The key parameters:
 
-- `eps` — produces Encapsulated PostScript format
-- `enhanced` — enables enhanced text mode (subscripts, superscripts, special characters)
-- `mono` — monochrome output (omit for color)
-- Font name and size — here “Helvetica” at 14pt
+- `eps`: produces Encapsulated PostScript format
+- `enhanced`: enables enhanced text mode (subscripts, superscripts, special characters)
+- `mono`: monochrome output (omit for color)
+- Font name and size: here “Helvetica” at 14pt
 
 ### Adjusting Plot Dimensions
 

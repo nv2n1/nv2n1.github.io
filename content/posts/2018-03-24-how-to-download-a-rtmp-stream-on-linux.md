@@ -62,7 +62,7 @@ RTMP streams aren’t always obvious in a webpage’s HTML. Check:
 
 **Browser developer tools**: Open DevTools (F12), go to the Network tab, filter for requests containing “rtmp”, and look for the full stream URL in headers or request bodies.
 
-**JavaScript obfuscation**: Search the page source for “rtmp” — it’s often embedded in JavaScript. Look for patterns like `rtmp://` or variables containing stream data.
+**JavaScript obfuscation**: Search the page source for “rtmp”: it’s often embedded in JavaScript. Look for patterns like `rtmp://` or variables containing stream data.
 
 **Browser cache**: In Firefox, press Ctrl+Shift+K and search through the console output or check about:cache for recent connections.
 
@@ -70,7 +70,7 @@ RTMP streams aren’t always obvious in a webpage’s HTML. Check:
 
 ## Performance and reliability tips
 
-- Use `-v` flag with `rtmpdump` for verbose output if streams fail — it shows exactly where the connection breaks
+- Use `-v` flag with `rtmpdump` for verbose output if streams fail: it shows exactly where the connection breaks
 - Add `--stop` to `rtmpdump` to set a maximum duration: `rtmpdump -r "rtmp://..." --stop 3600 -o output.mp4` (stops after 1 hour)
 - For very large streams, run the command in `screen` or `tmux` to avoid losing progress if your terminal closes
 - If ffmpeg shows connection timeouts, try increasing the timeout: `-rtmp_socket_timeout 30000` (milliseconds)
@@ -83,7 +83,7 @@ Once downloaded, verify the file integrity:
 ffprobe output.mp4
 ```
 
-This shows duration, codecs, bitrate, and any corruption issues. If the file seems incomplete or the stream was interrupted, `ffmpeg` and `rtmpdump` both support resuming — just re-run the same command and they’ll typically append or resume from where they stopped.
+This shows duration, codecs, bitrate, and any corruption issues. If the file seems incomplete or the stream was interrupted, `ffmpeg` and `rtmpdump` both support resuming: just re-run the same command and they’ll typically append or resume from where they stopped.
 
 ## 2026 Comprehensive Guide: Best Practices
 

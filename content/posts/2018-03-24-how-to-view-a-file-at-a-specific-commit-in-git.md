@@ -10,7 +10,7 @@ canonical: /how-to-view-a-file-at-a-specific-commit-in-git/
 url: /how-to-view-a-file-at-a-specific-commit-in-git/
 ---
 
-Sometimes you need to view a file as it existed at a specific commit in Git — without checking out that commit or modifying your working directory. Git provides several ways to do this.
+Sometimes you need to view a file as it existed at a specific commit in Git: without checking out that commit or modifying your working directory. Git provides several ways to do this.
 
 ## View a File at a Specific Commit
 
@@ -136,12 +136,12 @@ git instaweb --httpd=webrick
 
 ## Quick Reference
 
-- `git show hash:path` — View file at a commit
-- `git show branch:path` — View file on a branch
-- `git diff c1 c2 -- path` — Compare file between commits
-- `git restore --source hash path` — Restore file from commit
-- `git blame path` — Line-level history
-- `git log -- path` — Find commits that touched a file
+- `git show hash:path`: View file at a commit
+- `git show branch:path`: View file on a branch
+- `git diff c1 c2 -- path`: Compare file between commits
+- `git restore --source hash path`: Restore file from commit
+- `git blame path`: Line-level history
+- `git log -- path`: Find commits that touched a file
 
 ## Bisect to Find When a File Changed
 

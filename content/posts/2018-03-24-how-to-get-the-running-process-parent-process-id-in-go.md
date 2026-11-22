@@ -167,7 +167,7 @@ func main() {
 package main
 ```
 
-For most applications, `os.Getppid()` is the recommended choice—it’s simple, portable, and handles platform differences automatically.
+For most applications, `os.Getppid()` is the recommended choice: it’s simple, portable, and handles platform differences automatically.
 
 ## 2026 Comprehensive Guide: Best Practices
 

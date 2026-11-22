@@ -10,7 +10,7 @@ canonical: /how-to-move-all-the-files-under-users-for-a-user-to-another-drive-on
 url: /how-to-move-all-the-files-under-users-for-a-user-to-another-drive-on-windows/
 ---
 
-When your C: drive fills up with user profile data, moving the entire user directory to another drive is a legitimate solution—but it requires careful execution and understanding of the tradeoffs involved.
+When your C: drive fills up with user profile data, moving the entire user directory to another drive is a legitimate solution, but it requires careful execution and understanding of the tradeoffs involved.
 
 ## Why This Matters
 

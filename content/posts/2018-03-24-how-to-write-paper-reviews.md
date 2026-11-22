@@ -14,7 +14,7 @@ Writing effective paper reviews is essential work in academic fields like inform
 
 ## What Makes a Good Review
 
-A solid paper review balances critical analysis with actionable feedback. Start by reading the paper carefully—often more than once. First pass: get the main argument. Second pass: check claims, methodology, and evidence. Third pass: evaluate presentation and significance.
+A solid paper review balances critical analysis with actionable feedback. Start by reading the paper carefully: often more than once. First pass: get the main argument. Second pass: check claims, methodology, and evidence. Third pass: evaluate presentation and significance.
 
 Your review should address these key areas:
 
@@ -71,7 +71,7 @@ Be specific. “The experiments are insufficient” is useless feedback. “The 
 
 - Set the review aside after writing and come back to it. You’ll often find places where you’re unclear or unfair.
 - Quote specific passages when criticizing claims. Makes your points concrete.
-- Distinguish between “this is wrong” and “this is not novel” and “this could be clearer”—they’re different issues.
+- Distinguish between “this is wrong” and “this is not novel” and “this could be clearer”: they’re different issues.
 - If recommending rejection, be clear on what would need to change for acceptance. Rejection without a path forward wastes everyone’s time.
 - Check the author’s response (if the venue allows it). Sometimes misunderstandings get cleared up, and you learn something.
 

@@ -119,9 +119,9 @@ Create `~/.ocp/ocp-indent.conf` to customize rules:
 
 Available profiles:
 
-- `normal` — Standard OCaml indentation
-- `apprentice` — Conservative indentation
-- `JaneStreet` — Jane Street style guide (good default for most projects)
+- `normal`: Standard OCaml indentation
+- `apprentice`: Conservative indentation
+- `JaneStreet`: Jane Street style guide (good default for most projects)
 
 ## Troubleshooting
 

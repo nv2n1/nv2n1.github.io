@@ -72,7 +72,7 @@ SELECT origin_url, username_value, password_value FROM logins WHERE blacklisted_
 .exit
 ```
 
-This exports only non-blacklisted passwords. Adjust the query as needed—for example, to see all columns:
+This exports only non-blacklisted passwords. Adjust the query as needed, for example, to see all columns:
 
 ``` sql
 .mode column

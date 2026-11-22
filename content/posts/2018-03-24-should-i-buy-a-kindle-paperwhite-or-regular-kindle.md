@@ -14,7 +14,7 @@ This is fundamentally a decision about display technology and your reading habit
 
 ### Display Technology
 
-The standard Kindle uses e-ink technology with a backlit display that requires external light sources — sunlight, a lamp, or overhead lighting. It’s readable but not ideal for low-light conditions.
+The standard Kindle uses e-ink technology with a backlit display that requires external light sources: sunlight, a lamp, or overhead lighting. It’s readable but not ideal for low-light conditions.
 
 The Paperwhite adds a front-lit display with LEDs positioned around the bezel. This lets you read in dim environments, in bed without waking others, or outdoors at dusk. The tradeoff: slight glare compared to the standard model, though Amazon has refined this over generations.
 
@@ -26,11 +26,11 @@ Standard Kindle lasts roughly 2-3 months between charges with regular use. Paper
 
 ### Resolution and Text Quality
 
-Modern Kindle models (2024+) use 300 PPI across both standard and Paperwhite, making text crisp and readable. Older standard Kindles used 167 PPI — noticeably grainier. If you already own a recent Kindle, the upgrade difference won’t be dramatic. If upgrading from a 2015 or earlier device, any new Kindle will feel sharper.
+Modern Kindle models (2024+) use 300 PPI across both standard and Paperwhite, making text crisp and readable. Older standard Kindles used 167 PPI: noticeably grainier. If you already own a recent Kindle, the upgrade difference won’t be dramatic. If upgrading from a 2015 or earlier device, any new Kindle will feel sharper.
 
 ### Waterproofing
 
-Both current models are IPX8 rated — they survive accidental dunking in fresh water for up to 60 minutes. Salt water and chlorine will damage them. This is a meaningful feature if you read by pools or in the bath.
+Both current models are IPX8 rated: they survive accidental dunking in fresh water for up to 60 minutes. Salt water and chlorine will damage them. This is a meaningful feature if you read by pools or in the bath.
 
 ### Storage
 
@@ -55,11 +55,11 @@ Get a Paperwhite if you:
 
 ### Practical Recommendation
 
-If you’re spending more than 30 minutes daily reading and any significant portion happens outside controlled lighting, the Paperwhite justifies its cost. The display quality difference between current models is negligible — the lighting capability is the real differentiator.
+If you’re spending more than 30 minutes daily reading and any significant portion happens outside controlled lighting, the Paperwhite justifies its cost. The display quality difference between current models is negligible: the lighting capability is the real differentiator.
 
 Battery life anxiety is overblown. Both charge fully in 2-3 hours via USB-C (standard on 2024+ models). Keep either device away from extreme heat and moisture, and it’ll last 4-6 years before battery degradation becomes noticeable.
 
-Check current Amazon pricing before buying — promotions run frequently, sometimes erasing the price gap between models.
+Check current Amazon pricing before buying: promotions run frequently, sometimes erasing the price gap between models.
 
 ## 2026 Comprehensive Guide: Best Practices
 

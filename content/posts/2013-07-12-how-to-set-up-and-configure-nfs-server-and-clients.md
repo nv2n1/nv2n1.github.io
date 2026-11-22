@@ -18,7 +18,7 @@ Install the required packages:
 dnf install nfs-utils
 ```
 
-`nfs-utils` includes both server and client tools. The separate `rpcbind` package is no longer needed on modern systems — it’s handled as a dependency and runs as part of the NFS service.
+`nfs-utils` includes both server and client tools. The separate `rpcbind` package is no longer needed on modern systems: it’s handled as a dependency and runs as part of the NFS service.
 
 ### Configure /etc/exports
 
@@ -30,13 +30,13 @@ Example: allow the 10.0.0.0/24 subnet to mount `/home` with read/write access:
 
 Common options:
 
-- `rw` — read/write (default is `ro`)
-- `sync` — flush writes to disk immediately (safer, slower)
-- `async` — buffer writes (faster, riskier on power loss)
-- `no_subtree_check` — disable subtree checking (recommended for modern setups)
-- `no_root_squash` — allow root on client to write as root on server (security risk; avoid unless necessary)
-- `root_squash` — map root to nobody (default, recommended)
-- `all_squash` — map all users to nobody
+- `rw`: read/write (default is `ro`)
+- `sync`: flush writes to disk immediately (safer, slower)
+- `async`: buffer writes (faster, riskier on power loss)
+- `no_subtree_check`: disable subtree checking (recommended for modern setups)
+- `no_root_squash`: allow root on client to write as root on server (security risk; avoid unless necessary)
+- `root_squash`: map root to nobody (default, recommended)
+- `all_squash`: map all users to nobody
 
 For more granular control, specify individual hosts:
 

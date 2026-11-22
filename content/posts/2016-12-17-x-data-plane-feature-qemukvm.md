@@ -42,7 +42,7 @@ Watch for high context switch counts on QEMU threads:
 pidstat -w -p $(pidof qemu-system-x86_64) 1
 ```
 
-High `cswch` (context switches) indicates the scheduler is preempting threads frequently—a symptom of lock contention. If you see thousands of switches per second on QEMU threads, that’s a strong signal.
+High `cswch` (context switches) indicates the scheduler is preempting threads frequently: a symptom of lock contention. If you see thousands of switches per second on QEMU threads, that’s a strong signal.
 
 ### Enabling QEMU Trace Points
 

@@ -18,17 +18,17 @@ The C standard defines side effects as changes to the state of the execution env
 
 The C standard guarantees sequence points at these locations:
 
-1.  **End of a full expression** — An expression statement like `x = 5;` or the expression in `if (x > 10)`. Subexpressions within a larger expression do not have sequence points between them.
+1.  **End of a full expression**: An expression statement like `x = 5;` or the expression in `if (x > 10)`. Subexpressions within a larger expression do not have sequence points between them.
 
-2.  **Logical operators** — After evaluating the left operand of `&&`, `||`, and the ternary operator `?:`
+2.  **Logical operators**: After evaluating the left operand of `&&`, `||`, and the ternary operator `?:`
 
-3.  **Comma operator** — After the left operand of `,`
+3.  **Comma operator**: After the left operand of `,`
 
-4.  **Function calls** — After all arguments are evaluated and before the function executes
+4.  **Function calls**: After all arguments are evaluated and before the function executes
 
 ## The Critical Rule
 
-Between consecutive sequence points, an object’s stored value can be modified at most once by a single expression. Furthermore, if you access a variable’s value between modifications (within the same sequence point), that access must be to determine what value to store—not for some other purpose.
+Between consecutive sequence points, an object’s stored value can be modified at most once by a single expression. Furthermore, if you access a variable’s value between modifications (within the same sequence point), that access must be to determine what value to store: not for some other purpose.
 
 ## Examples of Undefined Behavior
 
@@ -76,6 +76,6 @@ a[temp] = i++;
 
 In modern C code (C99 and later), compilers are often smart enough to warn about these violations if you enable warnings (`-Wall -Wextra`). GCC and Clang will flag obvious cases like `i = ++i + i++`.
 
-However, some violations are subtle and may only manifest on certain architectures or optimization levels. The safest approach is to **never modify a variable and read it in the same statement**. Keep your expressions simple and let the compiler optimize—don’t try to be too clever.
+However, some violations are subtle and may only manifest on certain architectures or optimization levels. The safest approach is to **never modify a variable and read it in the same statement**. Keep your expressions simple and let the compiler optimize: don’t try to be too clever.
 
 The sequence point rules exist because C compilers have significant freedom in how they schedule operations for performance. Relying on undefined behavior might work on your machine today but fail on another compiler, architecture, or after a compiler upgrade.

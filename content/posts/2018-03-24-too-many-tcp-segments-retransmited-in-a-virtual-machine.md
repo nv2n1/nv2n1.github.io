@@ -89,7 +89,7 @@ Look for `rx_dropped`, `tx_dropped`, and `rx_errors`. High counts point to physi
 
 **Reduce VM Density**
 
-The most straightforward fix: don’t oversubscribe. A 4-core host should comfortably run 2-3 VMs if they’re network-intensive. The original finding—dropping from 4 VMs to 3—likely worked because it reduced CPU contention on the hypervisor’s network processing path.
+The most straightforward fix: don’t oversubscribe. A 4-core host should comfortably run 2-3 VMs if they’re network-intensive. The original finding (dropping from 4 VMs to 3) likely worked because it reduced CPU contention on the hypervisor’s network processing path.
 
 **Tune VM vCPU Assignment**
 

@@ -24,7 +24,7 @@ These are ideal for diagrams, documentation, and architectural drawings since th
 
 ### Photography and Stock Images
 
-**Freepik** provides both free and premium server photography. Filter by license to find images suitable for your use case — check attribution requirements before publishing.
+**Freepik** provides both free and premium server photography. Filter by license to find images suitable for your use case: check attribution requirements before publishing.
 
 **Unsplash** and **Pexels** both host high-quality data center and server room photos under permissive licenses (typically CC0 or similar). Search for “data center,” “server room,” or “server rack” to find relevant shots.
 
@@ -43,7 +43,7 @@ If you need server images for actual infrastructure provisioning rather than vis
 ### Usage Tips
 
 - Always verify the license before using images commercially or in public-facing content
-- For technical documentation, SVG icons work better than raster images — they remain crisp at any scale
+- For technical documentation, SVG icons work better than raster images: they remain crisp at any scale
 - If you’re documenting infrastructure, consider using **Graphviz** or **draw.io** to generate consistent diagrams programmatically rather than relying on static images
 - For system architecture diagrams, **PlantUML** or **Mermaid** can generate diagrams from text, making version control easier
 

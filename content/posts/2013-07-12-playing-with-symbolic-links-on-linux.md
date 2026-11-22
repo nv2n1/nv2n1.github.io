@@ -10,7 +10,7 @@ canonical: /playing-with-symbolic-links-on-linux/
 url: /playing-with-symbolic-links-on-linux/
 ---
 
-Symbolic links (symlinks) are aliases that point to other files or directories. Most operations treat them transparently—programs reading or writing through a symlink behave as if working with the target directly. Understanding how to create, test, and manage them correctly is essential for system administration.
+Symbolic links (symlinks) are aliases that point to other files or directories. Most operations treat them transparently: programs reading or writing through a symlink behave as if working with the target directly. Understanding how to create, test, and manage them correctly is essential for system administration.
 
 ## Creating Symbolic Links
 

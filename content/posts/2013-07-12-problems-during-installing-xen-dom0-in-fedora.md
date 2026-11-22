@@ -72,7 +72,7 @@ dracut --hostonly-cmdline /boot/initramfs-custom.img $(uname -r)
 
 ## GPU and DRM Issues
 
-Graphics-related crashes during boot—particularly with AMD Radeon, Intel i915, or NVIDIA cards—often stem from DRM (Direct Rendering Manager) conflicts with Xen’s console handling.
+Graphics-related crashes during boot (particularly with AMD Radeon, Intel i915, or NVIDIA cards) often stem from DRM (Direct Rendering Manager) conflicts with Xen’s console handling.
 
 ### Quick Fix: Disable Modesetting
 
@@ -103,7 +103,7 @@ This forces Xen to use graphics mode before Dom0 kernel boot, bypassing DRM init
     vga=mode-0x318                   # Specific hex mode from 'vga=ask' menu
     vga=gfx-1280x1024x32,keep        # Graphics mode with persistent Xen console output
 
-The `keep` option is useful for debugging—it preserves Xen hypervisor messages on the console even after Dom0 starts.
+The `keep` option is useful for debugging: it preserves Xen hypervisor messages on the console even after Dom0 starts.
 
 ## 32-bit Kernel Configuration
 
@@ -168,4 +168,4 @@ Before concluding Xen won’t work on your system:
 5.  Try latest Fedora kernel: `dnf update kernel`
 6.  Check for BIOS/firmware updates from your hardware vendor
 
-If you’re experiencing persistent issues on modern systems, consider KVM as an alternative—it’s better integrated into Fedora and receives more active development.
+If you’re experiencing persistent issues on modern systems, consider KVM as an alternative: it’s better integrated into Fedora and receives more active development.

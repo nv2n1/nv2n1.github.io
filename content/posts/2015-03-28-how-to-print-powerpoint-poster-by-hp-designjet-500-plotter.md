@@ -10,7 +10,7 @@ canonical: /how-to-print-powerpoint-poster-by-hp-designjet-500-plotter/
 url: /how-to-print-powerpoint-poster-by-hp-designjet-500-plotter/
 ---
 
-The HP DesignJet 500 and similar wide-format plotters handle posters, technical drawings, and large documents well—but they require careful configuration. This guide covers printing a 24″ × 36″ PowerPoint poster on a 36″ roll, though the process generalizes to other sizes.
+The HP DesignJet 500 and similar wide-format plotters handle posters, technical drawings, and large documents well, but they require careful configuration. This guide covers printing a 24″ × 36″ PowerPoint poster on a 36″ roll, though the process generalizes to other sizes.
 
 ## Understanding Your Hardware Constraints
 
@@ -22,7 +22,7 @@ The DesignJet 500 accepts roll media up to 36″ wide. For a 24″ × 36″ post
 - **Print time**: 15–25 minutes at high quality
 - **Media types supported**: Bond, coated, matte, glossy, fabric, vinyl
 
-The roll width is your hard constraint—you can’t print wider than what’s loaded, and you must account for this in your document setup.
+The roll width is your hard constraint: you can’t print wider than what’s loaded, and you must account for this in your document setup.
 
 ## Preparing Your Document
 
@@ -103,7 +103,7 @@ Click **OK** and monitor the plotter’s progress. Large-format prints typically
 **Plotter fails to feed media or produces jams**
 
 - Ensure the roll is properly seated in both spindle holders
-- Adjust the media guides to align with the 36″ roll width—guides too tight or loose will cause misfeeds
+- Adjust the media guides to align with the 36″ roll width: guides too tight or loose will cause misfeeds
 - Check the plotter’s error log via its web interface for specific fault codes
 - Manually advance a small amount of media to clear potential jams before restarting
 
@@ -119,7 +119,7 @@ Click **OK** and monitor the plotter’s progress. Large-format prints typically
 
 **Always print a draft first**. Run one test copy at Normal quality to verify layout and colors before committing to a Best quality print, which uses more ink and time.
 
-**Keep media on hand**. Large-format rolls are expensive but durable—test prints reveal issues before final versions, unlike single-use office paper.
+**Keep media on hand**. Large-format rolls are expensive but durable: test prints reveal issues before final versions, unlike single-use office paper.
 
 **Maintain your plotter regularly**. Set a calendar reminder to clean the print head monthly and check for firmware updates quarterly via the web interface.
 

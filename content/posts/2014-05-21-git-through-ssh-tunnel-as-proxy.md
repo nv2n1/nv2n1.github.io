@@ -70,7 +70,7 @@ Or use the shorthand syntax:
 git clone git@git-server.example.com:path/to/repo.git
 ```
 
-All Git operations (`push`, `pull`, `fetch`) automatically use the SSH tunnel. The tunnel is transparent to Git — no special syntax needed.
+All Git operations (`push`, `pull`, `fetch`) automatically use the SSH tunnel. The tunnel is transparent to Git: no special syntax needed.
 
 ## Chaining Multiple Proxies
 
@@ -94,8 +94,8 @@ If you’re stuck with older SSH versions or need explicit control, use `ProxyCo
 
 The `ProxyCommand` works as follows:
 
-- `ssh -q user@proxy.example.com` — connects to the proxy quietly
-- `nc %h %p` — uses netcat on the proxy to relay traffic to `%h` (the Git server) on port `%p` (22 for SSH)
+- `ssh -q user@proxy.example.com`: connects to the proxy quietly
+- `nc %h %p`: uses netcat on the proxy to relay traffic to `%h` (the Git server) on port `%p` (22 for SSH)
 
 This method requires `nc` on the proxy. If it’s missing:
 
@@ -118,11 +118,11 @@ For production environments where the Git server runs SSH on a non-standard port
 
 Use specific host entries instead of wildcards to avoid unintended proxy routing:
 
-    # Good — applies only to this server
+    # Good: applies only to this server
     Host git-server.example.com
       ProxyJump user@proxy.example.com
 
-    # Avoid — applies to all hosts matching the pattern
+    # Avoid: applies to all hosts matching the pattern
     Host *.example.com
       ProxyJump user@proxy.example.com
 

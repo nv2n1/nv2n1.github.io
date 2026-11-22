@@ -35,8 +35,8 @@ Create or edit `~/.ssh/config`:
 
 Key parameters:
 
-- `IdentityFile` — the private key to use for this host
-- `IdentitiesOnly yes` — tells SSH to use *only* the specified key, ignoring other keys in your ssh-agent or default locations
+- `IdentityFile`: the private key to use for this host
+- `IdentitiesOnly yes`: tells SSH to use *only* the specified key, ignoring other keys in your ssh-agent or default locations
 - Wildcards like `*.internal.corp` match multiple hosts with a single rule
 
 Ensure your config file has restricted permissions:

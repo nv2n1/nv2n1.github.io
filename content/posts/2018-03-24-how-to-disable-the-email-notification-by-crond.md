@@ -127,7 +127,7 @@ MAILTO=""
 0 2 * * * /usr/local/bin/backup.sh >> /var/log/backup.log 2>&1
 ```
 
-This eliminates email notifications entirely while ensuring output is captured for review. If the job runs successfully and produces no output, nothing is logged—reducing noise. If it fails or produces output, you have a persistent record.
+This eliminates email notifications entirely while ensuring output is captured for review. If the job runs successfully and produces no output, nothing is logged: reducing noise. If it fails or produces output, you have a persistent record.
 
 ## 2026 Comprehensive Guide: Best Practices
 

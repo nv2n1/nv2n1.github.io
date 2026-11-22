@@ -28,7 +28,7 @@ The `+` sign disables an option; `-` enables it. This works for both long-form (
 
 ## Common Options You’ll Disable
 
-**set +e** — Allow commands to fail without exiting the script
+**set +e**: Allow commands to fail without exiting the script
 
 By default, `set -e` exits immediately if any command fails. Disabling it lets the script continue even when commands return non-zero status codes. Useful when you expect certain commands might fail:
 
@@ -46,7 +46,7 @@ set -e
 # Rest of script continues with error checking enabled
 ```
 
-**set +u** — Allow unset variables
+**set +u**: Allow unset variables
 
 `set -u` treats unset variables as errors, preventing typos from silently passing through. Disabling it reverts to lenient behavior where undefined variables expand to empty strings. Generally not recommended for production scripts:
 
@@ -61,9 +61,9 @@ set +u
 echo "$UNDEFINED_VAR"  # Expands to empty string, no error
 ```
 
-**set +x** — Disable command echo (debugging)
+**set +x**: Disable command echo (debugging)
 
-`set -x` prints each command before executing it—invaluable for debugging. Disable it to stop the noise:
+`set -x` prints each command before executing it: invaluable for debugging. Disable it to stop the noise:
 
 ``` bash
 #!/bin/bash

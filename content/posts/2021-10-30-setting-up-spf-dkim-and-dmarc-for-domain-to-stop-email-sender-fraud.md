@@ -31,12 +31,12 @@ SPF is defined in RFC 7208.
 
 The `v=spf1` tag denotes the version. Common mechanisms include:
 
-- `ip4:` or `ip6:` — authorizes specific IP addresses
-- `include:` — references another domain’s SPF record
-- `a:`, `mx:` — authorizes servers listed in A or MX records
-- `+all` — accept all (rarely used, insecure)
-- `~all` — soft-fail unauthorized senders (default)
-- `-all` — hard-fail unauthorized senders (strictest)
+- `ip4:` or `ip6:`: authorizes specific IP addresses
+- `include:`: references another domain’s SPF record
+- `a:`, `mx:`: authorizes servers listed in A or MX records
+- `+all`: accept all (rarely used, insecure)
+- `~all`: soft-fail unauthorized senders (default)
+- `-all`: hard-fail unauthorized senders (strictest)
 
 Mail hosting providers typically supply SPF records for their customers. Query your domain with:
 
@@ -70,11 +70,11 @@ Returns:
 
 The fields mean:
 
-- `v=DKIM1` — DKIM version
-- `k=rsa` — key type (RSA is standard; ed25519 support is growing)
-- `p=` — the public key (base64-encoded)
-- `t=s` (optional) — test mode flag
-- `t=y` (optional) — domain owner’s assertion of DKIM deployment
+- `v=DKIM1`: DKIM version
+- `k=rsa`: key type (RSA is standard; ed25519 support is growing)
+- `p=`: the public key (base64-encoded)
+- `t=s` (optional): test mode flag
+- `t=y` (optional): domain owner’s assertion of DKIM deployment
 
 Mail hosting providers generate and manage DKIM keys. You typically paste the public key into your DNS; the provider keeps the private key on their mail servers.
 
@@ -92,18 +92,18 @@ DMARC is defined in RFC 7489.
 
 **DMARC Record Fields:**
 
-- `v=DMARC1` — DMARC version (required)
-- `p=` — policy for failed authentication (required)
-  - `none` — monitor only, no action
-  - `quarantine` — route to spam folder
-  - `reject` — refuse delivery
-- `sp=` — subdomain policy (optional; overrides `p=` for subdomains)
-- `rua=` — aggregate report recipient email (recommended)
-- `ruf=` — forensic report recipient email (optional; verbose, high volume)
-- `fo=` — forensic reporting options (0=default, 1=all, d=dkim-only, s=spf-only)
-- `pct=100` — percentage of mail to apply the policy to (useful for gradual rollout; start at 10-20%, increase to 100)
-- `adkim=r` — DKIM alignment mode (r=relaxed, s=strict; relaxed is default)
-- `aspf=r` — SPF alignment mode (relaxed vs. strict)
+- `v=DMARC1`: DMARC version (required)
+- `p=`: policy for failed authentication (required)
+  - `none`: monitor only, no action
+  - `quarantine`: route to spam folder
+  - `reject`: refuse delivery
+- `sp=`: subdomain policy (optional; overrides `p=` for subdomains)
+- `rua=`: aggregate report recipient email (recommended)
+- `ruf=`: forensic report recipient email (optional; verbose, high volume)
+- `fo=`: forensic reporting options (0=default, 1=all, d=dkim-only, s=spf-only)
+- `pct=100`: percentage of mail to apply the policy to (useful for gradual rollout; start at 10-20%, increase to 100)
+- `adkim=r`: DKIM alignment mode (r=relaxed, s=strict; relaxed is default)
+- `aspf=r`: SPF alignment mode (relaxed vs. strict)
 
 Query your domain:
 

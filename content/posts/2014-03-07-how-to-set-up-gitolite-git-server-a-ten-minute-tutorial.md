@@ -100,8 +100,8 @@ cd gitolite-admin
 
 The directory structure:
 
-- `conf/gitolite.conf` — All repository and permission rules
-- `keydir/` — User SSH public keys (one file per user, named `username.pub`)
+- `conf/gitolite.conf`: All repository and permission rules
+- `keydir/`: User SSH public keys (one file per user, named `username.pub`)
 
 ### Adding a User
 
@@ -125,10 +125,10 @@ Edit `conf/gitolite.conf` and add:
 
 Permission levels:
 
-- `R` — read-only
-- `RW` — read and write (no force push or delete)
-- `RW+` — read, write, force push, delete
-- `-` — deny access
+- `R`: read-only
+- `RW`: read and write (no force push or delete)
+- `RW+`: read, write, force push, delete
+- `-`: deny access
 
 Commit and push:
 

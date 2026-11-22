@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-The `gethostname()` function fills the buffer with the null-terminated hostname. The second parameter specifies the buffer size — always provide adequate space to avoid truncation. On most systems, the hostname is limited to 255 characters, but it’s safer to allocate 256 bytes.
+The `gethostname()` function fills the buffer with the null-terminated hostname. The second parameter specifies the buffer size: always provide adequate space to avoid truncation. On most systems, the hostname is limited to 255 characters, but it’s safer to allocate 256 bytes.
 
 One limitation: `gethostname()` may return only the short hostname without the domain suffix. If you need the fully qualified domain name (FQDN), use a different approach.
 
@@ -126,7 +126,7 @@ std::string get_hostname(bool fqdn = false) {
 char hostname[HOST_NAME_MAX + 1];
 ```
 
-**Network failures**: When using `getaddrinfo()`, handle DNS resolution failures gracefully — the system may be offline or DNS misconfigured. In containerized environments, the hostname might not resolve at all.
+**Network failures**: When using `getaddrinfo()`, handle DNS resolution failures gracefully: the system may be offline or DNS misconfigured. In containerized environments, the hostname might not resolve at all.
 
 **Systemd integration**: Modern systemd systems provide hostname information via `systemd-hostnamed` over D-Bus, but `gethostname()` remains the standard approach for compatibility.
 

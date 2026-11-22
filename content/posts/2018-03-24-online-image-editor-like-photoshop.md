@@ -16,7 +16,7 @@ If you need basic image editing without installing software or paying Photoshopâ
 
 Pixlr remains a solid choice for straightforward editing. The web-based editor handles layers, filters, and common adjustments without much friction. Free tier covers most basic work, though premium features unlock advanced tools.
 
-Access it at pixlr.com â€” no installation required.
+Access it at pixlr.com: no installation required.
 
 ### Photopea
 

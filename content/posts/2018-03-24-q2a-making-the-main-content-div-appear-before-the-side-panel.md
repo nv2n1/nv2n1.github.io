@@ -122,8 +122,8 @@ Moving main content before the sidebar provides several advantages:
 
 - **Search engine crawlers** see your primary content first, giving it more weight
 - **Screen readers** announce the main content before navigation elements
-- **Page speed** improves slightly — the main content renders before sidebar widgets load
-- **Mobile rendering** — on slow connections, users see content before sidebar elements
+- **Page speed** improves slightly: the main content renders before sidebar widgets load
+- **Mobile rendering**: on slow connections, users see content before sidebar elements
 
 Google’s page experience signals reward sites that prioritize main content visibility, making this a worthwhile optimization for content-focused sites.
 

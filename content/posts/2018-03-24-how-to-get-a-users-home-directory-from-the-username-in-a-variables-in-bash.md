@@ -10,7 +10,7 @@ canonical: /how-to-get-a-users-home-directory-from-the-username-in-a-variables-i
 url: /how-to-get-a-users-home-directory-from-the-username-in-a-variables-in-bash/
 ---
 
-The tilde expansion `~username` works fine when the username is literal, but fails when the username is stored in a variable like `~$user`. Bash doesn’t perform tilde expansion on variables by default—it only expands `~` at the beginning of a word before variable expansion happens.
+The tilde expansion `~username` works fine when the username is literal, but fails when the username is stored in a variable like `~$user`. Bash doesn’t perform tilde expansion on variables by default: it only expands `~` at the beginning of a word before variable expansion happens.
 
 ## Using eval
 

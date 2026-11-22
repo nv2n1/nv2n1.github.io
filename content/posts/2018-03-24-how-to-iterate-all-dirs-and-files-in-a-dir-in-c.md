@@ -12,7 +12,7 @@ url: /how-to-iterate-all-dirs-and-files-in-a-dir-in-c/
 
 For iterating through directories and files in C++, you have several options depending on your needs and C++ standard version.
 
-### Using `<filesystem>` (C++17 and Later — Recommended)
+### Using `<filesystem>` (C++17 and Later: Recommended)
 
 The modern approach uses `std::filesystem`, which is cleaner, safer, and handles cross-platform differences for you:
 
@@ -167,4 +167,4 @@ g++ -std=c++17 -o listdir main.cpp -lstdc++fs
 
 Modern GCC and Clang don’t require this flag.
 
-Use `<filesystem>` for new projects—it’s safer, more readable, and handles edge cases properly. Reserve POSIX APIs for legacy codebases or embedded systems with limited C++ standard library support.
+Use `<filesystem>` for new projects: it’s safer, more readable, and handles edge cases properly. Reserve POSIX APIs for legacy codebases or embedded systems with limited C++ standard library support.

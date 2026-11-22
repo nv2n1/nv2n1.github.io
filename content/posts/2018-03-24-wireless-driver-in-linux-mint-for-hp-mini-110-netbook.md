@@ -131,7 +131,7 @@ nmcli device show
 
 Or use the GUI: click the network icon in the top panel and verify your WiFi networks appear in the list.
 
-For persistent issues on older hardware, check your BIOS for wireless settings—some netbooks allow disabling the WiFi adapter in BIOS, which can interfere with driver detection.
+For persistent issues on older hardware, check your BIOS for wireless settings: some netbooks allow disabling the WiFi adapter in BIOS, which can interfere with driver detection.
 
 ## 2026 Comprehensive Guide: Best Practices
 

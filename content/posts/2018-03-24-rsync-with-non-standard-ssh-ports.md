@@ -22,12 +22,12 @@ rsync -avxP --delete -e "ssh -p 13022" username@example.com:/remote/path/ /local
 
 Breaking this down:
 
-- `-a` — archive mode (preserves permissions, timestamps, symlinks)
-- `-v` — verbose output
-- `-x` — don’t cross filesystem boundaries
-- `-P` — show progress and keep partial files
-- `--delete` — delete files in destination that don’t exist in source
-- `-e "ssh -p 13022"` — use SSH with port 13022 instead of default 22
+- `-a`: archive mode (preserves permissions, timestamps, symlinks)
+- `-v`: verbose output
+- `-x`: don’t cross filesystem boundaries
+- `-P`: show progress and keep partial files
+- `--delete`: delete files in destination that don’t exist in source
+- `-e "ssh -p 13022"`: use SSH with port 13022 instead of default 22
 
 ### Pushing vs pulling
 
@@ -83,8 +83,8 @@ For large transfers over high-latency networks, consider adding compression and 
 rsync -avxP --delete -e "ssh -p 13022 -C" --bwlimit=5000 username@example.com:/remote/path/ /local/path/
 ```
 
-- `-C` — enable SSH compression
-- `--bwlimit=5000` — limit bandwidth to 5000 KB/s (adjust as needed)
+- `-C`: enable SSH compression
+- `--bwlimit=5000`: limit bandwidth to 5000 KB/s (adjust as needed)
 
 For very large files, you might also want `--partial-dir` to handle incomplete transfers more gracefully:
 
@@ -102,9 +102,9 @@ ssh -p 13022 username@example.com "ls /remote/path/"
 
 Common issues:
 
-- **Permission denied** — check your SSH key permissions (`chmod 600 ~/.ssh/key`) and that the remote user has access
-- **Connection refused** — verify the port and that the SSH service is listening on that port (`netstat -tuln | grep 13022` on the remote host)
-- **Timeout** — check firewall rules between your client and the port-forwarded gateway
+- **Permission denied**: check your SSH key permissions (`chmod 600 ~/.ssh/key`) and that the remote user has access
+- **Connection refused**: verify the port and that the SSH service is listening on that port (`netstat -tuln | grep 13022` on the remote host)
+- **Timeout**: check firewall rules between your client and the port-forwarded gateway
 
 ### Summary
 

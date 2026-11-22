@@ -12,7 +12,7 @@ url: /c-reference-and-styles/
 
 **cppreference.com** is the authoritative resource for C++ language and standard library documentation. It covers all C++ standards from C++98 through C++26 with clear examples and cross-references. Bookmark it as your primary reference.
 
-The official C++ standard drafts are available through the C++ standards committee. While final standards require purchase, draft versions and proposals are freely available—useful for understanding language features and library behavior at a deeper level.
+The official C++ standard drafts are available through the C++ standards committee. While final standards require purchase, draft versions and proposals are freely available: useful for understanding language features and library behavior at a deeper level.
 
 Key cppreference sections you’ll reference constantly:
 
@@ -23,7 +23,7 @@ Key cppreference sections you’ll reference constantly:
 - Type traits and metaprogramming utilities
 - Formatting and string handling
 
-Keep documentation locally accessible. Network latency during debugging sessions adds up. Download an offline copy if your environment has limited connectivity—cppreference offers offline builds.
+Keep documentation locally accessible. Network latency during debugging sessions adds up. Download an offline copy if your environment has limited connectivity: cppreference offers offline builds.
 
 ## Style Guidelines
 

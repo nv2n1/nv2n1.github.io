@@ -14,7 +14,7 @@ The mailx (or s-nail on modern distributions) command remains useful for scripte
 
 ## Prerequisites
 
-Most Linux distributions include mailx or s-nail by default. On systems using s-nail (Ubuntu 20.04+, Debian 11+, Fedora), the commands below work identically — just replace `mailx` with `s-nail`. You’ll also need either a Gmail account or, better, an App Password if you have 2-Step Verification enabled.
+Most Linux distributions include mailx or s-nail by default. On systems using s-nail (Ubuntu 20.04+, Debian 11+, Fedora), the commands below work identically: just replace `mailx` with `s-nail`. You’ll also need either a Gmail account or, better, an App Password if you have 2-Step Verification enabled.
 
 ### Setting up an App Password
 
@@ -22,7 +22,7 @@ If you use Google’s 2-Step Verification, you must generate an App Password rat
 
 1.  Go to <a href="https://myaccount.google.com/apppasswords" rel="nofollow noopener" target="_blank">https://myaccount.google.com/apppasswords</a>
 2.  Select “Mail” and “Linux”
-3.  Google generates a 16-character password — use this instead of your Gmail password
+3.  Google generates a 16-character password: use this instead of your Gmail password
 4.  If you don’t use 2-Step Verification, you can use your Gmail password directly, though App Passwords are still recommended
 
 ## Quick Command-Line Method
@@ -167,4 +167,4 @@ Use the verbose flag (`-v`) to see SMTP negotiation details, which helps diagnos
 - Prefer App Passwords over account passwords
 - Never hardcode passwords in shell scripts
 - For unattended scripts, consider rotating App Passwords periodically
-- The `-S ssl-verify=ignore` flag disables certificate verification — acceptable for internal scripts, but reconsider for sensitive communications
+- The `-S ssl-verify=ignore` flag disables certificate verification: acceptable for internal scripts, but reconsider for sensitive communications

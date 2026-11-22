@@ -10,7 +10,7 @@ canonical: /how-to-exclude-certain-repositories-in-yum/
 url: /how-to-exclude-certain-repositories-in-yum/
 ---
 
-You’ll sometimes need to exclude specific repositories from package operations—typically when multiple repos provide the same package, mirror connectivity is unreliable, or you want to force installation from a trusted source. The `--disablerepo` flag lets you skip repos on a per-command basis.
+You’ll sometimes need to exclude specific repositories from package operations: typically when multiple repos provide the same package, mirror connectivity is unreliable, or you want to force installation from a trusted source. The `--disablerepo` flag lets you skip repos on a per-command basis.
 
 ## Basic syntax
 
@@ -105,7 +105,7 @@ sudo nano /etc/yum.repos.d/google-chrome.repo
 echo "timeout=5" | sudo tee -a /etc/dnf/dnf.conf
 ```
 
-**Use metalink or mirrorlist** instead of hardcoded URLs—these redirect to working mirrors automatically.
+**Use metalink or mirrorlist** instead of hardcoded URLs: these redirect to working mirrors automatically.
 
 ## Key differences from older yum
 

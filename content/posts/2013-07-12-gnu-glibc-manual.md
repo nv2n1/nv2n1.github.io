@@ -10,7 +10,7 @@ canonical: /gnu-glibc-manual/
 url: /gnu-glibc-manual/
 ---
 
-The C language itself provides no built-in mechanisms for input/output, memory management, string manipulation, or process control. These essential capabilities come from the C standard library — a collection of functions, macros, and data types that you link with your programs at compile time.
+The C language itself provides no built-in mechanisms for input/output, memory management, string manipulation, or process control. These essential capabilities come from the C standard library: a collection of functions, macros, and data types that you link with your programs at compile time.
 
 The GNU C Library (glibc) is the standard C library used by Linux systems and implements the full ISO C standard, POSIX specifications, and numerous GNU extensions. If you’re writing C or C++ on Linux, you’re almost certainly using glibc.
 
@@ -18,18 +18,18 @@ The GNU C Library (glibc) is the standard C library used by Linux systems and im
 
 The library is organized into logical groups, each exposed through header files that declare functions, macros, and data structures relevant to a specific domain:
 
-- **stdio.h** — Standard input/output (file operations, printf, scanf)
-- **string.h** — String and memory manipulation (strcpy, memcpy, strlen)
-- **stdlib.h** — General utilities (memory allocation, sorting, random numbers, environment variables)
-- **unistd.h** — POSIX API for system calls (read, write, fork, exec, process management)
-- **pthread.h** — POSIX threads for concurrent programming
-- **sys/socket.h** — Network socket operations
-- **fcntl.h** — File control (open flags, file descriptor operations)
-- **signal.h** — Signal handling
-- **time.h** — Date and time functions
-- **sys/stat.h** — File metadata and permissions
-- **errno.h** — Error reporting and errno variable
-- **assert.h** — Runtime assertions for debugging
+- **stdio.h**: Standard input/output (file operations, printf, scanf)
+- **string.h**: String and memory manipulation (strcpy, memcpy, strlen)
+- **stdlib.h**: General utilities (memory allocation, sorting, random numbers, environment variables)
+- **unistd.h**: POSIX API for system calls (read, write, fork, exec, process management)
+- **pthread.h**: POSIX threads for concurrent programming
+- **sys/socket.h**: Network socket operations
+- **fcntl.h**: File control (open flags, file descriptor operations)
+- **signal.h**: Signal handling
+- **time.h**: Date and time functions
+- **sys/stat.h**: File metadata and permissions
+- **errno.h**: Error reporting and errno variable
+- **assert.h**: Runtime assertions for debugging
 
 When you `#include` a header file, the compiler gains access to the function signatures and constants defined there. The actual implementations are linked in at build time, typically from `/lib64/libc.so.6` on x86_64 systems or `/lib/aarch64-linux-gnu/libc.so.6` on ARM64.
 
@@ -129,9 +129,9 @@ man 3 intro  # Check thread safety notes in glibc manual pages
 
 The official glibc documentation is comprehensive:
 
-- **HTML (single page)** — Best for searching and quick lookups at <a href="https://www.gnu.org/software/libc/manual/" rel="nofollow noopener" target="_blank">https://www.gnu.org/software/libc/manual/</a>
-- **Man pages** — Quick reference: `man 3 printf`, `man 3 malloc`, `man 3 pthread_create`
-- **PDF** — For offline reference (available from GNU website)
+- **HTML (single page)**: Best for searching and quick lookups at <a href="https://www.gnu.org/software/libc/manual/" rel="nofollow noopener" target="_blank">https://www.gnu.org/software/libc/manual/</a>
+- **Man pages**: Quick reference: `man 3 printf`, `man 3 malloc`, `man 3 pthread_create`
+- **PDF**: For offline reference (available from GNU website)
 
 Use `man 3` prefix to access C library function documentation:
 
@@ -145,9 +145,9 @@ man 3 malloc
 
 For mainstream Linux distributions (Debian, Ubuntu, Red Hat, SUSE), glibc is the standard and performs well for most workloads. However, alternatives exist for specific scenarios:
 
-- **musl** — Lightweight C library used in Alpine Linux, designed for minimal size and static linking compatibility
-- **uClibc-ng** — Embedded systems with very limited resources
-- **eglibc** (deprecated) — Embedded variant, now merged back into glibc
+- **musl**: Lightweight C library used in Alpine Linux, designed for minimal size and static linking compatibility
+- **uClibc-ng**: Embedded systems with very limited resources
+- **eglibc** (deprecated): Embedded variant, now merged back into glibc
 
 If you’re building applications for container deployment with Alpine Linux, you’ll use musl. For most server and desktop Linux environments, glibc is the only practical choice.
 
@@ -175,4 +175,4 @@ strlcpy(buffer, source, sizeof(buffer));  // Safer than strncpy
 
 ## Key Takeaways
 
-Glibc provides the foundational APIs that virtually all C programs depend on. Understanding its organization, knowing how to check versions, and understanding linking behavior will save time when debugging library-related issues. Most production problems stem from version mismatches between compilation and runtime environments or incorrect function usage — both resolved by consulting the manual pages and verifying glibc versions with the tools above.
+Glibc provides the foundational APIs that virtually all C programs depend on. Understanding its organization, knowing how to check versions, and understanding linking behavior will save time when debugging library-related issues. Most production problems stem from version mismatches between compilation and runtime environments or incorrect function usage: both resolved by consulting the manual pages and verifying glibc versions with the tools above.

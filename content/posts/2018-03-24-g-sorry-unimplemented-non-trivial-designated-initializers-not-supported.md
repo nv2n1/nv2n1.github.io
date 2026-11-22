@@ -92,7 +92,7 @@ Stat init_stat {{init}, 0, {tv}};
 
 ### Compiler Version Considerations
 
-- **GCC 4.8.x – 5.x**: Partial support; order-dependent with non-trivial types
+- **GCC 4.8.x: 5.x**: Partial support; order-dependent with non-trivial types
 - **GCC 6.0+**: Improved support; designated initializers work more reliably
 - **GCC 7.0+**: Full C++17 designated initializer support
 

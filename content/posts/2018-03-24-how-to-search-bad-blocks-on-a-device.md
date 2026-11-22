@@ -24,7 +24,7 @@ This scans `/dev/sda1` from the first block to the last block on the device.
 
 - `-s`: Show progress (recommended for large disks)
 - `-v`: Verbose output
-- `-w`: Perform a destructive write test (overwrites data — use only on blank/backup disks)
+- `-w`: Perform a destructive write test (overwrites data: use only on blank/backup disks)
 - `-n`: Non-destructive read-write test (safer, but slower)
 - `-f`: Force the test even if the device appears mounted
 - `-b block_size`: Specify block size in bytes (default: 4096)

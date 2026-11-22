@@ -32,20 +32,20 @@ Fedora 仓库中提供了多个中文字体包：
 **基础中文字体：**
 
 ```wp-block-code
-# 文鼎明体 — 适合正文阅读，清晰度高
+# 文鼎明体: 适合正文阅读，清晰度高
 sudo dnf install cjkuni-uming-fonts
 
-# 文鼎楷体 — 适合标题和打印
+# 文鼎楷体: 适合标题和打印
 sudo dnf install cjkuni-ukai-fonts
 ```
 
 **Google Noto 字体（推荐）：**
 
 ```wp-block-code
-# Noto Sans CJK — 现代、清晰、覆盖全面
+# Noto Sans CJK: 现代、清晰、覆盖全面
 sudo dnf install google-noto-sans-cjk-fonts
 
-# Noto Serif CJK — 衬线体，适合长文阅读
+# Noto Serif CJK: 衬线体，适合长文阅读
 sudo dnf install google-noto-serif-cjk-fonts
 ```
 

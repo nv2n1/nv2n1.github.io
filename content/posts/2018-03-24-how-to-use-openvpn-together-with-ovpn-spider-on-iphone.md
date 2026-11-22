@@ -23,7 +23,7 @@ You’ll need:
 
 ## Downloading Your Configuration File
 
-Start by visiting the Ovpn Spider website on your iPhone or another device. Ovpn Spider provides free VPN configuration files tailored for various use cases. Download the .ovpn file you want to use — Ovpn Spider typically offers multiple server locations and configuration types (UDP, TCP, etc.).
+Start by visiting the Ovpn Spider website on your iPhone or another device. Ovpn Spider provides free VPN configuration files tailored for various use cases. Download the .ovpn file you want to use: Ovpn Spider typically offers multiple server locations and configuration types (UDP, TCP, etc.).
 
 Save or email the configuration file to yourself so you can access it on your iPhone.
 
@@ -38,7 +38,7 @@ Open the OpenVPN Connect app on your iPhone. The import process differs slightly
 3.  Choose “From File”
 4.  Navigate to your downloaded .ovpn file
 5.  Review the profile details and tap “Add”
-6.  You may be prompted to allow VPN configuration — tap “Allow”
+6.  You may be prompted to allow VPN configuration: tap “Allow”
 
 **For older iOS versions:**
 Use the Files app to navigate to your .ovpn file, then tap it directly. iOS will prompt you to open it with OpenVPN Connect.
@@ -53,7 +53,7 @@ Once imported, your Ovpn Spider profile appears in the OpenVPN Connect app’s p
 
 **App-level access:** Unlike desktop VPNs, iOS VPNs configured at the system level affect all apps unless you use per-app VPN settings (available in iOS 14+). You can configure which apps route through the VPN in Settings \> General \> VPN & Device Management.
 
-**Certificate or authentication issues:** If you encounter connection errors, verify the .ovpn file is valid and hasn’t been corrupted during transfer. Some configuration files require additional credentials — check Ovpn Spider’s documentation for your chosen server.
+**Certificate or authentication issues:** If you encounter connection errors, verify the .ovpn file is valid and hasn’t been corrupted during transfer. Some configuration files require additional credentials: check Ovpn Spider’s documentation for your chosen server.
 
 **Battery and data usage:** VPN connections consume more battery and data. Monitor these if using a free service with potential bandwidth throttling.
 

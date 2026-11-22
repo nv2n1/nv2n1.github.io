@@ -10,7 +10,7 @@ canonical: /how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cp
 url: /how-to-get-available-filesystem-space-on-linux-a-c-function-and-a-cpp-example/
 ---
 
-When writing to disk, you need to know if space is available — especially in systems software, daemons, and critical applications. The POSIX `statvfs()` call provides filesystem statistics across all POSIX systems, making it more reliable than Linux-specific alternatives like `statfs()`.
+When writing to disk, you need to know if space is available, especially in systems software, daemons, and critical applications. The POSIX `statvfs()` call provides filesystem statistics across all POSIX systems, making it more reliable than Linux-specific alternatives like `statfs()`.
 
 ## The statvfs() API
 
@@ -146,7 +146,7 @@ Filesystem info for: /tmp
   Block size: 4096 bytes
 ```
 
-The path doesn’t need to be a mount point — `statvfs()` returns info for the filesystem containing that path. If the path doesn’t exist:
+The path doesn’t need to be a mount point: `statvfs()` returns info for the filesystem containing that path. If the path doesn’t exist:
 
 ``` bash
 $ ./fs_info /nonexistent/path

@@ -41,7 +41,7 @@ chmod 600 /swapfile
 chown root:root /swapfile
 ```
 
-The `600` permission (read/write for root only) is the standard. Don’t use `700`—it’s unnecessarily permissive.
+The `600` permission (read/write for root only) is the standard. Don’t use `700`: it’s unnecessarily permissive.
 
 ## Initialize the Swap Space
 
@@ -56,7 +56,7 @@ You’ll see output like:
     Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
     no label, UUID=f30730f3-eb1d-4d30-a088-a0274f3c2f3e
 
-Ignore warnings about bootbits—these are harmless.
+Ignore warnings about bootbits: these are harmless.
 
 ## Enable the Swap File
 
@@ -89,7 +89,7 @@ Add an entry to `/etc/fstab`:
 
     /swapfile none swap sw 0 0
 
-Use `none` as the mount point, not `swap`—this is the modern convention. Test the configuration without rebooting:
+Use `none` as the mount point, not `swap`: this is the modern convention. Test the configuration without rebooting:
 
 ``` bash
 swapon --all --verbose

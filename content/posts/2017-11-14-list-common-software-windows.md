@@ -10,7 +10,7 @@ canonical: /list-common-software-windows/
 url: /list-common-software-windows/
 ---
 
-If you’re working on Windows but need to interact with Linux systems, you’ll need reliable remote access tools. SSH is the standard—it’s secure, scriptable, and works everywhere. Here’s what actually matters.
+If you’re working on Windows but need to interact with Linux systems, you’ll need reliable remote access tools. SSH is the standard: it’s secure, scriptable, and works everywhere. Here’s what actually matters.
 
 ## SSH Clients
 
@@ -18,7 +18,7 @@ If you’re working on Windows but need to interact with Linux systems, you’ll
 
 **PuTTY** still has a place if you need GUI features like saved session management, serial port connections, or X11 forwarding. The portable version works without installation, which matters in restricted environments.
 
-**WSL2 (Windows Subsystem for Linux)** is the practical choice if you spend real time on Linux work. You get native SSH, bash, grep, sed, rsync, and the entire GNU toolkit without emulation overhead. Once set up, it feels like native Linux development. This isn’t aspirational—if you’re regularly scripting or managing servers, WSL2 eliminates endless tool-hunting and Windows path quirks.
+**WSL2 (Windows Subsystem for Linux)** is the practical choice if you spend real time on Linux work. You get native SSH, bash, grep, sed, rsync, and the entire GNU toolkit without emulation overhead. Once set up, it feels like native Linux development. This isn’t aspirational: if you’re regularly scripting or managing servers, WSL2 eliminates endless tool-hunting and Windows path quirks.
 
 ## File Transfer
 
@@ -48,7 +48,7 @@ Then connect your VNC client to `localhost:5900`.
 
 ## Web Browsers
 
-**Firefox** is solid for development work—open source, respects privacy settings, and has robust DevTools. Consistent behavior across Windows and Linux.
+**Firefox** is solid for development work: open source, respects privacy settings, and has robust DevTools. Consistent behavior across Windows and Linux.
 
 **Chromium** or **Chrome** if you need Chromium-based testing or prefer Chrome’s debugging tools. Chromium is the open-source version without Google telemetry overhead.
 
@@ -56,7 +56,7 @@ Then connect your VNC client to `localhost:5900`.
 
 ## Media Players
 
-**VLC** handles virtually every codec without separate codecs or configuration. It works locally, streams, and does basic format conversion. Open source and genuinely just works—no bundled toolbars or tracking.
+**VLC** handles virtually every codec without separate codecs or configuration. It works locally, streams, and does basic format conversion. Open source and genuinely just works: no bundled toolbars or tracking.
 
 **MPV** if you’re technical and want a lightweight, scriptable player driven from the command line. Powerful for automation and batch processing:
 

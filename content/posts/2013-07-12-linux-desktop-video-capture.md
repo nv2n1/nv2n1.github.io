@@ -22,13 +22,13 @@ ffmpeg -f x11grab -s 1920x1080 -r 30 -i :0.0+0,0 -c:v libx264 -preset fast -crf 
 
 Breaking down the options:
 
-- `-f x11grab` — Input format for X11 display capture
-- `-s 1920x1080` — Output resolution (adjust to your display size; check with `xrandr`)
-- `-r 30` — Frames per second (24, 30, or 60 are typical)
-- `-i :0.0+0,0` — Display and offset (`:0.0` is usually your main display; `+0,0` is the top-left corner)
-- `-c:v libx264` — Video codec (H.264 for broad compatibility)
-- `-preset fast` — Encoding speed/quality tradeoff (ultrafast, superfast, fast, medium, slow, slower)
-- `-crf 23` — Quality level (0–51; lower is better; 23 is default)
+- `-f x11grab`: Input format for X11 display capture
+- `-s 1920x1080`: Output resolution (adjust to your display size; check with `xrandr`)
+- `-r 30`: Frames per second (24, 30, or 60 are typical)
+- `-i :0.0+0,0`: Display and offset (`:0.0` is usually your main display; `+0,0` is the top-left corner)
+- `-c:v libx264`: Video codec (H.264 for broad compatibility)
+- `-preset fast`: Encoding speed/quality tradeoff (ultrafast, superfast, fast, medium, slow, slower)
+- `-crf 23`: Quality level (0–51; lower is better; 23 is default)
 
 ## Finding Your Display and Resolution
 
@@ -44,7 +44,7 @@ This shows connected displays and their resolutions. If you have multiple displa
 ffmpeg -f x11grab -s 2560x1440 -r 30 -i :0.0+1920,0 output.mp4
 ```
 
-The `+1920,0` offset captures a display starting 1920 pixels to the right—useful for multi-monitor setups.
+The `+1920,0` offset captures a display starting 1920 pixels to the right: useful for multi-monitor setups.
 
 ## Including Audio
 

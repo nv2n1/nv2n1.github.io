@@ -21,7 +21,7 @@ The simplest way to convert a string to lowercase is using the `lower()` method:
 'abc'
 ```
 
-The `lower()` method returns a new string with all uppercase characters converted to lowercase. The original string remains unchanged — strings are immutable in Python.
+The `lower()` method returns a new string with all uppercase characters converted to lowercase. The original string remains unchanged: strings are immutable in Python.
 
 ## Basic Usage
 
@@ -69,10 +69,10 @@ if log_entry.lower().startswith('error'):
 
 Python provides several case conversion methods:
 
-- `upper()` — converts all lowercase letters to uppercase
-- `swapcase()` — converts uppercase to lowercase and vice versa
-- `title()` — converts the first character of each word to uppercase
-- `capitalize()` — converts the first character to uppercase, rest to lowercase
+- `upper()`: converts all lowercase letters to uppercase
+- `swapcase()`: converts uppercase to lowercase and vice versa
+- `title()`: converts the first character of each word to uppercase
+- `capitalize()`: converts the first character to uppercase, rest to lowercase
 
 ``` python
 text = "hello WORLD"
@@ -124,7 +124,7 @@ for line in sys.stdin:
 
 ## String Immutability Considerations
 
-Strings in Python are immutable — `lower()` doesn’t modify the original string; it returns a new one:
+Strings in Python are immutable: `lower()` doesn’t modify the original string; it returns a new one:
 
 ``` python
 original = "Hello"
@@ -159,11 +159,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

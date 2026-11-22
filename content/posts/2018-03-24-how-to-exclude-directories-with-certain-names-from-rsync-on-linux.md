@@ -20,7 +20,7 @@ The simplest approach uses `--exclude` with a directory name pattern:
 rsync -avxP --exclude=cache/ /path/to/src/directory/ /path/to/dst/dir/
 ```
 
-This skips any directory named `cache` at any depth. The trailing slash matters — it tells rsync to match only directories, not files with that name.
+This skips any directory named `cache` at any depth. The trailing slash matters: it tells rsync to match only directories, not files with that name.
 
 ## Excluding multiple directories
 
@@ -57,11 +57,11 @@ Each pattern on its own line. Patterns without trailing slashes match both files
 
 ## Pattern matching rules
 
-- `cache/` — matches directories named `cache` at any level
-- `*.log` — matches files ending in `.log` at any level
-- `/cache/` — (leading slash) matches `cache/` only at the source root
-- `src/cache/` — matches `cache/` inside `src/` directory only
-- `**/*.pyc` — matches `.pyc` files at any depth
+- `cache/`: matches directories named `cache` at any level
+- `*.log`: matches files ending in `.log` at any level
+- `/cache/`: (leading slash) matches `cache/` only at the source root
+- `src/cache/`: matches `cache/` inside `src/` directory only
+- `**/*.pyc`: matches `.pyc` files at any depth
 
 ## Combine include and exclude
 
@@ -75,7 +75,7 @@ rsync -avxP \
   /path/to/src/directory/ /path/to/dst/dir/
 ```
 
-Order matters — rsync processes rules top-to-bottom and stops at the first match.
+Order matters: rsync processes rules top-to-bottom and stops at the first match.
 
 ## Practical example: web project backup
 

@@ -10,7 +10,7 @@ canonical: /how-to-add-a-status-bar-to-screen-on-linux/
 url: /how-to-add-a-status-bar-to-screen-on-linux/
 ---
 
-GNU Screen’s status bar (called the hardstatus line) displays useful information about your current session—which window you’re on, the time, hostname, and more. It’s especially helpful when you’re running multiple windows and need a quick visual reference without typing commands.
+GNU Screen’s status bar (called the hardstatus line) displays useful information about your current session, which window you’re on, the time, hostname, and more. It’s especially helpful when you’re running multiple windows and need a quick visual reference without typing commands.
 
 ## Basic Status Bar Setup
 
@@ -32,15 +32,15 @@ The `alwayslastline` directive ensures the status bar appears at the bottom of e
 
 The hardstatus string uses escape sequences and color codes:
 
-- `%H` — hostname
-- `%n` — window number
-- `%t` — window title
-- `%u` — username
-- `%w` — list of windows
-- `%Y-%m-%d` — date (year-month-day)
-- `%c` — time in HH:MM format
-- `%{kG}` — color codes (k=black, G=green, etc.)
-- `%=` — center text after this point
+- `%H`: hostname
+- `%n`: window number
+- `%t`: window title
+- `%u`: username
+- `%w`: list of windows
+- `%Y-%m-%d`: date (year-month-day)
+- `%c`: time in HH:MM format
+- `%{kG}`: color codes (k=black, G=green, etc.)
+- `%=`: center text after this point
 
 ## Simpler Alternative
 
@@ -100,11 +100,11 @@ Press `Ctrl+a` then `?` to see all available screen commands and verify your sta
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 
