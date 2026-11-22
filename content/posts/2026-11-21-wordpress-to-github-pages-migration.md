@@ -17,7 +17,7 @@ tags:
   - static-site
 ---
 
-We migrated SysTutorials — 1,346 blog posts plus 56,253 Linux man pages — from WordPress to a Hugo static site on GitHub Pages. The result: a single binary, single config, single CI job that builds in ~8 seconds (down from 12 minutes), zero URL drift, free hosting, and a completely static attack surface with no PHP, no database, and no plugin stack to maintain.
+We migrated SysTutorials (1,346 blog posts plus 56,253 Linux man pages) from WordPress to a Hugo static site on GitHub Pages. The result: a single binary, single config, single CI job that builds in ~8 seconds (down from 12 minutes), zero URL drift, free hosting, and a completely static attack surface with no PHP, no database, and no plugin stack to maintain.
 
 ## Why migrate from WordPress to a static site on GitHub Pages
 
@@ -25,35 +25,35 @@ We migrated SysTutorials — 1,346 blog posts plus 56,253 Linux man pages — fr
 
 Running WordPress means constant upgrades (core, plugins, themes), backups, database monitoring, PHP version management, and server patching. A static site on GitHub Pages removes all of that:
 
-- **No upgrades** — Hugo is a single binary; updates are a one-line change in CI
-- **No database** — content is Markdown files in git; backups are `git push`
-- **No monitoring** — GitHub handles uptime, DDoS protection, and TLS
-- **No server costs** — GitHub Pages is free for public repos
+- **No upgrades**: Hugo is a single binary; updates are a one-line change in CI
+- **No database**: content is Markdown files in git; backups are `git push`
+- **No monitoring**: GitHub handles uptime, DDoS protection, and TLS
+- **No server costs**: GitHub Pages is free for public repos
 
 ### Security: the final push
 
-Running WordPress means running a full **PHP stack** — and that stack has been under relentless attack. Between Q3 2025 and today, the combined vulnerability surface across WordPress core, plugins, themes, and PHP itself made the risk untenable.
+Running WordPress means running a full **PHP stack**, and that stack has been under relentless attack. Between Q3 2025 and today, the combined vulnerability surface across WordPress core, plugins, themes, and PHP itself made the risk untenable.
 
-**The compounding risk:** A WordPress site exposes PHP runtime, WordPress core (1M+ lines of PHP), 60k+ plugins/themes (frequent supply-chain compromises like Gravity Forms, WP Fastest Cache, LiteSpeed Cache), web server config, MySQL database, and the OS kernel — all simultaneously.
+**The compounding risk:** A WordPress site exposes PHP runtime, WordPress core (1M+ lines of PHP), 60k+ plugins/themes (frequent supply-chain compromises like Gravity Forms, WP Fastest Cache, LiteSpeed Cache), web server config, MySQL database, and the OS kernel, all simultaneously.
 
 **Recent critical examples (2024–2025):**
 - **WordPress plugins:** Wordfence RCE series (1M+ sites), GutenKit/Hunk Companion arbitrary file upload, Fluent Forms RCE via contact form, Elementor Pro broken access control → RCE
 - **PHP runtime:** CVE-2024-4577 (CGI argument injection → RCE), CVE-2024-11236 (phar deserialization → RCE), CVE-2024-8925 (mbstring heap overflow)
 - **Infrastructure:** OpenSSH regreSSHion (CVE-2024-6387, unauthenticated RCE as root), Linux kernel netfilter/nftables privilege escalation
 
-**Static sites eliminate the entire PHP+WordPress+plugin+database stack.** The only remaining surface is the CDN (GitHub Pages) serving static HTML/CSS/JS — no interpreter, no database, no plugin architecture, no dynamic code execution.
+**Static sites eliminate the entire PHP+WordPress+plugin+database stack.** The only remaining surface is the CDN (GitHub Pages) serving static HTML/CSS/JS: no interpreter, no database, no plugin architecture, no dynamic code execution.
 
 ## Why Hugo over Jekyll
 
 We originally ran Jekyll on GitHub Pages. Hugo won for four reasons:
 
-1. **Build speed** — ~8 seconds vs 12 minutes for 57k pages. Hugo's parallel rendering and single-binary architecture scale linearly; Jekyll's Ruby pipeline does not.
+1. **Build speed**: ~8 seconds vs 12 minutes for 57k pages. Hugo's parallel rendering and single-binary architecture scale linearly; Jekyll's Ruby pipeline does not.
 
-2. **No Ruby dependency** — GitHub Pages' Jekyll version is pinned and lags. Hugo is a single binary we control; upgrades are a one-line CI change.
+2. **No Ruby dependency**: GitHub Pages' Jekyll version is pinned and lags. Hugo is a single binary we control; upgrades are a one-line CI change.
 
-3. **Module mounts** — Merging the separate man-site (56k pages) into the main repo required Hugo's `[module.mounts]`. Jekyll has no equivalent; we'd need artifact merging across repos.
+3. **Module mounts**: Merging the separate man-site (56k pages) into the main repo required Hugo's `[module.mounts]`. Jekyll has no equivalent; we'd need artifact merging across repos.
 
-4. **Taxonomy & permalink parity** — Hugo's `[permalinks]` and `[taxonomies]` config mirrors WordPress's `/category/slug/` and `/author/slug/` exactly. Jekyll needs plugins for the same.
+4. **Taxonomy & permalink parity**: Hugo's `[permalinks]` and `[taxonomies]` config mirrors WordPress's `/category/slug/` and `/author/slug/` exactly. Jekyll needs plugins for the same.
 
 ## How to migrate: step-by-step
 
@@ -61,7 +61,7 @@ This is the exact process we used for **SysTutorials** (1,346 posts, ~56k Linux 
 
 ### 1. Export from MariaDB/MySQL
 
-WordPress stores everything in MySQL/MariaDB. We used a direct database dump instead of the WXR export — it gives full control over every field and avoids XML parsing issues.
+WordPress stores everything in MySQL/MariaDB. We used a direct database dump instead of the WXR export: it gives full control over every field and avoids XML parsing issues.
 
 ```bash
 # Dump the WordPress database
@@ -72,11 +72,11 @@ mysqldump -u wp_user -p wp_database > wp_dump.sql
 
 Then extract the key tables:
 
-- `wp_posts` — all posts, pages, revisions, attachments
-- `wp_postmeta` — custom fields (canonical URLs, SEO data, etc.)
-- `wp_terms`, `wp_term_taxonomy`, `wp_term_relationships` — categories/tags
-- `wp_users`, `wp_usermeta` — authors
-- `wp_options` — site settings (home URL, etc.)
+- `wp_posts`: all posts, pages, revisions, attachments
+- `wp_postmeta`: custom fields (canonical URLs, SEO data, etc.)
+- `wp_terms`, `wp_term_taxonomy`, `wp_term_relationships`: categories/tags
+- `wp_users`, `wp_usermeta`: authors
+- `wp_options`: site settings (home URL, etc.)
 
 ### 2. Convert database rows to Markdown with front matter
 
@@ -177,7 +177,7 @@ Now one `hugo --minify` builds everything. The man pages keep their `/docs/linux
 - **Man sitemap**: chunked index via `scripts/gen-man-sitemap.py` (50k URL limit per file)
 - **Atom feed**: `layouts/index.feed.xml` from 10 most recent posts
 
-Fix: the man sitemap index had a bug pointing to `/docs/docs/sitemap-N.xml` — corrected to `/docs/sitemap-N.xml`.
+Fix: the man sitemap index had a bug pointing to `/docs/docs/sitemap-N.xml`, corrected to `/docs/sitemap-N.xml`.
 
 ### 9. CI/CD: one build step
 
@@ -207,14 +207,14 @@ GitHub Actions workflow (`.github/workflows/pages.yml`):
 
 Key config files to copy/adapt:
 
-- `hugo.toml` — site config, taxonomies, permalinks, module mounts
-- `layouts/_default/baseof.html` — site chrome (header, footer, GA4, ads)
-- `layouts/posts/single.html` — post template (breadcrumbs, meta, ads)
-- `layouts/_default/term.html` — category/author listing pages
-- `data/authors.yml` — author slug → display name mapping
-- `data/topics.yml` — category metadata (title, academy, path)
-- `scripts/gen-man-sitemap.py` — chunked sitemap for >50k URLs
-- `.github/workflows/pages.yml` — CI pipeline
+- `hugo.toml`: site config, taxonomies, permalinks, module mounts
+- `layouts/_default/baseof.html`: site chrome (header, footer, GA4, ads)
+- `layouts/posts/single.html`: post template (breadcrumbs, meta, ads)
+- `layouts/_default/term.html`: category/author listing pages
+- `data/authors.yml`: author slug → display name mapping
+- `data/topics.yml`: category metadata (title, academy, path)
+- `scripts/gen-man-sitemap.py`: chunked sitemap for >50k URLs
+- `.github/workflows/pages.yml`: CI pipeline
 
 ## AI-assisted migration
 
@@ -235,7 +235,7 @@ Human role: strategic decisions (URL structure, taxonomy design), final review, 
 - **1,346 posts**
 - **56,253 man pages** in the same build
 - **Single binary, single config, single CI job**
-- **Zero URL drift** — all canonical URLs preserved from the MariaDB export
+- **Zero URL drift**: all canonical URLs preserved from the MariaDB export
 - **Free hosting, zero server maintenance, static security**
 
-The site is live at [systutorials.com](https://www.systutorials.com) — this very post you're reading is served from the Hugo + GitHub Pages stack.
+The site is live at [systutorials.com](https://www.systutorials.com); this very post you're reading is served from the Hugo + GitHub Pages stack.
