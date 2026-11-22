@@ -8,7 +8,7 @@ url: /migrate-wordpress-to-github-pages/
 canonical: /migrate-wordpress-to-github-pages/
 description: "Step-by-step guide to migrating WordPress to Hugo on GitHub Pages: export the database, convert posts to Markdown, preserve URLs, and build in 8 seconds."
 categories:
-  - meta
+  - web-development
 tags:
   - wordpress
   - github-pages
