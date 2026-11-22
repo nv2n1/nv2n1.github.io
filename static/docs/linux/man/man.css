@@ -121,3 +121,22 @@ code, pre { font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", mon
   clear: both;
   margin-top: 2rem;
 }
+
+/* footer, same as blog layouts */
+footer.site {
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+footer.site a {
+  margin-left: 0;
+}
+.footer-msg {
+  margin-left: auto;
+}
