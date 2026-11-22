@@ -1,3 +1,177 @@
+{{ define "pageStyles" }}
+<style>
+  /* Google Programmable Search skin for /search/ (cse.js loads only here).
+     Scoped to .gcse-search-wrapper; !important overrides Google's injected CSS. */
+  .gcse-search-wrapper {
+    margin: 1.5rem 0 2rem;
+    max-width: 40rem;
+  }
+  .gcse-search-wrapper .gsc-control-cse {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+  }
+  /* The site's global stylesheet sets table { display: block; margin-bottom:
+     1rem } and td borders for article content. Programmable Search renders
+     its box and results as tables, so restore normal table layout here. */
+  .gcse-search-wrapper table {
+    display: table !important;
+    margin: 0 !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+  .gcse-search-wrapper table tbody {
+    display: table-row-group !important;
+  }
+  .gcse-search-wrapper table tr {
+    display: table-row !important;
+  }
+  .gcse-search-wrapper table td,
+  .gcse-search-wrapper table th {
+    display: table-cell !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  /* Search row: flat layout, even gap between field and button.
+     Width overrides: Google sizes the input to its intrinsic size="10"
+     and hides the button via its own injected stylesheet, so these rules
+     carry extra specificity to win. */
+  .gcse-search-wrapper table.gsc-search-box {
+    width: 100% !important;
+    border-spacing: 0.5rem 0 !important;
+  }
+  .gcse-search-wrapper .gsc-search-box td.gsc-input {
+    width: 100% !important;
+  }
+  .gcse-search-wrapper .gsc-search-box td.gsc-search-button {
+    display: table-cell !important;
+    width: 1% !important;
+  }
+  .gcse-search-wrapper .gsc-search-box td {
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  .gcse-search-wrapper .gsc-input-box {
+    height: auto !important;
+    padding: 0.5rem 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  .gcse-search-wrapper .gsc-input-box:focus-within,
+  .gcse-search-wrapper .gsc-input-box.gsc-input-box-focus {
+    border-color: #0a58ca !important;
+    box-shadow: 0 0 0 3px rgba(10, 88, 202, 0.12) !important;
+  }
+  .gcse-search-wrapper .gsc-input-box table,
+  .gcse-search-wrapper .gsc-input-box table.gsc-input {
+    height: auto !important;
+  }
+  .gcse-search-wrapper .gsc-input-box table td.gsib_a {
+    padding: 0 0.9rem !important;
+  }
+  /* Google fixes the clear-button cell at 48x48; let it hug its content */
+  .gcse-search-wrapper .gsc-input-box table td.gsib_b {
+    box-sizing: border-box !important;
+    height: auto !important;
+    width: auto !important;
+    padding: 0 0.7rem 0 0 !important;
+  }
+  /* display:block kills the inline-baseline descender that would
+     otherwise overflow the box and cover its border */
+  .gcse-search-wrapper input.gsc-input {
+    display: block !important;
+    font-size: 1rem !important;
+    font-family: inherit !important;
+    color: #333 !important;
+    height: 1.7rem !important;
+    line-height: 1.7rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .gcse-search-wrapper input.gsc-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  /* Search button in the site accent color (Google hides it in the
+     default watermark layout; restore it) */
+  .gcse-search-wrapper form.gsc-search-box .gsc-search-button.gsc-search-button-v2 {
+    display: inline-block !important;
+    height: 2.75rem !important;
+    min-width: 3.4rem !important;
+    padding: 0 1.1rem !important;
+    border: 1px solid #0a58ca !important;
+    border-radius: 8px !important;
+    background-color: #0a58ca !important;
+    background-image: none !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    vertical-align: top !important;
+    box-shadow: none !important;
+  }
+  .gcse-search-wrapper .gsc-search-button-v2:hover {
+    background-color: #094aa5 !important;
+    border-color: #094aa5 !important;
+  }
+  .gcse-search-wrapper .gsc-search-button-v2 svg {
+    fill: #fff !important;
+  }
+  /* Hide Google's "clear results" cross */
+  .gcse-search-wrapper td.gsc-clear-button,
+  .gcse-search-wrapper .gsc-clear-button {
+    display: none !important;
+  }
+  /* Keep results left-aligned with the content column */
+  .gcse-search-wrapper .gsc-control-cse .gsc-table-result {
+    margin-left: 0 !important;
+  }
+  /* Results chrome: match site typography and palette */
+  .gcse-search-wrapper .gsc-tabsArea {
+    border-bottom: 1px solid #ddd !important;
+  }
+  .gcse-search-wrapper .gsc-tabHeader.gsc-tabhActive {
+    color: #0a58ca !important;
+  }
+  .gcse-search-wrapper .gsc-tabHeader.gsc-tabhInactive {
+    color: #666 !important;
+  }
+  .gcse-search-wrapper .gsc-above-wrapper-area {
+    border-bottom: 1px solid #ddd !important;
+    padding: 0 0 0.5rem !important;
+  }
+  .gcse-search-wrapper .gsc-result-info,
+  .gcse-search-wrapper .gsc-orderby {
+    color: #888 !important;
+    font-size: 0.9rem !important;
+  }
+  .gcse-search-wrapper .gs-title,
+  .gcse-search-wrapper .gs-title a,
+  .gcse-search-wrapper .gs-title a:visited {
+    color: #0a58ca !important;
+    text-decoration: none !important;
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+  }
+  .gcse-search-wrapper .gs-title b {
+    color: #0a58ca !important;
+  }
+  .gcse-search-wrapper .gs-title a:hover,
+  .gcse-search-wrapper .gs-title a:visited:hover {
+    text-decoration: underline !important;
+  }
+  .gcse-search-wrapper .gsc-table-result {
+    font-size: 0.95rem !important;
+    color: #555 !important;
+  }
+  .gcse-search-wrapper .gs-visibleUrl {
+    color: #888 !important;
+    font-size: 0.85rem !important;
+  }
+</style>
+{{ end }}
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
