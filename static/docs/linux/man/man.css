@@ -113,6 +113,8 @@ code, pre { font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", mon
   .ad-above-fold {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 }
 
