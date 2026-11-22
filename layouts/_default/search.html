@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+<!-- Google Programmable Search; /search/?q=term auto-runs the query on load -->
+<div class="gcse-search-wrapper">
+  <script async src="https://cse.google.com/cse.js?cx=006269913418990200821:vlnmyz00msq"></script>
+  <gcse:search enablehistory="false"></gcse:search>
+</div>
+{{ end }}
