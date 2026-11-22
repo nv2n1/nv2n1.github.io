@@ -1,5 +1,6 @@
 ---
 title: "snd_ctl_activate_id(9)"
+description: "snd_ctl_activate_id - activate/inactivate the control of the given id Synopsis int snd_ctl_activate_id(struct snd_card *card, struct snd_ctl_elem_id *id, int ac"
 name: "snd_ctl_activate_id"
 section: "9"
 letter: "s"
