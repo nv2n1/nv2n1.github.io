@@ -24,7 +24,7 @@ description: "mrtg-logfile – description of the mrtg-2 logfile format"
 <p> The first line has 3 numbers which are:</p>
 <dl>
 <dt>A (1st column)</dt>
-<dd> A timestamp of when <font SIZE="-1">MRTG</font> last ran for this interface. The timestamp is the number of non-skip seconds passed since the standard <font SIZE="-1">UNIX</font> &#8220;epoch&#8221; of midnight on 1st of January 1970 <font SIZE="-1">GMT</font>.</dd>
+<dd> A timestamp of when MRTG last ran for this interface. The timestamp is the number of non-skip seconds passed since the standard UNIX &#8220;epoch&#8221; of midnight on 1st of January 1970 GMT.</dd>
 <dt>B (2nd column)</dt>
 <dd> The &#8220;incoming bytes counter&#8221; value.</dd>
 <dt>C (3rd column)</dt>
@@ -34,7 +34,7 @@ description: "mrtg-logfile – description of the mrtg-2 logfile format"
 <dl>
 <dt>A (1st column)</dt>
 <dd> The Unix timestamp for the point in time the data on this line is relevant. Note that the interval between timestamps increases as you progress through the file. At first it is 5 minutes and at the end it is one day between two lines. </dd>
-<p> This timestamp may be converted in OpenOffice Calc or <font SIZE="-1">MS</font> Excel by using the following formula </p>
+<p> This timestamp may be converted in OpenOffice Calc or MS Excel by using the following formula </p>
 <pre>
  =(x+y)/86400+DATE(1970;1;1)
 </pre>
@@ -44,7 +44,7 @@ description: "mrtg-logfile – description of the mrtg-2 logfile format"
  perl -e 'print scalar localtime(x),&quot;
 &quot;'
 </pre>
-<p> <code>x</code> is the unix timestamp and <code>y</code> is the offset in seconds from <font SIZE="-1">UTC</font>. (Perl knows <code>y</code>).</p>
+<p> <code>x</code> is the unix timestamp and <code>y</code> is the offset in seconds from UTC. (Perl knows <code>y</code>).</p>
 <dt>B (2nd column)</dt>
 <dd> The average incoming transfer rate in bytes per second. This is valid for the time between the A value of the current line and the A value of the previous line.</dd>
 <dt>C (3rd column)</dt>

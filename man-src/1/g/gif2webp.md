@@ -26,8 +26,8 @@ description: "gif2webp – Convert a GIF image to WebP"
 <dt><code>-lossy</code></dt>
 <dd> Encode the image using lossy compression.</dd>
 <dt><code>-q</code><i> float</i></dt>
-<dd> Specify the compression factor for RGB channels between 0 and 100. The default is 75.<br />
- In case of lossless compression (default), a small factor enables faster compression speed, but produces a larger file. Maximum compression is achieved by using a value of 100.<br />
+<dd> Specify the compression factor for RGB channels between 0 and 100. The default is 75.<br/>
+ In case of lossless compression (default), a small factor enables faster compression speed, but produces a larger file. Maximum compression is achieved by using a value of 100.<br/>
  In case of lossy compression (specified by the -lossy option), a small factor produces a smaller file with lower quality. Best quality is achieved by using a value of 100.</dd>
 <dt><code>-m</code><i> int</i></dt>
 <dd> Specify the compression method to use. This parameter controls the trade off between encoding speed and the compressed file size and quality. Possible values range from 0 to 6. Default value is 4. When higher values are used, the encoder will spend more time inspecting additional encoding possibilities and decide on the quality gain. Lower value can result is faster processing time at the expense of larger file size and lower compression quality.</dd>
@@ -39,17 +39,17 @@ description: "gif2webp – Convert a GIF image to WebP"
 <dd> Do not print anything. </dd>
 </dl>
 <h2>BUGS</h2>
-<p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br />
+<p> Please report all bugs to our issue tracker: <a rel="nofollow" href="http://code.google.com/p/webp/issues">http://code.google.com/p/webp/issues</a><br/>
  Patches welcome! See this page to get started: <a rel="nofollow" href="http://www.webmproject.org/code/contribute/submitting-patches/">http://www.webmproject.org/code/contribute/submitting-patches/</a> </p>
 <h2>EXAMPLES</h2>
-<p> gif2webp picture.gif -o picture.webp<br />
- gif2webp -q 70 picture.gif -o picture.webp<br />
- gif2webp -lossy -m 3 picture.gif -o picture_lossy.webp<br />
+<p> gif2webp picture.gif -o picture.webp<br/>
+ gif2webp -q 70 picture.gif -o picture.webp<br/>
+ gif2webp -lossy -m 3 picture.gif -o picture_lossy.webp<br/>
  gif2webp -lossy -f 50 picture.gif -o picture.webp </p>
 <h2>AUTHORS</h2>
-<p> <code>gif2webp</code> was written by the WebP team.<br />
+<p> <code>gif2webp</code> was written by the WebP team.<br/>
  The latest source tree is available at <a rel="nofollow" href="http://www.webmproject.org/code">http://www.webmproject.org/code</a> </p>
 <p> This manual page was written by Urvang Joshi &lt;urvang [at] google.com&gt;, for the Debian project (and may be used by others). </p>
 <h2>SEE ALSO</h2>
-<p> <code><a href="/docs/linux/man/1-dwebp/">dwebp</a></code>(1), <code><a href="/docs/linux/man/1-cwebp/">cwebp</a></code>(1), <code><a href="/docs/linux/man/1-webpmux/">webpmux</a></code>(1).<br />
+<p> <code><a href="/docs/linux/man/1-dwebp/">dwebp</a></code>(1), <code><a href="/docs/linux/man/1-cwebp/">cwebp</a></code>(1), <code><a href="/docs/linux/man/1-webpmux/">webpmux</a></code>(1).<br/>
  Please refer to <a rel="nofollow" href="http://developers.google.com/speed/webp/">http://developers.google.com/speed/webp/</a> for additional information. </p>

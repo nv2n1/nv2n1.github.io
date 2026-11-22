@@ -33,11 +33,11 @@ description: "sane-find-scanner – find SCSI and USB scanners and their device 
 <dt><code>devname</code></dt>
 <dd> Test device file &quot;devname&quot;. No other devices are checked if devname is given.</dd></dl>
 <h2>EXAMPLE</h2>
-<p> <i>sane-find-scanner -v</i><br />
+<p> <i>sane-find-scanner -v</i><br/>
  Check all SCSI and USB devices for available scanners and print a line for every device file. </p>
-<p> <i>sane-find-scanner /dev/scanner</i><br />
+<p> <i>sane-find-scanner /dev/scanner</i><br/>
  Look for a (SCSI) scanner only at /dev/scanner and print the result. </p>
-<p> <i>sane-find-scanner -p</i><br />
+<p> <i>sane-find-scanner -p</i><br/>
  Probe for parallel port scanners.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5), <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code>xscanimage</code>(1), <code><a href="/docs/linux/man/1-xsane/">xsane</a></code>(1), <code>sane-backendname</code>(5) </p>
@@ -47,5 +47,5 @@ description: "sane-find-scanner – find SCSI and USB scanners and their device 
 <p> USB support is limited to Linux (kernel, libusb), FreeBSD (kernel, libusb), NetBSD (libusb), OpenBSD (kernel, libusb). Detecting the vendor and device ids only works with Linux or libusb. </p>
 <p> SCSI support is available on Irix, EMX, Linux, Next, AIX, Solaris, FreeBSD, NetBSD, OpenBSD, and HP-UX. </p>
 <h2>BUGS</h2>
-<p> No support for most parallel port scanners yet.<br />
+<p> No support for most parallel port scanners yet.<br/>
  Detection of USB chipsets is limited to a few chipsets. </p>

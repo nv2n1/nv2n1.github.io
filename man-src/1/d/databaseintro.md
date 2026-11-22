@@ -11,7 +11,7 @@ url: "/docs/linux/man/1-databaseintro/"
 <p> GRASS can be linked to one or many database management systems (DBMS). The <i>db.*</i> set of commands provides basic SQL support for attribute management, while the <i>v.db.*</i> set of commands operates on the vector map (see Vector introduction).</p>
 <h3>Available drivers</h3>
 <p> Available drivers are listed in SQL support in GRASS GIS. </p>
-<p> <code>Notes</code>:<br />
+<p> <code>Notes</code>:<br/>
  The default DBF driver provides only very limited SQL support (as DBF is not an SQL DB) while the other DBMS backends (such as PostgreSQL, MySQL etc) provide full SQL support since the SQL commands are sent directly to the DBMS.</p>
 <h3>DB connection management</h3>
 <p> The current database management settings are shown or modified with db.connect for current mapset. Available DBMI drivers are listed with db.drivers. Some DBMI backends require a user/password for driver/database to be set with db.login. In order to test a driver, run db.test.</p>
