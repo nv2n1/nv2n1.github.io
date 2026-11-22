@@ -29,14 +29,12 @@ To change the default replication factor for new files, edit your `hdfs-site.xml
   <name>dfs.replication</name>
   <value>3</value>
 </property>
-```
-
+```bash
 After updating `hdfs-site.xml` on your NameNode, reload the configuration. In Hadoop 3.x+, you can use:
 
 ``` bash
 hdfs dfsadmin -reloadconf
-```
-
+```bash
 This change takes effect immediately for newly written files. No cluster restart is required. All clients will pick up the new default on their next connection.
 
 ## Re-replicating Existing Files
@@ -47,24 +45,21 @@ Use the `hdfs dfsadmin -setReplication` command to adjust replication for existi
 
 ``` bash
 hdfs dfsadmin -setReplication -R 3 /path/to/directory
-```
-
+```bash
 The `-R` flag applies the change recursively to all files in the directory. This command updates the replication factor metadata, and the NameNode immediately schedules DataNodes to create additional replicas.
 
 For a single file:
 
 ``` bash
 hdfs dfsadmin -setReplication 3 /path/to/file
-```
-
+```bash
 ## Monitoring Re-replication Progress
 
 Re-replication happens asynchronously. Monitor progress by checking the NameNode web UI (typically `http://namenode:9870/dfshealth.html`) or use:
 
 ``` bash
 hdfs fsck / -blocks
-```
-
+```bash
 This shows block status and replication levels. Look for “Under replicated blocks” to see how many blocks still need additional replicas.
 
 ## Performance Considerations
@@ -77,8 +72,7 @@ Re-replicating large datasets creates significant network and disk I/O load. Con
 
 ``` bash
 hdfs dfsadmin -setBalancerBandwidth 104857600
-```
-
+```bash
 This sets balancer bandwidth to 100 MB/s (default is often much lower).
 
 ## Reducing Replication Factor
@@ -87,8 +81,7 @@ If you need to lower the replication factor to save space:
 
 ``` bash
 hdfs dfsadmin -setReplication -R 2 /path/to/directory
-```
-
+```bash
 The NameNode will mark excess replicas for deletion. Deletion happens gradually to avoid overwhelming the system. Blocks are removed within the next few heartbeats from DataNodes.
 
 ## Checking Current Replication
@@ -97,14 +90,12 @@ View the replication factor of a file or directory:
 
 ``` bash
 hdfs dfs -stat %r /path/to/file
-```
-
+```bash
 For detailed block information including actual replication:
 
 ``` bash
 hdfs fsck /path/to/file -files -blocks
-```
-
+```bash
 ## Best Practices
 
 - Always increase replication during planned maintenance windows for critical data

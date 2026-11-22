@@ -6,9 +6,8 @@ letter: "r"
 url: "/docs/linux/man/9-regulator_allow_bypass/"
 description: "regulator_allow_bypass – allow the regulator to go into bypass mode"
 ---
-
 <p>regulator_allow_bypass &#8211; allow the regulator to go into bypass mode</p>
-<h2>Synopsis</h2>
+
 <pre><code>int regulator_allow_bypass(struct regulator *regulator, bool enable);</code></pre>
 <h2>Arguments</h2>
 <p><i>regulator</i></p>

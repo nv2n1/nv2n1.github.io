@@ -29,8 +29,7 @@ First, install the required packages:
 
 ``` bash
 pip install pdfrw reportlab
-```
-
+```bash
 Here’s a practical example:
 
 ``` python
@@ -77,16 +76,14 @@ employees = [
 for emp in employees:
     output = f"form_{emp['employee_id']}.pdf"
     fill_pdf_form('template.pdf', output, emp)
-```
-
+```bash
 ## Method 2: Using pypdf
 
 For more complex scenarios, `pypdf` offers additional features:
 
 ``` bash
 pip install pypdf
-```
-
+```bash
 ``` python
 from pypdf import PdfReader, PdfWriter
 
@@ -114,8 +111,7 @@ with open('employee_data.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         fill_and_flatten('template.pdf', f"form_{row['id']}.pdf", row, flatten=True)
-```
-
+```bash
 ## Discovering Field Names
 
 Before you can fill fields, you need to know their names. Use this script to identify them:
@@ -133,8 +129,7 @@ for page in pdf.pages:
                 # Extract field name (remove parentheses)
                 field_name = annotation['/T'][1:-1]
                 print(f"Field: {field_name}")
-```
-
+```bash
 ## Handling Large Datasets
 
 For processing thousands of forms, consider:
@@ -154,8 +149,7 @@ if __name__ == '__main__':
 
     with Pool(processes=4) as pool:
         pool.map(process_record, tasks)
-```
-
+```bash
 ## Common Issues
 
 **Fields not updating**: Some PDFs use XFA (XML Forms Architecture) which requires different handling. Check if your PDF is XFA-based by examining it with a PDF inspection tool.
@@ -164,8 +158,7 @@ if __name__ == '__main__':
 
 ``` python
 annotation.update(PdfDict(V=f'({data_dict[field_name]})'.encode('utf-8')))
-```
-
+```bash
 **Flatten before merging**: If combining forms, flatten individual documents first to prevent field conflicts.
 
 ## Why Modern Tools Over Legacy Options

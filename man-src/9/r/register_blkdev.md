@@ -1,5 +1,6 @@
 ---
 title: "register_blkdev(9)"
+description: "register_blkdev - register a new block device Synopsis int register_blkdev(unsigned int major, const char *name); Arguments major the requested major device num"
 name: "register_blkdev"
 section: "9"
 letter: "r"
