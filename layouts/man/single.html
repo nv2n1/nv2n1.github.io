@@ -21,6 +21,7 @@
 </div>
 {{ end }}
 {{ .Content }}
+{{ if ne $lengthTag "short" }}
 <div class="ad-after-content">
 <!-- after-post-content-1 -->
 <ins class="adsbygoogle"
@@ -33,5 +34,6 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
+{{ end }}
 </article>
 {{ end }}
