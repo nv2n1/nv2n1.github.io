@@ -15,6 +15,7 @@ it as: python3 scripts/gen-man-sitemap.py _man_out/docs _site/docs
 import os, sys
 
 BASE = "https://www.systutorials.com/docs"
+# Chunk size; keep in sync with $manChunkSize in layouts/sitemap.xml.
 MAX_URLS = 40000
 
 def main():

@@ -5,7 +5,9 @@ title = "SysTutorials"
   description = "Tutorials and Q&A on Linux, systems, and software."
 
 # taxonomy = the /categories/ aggregate (a static content page provides it);
-# robotsTXT = a static robots.txt is committed; sitemap is a custom template.
+# robotsTXT = a static robots.txt is committed; sitemap.xml is a custom
+# sitemap index (layouts/sitemap.xml) over sitemap-main.xml plus the man
+# page chunks that scripts/gen-man-sitemap.py writes in CI.
 disableKinds = ["taxonomy", "robotsTXT"]
 disableHugoGeneratorInject = true
 disableGeneratorInject = true
@@ -23,7 +25,7 @@ disableGeneratorInject = true
   lastmod = ["modified", "date"]
 
 [outputs]
-  home = ["HTML", "FeedXML"]
+  home = ["HTML", "FeedXML", "MainSitemap"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML"]
@@ -35,6 +37,12 @@ disableGeneratorInject = true
 [outputFormats.FeedXML]
   mediaType = "application/atom+xml"
   baseName = "feed"
+
+# Every page except the man pages (they are chunked by
+# scripts/gen-man-sitemap.py in CI); linked from the sitemap index.
+[outputFormats.MainSitemap]
+  mediaType = "application/xml"
+  baseName = "sitemap-main"
 
 [mediaTypes."application/searchjson"]
   suffixes = ["json"]

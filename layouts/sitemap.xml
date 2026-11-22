@@ -1,7 +1,6 @@
-{{ printf `<?xml version="1.0" encoding="UTF-8"?>` | safeHTML }}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {{ range .Data.Pages }}{{ if and (ne .Section "man") (ne .Params.sitemap false) (ne .Params.layout "redirect") }}  <url>
-    <loc>{{ .Permalink }}</loc>
-    {{ if not .Lastmod.IsZero }}<lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
-    {{ end }}  </url>
-{{ end }}{{ end }}</urlset>
+{{ printf `<?xml version="1.0" encoding="UTF-8"?>` | safeHTML }}{{- $manChunkSize := 40000 }}{{- /* must match MAX_URLS in scripts/gen-man-sitemap.py */}}
+{{- $manCount := len (where site.RegularPages "Params.section" "!=" nil) }}{{- $manChunks := div (add $manCount (sub $manChunkSize 1)) $manChunkSize }}
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>{{ "sitemap-main.xml" | absURL }}</loc></sitemap>
+{{ range seq $manChunks }}  <sitemap><loc>{{ printf "docs/sitemap-%d.xml" . | absURL }}</loc></sitemap>
+{{ end }}</sitemapindex>
