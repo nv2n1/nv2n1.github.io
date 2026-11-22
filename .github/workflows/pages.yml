@@ -31,6 +31,9 @@ jobs:
       # Tag man pages short/long by body word count; the man single layout
       # skips the ad unit on short pages. Data file is generated, not committed.
       - run: python3 scripts/gen-man-page-length.py man-src data
+      # Tag blog posts short/long by body word count; the posts single layout
+      # skips the ad-after-content on short pages. Data file is generated, not committed.
+      - run: python3 scripts/gen-post-page-length.py content/posts data
       - run: hugo --minify
       # Chunked sitemap index for the ~56k man pages (over the 50k single-file limit)
       - run: python3 scripts/gen-man-sitemap.py public/docs public/docs

@@ -18,6 +18,11 @@
     <h1>{{ .Title }}</h1>
     <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "January 2, 2006" }}</time>{{ with .Params.author }}{{ $slug := "" }}{{ with $.Params.authors }}{{ $slug = index . 0 }}{{ end }} <span class="post-author">&middot; {{ if $slug }}<a href="/author/{{ $slug }}/">{{ . }}</a>{{ else }}{{ . }}{{ end }} and Community</span>{{ end }}{{ with .Params.modified }}{{ $pd := $.Date.Format "2006-01-02" }}{{ $md := (time .).Format "2006-01-02" }}{{ if ne $md $pd }} <span class="post-updated">&middot; updated {{ (time .) | time.Format "January 2, 2006" }}</span>{{ end }}{{ end }}
   </header>
+  {{ $lengthTag := "" }}
+  {{ with index .Site.Data "post-page-length" }}
+  {{ $lengthTag = index . $.Params.url }}
+  {{ end }}
+  {{ if ne $lengthTag "short" }}
   <div class="ad-above-fold">
     <!-- above-the-fold-1 -->
     <ins class="adsbygoogle"
@@ -28,7 +33,9 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
+  {{ end }}
   {{ .Content }}
+  {{ if ne $lengthTag "short" }}
   <div class="ad-after-content">
     <!-- after-post-content-1 -->
     <ins class="adsbygoogle"
@@ -41,6 +48,7 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
+  {{ end }}
 </article>
 <a class="back" href="/">&larr; All posts</a>
 {{ end }}
